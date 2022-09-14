@@ -3,3 +3,13 @@
 ################################################################################
 
 /bin
+/Packages
+/.vs
+/.intermediate
+/UpgradeLog.htm
+/Source/MSBuildExtension/obj
+/Source/Macad.UserGuide/obj
+*.user
+/Source/Macad.Presentation/Styles
+/Source/Macad.Resources
+/Build/MSBuild/LocalSettings.props

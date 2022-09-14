@@ -25,6 +25,10 @@
   </ItemGroup>
   
   <ItemGroup>
+    <PackageReference Include="IxMilia.Dxf" Version="0.8.3" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <Page Update="Dxf\DxfExportSettingsPanel.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>

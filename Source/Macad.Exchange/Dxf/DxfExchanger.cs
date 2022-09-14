@@ -9,10 +9,11 @@ using Macad.Common.Serialization;
 using Macad.Occt;
 using Macad.Core;
 using Macad.Core.Drawing;
+using Macad.Core.Topology;
 
 namespace Macad.Exchange
 {
-    public sealed class DxfExchanger : ISketchExporter, ISketchImporter, IDrawingExporter
+    public sealed class DxfExchanger : ISketchExporter, ISketchImporter, IDrawingExporter, IBodyImporter
     {
         #region Exchanger
 
@@ -230,7 +231,22 @@ namespace Macad.Exchange
             }
             return result;
         }
+        #endregion
 
+        #region IBodyImporter
+        bool IBodyImporter.DoImport(string fileName, out IEnumerable<Body> bodies)
+        {
+            bodies = null;
+            try
+            {
+                return DxfBodyImporter.Import(fileName, out bodies);
+            }
+            catch (Exception e)
+            {
+                Messages.Exception($"Exception occured while importing {fileName}.", e);
+                return false;
+            }
+        }
         #endregion
     }
 }
