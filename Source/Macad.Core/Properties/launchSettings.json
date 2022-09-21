@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Macad.Core": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

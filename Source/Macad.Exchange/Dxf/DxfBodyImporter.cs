@@ -4,6 +4,7 @@ using System.Linq;
 using IxMilia.Dxf;
 using IxMilia.Dxf.Entities;
 using Macad.Common;
+using Macad.Core.Components;
 using Macad.Core.Geom;
 using Macad.Core.Shapes;
 using Macad.Core.Topology;
@@ -141,36 +142,87 @@ namespace Macad.Exchange
                             //if (i == 2) break;
                             if (disPts.Count() == 4)
                             {
-                                var face = TopoUtils.MakeFace(occtPts);
+                                var face = MakeFace(occtPts);
                                 builder.Add(compound, face);
                             }                                                       
                             else                            
-                                builder.Add(compound, MakeFaceWith3Points(occtPts));                                                                               
+                                builder.Add(compound, MakeFace(occtPts));                                                                               
                         }                      
                         break;
                 }
                 i++;
                 //if (i == 2) break;
             }
-            //compound.Location()                    
-            var body = Body.Create(Solid.Create(compound));
-            body.Name = dxfInsert.Name;           
-            builder.Dispose();
-            //compound.Dispose();            
+            
+            var unifiedCompound = new ShapeUpgrade_UnifySameDomain(compound, true, true, true);
+            unifiedCompound.SetLinearTolerance(1);
+            unifiedCompound.SetAngularTolerance(1);
+            unifiedCompound.AllowInternalEdges(true);
+            unifiedCompound.Build();
+            var solid = Solid.Create(unifiedCompound.Shape());
+            //var unifiedBody = new ShapeUpgrade_UnifySameDomain(solid);
+            var body = Body.Create(solid);
+            body.Name = dxfInsert.Name;
+            builder.Dispose();          
+
+            //var mesh = Mesh.Create(unifiedCompound.Shape());
+            //var body = Body.Create(mesh);
+            //body.Name = dxfInsert.Name;
             return body;
         }
-        public static TopoDS_Face MakeFaceWith3Points(Pnt[] points)
+        public static TopoDS_Face MakeFace(Pnt[] points)
         {
-            //Debug.Assert(points.Length == 4);
-
-            var edges = new TopoDS_Edge[3];
-            for (int i = 0; i < 3; i++)
+            var edges = new List<TopoDS_Edge>();
+            for (int i = 0; i < points.Length; i++)
             {
-                edges[i] = new BRepBuilderAPI_MakeEdge(points[i], points[i == 2 ? 0 : i + 1]).Edge();
-            }
+                //gp_Pnt pt = new gp_Pnt()
+                //BRep_Builder aBuilder = new();
+                //TopoDS_Vertex aVertex = new BRepBuilderAPI_MakeVertex(points[i]).Vertex();                
+                //aBuilder.UpdateVertex(aVertex, points[i], 0.001);
+                //aBuilder.Dispose();
 
-            var wire = new BRepBuilderAPI_MakeWire(edges[0], edges[1], edges[2]).Wire();
+                //BRep_Builder bBuilder = new();
+                //TopoDS_Vertex bVertex = new BRepBuilderAPI_MakeVertex(points[i == points.Length - 1 ? 0 : i + 1]).Vertex();
+                //bBuilder.UpdateVertex(bVertex, points[i == points.Length - 1 ? 0 : i + 1], 0.001);                
+                //bBuilder.Dispose();
+                //aBuilder.TopoDS_TShape(aVertex, aPoint, Precision::Confusion());
+                //aVertex.Orientation(TopAbs_REVERSED);
+                //var v = new BRepBuilderAPI_MakeVertex(points[0]);
+                var edge = new BRepBuilderAPI_MakeEdge(points[i], points[i == points.Length - 1 ? 0 : i + 1]).Edge();
+                BRep_Builder edgeBuilder = new();
+                edgeBuilder.UpdateEdge(edge, 0.001);
+                edges.Add(edge);
+            } 
+            var wire = points.Length == 3 ? new BRepBuilderAPI_MakeWire(edges[0], edges[1], edges[2]).Wire() :
+                new BRepBuilderAPI_MakeWire(edges[0], edges[1], edges[2], edges[3]).Wire();
+
+            //var edge_fix = new ShapeFix_Edge(edges[0]);
+            //var wireFix = new ShapeFix_Wireframe(wire);
             return new BRepBuilderAPI_MakeFace(wire).Face();
+            //BRep_Builder fBuilder = new();
+            //var ff = face.Face();
+            //fBuilder.UpdateFace(ff, 0.001);            
+            //var fix = new ShapeFix_Face(face.Face());
+            //fix.SetMaxTolerance(0.1);
+
+            //fix.SetMinTolerance(0.01);
+            //fix.fa
+            //if(face.Error() != BRepBuilderAPI_FaceError.BRepBuilderAPI_FaceDone)
+            //{
+            //    switch (face.Error())
+            //    {
+            //        case BRepBuilderAPI_FaceError.BRepBuilderAPI_NotPlanar: 
+            //            Dir v1 = (points[1] - points[0]).ToDir();
+            //            Dir v2 = (points[2] - points[0]).ToDir();
+            //            Pln pl = new Pln(points[0], v1.Crossed(v2));
+            //            var pt2d = ProjLib.Project(pl, points[3]);
+            //            var pt4 = ElSLib.Value(pt2d.X, pt2d.Y, pl);
+            //            points[^1] = pt4;
+            //            return MakeFace(points);
+            //    }
+            //}
+            //return fix.Face();
+            //return ff;
         }
     }
 }
