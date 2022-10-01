@@ -29,9 +29,9 @@ namespace Macad.Occt.Generator
             /* -- TKG3d -- */
             /* "AdvApprox", "GeomLProp", "LProp3d", "TColGeom", */ "Adaptor3d", "GProp", "Geom", "GeomAdaptor", "TopAbs",
             /* -- TKGeomBase -- */
-            /* "AdvApp2Var", "AppCont", "AppParCurves", "AppDef", "Approx",  "CPnts", "FEmTool", "GC", "GCE2d", "GCPnts", 
+            /* "AdvApp2Var", "AppCont", "AppParCurves", "AppDef", "Approx",  "CPnts", "FEmTool", "GCPnts", 
              "GeomLib",  "GeomTools", "Hermit",*/ 
-            "IntAna2d", "BndLib", "Geom2dConvert", "GeomConvert", "GeomProjLib", "ProjLib", "gce", "IntAna", "Extrema", 
+            "GC", "GCE2d", "IntAna2d", "BndLib", "Geom2dConvert", "GeomConvert", "GeomProjLib", "ProjLib", "gce", "IntAna", "Extrema", 
             /* -- TKBRep -- */
             "TopoDS", "BRep", "BRepAdaptor", "BRepLProp", "TopTools", "BRepTools", "BinTools", "TopExp",
 

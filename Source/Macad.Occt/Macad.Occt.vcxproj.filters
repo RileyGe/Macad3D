@@ -477,6 +477,12 @@
     <ClInclude Include="Extensions\Geom2dAPI_Ex.h">
       <Filter>Extensions</Filter>
     </ClInclude>
+    <ClInclude Include="Generated\GC.h">
+      <Filter>Generated\ModelingData\TKGeomBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Generated\GCE2d.h">
+      <Filter>Generated\ModelingData\TKGeomBase</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -827,6 +833,12 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Macad.VersionInfo.cpp" />
     <ClCompile Include="Extensions\Geom2dAPI_Ex.cpp">
       <Filter>Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="Generated\GC.cpp">
+      <Filter>Generated\ModelingData\TKGeomBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Generated\GCE2d.cpp">
+      <Filter>Generated\ModelingData\TKGeomBase</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
