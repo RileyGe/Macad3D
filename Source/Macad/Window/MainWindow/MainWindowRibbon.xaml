@@ -467,6 +467,9 @@
                                      mmp:Command.Action="{x:Static mmi:ModelCommands.CreateSketchAligned}"
                                      AutomationProperties.AutomationId="CreateSketchInteractive"/>
                 </Fluent:SplitButton>
+                <Fluent:ToggleButton mmp:Command.Action="{x:Static mmi:ModelCommands.CreateText}"
+                                     AutomationProperties.AutomationId="CreateText"
+                                     SizeDefinition="Large,Middle,Small" />
             </Fluent:RibbonGroupBox>
 
             <Fluent:RibbonGroupBox Header="Modify"
@@ -563,6 +566,9 @@
 
                 <Fluent:Button mmp:Command.Action="{x:Static mmi:AuxiliaryCommands.CreateDatumPlane}"
                                AutomationProperties.AutomationId="CreateDatumPlane"
+                               SizeDefinition="Large,Large,Large" />
+                <Fluent:Button mmp:Command.Action="{x:Static mmi:AuxiliaryCommands.CreateTextLabel}"
+                               AutomationProperties.AutomationId="CreateTextLabel"
                                SizeDefinition="Large,Large,Large" />
             </Fluent:RibbonGroupBox>
         </Fluent:RibbonTabItem>

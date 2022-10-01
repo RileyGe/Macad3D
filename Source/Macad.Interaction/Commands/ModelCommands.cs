@@ -4,6 +4,7 @@ using Macad.Interaction.Editors.Shapes;
 using Macad.Core.Shapes;
 using Macad.Core.Topology;
 using Macad.Presentation;
+using Macad.Interaction.Editors.Shapes.Primitives;
 
 namespace Macad.Interaction
 {
@@ -97,6 +98,24 @@ namespace Macad.Interaction
             HelpTopic = "eecb316b-a4da-441b-b9a6-3fadf9275889",
             IsCheckedBinding = BindingHelper.Create(InteractiveContext.Current, "EditorState.ActiveTool", BindingMode.OneWay,
                                                     EqualityToBoolConverter.Instance, nameof(CreateSphereTool))
+        };
+
+        //--------------------------------------------------------------------------------------------------
+
+        public static ActionCommand CreateText { get; } = new(
+            () =>
+            {
+                _WorkspaceController?.StartTool(new CreateBottleTool());
+            },
+            _CanStartTool)
+        {
+            Header = () => "Text",
+            Title = () => "Create Text",
+            Icon = () => "Prim-Sphere",
+            Description = () => "Creates text.",
+            HelpTopic = "eecb316b-a4da-441b-b9a6-3fadf9275889",
+            IsCheckedBinding = BindingHelper.Create(InteractiveContext.Current, "EditorState.ActiveTool", BindingMode.OneWay,
+                                                    EqualityToBoolConverter.Instance, nameof(CreateBottleTool))
         };
 
         //--------------------------------------------------------------------------------------------------

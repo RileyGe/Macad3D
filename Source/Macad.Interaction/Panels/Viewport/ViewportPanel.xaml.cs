@@ -11,6 +11,9 @@ using Macad.Presentation;
 
 namespace Macad.Interaction.Panels
 {
+    /// <summary>
+    /// MVVM中的View类
+    /// </summary>
     [ContentProperty("OverlayContent")]
     public partial class ViewportPanel : AirspaceOverlay
     {

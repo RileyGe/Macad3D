@@ -10,6 +10,10 @@ using Macad.Occt.Extensions;
 
 namespace Macad.Interaction.Visual
 {
+    /// <summary>
+    /// 用于管理InteractiveEntity与显示类之间的对应关系
+    /// 通过Register方法进行注册
+    /// </summary>
     public sealed class VisualObjectManager : BaseObject, IDisposable
     {
         #region Members

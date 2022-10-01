@@ -46,7 +46,28 @@ namespace Macad.Interaction
             Icon = () => "Auxiliary-DatumPlane",
             HelpTopic = "322f5cc2-0fc7-43f9-bb80-5e87cb3e3651"
         };
+        public static ActionCommand CreateTextLabel { get; } = new(
+            () =>
+            {
+                TextLabel text = new()
+                {
+                    Text = "Test Text",
+                    Position = new Pnt(0, 0, 0),
+                    //Rotation = _WorkspaceController.Workspace.WorkingPlane.Rotation()
+                };                
+                InteractiveContext.Current?.Document.Add(text);
+                InteractiveContext.Current?.UndoHandler.Commit();
 
+                //_WorkspaceController.Selection.SelectEntity(text);
+                _WorkspaceController.Invalidate();
+            },
+            () => _CanStartTool())
+        {
+            Header = () => "Text Label",
+            Description = () => "Creates a new datum plane which can be used as a reference. A datum plan can be papered with an image.",
+            Icon = () => "Auxiliary-DatumPlane",
+            HelpTopic = "322f5cc2-0fc7-43f9-bb80-5e87cb3e3651"
+        };
         //--------------------------------------------------------------------------------------------------
         public static ActionCommand SetWorkingPlaneToDatumPlane { get; } = new (
             () =>

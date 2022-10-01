@@ -12,7 +12,7 @@ using Macad.Core.Shapes;
 using Macad.Core.Topology;
 using Macad.Occt;
 using Macad.Occt.Helper;
-using System.Diagnostics;
+//using System.Diagnostics;
 
 namespace Macad.Exchange
 {
@@ -40,7 +40,7 @@ namespace Macad.Exchange
             bodies = null;
             var tempBodies = new List<Body>();
             DxfFile reader = DxfFile.Load(fileName);
-            Stopwatch sw = new();
+            //Stopwatch sw = new();
             //int i = 0;
             foreach(var entity in reader.Entities)
             {
@@ -48,15 +48,15 @@ namespace Macad.Exchange
                 {
                     case IxMilia.Dxf.Entities.DxfEntityType.Insert:
                         var insert = entity as DxfInsert;
-                        sw.Start();
+                        //sw.Start();
                         tempBodies.Add(_CreateBody(insert));
-                        sw.Stop();
+                        //sw.Stop();
                         break;
                 }
                 //i++;
             }
-            string time = sw.Elapsed.ToString();
-            Console.WriteLine(time);
+            //string time = sw.Elapsed.ToString();
+            //Console.WriteLine(time);
             //while (reader.MoveNext(out cmd))
             //{
             //    switch (cmd)

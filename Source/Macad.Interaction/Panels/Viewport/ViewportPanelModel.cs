@@ -8,6 +8,9 @@ using Macad.Core.Topology;
 
 namespace Macad.Interaction.Panels
 {
+    /// <summary>
+    /// MVVM中模型类
+    /// </summary>
     public class ViewportPanelModel : BaseObject, IHudManager
     {
         #region Properties

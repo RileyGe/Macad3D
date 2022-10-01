@@ -7,7 +7,11 @@ namespace Macad.Core
     public static class gpExtensions
     {
         #region Pnt
-
+        /// <summary>
+        /// 返回指定精度的点（默认为3位小数）
+        /// </summary>
+        /// <param name="pnt"></param>
+        /// <returns></returns>
         public static Pnt Rounded(this Pnt pnt)
         {
             return new Pnt(pnt.X.Round(), pnt.Y.Round(), pnt.Z.Round());
