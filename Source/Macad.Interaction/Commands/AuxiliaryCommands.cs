@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Reflection.Metadata;
 using Macad.Core;
 using Macad.Core.Auxiliary;
 using Macad.Core.Topology;
@@ -49,12 +50,10 @@ namespace Macad.Interaction
         public static ActionCommand CreateTextLabel { get; } = new(
             () =>
             {
-                TextLabel text = new()
-                {
-                    Text = "Test Text",
-                    Position = new Pnt(0, 0, 0),
-                    //Rotation = _WorkspaceController.Workspace.WorkingPlane.Rotation()
-                };                
+                var text = TextLabel.Create();
+                text.Text = "Test Text";
+                text.Position = new Pnt(0, 0, 0);
+                                  
                 InteractiveContext.Current?.Document.Add(text);
                 InteractiveContext.Current?.UndoHandler.Commit();
 

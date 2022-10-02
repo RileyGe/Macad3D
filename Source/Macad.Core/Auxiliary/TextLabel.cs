@@ -13,6 +13,24 @@ namespace Macad.Core.Auxiliary
     [SerializeType]
     public class TextLabel : InteractiveEntity, ITransformable
     {
+        public static TextLabel Create()
+        {
+            var textLabel = new TextLabel()
+            {
+                Name = CoreContext.Current.Document?.AddNextNameSuffix(nameof(TextLabel)) ?? nameof(TextLabel),
+                Layer = CoreContext.Current.Layers?.ActiveLayer,
+                Document = CoreContext.Current.Document
+            };
+            textLabel.RaiseVisualChanged();
+            return textLabel;
+        }
+
+        //--------------------------------------------------------------------------------------------------
+
+        public TextLabel()
+        {
+            
+        }
         private Pnt _position = Pnt.Origin;
         [SerializeMember]
         public Pnt Position { 

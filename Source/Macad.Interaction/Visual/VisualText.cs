@@ -1,4 +1,5 @@
-﻿using Macad.Core.Auxiliary;
+﻿using Macad.Core;
+using Macad.Core.Auxiliary;
 using Macad.Core.Topology;
 using Macad.Occt;
 using Macad.Occt.Extensions;
@@ -13,39 +14,122 @@ namespace Macad.Interaction.Visual
     public sealed class VisualText : VisualObject
     {
         private readonly TextLabel textLabel;
+        static VisualText()
+        {
+            Layer.PresentationChanged += _OnPresentationChanged;
+            Layer.InteractivityChanged += _OnInteractivityChanged;
+            VisualObjectManager.IsolatedEntitiesChanged += _VisualObjectManager_IsolatedEntitiesChanged;
+        }
         public VisualText(WorkspaceController workspaceController, TextLabel entity)
             : base(workspaceController, entity)
         {
             textLabel = entity;
             Update();
         }
-        AIS_TextLabel aisObject;
+        AIS_TextLabel _AisObject;
+        static void _OnPresentationChanged(Layer layer)
+        {
+            var workspaceController = InteractiveContext.Current?.WorkspaceController;
+            if (workspaceController == null)
+                return;
+
+            foreach (var visualText in workspaceController.VisualObjects.Where(entity => entity.Layer == layer).OfType<VisualText>())
+            {
+                var aisShape = visualText._AisObject;
+                if (aisShape == null)
+                    continue;
+
+                aisShape.SetColor(layer?.Color.ToQuantityColor() ?? Colors.Auxillary);
+                workspaceController.Workspace.AisContext.RecomputePrsOnly(aisShape, false, true);
+            }
+        }
+        static void _OnInteractivityChanged(Layer layer)
+        {
+            var workspaceController = InteractiveContext.Current?.WorkspaceController;
+            if (workspaceController == null)
+                return;
+
+            foreach (var visualText in workspaceController.VisualObjects.Where(entity => entity.Layer == layer).OfType<VisualText>())
+            {
+                visualText._UpdateInteractivityStatus();
+            }
+        }
+        static void _VisualObjectManager_IsolatedEntitiesChanged(VisualObjectManager visualObjectManager)
+        {
+            foreach (var visualText in visualObjectManager.GetAll().OfType<VisualText>())
+            {
+                visualText._UpdateInteractivityStatus();
+            }
+        }
+
+        void _UpdateInteractivityStatus()
+        {
+            if (_AisObject == null)
+                return;
+
+            var layer = Entity?.Layer;
+            if (layer == null)
+                return;
+
+            bool isVisible = layer.IsVisible;
+            if (WorkspaceController.VisualObjects.EntityIsolationEnabled)
+            {
+                isVisible &= WorkspaceController.VisualObjects.GetIsolatedEntities().Contains(Entity);
+            }
+
+            if (isVisible)
+            {
+                if (AisContext.IsDisplayed(_AisObject))
+                {
+                    AisContext.Update(_AisObject, false);
+                }
+                else
+                {
+                    AisContext.Display(_AisObject, false);
+                }
+
+                if (WorkspaceController.Selection.SelectedEntities.Contains(Entity) && !AisContext.IsSelected(_AisObject))
+                {
+                    AisContext.AddOrRemoveSelected(_AisObject, false);
+                }
+            }
+            else
+            {
+                if (AisContext.IsDisplayed(_AisObject))
+                {
+                    AisContext.Erase(_AisObject, false);
+                }
+            }
+
+            RaiseAisObjectChanged();
+        }
+
         void _EnsureAisObject()
         {
-            if (aisObject != null)
+            if (_AisObject != null)
                 return;
 
             if (textLabel == null)
                 return;
 
-            aisObject = new();
+            _AisObject = new();
             _UpdatePresentation();
 
-            //aisObject.SetOwner(new AISX_Guid(_DatumPlane.Guid));
-            //_UpdateInteractivityStatus();
+            //_AisObject.SetOwner(new AISX_Guid(_AisObject.));
+            _UpdateInteractivityStatus();
         }
 
         void _UpdatePresentation()
         {
-            if (aisObject == null)
+            if (_AisObject == null)
                 return;
             //aisObject.setpl
-            aisObject.SetPosition(textLabel.Position);
+            _AisObject.SetPosition(textLabel.Position);
             //aisObject.SetTransparency(0.8);
-            TCollection_ExtendedString text = new(textLabel.Text);
-            aisObject.SetText(text);
-            aisObject.SetFont("Arial");
-            aisObject.SetHeight(20);
+            //TCollection_ExtendedString text = new(textLabel.Text);
+            _AisObject.SetText(new TCollection_ExtendedString(textLabel.Text));
+            _AisObject.SetFont("Arial");
+            _AisObject.SetHeight(20);
             //aisObject.SetColor(Quantity_Color.ColorFromName())
             //_AisObject.SetPlane(new Pln(_DatumPlane.GetCoordinateSystem()));
             //_AisObject.SetSize(_DatumPlane.SizeX, _DatumPlane.SizeY);
@@ -70,28 +154,28 @@ namespace Macad.Interaction.Visual
         {
             get {
                 _EnsureAisObject();
-                return aisObject; 
+                return _AisObject; 
             }
         }
 
         public override void Remove()
         {
-            if (aisObject != null)
+            if (_AisObject != null)
             {
-                AisContext.Erase(aisObject, false);
-                aisObject = null;
+                AisContext.Erase(_AisObject, false);
+                _AisObject = null;
             }
         }
         public override void Update()
         {
-            if (aisObject is null)
+            if (_AisObject is null)
             {
                 _EnsureAisObject();
             }
             else
             {
                 _UpdatePresentation();
-                AisContext.Redisplay(aisObject, true);
+                AisContext.Redisplay(_AisObject, true);
             }
         }
         [AutoRegister]
