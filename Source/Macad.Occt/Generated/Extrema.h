@@ -36,28 +36,28 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creation of an indefinite point on curve.
 	/// </summary>
-	Extrema_POnCurv();
-	/// <summary>
+Extrema_POnCurv();
+		/// <summary>
 	/// Creation of a point on curve with a parameter
 	/// value on the curve and a Pnt from gp.
 	/// </summary>
-	Extrema_POnCurv(double U, Macad::Occt::Pnt P);
+Extrema_POnCurv(double U, Macad::Occt::Pnt P);
 	Extrema_POnCurv(Macad::Occt::Extrema_POnCurv^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// sets the point and parameter values.
 	/// </summary>
-	void SetValues(double U, Macad::Occt::Pnt P);
-	/// <summary>
+void SetValues(double U, Macad::Occt::Pnt P);
+		/// <summary>
 	/// Returns the point.
 	/// </summary>
-	Macad::Occt::Pnt Value();
-	/// <summary>
+Macad::Occt::Pnt Value();
+		/// <summary>
 	/// Returns the parameter on the curve.
 	/// </summary>
-	double Parameter();
+double Parameter();
 }; // class Extrema_POnCurv
 
 //---------------------------------------------------------------------
@@ -90,7 +90,7 @@ public:
 
 public:
 	Extrema_ExtPC();
-	/// <summary>
+		/// <summary>
 	/// It calculates all the distances.
 	/// The function F(u)=distance(P,C(u)) has an extremum
 	/// when g(u)=dF/du=0. The algorithm searches all the
@@ -101,8 +101,8 @@ public:
 	/// if n is the number of iterations,
 	/// the algorithm stops when abs(F(Un)-F(Un-1)) < Tol.
 	/// </summary>
-	Extrema_ExtPC(Macad::Occt::Pnt P, Macad::Occt::Adaptor3d_Curve^ C, double Uinf, double Usup, double TolF);
-	/// <summary>
+Extrema_ExtPC(Macad::Occt::Pnt P, Macad::Occt::Adaptor3d_Curve^ C, double Uinf, double Usup, double TolF);
+		/// <summary>
 	/// It calculates all the distances.
 	/// The function F(u)=distance(P,C(u)) has an extremum
 	/// when g(u)=dF/du=0. The algorithm searches all the
@@ -113,8 +113,8 @@ public:
 	/// if n is the number of iterations,
 	/// the algorithm stops when abs(F(Un)-F(Un-1)) < Tol.
 	/// </summary>
-	Extrema_ExtPC(Macad::Occt::Pnt P, Macad::Occt::Adaptor3d_Curve^ C, double Uinf, double Usup);
-	/// <summary>
+Extrema_ExtPC(Macad::Occt::Pnt P, Macad::Occt::Adaptor3d_Curve^ C, double Uinf, double Usup);
+		/// <summary>
 	/// It calculates all the distances.
 	/// The function F(u)=distance(P,C(u)) has an extremum
 	/// when g(u)=dF/du=0. The algorithm searches all the
@@ -124,8 +124,8 @@ public:
 	/// if n is the number of iterations,
 	/// the algorithm stops when abs(F(Un)-F(Un-1)) < Tol.
 	/// </summary>
-	Extrema_ExtPC(Macad::Occt::Pnt P, Macad::Occt::Adaptor3d_Curve^ C, double TolF);
-	/// <summary>
+Extrema_ExtPC(Macad::Occt::Pnt P, Macad::Occt::Adaptor3d_Curve^ C, double TolF);
+		/// <summary>
 	/// It calculates all the distances.
 	/// The function F(u)=distance(P,C(u)) has an extremum
 	/// when g(u)=dF/du=0. The algorithm searches all the
@@ -135,50 +135,50 @@ public:
 	/// if n is the number of iterations,
 	/// the algorithm stops when abs(F(Un)-F(Un-1)) < Tol.
 	/// </summary>
-	Extrema_ExtPC(Macad::Occt::Pnt P, Macad::Occt::Adaptor3d_Curve^ C);
+Extrema_ExtPC(Macad::Occt::Pnt P, Macad::Occt::Adaptor3d_Curve^ C);
 	Extrema_ExtPC(Macad::Occt::Extrema_ExtPC^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// initializes the fields of the algorithm.
 	/// </summary>
-	void Initialize(Macad::Occt::Adaptor3d_Curve^ C, double Uinf, double Usup, double TolF);
-	/// <summary>
+void Initialize(Macad::Occt::Adaptor3d_Curve^ C, double Uinf, double Usup, double TolF);
+		/// <summary>
 	/// initializes the fields of the algorithm.
 	/// </summary>
-	void Initialize(Macad::Occt::Adaptor3d_Curve^ C, double Uinf, double Usup);
-	/// <summary>
+void Initialize(Macad::Occt::Adaptor3d_Curve^ C, double Uinf, double Usup);
+		/// <summary>
 	/// An exception is raised if the fields have not been
 	/// initialized.
 	/// </summary>
-	void Perform(Macad::Occt::Pnt P);
-	/// <summary>
+void Perform(Macad::Occt::Pnt P);
+		/// <summary>
 	/// True if the distances are found.
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// Returns the value of the <N>th extremum square distance.
 	/// </summary>
-	double SquareDistance(int N);
-	/// <summary>
+double SquareDistance(int N);
+		/// <summary>
 	/// Returns the number of extremum distances.
 	/// </summary>
-	int NbExt();
-	/// <summary>
+int NbExt();
+		/// <summary>
 	/// Returns True if the <N>th extremum distance is a
 	/// minimum.
 	/// </summary>
-	bool IsMin(int N);
-	/// <summary>
+bool IsMin(int N);
+		/// <summary>
 	/// Returns the point of the <N>th extremum distance.
 	/// </summary>
-	Macad::Occt::Extrema_POnCurv^ Point(int N);
-	/// <summary>
+Macad::Occt::Extrema_POnCurv^ Point(int N);
+		/// <summary>
 	/// if the curve is a trimmed curve,
 	/// dist1 is a square distance between <P> and the point
 	/// of parameter FirstParameter <P1> and
 	/// dist2 is a square distance between <P> and the point
 	/// of parameter LastParameter <P2>.
 	/// </summary>
-	void TrimmedSquareDistances(double% dist1, double% dist2, Macad::Occt::Pnt% P1, Macad::Occt::Pnt% P2);
+void TrimmedSquareDistances(double% dist1, double% dist2, Macad::Occt::Pnt% P1, Macad::Occt::Pnt% P2);
 }; // class Extrema_ExtPC
 
 }; // namespace Occt

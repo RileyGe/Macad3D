@@ -59,85 +59,85 @@ public:
 public:
 	Adaptor2d_Curve2d(Macad::Occt::Adaptor2d_Curve2d^ parameter1);
 	Adaptor2d_Curve2d();
-	/// <summary>
+		/// <summary>
 	/// Shallow copy of adaptor
 	/// </summary>
-	Macad::Occt::Adaptor2d_Curve2d^ ShallowCopy();
+Macad::Occt::Adaptor2d_Curve2d^ ShallowCopy();
 	double FirstParameter();
 	double LastParameter();
 	Macad::Occt::GeomAbs_Shape Continuity();
-	/// <summary>
+		/// <summary>
 	/// If necessary,  breaks the  curve in  intervals  of
 	/// continuity  <S>.    And  returns   the number   of
 	/// intervals.
 	/// </summary>
-	int NbIntervals(Macad::Occt::GeomAbs_Shape S);
-	/// <summary>
+int NbIntervals(Macad::Occt::GeomAbs_Shape S);
+		/// <summary>
 	/// Stores in <T> the  parameters bounding the intervals
 	/// of continuity <S>.
 	/// 
 	/// The array must provide  enough room to  accommodate
 	/// for the parameters. i.e. T.Length() > NbIntervals()
 	/// </summary>
-	void Intervals(Macad::Occt::TColStd_Array1OfReal^ T, Macad::Occt::GeomAbs_Shape S);
-	/// <summary>
+void Intervals(Macad::Occt::TColStd_Array1OfReal^ T, Macad::Occt::GeomAbs_Shape S);
+		/// <summary>
 	/// Returns    a  curve equivalent   of  <me>  between
 	/// parameters <First>  and <Last>. <Tol>  is used  to
 	/// test for 3d points confusion.
 	/// If <First> >= <Last>
 	/// </summary>
-	Macad::Occt::Adaptor2d_Curve2d^ Trim(double First, double Last, double Tol);
+Macad::Occt::Adaptor2d_Curve2d^ Trim(double First, double Last, double Tol);
 	bool IsClosed();
 	bool IsPeriodic();
 	double Period();
-	/// <summary>
+		/// <summary>
 	/// Computes the point of parameter U on the curve.
 	/// </summary>
-	Macad::Occt::Pnt2d Value(double U);
-	/// <summary>
+Macad::Occt::Pnt2d Value(double U);
+		/// <summary>
 	/// Computes the point of parameter U on the curve.
 	/// </summary>
-	void D0(double U, Macad::Occt::Pnt2d% P);
-	/// <summary>
+void D0(double U, Macad::Occt::Pnt2d% P);
+		/// <summary>
 	/// Computes the point of parameter U on the curve with its
 	/// first derivative.
 	/// Raised if the continuity of the current interval
 	/// is not C1.
 	/// </summary>
-	void D1(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V);
-	/// <summary>
+void D1(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V);
+		/// <summary>
 	/// Returns the point P of parameter U, the first and second
 	/// derivatives V1 and V2.
 	/// Raised if the continuity of the current interval
 	/// is not C2.
 	/// </summary>
-	void D2(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V1, Macad::Occt::Vec2d% V2);
-	/// <summary>
+void D2(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V1, Macad::Occt::Vec2d% V2);
+		/// <summary>
 	/// Returns the point P of parameter U, the first, the second
 	/// and the third derivative.
 	/// Raised if the continuity of the current interval
 	/// is not C3.
 	/// </summary>
-	void D3(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V1, Macad::Occt::Vec2d% V2, Macad::Occt::Vec2d% V3);
-	/// <summary>
+void D3(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V1, Macad::Occt::Vec2d% V2, Macad::Occt::Vec2d% V3);
+		/// <summary>
 	/// The returned vector gives the value of the derivative for the
 	/// order of derivation N.
 	/// Raised if the continuity of the current interval
 	/// is not CN.
 	/// Raised if N < 1.
 	/// </summary>
-	Macad::Occt::Vec2d DN(double U, int N);
-	/// <summary>
+Macad::Occt::Vec2d DN(double U, int N);
+		/// <summary>
 	/// Returns the parametric  resolution corresponding
 	/// to the real space resolution <R3d>.
 	/// </summary>
-	double Resolution(double R3d);
-	/// <summary>
+double Resolution(double R3d);
+		/// <summary>
 	/// Returns  the  type of the   curve  in the  current
 	/// interval :   Line,   Circle,   Ellipse, Hyperbola,
 	/// Parabola, BezierCurve, BSplineCurve, OtherCurve.
 	/// </summary>
-	Macad::Occt::GeomAbs_CurveType GetGeomType();
+Macad::Occt::GeomAbs_CurveType GetGeomType();
 	Macad::Occt::gp_Lin2d^ Line();
 	Macad::Occt::gp_Circ2d^ Circle();
 	Macad::Occt::gp_Elips2d^ Ellipse();
@@ -189,36 +189,36 @@ public:
 	Adaptor2d_Line2d();
 	Adaptor2d_Line2d(Macad::Occt::Pnt2d P, Macad::Occt::Dir2d D, double UFirst, double ULast);
 	Adaptor2d_Line2d(Macad::Occt::Adaptor2d_Line2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Shallow copy of adaptor
 	/// </summary>
-	Macad::Occt::Adaptor2d_Curve2d^ ShallowCopy();
+Macad::Occt::Adaptor2d_Curve2d^ ShallowCopy();
 	void Load(Macad::Occt::gp_Lin2d^ L);
 	void Load(Macad::Occt::gp_Lin2d^ L, double UFirst, double ULast);
 	double FirstParameter();
 	double LastParameter();
 	Macad::Occt::GeomAbs_Shape Continuity();
-	/// <summary>
+		/// <summary>
 	/// If necessary,  breaks the  curve in  intervals  of
 	/// continuity  <S>.    And  returns   the number   of
 	/// intervals.
 	/// </summary>
-	int NbIntervals(Macad::Occt::GeomAbs_Shape S);
-	/// <summary>
+int NbIntervals(Macad::Occt::GeomAbs_Shape S);
+		/// <summary>
 	/// Stores in <T> the  parameters bounding the intervals
 	/// of continuity <S>.
 	/// 
 	/// The array must provide  enough room to  accommodate
 	/// for the parameters. i.e. T.Length() > NbIntervals()
 	/// </summary>
-	void Intervals(Macad::Occt::TColStd_Array1OfReal^ T, Macad::Occt::GeomAbs_Shape S);
-	/// <summary>
+void Intervals(Macad::Occt::TColStd_Array1OfReal^ T, Macad::Occt::GeomAbs_Shape S);
+		/// <summary>
 	/// Returns    a  curve equivalent   of  <me>  between
 	/// parameters <First>  and <Last>. <Tol>  is used  to
 	/// test for 3d points confusion.
 	/// If <First> >= <Last>
 	/// </summary>
-	Macad::Occt::Adaptor2d_Curve2d^ Trim(double First, double Last, double Tol);
+Macad::Occt::Adaptor2d_Curve2d^ Trim(double First, double Last, double Tol);
 	bool IsClosed();
 	bool IsPeriodic();
 	double Period();
@@ -277,118 +277,118 @@ public:
 	static Macad::Occt::Adaptor2d_OffsetCurve^ CreateDowncasted(::Adaptor2d_OffsetCurve* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The Offset is set to 0.
 	/// </summary>
-	Adaptor2d_OffsetCurve();
-	/// <summary>
+Adaptor2d_OffsetCurve();
+		/// <summary>
 	/// The curve is loaded. The Offset is set to 0.
 	/// </summary>
-	Adaptor2d_OffsetCurve(Macad::Occt::Adaptor2d_Curve2d^ C);
-	/// <summary>
+Adaptor2d_OffsetCurve(Macad::Occt::Adaptor2d_Curve2d^ C);
+		/// <summary>
 	/// Creates  an  OffsetCurve curve.
 	/// The Offset is set to Offset.
 	/// </summary>
-	Adaptor2d_OffsetCurve(Macad::Occt::Adaptor2d_Curve2d^ C, double Offset);
-	/// <summary>
+Adaptor2d_OffsetCurve(Macad::Occt::Adaptor2d_Curve2d^ C, double Offset);
+		/// <summary>
 	/// Create an Offset curve.
 	/// WFirst,WLast define the bounds of the Offset curve.
 	/// </summary>
-	Adaptor2d_OffsetCurve(Macad::Occt::Adaptor2d_Curve2d^ C, double Offset, double WFirst, double WLast);
+Adaptor2d_OffsetCurve(Macad::Occt::Adaptor2d_Curve2d^ C, double Offset, double WFirst, double WLast);
 	Adaptor2d_OffsetCurve(Macad::Occt::Adaptor2d_OffsetCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Shallow copy of adaptor
 	/// </summary>
-	Macad::Occt::Adaptor2d_Curve2d^ ShallowCopy();
-	/// <summary>
+Macad::Occt::Adaptor2d_Curve2d^ ShallowCopy();
+		/// <summary>
 	/// Changes  the curve.  The Offset is reset to 0.
 	/// </summary>
-	void Load(Macad::Occt::Adaptor2d_Curve2d^ S);
-	/// <summary>
+void Load(Macad::Occt::Adaptor2d_Curve2d^ S);
+		/// <summary>
 	/// Changes the Offset on the current Curve.
 	/// </summary>
-	void Load(double Offset);
-	/// <summary>
+void Load(double Offset);
+		/// <summary>
 	/// Changes the Offset Curve on the current Curve.
 	/// </summary>
-	void Load(double Offset, double WFirst, double WLast);
+void Load(double Offset, double WFirst, double WLast);
 	Macad::Occt::Adaptor2d_Curve2d^ Curve();
 	double Offset();
 	double FirstParameter();
 	double LastParameter();
 	Macad::Occt::GeomAbs_Shape Continuity();
-	/// <summary>
+		/// <summary>
 	/// If necessary,  breaks the  curve in  intervals  of
 	/// continuity  <S>.    And  returns   the number   of
 	/// intervals.
 	/// </summary>
-	int NbIntervals(Macad::Occt::GeomAbs_Shape S);
-	/// <summary>
+int NbIntervals(Macad::Occt::GeomAbs_Shape S);
+		/// <summary>
 	/// Stores in <T> the  parameters bounding the intervals
 	/// of continuity <S>.
 	/// 
 	/// The array must provide  enough room to  accommodate
 	/// for the parameters. i.e. T.Length() > NbIntervals()
 	/// </summary>
-	void Intervals(Macad::Occt::TColStd_Array1OfReal^ T, Macad::Occt::GeomAbs_Shape S);
-	/// <summary>
+void Intervals(Macad::Occt::TColStd_Array1OfReal^ T, Macad::Occt::GeomAbs_Shape S);
+		/// <summary>
 	/// Returns    a  curve equivalent   of  <me>  between
 	/// parameters <First>  and <Last>. <Tol>  is used  to
 	/// test for 3d points confusion.
 	/// If <First> >= <Last>
 	/// </summary>
-	Macad::Occt::Adaptor2d_Curve2d^ Trim(double First, double Last, double Tol);
+Macad::Occt::Adaptor2d_Curve2d^ Trim(double First, double Last, double Tol);
 	bool IsClosed();
 	bool IsPeriodic();
 	double Period();
-	/// <summary>
+		/// <summary>
 	/// Computes the point of parameter U on the curve.
 	/// </summary>
-	Macad::Occt::Pnt2d Value(double U);
-	/// <summary>
+Macad::Occt::Pnt2d Value(double U);
+		/// <summary>
 	/// Computes the point of parameter U on the curve.
 	/// </summary>
-	void D0(double U, Macad::Occt::Pnt2d% P);
-	/// <summary>
+void D0(double U, Macad::Occt::Pnt2d% P);
+		/// <summary>
 	/// Computes the point of parameter U on the curve with its
 	/// first derivative.
 	/// Raised if the continuity of the current interval
 	/// is not C1.
 	/// </summary>
-	void D1(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V);
-	/// <summary>
+void D1(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V);
+		/// <summary>
 	/// Returns the point P of parameter U, the first and second
 	/// derivatives V1 and V2.
 	/// Raised if the continuity of the current interval
 	/// is not C2.
 	/// </summary>
-	void D2(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V1, Macad::Occt::Vec2d% V2);
-	/// <summary>
+void D2(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V1, Macad::Occt::Vec2d% V2);
+		/// <summary>
 	/// Returns the point P of parameter U, the first, the second
 	/// and the third derivative.
 	/// Raised if the continuity of the current interval
 	/// is not C3.
 	/// </summary>
-	void D3(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V1, Macad::Occt::Vec2d% V2, Macad::Occt::Vec2d% V3);
-	/// <summary>
+void D3(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V1, Macad::Occt::Vec2d% V2, Macad::Occt::Vec2d% V3);
+		/// <summary>
 	/// The returned vector gives the value of the derivative for the
 	/// order of derivation N.
 	/// Raised if the continuity of the current interval
 	/// is not CN.
 	/// Raised if N < 1.
 	/// </summary>
-	Macad::Occt::Vec2d DN(double U, int N);
-	/// <summary>
+Macad::Occt::Vec2d DN(double U, int N);
+		/// <summary>
 	/// Returns the parametric  resolution corresponding
 	/// to the real space resolution <R3d>.
 	/// </summary>
-	double Resolution(double R3d);
-	/// <summary>
+double Resolution(double R3d);
+		/// <summary>
 	/// Returns  the  type of the   curve  in the  current
 	/// interval :   Line,   Circle,   Ellipse, Hyperbola,
 	/// Parabola, BezierCurve, BSplineCurve, OtherCurve.
 	/// </summary>
-	Macad::Occt::GeomAbs_CurveType GetGeomType();
+Macad::Occt::GeomAbs_CurveType GetGeomType();
 	Macad::Occt::gp_Lin2d^ Line();
 	Macad::Occt::gp_Circ2d^ Circle();
 	Macad::Occt::gp_Elips2d^ Ellipse();

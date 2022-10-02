@@ -43,7 +43,7 @@ public:
 public:
 	ShapeConstruct_Curve();
 	ShapeConstruct_Curve(Macad::Occt::ShapeConstruct_Curve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Modifies a curve in order to make its bounds confused with
 	/// given points.
 	/// Works only on lines and B-Splines, returns True in this case,
@@ -53,8 +53,8 @@ public:
 	/// 
 	/// Warning : Does not check if curve should be reversed
 	/// </summary>
-	bool AdjustCurve(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, bool take1, bool take2);
-	/// <summary>
+bool AdjustCurve(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, bool take1, bool take2);
+		/// <summary>
 	/// Modifies a curve in order to make its bounds confused with
 	/// given points.
 	/// Works only on lines and B-Splines, returns True in this case,
@@ -64,8 +64,8 @@ public:
 	/// 
 	/// Warning : Does not check if curve should be reversed
 	/// </summary>
-	bool AdjustCurve(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, bool take1);
-	/// <summary>
+bool AdjustCurve(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, bool take1);
+		/// <summary>
 	/// Modifies a curve in order to make its bounds confused with
 	/// given points.
 	/// Works only on lines and B-Splines, returns True in this case,
@@ -75,8 +75,8 @@ public:
 	/// 
 	/// Warning : Does not check if curve should be reversed
 	/// </summary>
-	bool AdjustCurve(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
-	/// <summary>
+bool AdjustCurve(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
+		/// <summary>
 	/// Modifies a curve in order to make its bounds confused with
 	/// given points.
 	/// Works only on lines and B-Splines.
@@ -84,8 +84,8 @@ public:
 	/// For lines works as previous method, B-Splines are segmented
 	/// at the given values and then are adjusted to the points.
 	/// </summary>
-	bool AdjustCurveSegment(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, double U1, double U2);
-	/// <summary>
+bool AdjustCurveSegment(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, double U1, double U2);
+		/// <summary>
 	/// Modifies a curve in order to make its bounds confused with
 	/// given points.
 	/// Works only on lines and B-Splines, returns True in this case,
@@ -96,8 +96,8 @@ public:
 	/// 
 	/// Warning : Does not check if curve should be reversed
 	/// </summary>
-	bool AdjustCurve2d(Macad::Occt::Geom2d_Curve^ C2D, Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2, bool take1, bool take2);
-	/// <summary>
+bool AdjustCurve2d(Macad::Occt::Geom2d_Curve^ C2D, Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2, bool take1, bool take2);
+		/// <summary>
 	/// Modifies a curve in order to make its bounds confused with
 	/// given points.
 	/// Works only on lines and B-Splines, returns True in this case,
@@ -108,8 +108,8 @@ public:
 	/// 
 	/// Warning : Does not check if curve should be reversed
 	/// </summary>
-	bool AdjustCurve2d(Macad::Occt::Geom2d_Curve^ C2D, Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2, bool take1);
-	/// <summary>
+bool AdjustCurve2d(Macad::Occt::Geom2d_Curve^ C2D, Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2, bool take1);
+		/// <summary>
 	/// Modifies a curve in order to make its bounds confused with
 	/// given points.
 	/// Works only on lines and B-Splines, returns True in this case,
@@ -120,8 +120,8 @@ public:
 	/// 
 	/// Warning : Does not check if curve should be reversed
 	/// </summary>
-	bool AdjustCurve2d(Macad::Occt::Geom2d_Curve^ C2D, Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2);
-	/// <summary>
+bool AdjustCurve2d(Macad::Occt::Geom2d_Curve^ C2D, Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2);
+		/// <summary>
 	/// Converts a curve of any type (only part from first to last)
 	/// to bspline. The method of conversion depends on the type
 	/// of original curve:
@@ -129,8 +129,8 @@ public:
 	/// Bezier and Line -> GeomConvert::CurveToBSplineCurve(C).Segment(first,last)
 	/// Conic and Other -> Approx_Curve3d(C[first,last],prec,C1,9,1000)
 	/// </summary>
-	Macad::Occt::Geom_BSplineCurve^ ConvertToBSpline(Macad::Occt::Geom_Curve^ C, double first, double last, double prec);
-	/// <summary>
+Macad::Occt::Geom_BSplineCurve^ ConvertToBSpline(Macad::Occt::Geom_Curve^ C, double first, double last, double prec);
+		/// <summary>
 	/// Converts a curve of any type (only part from first to last)
 	/// to bspline. The method of conversion depends on the type
 	/// of original curve:
@@ -138,14 +138,14 @@ public:
 	/// Bezier and Line -> GeomConvert::CurveToBSplineCurve(C).Segment(first,last)
 	/// Conic and Other -> Approx_Curve2d(C[first,last],prec,C1,9,1000)
 	/// </summary>
-	Macad::Occt::Geom2d_BSplineCurve^ ConvertToBSpline(Macad::Occt::Geom2d_Curve^ C, double first, double last, double prec);
+Macad::Occt::Geom2d_BSplineCurve^ ConvertToBSpline(Macad::Occt::Geom2d_Curve^ C, double first, double last, double prec);
 	static bool FixKnots(Macad::Occt::TColStd_HArray1OfReal^ knots);
-	/// <summary>
+		/// <summary>
 	/// Fix bspline knots to ensure that there is enough
 	/// gap between neighbouring values
 	/// Returns True if something fixed (by shifting knot)
 	/// </summary>
-	static bool FixKnots(Macad::Occt::TColStd_Array1OfReal^ knots);
+static bool FixKnots(Macad::Occt::TColStd_Array1OfReal^ knots);
 }; // class ShapeConstruct_Curve
 
 //---------------------------------------------------------------------
@@ -191,40 +191,40 @@ public:
 	static Macad::Occt::ShapeConstruct_ProjectCurveOnSurface^ CreateDowncasted(::ShapeConstruct_ProjectCurveOnSurface* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeConstruct_ProjectCurveOnSurface();
+ShapeConstruct_ProjectCurveOnSurface();
 	ShapeConstruct_ProjectCurveOnSurface(Macad::Occt::ShapeConstruct_ProjectCurveOnSurface^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes the object with all necessary parameters,
 	/// i.e. surface and precision
 	/// </summary>
-	void Init(Macad::Occt::Geom_Surface^ surf, double preci);
-	/// <summary>
+void Init(Macad::Occt::Geom_Surface^ surf, double preci);
+		/// <summary>
 	/// Initializes the object with all necessary parameters,
 	/// i.e. surface and precision
 	/// </summary>
-	void Init(Macad::Occt::ShapeAnalysis_Surface^ surf, double preci);
-	/// <summary>
+void Init(Macad::Occt::ShapeAnalysis_Surface^ surf, double preci);
+		/// <summary>
 	/// Loads a surface (in the form of Geom_Surface) to project on
 	/// </summary>
-	void SetSurface(Macad::Occt::Geom_Surface^ surf);
-	/// <summary>
+void SetSurface(Macad::Occt::Geom_Surface^ surf);
+		/// <summary>
 	/// Loads a surface (in the form of ShapeAnalysis_Surface) to project on
 	/// </summary>
-	void SetSurface(Macad::Occt::ShapeAnalysis_Surface^ surf);
-	/// <summary>
+void SetSurface(Macad::Occt::ShapeAnalysis_Surface^ surf);
+		/// <summary>
 	/// Sets value for current precision
 	/// </summary>
-	void SetPrecision(double preci);
-	/// <summary>
+void SetPrecision(double preci);
+		/// <summary>
 	/// Returns (modifiable) the build-curve-3d mode, by default False
 	/// If True, if the projected curve has been recomputed by
 	/// interpolation, the 3d curve is also rebuild by interpolation
 	/// </summary>
-	bool BuildCurveMode();
-	/// <summary>
+bool BuildCurveMode();
+		/// <summary>
 	/// Returns (modifiable) the flag specifying to which side of
 	/// parametrical space adjust part of pcurve which lies on seam.
 	/// This is required in very rare case when 3d curve which is
@@ -237,12 +237,12 @@ public:
 	/// else to the right side (on sphere U=2*PI)
 	/// Default value is True
 	/// </summary>
-	int AdjustOverDegenMode();
-	/// <summary>
+int AdjustOverDegenMode();
+		/// <summary>
 	/// Returns the status of last Perform
 	/// </summary>
-	bool Status(Macad::Occt::ShapeExtend_Status theStatus);
-	/// <summary>
+bool Status(Macad::Occt::ShapeExtend_Status theStatus);
+		/// <summary>
 	/// Computes the projection of 3d curve onto a surface using the
 	/// specialized algorithm. Returns False if projector fails,
 	/// otherwise, if pcurve computed successfully, returns True.
@@ -252,8 +252,8 @@ public:
 	/// same-parameter condition is satisfied.
 	/// TolFirst and TolLast are the tolerances at the ends of input curve 3D.
 	/// </summary>
-	bool Perform(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d, double TolFirst, double TolLast);
-	/// <summary>
+bool Perform(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d, double TolFirst, double TolLast);
+		/// <summary>
 	/// Computes the projection of 3d curve onto a surface using the
 	/// specialized algorithm. Returns False if projector fails,
 	/// otherwise, if pcurve computed successfully, returns True.
@@ -263,8 +263,8 @@ public:
 	/// same-parameter condition is satisfied.
 	/// TolFirst and TolLast are the tolerances at the ends of input curve 3D.
 	/// </summary>
-	bool Perform(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d, double TolFirst);
-	/// <summary>
+bool Perform(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d, double TolFirst);
+		/// <summary>
 	/// Computes the projection of 3d curve onto a surface using the
 	/// specialized algorithm. Returns False if projector fails,
 	/// otherwise, if pcurve computed successfully, returns True.
@@ -274,8 +274,8 @@ public:
 	/// same-parameter condition is satisfied.
 	/// TolFirst and TolLast are the tolerances at the ends of input curve 3D.
 	/// </summary>
-	bool Perform(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d);
-	/// <summary>
+bool Perform(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d);
+		/// <summary>
 	/// Computes the projection of 3d curve onto a surface using the
 	/// standard algorithm from ProjLib. Returns False if standard
 	/// projector fails or raises an exception or cuts the curve by
@@ -286,8 +286,8 @@ public:
 	/// (default), this value is computed depending on source 3d curve
 	/// and surface.
 	/// </summary>
-	bool PerformByProjLib(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d, Macad::Occt::GeomAbs_Shape continuity, int maxdeg, int nbinterval);
-	/// <summary>
+bool PerformByProjLib(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d, Macad::Occt::GeomAbs_Shape continuity, int maxdeg, int nbinterval);
+		/// <summary>
 	/// Computes the projection of 3d curve onto a surface using the
 	/// standard algorithm from ProjLib. Returns False if standard
 	/// projector fails or raises an exception or cuts the curve by
@@ -298,8 +298,8 @@ public:
 	/// (default), this value is computed depending on source 3d curve
 	/// and surface.
 	/// </summary>
-	bool PerformByProjLib(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d, Macad::Occt::GeomAbs_Shape continuity, int maxdeg);
-	/// <summary>
+bool PerformByProjLib(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d, Macad::Occt::GeomAbs_Shape continuity, int maxdeg);
+		/// <summary>
 	/// Computes the projection of 3d curve onto a surface using the
 	/// standard algorithm from ProjLib. Returns False if standard
 	/// projector fails or raises an exception or cuts the curve by
@@ -310,8 +310,8 @@ public:
 	/// (default), this value is computed depending on source 3d curve
 	/// and surface.
 	/// </summary>
-	bool PerformByProjLib(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d, Macad::Occt::GeomAbs_Shape continuity);
-	/// <summary>
+bool PerformByProjLib(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d, Macad::Occt::GeomAbs_Shape continuity);
+		/// <summary>
 	/// Computes the projection of 3d curve onto a surface using the
 	/// standard algorithm from ProjLib. Returns False if standard
 	/// projector fails or raises an exception or cuts the curve by
@@ -322,7 +322,7 @@ public:
 	/// (default), this value is computed depending on source 3d curve
 	/// and surface.
 	/// </summary>
-	bool PerformByProjLib(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d);
+bool PerformByProjLib(Macad::Occt::Geom_Curve^ c3d, double First, double Last, Macad::Occt::Geom2d_Curve^ c2d);
 }; // class ShapeConstruct_ProjectCurveOnSurface
 
 //---------------------------------------------------------------------
@@ -405,19 +405,19 @@ public:
 public:
 	ShapeConstruct();
 	ShapeConstruct(Macad::Occt::ShapeConstruct^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Tool for wire triangulation
 	/// </summary>
-	static Macad::Occt::Geom_BSplineCurve^ ConvertCurveToBSpline(Macad::Occt::Geom_Curve^ C3D, double First, double Last, double Tol3d, Macad::Occt::GeomAbs_Shape Continuity, int MaxSegments, int MaxDegree);
+static Macad::Occt::Geom_BSplineCurve^ ConvertCurveToBSpline(Macad::Occt::Geom_Curve^ C3D, double First, double Last, double Tol3d, Macad::Occt::GeomAbs_Shape Continuity, int MaxSegments, int MaxDegree);
 	static Macad::Occt::Geom2d_BSplineCurve^ ConvertCurveToBSpline(Macad::Occt::Geom2d_Curve^ C2D, double First, double Last, double Tol2d, Macad::Occt::GeomAbs_Shape Continuity, int MaxSegments, int MaxDegree);
 	static Macad::Occt::Geom_BSplineSurface^ ConvertSurfaceToBSpline(Macad::Occt::Geom_Surface^ surf, double UF, double UL, double VF, double VL, double Tol3d, Macad::Occt::GeomAbs_Shape Continuity, int MaxSegments, int MaxDegree);
-	/// <summary>
+		/// <summary>
 	/// join pcurves of the <theEdge> on the <theFace>
 	/// try to use pcurves from originas edges <theEdges>
 	/// Returns false if cannot join pcurves
 	/// </summary>
-	static bool JoinPCurves(Macad::Occt::TopTools_HSequenceOfShape^ theEdges, Macad::Occt::TopoDS_Face^ theFace, Macad::Occt::TopoDS_Edge^ theEdge);
-	/// <summary>
+static bool JoinPCurves(Macad::Occt::TopTools_HSequenceOfShape^ theEdges, Macad::Occt::TopoDS_Face^ theFace, Macad::Occt::TopoDS_Edge^ theEdge);
+		/// <summary>
 	/// Method for joininig curves 3D.
 	/// Parameters : c3d1,ac3d2 - initial curves
 	/// Orient1, Orient2 - initial edges orientations.
@@ -428,21 +428,8 @@ public:
 	/// Return value : True - if curves were joined successfully,
 	/// else - False.
 	/// </summary>
-	static bool JoinCurves(Macad::Occt::Geom_Curve^ c3d1, Macad::Occt::Geom_Curve^ ac3d2, Macad::Occt::TopAbs_Orientation Orient1, Macad::Occt::TopAbs_Orientation Orient2, double% first1, double% last1, double% first2, double% last2, Macad::Occt::Geom_Curve^ c3dOut, bool% isRev1, bool% isRev2);
-	/// <summary>
-	/// Method for joininig curves 3D.
-	/// Parameters : c3d1,ac3d2 - initial curves
-	/// Orient1, Orient2 - initial edges orientations.
-	/// first1,last1,first2,last2 - parameters for trimming curves
-	/// (re-calculate with account of orientation edges)
-	/// c3dOut - result curve
-	/// isRev1,isRev2 - out parameters indicative on possible errors.
-	/// isError - input parameter indicative possible errors due to that one from edges have one vertex
-	/// Return value : True - if curves were joined successfully,
-	/// else - False.
-	/// </summary>
-	static bool JoinCurves(Macad::Occt::Geom2d_Curve^ c2d1, Macad::Occt::Geom2d_Curve^ ac2d2, Macad::Occt::TopAbs_Orientation Orient1, Macad::Occt::TopAbs_Orientation Orient2, double% first1, double% last1, double% first2, double% last2, Macad::Occt::Geom2d_Curve^ c2dOut, bool% isRev1, bool% isRev2, bool isError);
-	/// <summary>
+static bool JoinCurves(Macad::Occt::Geom_Curve^ c3d1, Macad::Occt::Geom_Curve^ ac3d2, Macad::Occt::TopAbs_Orientation Orient1, Macad::Occt::TopAbs_Orientation Orient2, double% first1, double% last1, double% first2, double% last2, Macad::Occt::Geom_Curve^ c3dOut, bool% isRev1, bool% isRev2);
+		/// <summary>
 	/// Method for joininig curves 3D.
 	/// Parameters : c3d1,ac3d2 - initial curves
 	/// Orient1, Orient2 - initial edges orientations.
@@ -454,7 +441,20 @@ public:
 	/// Return value : True - if curves were joined successfully,
 	/// else - False.
 	/// </summary>
-	static bool JoinCurves(Macad::Occt::Geom2d_Curve^ c2d1, Macad::Occt::Geom2d_Curve^ ac2d2, Macad::Occt::TopAbs_Orientation Orient1, Macad::Occt::TopAbs_Orientation Orient2, double% first1, double% last1, double% first2, double% last2, Macad::Occt::Geom2d_Curve^ c2dOut, bool% isRev1, bool% isRev2);
+static bool JoinCurves(Macad::Occt::Geom2d_Curve^ c2d1, Macad::Occt::Geom2d_Curve^ ac2d2, Macad::Occt::TopAbs_Orientation Orient1, Macad::Occt::TopAbs_Orientation Orient2, double% first1, double% last1, double% first2, double% last2, Macad::Occt::Geom2d_Curve^ c2dOut, bool% isRev1, bool% isRev2, bool isError);
+		/// <summary>
+	/// Method for joininig curves 3D.
+	/// Parameters : c3d1,ac3d2 - initial curves
+	/// Orient1, Orient2 - initial edges orientations.
+	/// first1,last1,first2,last2 - parameters for trimming curves
+	/// (re-calculate with account of orientation edges)
+	/// c3dOut - result curve
+	/// isRev1,isRev2 - out parameters indicative on possible errors.
+	/// isError - input parameter indicative possible errors due to that one from edges have one vertex
+	/// Return value : True - if curves were joined successfully,
+	/// else - False.
+	/// </summary>
+static bool JoinCurves(Macad::Occt::Geom2d_Curve^ c2d1, Macad::Occt::Geom2d_Curve^ ac2d2, Macad::Occt::TopAbs_Orientation Orient1, Macad::Occt::TopAbs_Orientation Orient2, double% first1, double% last1, double% first2, double% last2, Macad::Occt::Geom2d_Curve^ c2dOut, bool% isRev1, bool% isRev2);
 }; // class ShapeConstruct
 
 }; // namespace Occt

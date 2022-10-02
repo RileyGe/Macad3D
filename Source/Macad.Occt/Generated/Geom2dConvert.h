@@ -60,7 +60,7 @@ public:
 public:
 	Geom2dConvert();
 	Geom2dConvert(Macad::Occt::Geom2dConvert^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// -- Convert a curve to BSpline  by Approximation
 	/// 
 	/// This method computes the arc of B-spline curve between the two
@@ -80,8 +80,8 @@ public:
 	/// [FirstUKnotIndex, LastUKnotIndex]
 	/// Raised if FromK1 = ToK2
 	/// </summary>
-	static Macad::Occt::Geom2d_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom2d_BSplineCurve^ C, int FromK1, int ToK2, bool SameOrientation);
-	/// <summary>
+static Macad::Occt::Geom2d_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom2d_BSplineCurve^ C, int FromK1, int ToK2, bool SameOrientation);
+		/// <summary>
 	/// -- Convert a curve to BSpline  by Approximation
 	/// 
 	/// This method computes the arc of B-spline curve between the two
@@ -101,8 +101,8 @@ public:
 	/// [FirstUKnotIndex, LastUKnotIndex]
 	/// Raised if FromK1 = ToK2
 	/// </summary>
-	static Macad::Occt::Geom2d_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom2d_BSplineCurve^ C, int FromK1, int ToK2);
-	/// <summary>
+static Macad::Occt::Geom2d_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom2d_BSplineCurve^ C, int FromK1, int ToK2);
+		/// <summary>
 	/// This function computes the segment of B-spline curve between the
 	/// parametric values FromU1, ToU2.
 	/// If C is periodic the arc has the same orientation as C if
@@ -119,8 +119,8 @@ public:
 	/// Raised if Abs (FromU1 - ToU2) <= ParametricTolerance
 	/// Raised if ParametricTolerance < Resolution from gp.
 	/// </summary>
-	static Macad::Occt::Geom2d_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom2d_BSplineCurve^ C, double FromU1, double ToU2, double ParametricTolerance, bool SameOrientation);
-	/// <summary>
+static Macad::Occt::Geom2d_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom2d_BSplineCurve^ C, double FromU1, double ToU2, double ParametricTolerance, bool SameOrientation);
+		/// <summary>
 	/// This function computes the segment of B-spline curve between the
 	/// parametric values FromU1, ToU2.
 	/// If C is periodic the arc has the same orientation as C if
@@ -137,8 +137,8 @@ public:
 	/// Raised if Abs (FromU1 - ToU2) <= ParametricTolerance
 	/// Raised if ParametricTolerance < Resolution from gp.
 	/// </summary>
-	static Macad::Occt::Geom2d_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom2d_BSplineCurve^ C, double FromU1, double ToU2, double ParametricTolerance);
-	/// <summary>
+static Macad::Occt::Geom2d_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom2d_BSplineCurve^ C, double FromU1, double ToU2, double ParametricTolerance);
+		/// <summary>
 	/// This function converts a non infinite curve from
 	/// Geom into a  B-spline curve.  C must  be  an ellipse or a
 	/// circle or a trimmed conic  or a trimmed  line or a Bezier
@@ -204,8 +204,8 @@ public:
 	/// trimmed curve (this method of parameterization
 	/// cannot be used to convert a quasi-complete circle or ellipse).
 	/// </summary>
-	static Macad::Occt::Geom2d_BSplineCurve^ CurveToBSplineCurve(Macad::Occt::Geom2d_Curve^ C, Macad::Occt::Convert_ParameterisationType Parameterisation);
-	/// <summary>
+static Macad::Occt::Geom2d_BSplineCurve^ CurveToBSplineCurve(Macad::Occt::Geom2d_Curve^ C, Macad::Occt::Convert_ParameterisationType Parameterisation);
+		/// <summary>
 	/// This function converts a non infinite curve from
 	/// Geom into a  B-spline curve.  C must  be  an ellipse or a
 	/// circle or a trimmed conic  or a trimmed  line or a Bezier
@@ -271,72 +271,18 @@ public:
 	/// trimmed curve (this method of parameterization
 	/// cannot be used to convert a quasi-complete circle or ellipse).
 	/// </summary>
-	static Macad::Occt::Geom2d_BSplineCurve^ CurveToBSplineCurve(Macad::Occt::Geom2d_Curve^ C);
-	/// <summary>
-	/// This Method concatenates G1 the ArrayOfCurves as far
-	/// as it is possible.
-	/// ArrayOfCurves[0..N-1]
-	/// ArrayOfToler contains the  biggest tolerance of the two
-	/// points shared by two consecutives curves.
-	/// Its dimension: [0..N-2]
-	/// ClosedFlag     indicates if the ArrayOfCurves is closed.
-	/// In this case ClosedTolerance contains the biggest tolerance
-	/// of the two points which are at the closure.
-	/// Otherwise its value is 0.0
-	/// ClosedFlag becomes False on the output
-	/// if it is impossible to build closed curve.
-	/// </summary>
+static Macad::Occt::Geom2d_BSplineCurve^ CurveToBSplineCurve(Macad::Occt::Geom2d_Curve^ C);
 	/* Method skipped due to unknown mapping: void ConcatG1(TColGeom2d_Array1OfBSplineCurve ArrayOfCurves, TColStd_Array1OfReal ArrayOfToler, TColGeom2d_HArray1OfBSplineCurve ArrayOfConcatenated, Standard_Boolean ClosedFlag, Standard_Real ClosedTolerance, ) */
-	/// <summary>
-	/// This Method concatenates C1 the ArrayOfCurves as far
-	/// as it is possible.
-	/// ArrayOfCurves[0..N-1]
-	/// ArrayOfToler contains the  biggest tolerance of the two
-	/// points shared by two consecutives curves.
-	/// Its dimension: [0..N-2]
-	/// ClosedFlag     indicates if the ArrayOfCurves is closed.
-	/// In this case ClosedTolerance contains the biggest tolerance
-	/// of the two points which are at the closure.
-	/// Otherwise its value is 0.0
-	/// ClosedFlag becomes False on the output
-	/// if it is impossible to build closed curve.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ConcatC1(TColGeom2d_Array1OfBSplineCurve ArrayOfCurves, TColStd_Array1OfReal ArrayOfToler, TColStd_HArray1OfInteger ArrayOfIndices, TColGeom2d_HArray1OfBSplineCurve ArrayOfConcatenated, Standard_Boolean ClosedFlag, Standard_Real ClosedTolerance, ) */
-	/// <summary>
-	/// This Method concatenates C1 the ArrayOfCurves as far
-	/// as it is possible.
-	/// ArrayOfCurves[0..N-1]
-	/// ArrayOfToler contains the  biggest tolerance of the two
-	/// points shared by two consecutives curves.
-	/// Its dimension: [0..N-2]
-	/// ClosedFlag     indicates if the ArrayOfCurves is closed.
-	/// In this case ClosedTolerance contains the biggest tolerance
-	/// of the two points which are at the closure.
-	/// Otherwise its value is 0.0
-	/// ClosedFlag becomes False on the output
-	/// if it is impossible to build closed curve.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ConcatC1(TColGeom2d_Array1OfBSplineCurve ArrayOfCurves, TColStd_Array1OfReal ArrayOfToler, TColStd_HArray1OfInteger ArrayOfIndices, TColGeom2d_HArray1OfBSplineCurve ArrayOfConcatenated, Standard_Boolean ClosedFlag, Standard_Real ClosedTolerance, Standard_Real AngularTolerance, ) */
-	/// <summary>
+		/// <summary>
 	/// This Method reduces as   far as it  is possible the
 	/// multiplicities of  the  knots of  the BSpline BS.(keeping  the geometry).
 	/// It returns a new BSpline which could still be C0.
 	/// tolerance is a geometrical tolerance
 	/// </summary>
-	static void C0BSplineToC1BSplineCurve(Macad::Occt::Geom2d_BSplineCurve^ BS, double Tolerance);
-	/// <summary>
-	/// This Method   reduces as far  as  it is possible  the
-	/// multiplicities  of  the knots  of the BSpline  BS.(keeping the geometry).
-	/// It returns an array of BSpline C1.
-	/// Tolerance is a geometrical tolerance
-	/// </summary>
+static void C0BSplineToC1BSplineCurve(Macad::Occt::Geom2d_BSplineCurve^ BS, double Tolerance);
 	/* Method skipped due to unknown mapping: void C0BSplineToArrayOfC1BSplineCurve(Geom2d_BSplineCurve BS, TColGeom2d_HArray1OfBSplineCurve tabBS, Standard_Real Tolerance, ) */
-	/// <summary>
-	/// This Method   reduces as far  as  it is possible  the
-	/// multiplicities  of  the knots  of the BSpline  BS.(keeping the geometry).
-	/// It returns an array of BSpline C1.
-	/// tolerance is a geometrical tolerance
-	/// </summary>
 	/* Method skipped due to unknown mapping: void C0BSplineToArrayOfC1BSplineCurve(Geom2d_BSplineCurve BS, TColGeom2d_HArray1OfBSplineCurve tabBS, Standard_Real AngularTolerance, Standard_Real Tolerance, ) */
 }; // class Geom2dConvert
 
@@ -373,7 +319,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an approximation framework defined by
 	/// -   the 2D conic Curve
 	/// -   the tolerance value Tol2d
@@ -382,8 +328,8 @@ public:
 	/// -   the highest degree MaxDegree which the
 	/// polynomial defining the BSpline is allowed to have.
 	/// </summary>
-	Geom2dConvert_ApproxCurve(Macad::Occt::Geom2d_Curve^ Curve, double Tol2d, Macad::Occt::GeomAbs_Shape Order, int MaxSegments, int MaxDegree);
-	/// <summary>
+Geom2dConvert_ApproxCurve(Macad::Occt::Geom2d_Curve^ Curve, double Tol2d, Macad::Occt::GeomAbs_Shape Order, int MaxSegments, int MaxDegree);
+		/// <summary>
 	/// Constructs an approximation framework defined by
 	/// -   the 2D conic Curve
 	/// -   the tolerance value Tol2d
@@ -392,33 +338,30 @@ public:
 	/// -   the highest degree MaxDegree which the
 	/// polynomial defining the BSpline is allowed to have.
 	/// </summary>
-	Geom2dConvert_ApproxCurve(Macad::Occt::Adaptor2d_Curve2d^ Curve, double Tol2d, Macad::Occt::GeomAbs_Shape Order, int MaxSegments, int MaxDegree);
+Geom2dConvert_ApproxCurve(Macad::Occt::Adaptor2d_Curve2d^ Curve, double Tol2d, Macad::Occt::GeomAbs_Shape Order, int MaxSegments, int MaxDegree);
 	Geom2dConvert_ApproxCurve(Macad::Occt::Geom2dConvert_ApproxCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the 2D BSpline curve resulting from the
 	/// approximation algorithm.
 	/// </summary>
-	Macad::Occt::Geom2d_BSplineCurve^ Curve();
-	/// <summary>
+Macad::Occt::Geom2d_BSplineCurve^ Curve();
+		/// <summary>
 	/// returns  Standard_True  if  the  approximation  has
 	/// been  done  with  within  required tolerance
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// returns  Standard_True if the approximation did come out
 	/// with a result that  is not NECESSARELY within the required tolerance
 	/// </summary>
-	bool HasResult();
-	/// <summary>
+bool HasResult();
+		/// <summary>
 	/// Returns the greatest distance between a point on the
 	/// source conic and the BSpline curve resulting from the
 	/// approximation. (>0 when an approximation
 	/// has  been  done, 0  if  no  approximation)
 	/// </summary>
-	double MaxError();
-	/// <summary>
-	/// Print on the stream  o  information about the object
-	/// </summary>
+double MaxError();
 	/* Method skipped due to unknown mapping: void Dump(ostream o, ) */
 }; // class Geom2dConvert_ApproxCurve
 
@@ -472,7 +415,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Determines points at which the BSpline curve
 	/// BasisCurve should be split in order to obtain arcs
 	/// with a degree of continuity equal to ContinuityRange.
@@ -485,9 +428,9 @@ public:
 	/// Exceptions
 	/// Standard_RangeError if ContinuityRange is less than zero.
 	/// </summary>
-	Geom2dConvert_BSplineCurveKnotSplitting(Macad::Occt::Geom2d_BSplineCurve^ BasisCurve, int ContinuityRange);
+Geom2dConvert_BSplineCurveKnotSplitting(Macad::Occt::Geom2d_BSplineCurve^ BasisCurve, int ContinuityRange);
 	Geom2dConvert_BSplineCurveKnotSplitting(Macad::Occt::Geom2dConvert_BSplineCurveKnotSplitting^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of points at which the analysed
 	/// BSpline curve should be split, in order to obtain arcs
 	/// with the continuity required by this framework.
@@ -495,8 +438,8 @@ public:
 	/// the first and last points of the curve, which bound the
 	/// first and last arcs, are counted among these splitting points.
 	/// </summary>
-	int NbSplits();
-	/// <summary>
+int NbSplits();
+		/// <summary>
 	/// Loads the SplitValues table with the split knots
 	/// values computed in this framework. Each value in the
 	/// table is an index in the knots table of the BSpline
@@ -514,8 +457,8 @@ public:
 	/// -   the number of split points computed in this
 	/// framework (as given by the function NbSplits).
 	/// </summary>
-	void Splitting(Macad::Occt::TColStd_Array1OfInteger^ SplitValues);
-	/// <summary>
+void Splitting(Macad::Occt::TColStd_Array1OfInteger^ SplitValues);
+		/// <summary>
 	/// Returns the split knot of index Index to the split knots
 	/// table computed in this framework. The returned value
 	/// is an index in the knots table of the BSpline curve
@@ -530,7 +473,7 @@ public:
 	/// Standard_RangeError if Index is less than 1 or
 	/// greater than the number of split knots computed in this framework.
 	/// </summary>
-	int SplitValue(int Index);
+int SplitValue(int Index);
 }; // class Geom2dConvert_BSplineCurveKnotSplitting
 
 //---------------------------------------------------------------------
@@ -573,7 +516,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Computes all the data needed to convert
 	/// -   the BSpline curve BasisCurve, into a series of adjacent Bezier arcs.
 	/// The result consists of a series of BasisCurve arcs
@@ -583,8 +526,8 @@ public:
 	/// construct each individual Bezier curve (or all Bezier curves).
 	/// Note: ParametricTolerance is not used.
 	/// </summary>
-	Geom2dConvert_BSplineCurveToBezierCurve(Macad::Occt::Geom2d_BSplineCurve^ BasisCurve);
-	/// <summary>
+Geom2dConvert_BSplineCurveToBezierCurve(Macad::Occt::Geom2d_BSplineCurve^ BasisCurve);
+		/// <summary>
 	/// Computes all the data needed to convert
 	/// the portion of the BSpline curve BasisCurve
 	/// limited by the two parameter values U1 and U2
@@ -602,9 +545,9 @@ public:
 	/// is ParametricTolerance.
 	/// Raised if Abs (U2 - U1) <= ParametricTolerance.
 	/// </summary>
-	Geom2dConvert_BSplineCurveToBezierCurve(Macad::Occt::Geom2d_BSplineCurve^ BasisCurve, double U1, double U2, double ParametricTolerance);
+Geom2dConvert_BSplineCurveToBezierCurve(Macad::Occt::Geom2d_BSplineCurve^ BasisCurve, double U1, double U2, double ParametricTolerance);
 	Geom2dConvert_BSplineCurveToBezierCurve(Macad::Occt::Geom2dConvert_BSplineCurveToBezierCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Constructs and returns the Bezier curve of index
 	/// Index to the table of adjacent Bezier arcs
 	/// computed by this algorithm.
@@ -615,29 +558,16 @@ public:
 	/// greater than the number of adjacent Bezier arcs
 	/// computed by this algorithm.
 	/// </summary>
-	Macad::Occt::Geom2d_BezierCurve^ Arc(int Index);
-	/// <summary>
-	/// Constructs all the Bezier curves whose data is
-	/// computed by this algorithm and loads these curves
-	/// into the Curves table.
-	/// The Bezier curves have the same orientation as the
-	/// BSpline curve analyzed in this framework.
-	/// Exceptions
-	/// Standard_DimensionError if the Curves array was
-	/// not created with the following bounds:
-	/// -   1 , and
-	/// -   the number of adjacent Bezier arcs computed by
-	/// this algorithm (as given by the function NbArcs).
-	/// </summary>
+Macad::Occt::Geom2d_BezierCurve^ Arc(int Index);
 	/* Method skipped due to unknown mapping: void Arcs(TColGeom2d_Array1OfBezierCurve Curves, ) */
-	/// <summary>
+		/// <summary>
 	/// This methode returns the bspline's knots associated to
 	/// the converted arcs
 	/// Raises DimensionError if the length  of Curves is not equal to
 	/// NbArcs +  1
 	/// </summary>
-	void Knots(Macad::Occt::TColStd_Array1OfReal^ TKnots);
-	/// <summary>
+void Knots(Macad::Occt::TColStd_Array1OfReal^ TKnots);
+		/// <summary>
 	/// Returns the number of BezierCurve arcs.
 	/// If at the creation time you have decomposed the basis curve
 	/// between the parametric values UFirst, ULast the number of
@@ -647,7 +577,7 @@ public:
 	/// of BezierCurve arcs NbArcs is equal to the number of knots less
 	/// one.
 	/// </summary>
-	int NbArcs();
+int NbArcs();
 }; // class Geom2dConvert_BSplineCurveToBezierCurve
 
 //---------------------------------------------------------------------
@@ -682,43 +612,43 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initialize the algorithme
 	/// - Parameterisation is used to convert
 	/// </summary>
-	Geom2dConvert_CompCurveToBSplineCurve(Macad::Occt::Convert_ParameterisationType Parameterisation);
-	/// <summary>
+Geom2dConvert_CompCurveToBSplineCurve(Macad::Occt::Convert_ParameterisationType Parameterisation);
+		/// <summary>
 	/// Initialize the algorithme with one curve
 	/// - Parameterisation is used to convert
 	/// </summary>
-	Geom2dConvert_CompCurveToBSplineCurve(Macad::Occt::Geom2d_BoundedCurve^ BasisCurve, Macad::Occt::Convert_ParameterisationType Parameterisation);
-	/// <summary>
+Geom2dConvert_CompCurveToBSplineCurve(Macad::Occt::Geom2d_BoundedCurve^ BasisCurve, Macad::Occt::Convert_ParameterisationType Parameterisation);
+		/// <summary>
 	/// Initialize the algorithme with one curve
 	/// - Parameterisation is used to convert
 	/// </summary>
-	Geom2dConvert_CompCurveToBSplineCurve(Macad::Occt::Geom2d_BoundedCurve^ BasisCurve);
+Geom2dConvert_CompCurveToBSplineCurve(Macad::Occt::Geom2d_BoundedCurve^ BasisCurve);
 	Geom2dConvert_CompCurveToBSplineCurve(Macad::Occt::Geom2dConvert_CompCurveToBSplineCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Append a curve in the BSpline
 	/// Return False if the curve is not G0 with the BSplineCurve.
 	/// Tolerance is used to check continuity and decrease
 	/// Multiplicty at the common Knot
 	/// After is useful if BasisCurve is a closed curve .
 	/// </summary>
-	bool Add(Macad::Occt::Geom2d_BoundedCurve^ NewCurve, double Tolerance, bool After);
-	/// <summary>
+bool Add(Macad::Occt::Geom2d_BoundedCurve^ NewCurve, double Tolerance, bool After);
+		/// <summary>
 	/// Append a curve in the BSpline
 	/// Return False if the curve is not G0 with the BSplineCurve.
 	/// Tolerance is used to check continuity and decrease
 	/// Multiplicty at the common Knot
 	/// After is useful if BasisCurve is a closed curve .
 	/// </summary>
-	bool Add(Macad::Occt::Geom2d_BoundedCurve^ NewCurve, double Tolerance);
+bool Add(Macad::Occt::Geom2d_BoundedCurve^ NewCurve, double Tolerance);
 	Macad::Occt::Geom2d_BSplineCurve^ BSplineCurve();
-	/// <summary>
+		/// <summary>
 	/// Clear result curve
 	/// </summary>
-	void Clear();
+void Clear();
 }; // class Geom2dConvert_CompCurveToBSplineCurve
 
 }; // namespace Occt

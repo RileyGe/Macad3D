@@ -112,7 +112,7 @@ public:
 public:
 	Precision();
 	Precision(Macad::Occt::Precision^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the recommended precision value
 	/// when checking the equality of two angles (given in radians).
 	/// Standard_Real Angle1 = ... , Angle2 = ... ;
@@ -133,8 +133,8 @@ public:
 	/// If ( Abs( D1.D2 ) < Precision::Angular() ) ...
 	/// (although the function IsNormal does exist).
 	/// </summary>
-	static double Angular();
-	/// <summary>
+static double Angular();
+		/// <summary>
 	/// Returns the recommended precision value when
 	/// checking coincidence of two points in real space.
 	/// The tolerance of confusion is used for testing a 3D
@@ -176,13 +176,13 @@ public:
 	/// becomes easily measurable, but only within a restricted
 	/// space which contains some small objects of the complete scene.
 	/// </summary>
-	static double Confusion();
-	/// <summary>
+static double Confusion();
+		/// <summary>
 	/// Returns square of Confusion.
 	/// Created for speed and convenience.
 	/// </summary>
-	static double SquareConfusion();
-	/// <summary>
+static double SquareConfusion();
+		/// <summary>
 	/// Returns the precision value in real space, frequently
 	/// used by intersection algorithms to decide that a solution is reached.
 	/// This function provides an acceptable level of precision
@@ -206,8 +206,8 @@ public:
 	/// Precision::Confusion() / 100.
 	/// (that is, 1.e-9).
 	/// </summary>
-	static double Intersection();
-	/// <summary>
+static double Intersection();
+		/// <summary>
 	/// Returns the precision value in real space, frequently used
 	/// by approximation algorithms.
 	/// This function provides an acceptable level of precision for
@@ -222,16 +222,16 @@ public:
 	/// You may use a smaller tolerance in an approximation
 	/// algorithm, but this option might be costly.
 	/// </summary>
-	static double Approximation();
-	/// <summary>
+static double Approximation();
+		/// <summary>
 	/// Convert a real  space precision  to  a  parametric
 	/// space precision.   <T>  is the mean  value  of the
 	/// length of the tangent of the curve or the surface.
 	/// 
 	/// Value is P / T
 	/// </summary>
-	static double Parametric(double P, double T);
-	/// <summary>
+static double Parametric(double P, double T);
+		/// <summary>
 	/// Returns a precision value in parametric space, which may be used :
 	/// -   to test the coincidence of two points in the real space,
 	/// by using parameter values, or
@@ -277,13 +277,13 @@ public:
 	/// Therefore, take great care when adjusting a parametric
 	/// tolerance to your own algorithm.
 	/// </summary>
-	static double PConfusion(double T);
-	/// <summary>
+static double PConfusion(double T);
+		/// <summary>
 	/// Returns square of PConfusion.
 	/// Created for speed and convenience.
 	/// </summary>
-	static double SquarePConfusion();
-	/// <summary>
+static double SquarePConfusion();
+		/// <summary>
 	/// Returns a precision value in parametric space, which
 	/// may be used by intersection algorithms, to decide that
 	/// a solution is reached. The purpose of this function is to
@@ -298,8 +298,8 @@ public:
 	/// The parametric tolerance of intersection is equal to :
 	/// -   Precision::Intersection() / 100., or Precision::Intersection() / T.
 	/// </summary>
-	static double PIntersection(double T);
-	/// <summary>
+static double PIntersection(double T);
+		/// <summary>
 	/// Returns a precision value in parametric space, which may
 	/// be used by approximation algorithms. The purpose of this
 	/// function is to provide an acceptable level of precision in
@@ -314,55 +314,55 @@ public:
 	/// The parametric tolerance of intersection is equal to :
 	/// -   Precision::Approximation() / 100., or Precision::Approximation() / T.
 	/// </summary>
-	static double PApproximation(double T);
-	/// <summary>
+static double PApproximation(double T);
+		/// <summary>
 	/// Convert a real  space precision  to  a  parametric
 	/// space precision on a default curve.
 	/// 
 	/// Value is Parametric(P,1.e+2)
 	/// </summary>
-	static double Parametric(double P);
-	/// <summary>
+static double Parametric(double P);
+		/// <summary>
 	/// Used  to test distances  in parametric  space on a
 	/// default curve.
 	/// 
 	/// This is Precision::Parametric(Precision::Confusion())
 	/// </summary>
-	static double PConfusion();
-	/// <summary>
+static double PConfusion();
+		/// <summary>
 	/// Used for Intersections  in parametric  space  on a
 	/// default curve.
 	/// 
 	/// This is Precision::Parametric(Precision::Intersection())
 	/// </summary>
-	static double PIntersection();
-	/// <summary>
+static double PIntersection();
+		/// <summary>
 	/// Used for  Approximations  in parametric space on a
 	/// default curve.
 	/// 
 	/// This is Precision::Parametric(Precision::Approximation())
 	/// </summary>
-	static double PApproximation();
-	/// <summary>
+static double PApproximation();
+		/// <summary>
 	/// Returns True if R may be considered as an infinite
 	/// number. Currently Abs(R) > 1e100
 	/// </summary>
-	static bool IsInfinite(double R);
-	/// <summary>
+static bool IsInfinite(double R);
+		/// <summary>
 	/// Returns True if R may be considered as  a positive
 	/// infinite number. Currently R > 1e100
 	/// </summary>
-	static bool IsPositiveInfinite(double R);
-	/// <summary>
+static bool IsPositiveInfinite(double R);
+		/// <summary>
 	/// Returns True if R may  be considered as a negative
 	/// infinite number. Currently R < -1e100
 	/// </summary>
-	static bool IsNegativeInfinite(double R);
-	/// <summary>
+static bool IsNegativeInfinite(double R);
+		/// <summary>
 	/// Returns a  big number that  can  be  considered as
 	/// infinite. Use -Infinite() for a negative big number.
 	/// </summary>
-	static double Infinite();
+static double Infinite();
 }; // class Precision
 
 }; // namespace Occt

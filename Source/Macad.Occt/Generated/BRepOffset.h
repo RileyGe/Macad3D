@@ -259,7 +259,7 @@ public:
 public:
 	BRepOffset();
 	BRepOffset(Macad::Occt::BRepOffset^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// returns   the  Offset  surface  computed from  the
 	/// surface <Surface> at an OffsetDistance <Offset>.
 	/// 
@@ -271,8 +271,8 @@ public:
 	/// Parameter allowC0 is then passed as last argument to
 	/// constructor of Geom_OffsetSurface.
 	/// </summary>
-	static Macad::Occt::Geom_Surface^ Surface(Macad::Occt::Geom_Surface^ Surface, double Offset, Macad::Occt::BRepOffset_Status% theStatus, bool allowC0);
-	/// <summary>
+static Macad::Occt::Geom_Surface^ Surface(Macad::Occt::Geom_Surface^ Surface, double Offset, Macad::Occt::BRepOffset_Status% theStatus, bool allowC0);
+		/// <summary>
 	/// returns   the  Offset  surface  computed from  the
 	/// surface <Surface> at an OffsetDistance <Offset>.
 	/// 
@@ -284,8 +284,8 @@ public:
 	/// Parameter allowC0 is then passed as last argument to
 	/// constructor of Geom_OffsetSurface.
 	/// </summary>
-	static Macad::Occt::Geom_Surface^ Surface(Macad::Occt::Geom_Surface^ Surface, double Offset, Macad::Occt::BRepOffset_Status% theStatus);
-	/// <summary>
+static Macad::Occt::Geom_Surface^ Surface(Macad::Occt::Geom_Surface^ Surface, double Offset, Macad::Occt::BRepOffset_Status% theStatus);
+		/// <summary>
 	/// Preprocess surface to be offset (bspline, bezier, or revolution based on
 	/// bspline or bezier curve), by collapsing each singular side to single point.
 	/// 
@@ -299,7 +299,7 @@ public:
 	/// 
 	/// Returns either original surface or its modified copy (if some poles have been moved).
 	/// </summary>
-	static Macad::Occt::Geom_Surface^ CollapseSingularities(Macad::Occt::Geom_Surface^ theSurface, Macad::Occt::TopoDS_Face^ theFace, double thePrecision);
+static Macad::Occt::Geom_Surface^ CollapseSingularities(Macad::Occt::Geom_Surface^ theSurface, Macad::Occt::TopoDS_Face^ theFace, double thePrecision);
 }; // class BRepOffset
 
 //---------------------------------------------------------------------
@@ -375,110 +375,86 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty c-tor
 	/// </summary>
-	BRepOffset_Analyse();
-	/// <summary>
+BRepOffset_Analyse();
+		/// <summary>
 	/// C-tor performing the job inside
 	/// </summary>
-	BRepOffset_Analyse(Macad::Occt::TopoDS_Shape^ theS, double theAngle);
+BRepOffset_Analyse(Macad::Occt::TopoDS_Shape^ theS, double theAngle);
 	BRepOffset_Analyse(Macad::Occt::BRepOffset_Analyse^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Performs the analysis
 	/// </summary>
-	void Perform(Macad::Occt::TopoDS_Shape^ theS, double theAngle, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Perform(Macad::Occt::TopoDS_Shape^ theS, double theAngle, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Performs the analysis
 	/// </summary>
-	void Perform(Macad::Occt::TopoDS_Shape^ theS, double theAngle);
-	/// <summary>
+void Perform(Macad::Occt::TopoDS_Shape^ theS, double theAngle);
+		/// <summary>
 	/// Returns status of the algorithm
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// Returns the connectivity type of the edge
 	/// </summary>
-	Macad::Occt::BRepOffset_ListOfInterval^ Type(Macad::Occt::TopoDS_Edge^ theE);
-	/// <summary>
-	/// Stores in <L> all the edges of Type <T>
-	/// on the vertex <V>.
-	/// </summary>
+Macad::Occt::BRepOffset_ListOfInterval^ Type(Macad::Occt::TopoDS_Edge^ theE);
 	/* Method skipped due to unknown mapping: void Edges(TopoDS_Vertex theV, ChFiDS_TypeOfConcavity theType, TopTools_ListOfShape theL, ) */
-	/// <summary>
-	/// Stores in <L> all the edges of Type <T>
-	/// on the face <F>.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Edges(TopoDS_Face theF, ChFiDS_TypeOfConcavity theType, TopTools_ListOfShape theL, ) */
-	/// <summary>
+		/// <summary>
 	/// set in <Edges> all  the Edges of <Shape> which are
 	/// tangent to <Edge> at the vertex <Vertex>.
 	/// </summary>
-	void TangentEdges(Macad::Occt::TopoDS_Edge^ theEdge, Macad::Occt::TopoDS_Vertex^ theVertex, Macad::Occt::TopTools_ListOfShape^ theEdges);
-	/// <summary>
+void TangentEdges(Macad::Occt::TopoDS_Edge^ theEdge, Macad::Occt::TopoDS_Vertex^ theVertex, Macad::Occt::TopTools_ListOfShape^ theEdges);
+		/// <summary>
 	/// Checks if the given shape has ancestors
 	/// </summary>
-	bool HasAncestor(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+bool HasAncestor(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns ancestors for the shape
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Ancestors(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
-	/// Explode in compounds of faces where
-	/// all the connex edges are of type <Side>
-	/// </summary>
+Macad::Occt::TopTools_ListOfShape^ Ancestors(Macad::Occt::TopoDS_Shape^ theS);
 	/* Method skipped due to unknown mapping: void Explode(TopTools_ListOfShape theL, ChFiDS_TypeOfConcavity theType, ) */
-	/// <summary>
-	/// Explode in compounds of faces where
-	/// all the connex edges are of type <Side1> or <Side2>
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Explode(TopTools_ListOfShape theL, ChFiDS_TypeOfConcavity theType1, ChFiDS_TypeOfConcavity theType2, ) */
-	/// <summary>
-	/// Add in <CO> the faces of the shell containing <Face>
-	/// where all the connex edges are of type <Side>.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void AddFaces(TopoDS_Face theFace, TopoDS_Compound theCo, TopTools_MapOfShape theMap, ChFiDS_TypeOfConcavity theType, ) */
-	/// <summary>
-	/// Add in <CO> the faces of the shell containing <Face>
-	/// where all the connex edges are of type <Side1> or <Side2>.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void AddFaces(TopoDS_Face theFace, TopoDS_Compound theCo, TopTools_MapOfShape theMap, ChFiDS_TypeOfConcavity theType1, ChFiDS_TypeOfConcavity theType2, ) */
 	void SetOffsetValue(double theOffset);
-	/// <summary>
+		/// <summary>
 	/// Sets the face-offset data map to analyze tangential cases
 	/// </summary>
-	void SetFaceOffsetMap(Macad::Occt::TopTools_DataMapOfShapeReal^ theMap);
-	/// <summary>
+void SetFaceOffsetMap(Macad::Occt::TopTools_DataMapOfShapeReal^ theMap);
+		/// <summary>
 	/// Returns the new faces constructed between tangent faces
 	/// having different offset values on the shape
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ NewFaces();
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ NewFaces();
+		/// <summary>
 	/// Returns the new face constructed for the edge connecting
 	/// the two tangent faces having different offset values
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Generated(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Generated(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Checks if the edge has generated a new face.
 	/// </summary>
-	bool HasGenerated(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+bool HasGenerated(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns the replacement of the edge in the face.
 	/// If no replacement exists, returns the edge
 	/// </summary>
-	Macad::Occt::TopoDS_Edge^ EdgeReplacement(Macad::Occt::TopoDS_Face^ theFace, Macad::Occt::TopoDS_Edge^ theEdge);
-	/// <summary>
+Macad::Occt::TopoDS_Edge^ EdgeReplacement(Macad::Occt::TopoDS_Face^ theFace, Macad::Occt::TopoDS_Edge^ theEdge);
+		/// <summary>
 	/// Returns the shape descendants.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Descendants(Macad::Occt::TopoDS_Shape^ theS, bool theUpdate);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Descendants(Macad::Occt::TopoDS_Shape^ theS, bool theUpdate);
+		/// <summary>
 	/// Returns the shape descendants.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Descendants(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Descendants(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Clears the content of the algorithm
 	/// </summary>
-	void Clear();
+void Clear();
 }; // class BRepOffset_Analyse
 
 //---------------------------------------------------------------------
@@ -521,7 +497,7 @@ public:
 	BRepOffset_Offset(Macad::Occt::TopoDS_Face^ Face, double Offset, bool OffsetOutside, Macad::Occt::GeomAbs_JoinType JoinType);
 	BRepOffset_Offset(Macad::Occt::TopoDS_Face^ Face, double Offset, bool OffsetOutside);
 	BRepOffset_Offset(Macad::Occt::TopoDS_Face^ Face, double Offset);
-	/// <summary>
+		/// <summary>
 	/// This method will be  called when you want to share
 	/// the  edges  soon generated  from  an other  face.
 	/// e.g. when two faces are  tangents the common  edge
@@ -535,8 +511,8 @@ public:
 	/// another  face  sharing E  with a
 	/// continuity at least G1
 	/// </summary>
-	BRepOffset_Offset(Macad::Occt::TopoDS_Face^ Face, double Offset, Macad::Occt::TopTools_DataMapOfShapeShape^ Created, bool OffsetOutside, Macad::Occt::GeomAbs_JoinType JoinType);
-	/// <summary>
+BRepOffset_Offset(Macad::Occt::TopoDS_Face^ Face, double Offset, Macad::Occt::TopTools_DataMapOfShapeShape^ Created, bool OffsetOutside, Macad::Occt::GeomAbs_JoinType JoinType);
+		/// <summary>
 	/// This method will be  called when you want to share
 	/// the  edges  soon generated  from  an other  face.
 	/// e.g. when two faces are  tangents the common  edge
@@ -550,8 +526,8 @@ public:
 	/// another  face  sharing E  with a
 	/// continuity at least G1
 	/// </summary>
-	BRepOffset_Offset(Macad::Occt::TopoDS_Face^ Face, double Offset, Macad::Occt::TopTools_DataMapOfShapeShape^ Created, bool OffsetOutside);
-	/// <summary>
+BRepOffset_Offset(Macad::Occt::TopoDS_Face^ Face, double Offset, Macad::Occt::TopTools_DataMapOfShapeShape^ Created, bool OffsetOutside);
+		/// <summary>
 	/// This method will be  called when you want to share
 	/// the  edges  soon generated  from  an other  face.
 	/// e.g. when two faces are  tangents the common  edge
@@ -565,7 +541,7 @@ public:
 	/// another  face  sharing E  with a
 	/// continuity at least G1
 	/// </summary>
-	BRepOffset_Offset(Macad::Occt::TopoDS_Face^ Face, double Offset, Macad::Occt::TopTools_DataMapOfShapeShape^ Created);
+BRepOffset_Offset(Macad::Occt::TopoDS_Face^ Face, double Offset, Macad::Occt::TopTools_DataMapOfShapeShape^ Created);
 	BRepOffset_Offset(Macad::Occt::TopoDS_Edge^ Path, Macad::Occt::TopoDS_Edge^ Edge1, Macad::Occt::TopoDS_Edge^ Edge2, double Offset, bool Polynomial, double Tol, Macad::Occt::GeomAbs_Shape Conti);
 	BRepOffset_Offset(Macad::Occt::TopoDS_Edge^ Path, Macad::Occt::TopoDS_Edge^ Edge1, Macad::Occt::TopoDS_Edge^ Edge2, double Offset, bool Polynomial, double Tol);
 	BRepOffset_Offset(Macad::Occt::TopoDS_Edge^ Path, Macad::Occt::TopoDS_Edge^ Edge1, Macad::Occt::TopoDS_Edge^ Edge2, double Offset, bool Polynomial);
@@ -574,26 +550,26 @@ public:
 	BRepOffset_Offset(Macad::Occt::TopoDS_Edge^ Path, Macad::Occt::TopoDS_Edge^ Edge1, Macad::Occt::TopoDS_Edge^ Edge2, double Offset, Macad::Occt::TopoDS_Edge^ FirstEdge, Macad::Occt::TopoDS_Edge^ LastEdge, bool Polynomial, double Tol);
 	BRepOffset_Offset(Macad::Occt::TopoDS_Edge^ Path, Macad::Occt::TopoDS_Edge^ Edge1, Macad::Occt::TopoDS_Edge^ Edge2, double Offset, Macad::Occt::TopoDS_Edge^ FirstEdge, Macad::Occt::TopoDS_Edge^ LastEdge, bool Polynomial);
 	BRepOffset_Offset(Macad::Occt::TopoDS_Edge^ Path, Macad::Occt::TopoDS_Edge^ Edge1, Macad::Occt::TopoDS_Edge^ Edge2, double Offset, Macad::Occt::TopoDS_Edge^ FirstEdge, Macad::Occt::TopoDS_Edge^ LastEdge);
-	/// <summary>
+		/// <summary>
 	/// Tol and Conti are only used if Polynomial is True
 	/// (Used to perform the approximation)
 	/// </summary>
-	BRepOffset_Offset(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial, double Tol, Macad::Occt::GeomAbs_Shape Conti);
-	/// <summary>
+BRepOffset_Offset(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial, double Tol, Macad::Occt::GeomAbs_Shape Conti);
+		/// <summary>
 	/// Tol and Conti are only used if Polynomial is True
 	/// (Used to perform the approximation)
 	/// </summary>
-	BRepOffset_Offset(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial, double Tol);
-	/// <summary>
+BRepOffset_Offset(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial, double Tol);
+		/// <summary>
 	/// Tol and Conti are only used if Polynomial is True
 	/// (Used to perform the approximation)
 	/// </summary>
-	BRepOffset_Offset(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial);
-	/// <summary>
+BRepOffset_Offset(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial);
+		/// <summary>
 	/// Tol and Conti are only used if Polynomial is True
 	/// (Used to perform the approximation)
 	/// </summary>
-	BRepOffset_Offset(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset);
+BRepOffset_Offset(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset);
 	BRepOffset_Offset(Macad::Occt::BRepOffset_Offset^ parameter1);
 	void Init(Macad::Occt::TopoDS_Face^ Face, double Offset, bool OffsetOutside, Macad::Occt::GeomAbs_JoinType JoinType);
 	void Init(Macad::Occt::TopoDS_Face^ Face, double Offset, bool OffsetOutside);
@@ -609,30 +585,30 @@ public:
 	void Init(Macad::Occt::TopoDS_Edge^ Path, Macad::Occt::TopoDS_Edge^ Edge1, Macad::Occt::TopoDS_Edge^ Edge2, double Offset, Macad::Occt::TopoDS_Edge^ FirstEdge, Macad::Occt::TopoDS_Edge^ LastEdge, bool Polynomial, double Tol);
 	void Init(Macad::Occt::TopoDS_Edge^ Path, Macad::Occt::TopoDS_Edge^ Edge1, Macad::Occt::TopoDS_Edge^ Edge2, double Offset, Macad::Occt::TopoDS_Edge^ FirstEdge, Macad::Occt::TopoDS_Edge^ LastEdge, bool Polynomial);
 	void Init(Macad::Occt::TopoDS_Edge^ Path, Macad::Occt::TopoDS_Edge^ Edge1, Macad::Occt::TopoDS_Edge^ Edge2, double Offset, Macad::Occt::TopoDS_Edge^ FirstEdge, Macad::Occt::TopoDS_Edge^ LastEdge);
-	/// <summary>
+		/// <summary>
 	/// Tol and Conti are only used if Polynomial is True
 	/// (Used to perform the approximation)
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial, double Tol, Macad::Occt::GeomAbs_Shape Conti);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial, double Tol, Macad::Occt::GeomAbs_Shape Conti);
+		/// <summary>
 	/// Tol and Conti are only used if Polynomial is True
 	/// (Used to perform the approximation)
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial, double Tol);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial, double Tol);
+		/// <summary>
 	/// Tol and Conti are only used if Polynomial is True
 	/// (Used to perform the approximation)
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset, bool Polynomial);
+		/// <summary>
 	/// Tol and Conti are only used if Polynomial is True
 	/// (Used to perform the approximation)
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Vertex^ Vertex, Macad::Occt::TopTools_ListOfShape^ LEdge, double Offset);
+		/// <summary>
 	/// Only used in Rolling Ball. Pipe on Free Boundary
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Edge^ Edge, double Offset);
+void Init(Macad::Occt::TopoDS_Edge^ Edge, double Offset);
 	Macad::Occt::TopoDS_Shape^ InitialShape();
 	Macad::Occt::TopoDS_Face^ Face();
 	Macad::Occt::TopoDS_Shape^ Generated(Macad::Occt::TopoDS_Shape^ Shape);
@@ -674,42 +650,14 @@ public:
 public:
 	BRepOffset_Inter2d();
 	BRepOffset_Inter2d(Macad::Occt::BRepOffset_Inter2d^ parameter1);
-	/// <summary>
-	/// Computes the intersections between the edges stored
-	/// is AsDes as descendants of <F> . Intersections is computed
-	/// between two edges if one of them is bound in NewEdges.
-	/// When all faces of the shape are treated the intersection
-	/// vertices have to be fused using the FuseVertices method.
-	/// theDMVV contains the vertices that should be fused
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Compute(BRepAlgo_AsDes AsDes, TopoDS_Face F, TopTools_IndexedMapOfShape NewEdges, Standard_Real Tol, TopTools_DataMapOfShapeListOfShape theEdgeIntEdges, TopTools_IndexedDataMapOfShapeListOfShape theDMVV, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Computes the intersection between the offset edges of the <FI>.
-	/// All intersection vertices will be stored in AsDes2d.
-	/// When all faces of the shape are treated the intersection vertices
-	/// have to be fused using the FuseVertices method.
-	/// theDMVV contains the vertices that should be fused.
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Boolean ConnexIntByInt(TopoDS_Face FI, BRepOffset_Offset OFI, TopTools_DataMapOfShapeShape MES, TopTools_DataMapOfShapeShape Build, BRepAlgo_AsDes theAsDes, BRepAlgo_AsDes AsDes2d, Standard_Real Offset, Standard_Real Tol, BRepOffset_Analyse Analyse, TopTools_IndexedMapOfShape FacesWithVerts, BRepAlgo_Image theImageVV, TopTools_DataMapOfShapeListOfShape theEdgeIntEdges, TopTools_IndexedDataMapOfShapeListOfShape theDMVV, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Computes the intersection between the offset edges generated
-	/// from vertices and stored into AsDes as descendants of the <FI>.
-	/// All intersection vertices will be stored in AsDes2d.
-	/// When all faces of the shape are treated the intersection vertices
-	/// have to be fused using the FuseVertices method.
-	/// theDMVV contains the vertices that should be fused.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ConnexIntByIntInVert(TopoDS_Face FI, BRepOffset_Offset OFI, TopTools_DataMapOfShapeShape MES, TopTools_DataMapOfShapeShape Build, BRepAlgo_AsDes AsDes, BRepAlgo_AsDes AsDes2d, Standard_Real Tol, BRepOffset_Analyse Analyse, TopTools_IndexedDataMapOfShapeListOfShape theDMVV, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Fuses the chains of vertices in the theDMVV
-	/// and updates AsDes by replacing the old vertices
-	/// with the new ones.
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Boolean FuseVertices(TopTools_IndexedDataMapOfShapeListOfShape theDMVV, BRepAlgo_AsDes theAsDes, BRepAlgo_Image theImageVV, ) */
-	/// <summary>
+		/// <summary>
 	/// extents the edge
 	/// </summary>
-	static bool ExtentEdge(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Edge^ NE, double theOffset);
+static bool ExtentEdge(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Edge^ NE, double theOffset);
 }; // class BRepOffset_Inter2d
 
 //---------------------------------------------------------------------
@@ -746,62 +694,47 @@ public:
 	}
 
 public:
-	/// <summary>
-	/// Constructor
-	/// </summary>
 	/* Method skipped due to unknown mapping: void BRepOffset_Inter3d(BRepAlgo_AsDes AsDes, TopAbs_State Side, Standard_Real Tol, ) */
 	BRepOffset_Inter3d(Macad::Occt::BRepOffset_Inter3d^ parameter1);
 	/* Method skipped due to unknown mapping: void CompletInt(TopTools_ListOfShape SetOfFaces, BRepAlgo_Image InitOffsetFace, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Computes intersection of pair of faces
-	/// </summary>
 	/* Method skipped due to unknown mapping: void FaceInter(TopoDS_Face F1, TopoDS_Face F2, BRepAlgo_Image InitOffsetFace, ) */
-	/// <summary>
-	/// Computes connections of the offset faces that have to be connected by arcs.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ConnexIntByArc(TopTools_ListOfShape SetOfFaces, TopoDS_Shape ShapeInit, BRepOffset_Analyse Analyse, BRepAlgo_Image InitOffsetFace, Message_ProgressRange theRange, ) */
-	/// <summary>
+		/// <summary>
 	/// Computes intersection of the offset faces that have to be connected by
 	/// sharp edges, i.e. it computes intersection between extended offset faces.
 	/// </summary>
-	void ConnexIntByInt(Macad::Occt::TopoDS_Shape^ SI, Macad::Occt::BRepOffset_DataMapOfShapeOffset^ MapSF, Macad::Occt::BRepOffset_Analyse^ A, Macad::Occt::TopTools_DataMapOfShapeShape^ MES, Macad::Occt::TopTools_DataMapOfShapeShape^ Build, Macad::Occt::TopTools_ListOfShape^ Failed, Macad::Occt::Message_ProgressRange^ theRange, bool bIsPlanar);
-	/// <summary>
+void ConnexIntByInt(Macad::Occt::TopoDS_Shape^ SI, Macad::Occt::BRepOffset_DataMapOfShapeOffset^ MapSF, Macad::Occt::BRepOffset_Analyse^ A, Macad::Occt::TopTools_DataMapOfShapeShape^ MES, Macad::Occt::TopTools_DataMapOfShapeShape^ Build, Macad::Occt::TopTools_ListOfShape^ Failed, Macad::Occt::Message_ProgressRange^ theRange, bool bIsPlanar);
+		/// <summary>
 	/// Computes intersection of the offset faces that have to be connected by
 	/// sharp edges, i.e. it computes intersection between extended offset faces.
 	/// </summary>
-	void ConnexIntByInt(Macad::Occt::TopoDS_Shape^ SI, Macad::Occt::BRepOffset_DataMapOfShapeOffset^ MapSF, Macad::Occt::BRepOffset_Analyse^ A, Macad::Occt::TopTools_DataMapOfShapeShape^ MES, Macad::Occt::TopTools_DataMapOfShapeShape^ Build, Macad::Occt::TopTools_ListOfShape^ Failed, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void ConnexIntByInt(Macad::Occt::TopoDS_Shape^ SI, Macad::Occt::BRepOffset_DataMapOfShapeOffset^ MapSF, Macad::Occt::BRepOffset_Analyse^ A, Macad::Occt::TopTools_DataMapOfShapeShape^ MES, Macad::Occt::TopTools_DataMapOfShapeShape^ Build, Macad::Occt::TopTools_ListOfShape^ Failed, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Computes intersection with not offset faces .
 	/// </summary>
-	void ContextIntByInt(Macad::Occt::TopTools_IndexedMapOfShape^ ContextFaces, bool ExtentContext, Macad::Occt::BRepOffset_DataMapOfShapeOffset^ MapSF, Macad::Occt::BRepOffset_Analyse^ A, Macad::Occt::TopTools_DataMapOfShapeShape^ MES, Macad::Occt::TopTools_DataMapOfShapeShape^ Build, Macad::Occt::TopTools_ListOfShape^ Failed, Macad::Occt::Message_ProgressRange^ theRange, bool bIsPlanar);
-	/// <summary>
+void ContextIntByInt(Macad::Occt::TopTools_IndexedMapOfShape^ ContextFaces, bool ExtentContext, Macad::Occt::BRepOffset_DataMapOfShapeOffset^ MapSF, Macad::Occt::BRepOffset_Analyse^ A, Macad::Occt::TopTools_DataMapOfShapeShape^ MES, Macad::Occt::TopTools_DataMapOfShapeShape^ Build, Macad::Occt::TopTools_ListOfShape^ Failed, Macad::Occt::Message_ProgressRange^ theRange, bool bIsPlanar);
+		/// <summary>
 	/// Computes intersection with not offset faces .
 	/// </summary>
-	void ContextIntByInt(Macad::Occt::TopTools_IndexedMapOfShape^ ContextFaces, bool ExtentContext, Macad::Occt::BRepOffset_DataMapOfShapeOffset^ MapSF, Macad::Occt::BRepOffset_Analyse^ A, Macad::Occt::TopTools_DataMapOfShapeShape^ MES, Macad::Occt::TopTools_DataMapOfShapeShape^ Build, Macad::Occt::TopTools_ListOfShape^ Failed, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
-	/// Computes connections of the not offset faces that have to be connected by arcs
-	/// </summary>
+void ContextIntByInt(Macad::Occt::TopTools_IndexedMapOfShape^ ContextFaces, bool ExtentContext, Macad::Occt::BRepOffset_DataMapOfShapeOffset^ MapSF, Macad::Occt::BRepOffset_Analyse^ A, Macad::Occt::TopTools_DataMapOfShapeShape^ MES, Macad::Occt::TopTools_DataMapOfShapeShape^ Build, Macad::Occt::TopTools_ListOfShape^ Failed, Macad::Occt::Message_ProgressRange^ theRange);
 	/* Method skipped due to unknown mapping: void ContextIntByArc(TopTools_IndexedMapOfShape ContextFaces, Standard_Boolean ExtentContext, BRepOffset_Analyse Analyse, BRepAlgo_Image InitOffsetFace, BRepAlgo_Image InitOffsetEdge, Message_ProgressRange theRange, ) */
-	/// <summary>
+		/// <summary>
 	/// Marks the pair of faces as already intersected
 	/// </summary>
-	void SetDone(Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2);
-	/// <summary>
+void SetDone(Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2);
+		/// <summary>
 	/// Checks if the pair of faces has already been treated.
 	/// </summary>
-	bool IsDone(Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2);
-	/// <summary>
+bool IsDone(Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2);
+		/// <summary>
 	/// Returns touched faces
 	/// </summary>
-	Macad::Occt::TopTools_IndexedMapOfShape^ TouchedFaces();
-	/// <summary>
-	/// Returns AsDes tool
-	/// </summary>
+Macad::Occt::TopTools_IndexedMapOfShape^ TouchedFaces();
 	/* Method skipped due to unknown mapping: BRepAlgo_AsDes AsDes() */
-	/// <summary>
+		/// <summary>
 	/// Returns new edges
 	/// </summary>
-	Macad::Occt::TopTools_IndexedMapOfShape^ NewEdges();
+Macad::Occt::TopTools_IndexedMapOfShape^ NewEdges();
 }; // class BRepOffset_Inter3d
 
 //---------------------------------------------------------------------
@@ -887,19 +820,19 @@ public:
 	void Initialize(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode);
 	void Initialize(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol);
 	void Clear();
-	/// <summary>
+		/// <summary>
 	/// Changes the flag allowing the linearization
 	/// </summary>
-	void AllowLinearization(bool theIsAllowed);
-	/// <summary>
+void AllowLinearization(bool theIsAllowed);
+		/// <summary>
 	/// Add Closing Faces,  <F>  has to be  in  the initial
 	/// shape S.
 	/// </summary>
-	void AddFace(Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+void AddFace(Macad::Occt::TopoDS_Face^ F);
+		/// <summary>
 	/// set the offset <Off> on the Face <F>
 	/// </summary>
-	void SetOffsetOnFace(Macad::Occt::TopoDS_Face^ F, double Off);
+void SetOffsetOnFace(Macad::Occt::TopoDS_Face^ F, double Off);
 	void MakeOffsetShape(Macad::Occt::Message_ProgressRange^ theRange);
 	void MakeOffsetShape();
 	void MakeThickSolid(Macad::Occt::Message_ProgressRange^ theRange);
@@ -908,29 +841,21 @@ public:
 	bool IsDone();
 	Macad::Occt::TopoDS_Shape^ Shape();
 	Macad::Occt::TopoDS_Shape^ InitShape();
-	/// <summary>
+		/// <summary>
 	/// returns information about offset state.
 	/// </summary>
-	Macad::Occt::BRepOffset_Error Error();
-	/// <summary>
-	/// Returns <Image> containing links between initials
-	/// shapes and offset faces.
-	/// </summary>
+Macad::Occt::BRepOffset_Error Error();
 	/* Method skipped due to unknown mapping: BRepAlgo_Image OffsetFacesFromShapes() */
-	/// <summary>
+		/// <summary>
 	/// Returns myJoin.
 	/// </summary>
-	Macad::Occt::GeomAbs_JoinType GetJoinType();
-	/// <summary>
-	/// Returns <Image> containing links between initials
-	/// shapes and offset edges.
-	/// </summary>
+Macad::Occt::GeomAbs_JoinType GetJoinType();
 	/* Method skipped due to unknown mapping: BRepAlgo_Image OffsetEdgesFromShapes() */
-	/// <summary>
+		/// <summary>
 	/// Returns the list of closing faces stores by AddFace
 	/// </summary>
-	Macad::Occt::TopTools_IndexedMapOfShape^ ClosingFaces();
-	/// <summary>
+Macad::Occt::TopTools_IndexedMapOfShape^ ClosingFaces();
+		/// <summary>
 	/// Makes pre analysis of possibility offset perform. Use method Error() to get more information.
 	/// Finds first error. List of checks:
 	/// 1) Check for existence object with non-null offset.
@@ -941,23 +866,23 @@ public:
 	/// <returns>
 	/// True if possible make computations and false otherwise.
 	/// </returns>
-	bool CheckInputData(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+bool CheckInputData(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Return bad shape, which obtained in CheckInputData.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ GetBadShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ GetBadShape();
+		/// <summary>
 	/// Returns the  list of shapes generated from the shape <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns the list of shapes modified from the shape <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns true if the shape S has been deleted.
 	/// </summary>
-	bool IsDeleted(Macad::Occt::TopoDS_Shape^ S);
+bool IsDeleted(Macad::Occt::TopoDS_Shape^ S);
 }; // class BRepOffset_MakeOffset
 
 //---------------------------------------------------------------------
@@ -1001,71 +926,71 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor. Does nothing.
 	/// </summary>
-	BRepOffset_MakeSimpleOffset();
-	/// <summary>
+BRepOffset_MakeSimpleOffset();
+		/// <summary>
 	/// Constructor.
 	/// </summary>
-	BRepOffset_MakeSimpleOffset(Macad::Occt::TopoDS_Shape^ theInputShape, double theOffsetValue);
+BRepOffset_MakeSimpleOffset(Macad::Occt::TopoDS_Shape^ theInputShape, double theOffsetValue);
 	BRepOffset_MakeSimpleOffset(Macad::Occt::BRepOffset_MakeSimpleOffset^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initialies shape for modifications.
 	/// </summary>
-	void Initialize(Macad::Occt::TopoDS_Shape^ theInputShape, double theOffsetValue);
-	/// <summary>
+void Initialize(Macad::Occt::TopoDS_Shape^ theInputShape, double theOffsetValue);
+		/// <summary>
 	/// Computes offset shape.
 	/// </summary>
-	void Perform();
-	/// <summary>
+void Perform();
+		/// <summary>
 	/// Gets error message.
 	/// </summary>
-	Macad::Occt::TCollection_AsciiString^ GetErrorMessage();
-	/// <summary>
+Macad::Occt::TCollection_AsciiString^ GetErrorMessage();
+		/// <summary>
 	/// Gets error code.
 	/// </summary>
-	Macad::Occt::BRepOffsetSimple_Status GetError();
-	/// <summary>
+Macad::Occt::BRepOffsetSimple_Status GetError();
+		/// <summary>
 	/// Gets solid building flag.
 	/// </summary>
-	bool GetBuildSolidFlag();
-	/// <summary>
+bool GetBuildSolidFlag();
+		/// <summary>
 	/// Sets solid building flag.
 	/// </summary>
-	void SetBuildSolidFlag(bool theBuildFlag);
-	/// <summary>
+void SetBuildSolidFlag(bool theBuildFlag);
+		/// <summary>
 	/// Gets offset value.
 	/// </summary>
-	double GetOffsetValue();
-	/// <summary>
+double GetOffsetValue();
+		/// <summary>
 	/// Sets offset value.
 	/// </summary>
-	void SetOffsetValue(double theOffsetValue);
-	/// <summary>
+void SetOffsetValue(double theOffsetValue);
+		/// <summary>
 	/// Gets tolerance (used for handling singularities).
 	/// </summary>
-	double GetTolerance();
-	/// <summary>
+double GetTolerance();
+		/// <summary>
 	/// Sets tolerance (used for handling singularities).
 	/// </summary>
-	void SetTolerance(double theValue);
-	/// <summary>
+void SetTolerance(double theValue);
+		/// <summary>
 	/// Gets done state.
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// Returns result shape.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ GetResultShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ GetResultShape();
+		/// <summary>
 	/// Returns result shape for the given one (if exists).
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Generated(Macad::Occt::TopoDS_Shape^ theShape);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Generated(Macad::Occt::TopoDS_Shape^ theShape);
+		/// <summary>
 	/// Returns modified shape for the given one (if exists).
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Modified(Macad::Occt::TopoDS_Shape^ theShape);
+Macad::Occt::TopoDS_Shape^ Modified(Macad::Occt::TopoDS_Shape^ theShape);
 }; // class BRepOffset_MakeSimpleOffset
 
 //---------------------------------------------------------------------
@@ -1110,7 +1035,7 @@ public:
 	static Macad::Occt::BRepOffset_SimpleOffset^ CreateDowncasted(::BRepOffset_SimpleOffset* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor.
 	/// </summary>
 	/// <param name="theInputShape">
@@ -1122,8 +1047,8 @@ public:
 	/// <param name="theTolerance">
 	/// tolerance for handling singular points
 	/// </param>
-	BRepOffset_SimpleOffset(Macad::Occt::TopoDS_Shape^ theInputShape, double theOffsetValue, double theTolerance);
-	/// <summary>
+BRepOffset_SimpleOffset(Macad::Occt::TopoDS_Shape^ theInputShape, double theOffsetValue, double theTolerance);
+		/// <summary>
 	/// Returns Standard_True  if  the face  <F> has  been
 	/// modified.  In this  case, <S> is the new geometric
 	/// support of  the  face, <L> the  new location,<Tol>
@@ -1136,8 +1061,8 @@ public:
 	/// Here, <RevFace>  will  return Standard_True if the
 	/// -- gp_Trsf is negative.
 	/// </summary>
-	bool NewSurface(Macad::Occt::TopoDS_Face^ F, Macad::Occt::Geom_Surface^ S, Macad::Occt::TopLoc_Location^ L, double% Tol, bool% RevWires, bool% RevFace);
-	/// <summary>
+bool NewSurface(Macad::Occt::TopoDS_Face^ F, Macad::Occt::Geom_Surface^ S, Macad::Occt::TopLoc_Location^ L, double% Tol, bool% RevWires, bool% RevFace);
+		/// <summary>
 	/// Returns Standard_True  if  the edge  <E> has  been
 	/// modified.  In this case,  <C> is the new geometric
 	/// support of the  edge, <L> the  new location, <Tol>
@@ -1145,16 +1070,16 @@ public:
 	/// Standard_False,    and  <C>,  <L>,   <Tol> are not
 	/// significant.
 	/// </summary>
-	bool NewCurve(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::Geom_Curve^ C, Macad::Occt::TopLoc_Location^ L, double% Tol);
-	/// <summary>
+bool NewCurve(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::Geom_Curve^ C, Macad::Occt::TopLoc_Location^ L, double% Tol);
+		/// <summary>
 	/// Returns  Standard_True if the  vertex <V> has been
 	/// modified.  In this  case, <P> is the new geometric
 	/// support of the vertex,   <Tol> the new  tolerance.
 	/// Otherwise, returns Standard_False, and <P>,  <Tol>
 	/// are not significant.
 	/// </summary>
-	bool NewPoint(Macad::Occt::TopoDS_Vertex^ V, Macad::Occt::Pnt% P, double% Tol);
-	/// <summary>
+bool NewPoint(Macad::Occt::TopoDS_Vertex^ V, Macad::Occt::Pnt% P, double% Tol);
+		/// <summary>
 	/// Returns Standard_True if  the edge  <E> has a  new
 	/// curve on surface on the face <F>.In this case, <C>
 	/// is the new geometric support of  the edge, <L> the
@@ -1162,16 +1087,16 @@ public:
 	/// Otherwise, returns  Standard_False, and <C>,  <L>,
 	/// <Tol> are not significant.
 	/// </summary>
-	bool NewCurve2d(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ NewE, Macad::Occt::TopoDS_Face^ NewF, Macad::Occt::Geom2d_Curve^ C, double% Tol);
-	/// <summary>
+bool NewCurve2d(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ NewE, Macad::Occt::TopoDS_Face^ NewF, Macad::Occt::Geom2d_Curve^ C, double% Tol);
+		/// <summary>
 	/// Returns Standard_True if the Vertex  <V> has a new
 	/// parameter on the  edge <E>. In  this case,  <P> is
 	/// the parameter,    <Tol>  the     new    tolerance.
 	/// Otherwise, returns Standard_False, and <P>,  <Tol>
 	/// are not significant.
 	/// </summary>
-	bool NewParameter(Macad::Occt::TopoDS_Vertex^ V, Macad::Occt::TopoDS_Edge^ E, double% P, double% Tol);
-	/// <summary>
+bool NewParameter(Macad::Occt::TopoDS_Vertex^ V, Macad::Occt::TopoDS_Edge^ E, double% P, double% Tol);
+		/// <summary>
 	/// Returns the  continuity of  <NewE> between <NewF1>
 	/// and <NewF2>.
 	/// 
@@ -1179,7 +1104,7 @@ public:
 	/// (resp. <NewF2>) is the new  face created from <F1>
 	/// (resp. <F2>).
 	/// </summary>
-	Macad::Occt::GeomAbs_Shape Continuity(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2, Macad::Occt::TopoDS_Edge^ NewE, Macad::Occt::TopoDS_Face^ NewF1, Macad::Occt::TopoDS_Face^ NewF2);
+Macad::Occt::GeomAbs_Shape Continuity(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2, Macad::Occt::TopoDS_Edge^ NewE, Macad::Occt::TopoDS_Face^ NewF1, Macad::Occt::TopoDS_Face^ NewF2);
 }; // class BRepOffset_SimpleOffset
 
 //---------------------------------------------------------------------
@@ -1213,49 +1138,49 @@ public:
 public:
 	BRepOffset_Tool();
 	BRepOffset_Tool(Macad::Occt::BRepOffset_Tool^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// <V1> is the FirstVertex ,<V2> is the Last Vertex of <Edge>
 	/// taking account the orientation of Edge.
 	/// </summary>
-	static void EdgeVertices(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Vertex^ V1, Macad::Occt::TopoDS_Vertex^ V2);
-	/// <summary>
+static void EdgeVertices(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Vertex^ V1, Macad::Occt::TopoDS_Vertex^ V2);
+		/// <summary>
 	/// <E> is a section  between <F1> and <F2>.  Computes
 	/// <O1> the orientation of <E> in <F1> influenced by <F2>.
 	/// idem for <O2>.
 	/// </summary>
-	static void OrientSection(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2, Macad::Occt::TopAbs_Orientation% O1, Macad::Occt::TopAbs_Orientation% O2);
-	/// <summary>
+static void OrientSection(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2, Macad::Occt::TopAbs_Orientation% O1, Macad::Occt::TopAbs_Orientation% O2);
+		/// <summary>
 	/// Looks for the common Vertices and Edges between faces <theF1> and <theF2>.<br>
 	/// Returns TRUE if common shapes have been found.<br>
 	/// <theLE> will contain the found common edges;<br>
 	/// <theLV> will contain the found common vertices.
 	/// </summary>
-	static bool FindCommonShapes(Macad::Occt::TopoDS_Face^ theF1, Macad::Occt::TopoDS_Face^ theF2, Macad::Occt::TopTools_ListOfShape^ theLE, Macad::Occt::TopTools_ListOfShape^ theLV);
-	/// <summary>
+static bool FindCommonShapes(Macad::Occt::TopoDS_Face^ theF1, Macad::Occt::TopoDS_Face^ theF2, Macad::Occt::TopTools_ListOfShape^ theLE, Macad::Occt::TopTools_ListOfShape^ theLV);
+		/// <summary>
 	/// Looks for the common shapes of type <theType> between shapes <theS1> and <theS2>.<br>
 	/// Returns TRUE if common shapes have been found.<br>
 	/// <theLSC> will contain the found common shapes.
 	/// </summary>
-	static bool FindCommonShapes(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::TopAbs_ShapeEnum theType, Macad::Occt::TopTools_ListOfShape^ theLSC);
-	/// <summary>
+static bool FindCommonShapes(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::TopAbs_ShapeEnum theType, Macad::Occt::TopTools_ListOfShape^ theLSC);
+		/// <summary>
 	/// Computes the   Section betwwen  <F1> and  <F2> the
 	/// edges solution   are  stored in <LInt1>  with  the
 	/// orientation on <F1>, the sames edges are stored in
 	/// <Lint2> with the orientation on <F2>.
 	/// </summary>
-	static void Inter3D(Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2, Macad::Occt::TopTools_ListOfShape^ LInt1, Macad::Occt::TopTools_ListOfShape^ LInt2, Macad::Occt::TopAbs_State Side, Macad::Occt::TopoDS_Edge^ RefEdge, Macad::Occt::TopoDS_Face^ RefFace1, Macad::Occt::TopoDS_Face^ RefFace2);
-	/// <summary>
+static void Inter3D(Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2, Macad::Occt::TopTools_ListOfShape^ LInt1, Macad::Occt::TopTools_ListOfShape^ LInt2, Macad::Occt::TopAbs_State Side, Macad::Occt::TopoDS_Edge^ RefEdge, Macad::Occt::TopoDS_Face^ RefFace1, Macad::Occt::TopoDS_Face^ RefFace2);
+		/// <summary>
 	/// Find if the edges <Edges> of the face <F2> are on
 	/// the face <F1>.
 	/// Set in <LInt1> <LInt2> the updated edges.
 	/// If all the edges are computed, returns true.
 	/// </summary>
-	static bool TryProject(Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2, Macad::Occt::TopTools_ListOfShape^ Edges, Macad::Occt::TopTools_ListOfShape^ LInt1, Macad::Occt::TopTools_ListOfShape^ LInt2, Macad::Occt::TopAbs_State Side, double TolConf);
+static bool TryProject(Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2, Macad::Occt::TopTools_ListOfShape^ Edges, Macad::Occt::TopTools_ListOfShape^ LInt1, Macad::Occt::TopTools_ListOfShape^ LInt2, Macad::Occt::TopAbs_State Side, double TolConf);
 	static void PipeInter(Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2, Macad::Occt::TopTools_ListOfShape^ LInt1, Macad::Occt::TopTools_ListOfShape^ LInt2, Macad::Occt::TopAbs_State Side);
 	static void Inter2d(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2, Macad::Occt::TopTools_ListOfShape^ LV, double Tol);
 	static void InterOrExtent(Macad::Occt::TopoDS_Face^ F1, Macad::Occt::TopoDS_Face^ F2, Macad::Occt::TopTools_ListOfShape^ LInt1, Macad::Occt::TopTools_ListOfShape^ LInt2, Macad::Occt::TopAbs_State Side);
 	static void CheckBounds(Macad::Occt::TopoDS_Face^ F, Macad::Occt::BRepOffset_Analyse^ Analyse, bool% enlargeU, bool% enlargeVfirst, bool% enlargeVlast);
-	/// <summary>
+		/// <summary>
 	/// Returns  True if The Surface of  <NF> has changed.
 	/// if <ChangeGeom> is TRUE  ,   the surface  can  be
 	/// changed .
@@ -1273,8 +1198,8 @@ public:
 	/// set the values of enlargement on correspondent directions.
 	/// If some of them equals -1, the default value of enlargement is used.
 	/// </summary>
-	static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast, int theExtensionMode, double theLenBeforeUfirst, double theLenAfterUlast, double theLenBeforeVfirst, double theLenAfterVlast);
-	/// <summary>
+static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast, int theExtensionMode, double theLenBeforeUfirst, double theLenAfterUlast, double theLenBeforeVfirst, double theLenAfterVlast);
+		/// <summary>
 	/// Returns  True if The Surface of  <NF> has changed.
 	/// if <ChangeGeom> is TRUE  ,   the surface  can  be
 	/// changed .
@@ -1292,8 +1217,8 @@ public:
 	/// set the values of enlargement on correspondent directions.
 	/// If some of them equals -1, the default value of enlargement is used.
 	/// </summary>
-	static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast, int theExtensionMode, double theLenBeforeUfirst, double theLenAfterUlast, double theLenBeforeVfirst);
-	/// <summary>
+static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast, int theExtensionMode, double theLenBeforeUfirst, double theLenAfterUlast, double theLenBeforeVfirst);
+		/// <summary>
 	/// Returns  True if The Surface of  <NF> has changed.
 	/// if <ChangeGeom> is TRUE  ,   the surface  can  be
 	/// changed .
@@ -1311,8 +1236,8 @@ public:
 	/// set the values of enlargement on correspondent directions.
 	/// If some of them equals -1, the default value of enlargement is used.
 	/// </summary>
-	static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast, int theExtensionMode, double theLenBeforeUfirst, double theLenAfterUlast);
-	/// <summary>
+static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast, int theExtensionMode, double theLenBeforeUfirst, double theLenAfterUlast);
+		/// <summary>
 	/// Returns  True if The Surface of  <NF> has changed.
 	/// if <ChangeGeom> is TRUE  ,   the surface  can  be
 	/// changed .
@@ -1330,8 +1255,8 @@ public:
 	/// set the values of enlargement on correspondent directions.
 	/// If some of them equals -1, the default value of enlargement is used.
 	/// </summary>
-	static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast, int theExtensionMode, double theLenBeforeUfirst);
-	/// <summary>
+static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast, int theExtensionMode, double theLenBeforeUfirst);
+		/// <summary>
 	/// Returns  True if The Surface of  <NF> has changed.
 	/// if <ChangeGeom> is TRUE  ,   the surface  can  be
 	/// changed .
@@ -1349,8 +1274,8 @@ public:
 	/// set the values of enlargement on correspondent directions.
 	/// If some of them equals -1, the default value of enlargement is used.
 	/// </summary>
-	static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast, int theExtensionMode);
-	/// <summary>
+static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast, int theExtensionMode);
+		/// <summary>
 	/// Returns  True if The Surface of  <NF> has changed.
 	/// if <ChangeGeom> is TRUE  ,   the surface  can  be
 	/// changed .
@@ -1368,8 +1293,8 @@ public:
 	/// set the values of enlargement on correspondent directions.
 	/// If some of them equals -1, the default value of enlargement is used.
 	/// </summary>
-	static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast);
-	/// <summary>
+static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst, bool enlargeVlast);
+		/// <summary>
 	/// Returns  True if The Surface of  <NF> has changed.
 	/// if <ChangeGeom> is TRUE  ,   the surface  can  be
 	/// changed .
@@ -1387,8 +1312,8 @@ public:
 	/// set the values of enlargement on correspondent directions.
 	/// If some of them equals -1, the default value of enlargement is used.
 	/// </summary>
-	static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst);
-	/// <summary>
+static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU, bool enlargeVfirst);
+		/// <summary>
 	/// Returns  True if The Surface of  <NF> has changed.
 	/// if <ChangeGeom> is TRUE  ,   the surface  can  be
 	/// changed .
@@ -1406,8 +1331,8 @@ public:
 	/// set the values of enlargement on correspondent directions.
 	/// If some of them equals -1, the default value of enlargement is used.
 	/// </summary>
-	static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU);
-	/// <summary>
+static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve, bool enlargeU);
+		/// <summary>
 	/// Returns  True if The Surface of  <NF> has changed.
 	/// if <ChangeGeom> is TRUE  ,   the surface  can  be
 	/// changed .
@@ -1425,8 +1350,8 @@ public:
 	/// set the values of enlargement on correspondent directions.
 	/// If some of them equals -1, the default value of enlargement is used.
 	/// </summary>
-	static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve);
-	/// <summary>
+static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom, bool UpDatePCurve);
+		/// <summary>
 	/// Returns  True if The Surface of  <NF> has changed.
 	/// if <ChangeGeom> is TRUE  ,   the surface  can  be
 	/// changed .
@@ -1444,23 +1369,23 @@ public:
 	/// set the values of enlargement on correspondent directions.
 	/// If some of them equals -1, the default value of enlargement is used.
 	/// </summary>
-	static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom);
+static bool EnLargeFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Face^ NF, bool ChangeGeom);
 	static void ExtentFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopTools_DataMapOfShapeShape^ ConstShapes, Macad::Occt::TopTools_DataMapOfShapeShape^ ToBuild, Macad::Occt::TopAbs_State Side, double TolConf, Macad::Occt::TopoDS_Face^ NF);
-	/// <summary>
+		/// <summary>
 	/// Via the wire explorer store in <NOnV1> for
 	/// an Edge <E> of <W> his Edge neighbour on the first
 	/// vertex <V1> of <E>.
 	/// Store in NOnV2 the Neighbour of <E>on the last
 	/// vertex <V2> of <E>.
 	/// </summary>
-	static void BuildNeighbour(Macad::Occt::TopoDS_Wire^ W, Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopTools_DataMapOfShapeShape^ NOnV1, Macad::Occt::TopTools_DataMapOfShapeShape^ NOnV2);
-	/// <summary>
+static void BuildNeighbour(Macad::Occt::TopoDS_Wire^ W, Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopTools_DataMapOfShapeShape^ NOnV1, Macad::Occt::TopTools_DataMapOfShapeShape^ NOnV2);
+		/// <summary>
 	/// Store in MVE for a vertex <V>  in <S> the incident
 	/// edges <E> in <S>.
 	/// An Edge is Store only one Time for a vertex.
 	/// </summary>
-	static void MapVertexEdges(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_DataMapOfShapeListOfShape^ MVE);
-	/// <summary>
+static void MapVertexEdges(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_DataMapOfShapeListOfShape^ MVE);
+		/// <summary>
 	/// Remove the non valid   part of an offsetshape
 	/// 1 - Remove all the free boundary  and the faces
 	/// connex to such edges.
@@ -1468,19 +1393,19 @@ public:
 	/// (according to the side of offsetting)
 	/// in this version only the first point is implemented.
 	/// </summary>
-	static Macad::Occt::TopoDS_Shape^ Deboucle3D(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_MapOfShape^ Boundary);
+static Macad::Occt::TopoDS_Shape^ Deboucle3D(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_MapOfShape^ Boundary);
 	/* Method skipped due to unknown mapping: void CorrectOrientation(TopoDS_Shape SI, TopTools_IndexedMapOfShape NewEdges, BRepAlgo_AsDes AsDes, BRepAlgo_Image InitOffset, Standard_Real Offset, ) */
 	static double Gabarit(Macad::Occt::Geom_Curve^ aCurve);
-	/// <summary>
+		/// <summary>
 	/// Compares the normal directions of the planar faces and returns
 	/// TRUE if the directions are the same with the given precision.<br>
 	/// </summary>
-	static bool CheckPlanesNormals(Macad::Occt::TopoDS_Face^ theFace1, Macad::Occt::TopoDS_Face^ theFace2, double theTolAng);
-	/// <summary>
+static bool CheckPlanesNormals(Macad::Occt::TopoDS_Face^ theFace1, Macad::Occt::TopoDS_Face^ theFace2, double theTolAng);
+		/// <summary>
 	/// Compares the normal directions of the planar faces and returns
 	/// TRUE if the directions are the same with the given precision.<br>
 	/// </summary>
-	static bool CheckPlanesNormals(Macad::Occt::TopoDS_Face^ theFace1, Macad::Occt::TopoDS_Face^ theFace2);
+static bool CheckPlanesNormals(Macad::Occt::TopoDS_Face^ theFace1, Macad::Occt::TopoDS_Face^ theFace2);
 }; // class BRepOffset_Tool
 
 }; // namespace Occt

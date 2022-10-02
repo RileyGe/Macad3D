@@ -65,7 +65,7 @@ public:
 public:
 	GeomConvert();
 	GeomConvert(Macad::Occt::GeomConvert^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Convert a curve from Geom by an approximation method
 	/// 
 	/// This method computes the arc of B-spline curve between the two
@@ -83,8 +83,8 @@ public:
 	/// Raised if FromK1 or ToK2 are out of the bounds
 	/// [FirstUKnotIndex, LastUKnotIndex]
 	/// </summary>
-	static Macad::Occt::Geom_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom_BSplineCurve^ C, int FromK1, int ToK2, bool SameOrientation);
-	/// <summary>
+static Macad::Occt::Geom_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom_BSplineCurve^ C, int FromK1, int ToK2, bool SameOrientation);
+		/// <summary>
 	/// Convert a curve from Geom by an approximation method
 	/// 
 	/// This method computes the arc of B-spline curve between the two
@@ -102,8 +102,8 @@ public:
 	/// Raised if FromK1 or ToK2 are out of the bounds
 	/// [FirstUKnotIndex, LastUKnotIndex]
 	/// </summary>
-	static Macad::Occt::Geom_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom_BSplineCurve^ C, int FromK1, int ToK2);
-	/// <summary>
+static Macad::Occt::Geom_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom_BSplineCurve^ C, int FromK1, int ToK2);
+		/// <summary>
 	/// This function computes the segment of B-spline curve between the
 	/// parametric values FromU1, ToU2.
 	/// If C is periodic the arc has the same orientation as C if
@@ -120,8 +120,8 @@ public:
 	/// Raised if Abs (FromU1 - ToU2) <= ParametricTolerance
 	/// Raised if ParametricTolerance < Resolution from gp.
 	/// </summary>
-	static Macad::Occt::Geom_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom_BSplineCurve^ C, double FromU1, double ToU2, double ParametricTolerance, bool SameOrientation);
-	/// <summary>
+static Macad::Occt::Geom_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom_BSplineCurve^ C, double FromU1, double ToU2, double ParametricTolerance, bool SameOrientation);
+		/// <summary>
 	/// This function computes the segment of B-spline curve between the
 	/// parametric values FromU1, ToU2.
 	/// If C is periodic the arc has the same orientation as C if
@@ -138,8 +138,8 @@ public:
 	/// Raised if Abs (FromU1 - ToU2) <= ParametricTolerance
 	/// Raised if ParametricTolerance < Resolution from gp.
 	/// </summary>
-	static Macad::Occt::Geom_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom_BSplineCurve^ C, double FromU1, double ToU2, double ParametricTolerance);
-	/// <summary>
+static Macad::Occt::Geom_BSplineCurve^ SplitBSplineCurve(Macad::Occt::Geom_BSplineCurve^ C, double FromU1, double ToU2, double ParametricTolerance);
+		/// <summary>
 	/// Computes the B-spline surface patche between the knots values
 	/// FromUK1, ToUK2, FromVK1, ToVK2.
 	/// If S is periodic in one direction the patche has the same
@@ -155,8 +155,8 @@ public:
 	/// FromVK1 or ToVK2 are out of the bounds
 	/// [FirstVKnotIndex, LastVKnotIndex]
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, int FromUK1, int ToUK2, int FromVK1, int ToVK2, bool SameUOrientation, bool SameVOrientation);
-	/// <summary>
+static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, int FromUK1, int ToUK2, int FromVK1, int ToVK2, bool SameUOrientation, bool SameVOrientation);
+		/// <summary>
 	/// Computes the B-spline surface patche between the knots values
 	/// FromUK1, ToUK2, FromVK1, ToVK2.
 	/// If S is periodic in one direction the patche has the same
@@ -172,8 +172,8 @@ public:
 	/// FromVK1 or ToVK2 are out of the bounds
 	/// [FirstVKnotIndex, LastVKnotIndex]
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, int FromUK1, int ToUK2, int FromVK1, int ToVK2, bool SameUOrientation);
-	/// <summary>
+static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, int FromUK1, int ToUK2, int FromVK1, int ToVK2, bool SameUOrientation);
+		/// <summary>
 	/// Computes the B-spline surface patche between the knots values
 	/// FromUK1, ToUK2, FromVK1, ToVK2.
 	/// If S is periodic in one direction the patche has the same
@@ -189,8 +189,8 @@ public:
 	/// FromVK1 or ToVK2 are out of the bounds
 	/// [FirstVKnotIndex, LastVKnotIndex]
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, int FromUK1, int ToUK2, int FromVK1, int ToVK2);
-	/// <summary>
+static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, int FromUK1, int ToUK2, int FromVK1, int ToVK2);
+		/// <summary>
 	/// This method splits a B-spline surface patche between the
 	/// knots values FromK1, ToK2 in one direction.
 	/// If USplit = True then the splitting direction is the U parametric
@@ -204,8 +204,8 @@ public:
 	/// [FirstUKnotIndex, LastUKnotIndex] in the
 	/// considered parametric direction.
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, int FromK1, int ToK2, bool USplit, bool SameOrientation);
-	/// <summary>
+static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, int FromK1, int ToK2, bool USplit, bool SameOrientation);
+		/// <summary>
 	/// This method splits a B-spline surface patche between the
 	/// knots values FromK1, ToK2 in one direction.
 	/// If USplit = True then the splitting direction is the U parametric
@@ -219,8 +219,8 @@ public:
 	/// [FirstUKnotIndex, LastUKnotIndex] in the
 	/// considered parametric direction.
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, int FromK1, int ToK2, bool USplit);
-	/// <summary>
+static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, int FromK1, int ToK2, bool USplit);
+		/// <summary>
 	/// This method computes the B-spline surface patche between the
 	/// parametric values FromU1, ToU2, FromV1, ToV2.
 	/// If S is periodic in one direction the patche has the same
@@ -240,8 +240,8 @@ public:
 	/// Abs (FromV1 - ToV2) <= ParametricTolerance.
 	/// Raised if ParametricTolerance < Resolution.
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, double FromU1, double ToU2, double FromV1, double ToV2, double ParametricTolerance, bool SameUOrientation, bool SameVOrientation);
-	/// <summary>
+static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, double FromU1, double ToU2, double FromV1, double ToV2, double ParametricTolerance, bool SameUOrientation, bool SameVOrientation);
+		/// <summary>
 	/// This method computes the B-spline surface patche between the
 	/// parametric values FromU1, ToU2, FromV1, ToV2.
 	/// If S is periodic in one direction the patche has the same
@@ -261,8 +261,8 @@ public:
 	/// Abs (FromV1 - ToV2) <= ParametricTolerance.
 	/// Raised if ParametricTolerance < Resolution.
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, double FromU1, double ToU2, double FromV1, double ToV2, double ParametricTolerance, bool SameUOrientation);
-	/// <summary>
+static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, double FromU1, double ToU2, double FromV1, double ToV2, double ParametricTolerance, bool SameUOrientation);
+		/// <summary>
 	/// This method computes the B-spline surface patche between the
 	/// parametric values FromU1, ToU2, FromV1, ToV2.
 	/// If S is periodic in one direction the patche has the same
@@ -282,8 +282,8 @@ public:
 	/// Abs (FromV1 - ToV2) <= ParametricTolerance.
 	/// Raised if ParametricTolerance < Resolution.
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, double FromU1, double ToU2, double FromV1, double ToV2, double ParametricTolerance);
-	/// <summary>
+static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, double FromU1, double ToU2, double FromV1, double ToV2, double ParametricTolerance);
+		/// <summary>
 	/// This method splits the B-spline surface S in one direction
 	/// between the parametric values FromParam1, ToParam2.
 	/// If USplit = True then the Splitting direction is the U parametric
@@ -302,8 +302,8 @@ public:
 	/// of the surface in the considered direction.
 	/// Raises if Abs (FromParam1 - ToParam2) <= ParametricTolerance.
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, double FromParam1, double ToParam2, bool USplit, double ParametricTolerance, bool SameOrientation);
-	/// <summary>
+static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, double FromParam1, double ToParam2, bool USplit, double ParametricTolerance, bool SameOrientation);
+		/// <summary>
 	/// This method splits the B-spline surface S in one direction
 	/// between the parametric values FromParam1, ToParam2.
 	/// If USplit = True then the Splitting direction is the U parametric
@@ -322,8 +322,8 @@ public:
 	/// of the surface in the considered direction.
 	/// Raises if Abs (FromParam1 - ToParam2) <= ParametricTolerance.
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, double FromParam1, double ToParam2, bool USplit, double ParametricTolerance);
-	/// <summary>
+static Macad::Occt::Geom_BSplineSurface^ SplitBSplineSurface(Macad::Occt::Geom_BSplineSurface^ S, double FromParam1, double ToParam2, bool USplit, double ParametricTolerance);
+		/// <summary>
 	/// This function converts a non infinite curve from
 	/// Geom into a  B-spline curve.  C must be   an ellipse or  a
 	/// circle  or a trimmed conic  or a trimmed  line or a Bezier
@@ -390,8 +390,8 @@ public:
 	/// trimmed curve (this method of parameterization
 	/// cannot be used to convert a quasi-complete circle or ellipse).
 	/// </summary>
-	static Macad::Occt::Geom_BSplineCurve^ CurveToBSplineCurve(Macad::Occt::Geom_Curve^ C, Macad::Occt::Convert_ParameterisationType Parameterisation);
-	/// <summary>
+static Macad::Occt::Geom_BSplineCurve^ CurveToBSplineCurve(Macad::Occt::Geom_Curve^ C, Macad::Occt::Convert_ParameterisationType Parameterisation);
+		/// <summary>
 	/// This function converts a non infinite curve from
 	/// Geom into a  B-spline curve.  C must be   an ellipse or  a
 	/// circle  or a trimmed conic  or a trimmed  line or a Bezier
@@ -458,8 +458,8 @@ public:
 	/// trimmed curve (this method of parameterization
 	/// cannot be used to convert a quasi-complete circle or ellipse).
 	/// </summary>
-	static Macad::Occt::Geom_BSplineCurve^ CurveToBSplineCurve(Macad::Occt::Geom_Curve^ C);
-	/// <summary>
+static Macad::Occt::Geom_BSplineCurve^ CurveToBSplineCurve(Macad::Occt::Geom_Curve^ C);
+		/// <summary>
 	/// This algorithm converts a non infinite surface from Geom
 	/// into a B-spline surface.
 	/// S must be a trimmed plane or a trimmed cylinder or a trimmed cone
@@ -469,53 +469,11 @@ public:
 	/// a B-spline curve   (see the method CurveToBSplineCurve).
 	/// Raises DomainError if the type of the surface is not previously defined.
 	/// </summary>
-	static Macad::Occt::Geom_BSplineSurface^ SurfaceToBSplineSurface(Macad::Occt::Geom_Surface^ S);
-	/// <summary>
-	/// This Method concatenates G1 the ArrayOfCurves as far
-	/// as it  is possible.
-	/// ArrayOfCurves[0..N-1]
-	/// ArrayOfToler contains the  biggest tolerance of the two
-	/// points shared by two consecutives curves.
-	/// Its dimension: [0..N-2]
-	/// ClosedFlag     indicates if the ArrayOfCurves is closed.
-	/// In this case ClosedTolerance contains the biggest tolerance
-	/// of the two points which are at the closure.
-	/// Otherwise its value is 0.0
-	/// ClosedFlag becomes False on the output
-	/// if it is impossible to build closed curve.
-	/// </summary>
+static Macad::Occt::Geom_BSplineSurface^ SurfaceToBSplineSurface(Macad::Occt::Geom_Surface^ S);
 	/* Method skipped due to unknown mapping: void ConcatG1(TColGeom_Array1OfBSplineCurve ArrayOfCurves, TColStd_Array1OfReal ArrayOfToler, TColGeom_HArray1OfBSplineCurve ArrayOfConcatenated, Standard_Boolean ClosedFlag, Standard_Real ClosedTolerance, ) */
-	/// <summary>
-	/// This Method concatenates C1 the ArrayOfCurves as far
-	/// as it is possible.
-	/// ArrayOfCurves[0..N-1]
-	/// ArrayOfToler contains the  biggest tolerance of the two
-	/// points shared by two consecutives curves.
-	/// Its dimension: [0..N-2]
-	/// ClosedFlag     indicates if the ArrayOfCurves is closed.
-	/// In this case ClosedTolerance contains the biggest tolerance
-	/// of the two points which are at the closure.
-	/// Otherwise its value is 0.0
-	/// ClosedFlag becomes False on the output
-	/// if it is impossible to build closed curve.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ConcatC1(TColGeom_Array1OfBSplineCurve ArrayOfCurves, TColStd_Array1OfReal ArrayOfToler, TColStd_HArray1OfInteger ArrayOfIndices, TColGeom_HArray1OfBSplineCurve ArrayOfConcatenated, Standard_Boolean ClosedFlag, Standard_Real ClosedTolerance, ) */
-	/// <summary>
-	/// This Method concatenates C1 the ArrayOfCurves as far
-	/// as it is possible.
-	/// ArrayOfCurves[0..N-1]
-	/// ArrayOfToler contains the  biggest tolerance of the two
-	/// points shared by two consecutives curves.
-	/// Its dimension: [0..N-2]
-	/// ClosedFlag     indicates if the ArrayOfCurves is closed.
-	/// In this case ClosedTolerance contains the biggest tolerance
-	/// of the two points which are at the closure.
-	/// Otherwise its value is 0.0
-	/// ClosedFlag becomes False on the output
-	/// if it is impossible to build closed curve.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ConcatC1(TColGeom_Array1OfBSplineCurve ArrayOfCurves, TColStd_Array1OfReal ArrayOfToler, TColStd_HArray1OfInteger ArrayOfIndices, TColGeom_HArray1OfBSplineCurve ArrayOfConcatenated, Standard_Boolean ClosedFlag, Standard_Real ClosedTolerance, Standard_Real AngularTolerance, ) */
-	/// <summary>
+		/// <summary>
 	/// This  Method reduces as far as   it is possible the
 	/// multiplicities of  the  knots of  the BSpline BS.(keeping  the
 	/// geometry).  It returns a new BSpline which  could still be C0.
@@ -524,8 +482,8 @@ public:
 	/// the tangents  on  the left and on  the right  to decide if  the
 	/// curve is G1 or not at a given point
 	/// </summary>
-	static void C0BSplineToC1BSplineCurve(Macad::Occt::Geom_BSplineCurve^ BS, double tolerance, double AngularTolerance);
-	/// <summary>
+static void C0BSplineToC1BSplineCurve(Macad::Occt::Geom_BSplineCurve^ BS, double tolerance, double AngularTolerance);
+		/// <summary>
 	/// This  Method reduces as far as   it is possible the
 	/// multiplicities of  the  knots of  the BSpline BS.(keeping  the
 	/// geometry).  It returns a new BSpline which  could still be C0.
@@ -534,22 +492,8 @@ public:
 	/// the tangents  on  the left and on  the right  to decide if  the
 	/// curve is G1 or not at a given point
 	/// </summary>
-	static void C0BSplineToC1BSplineCurve(Macad::Occt::Geom_BSplineCurve^ BS, double tolerance);
-	/// <summary>
-	/// This Method   reduces as far  as  it is possible  the
-	/// multiplicities  of  the knots  of the BSpline  BS.(keeping the geometry).
-	/// It returns an array of BSpline C1. tolerance is a geometrical tolerance.
-	/// </summary>
+static void C0BSplineToC1BSplineCurve(Macad::Occt::Geom_BSplineCurve^ BS, double tolerance);
 	/* Method skipped due to unknown mapping: void C0BSplineToArrayOfC1BSplineCurve(Geom_BSplineCurve BS, TColGeom_HArray1OfBSplineCurve tabBS, Standard_Real tolerance, ) */
-	/// <summary>
-	/// This   Method reduces as far   as it is  possible the
-	/// multiplicities of  the  knots of  the  BSpline BS.(keeping the
-	/// geometry).  It returns an array of BSpline C1.  tolerance is a
-	/// geometrical tolerance : it  allows for the maximum deformation
-	/// The  Angular tolerance is in  radians and measures the angle of
-	/// the tangents on the left and on the right to decide if the curve
-	/// is C1 or not at a given point
-	/// </summary>
 	/* Method skipped due to unknown mapping: void C0BSplineToArrayOfC1BSplineCurve(Geom_BSplineCurve BS, TColGeom_HArray1OfBSplineCurve tabBS, Standard_Real AngularTolerance, Standard_Real tolerance, ) */
 }; // class GeomConvert
 
@@ -586,7 +530,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a curve approximation framework defined by -
 	/// -      the conic Curve,
 	/// -      the tolerance value Tol3d,
@@ -596,8 +540,8 @@ public:
 	/// -      the highest degree MaxDeg which the
 	/// polynomial defining the BSpline curve may have.
 	/// </summary>
-	GeomConvert_ApproxCurve(Macad::Occt::Geom_Curve^ Curve, double Tol3d, Macad::Occt::GeomAbs_Shape Order, int MaxSegments, int MaxDegree);
-	/// <summary>
+GeomConvert_ApproxCurve(Macad::Occt::Geom_Curve^ Curve, double Tol3d, Macad::Occt::GeomAbs_Shape Order, int MaxSegments, int MaxDegree);
+		/// <summary>
 	/// Constructs a curve approximation framework defined by -
 	/// -      the Curve,
 	/// -      the tolerance value Tol3d,
@@ -607,32 +551,29 @@ public:
 	/// -      the highest degree MaxDeg which the
 	/// polynomial defining the BSpline curve may have.
 	/// </summary>
-	GeomConvert_ApproxCurve(Macad::Occt::Adaptor3d_Curve^ Curve, double Tol3d, Macad::Occt::GeomAbs_Shape Order, int MaxSegments, int MaxDegree);
+GeomConvert_ApproxCurve(Macad::Occt::Adaptor3d_Curve^ Curve, double Tol3d, Macad::Occt::GeomAbs_Shape Order, int MaxSegments, int MaxDegree);
 	GeomConvert_ApproxCurve(Macad::Occt::GeomConvert_ApproxCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the BSpline curve resulting from the approximation algorithm.
 	/// </summary>
-	Macad::Occt::Geom_BSplineCurve^ Curve();
-	/// <summary>
+Macad::Occt::Geom_BSplineCurve^ Curve();
+		/// <summary>
 	/// returns  Standard_True  if  the  approximation  has
 	/// been  done  within  required tolerance
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// Returns  Standard_True if the approximation did come out
 	/// with a result that  is not NECESSARELY within the required tolerance
 	/// </summary>
-	bool HasResult();
-	/// <summary>
+bool HasResult();
+		/// <summary>
 	/// Returns the greatest distance between a point on the
 	/// source conic and the BSpline curve resulting from the
 	/// approximation. (>0 when an approximation
 	/// has  been  done, 0  if  no  approximation)
 	/// </summary>
-	double MaxError();
-	/// <summary>
-	/// Print on the stream  o  information about the object
-	/// </summary>
+double MaxError();
 	/* Method skipped due to unknown mapping: void Dump(ostream o, ) */
 }; // class GeomConvert_ApproxCurve
 
@@ -670,7 +611,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a surface approximation framework defined by
 	/// -   the conic Surf
 	/// -   the tolerance value Tol3d
@@ -683,8 +624,8 @@ public:
 	/// allowed in the resulting BSpline curve
 	/// -   the index of precision PrecisCode.
 	/// </summary>
-	GeomConvert_ApproxSurface(Macad::Occt::Geom_Surface^ Surf, double Tol3d, Macad::Occt::GeomAbs_Shape UContinuity, Macad::Occt::GeomAbs_Shape VContinuity, int MaxDegU, int MaxDegV, int MaxSegments, int PrecisCode);
-	/// <summary>
+GeomConvert_ApproxSurface(Macad::Occt::Geom_Surface^ Surf, double Tol3d, Macad::Occt::GeomAbs_Shape UContinuity, Macad::Occt::GeomAbs_Shape VContinuity, int MaxDegU, int MaxDegV, int MaxSegments, int PrecisCode);
+		/// <summary>
 	/// Constructs a surface approximation framework defined by
 	/// -   the Surf
 	/// -   the tolerance value Tol3d
@@ -697,32 +638,29 @@ public:
 	/// allowed in the resulting BSpline curve
 	/// -   the index of precision PrecisCode.
 	/// </summary>
-	GeomConvert_ApproxSurface(Macad::Occt::Adaptor3d_Surface^ Surf, double Tol3d, Macad::Occt::GeomAbs_Shape UContinuity, Macad::Occt::GeomAbs_Shape VContinuity, int MaxDegU, int MaxDegV, int MaxSegments, int PrecisCode);
+GeomConvert_ApproxSurface(Macad::Occt::Adaptor3d_Surface^ Surf, double Tol3d, Macad::Occt::GeomAbs_Shape UContinuity, Macad::Occt::GeomAbs_Shape VContinuity, int MaxDegU, int MaxDegV, int MaxSegments, int PrecisCode);
 	GeomConvert_ApproxSurface(Macad::Occt::GeomConvert_ApproxSurface^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the BSpline surface resulting from the approximation algorithm.
 	/// </summary>
-	Macad::Occt::Geom_BSplineSurface^ Surface();
-	/// <summary>
+Macad::Occt::Geom_BSplineSurface^ Surface();
+		/// <summary>
 	/// Returns Standard_True if the approximation has be done
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// Returns true if the approximation did come out with a result that
 	/// is not NECESSARILY within the required tolerance or a result
 	/// that is not recognized with the wished continuities.
 	/// </summary>
-	bool HasResult();
-	/// <summary>
+bool HasResult();
+		/// <summary>
 	/// Returns the greatest distance between a point on the
 	/// source conic surface and the BSpline surface
 	/// resulting from the approximation (>0 when an approximation
 	/// has been done, 0 if no  approximation )
 	/// </summary>
-	double MaxError();
-	/// <summary>
-	/// Prints on the stream o information on the current state of the object.
-	/// </summary>
+double MaxError();
 	/* Method skipped due to unknown mapping: void Dump(ostream o, ) */
 }; // class GeomConvert_ApproxSurface
 
@@ -777,7 +715,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Determines points at which the BSpline curve
 	/// BasisCurve should be split in order to obtain arcs
 	/// with a degree of continuity equal to ContinuityRange.
@@ -789,9 +727,9 @@ public:
 	/// Exceptions
 	/// Standard_RangeError if ContinuityRange is less than zero.
 	/// </summary>
-	GeomConvert_BSplineCurveKnotSplitting(Macad::Occt::Geom_BSplineCurve^ BasisCurve, int ContinuityRange);
+GeomConvert_BSplineCurveKnotSplitting(Macad::Occt::Geom_BSplineCurve^ BasisCurve, int ContinuityRange);
 	GeomConvert_BSplineCurveKnotSplitting(Macad::Occt::GeomConvert_BSplineCurveKnotSplitting^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of points at which the analyzed
 	/// BSpline curve should be split, in order to obtain arcs
 	/// with the continuity required by this framework.
@@ -799,8 +737,8 @@ public:
 	/// the first and last points of the curve, which bound the
 	/// first and last arcs, are counted among these splitting points.
 	/// </summary>
-	int NbSplits();
-	/// <summary>
+int NbSplits();
+		/// <summary>
 	/// Loads the SplitValues table with the split knots
 	/// values computed in this framework. Each value in the
 	/// table is an index in the knots table of the BSpline
@@ -818,8 +756,8 @@ public:
 	/// -   the number of split points computed in this
 	/// framework (as given by the function NbSplits).
 	/// </summary>
-	void Splitting(Macad::Occt::TColStd_Array1OfInteger^ SplitValues);
-	/// <summary>
+void Splitting(Macad::Occt::TColStd_Array1OfInteger^ SplitValues);
+		/// <summary>
 	/// Returns the split knot of index Index to the split knots
 	/// table computed in this framework. The returned value
 	/// is an index in the knots table of the BSpline curve
@@ -834,7 +772,7 @@ public:
 	/// Standard_RangeError if Index is less than 1 or
 	/// greater than the number of split knots computed in this framework.
 	/// </summary>
-	int SplitValue(int Index);
+int SplitValue(int Index);
 }; // class GeomConvert_BSplineCurveKnotSplitting
 
 //---------------------------------------------------------------------
@@ -877,12 +815,12 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Computes all the data needed to convert the
 	/// BSpline curve BasisCurve into a series of adjacent Bezier arcs.
 	/// </summary>
-	GeomConvert_BSplineCurveToBezierCurve(Macad::Occt::Geom_BSplineCurve^ BasisCurve);
-	/// <summary>
+GeomConvert_BSplineCurveToBezierCurve(Macad::Occt::Geom_BSplineCurve^ BasisCurve);
+		/// <summary>
 	/// Computes all the data needed to convert
 	/// the portion of the BSpline curve BasisCurve
 	/// limited by the two parameter values U1 and U2 into a series of adjacent Bezier arcs.
@@ -897,9 +835,9 @@ public:
 	/// is ParametricTolerance.
 	/// Raised if Abs (U2 - U1) <= ParametricTolerance.
 	/// </summary>
-	GeomConvert_BSplineCurveToBezierCurve(Macad::Occt::Geom_BSplineCurve^ BasisCurve, double U1, double U2, double ParametricTolerance);
+GeomConvert_BSplineCurveToBezierCurve(Macad::Occt::Geom_BSplineCurve^ BasisCurve, double U1, double U2, double ParametricTolerance);
 	GeomConvert_BSplineCurveToBezierCurve(Macad::Occt::GeomConvert_BSplineCurveToBezierCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Constructs and returns the Bezier curve of index
 	/// Index to the table of adjacent Bezier arcs
 	/// computed by this algorithm.
@@ -910,28 +848,16 @@ public:
 	/// greater than the number of adjacent Bezier arcs
 	/// computed by this algorithm.
 	/// </summary>
-	Macad::Occt::Geom_BezierCurve^ Arc(int Index);
-	/// <summary>
-	/// Constructs all the Bezier curves whose data is
-	/// computed by this algorithm and loads these curves into the Curves table.
-	/// The Bezier curves have the same orientation as the
-	/// BSpline curve analyzed in this framework.
-	/// Exceptions
-	/// Standard_DimensionError if the Curves array was
-	/// not created with the following bounds:
-	/// -   1 , and
-	/// -   the number of adjacent Bezier arcs computed by
-	/// this algorithm (as given by the function NbArcs).
-	/// </summary>
+Macad::Occt::Geom_BezierCurve^ Arc(int Index);
 	/* Method skipped due to unknown mapping: void Arcs(TColGeom_Array1OfBezierCurve Curves, ) */
-	/// <summary>
+		/// <summary>
 	/// This methode returns the bspline's knots associated to
 	/// the converted arcs
 	/// Raised  if the length  of Curves is not equal to
 	/// NbArcs +  1.
 	/// </summary>
-	void Knots(Macad::Occt::TColStd_Array1OfReal^ TKnots);
-	/// <summary>
+void Knots(Macad::Occt::TColStd_Array1OfReal^ TKnots);
+		/// <summary>
 	/// Returns the number of BezierCurve arcs.
 	/// If at the creation time you have decomposed the basis curve
 	/// between the parametric values UFirst, ULast the number of
@@ -941,7 +867,7 @@ public:
 	/// of BezierCurve arcs NbArcs is equal to the number of knots less
 	/// one.
 	/// </summary>
-	int NbArcs();
+int NbArcs();
 }; // class GeomConvert_BSplineCurveToBezierCurve
 
 //---------------------------------------------------------------------
@@ -997,7 +923,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Determines the u- and v-isoparametric curves
 	/// along which the BSpline surface BasisSurface
 	/// should be split in order to obtain patches with a
@@ -1017,9 +943,9 @@ public:
 	/// Standard_RangeError if UContinuityRange or
 	/// VContinuityRange is less than zero.
 	/// </summary>
-	GeomConvert_BSplineSurfaceKnotSplitting(Macad::Occt::Geom_BSplineSurface^ BasisSurface, int UContinuityRange, int VContinuityRange);
+GeomConvert_BSplineSurfaceKnotSplitting(Macad::Occt::Geom_BSplineSurface^ BasisSurface, int UContinuityRange, int VContinuityRange);
 	GeomConvert_BSplineSurfaceKnotSplitting(Macad::Occt::GeomConvert_BSplineSurfaceKnotSplitting^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of u-isoparametric curves
 	/// along which the analysed BSpline surface should be
 	/// split in order to obtain patches with the continuity
@@ -1029,8 +955,8 @@ public:
 	/// Note that the four curves which bound the surface are
 	/// counted among these splitting curves.
 	/// </summary>
-	int NbUSplits();
-	/// <summary>
+int NbUSplits();
+		/// <summary>
 	/// Returns the number of v-isoparametric curves
 	/// along which the analysed BSpline surface should be
 	/// split in order to obtain patches with the continuity
@@ -1040,8 +966,8 @@ public:
 	/// Note that the four curves which bound the surface are
 	/// counted among these splitting curves.
 	/// </summary>
-	int NbVSplits();
-	/// <summary>
+int NbVSplits();
+		/// <summary>
 	/// Loads the USplit and VSplit tables with the split
 	/// knots values computed in this framework. Each value
 	/// in these tables is an index in the knots table
@@ -1069,8 +995,8 @@ public:
 	/// direction computed in this framework (as given
 	/// by the function NbVSplits).
 	/// </summary>
-	void Splitting(Macad::Occt::TColStd_Array1OfInteger^ USplit, Macad::Occt::TColStd_Array1OfInteger^ VSplit);
-	/// <summary>
+void Splitting(Macad::Occt::TColStd_Array1OfInteger^ USplit, Macad::Occt::TColStd_Array1OfInteger^ VSplit);
+		/// <summary>
 	/// Returns the split knot of index UIndex
 	/// to the split knots table for the u  parametric direction
 	/// computed in this framework. The returned value is
@@ -1084,8 +1010,8 @@ public:
 	/// Standard_RangeError if UIndex  is less than 1 or greater than the number
 	/// of split knots for the u parametric direction computed in this framework.
 	/// </summary>
-	int USplitValue(int UIndex);
-	/// <summary>
+int USplitValue(int UIndex);
+		/// <summary>
 	/// Returns the split knot of index VIndex
 	/// to the split knots table for the v  parametric direction
 	/// computed in this framework. The returned value is
@@ -1099,7 +1025,7 @@ public:
 	/// Standard_RangeError if VIndex  is less than 1 or greater than the number
 	/// of split knots for the v parametric direction computed in this framework.
 	/// </summary>
-	int VSplitValue(int VIndex);
+int VSplitValue(int VIndex);
 }; // class GeomConvert_BSplineSurfaceKnotSplitting
 
 //---------------------------------------------------------------------
@@ -1142,7 +1068,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Computes all the data needed to convert
 	/// -   the BSpline surface BasisSurface into a series of adjacent Bezier surfaces.
 	/// The result consists of a grid of BasisSurface patches
@@ -1158,8 +1084,8 @@ public:
 	/// construct each individual Bezier surface (or all Bezier surfaces).
 	/// Note: ParametricTolerance is not used.
 	/// </summary>
-	GeomConvert_BSplineSurfaceToBezierSurface(Macad::Occt::Geom_BSplineSurface^ BasisSurface);
-	/// <summary>
+GeomConvert_BSplineSurfaceToBezierSurface(Macad::Occt::Geom_BSplineSurface^ BasisSurface);
+		/// <summary>
 	/// Computes all the data needed to convert
 	/// the patch of the BSpline surface BasisSurface
 	/// limited by the two parameter values U1 and U2 in
@@ -1185,9 +1111,9 @@ public:
 	/// Raised if U2 - U1 <= ParametricTolerance or
 	/// V2 - V1 <= ParametricTolerance.
 	/// </summary>
-	GeomConvert_BSplineSurfaceToBezierSurface(Macad::Occt::Geom_BSplineSurface^ BasisSurface, double U1, double U2, double V1, double V2, double ParametricTolerance);
+GeomConvert_BSplineSurfaceToBezierSurface(Macad::Occt::Geom_BSplineSurface^ BasisSurface, double U1, double U2, double V1, double V2, double ParametricTolerance);
 	GeomConvert_BSplineSurfaceToBezierSurface(Macad::Occt::GeomConvert_BSplineSurfaceToBezierSurface^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Constructs and returns the Bezier surface of indices
 	/// (UIndex, VIndex) to the patch grid computed on the
 	/// BSpline surface analyzed by this algorithm.
@@ -1212,48 +1138,23 @@ public:
 	/// BSpline surface analyzed by this algorithm (as
 	/// returned by the function NbVPatches).
 	/// </summary>
-	Macad::Occt::Geom_BezierSurface^ Patch(int UIndex, int VIndex);
-	/// <summary>
-	/// Constructs all the Bezier surfaces whose data is
-	/// computed by this algorithm, and loads them into the Surfaces table.
-	/// These Bezier surfaces have the same orientation as
-	/// the BSpline surface analyzed in this framework.
-	/// The Surfaces array is organised in the same way as
-	/// the patch grid computed on the BSpline surface
-	/// analyzed by this algorithm. A row in the array
-	/// corresponds to a series of adjacent patches, all
-	/// limited by the same two u-isoparametric curves of
-	/// the surface. A column in the array corresponds to a
-	/// series of adjacent patches, all limited by the same two
-	/// v-isoparametric curves of the surface.
-	/// Exceptions
-	/// Standard_DimensionError if the Surfaces array
-	/// was not created with the following bounds:
-	/// -   1, and the number of adjacent patch series in the
-	/// u parametric direction of the patch grid computed
-	/// on the BSpline surface, analyzed by this algorithm
-	/// (as given by the function NbUPatches) as row bounds,
-	/// -   1, and the number of adjacent patch series in the
-	/// v parametric direction of the patch grid computed
-	/// on the BSpline surface, analyzed by this algorithm
-	/// (as given by the function NbVPatches) as column bounds.
-	/// </summary>
+Macad::Occt::Geom_BezierSurface^ Patch(int UIndex, int VIndex);
 	/* Method skipped due to unknown mapping: void Patches(TColGeom_Array2OfBezierSurface Surfaces, ) */
-	/// <summary>
+		/// <summary>
 	/// This methode returns the bspline's u-knots associated to
 	/// the converted Patches
 	/// Raised  if the length  of Curves is not equal to
 	/// NbUPatches +  1.
 	/// </summary>
-	void UKnots(Macad::Occt::TColStd_Array1OfReal^ TKnots);
-	/// <summary>
+void UKnots(Macad::Occt::TColStd_Array1OfReal^ TKnots);
+		/// <summary>
 	/// This methode returns the bspline's v-knots associated to
 	/// the converted Patches
 	/// Raised  if the length  of Curves is not equal to
 	/// NbVPatches +  1.
 	/// </summary>
-	void VKnots(Macad::Occt::TColStd_Array1OfReal^ TKnots);
-	/// <summary>
+void VKnots(Macad::Occt::TColStd_Array1OfReal^ TKnots);
+		/// <summary>
 	/// Returns the number of Bezier surfaces in the U direction.
 	/// If at the creation time you have decomposed the basis Surface
 	/// between the parametric values UFirst, ULast the number of
@@ -1263,8 +1164,8 @@ public:
 	/// number of Bezier surfaces NbUPatches is equal to the number of
 	/// UKnots less one.
 	/// </summary>
-	int NbUPatches();
-	/// <summary>
+int NbUPatches();
+		/// <summary>
 	/// Returns the number of Bezier surfaces in the V direction.
 	/// If at the creation time you have decomposed the basis surface
 	/// between the parametric values VFirst, VLast the number of
@@ -1274,7 +1175,7 @@ public:
 	/// number of Bezier surfaces NbVPatches is equal to the number of
 	/// VKnots less one.
 	/// </summary>
-	int NbVPatches();
+int NbVPatches();
 }; // class GeomConvert_BSplineSurfaceToBezierSurface
 
 //---------------------------------------------------------------------
@@ -1331,492 +1232,72 @@ public:
 	}
 
 public:
-	/// <summary>
-	/// Computes all the data needed to build a "C0"
-	/// continuous BSpline surface equivalent to the grid of
-	/// adjacent non-rational Bezier surfaces Beziers.
-	/// Each surface in the Beziers grid becomes a natural
-	/// patch, limited by knots values, on the BSpline surface
-	/// whose data is computed. Surfaces in the grid must
-	/// satisfy the following conditions:
-	/// -   Coincident bounding curves between two
-	/// consecutive surfaces in a row of the Beziers grid
-	/// must be u-isoparametric bounding curves of these two surfaces.
-	/// -   Coincident bounding curves between two
-	/// consecutive surfaces in a column of the Beziers
-	/// grid must be v-isoparametric bounding curves of these two surfaces.
-	/// The BSpline surface whose data is computed has the
-	/// following characteristics:
-	/// -   Its degree in the u (respectively v) parametric
-	/// direction is equal to that of the Bezier surface
-	/// which has the highest degree in the u
-	/// (respectively v) parametric direction in the Beziers grid.
-	/// -   It is a "Piecewise Bezier" in both u and v
-	/// parametric directions, i.e.:
-	/// -   the knots are regularly spaced in each
-	/// parametric direction (i.e. the difference between
-	/// two consecutive knots is a constant), and
-	/// -   all the multiplicities of the surface knots in a
-	/// given parametric direction are equal to
-	/// Degree, which is the degree of the BSpline
-	/// surface in this parametric direction, except for
-	/// the first and last knots for which the multiplicity is
-	/// equal to Degree + 1.
-	/// -   Coincident bounding curves between two
-	/// consecutive columns of Bezier surfaces in the
-	/// Beziers grid become u-isoparametric curves,
-	/// corresponding to knots values of the BSpline surface.
-	/// -   Coincident bounding curves between two
-	/// consecutive rows of Bezier surfaces in the Beziers
-	/// grid become v-isoparametric curves
-	/// corresponding to knots values of the BSpline surface.
-	/// Use the available consultation functions to access the
-	/// computed data. This data may be used to construct the BSpline surface.
-	/// Warning
-	/// The surfaces in the Beziers grid must be adjacent, i.e.
-	/// two consecutive Bezier surfaces in the grid (in a row
-	/// or column) must have a coincident bounding curve. In
-	/// addition, the location of the parameterization on each
-	/// of these surfaces (i.e. the relative location of u and v
-	/// isoparametric curves on the surface) is of importance
-	/// with regard to the positioning of the surfaces in the
-	/// Beziers grid. Care must be taken with respect to the
-	/// above, as these properties are not checked and an
-	/// error may occur if they are not satisfied.
-	/// Exceptions
-	/// Standard_NotImplemented if one of the Bezier
-	/// surfaces of the Beziers grid is rational.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void GeomConvert_CompBezierSurfacesToBSplineSurface(TColGeom_Array2OfBezierSurface Beziers, ) */
-	/// <summary>
-	/// Build an Ci uniform (Rational) BSpline surface
-	/// The highest Continuity Ci is imposed, like the
-	/// maximal deformation is lower than <Tolerance>.
-	/// Warning:  The Continuity C0 is imposed without any check.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void GeomConvert_CompBezierSurfacesToBSplineSurface(TColGeom_Array2OfBezierSurface Beziers, Standard_Real Tolerance, Standard_Boolean RemoveKnots, ) */
-	/// <summary>
-	/// Build an Ci uniform (Rational) BSpline surface
-	/// The highest Continuity Ci is imposed, like the
-	/// maximal deformation is lower than <Tolerance>.
-	/// Warning:  The Continuity C0 is imposed without any check.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void GeomConvert_CompBezierSurfacesToBSplineSurface(TColGeom_Array2OfBezierSurface Beziers, Standard_Real Tolerance, Standard_Boolean RemoveKnots, ) */
-	/// <summary>
-	/// Computes all the data needed to construct a BSpline
-	/// surface equivalent to the adjacent non-rational
-	/// Bezier surfaces Beziers grid.
-	/// Each surface in the Beziers grid becomes a natural
-	/// patch, limited by knots values, on the BSpline surface
-	/// whose data is computed. Surfaces in the grid must
-	/// satisfy the following conditions:
-	/// -   Coincident bounding curves between two
-	/// consecutive surfaces in a row of the Beziers grid
-	/// must be u-isoparametric bounding curves of these two surfaces.
-	/// -   Coincident bounding curves between two
-	/// consecutive surfaces in a column of the Beziers
-	/// grid must be v-isoparametric bounding curves of these two surfaces.
-	/// The BSpline surface whose data is computed has the
-	/// following characteristics:
-	/// -   Its degree in the u (respectively v) parametric
-	/// direction is equal to that of the Bezier surface
-	/// which has the highest degree in the u
-	/// (respectively v) parametric direction in the Beziers grid.
-	/// -   Coincident bounding curves between two
-	/// consecutive columns of Bezier surfaces in the
-	/// Beziers grid become u-isoparametric curves
-	/// corresponding to knots values of the BSpline surface.
-	/// -   Coincident bounding curves between two
-	/// consecutive rows of Bezier surfaces in the Beziers
-	/// grid become v-isoparametric curves
-	/// corresponding to knots values of the BSpline surface.
-	/// Knots values of the BSpline surface are given in the two tables:
-	/// -   UKnots for the u parametric direction (which
-	/// corresponds to the order of Bezier surface columns in the Beziers grid), and
-	/// -   VKnots for the v parametric direction (which
-	/// corresponds to the order of Bezier surface rows in the Beziers grid).
-	/// The dimensions of UKnots (respectively VKnots)
-	/// must be equal to the number of columns (respectively,
-	/// rows) of the Beziers grid, plus 1 .
-	/// UContinuity and VContinuity, which are both
-	/// defaulted to GeomAbs_C0, specify the required
-	/// continuity on the BSpline surface. If the required
-	/// degree of continuity is greater than 0 in a given
-	/// parametric direction, a deformation is applied locally
-	/// on the initial surface (as defined by the Beziers grid)
-	/// to satisfy this condition. This local deformation is not
-	/// applied however, if it is greater than Tolerance
-	/// (defaulted to 1.0 e-7). In such cases, the
-	/// continuity condition is not satisfied, and the function
-	/// IsDone will return false. A small tolerance value
-	/// prevents any modification of the surface and a large
-	/// tolerance value "smoothes" the surface.
-	/// Use the available consultation functions to access the
-	/// computed data. This data may be used to construct the BSpline surface.
-	/// Warning
-	/// The surfaces in the Beziers grid must be adjacent, i.e.
-	/// two consecutive Bezier surfaces in the grid (in a row
-	/// or column) must have a coincident bounding curve. In
-	/// addition, the location of the parameterization on each
-	/// of these surfaces (i.e. the relative location of u and v
-	/// isoparametric curves on the surface) is of importance
-	/// with regard to the positioning of the surfaces in the
-	/// Beziers grid. Care must be taken with respect to the
-	/// above, as these properties are not checked and an
-	/// error may occur if they are not satisfied.
-	/// Exceptions
-	/// Standard_DimensionMismatch:
-	/// -   if the number of knots in the UKnots table (i.e. the
-	/// length of the UKnots array) is not equal to the
-	/// number of columns of Bezier surfaces in the
-	/// Beziers grid plus 1, or
-	/// -   if the number of knots in the VKnots table (i.e. the
-	/// length of the VKnots array) is not equal to the
-	/// number of rows of Bezier surfaces in the Beziers grid, plus 1.
-	/// Standard_ConstructionError:
-	/// -   if UContinuity and VContinuity are not equal to
-	/// one of the following values: GeomAbs_C0,
-	/// GeomAbs_C1, GeomAbs_C2 and GeomAbs_C3; or
-	/// -   if the number of columns in the Beziers grid is
-	/// greater than 1, and the required degree of
-	/// continuity in the u parametric direction is greater
-	/// than that of the Bezier surface with the highest
-	/// degree in the u parametric direction (in the Beziers grid), minus 1; or
-	/// -   if the number of rows in the Beziers grid is
-	/// greater than 1, and the required degree of
-	/// continuity in the v parametric direction is greater
-	/// than that of the Bezier surface with the highest
-	/// degree in the v parametric direction (in the Beziers grid), minus 1 .
-	/// Standard_NotImplemented if one of the Bezier
-	/// surfaces in the Beziers grid is rational.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void GeomConvert_CompBezierSurfacesToBSplineSurface(TColGeom_Array2OfBezierSurface Beziers, TColStd_Array1OfReal UKnots, TColStd_Array1OfReal VKnots, GeomAbs_Shape UContinuity, GeomAbs_Shape VContinuity, Standard_Real Tolerance, ) */
-	/// <summary>
-	/// Computes all the data needed to construct a BSpline
-	/// surface equivalent to the adjacent non-rational
-	/// Bezier surfaces Beziers grid.
-	/// Each surface in the Beziers grid becomes a natural
-	/// patch, limited by knots values, on the BSpline surface
-	/// whose data is computed. Surfaces in the grid must
-	/// satisfy the following conditions:
-	/// -   Coincident bounding curves between two
-	/// consecutive surfaces in a row of the Beziers grid
-	/// must be u-isoparametric bounding curves of these two surfaces.
-	/// -   Coincident bounding curves between two
-	/// consecutive surfaces in a column of the Beziers
-	/// grid must be v-isoparametric bounding curves of these two surfaces.
-	/// The BSpline surface whose data is computed has the
-	/// following characteristics:
-	/// -   Its degree in the u (respectively v) parametric
-	/// direction is equal to that of the Bezier surface
-	/// which has the highest degree in the u
-	/// (respectively v) parametric direction in the Beziers grid.
-	/// -   Coincident bounding curves between two
-	/// consecutive columns of Bezier surfaces in the
-	/// Beziers grid become u-isoparametric curves
-	/// corresponding to knots values of the BSpline surface.
-	/// -   Coincident bounding curves between two
-	/// consecutive rows of Bezier surfaces in the Beziers
-	/// grid become v-isoparametric curves
-	/// corresponding to knots values of the BSpline surface.
-	/// Knots values of the BSpline surface are given in the two tables:
-	/// -   UKnots for the u parametric direction (which
-	/// corresponds to the order of Bezier surface columns in the Beziers grid), and
-	/// -   VKnots for the v parametric direction (which
-	/// corresponds to the order of Bezier surface rows in the Beziers grid).
-	/// The dimensions of UKnots (respectively VKnots)
-	/// must be equal to the number of columns (respectively,
-	/// rows) of the Beziers grid, plus 1 .
-	/// UContinuity and VContinuity, which are both
-	/// defaulted to GeomAbs_C0, specify the required
-	/// continuity on the BSpline surface. If the required
-	/// degree of continuity is greater than 0 in a given
-	/// parametric direction, a deformation is applied locally
-	/// on the initial surface (as defined by the Beziers grid)
-	/// to satisfy this condition. This local deformation is not
-	/// applied however, if it is greater than Tolerance
-	/// (defaulted to 1.0 e-7). In such cases, the
-	/// continuity condition is not satisfied, and the function
-	/// IsDone will return false. A small tolerance value
-	/// prevents any modification of the surface and a large
-	/// tolerance value "smoothes" the surface.
-	/// Use the available consultation functions to access the
-	/// computed data. This data may be used to construct the BSpline surface.
-	/// Warning
-	/// The surfaces in the Beziers grid must be adjacent, i.e.
-	/// two consecutive Bezier surfaces in the grid (in a row
-	/// or column) must have a coincident bounding curve. In
-	/// addition, the location of the parameterization on each
-	/// of these surfaces (i.e. the relative location of u and v
-	/// isoparametric curves on the surface) is of importance
-	/// with regard to the positioning of the surfaces in the
-	/// Beziers grid. Care must be taken with respect to the
-	/// above, as these properties are not checked and an
-	/// error may occur if they are not satisfied.
-	/// Exceptions
-	/// Standard_DimensionMismatch:
-	/// -   if the number of knots in the UKnots table (i.e. the
-	/// length of the UKnots array) is not equal to the
-	/// number of columns of Bezier surfaces in the
-	/// Beziers grid plus 1, or
-	/// -   if the number of knots in the VKnots table (i.e. the
-	/// length of the VKnots array) is not equal to the
-	/// number of rows of Bezier surfaces in the Beziers grid, plus 1.
-	/// Standard_ConstructionError:
-	/// -   if UContinuity and VContinuity are not equal to
-	/// one of the following values: GeomAbs_C0,
-	/// GeomAbs_C1, GeomAbs_C2 and GeomAbs_C3; or
-	/// -   if the number of columns in the Beziers grid is
-	/// greater than 1, and the required degree of
-	/// continuity in the u parametric direction is greater
-	/// than that of the Bezier surface with the highest
-	/// degree in the u parametric direction (in the Beziers grid), minus 1; or
-	/// -   if the number of rows in the Beziers grid is
-	/// greater than 1, and the required degree of
-	/// continuity in the v parametric direction is greater
-	/// than that of the Bezier surface with the highest
-	/// degree in the v parametric direction (in the Beziers grid), minus 1 .
-	/// Standard_NotImplemented if one of the Bezier
-	/// surfaces in the Beziers grid is rational.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void GeomConvert_CompBezierSurfacesToBSplineSurface(TColGeom_Array2OfBezierSurface Beziers, TColStd_Array1OfReal UKnots, TColStd_Array1OfReal VKnots, GeomAbs_Shape UContinuity, GeomAbs_Shape VContinuity, Standard_Real Tolerance, ) */
-	/// <summary>
-	/// Computes all the data needed to construct a BSpline
-	/// surface equivalent to the adjacent non-rational
-	/// Bezier surfaces Beziers grid.
-	/// Each surface in the Beziers grid becomes a natural
-	/// patch, limited by knots values, on the BSpline surface
-	/// whose data is computed. Surfaces in the grid must
-	/// satisfy the following conditions:
-	/// -   Coincident bounding curves between two
-	/// consecutive surfaces in a row of the Beziers grid
-	/// must be u-isoparametric bounding curves of these two surfaces.
-	/// -   Coincident bounding curves between two
-	/// consecutive surfaces in a column of the Beziers
-	/// grid must be v-isoparametric bounding curves of these two surfaces.
-	/// The BSpline surface whose data is computed has the
-	/// following characteristics:
-	/// -   Its degree in the u (respectively v) parametric
-	/// direction is equal to that of the Bezier surface
-	/// which has the highest degree in the u
-	/// (respectively v) parametric direction in the Beziers grid.
-	/// -   Coincident bounding curves between two
-	/// consecutive columns of Bezier surfaces in the
-	/// Beziers grid become u-isoparametric curves
-	/// corresponding to knots values of the BSpline surface.
-	/// -   Coincident bounding curves between two
-	/// consecutive rows of Bezier surfaces in the Beziers
-	/// grid become v-isoparametric curves
-	/// corresponding to knots values of the BSpline surface.
-	/// Knots values of the BSpline surface are given in the two tables:
-	/// -   UKnots for the u parametric direction (which
-	/// corresponds to the order of Bezier surface columns in the Beziers grid), and
-	/// -   VKnots for the v parametric direction (which
-	/// corresponds to the order of Bezier surface rows in the Beziers grid).
-	/// The dimensions of UKnots (respectively VKnots)
-	/// must be equal to the number of columns (respectively,
-	/// rows) of the Beziers grid, plus 1 .
-	/// UContinuity and VContinuity, which are both
-	/// defaulted to GeomAbs_C0, specify the required
-	/// continuity on the BSpline surface. If the required
-	/// degree of continuity is greater than 0 in a given
-	/// parametric direction, a deformation is applied locally
-	/// on the initial surface (as defined by the Beziers grid)
-	/// to satisfy this condition. This local deformation is not
-	/// applied however, if it is greater than Tolerance
-	/// (defaulted to 1.0 e-7). In such cases, the
-	/// continuity condition is not satisfied, and the function
-	/// IsDone will return false. A small tolerance value
-	/// prevents any modification of the surface and a large
-	/// tolerance value "smoothes" the surface.
-	/// Use the available consultation functions to access the
-	/// computed data. This data may be used to construct the BSpline surface.
-	/// Warning
-	/// The surfaces in the Beziers grid must be adjacent, i.e.
-	/// two consecutive Bezier surfaces in the grid (in a row
-	/// or column) must have a coincident bounding curve. In
-	/// addition, the location of the parameterization on each
-	/// of these surfaces (i.e. the relative location of u and v
-	/// isoparametric curves on the surface) is of importance
-	/// with regard to the positioning of the surfaces in the
-	/// Beziers grid. Care must be taken with respect to the
-	/// above, as these properties are not checked and an
-	/// error may occur if they are not satisfied.
-	/// Exceptions
-	/// Standard_DimensionMismatch:
-	/// -   if the number of knots in the UKnots table (i.e. the
-	/// length of the UKnots array) is not equal to the
-	/// number of columns of Bezier surfaces in the
-	/// Beziers grid plus 1, or
-	/// -   if the number of knots in the VKnots table (i.e. the
-	/// length of the VKnots array) is not equal to the
-	/// number of rows of Bezier surfaces in the Beziers grid, plus 1.
-	/// Standard_ConstructionError:
-	/// -   if UContinuity and VContinuity are not equal to
-	/// one of the following values: GeomAbs_C0,
-	/// GeomAbs_C1, GeomAbs_C2 and GeomAbs_C3; or
-	/// -   if the number of columns in the Beziers grid is
-	/// greater than 1, and the required degree of
-	/// continuity in the u parametric direction is greater
-	/// than that of the Bezier surface with the highest
-	/// degree in the u parametric direction (in the Beziers grid), minus 1; or
-	/// -   if the number of rows in the Beziers grid is
-	/// greater than 1, and the required degree of
-	/// continuity in the v parametric direction is greater
-	/// than that of the Bezier surface with the highest
-	/// degree in the v parametric direction (in the Beziers grid), minus 1 .
-	/// Standard_NotImplemented if one of the Bezier
-	/// surfaces in the Beziers grid is rational.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void GeomConvert_CompBezierSurfacesToBSplineSurface(TColGeom_Array2OfBezierSurface Beziers, TColStd_Array1OfReal UKnots, TColStd_Array1OfReal VKnots, GeomAbs_Shape UContinuity, GeomAbs_Shape VContinuity, Standard_Real Tolerance, ) */
-	/// <summary>
-	/// Computes all the data needed to construct a BSpline
-	/// surface equivalent to the adjacent non-rational
-	/// Bezier surfaces Beziers grid.
-	/// Each surface in the Beziers grid becomes a natural
-	/// patch, limited by knots values, on the BSpline surface
-	/// whose data is computed. Surfaces in the grid must
-	/// satisfy the following conditions:
-	/// -   Coincident bounding curves between two
-	/// consecutive surfaces in a row of the Beziers grid
-	/// must be u-isoparametric bounding curves of these two surfaces.
-	/// -   Coincident bounding curves between two
-	/// consecutive surfaces in a column of the Beziers
-	/// grid must be v-isoparametric bounding curves of these two surfaces.
-	/// The BSpline surface whose data is computed has the
-	/// following characteristics:
-	/// -   Its degree in the u (respectively v) parametric
-	/// direction is equal to that of the Bezier surface
-	/// which has the highest degree in the u
-	/// (respectively v) parametric direction in the Beziers grid.
-	/// -   Coincident bounding curves between two
-	/// consecutive columns of Bezier surfaces in the
-	/// Beziers grid become u-isoparametric curves
-	/// corresponding to knots values of the BSpline surface.
-	/// -   Coincident bounding curves between two
-	/// consecutive rows of Bezier surfaces in the Beziers
-	/// grid become v-isoparametric curves
-	/// corresponding to knots values of the BSpline surface.
-	/// Knots values of the BSpline surface are given in the two tables:
-	/// -   UKnots for the u parametric direction (which
-	/// corresponds to the order of Bezier surface columns in the Beziers grid), and
-	/// -   VKnots for the v parametric direction (which
-	/// corresponds to the order of Bezier surface rows in the Beziers grid).
-	/// The dimensions of UKnots (respectively VKnots)
-	/// must be equal to the number of columns (respectively,
-	/// rows) of the Beziers grid, plus 1 .
-	/// UContinuity and VContinuity, which are both
-	/// defaulted to GeomAbs_C0, specify the required
-	/// continuity on the BSpline surface. If the required
-	/// degree of continuity is greater than 0 in a given
-	/// parametric direction, a deformation is applied locally
-	/// on the initial surface (as defined by the Beziers grid)
-	/// to satisfy this condition. This local deformation is not
-	/// applied however, if it is greater than Tolerance
-	/// (defaulted to 1.0 e-7). In such cases, the
-	/// continuity condition is not satisfied, and the function
-	/// IsDone will return false. A small tolerance value
-	/// prevents any modification of the surface and a large
-	/// tolerance value "smoothes" the surface.
-	/// Use the available consultation functions to access the
-	/// computed data. This data may be used to construct the BSpline surface.
-	/// Warning
-	/// The surfaces in the Beziers grid must be adjacent, i.e.
-	/// two consecutive Bezier surfaces in the grid (in a row
-	/// or column) must have a coincident bounding curve. In
-	/// addition, the location of the parameterization on each
-	/// of these surfaces (i.e. the relative location of u and v
-	/// isoparametric curves on the surface) is of importance
-	/// with regard to the positioning of the surfaces in the
-	/// Beziers grid. Care must be taken with respect to the
-	/// above, as these properties are not checked and an
-	/// error may occur if they are not satisfied.
-	/// Exceptions
-	/// Standard_DimensionMismatch:
-	/// -   if the number of knots in the UKnots table (i.e. the
-	/// length of the UKnots array) is not equal to the
-	/// number of columns of Bezier surfaces in the
-	/// Beziers grid plus 1, or
-	/// -   if the number of knots in the VKnots table (i.e. the
-	/// length of the VKnots array) is not equal to the
-	/// number of rows of Bezier surfaces in the Beziers grid, plus 1.
-	/// Standard_ConstructionError:
-	/// -   if UContinuity and VContinuity are not equal to
-	/// one of the following values: GeomAbs_C0,
-	/// GeomAbs_C1, GeomAbs_C2 and GeomAbs_C3; or
-	/// -   if the number of columns in the Beziers grid is
-	/// greater than 1, and the required degree of
-	/// continuity in the u parametric direction is greater
-	/// than that of the Bezier surface with the highest
-	/// degree in the u parametric direction (in the Beziers grid), minus 1; or
-	/// -   if the number of rows in the Beziers grid is
-	/// greater than 1, and the required degree of
-	/// continuity in the v parametric direction is greater
-	/// than that of the Bezier surface with the highest
-	/// degree in the v parametric direction (in the Beziers grid), minus 1 .
-	/// Standard_NotImplemented if one of the Bezier
-	/// surfaces in the Beziers grid is rational.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void GeomConvert_CompBezierSurfacesToBSplineSurface(TColGeom_Array2OfBezierSurface Beziers, TColStd_Array1OfReal UKnots, TColStd_Array1OfReal VKnots, GeomAbs_Shape UContinuity, GeomAbs_Shape VContinuity, Standard_Real Tolerance, ) */
 	GeomConvert_CompBezierSurfacesToBSplineSurface(Macad::Occt::GeomConvert_CompBezierSurfacesToBSplineSurface^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of knots in the U direction
 	/// of the BSpline surface whose data is computed in this framework.
 	/// </summary>
-	int NbUKnots();
-	/// <summary>
+int NbUKnots();
+		/// <summary>
 	/// Returns number of poles in the U direction
 	/// of the BSpline surface whose data is computed in this framework.
 	/// </summary>
-	int NbUPoles();
-	/// <summary>
+int NbUPoles();
+		/// <summary>
 	/// Returns the number of knots in the V direction
 	/// of the BSpline surface whose data is computed in this framework.
 	/// </summary>
-	int NbVKnots();
-	/// <summary>
+int NbVKnots();
+		/// <summary>
 	/// Returns the number of poles in the V direction
 	/// of the BSpline surface whose data is computed in this framework.
 	/// </summary>
-	int NbVPoles();
-	/// <summary>
+int NbVPoles();
+		/// <summary>
 	/// Returns the table of poles of the BSpline surface
 	/// whose data is computed in this framework.
 	/// </summary>
-	Macad::Occt::TColgp_HArray2OfPnt^ Poles();
-	/// <summary>
+Macad::Occt::TColgp_HArray2OfPnt^ Poles();
+		/// <summary>
 	/// Returns the knots table for the u parametric
 	/// direction of the BSpline surface whose data is computed in this framework.
 	/// </summary>
-	Macad::Occt::TColStd_HArray1OfReal^ UKnots();
-	/// <summary>
+Macad::Occt::TColStd_HArray1OfReal^ UKnots();
+		/// <summary>
 	/// Returns the degree for the u  parametric
 	/// direction of the BSpline surface whose data is computed in this framework.
 	/// </summary>
-	int UDegree();
-	/// <summary>
+int UDegree();
+		/// <summary>
 	/// Returns the knots table for the v parametric
 	/// direction of the BSpline surface whose data is computed in this framework.
 	/// </summary>
-	Macad::Occt::TColStd_HArray1OfReal^ VKnots();
-	/// <summary>
+Macad::Occt::TColStd_HArray1OfReal^ VKnots();
+		/// <summary>
 	/// Returns the degree for the v  parametric
 	/// direction of the BSpline surface whose data is computed in this framework.
 	/// </summary>
-	int VDegree();
-	/// <summary>
+int VDegree();
+		/// <summary>
 	/// Returns the multiplicities table for the u
 	/// parametric direction of the knots of the BSpline
 	/// surface whose data is computed in this framework.
 	/// </summary>
-	Macad::Occt::TColStd_HArray1OfInteger^ UMultiplicities();
-	/// <summary>
+Macad::Occt::TColStd_HArray1OfInteger^ UMultiplicities();
+		/// <summary>
 	/// -- Returns the multiplicities table for the v
 	/// parametric direction of the knots of the BSpline
 	/// surface whose data is computed in this framework.
 	/// </summary>
-	Macad::Occt::TColStd_HArray1OfInteger^ VMultiplicities();
-	/// <summary>
+Macad::Occt::TColStd_HArray1OfInteger^ VMultiplicities();
+		/// <summary>
 	/// Returns true if the conversion was successful.
 	/// Unless an exception was raised at the time of
 	/// construction, the conversion of the Bezier surface
@@ -1829,7 +1310,7 @@ public:
 	/// of the surface. In such a case the computed data
 	/// does not satisfy all the initial constraints.
 	/// </summary>
-	bool IsDone();
+bool IsDone();
 }; // class GeomConvert_CompBezierSurfacesToBSplineSurface
 
 //---------------------------------------------------------------------
@@ -1864,23 +1345,23 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initialize the algorithme
 	/// - Parameterisation is used to convert
 	/// </summary>
-	GeomConvert_CompCurveToBSplineCurve(Macad::Occt::Convert_ParameterisationType Parameterisation);
-	/// <summary>
+GeomConvert_CompCurveToBSplineCurve(Macad::Occt::Convert_ParameterisationType Parameterisation);
+		/// <summary>
 	/// Initialize the algorithme with one curve
 	/// - Parameterisation is used to convert
 	/// </summary>
-	GeomConvert_CompCurveToBSplineCurve(Macad::Occt::Geom_BoundedCurve^ BasisCurve, Macad::Occt::Convert_ParameterisationType Parameterisation);
-	/// <summary>
+GeomConvert_CompCurveToBSplineCurve(Macad::Occt::Geom_BoundedCurve^ BasisCurve, Macad::Occt::Convert_ParameterisationType Parameterisation);
+		/// <summary>
 	/// Initialize the algorithme with one curve
 	/// - Parameterisation is used to convert
 	/// </summary>
-	GeomConvert_CompCurveToBSplineCurve(Macad::Occt::Geom_BoundedCurve^ BasisCurve);
+GeomConvert_CompCurveToBSplineCurve(Macad::Occt::Geom_BoundedCurve^ BasisCurve);
 	GeomConvert_CompCurveToBSplineCurve(Macad::Occt::GeomConvert_CompCurveToBSplineCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Append a curve in  the BSpline Return False if the
 	/// curve is not G0  with the BSplineCurve.  Tolerance
 	/// is   used to   check   continuity  and decrease
@@ -1892,8 +1373,8 @@ public:
 	/// decrease the speed of algorithms like CPnts_AbscissaPoint::AdvPerform
 	/// when applied to the resulting curve.
 	/// </summary>
-	bool Add(Macad::Occt::Geom_BoundedCurve^ NewCurve, double Tolerance, bool After, bool WithRatio, int MinM);
-	/// <summary>
+bool Add(Macad::Occt::Geom_BoundedCurve^ NewCurve, double Tolerance, bool After, bool WithRatio, int MinM);
+		/// <summary>
 	/// Append a curve in  the BSpline Return False if the
 	/// curve is not G0  with the BSplineCurve.  Tolerance
 	/// is   used to   check   continuity  and decrease
@@ -1905,8 +1386,8 @@ public:
 	/// decrease the speed of algorithms like CPnts_AbscissaPoint::AdvPerform
 	/// when applied to the resulting curve.
 	/// </summary>
-	bool Add(Macad::Occt::Geom_BoundedCurve^ NewCurve, double Tolerance, bool After, bool WithRatio);
-	/// <summary>
+bool Add(Macad::Occt::Geom_BoundedCurve^ NewCurve, double Tolerance, bool After, bool WithRatio);
+		/// <summary>
 	/// Append a curve in  the BSpline Return False if the
 	/// curve is not G0  with the BSplineCurve.  Tolerance
 	/// is   used to   check   continuity  and decrease
@@ -1918,8 +1399,8 @@ public:
 	/// decrease the speed of algorithms like CPnts_AbscissaPoint::AdvPerform
 	/// when applied to the resulting curve.
 	/// </summary>
-	bool Add(Macad::Occt::Geom_BoundedCurve^ NewCurve, double Tolerance, bool After);
-	/// <summary>
+bool Add(Macad::Occt::Geom_BoundedCurve^ NewCurve, double Tolerance, bool After);
+		/// <summary>
 	/// Append a curve in  the BSpline Return False if the
 	/// curve is not G0  with the BSplineCurve.  Tolerance
 	/// is   used to   check   continuity  and decrease
@@ -1931,12 +1412,12 @@ public:
 	/// decrease the speed of algorithms like CPnts_AbscissaPoint::AdvPerform
 	/// when applied to the resulting curve.
 	/// </summary>
-	bool Add(Macad::Occt::Geom_BoundedCurve^ NewCurve, double Tolerance);
+bool Add(Macad::Occt::Geom_BoundedCurve^ NewCurve, double Tolerance);
 	Macad::Occt::Geom_BSplineCurve^ BSplineCurve();
-	/// <summary>
+		/// <summary>
 	/// Clear a result curve
 	/// </summary>
-	void Clear();
+void Clear();
 }; // class GeomConvert_CompCurveToBSplineCurve
 
 //---------------------------------------------------------------------
@@ -1973,18 +1454,18 @@ public:
 public:
 	GeomConvert_Units();
 	GeomConvert_Units(Macad::Occt::GeomConvert_Units^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Convert 2d curve for change angle unit from radian to degree
 	/// </summary>
-	static Macad::Occt::Geom2d_Curve^ RadianToDegree(Macad::Occt::Geom2d_Curve^ theCurve, Macad::Occt::Geom_Surface^ theSurface, double theLengthFactor, double theFactorRadianDegree);
-	/// <summary>
+static Macad::Occt::Geom2d_Curve^ RadianToDegree(Macad::Occt::Geom2d_Curve^ theCurve, Macad::Occt::Geom_Surface^ theSurface, double theLengthFactor, double theFactorRadianDegree);
+		/// <summary>
 	/// Convert 2d curve for change angle unit from degree to radian
 	/// </summary>
-	static Macad::Occt::Geom2d_Curve^ DegreeToRadian(Macad::Occt::Geom2d_Curve^ theCurve, Macad::Occt::Geom_Surface^ theSurface, double theLengthFactor, double theFactorRadianDegree);
-	/// <summary>
+static Macad::Occt::Geom2d_Curve^ DegreeToRadian(Macad::Occt::Geom2d_Curve^ theCurve, Macad::Occt::Geom_Surface^ theSurface, double theLengthFactor, double theFactorRadianDegree);
+		/// <summary>
 	/// return 2d curve as 'mirror' for given
 	/// </summary>
-	static Macad::Occt::Geom2d_Curve^ MirrorPCurve(Macad::Occt::Geom2d_Curve^ theCurve);
+static Macad::Occt::Geom2d_Curve^ MirrorPCurve(Macad::Occt::Geom2d_Curve^ theCurve);
 }; // class GeomConvert_Units
 
 }; // namespace Occt

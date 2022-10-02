@@ -90,7 +90,7 @@ public:
 public:
 	GProp();
 	GProp(Macad::Occt::GProp^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// methods of package
 	/// Computes the matrix Operator, referred to as the
 	/// "Huyghens Operator" of a geometric system at the
@@ -105,7 +105,7 @@ public:
 	/// system relative to its center of mass as returned by
 	/// the function MatrixOfInertia on any GProp_GProps object.
 	/// </summary>
-	static void HOperator(Macad::Occt::Pnt G, Macad::Occt::Pnt Q, double Mass, Macad::Occt::Mat% Operator);
+static void HOperator(Macad::Occt::Pnt G, Macad::Occt::Pnt Q, double Mass, Macad::Occt::Mat% Operator);
 }; // class GProp
 
 //---------------------------------------------------------------------
@@ -157,38 +157,38 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// creates an undefined PrincipalProps.
 	/// </summary>
-	GProp_PrincipalProps();
+GProp_PrincipalProps();
 	GProp_PrincipalProps(Macad::Occt::GProp_PrincipalProps^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// returns true if the geometric system has an axis of symmetry.
 	/// For  comparing  moments  relative  tolerance  1.e-10  is  used.
 	/// Usually  it  is  enough  for  objects,  restricted  by  faces  with
 	/// analitycal  geometry.
 	/// </summary>
-	bool HasSymmetryAxis();
-	/// <summary>
+bool HasSymmetryAxis();
+		/// <summary>
 	/// returns true if the geometric system has an axis of symmetry.
 	/// aTol  is  relative  tolerance for  checking  equality  of  moments
 	/// If  aTol  ==  0,  relative  tolerance  is  ~  1.e-16  (Epsilon(I))
 	/// </summary>
-	bool HasSymmetryAxis(double aTol);
-	/// <summary>
+bool HasSymmetryAxis(double aTol);
+		/// <summary>
 	/// returns true if the geometric system has a point of symmetry.
 	/// For  comparing  moments  relative  tolerance  1.e-10  is  used.
 	/// Usually  it  is  enough  for  objects,  restricted  by  faces  with
 	/// analitycal  geometry.
 	/// </summary>
-	bool HasSymmetryPoint();
-	/// <summary>
+bool HasSymmetryPoint();
+		/// <summary>
 	/// returns true if the geometric system has a point of symmetry.
 	/// aTol  is  relative  tolerance for  checking  equality  of  moments
 	/// If  aTol  ==  0,  relative  tolerance  is  ~  1.e-16  (Epsilon(I))
 	/// </summary>
-	bool HasSymmetryPoint(double aTol);
-	/// <summary>
+bool HasSymmetryPoint(double aTol);
+		/// <summary>
 	/// Ixx, Iyy and Izz return the principal moments of inertia
 	/// in the current system.
 	/// Notes :
@@ -199,23 +199,23 @@ public:
 	/// - If the current system has a center of symmetry, Ixx,
 	/// Iyy and Izz are equal.
 	/// </summary>
-	void Moments(double% Ixx, double% Iyy, double% Izz);
-	/// <summary>
+void Moments(double% Ixx, double% Iyy, double% Izz);
+		/// <summary>
 	/// returns the first axis of inertia.
 	/// 
 	/// if the system has a point of symmetry there is an infinity of
 	/// solutions. It is not possible to defines the three axis of
 	/// inertia.
 	/// </summary>
-	Macad::Occt::Vec FirstAxisOfInertia();
-	/// <summary>
+Macad::Occt::Vec FirstAxisOfInertia();
+		/// <summary>
 	/// returns the second axis of inertia.
 	/// 
 	/// if the system has a point of symmetry or an axis of symmetry the
 	/// second and the third axis of symmetry are undefined.
 	/// </summary>
-	Macad::Occt::Vec SecondAxisOfInertia();
-	/// <summary>
+Macad::Occt::Vec SecondAxisOfInertia();
+		/// <summary>
 	/// returns the third axis of inertia.
 	/// This and the above functions return the first, second or third eigen vector of the
 	/// matrix of inertia of the current system.
@@ -242,8 +242,8 @@ public:
 	/// if the system has a point of symmetry or an axis of symmetry the
 	/// second and the third axis of symmetry are undefined.
 	/// </summary>
-	Macad::Occt::Vec ThirdAxisOfInertia();
-	/// <summary>
+Macad::Occt::Vec ThirdAxisOfInertia();
+		/// <summary>
 	/// Returns the principal radii of gyration  Rxx, Ryy
 	/// and Rzz are the radii of gyration of the current
 	/// system about its three principal axes of inertia.
@@ -253,7 +253,7 @@ public:
 	/// - If the current system has a center of symmetry,
 	/// Rxx, Ryy and Rzz are equal.
 	/// </summary>
-	void RadiusOfGyration(double% Rxx, double% Ryy, double% Rzz);
+void RadiusOfGyration(double% Rxx, double% Ryy, double% Rzz);
 }; // class GProp_PrincipalProps
 
 //---------------------------------------------------------------------
@@ -361,12 +361,12 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The origin (0, 0, 0) of the absolute cartesian coordinate system
 	/// is used to compute the global properties.
 	/// </summary>
-	GProp_GProps();
-	/// <summary>
+GProp_GProps();
+		/// <summary>
 	/// The point SystemLocation is used to compute the global properties
 	/// of the system. For more accuracy it is better to define this
 	/// point closed to the location of the system. For example it could
@@ -387,9 +387,9 @@ public:
 	/// and then use the interrogation functions available to
 	/// access the computed values.
 	/// </summary>
-	GProp_GProps(Macad::Occt::Pnt SystemLocation);
+GProp_GProps(Macad::Occt::Pnt SystemLocation);
 	GProp_GProps(Macad::Occt::GProp_GProps^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Computes the principal properties of inertia of the current system.
 	/// There is always a set of axes for which the products
 	/// of inertia of a geometric system are equal to 0; i.e. the
@@ -404,8 +404,8 @@ public:
 	/// (GProp_PrincipalProps object) which may be
 	/// queried to access the value sought.
 	/// </summary>
-	Macad::Occt::GProp_PrincipalProps^ PrincipalProperties();
-	/// <summary>
+Macad::Occt::GProp_PrincipalProps^ PrincipalProperties();
+		/// <summary>
 	/// Either
 	/// - initializes the global properties retained by this
 	/// framework from those retained by the framework Item, or
@@ -444,8 +444,8 @@ public:
 	/// Standard_DomainError if Density is less than or
 	/// equal to gp::Resolution().
 	/// </summary>
-	void Add(Macad::Occt::GProp_GProps^ Item, double Density);
-	/// <summary>
+void Add(Macad::Occt::GProp_GProps^ Item, double Density);
+		/// <summary>
 	/// Either
 	/// - initializes the global properties retained by this
 	/// framework from those retained by the framework Item, or
@@ -484,8 +484,8 @@ public:
 	/// Standard_DomainError if Density is less than or
 	/// equal to gp::Resolution().
 	/// </summary>
-	void Add(Macad::Occt::GProp_GProps^ Item);
-	/// <summary>
+void Add(Macad::Occt::GProp_GProps^ Item);
+		/// <summary>
 	/// Returns the mass of the current system.
 	/// If no density is attached to the components of the
 	/// current system the returned value corresponds to :
@@ -511,15 +511,15 @@ public:
 	/// or its volume by the given density. You must be
 	/// consistent with respect to the units used.
 	/// </summary>
-	double Mass();
-	/// <summary>
+double Mass();
+		/// <summary>
 	/// Returns the center of mass of the current system. If
 	/// the gravitational field is uniform, it is the center of gravity.
 	/// The coordinates returned for the center of mass are
 	/// expressed in the absolute Cartesian coordinate system.
 	/// </summary>
-	Macad::Occt::Pnt CentreOfMass();
-	/// <summary>
+Macad::Occt::Pnt CentreOfMass();
+		/// <summary>
 	/// returns the matrix of inertia. It is a symmetrical matrix.
 	/// The coefficients of the matrix are the quadratic moments of
 	/// inertia.
@@ -538,22 +538,22 @@ public:
 	/// inertia at another location point using the Huyghens theorem
 	/// (you can use the method of package GProp : HOperator).
 	/// </summary>
-	Macad::Occt::Mat MatrixOfInertia();
-	/// <summary>
+Macad::Occt::Mat MatrixOfInertia();
+		/// <summary>
 	/// Returns Ix, Iy, Iz, the static moments of inertia of the
 	/// current system; i.e. the moments of inertia about the
 	/// three axes of the Cartesian coordinate system.
 	/// </summary>
-	void StaticMoments(double% Ix, double% Iy, double% Iz);
-	/// <summary>
+void StaticMoments(double% Ix, double% Iy, double% Iz);
+		/// <summary>
 	/// computes the moment of inertia of the material system about the
 	/// axis A.
 	/// </summary>
-	double MomentOfInertia(Macad::Occt::Ax1 A);
-	/// <summary>
+double MomentOfInertia(Macad::Occt::Ax1 A);
+		/// <summary>
 	/// Returns the radius of gyration of the current system about the axis A.
 	/// </summary>
-	double RadiusOfGyration(Macad::Occt::Ax1 A);
+double RadiusOfGyration(Macad::Occt::Ax1 A);
 }; // class GProp_GProps
 
 //---------------------------------------------------------------------
@@ -638,7 +638,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a framework to analyze the
 	/// collection of points Pnts and computes:
 	/// -   the mean point if the points in question are
@@ -653,35 +653,35 @@ public:
 	/// -   the function Point, Line, Plane or Box to
 	/// access the computed result.
 	/// </summary>
-	GProp_PEquation(Macad::Occt::TColgp_Array1OfPnt^ Pnts, double Tol);
+GProp_PEquation(Macad::Occt::TColgp_Array1OfPnt^ Pnts, double Tol);
 	GProp_PEquation(Macad::Occt::GProp_PEquation^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns true if, according to the given
 	/// tolerance, the points analyzed by this framework are  coplanar.
 	/// Use the function  Plane  to access the computed result.
 	/// </summary>
-	bool IsPlanar();
-	/// <summary>
+bool IsPlanar();
+		/// <summary>
 	/// Returns true if, according to the given
 	/// tolerance, the points analyzed by this framework are  colinear.
 	/// Use the function  Line  to access the computed result.
 	/// </summary>
-	bool IsLinear();
-	/// <summary>
+bool IsLinear();
+		/// <summary>
 	/// Returns true if, according to the given
 	/// tolerance, the points analyzed by this framework are  coincident.
 	/// Use the function  Point  to access the computed result.
 	/// </summary>
-	bool IsPoint();
-	/// <summary>
+bool IsPoint();
+		/// <summary>
 	/// Returns true if, according to the given
 	/// tolerance value, the points analyzed by this
 	/// framework are neither coincident, nor collinear, nor coplanar.
 	/// Use the function Box to query the smallest box
 	/// that includes the collection of points.
 	/// </summary>
-	bool IsSpace();
-	/// <summary>
+bool IsSpace();
+		/// <summary>
 	/// Returns the mean plane passing near all the
 	/// points analyzed by this framework if, according
 	/// to the given precision, the points are considered to be coplanar.
@@ -693,8 +693,8 @@ public:
 	/// -   collinear, or
 	/// -   not coplanar.
 	/// </summary>
-	Macad::Occt::Pln Plane();
-	/// <summary>
+Macad::Occt::Pln Plane();
+		/// <summary>
 	/// Returns the mean line passing near all the
 	/// points analyzed by this framework if, according
 	/// to the given precision value, the points are considered to be collinear.
@@ -705,8 +705,8 @@ public:
 	/// -   coincident, or
 	/// -   not collinear.
 	/// </summary>
-	Macad::Occt::gp_Lin^ Line();
-	/// <summary>
+Macad::Occt::gp_Lin^ Line();
+		/// <summary>
 	/// Returns the mean point of all the points
 	/// analyzed by this framework if, according to the
 	/// given precision, the points are considered to be coincident.
@@ -715,8 +715,8 @@ public:
 	/// given precision, the points analyzed by this
 	/// framework are not considered to be coincident.
 	/// </summary>
-	Macad::Occt::Pnt Point();
-	/// <summary>
+Macad::Occt::Pnt Point();
+		/// <summary>
 	/// Returns the definition of the smallest box which
 	/// contains all the points analyzed by this
 	/// framework if, according to the given precision
@@ -733,7 +733,7 @@ public:
 	/// Standard_NoSuchObject if, according to the given precision,
 	/// the points analyzed by this framework are considered to be coincident, collinear or coplanar.
 	/// </summary>
-	void Box(Macad::Occt::Pnt% P, Macad::Occt::Vec% V1, Macad::Occt::Vec% V2, Macad::Occt::Vec% V3);
+void Box(Macad::Occt::Pnt% P, Macad::Occt::Vec% V1, Macad::Occt::Vec% V2, Macad::Occt::Vec% V3);
 }; // class GProp_PEquation
 
 //---------------------------------------------------------------------
@@ -786,7 +786,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initializes a framework to compute global properties
 	/// on a set of points.
 	/// The point relative to which the inertia of the system is
@@ -804,18 +804,18 @@ public:
 	/// system's global properties. Note that the current
 	/// system may be more complex than a set of points.
 	/// </summary>
-	GProp_PGProps();
-	/// <summary>
+GProp_PGProps();
+		/// <summary>
 	/// computes the global properties of the system of points Pnts.
 	/// The density of the points are defaulted to all being 1
 	/// </summary>
-	GProp_PGProps(Macad::Occt::TColgp_Array1OfPnt^ Pnts);
-	/// <summary>
+GProp_PGProps(Macad::Occt::TColgp_Array1OfPnt^ Pnts);
+		/// <summary>
 	/// computes the global properties of the system of points Pnts.
 	/// The density of the points are defaulted to all being 1
 	/// </summary>
-	GProp_PGProps(Macad::Occt::TColgp_Array2OfPnt^ Pnts);
-	/// <summary>
+GProp_PGProps(Macad::Occt::TColgp_Array2OfPnt^ Pnts);
+		/// <summary>
 	/// computes the global properties of the system of points Pnts.
 	/// A density is associated with each point.
 	/// 
@@ -825,8 +825,8 @@ public:
 	/// raises if the length of Pnts and the length of Density
 	/// is not the same.
 	/// </summary>
-	GProp_PGProps(Macad::Occt::TColgp_Array1OfPnt^ Pnts, Macad::Occt::TColStd_Array1OfReal^ Density);
-	/// <summary>
+GProp_PGProps(Macad::Occt::TColgp_Array1OfPnt^ Pnts, Macad::Occt::TColStd_Array1OfReal^ Density);
+		/// <summary>
 	/// computes the global properties of the system of points Pnts.
 	/// A density is associated with each point.
 	/// 
@@ -836,34 +836,34 @@ public:
 	/// Raised if the length of Pnts and the length of Density
 	/// is not the same.
 	/// </summary>
-	GProp_PGProps(Macad::Occt::TColgp_Array2OfPnt^ Pnts, Macad::Occt::TColStd_Array2OfReal^ Density);
+GProp_PGProps(Macad::Occt::TColgp_Array2OfPnt^ Pnts, Macad::Occt::TColStd_Array2OfReal^ Density);
 	GProp_PGProps(Macad::Occt::GProp_PGProps^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Brings together the global properties already
 	/// retained by this framework with those induced by
 	/// the point Pnt. Pnt may be the first point of the current system.
 	/// A point mass is attached to the point Pnt, it is either
 	/// equal to 1. or to Density.
 	/// </summary>
-	void AddPoint(Macad::Occt::Pnt P);
-	/// <summary>
+void AddPoint(Macad::Occt::Pnt P);
+		/// <summary>
 	/// Adds a new point P with its density in the system of points
 	/// Exceptions
 	/// Standard_DomainError if the mass value Density
 	/// is less than gp::Resolution().
 	/// </summary>
-	void AddPoint(Macad::Occt::Pnt P, double Density);
-	/// <summary>
+void AddPoint(Macad::Occt::Pnt P, double Density);
+		/// <summary>
 	/// Computes the barycentre of a set of points. The density of the
 	/// points is defaulted to 1.
 	/// </summary>
-	static Macad::Occt::Pnt Barycentre(Macad::Occt::TColgp_Array1OfPnt^ Pnts);
-	/// <summary>
+static Macad::Occt::Pnt Barycentre(Macad::Occt::TColgp_Array1OfPnt^ Pnts);
+		/// <summary>
 	/// Computes the barycentre of a set of points. The density of the
 	/// points is defaulted to 1.
 	/// </summary>
-	static Macad::Occt::Pnt Barycentre(Macad::Occt::TColgp_Array2OfPnt^ Pnts);
-	/// <summary>
+static Macad::Occt::Pnt Barycentre(Macad::Occt::TColgp_Array2OfPnt^ Pnts);
+		/// <summary>
 	/// Computes the barycentre of a set of points. A density is associated
 	/// with each point.
 	/// 
@@ -873,8 +873,8 @@ public:
 	/// Raised if the length of Pnts and the length of Density
 	/// is not the same.
 	/// </summary>
-	static void Barycentre(Macad::Occt::TColgp_Array1OfPnt^ Pnts, Macad::Occt::TColStd_Array1OfReal^ Density, double% Mass, Macad::Occt::Pnt% G);
-	/// <summary>
+static void Barycentre(Macad::Occt::TColgp_Array1OfPnt^ Pnts, Macad::Occt::TColStd_Array1OfReal^ Density, double% Mass, Macad::Occt::Pnt% G);
+		/// <summary>
 	/// Computes the barycentre of a set of points. A density is associated
 	/// with each point.
 	/// 
@@ -884,7 +884,7 @@ public:
 	/// Raised if the length of Pnts and the length of Density
 	/// is not the same.
 	/// </summary>
-	static void Barycentre(Macad::Occt::TColgp_Array2OfPnt^ Pnts, Macad::Occt::TColStd_Array2OfReal^ Density, double% Mass, Macad::Occt::Pnt% G);
+static void Barycentre(Macad::Occt::TColgp_Array2OfPnt^ Pnts, Macad::Occt::TColStd_Array2OfReal^ Density, double% Mass, Macad::Occt::Pnt% G);
 }; // class GProp_PGProps
 
 //---------------------------------------------------------------------

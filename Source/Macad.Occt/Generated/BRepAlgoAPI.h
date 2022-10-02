@@ -115,63 +115,60 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BRepAlgoAPI_BuilderAlgo();
-	/// <summary>
-	/// Constructor with prepared Filler object
-	/// </summary>
+BRepAlgoAPI_BuilderAlgo();
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_BuilderAlgo(BOPAlgo_PaveFiller thePF, ) */
 	BRepAlgoAPI_BuilderAlgo(Macad::Occt::BRepAlgoAPI_BuilderAlgo^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the arguments
 	/// </summary>
-	void SetArguments(Macad::Occt::TopTools_ListOfShape^ theLS);
-	/// <summary>
+void SetArguments(Macad::Occt::TopTools_ListOfShape^ theLS);
+		/// <summary>
 	/// Gets the arguments
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Arguments();
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Arguments();
+		/// <summary>
 	/// Sets the flag that defines the mode of treatment.
 	/// In non-destructive mode the argument shapes are not modified. Instead
 	/// a copy of a sub-shape is created in the result if it is needed to be updated.
 	/// </summary>
-	void SetNonDestructive(bool theFlag);
-	/// <summary>
+void SetNonDestructive(bool theFlag);
+		/// <summary>
 	/// Returns the flag that defines the mode of treatment.
 	/// In non-destructive mode the argument shapes are not modified. Instead
 	/// a copy of a sub-shape is created in the result if it is needed to be updated.
 	/// </summary>
-	bool NonDestructive();
-	/// <summary>
+bool NonDestructive();
+		/// <summary>
 	/// Sets the glue option for the algorithm,
 	/// which allows increasing performance of the intersection
 	/// of the input shapes.
 	/// </summary>
-	void SetGlue(Macad::Occt::BOPAlgo_GlueEnum theGlue);
-	/// <summary>
+void SetGlue(Macad::Occt::BOPAlgo_GlueEnum theGlue);
+		/// <summary>
 	/// Returns the glue option of the algorithm
 	/// </summary>
-	Macad::Occt::BOPAlgo_GlueEnum Glue();
-	/// <summary>
+Macad::Occt::BOPAlgo_GlueEnum Glue();
+		/// <summary>
 	/// Enables/Disables the check of the input solids for inverted status
 	/// </summary>
-	void SetCheckInverted(bool theCheck);
-	/// <summary>
+void SetCheckInverted(bool theCheck);
+		/// <summary>
 	/// Returns the flag defining whether the check for input solids on inverted status
 	/// should be performed or not.
 	/// </summary>
-	bool CheckInverted();
-	/// <summary>
+bool CheckInverted();
+		/// <summary>
 	/// Performs the algorithm
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Performs the algorithm
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Simplification of the result shape is performed by the means of
 	/// *ShapeUpgrade_UnifySameDomain* algorithm. The result of the operation will
 	/// be overwritten with the simplified result.
@@ -202,8 +199,8 @@ public:
 	/// Angular criteria for tangency of edges and faces.
 	/// Precision::Angular() by default.
 	/// </param>
-	void SimplifyResult(bool theUnifyEdges, bool theUnifyFaces, double theAngularTol);
-	/// <summary>
+void SimplifyResult(bool theUnifyEdges, bool theUnifyFaces, double theAngularTol);
+		/// <summary>
 	/// Simplification of the result shape is performed by the means of
 	/// *ShapeUpgrade_UnifySameDomain* algorithm. The result of the operation will
 	/// be overwritten with the simplified result.
@@ -234,8 +231,8 @@ public:
 	/// Angular criteria for tangency of edges and faces.
 	/// Precision::Angular() by default.
 	/// </param>
-	void SimplifyResult(bool theUnifyEdges, bool theUnifyFaces);
-	/// <summary>
+void SimplifyResult(bool theUnifyEdges, bool theUnifyFaces);
+		/// <summary>
 	/// Simplification of the result shape is performed by the means of
 	/// *ShapeUpgrade_UnifySameDomain* algorithm. The result of the operation will
 	/// be overwritten with the simplified result.
@@ -266,8 +263,8 @@ public:
 	/// Angular criteria for tangency of edges and faces.
 	/// Precision::Angular() by default.
 	/// </param>
-	void SimplifyResult(bool theUnifyEdges);
-	/// <summary>
+void SimplifyResult(bool theUnifyEdges);
+		/// <summary>
 	/// Simplification of the result shape is performed by the means of
 	/// *ShapeUpgrade_UnifySameDomain* algorithm. The result of the operation will
 	/// be overwritten with the simplified result.
@@ -298,14 +295,14 @@ public:
 	/// Angular criteria for tangency of edges and faces.
 	/// Precision::Angular() by default.
 	/// </param>
-	void SimplifyResult();
-	/// <summary>
+void SimplifyResult();
+		/// <summary>
 	/// Returns the shapes modified from the shape <theS>.
 	/// If any, the list will contain only those splits of the
 	/// given shape, contained in the result.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns the list  of shapes generated from the shape <theS>.
 	/// In frames of Boolean Operations algorithms only Edges and Faces
 	/// could have Generated elements, as only they produce new elements
@@ -313,48 +310,45 @@ public:
 	/// - Edges can generate new vertices;
 	/// - Faces can generate new edges and vertices.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Checks if the shape <theS> has been completely removed from the result,
 	/// i.e. the result does not contain the shape itself and any of its splits.
 	/// Returns TRUE if the shape has been deleted.
 	/// </summary>
-	bool IsDeleted(Macad::Occt::TopoDS_Shape^ aS);
-	/// <summary>
+bool IsDeleted(Macad::Occt::TopoDS_Shape^ aS);
+		/// <summary>
 	/// Returns true if any of the input shapes has been modified during operation.
 	/// </summary>
-	bool HasModified();
-	/// <summary>
+bool HasModified();
+		/// <summary>
 	/// Returns true if any of the input shapes has generated shapes during operation.
 	/// </summary>
-	bool HasGenerated();
-	/// <summary>
+bool HasGenerated();
+		/// <summary>
 	/// Returns true if any of the input shapes has been deleted during operation.
 	/// Normally, General Fuse operation should not have Deleted elements,
 	/// but all derived operation can have.
 	/// </summary>
-	bool HasDeleted();
-	/// <summary>
+bool HasDeleted();
+		/// <summary>
 	/// Allows disabling the history collection
 	/// </summary>
-	void SetToFillHistory(bool theHistFlag);
-	/// <summary>
+void SetToFillHistory(bool theHistFlag);
+		/// <summary>
 	/// Returns flag of history availability
 	/// </summary>
-	bool HasHistory();
-	/// <summary>
+bool HasHistory();
+		/// <summary>
 	/// Returns a list of section edges.
 	/// The edges represent the result of intersection between arguments of operation.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ SectionEdges();
-	/// <summary>
-	/// Returns the Intersection tool
-	/// </summary>
+Macad::Occt::TopTools_ListOfShape^ SectionEdges();
 	/* Method skipped due to unknown mapping: BOPAlgo_PaveFiller DSFiller() */
-	/// <summary>
+		/// <summary>
 	/// History tool
 	/// </summary>
-	Macad::Occt::BRepTools_History^ History();
+Macad::Occt::BRepTools_History^ History();
 }; // class BRepAlgoAPI_BuilderAlgo
 
 //---------------------------------------------------------------------
@@ -415,49 +409,46 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BRepAlgoAPI_BooleanOperation();
-	/// <summary>
-	/// Constructor with precomputed intersections of arguments.
-	/// </summary>
+BRepAlgoAPI_BooleanOperation();
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_BooleanOperation(BOPAlgo_PaveFiller thePF, ) */
 	BRepAlgoAPI_BooleanOperation(Macad::Occt::BRepAlgoAPI_BooleanOperation^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the first argument involved in this Boolean operation.
 	/// Obsolete
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Shape1();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Shape1();
+		/// <summary>
 	/// Returns the second argument involved in this Boolean operation.
 	/// Obsolete
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Shape2();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Shape2();
+		/// <summary>
 	/// Sets the Tool arguments
 	/// </summary>
-	void SetTools(Macad::Occt::TopTools_ListOfShape^ theLS);
-	/// <summary>
+void SetTools(Macad::Occt::TopTools_ListOfShape^ theLS);
+		/// <summary>
 	/// Returns the Tools arguments
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Tools();
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Tools();
+		/// <summary>
 	/// Sets the type of Boolean operation
 	/// </summary>
-	void SetOperation(Macad::Occt::BOPAlgo_Operation theBOP);
-	/// <summary>
+void SetOperation(Macad::Occt::BOPAlgo_Operation theBOP);
+		/// <summary>
 	/// Returns the type of Boolean Operation
 	/// </summary>
-	Macad::Occt::BOPAlgo_Operation Operation();
-	/// <summary>
+Macad::Occt::BOPAlgo_Operation Operation();
+		/// <summary>
 	/// Performs the Boolean operation.
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Performs the Boolean operation.
 	/// </summary>
-	void Build();
+void Build();
 }; // class BRepAlgoAPI_BooleanOperation
 
 //---------------------------------------------------------------------
@@ -509,11 +500,11 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	BRepAlgoAPI_Check();
-	/// <summary>
+BRepAlgoAPI_Check();
+		/// <summary>
 	/// Constructor for checking single shape.
 	/// 
 	/// </summary>
@@ -531,8 +522,8 @@ public:
 	/// <param name="theRange">
 	/// [in] - parameter to use progress indicator
 	/// </param>
-	BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS, bool bTestSE, bool bTestSI, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS, bool bTestSE, bool bTestSI, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Constructor for checking single shape.
 	/// 
 	/// </summary>
@@ -550,8 +541,8 @@ public:
 	/// <param name="theRange">
 	/// [in] - parameter to use progress indicator
 	/// </param>
-	BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS, bool bTestSE, bool bTestSI);
-	/// <summary>
+BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS, bool bTestSE, bool bTestSI);
+		/// <summary>
 	/// Constructor for checking single shape.
 	/// 
 	/// </summary>
@@ -569,8 +560,8 @@ public:
 	/// <param name="theRange">
 	/// [in] - parameter to use progress indicator
 	/// </param>
-	BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS, bool bTestSE);
-	/// <summary>
+BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS, bool bTestSE);
+		/// <summary>
 	/// Constructor for checking single shape.
 	/// 
 	/// </summary>
@@ -588,8 +579,8 @@ public:
 	/// <param name="theRange">
 	/// [in] - parameter to use progress indicator
 	/// </param>
-	BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Constructor for checking the couple of shapes.
 	/// Additionally to the validity checks of each given shape,
 	/// the types of the given shapes will be checked on validity
@@ -617,8 +608,8 @@ public:
 	/// <param name="theRange">
 	/// [in] - parameter to use progress indicator
 	/// </param>
-	BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp, bool bTestSE, bool bTestSI, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp, bool bTestSE, bool bTestSI, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Constructor for checking the couple of shapes.
 	/// Additionally to the validity checks of each given shape,
 	/// the types of the given shapes will be checked on validity
@@ -646,8 +637,8 @@ public:
 	/// <param name="theRange">
 	/// [in] - parameter to use progress indicator
 	/// </param>
-	BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp, bool bTestSE, bool bTestSI);
-	/// <summary>
+BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp, bool bTestSE, bool bTestSI);
+		/// <summary>
 	/// Constructor for checking the couple of shapes.
 	/// Additionally to the validity checks of each given shape,
 	/// the types of the given shapes will be checked on validity
@@ -675,8 +666,8 @@ public:
 	/// <param name="theRange">
 	/// [in] - parameter to use progress indicator
 	/// </param>
-	BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp, bool bTestSE);
-	/// <summary>
+BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp, bool bTestSE);
+		/// <summary>
 	/// Constructor for checking the couple of shapes.
 	/// Additionally to the validity checks of each given shape,
 	/// the types of the given shapes will be checked on validity
@@ -704,8 +695,8 @@ public:
 	/// <param name="theRange">
 	/// [in] - parameter to use progress indicator
 	/// </param>
-	BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp);
-	/// <summary>
+BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp);
+		/// <summary>
 	/// Constructor for checking the couple of shapes.
 	/// Additionally to the validity checks of each given shape,
 	/// the types of the given shapes will be checked on validity
@@ -733,9 +724,9 @@ public:
 	/// <param name="theRange">
 	/// [in] - parameter to use progress indicator
 	/// </param>
-	BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2);
+BRepAlgoAPI_Check(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2);
 	BRepAlgoAPI_Check(Macad::Occt::BRepAlgoAPI_Check^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes the algorithm with single shape.
 	/// 
 	/// </summary>
@@ -750,8 +741,8 @@ public:
 	/// [in] - flag which specifies whether to check the shape
 	/// on self-interference or not; by default it is set to TRUE;
 	/// </param>
-	void SetData(Macad::Occt::TopoDS_Shape^ theS, bool bTestSE, bool bTestSI);
-	/// <summary>
+void SetData(Macad::Occt::TopoDS_Shape^ theS, bool bTestSE, bool bTestSI);
+		/// <summary>
 	/// Initializes the algorithm with single shape.
 	/// 
 	/// </summary>
@@ -766,8 +757,8 @@ public:
 	/// [in] - flag which specifies whether to check the shape
 	/// on self-interference or not; by default it is set to TRUE;
 	/// </param>
-	void SetData(Macad::Occt::TopoDS_Shape^ theS, bool bTestSE);
-	/// <summary>
+void SetData(Macad::Occt::TopoDS_Shape^ theS, bool bTestSE);
+		/// <summary>
 	/// Initializes the algorithm with single shape.
 	/// 
 	/// </summary>
@@ -782,8 +773,8 @@ public:
 	/// [in] - flag which specifies whether to check the shape
 	/// on self-interference or not; by default it is set to TRUE;
 	/// </param>
-	void SetData(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+void SetData(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Initializes the algorithm with couple of shapes.
 	/// Additionally to the validity checks of each given shape,
 	/// the types of the given shapes will be checked on validity
@@ -808,8 +799,8 @@ public:
 	/// [in] - flag which specifies whether to check the shape
 	/// on self-interference or not; by default it is set to TRUE;
 	/// </param>
-	void SetData(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp, bool bTestSE, bool bTestSI);
-	/// <summary>
+void SetData(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp, bool bTestSE, bool bTestSI);
+		/// <summary>
 	/// Initializes the algorithm with couple of shapes.
 	/// Additionally to the validity checks of each given shape,
 	/// the types of the given shapes will be checked on validity
@@ -834,8 +825,8 @@ public:
 	/// [in] - flag which specifies whether to check the shape
 	/// on self-interference or not; by default it is set to TRUE;
 	/// </param>
-	void SetData(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp, bool bTestSE);
-	/// <summary>
+void SetData(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp, bool bTestSE);
+		/// <summary>
 	/// Initializes the algorithm with couple of shapes.
 	/// Additionally to the validity checks of each given shape,
 	/// the types of the given shapes will be checked on validity
@@ -860,8 +851,8 @@ public:
 	/// [in] - flag which specifies whether to check the shape
 	/// on self-interference or not; by default it is set to TRUE;
 	/// </param>
-	void SetData(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp);
-	/// <summary>
+void SetData(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2, Macad::Occt::BOPAlgo_Operation theOp);
+		/// <summary>
 	/// Initializes the algorithm with couple of shapes.
 	/// Additionally to the validity checks of each given shape,
 	/// the types of the given shapes will be checked on validity
@@ -886,22 +877,19 @@ public:
 	/// [in] - flag which specifies whether to check the shape
 	/// on self-interference or not; by default it is set to TRUE;
 	/// </param>
-	void SetData(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2);
-	/// <summary>
+void SetData(Macad::Occt::TopoDS_Shape^ theS1, Macad::Occt::TopoDS_Shape^ theS2);
+		/// <summary>
 	/// Performs the check.
 	/// </summary>
-	void Perform(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Perform(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Performs the check.
 	/// </summary>
-	void Perform();
-	/// <summary>
+void Perform();
+		/// <summary>
 	/// Shows whether shape(s) valid or not.
 	/// </summary>
-	bool IsValid();
-	/// <summary>
-	/// Returns faulty shapes.
-	/// </summary>
+bool IsValid();
 	/* Method skipped due to unknown mapping: BOPAlgo_ListOfCheckResult Result() */
 }; // class BRepAlgoAPI_Check
 
@@ -938,48 +926,28 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BRepAlgoAPI_Common();
-	/// <summary>
-	/// Empty constructor
-	/// <PF> - PaveFiller object that is carried out
-	/// </summary>
+BRepAlgoAPI_Common();
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Common(BOPAlgo_PaveFiller PF, ) */
-	/// <summary>
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  -argument
 	/// <S2>  -tool
 	/// <anOperation> - the type of the operation
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Common(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+BRepAlgoAPI_Common(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  -argument
 	/// <S2>  -tool
 	/// <anOperation> - the type of the operation
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Common(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2);
-	/// <summary>
-	/// Constructor with two shapes
-	/// <S1>  -argument
-	/// <S2>  -tool
-	/// <anOperation> - the type of the operation
-	/// <PF> - PaveFiller object that is carried out
-	/// Obsolete
-	/// </summary>
+BRepAlgoAPI_Common(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2);
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Common(TopoDS_Shape S1, TopoDS_Shape S2, BOPAlgo_PaveFiller PF, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Constructor with two shapes
-	/// <S1>  -argument
-	/// <S2>  -tool
-	/// <anOperation> - the type of the operation
-	/// <PF> - PaveFiller object that is carried out
-	/// Obsolete
-	/// </summary>
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Common(TopoDS_Shape S1, TopoDS_Shape S2, BOPAlgo_PaveFiller PF, Message_ProgressRange theRange, ) */
 	BRepAlgoAPI_Common(Macad::Occt::BRepAlgoAPI_Common^ parameter1);
 }; // class BRepAlgoAPI_Common
@@ -1017,57 +985,29 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BRepAlgoAPI_Cut();
-	/// <summary>
-	/// Empty constructor
-	/// <PF> - PaveFiller object that is carried out
-	/// </summary>
+BRepAlgoAPI_Cut();
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Cut(BOPAlgo_PaveFiller PF, ) */
-	/// <summary>
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  -argument
 	/// <S2>  -tool
 	/// <anOperation> - the type of the operation
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Cut(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+BRepAlgoAPI_Cut(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  -argument
 	/// <S2>  -tool
 	/// <anOperation> - the type of the operation
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Cut(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2);
-	/// <summary>
-	/// Constructor with two shapes
-	/// <S1>  -argument
-	/// <S2>  -tool
-	/// <anOperation> - the type of the operation
-	/// <PF> - PaveFiller object that is carried out
-	/// Obsolete
-	/// </summary>
+BRepAlgoAPI_Cut(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2);
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Cut(TopoDS_Shape S1, TopoDS_Shape S2, BOPAlgo_PaveFiller aDSF, Standard_Boolean bFWD, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Constructor with two shapes
-	/// <S1>  -argument
-	/// <S2>  -tool
-	/// <anOperation> - the type of the operation
-	/// <PF> - PaveFiller object that is carried out
-	/// Obsolete
-	/// </summary>
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Cut(TopoDS_Shape S1, TopoDS_Shape S2, BOPAlgo_PaveFiller aDSF, Standard_Boolean bFWD, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Constructor with two shapes
-	/// <S1>  -argument
-	/// <S2>  -tool
-	/// <anOperation> - the type of the operation
-	/// <PF> - PaveFiller object that is carried out
-	/// Obsolete
-	/// </summary>
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Cut(TopoDS_Shape S1, TopoDS_Shape S2, BOPAlgo_PaveFiller aDSF, Standard_Boolean bFWD, Message_ProgressRange theRange, ) */
 	BRepAlgoAPI_Cut(Macad::Occt::BRepAlgoAPI_Cut^ parameter1);
 }; // class BRepAlgoAPI_Cut
@@ -1178,88 +1118,88 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BRepAlgoAPI_Defeaturing();
+BRepAlgoAPI_Defeaturing();
 	BRepAlgoAPI_Defeaturing(Macad::Occt::BRepAlgoAPI_Defeaturing^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the shape for processing.
 	/// </summary>
 	/// <param name="theShape">
 	/// [in] The shape to remove the features from.
 	/// It should either be the SOLID, COMPSOLID or COMPOUND of Solids.
 	/// </param>
-	void SetShape(Macad::Occt::TopoDS_Shape^ theShape);
-	/// <summary>
+void SetShape(Macad::Occt::TopoDS_Shape^ theShape);
+		/// <summary>
 	/// Returns the input shape
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ InputShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ InputShape();
+		/// <summary>
 	/// Adds the features to remove from the input shape.
 	/// </summary>
 	/// <param name="theFace">
 	/// [in] The shape to extract the faces for removal.
 	/// </param>
-	void AddFaceToRemove(Macad::Occt::TopoDS_Shape^ theFace);
-	/// <summary>
+void AddFaceToRemove(Macad::Occt::TopoDS_Shape^ theFace);
+		/// <summary>
 	/// Adds the faces to remove from the input shape.
 	/// </summary>
 	/// <param name="theFaces">
 	/// [in] The list of shapes to extract the faces for removal.
 	/// </param>
-	void AddFacesToRemove(Macad::Occt::TopTools_ListOfShape^ theFaces);
-	/// <summary>
+void AddFacesToRemove(Macad::Occt::TopTools_ListOfShape^ theFaces);
+		/// <summary>
 	/// Returns the list of faces which have been requested for removal
 	/// from the input shape.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ FacesToRemove();
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ FacesToRemove();
+		/// <summary>
 	/// Performs the operation
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Performs the operation
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Defines whether to track the modification of the shapes or not.
 	/// </summary>
-	void SetToFillHistory(bool theFlag);
-	/// <summary>
+void SetToFillHistory(bool theFlag);
+		/// <summary>
 	/// Returns whether the history was requested or not.
 	/// </summary>
-	bool HasHistory();
-	/// <summary>
+bool HasHistory();
+		/// <summary>
 	/// Returns the list of shapes modified from the shape <theS> during the operation.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns the list of shapes generated from the shape <theS> during the operation.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns true if the shape <theS> has been deleted during the operation.
 	/// It means that the shape has no any trace in the result.
 	/// Otherwise it returns false.
 	/// </summary>
-	bool IsDeleted(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+bool IsDeleted(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns true if any of the input shapes has been modified during operation.
 	/// </summary>
-	bool HasModified();
-	/// <summary>
+bool HasModified();
+		/// <summary>
 	/// Returns true if any of the input shapes has generated shapes during operation.
 	/// </summary>
-	bool HasGenerated();
-	/// <summary>
+bool HasGenerated();
+		/// <summary>
 	/// Returns true if any of the input shapes has been deleted during operation.
 	/// </summary>
-	bool HasDeleted();
-	/// <summary>
+bool HasDeleted();
+		/// <summary>
 	/// Returns the History of shapes modifications
 	/// </summary>
-	Macad::Occt::BRepTools_History^ History();
+Macad::Occt::BRepTools_History^ History();
 }; // class BRepAlgoAPI_Defeaturing
 
 //---------------------------------------------------------------------
@@ -1295,48 +1235,28 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BRepAlgoAPI_Fuse();
-	/// <summary>
-	/// Empty constructor
-	/// <PF> - PaveFiller object that is carried out
-	/// </summary>
+BRepAlgoAPI_Fuse();
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Fuse(BOPAlgo_PaveFiller PF, ) */
-	/// <summary>
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  -argument
 	/// <S2>  -tool
 	/// <anOperation> - the type of the operation
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Fuse(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+BRepAlgoAPI_Fuse(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  -argument
 	/// <S2>  -tool
 	/// <anOperation> - the type of the operation
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Fuse(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2);
-	/// <summary>
-	/// Constructor with two shapes
-	/// <S1>  -argument
-	/// <S2>  -tool
-	/// <anOperation> - the type of the operation
-	/// <PF> - PaveFiller object that is carried out
-	/// Obsolete
-	/// </summary>
+BRepAlgoAPI_Fuse(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2);
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Fuse(TopoDS_Shape S1, TopoDS_Shape S2, BOPAlgo_PaveFiller aDSF, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Constructor with two shapes
-	/// <S1>  -argument
-	/// <S2>  -tool
-	/// <anOperation> - the type of the operation
-	/// <PF> - PaveFiller object that is carried out
-	/// Obsolete
-	/// </summary>
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Fuse(TopoDS_Shape S1, TopoDS_Shape S2, BOPAlgo_PaveFiller aDSF, Message_ProgressRange theRange, ) */
 	BRepAlgoAPI_Fuse(Macad::Occt::BRepAlgoAPI_Fuse^ parameter1);
 }; // class BRepAlgoAPI_Fuse
@@ -1379,16 +1299,12 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BRepAlgoAPI_Section();
-	/// <summary>
-	/// Empty constructor
-	/// <PF> - PaveFiller object that is carried out
-	/// </summary>
+BRepAlgoAPI_Section();
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Section(BOPAlgo_PaveFiller PF, ) */
-	/// <summary>
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  -argument
 	/// <S2>  -tool
@@ -1396,8 +1312,8 @@ public:
 	/// if <PerformNow>=True - the algorithm is performed immediately
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2, bool PerformNow);
-	/// <summary>
+BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2, bool PerformNow);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  -argument
 	/// <S2>  -tool
@@ -1405,28 +1321,10 @@ public:
 	/// if <PerformNow>=True - the algorithm is performed immediately
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2);
-	/// <summary>
-	/// Constructor with two shapes
-	/// <S1>  -argument
-	/// <S2>  -tool
-	/// <PF> - PaveFiller object that is carried out
-	/// <PerformNow> - the flag:
-	/// if <PerformNow>=True - the algorithm is performed immediately
-	/// Obsolete
-	/// </summary>
+BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::TopoDS_Shape^ S2);
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Section(TopoDS_Shape S1, TopoDS_Shape S2, BOPAlgo_PaveFiller aDSF, Standard_Boolean PerformNow, ) */
-	/// <summary>
-	/// Constructor with two shapes
-	/// <S1>  -argument
-	/// <S2>  -tool
-	/// <PF> - PaveFiller object that is carried out
-	/// <PerformNow> - the flag:
-	/// if <PerformNow>=True - the algorithm is performed immediately
-	/// Obsolete
-	/// </summary>
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Section(TopoDS_Shape S1, TopoDS_Shape S2, BOPAlgo_PaveFiller aDSF, Standard_Boolean PerformNow, ) */
-	/// <summary>
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  - argument
 	/// <Pl>  - tool
@@ -1434,8 +1332,8 @@ public:
 	/// if <PerformNow>=True - the algorithm is performed immediately
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::Pln Pl, bool PerformNow);
-	/// <summary>
+BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::Pln Pl, bool PerformNow);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  - argument
 	/// <Pl>  - tool
@@ -1443,8 +1341,8 @@ public:
 	/// if <PerformNow>=True - the algorithm is performed immediately
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::Pln Pl);
-	/// <summary>
+BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::Pln Pl);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  - argument
 	/// <Sf>  - tool
@@ -1452,8 +1350,8 @@ public:
 	/// if <PerformNow>=True - the algorithm is performed immediately
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::Geom_Surface^ Sf, bool PerformNow);
-	/// <summary>
+BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::Geom_Surface^ Sf, bool PerformNow);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <S1>  - argument
 	/// <Sf>  - tool
@@ -1461,8 +1359,8 @@ public:
 	/// if <PerformNow>=True - the algorithm is performed immediately
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::Geom_Surface^ Sf);
-	/// <summary>
+BRepAlgoAPI_Section(Macad::Occt::TopoDS_Shape^ S1, Macad::Occt::Geom_Surface^ Sf);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <Sf>  - argument
 	/// <S2>  - tool
@@ -1470,8 +1368,8 @@ public:
 	/// if <PerformNow>=True - the algorithm is performed immediately
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Section(Macad::Occt::Geom_Surface^ Sf, Macad::Occt::TopoDS_Shape^ S2, bool PerformNow);
-	/// <summary>
+BRepAlgoAPI_Section(Macad::Occt::Geom_Surface^ Sf, Macad::Occt::TopoDS_Shape^ S2, bool PerformNow);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <Sf>  - argument
 	/// <S2>  - tool
@@ -1479,8 +1377,8 @@ public:
 	/// if <PerformNow>=True - the algorithm is performed immediately
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Section(Macad::Occt::Geom_Surface^ Sf, Macad::Occt::TopoDS_Shape^ S2);
-	/// <summary>
+BRepAlgoAPI_Section(Macad::Occt::Geom_Surface^ Sf, Macad::Occt::TopoDS_Shape^ S2);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <Sf1>  - argument
 	/// <Sf2>  - tool
@@ -1488,8 +1386,8 @@ public:
 	/// if <PerformNow>=True - the algorithm is performed immediately
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Section(Macad::Occt::Geom_Surface^ Sf1, Macad::Occt::Geom_Surface^ Sf2, bool PerformNow);
-	/// <summary>
+BRepAlgoAPI_Section(Macad::Occt::Geom_Surface^ Sf1, Macad::Occt::Geom_Surface^ Sf2, bool PerformNow);
+		/// <summary>
 	/// Constructor with two shapes
 	/// <Sf1>  - argument
 	/// <Sf2>  - tool
@@ -1497,46 +1395,46 @@ public:
 	/// if <PerformNow>=True - the algorithm is performed immediately
 	/// Obsolete
 	/// </summary>
-	BRepAlgoAPI_Section(Macad::Occt::Geom_Surface^ Sf1, Macad::Occt::Geom_Surface^ Sf2);
+BRepAlgoAPI_Section(Macad::Occt::Geom_Surface^ Sf1, Macad::Occt::Geom_Surface^ Sf2);
 	BRepAlgoAPI_Section(Macad::Occt::BRepAlgoAPI_Section^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// initialize the argument
 	/// <S1>  - argument
 	/// Obsolete
 	/// </summary>
-	void Init1(Macad::Occt::TopoDS_Shape^ S1);
-	/// <summary>
+void Init1(Macad::Occt::TopoDS_Shape^ S1);
+		/// <summary>
 	/// initialize the argument
 	/// <Pl>  - argument
 	/// Obsolete
 	/// </summary>
-	void Init1(Macad::Occt::Pln Pl);
-	/// <summary>
+void Init1(Macad::Occt::Pln Pl);
+		/// <summary>
 	/// initialize the argument
 	/// <Sf>  - argument
 	/// Obsolete
 	/// </summary>
-	void Init1(Macad::Occt::Geom_Surface^ Sf);
-	/// <summary>
+void Init1(Macad::Occt::Geom_Surface^ Sf);
+		/// <summary>
 	/// initialize the tool
 	/// <S2>  - tool
 	/// Obsolete
 	/// </summary>
-	void Init2(Macad::Occt::TopoDS_Shape^ S2);
-	/// <summary>
+void Init2(Macad::Occt::TopoDS_Shape^ S2);
+		/// <summary>
 	/// initialize the tool
 	/// <Pl>  - tool
 	/// Obsolete
 	/// </summary>
-	void Init2(Macad::Occt::Pln Pl);
-	/// <summary>
+void Init2(Macad::Occt::Pln Pl);
+		/// <summary>
 	/// initialize the tool
 	/// <Sf>  - tool
 	/// Obsolete
 	/// </summary>
-	void Init2(Macad::Occt::Geom_Surface^ Sf);
+void Init2(Macad::Occt::Geom_Surface^ Sf);
 	void Approximation(bool B);
-	/// <summary>
+		/// <summary>
 	/// Indicates whether the P-Curve should be (or not)
 	/// performed on the argument.
 	/// By default, no parametric 2D curve (pcurve) is defined for the
@@ -1546,8 +1444,8 @@ public:
 	/// to the constructed edges.
 	/// Obsolete
 	/// </summary>
-	void ComputePCurveOn1(bool B);
-	/// <summary>
+void ComputePCurveOn1(bool B);
+		/// <summary>
 	/// Indicates whether the P-Curve should be (or not)
 	/// performed on the tool.
 	/// By default, no parametric 2D curve (pcurve) is defined for the
@@ -1557,20 +1455,20 @@ public:
 	/// to the constructed edges.
 	/// Obsolete
 	/// </summary>
-	void ComputePCurveOn2(bool B);
-	/// <summary>
+void ComputePCurveOn2(bool B);
+		/// <summary>
 	/// Performs the algorithm
 	/// Filling interference Data Structure (if it is necessary)
 	/// Building the result of the operation.
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Performs the algorithm
 	/// Filling interference Data Structure (if it is necessary)
 	/// Building the result of the operation.
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// get the face of the first part giving section edge <E>.
 	/// Returns True on the 3 following conditions :
 	/// 1/ <E> is an edge returned by the Shape() metwod.
@@ -1580,8 +1478,8 @@ public:
 	/// When False, F remains untouched.
 	/// Obsolete
 	/// </summary>
-	bool HasAncestorFaceOn1(Macad::Occt::TopoDS_Shape^ E, Macad::Occt::TopoDS_Shape^ F);
-	/// <summary>
+bool HasAncestorFaceOn1(Macad::Occt::TopoDS_Shape^ E, Macad::Occt::TopoDS_Shape^ F);
+		/// <summary>
 	/// Identifies the ancestor faces of
 	/// the intersection edge E resulting from the last
 	/// computation performed in this framework, that is, the faces of
@@ -1602,7 +1500,7 @@ public:
 	/// only if the returned Boolean value equals true.
 	/// Obsolete
 	/// </summary>
-	bool HasAncestorFaceOn2(Macad::Occt::TopoDS_Shape^ E, Macad::Occt::TopoDS_Shape^ F);
+bool HasAncestorFaceOn2(Macad::Occt::TopoDS_Shape^ E, Macad::Occt::TopoDS_Shape^ F);
 }; // class BRepAlgoAPI_Section
 
 //---------------------------------------------------------------------
@@ -1662,35 +1560,32 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BRepAlgoAPI_Splitter();
-	/// <summary>
-	/// Constructor with already prepared intersection tool - PaveFiller
-	/// </summary>
+BRepAlgoAPI_Splitter();
 	/* Method skipped due to unknown mapping: void BRepAlgoAPI_Splitter(BOPAlgo_PaveFiller thePF, ) */
 	BRepAlgoAPI_Splitter(Macad::Occt::BRepAlgoAPI_Splitter^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the Tool arguments
 	/// </summary>
-	void SetTools(Macad::Occt::TopTools_ListOfShape^ theLS);
-	/// <summary>
+void SetTools(Macad::Occt::TopTools_ListOfShape^ theLS);
+		/// <summary>
 	/// Returns the Tool arguments
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Tools();
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Tools();
+		/// <summary>
 	/// Performs the Split operation.
 	/// Performs the intersection of the argument shapes (both objects and tools)
 	/// and splits objects by the tools.
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Performs the Split operation.
 	/// Performs the intersection of the argument shapes (both objects and tools)
 	/// and splits objects by the tools.
 	/// </summary>
-	void Build();
+void Build();
 }; // class BRepAlgoAPI_Splitter
 
 }; // namespace Occt

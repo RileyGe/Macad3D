@@ -61,7 +61,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Computes the extrema between
 	/// -   the portion of the curve C1 limited by the two
 	/// points of parameter (U1min,U1max), and
@@ -71,14 +71,14 @@ public:
 	/// Use the function NbExtrema to obtain the number
 	/// of solutions. If this algorithm fails, NbExtrema returns 0.
 	/// </summary>
-	Geom2dAPI_ExtremaCurveCurve(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2, double U1min, double U1max, double U2min, double U2max);
+Geom2dAPI_ExtremaCurveCurve(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2, double U1min, double U1max, double U2min, double U2max);
 	Geom2dAPI_ExtremaCurveCurve(Macad::Occt::Geom2dAPI_ExtremaCurveCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of extrema computed by this algorithm.
 	/// Note: if this algorithm fails, NbExtrema returns 0.
 	/// </summary>
-	int NbExtrema();
-	/// <summary>
+int NbExtrema();
+		/// <summary>
 	/// Returns the points P1 on the first curve and P2 on
 	/// the second curve, which are the ends of the
 	/// extremum of index Index computed by this algorithm.
@@ -87,8 +87,8 @@ public:
 	/// 1,NbExtrema ], where NbExtrema is the
 	/// number of extrema computed by this algorithm.
 	/// </summary>
-	void Points(int Index, Macad::Occt::Pnt2d% P1, Macad::Occt::Pnt2d% P2);
-	/// <summary>
+void Points(int Index, Macad::Occt::Pnt2d% P1, Macad::Occt::Pnt2d% P2);
+		/// <summary>
 	/// Returns the parameters U1 of the point on the first
 	/// curve and U2 of the point on the second curve, which
 	/// are the ends of the extremum of index Index
@@ -98,8 +98,8 @@ public:
 	/// 1,NbExtrema ], where NbExtrema is the
 	/// number of extrema computed by this algorithm.
 	/// </summary>
-	void Parameters(int Index, double% U1, double% U2);
-	/// <summary>
+void Parameters(int Index, double% U1, double% U2);
+		/// <summary>
 	/// Computes the distance between the end points of the
 	/// extremum of index Index computed by this algorithm.
 	/// Exceptions
@@ -107,28 +107,28 @@ public:
 	/// 1,NbExtrema ], where NbExtrema is the
 	/// number of extrema computed by this algorithm.
 	/// </summary>
-	double Distance(int Index);
-	/// <summary>
+double Distance(int Index);
+		/// <summary>
 	/// Returns the points P1 on the first curve and P2 on
 	/// the second curve, which are the ends of the shortest
 	/// extremum computed by this algorithm.
 	/// Exceptions StdFail_NotDone if this algorithm fails.
 	/// </summary>
-	void NearestPoints(Macad::Occt::Pnt2d% P1, Macad::Occt::Pnt2d% P2);
-	/// <summary>
+void NearestPoints(Macad::Occt::Pnt2d% P1, Macad::Occt::Pnt2d% P2);
+		/// <summary>
 	/// Returns the parameters U1 of the point on the first
 	/// curve and U2 of the point on the second curve, which
 	/// are the ends of the shortest extremum computed by this algorithm.
 	/// Exceptions
 	/// StdFail_NotDone if this algorithm fails.
 	/// </summary>
-	void LowerDistanceParameters(double% U1, double% U2);
-	/// <summary>
+void LowerDistanceParameters(double% U1, double% U2);
+		/// <summary>
 	/// Computes the distance between the end points of the
 	/// shortest extremum computed by this algorithm.
 	/// Exceptions - StdFail_NotDone if this algorithm fails.
 	/// </summary>
-	double LowerDistance();
+double LowerDistance();
 	/* Method skipped due to unknown mapping: Extrema_ExtCC2d Extrema() */
 }; // class Geom2dAPI_ExtremaCurveCurve
 
@@ -170,23 +170,23 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Create an empty intersector. Use the
 	/// function Init for further initialization of the intersection
 	/// algorithm by curves or curve.
 	/// </summary>
-	Geom2dAPI_InterCurveCurve();
-	/// <summary>
+Geom2dAPI_InterCurveCurve();
+		/// <summary>
 	/// Creates an object and computes the
 	/// intersections between the curves C1 and C2.
 	/// </summary>
-	Geom2dAPI_InterCurveCurve(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2, double Tol);
-	/// <summary>
+Geom2dAPI_InterCurveCurve(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2, double Tol);
+		/// <summary>
 	/// Creates an object and computes the
 	/// intersections between the curves C1 and C2.
 	/// </summary>
-	Geom2dAPI_InterCurveCurve(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2);
-	/// <summary>
+Geom2dAPI_InterCurveCurve(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2);
+		/// <summary>
 	/// Creates an object and computes self-intersections of the curve C1.
 	/// Tolerance value Tol, defaulted to 1.0e-6, defines the precision of
 	/// computing the intersection points.
@@ -199,8 +199,8 @@ public:
 	/// solutions. If the algorithm finds no intersections NbPoints and
 	/// NbSegments return 0.
 	/// </summary>
-	Geom2dAPI_InterCurveCurve(Macad::Occt::Geom2d_Curve^ C1, double Tol);
-	/// <summary>
+Geom2dAPI_InterCurveCurve(Macad::Occt::Geom2d_Curve^ C1, double Tol);
+		/// <summary>
 	/// Creates an object and computes self-intersections of the curve C1.
 	/// Tolerance value Tol, defaulted to 1.0e-6, defines the precision of
 	/// computing the intersection points.
@@ -213,19 +213,19 @@ public:
 	/// solutions. If the algorithm finds no intersections NbPoints and
 	/// NbSegments return 0.
 	/// </summary>
-	Geom2dAPI_InterCurveCurve(Macad::Occt::Geom2d_Curve^ C1);
+Geom2dAPI_InterCurveCurve(Macad::Occt::Geom2d_Curve^ C1);
 	Geom2dAPI_InterCurveCurve(Macad::Occt::Geom2dAPI_InterCurveCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes an algorithm with the
 	/// given arguments and computes the intersections between the curves C1. and C2.
 	/// </summary>
-	void Init(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2, double Tol);
-	/// <summary>
+void Init(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2, double Tol);
+		/// <summary>
 	/// Initializes an algorithm with the
 	/// given arguments and computes the intersections between the curves C1. and C2.
 	/// </summary>
-	void Init(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2);
-	/// <summary>
+void Init(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2);
+		/// <summary>
 	/// Initializes an algorithm with the
 	/// given arguments and computes the self-intersections of the curve C1.
 	/// Tolerance value Tol, defaulted to 1.0e-6, defines the precision of
@@ -238,8 +238,8 @@ public:
 	/// of solutions. If the algorithm finds no intersections NbPoints
 	/// and NbSegments return 0.
 	/// </summary>
-	void Init(Macad::Occt::Geom2d_Curve^ C1, double Tol);
-	/// <summary>
+void Init(Macad::Occt::Geom2d_Curve^ C1, double Tol);
+		/// <summary>
 	/// Initializes an algorithm with the
 	/// given arguments and computes the self-intersections of the curve C1.
 	/// Tolerance value Tol, defaulted to 1.0e-6, defines the precision of
@@ -252,13 +252,13 @@ public:
 	/// of solutions. If the algorithm finds no intersections NbPoints
 	/// and NbSegments return 0.
 	/// </summary>
-	void Init(Macad::Occt::Geom2d_Curve^ C1);
-	/// <summary>
+void Init(Macad::Occt::Geom2d_Curve^ C1);
+		/// <summary>
 	/// Returns the number of intersection-points in case of cross intersections.
 	/// NbPoints returns 0 if no intersections were found.
 	/// </summary>
-	int NbPoints();
-	/// <summary>
+int NbPoints();
+		/// <summary>
 	/// Returns the intersection point of index Index.
 	/// Intersection points are computed in case of cross intersections with a
 	/// precision equal to the tolerance value assigned at the time of
@@ -267,13 +267,13 @@ public:
 	/// Standard_OutOfRange if index is not in the range [ 1,NbPoints ], where
 	/// NbPoints is the number of computed intersection points
 	/// </summary>
-	Macad::Occt::Pnt2d Point(int Index);
-	/// <summary>
+Macad::Occt::Pnt2d Point(int Index);
+		/// <summary>
 	/// Returns the number of tangential intersections.
 	/// NbSegments returns 0 if no intersections were found
 	/// </summary>
-	int NbSegments();
-	/// <summary>
+int NbSegments();
+		/// <summary>
 	/// Use this syntax only to get
 	/// solutions of tangential intersection between two curves.
 	/// Output values Curve1 and Curve2 are the intersection segments on the
@@ -289,10 +289,7 @@ public:
 	/// Standard_NullObject if the algorithm is initialized for the
 	/// computing of self-intersections on a curve.
 	/// </summary>
-	void Segment(int Index, Macad::Occt::Geom2d_Curve^ Curve1, Macad::Occt::Geom2d_Curve^ Curve2);
-	/// <summary>
-	/// return the algorithmic object from Intersection.
-	/// </summary>
+void Segment(int Index, Macad::Occt::Geom2d_Curve^ Curve1, Macad::Occt::Geom2d_Curve^ Curve2);
 	/* Method skipped due to unknown mapping: Geom2dInt_GInter Intersector() */
 }; // class Geom2dAPI_InterCurveCurve
 
@@ -338,23 +335,23 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Tolerance is to check if the points are not too close to one an other
 	/// It is also used to check if the tangent vector is not too small.
 	/// There should be at least 2 points
 	/// if PeriodicFlag is True then the curve will be periodic.
 	/// </summary>
-	Geom2dAPI_Interpolate(Macad::Occt::TColgp_HArray1OfPnt2d^ Points, bool PeriodicFlag, double Tolerance);
-	/// <summary>
+Geom2dAPI_Interpolate(Macad::Occt::TColgp_HArray1OfPnt2d^ Points, bool PeriodicFlag, double Tolerance);
+		/// <summary>
 	/// if PeriodicFlag is True then the curve will be periodic
 	/// Warning:
 	/// There should be as many parameters as there are points
 	/// except if PeriodicFlag is True : then there should be one more
 	/// parameter to close the curve
 	/// </summary>
-	Geom2dAPI_Interpolate(Macad::Occt::TColgp_HArray1OfPnt2d^ Points, Macad::Occt::TColStd_HArray1OfReal^ Parameters, bool PeriodicFlag, double Tolerance);
+Geom2dAPI_Interpolate(Macad::Occt::TColgp_HArray1OfPnt2d^ Points, Macad::Occt::TColStd_HArray1OfReal^ Parameters, bool PeriodicFlag, double Tolerance);
 	Geom2dAPI_Interpolate(Macad::Occt::Geom2dAPI_Interpolate^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Assigns this constrained BSpline curve to be
 	/// tangential to vectors InitialTangent and FinalTangent
 	/// at its first and last points respectively (i.e.
@@ -364,8 +361,8 @@ public:
 	/// <Scale> - boolean flag defining whether tangent vectors are to
 	/// be scaled according to derivatives of lagrange interpolation.
 	/// </summary>
-	void Load(Macad::Occt::Vec2d InitialTangent, Macad::Occt::Vec2d FinalTangent, bool Scale);
-	/// <summary>
+void Load(Macad::Occt::Vec2d InitialTangent, Macad::Occt::Vec2d FinalTangent, bool Scale);
+		/// <summary>
 	/// Assigns this constrained BSpline curve to be
 	/// tangential to vectors InitialTangent and FinalTangent
 	/// at its first and last points respectively (i.e.
@@ -375,8 +372,8 @@ public:
 	/// <Scale> - boolean flag defining whether tangent vectors are to
 	/// be scaled according to derivatives of lagrange interpolation.
 	/// </summary>
-	void Load(Macad::Occt::Vec2d InitialTangent, Macad::Occt::Vec2d FinalTangent);
-	/// <summary>
+void Load(Macad::Occt::Vec2d InitialTangent, Macad::Occt::Vec2d FinalTangent);
+		/// <summary>
 	/// Assigns this constrained BSpline curve to be
 	/// tangential to vectors defined in the table Tangents,
 	/// which is parallel to the table of points
@@ -389,8 +386,8 @@ public:
 	/// <Scale> - boolean flag defining whether tangent vectors are to
 	/// be scaled according to derivatives of lagrange interpolation.
 	/// </summary>
-	void Load(Macad::Occt::TColgp_Array1OfVec2d^ Tangents, Macad::Occt::TColStd_HArray1OfBoolean^ TangentFlags, bool Scale);
-	/// <summary>
+void Load(Macad::Occt::TColgp_Array1OfVec2d^ Tangents, Macad::Occt::TColStd_HArray1OfBoolean^ TangentFlags, bool Scale);
+		/// <summary>
 	/// Assigns this constrained BSpline curve to be
 	/// tangential to vectors defined in the table Tangents,
 	/// which is parallel to the table of points
@@ -403,26 +400,26 @@ public:
 	/// <Scale> - boolean flag defining whether tangent vectors are to
 	/// be scaled according to derivatives of lagrange interpolation.
 	/// </summary>
-	void Load(Macad::Occt::TColgp_Array1OfVec2d^ Tangents, Macad::Occt::TColStd_HArray1OfBoolean^ TangentFlags);
-	/// <summary>
+void Load(Macad::Occt::TColgp_Array1OfVec2d^ Tangents, Macad::Occt::TColStd_HArray1OfBoolean^ TangentFlags);
+		/// <summary>
 	/// Clears all tangency constraints on this
 	/// constrained BSpline curve (as initialized by the function Load).
 	/// </summary>
-	void ClearTangents();
-	/// <summary>
+void ClearTangents();
+		/// <summary>
 	/// Computes the constrained BSpline curve. Use the function IsDone to verify that the
 	/// computation is successful, and then the function Curve to obtain the result.
 	/// </summary>
-	void Perform();
-	/// <summary>
+void Perform();
+		/// <summary>
 	/// Returns the computed BSpline curve. Raises  StdFail_NotDone if the interpolation fails.
 	/// </summary>
-	Macad::Occt::Geom2d_BSplineCurve^ Curve();
-	/// <summary>
+Macad::Occt::Geom2d_BSplineCurve^ Curve();
+		/// <summary>
 	/// Returns true if the constrained BSpline curve is successfully constructed.
 	/// Note: in this case, the result is given by the function Curve.
 	/// </summary>
-	bool IsDone();
+bool IsDone();
 }; // class Geom2dAPI_Interpolate
 
 //---------------------------------------------------------------------
@@ -465,12 +462,12 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an empty approximation algorithm.
 	/// Use an Init function to define and build the BSpline curve.
 	/// </summary>
-	Geom2dAPI_PointsToBSpline();
-	/// <summary>
+Geom2dAPI_PointsToBSpline();
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  The resulting BSpline will  have
 	/// the following properties:
@@ -479,8 +476,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  The resulting BSpline will  have
 	/// the following properties:
@@ -489,8 +486,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  The resulting BSpline will  have
 	/// the following properties:
@@ -499,8 +496,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  The resulting BSpline will  have
 	/// the following properties:
@@ -509,8 +506,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  The resulting BSpline will  have
 	/// the following properties:
@@ -519,8 +516,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  Of coordinates :
 	/// 
@@ -541,8 +538,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  Of coordinates :
 	/// 
@@ -563,8 +560,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  Of coordinates :
 	/// 
@@ -585,8 +582,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  Of coordinates :
 	/// 
@@ -607,8 +604,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  Of coordinates :
 	/// 
@@ -629,58 +626,13 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX);
-	/// <summary>
-	/// Approximate  a BSpline  Curve passing  through  an
-	/// array of  Point.  The resulting BSpline will  have
-	/// the following properties:
-	/// 1- his degree will be in the range [Degmin,Degmax]
-	/// 2- his  continuity will be  at  least <Continuity>
-	/// 3- the distance from the point <Points> to the
-	/// BSpline will be lower to Tol2D
-	/// </summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX);
 	/* Method skipped due to unknown mapping: void Geom2dAPI_PointsToBSpline(TColgp_Array1OfPnt2d Points, Approx_ParametrizationType ParType, Standard_Integer DegMin, Standard_Integer DegMax, GeomAbs_Shape Continuity, Standard_Real Tol2D, ) */
-	/// <summary>
-	/// Approximate  a BSpline  Curve passing  through  an
-	/// array of  Point.  The resulting BSpline will  have
-	/// the following properties:
-	/// 1- his degree will be in the range [Degmin,Degmax]
-	/// 2- his  continuity will be  at  least <Continuity>
-	/// 3- the distance from the point <Points> to the
-	/// BSpline will be lower to Tol2D
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Geom2dAPI_PointsToBSpline(TColgp_Array1OfPnt2d Points, Approx_ParametrizationType ParType, Standard_Integer DegMin, Standard_Integer DegMax, GeomAbs_Shape Continuity, Standard_Real Tol2D, ) */
-	/// <summary>
-	/// Approximate  a BSpline  Curve passing  through  an
-	/// array of  Point.  The resulting BSpline will  have
-	/// the following properties:
-	/// 1- his degree will be in the range [Degmin,Degmax]
-	/// 2- his  continuity will be  at  least <Continuity>
-	/// 3- the distance from the point <Points> to the
-	/// BSpline will be lower to Tol2D
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Geom2dAPI_PointsToBSpline(TColgp_Array1OfPnt2d Points, Approx_ParametrizationType ParType, Standard_Integer DegMin, Standard_Integer DegMax, GeomAbs_Shape Continuity, Standard_Real Tol2D, ) */
-	/// <summary>
-	/// Approximate  a BSpline  Curve passing  through  an
-	/// array of  Point.  The resulting BSpline will  have
-	/// the following properties:
-	/// 1- his degree will be in the range [Degmin,Degmax]
-	/// 2- his  continuity will be  at  least <Continuity>
-	/// 3- the distance from the point <Points> to the
-	/// BSpline will be lower to Tol2D
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Geom2dAPI_PointsToBSpline(TColgp_Array1OfPnt2d Points, Approx_ParametrizationType ParType, Standard_Integer DegMin, Standard_Integer DegMax, GeomAbs_Shape Continuity, Standard_Real Tol2D, ) */
-	/// <summary>
-	/// Approximate  a BSpline  Curve passing  through  an
-	/// array of  Point.  The resulting BSpline will  have
-	/// the following properties:
-	/// 1- his degree will be in the range [Degmin,Degmax]
-	/// 2- his  continuity will be  at  least <Continuity>
-	/// 3- the distance from the point <Points> to the
-	/// BSpline will be lower to Tol2D
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Geom2dAPI_PointsToBSpline(TColgp_Array1OfPnt2d Points, Approx_ParametrizationType ParType, Standard_Integer DegMin, Standard_Integer DegMax, GeomAbs_Shape Continuity, Standard_Real Tol2D, ) */
-	/// <summary>
+		/// <summary>
 	/// Approximate  a  BSpline  Curve  passing through an
 	/// array of Point,  which parameters are given by the
 	/// array <Parameters>.
@@ -691,8 +643,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
+		/// <summary>
 	/// Approximate  a  BSpline  Curve  passing through an
 	/// array of Point,  which parameters are given by the
 	/// array <Parameters>.
@@ -703,8 +655,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
+		/// <summary>
 	/// Approximate  a  BSpline  Curve  passing through an
 	/// array of Point,  which parameters are given by the
 	/// array <Parameters>.
@@ -715,8 +667,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax);
+		/// <summary>
 	/// Approximate  a  BSpline  Curve  passing through an
 	/// array of Point,  which parameters are given by the
 	/// array <Parameters>.
@@ -727,8 +679,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin);
+		/// <summary>
 	/// Approximate  a  BSpline  Curve  passing through an
 	/// array of Point,  which parameters are given by the
 	/// array <Parameters>.
@@ -739,37 +691,37 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters);
+		/// <summary>
 	/// Approximate a BSpline Curve  passing through an
 	/// array of Point using variational smoothing algorithm,
 	/// which tries to minimize additional criterium:
 	/// Weight1*CurveLength + Weight2*Curvature + Weight3*Torsion
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol3D);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol3D);
+		/// <summary>
 	/// Approximate a BSpline Curve  passing through an
 	/// array of Point using variational smoothing algorithm,
 	/// which tries to minimize additional criterium:
 	/// Weight1*CurveLength + Weight2*Curvature + Weight3*Torsion
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
+		/// <summary>
 	/// Approximate a BSpline Curve  passing through an
 	/// array of Point using variational smoothing algorithm,
 	/// which tries to minimize additional criterium:
 	/// Weight1*CurveLength + Weight2*Curvature + Weight3*Torsion
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax);
-	/// <summary>
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax);
+		/// <summary>
 	/// Approximate a BSpline Curve  passing through an
 	/// array of Point using variational smoothing algorithm,
 	/// which tries to minimize additional criterium:
 	/// Weight1*CurveLength + Weight2*Curvature + Weight3*Torsion
 	/// </summary>
-	Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3);
+Geom2dAPI_PointsToBSpline(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3);
 	Geom2dAPI_PointsToBSpline(Macad::Occt::Geom2dAPI_PointsToBSpline^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  The resulting BSpline will  have
 	/// the following properties:
@@ -778,8 +730,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  The resulting BSpline will  have
 	/// the following properties:
@@ -788,8 +740,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  The resulting BSpline will  have
 	/// the following properties:
@@ -798,8 +750,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin, int DegMax);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  The resulting BSpline will  have
 	/// the following properties:
@@ -808,8 +760,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, int DegMin);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  The resulting BSpline will  have
 	/// the following properties:
@@ -818,8 +770,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  Of coordinates :
 	/// 
@@ -840,8 +792,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
-	/// <summary>
+void Init(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  Of coordinates :
 	/// 
@@ -862,8 +814,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
-	/// <summary>
+void Init(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  Of coordinates :
 	/// 
@@ -884,8 +836,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax);
-	/// <summary>
+void Init(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin, int DegMax);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  Of coordinates :
 	/// 
@@ -906,8 +858,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin);
-	/// <summary>
+void Init(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX, int DegMin);
+		/// <summary>
 	/// Approximate  a BSpline  Curve passing  through  an
 	/// array of  Point.  Of coordinates :
 	/// 
@@ -928,58 +880,13 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX);
-	/// <summary>
-	/// Approximate  a BSpline  Curve passing  through  an
-	/// array of  Point.  The resulting BSpline will  have
-	/// the following properties:
-	/// 1- his degree will be in the range [Degmin,Degmax]
-	/// 2- his  continuity will be  at  least <Continuity>
-	/// 3- the distance from the point <Points> to the
-	/// BSpline will be lower to Tol2D
-	/// </summary>
+void Init(Macad::Occt::TColStd_Array1OfReal^ YValues, double X0, double DX);
 	/* Method skipped due to unknown mapping: void Init(TColgp_Array1OfPnt2d Points, Approx_ParametrizationType ParType, Standard_Integer DegMin, Standard_Integer DegMax, GeomAbs_Shape Continuity, Standard_Real Tol2D, ) */
-	/// <summary>
-	/// Approximate  a BSpline  Curve passing  through  an
-	/// array of  Point.  The resulting BSpline will  have
-	/// the following properties:
-	/// 1- his degree will be in the range [Degmin,Degmax]
-	/// 2- his  continuity will be  at  least <Continuity>
-	/// 3- the distance from the point <Points> to the
-	/// BSpline will be lower to Tol2D
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Init(TColgp_Array1OfPnt2d Points, Approx_ParametrizationType ParType, Standard_Integer DegMin, Standard_Integer DegMax, GeomAbs_Shape Continuity, Standard_Real Tol2D, ) */
-	/// <summary>
-	/// Approximate  a BSpline  Curve passing  through  an
-	/// array of  Point.  The resulting BSpline will  have
-	/// the following properties:
-	/// 1- his degree will be in the range [Degmin,Degmax]
-	/// 2- his  continuity will be  at  least <Continuity>
-	/// 3- the distance from the point <Points> to the
-	/// BSpline will be lower to Tol2D
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Init(TColgp_Array1OfPnt2d Points, Approx_ParametrizationType ParType, Standard_Integer DegMin, Standard_Integer DegMax, GeomAbs_Shape Continuity, Standard_Real Tol2D, ) */
-	/// <summary>
-	/// Approximate  a BSpline  Curve passing  through  an
-	/// array of  Point.  The resulting BSpline will  have
-	/// the following properties:
-	/// 1- his degree will be in the range [Degmin,Degmax]
-	/// 2- his  continuity will be  at  least <Continuity>
-	/// 3- the distance from the point <Points> to the
-	/// BSpline will be lower to Tol2D
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Init(TColgp_Array1OfPnt2d Points, Approx_ParametrizationType ParType, Standard_Integer DegMin, Standard_Integer DegMax, GeomAbs_Shape Continuity, Standard_Real Tol2D, ) */
-	/// <summary>
-	/// Approximate  a BSpline  Curve passing  through  an
-	/// array of  Point.  The resulting BSpline will  have
-	/// the following properties:
-	/// 1- his degree will be in the range [Degmin,Degmax]
-	/// 2- his  continuity will be  at  least <Continuity>
-	/// 3- the distance from the point <Points> to the
-	/// BSpline will be lower to Tol2D
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Init(TColgp_Array1OfPnt2d Points, Approx_ParametrizationType ParType, Standard_Integer DegMin, Standard_Integer DegMax, GeomAbs_Shape Continuity, Standard_Real Tol2D, ) */
-	/// <summary>
+		/// <summary>
 	/// Approximate  a  BSpline  Curve  passing through an
 	/// array of Point,  which parameters are given by the
 	/// array <Parameters>.
@@ -990,8 +897,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
+		/// <summary>
 	/// Approximate  a  BSpline  Curve  passing through an
 	/// array of Point,  which parameters are given by the
 	/// array <Parameters>.
@@ -1002,8 +909,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
+		/// <summary>
 	/// Approximate  a  BSpline  Curve  passing through an
 	/// array of Point,  which parameters are given by the
 	/// array <Parameters>.
@@ -1014,8 +921,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin, int DegMax);
+		/// <summary>
 	/// Approximate  a  BSpline  Curve  passing through an
 	/// array of Point,  which parameters are given by the
 	/// array <Parameters>.
@@ -1026,8 +933,8 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters, int DegMin);
+		/// <summary>
 	/// Approximate  a  BSpline  Curve  passing through an
 	/// array of Point,  which parameters are given by the
 	/// array <Parameters>.
@@ -1038,39 +945,39 @@ public:
 	/// 3- the distance from the point <Points> to the
 	/// BSpline will be lower to Tol2D
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, Macad::Occt::TColStd_Array1OfReal^ Parameters);
+		/// <summary>
 	/// Approximate a BSpline Curve  passing through an
 	/// array of Point using variational smoothing algorithm,
 	/// which tries to minimize additional criterium:
 	/// Weight1*CurveLength + Weight2*Curvature + Weight3*Torsion
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax, Macad::Occt::GeomAbs_Shape Continuity, double Tol2D);
+		/// <summary>
 	/// Approximate a BSpline Curve  passing through an
 	/// array of Point using variational smoothing algorithm,
 	/// which tries to minimize additional criterium:
 	/// Weight1*CurveLength + Weight2*Curvature + Weight3*Torsion
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax, Macad::Occt::GeomAbs_Shape Continuity);
+		/// <summary>
 	/// Approximate a BSpline Curve  passing through an
 	/// array of Point using variational smoothing algorithm,
 	/// which tries to minimize additional criterium:
 	/// Weight1*CurveLength + Weight2*Curvature + Weight3*Torsion
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3, int DegMax);
+		/// <summary>
 	/// Approximate a BSpline Curve  passing through an
 	/// array of Point using variational smoothing algorithm,
 	/// which tries to minimize additional criterium:
 	/// Weight1*CurveLength + Weight2*Curvature + Weight3*Torsion
 	/// </summary>
-	void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3);
-	/// <summary>
+void Init(Macad::Occt::TColgp_Array1OfPnt2d^ Points, double Weight1, double Weight2, double Weight3);
+		/// <summary>
 	/// Returns the approximate BSpline Curve
 	/// </summary>
-	Macad::Occt::Geom2d_BSplineCurve^ Curve();
+Macad::Occt::Geom2d_BSplineCurve^ Curve();
 	bool IsDone();
 }; // class Geom2dAPI_PointsToBSpline
 
@@ -1107,50 +1014,50 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an empty projector algorithm. Use an Init
 	/// function to define the point and the curve on which it is going to work.
 	/// </summary>
-	Geom2dAPI_ProjectPointOnCurve();
-	/// <summary>
+Geom2dAPI_ProjectPointOnCurve();
+		/// <summary>
 	/// Create the projection  of a  point  <P> on a curve
 	/// <Curve>
 	/// </summary>
-	Geom2dAPI_ProjectPointOnCurve(Macad::Occt::Pnt2d P, Macad::Occt::Geom2d_Curve^ Curve);
-	/// <summary>
+Geom2dAPI_ProjectPointOnCurve(Macad::Occt::Pnt2d P, Macad::Occt::Geom2d_Curve^ Curve);
+		/// <summary>
 	/// Create  the projection  of a point <P>  on a curve
 	/// <Curve> limited by the two   points of parameter Umin and Usup.
 	/// Warning
 	/// Use the function NbPoints to obtain the number of solutions. If
 	/// projection fails, NbPoints returns 0.
 	/// </summary>
-	Geom2dAPI_ProjectPointOnCurve(Macad::Occt::Pnt2d P, Macad::Occt::Geom2d_Curve^ Curve, double Umin, double Usup);
+Geom2dAPI_ProjectPointOnCurve(Macad::Occt::Pnt2d P, Macad::Occt::Geom2d_Curve^ Curve, double Umin, double Usup);
 	Geom2dAPI_ProjectPointOnCurve(Macad::Occt::Geom2dAPI_ProjectPointOnCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes this algorithm with the given arguments, and
 	/// computes the orthogonal  projections  of a  point  <P> on a curve <Curve>
 	/// </summary>
-	void Init(Macad::Occt::Pnt2d P, Macad::Occt::Geom2d_Curve^ Curve);
-	/// <summary>
+void Init(Macad::Occt::Pnt2d P, Macad::Occt::Geom2d_Curve^ Curve);
+		/// <summary>
 	/// Initializes this algorithm with the given arguments, and
 	/// computes the orthogonal projections of the point P onto the portion
 	/// of the curve Curve limited by the two points of parameter Umin and Usup.
 	/// </summary>
-	void Init(Macad::Occt::Pnt2d P, Macad::Occt::Geom2d_Curve^ Curve, double Umin, double Usup);
-	/// <summary>
+void Init(Macad::Occt::Pnt2d P, Macad::Occt::Geom2d_Curve^ Curve, double Umin, double Usup);
+		/// <summary>
 	/// return the number of of computed
 	/// orthogonal projectionn points.
 	/// </summary>
-	int NbPoints();
-	/// <summary>
+int NbPoints();
+		/// <summary>
 	/// Returns the orthogonal projection
 	/// on the curve. Index is a number of a computed point.
 	/// Exceptions
 	/// Standard_OutOfRange if Index is not in the range [ 1,NbPoints ], where
 	/// NbPoints is the number of solution points.
 	/// </summary>
-	Macad::Occt::Pnt2d Point(int Index);
-	/// <summary>
+Macad::Occt::Pnt2d Point(int Index);
+		/// <summary>
 	/// Returns the parameter on the curve
 	/// of a point which is the orthogonal projection. Index is a number of a
 	/// computed projected point.
@@ -1158,8 +1065,8 @@ public:
 	/// Standard_OutOfRange if Index is not in the range [ 1,NbPoints ], where
 	/// NbPoints is the number of solution points.
 	/// </summary>
-	double Parameter(int Index);
-	/// <summary>
+double Parameter(int Index);
+		/// <summary>
 	/// Returns the parameter on the curve
 	/// of a point which is the orthogonal projection. Index is a number of a
 	/// computed projected point.
@@ -1167,8 +1074,8 @@ public:
 	/// Standard_OutOfRange if Index is not in the range [ 1,NbPoints ], where
 	/// NbPoints is the number of solution points
 	/// </summary>
-	void Parameter(int Index, double% U);
-	/// <summary>
+void Parameter(int Index, double% U);
+		/// <summary>
 	/// Computes the distance between the
 	/// point and its computed orthogonal projection on the curve. Index is a
 	/// number of computed projected point.
@@ -1176,30 +1083,27 @@ public:
 	/// Standard_OutOfRange if Index is not in the range [ 1,NbPoints ], where
 	/// NbPoints is the number of solution points.
 	/// </summary>
-	double Distance(int Index);
-	/// <summary>
+double Distance(int Index);
+		/// <summary>
 	/// Returns the nearest orthogonal projection of the point on the curve.
 	/// Exceptions
 	/// StdFail_NotDone if this algorithm fails.
 	/// </summary>
-	Macad::Occt::Pnt2d NearestPoint();
-	/// <summary>
+Macad::Occt::Pnt2d NearestPoint();
+		/// <summary>
 	/// Returns the parameter on the curve
 	/// of the nearest orthogonal projection of the point.
 	/// Exceptions
 	/// StdFail_NotDone if this algorithm fails.
 	/// </summary>
-	double LowerDistanceParameter();
-	/// <summary>
+double LowerDistanceParameter();
+		/// <summary>
 	/// Computes the distance between the
 	/// point and its nearest orthogonal projection on the curve.
 	/// Exceptions
 	/// StdFail_NotDone if this algorithm fails.
 	/// </summary>
-	double LowerDistance();
-	/// <summary>
-	/// return the algorithmic object from Extrema
-	/// </summary>
+double LowerDistance();
 	/* Method skipped due to unknown mapping: Extrema_ExtPC2d Extrema() */
 }; // class Geom2dAPI_ProjectPointOnCurve
 

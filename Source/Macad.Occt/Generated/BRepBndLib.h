@@ -43,7 +43,7 @@ public:
 public:
 	BRepBndLib();
 	BRepBndLib(Macad::Occt::BRepBndLib^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Adds the shape S to the bounding box B.
 	/// More precisely are successively added to B:
 	/// -   each face of S; the triangulation of the face is used if it exists,
@@ -62,8 +62,8 @@ public:
 	/// been inserted inside the data structure of the shape S.
 	/// -   The resulting bounding box may be somewhat larger than the object.
 	/// </summary>
-	static void Add(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B, bool useTriangulation);
-	/// <summary>
+static void Add(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B, bool useTriangulation);
+		/// <summary>
 	/// Adds the shape S to the bounding box B.
 	/// More precisely are successively added to B:
 	/// -   each face of S; the triangulation of the face is used if it exists,
@@ -82,8 +82,8 @@ public:
 	/// been inserted inside the data structure of the shape S.
 	/// -   The resulting bounding box may be somewhat larger than the object.
 	/// </summary>
-	static void Add(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+static void Add(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B);
+		/// <summary>
 	/// Adds the shape S to the bounding box B.
 	/// This is a quick algorithm but only works if the shape S is
 	/// composed of polygonal planar faces, as is the case if S is
@@ -96,8 +96,8 @@ public:
 	/// Add function. So the added part of the resulting bounding
 	/// box is closer to the shape S.
 	/// </summary>
-	static void AddClose(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+static void AddClose(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B);
+		/// <summary>
 	/// Adds the shape S to the bounding box B.
 	/// This algorithm builds precise bounding box,
 	/// which differs from exact geometry boundaries of shape only on shape entities tolerances
@@ -108,8 +108,8 @@ public:
 	/// otherwise bounding box is built according to sizes of uderlined geometrical entities,
 	/// numerical calculation use tolerance Precision::Confusion().
 	/// </summary>
-	static void AddOptimal(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B, bool useTriangulation, bool useShapeTolerance);
-	/// <summary>
+static void AddOptimal(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B, bool useTriangulation, bool useShapeTolerance);
+		/// <summary>
 	/// Adds the shape S to the bounding box B.
 	/// This algorithm builds precise bounding box,
 	/// which differs from exact geometry boundaries of shape only on shape entities tolerances
@@ -120,8 +120,8 @@ public:
 	/// otherwise bounding box is built according to sizes of uderlined geometrical entities,
 	/// numerical calculation use tolerance Precision::Confusion().
 	/// </summary>
-	static void AddOptimal(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B, bool useTriangulation);
-	/// <summary>
+static void AddOptimal(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B, bool useTriangulation);
+		/// <summary>
 	/// Adds the shape S to the bounding box B.
 	/// This algorithm builds precise bounding box,
 	/// which differs from exact geometry boundaries of shape only on shape entities tolerances
@@ -132,8 +132,8 @@ public:
 	/// otherwise bounding box is built according to sizes of uderlined geometrical entities,
 	/// numerical calculation use tolerance Precision::Confusion().
 	/// </summary>
-	static void AddOptimal(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+static void AddOptimal(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Bnd_Box^ B);
+		/// <summary>
 	/// Computes the Oriented Bounding box for the shape <theS>.
 	/// Two independent methods of computation are implemented:
 	/// first method based on set of points (so, it demands the
@@ -147,8 +147,8 @@ public:
 	/// theIsOptimal flag defines whether to look for the more tight
 	/// OBB for the cost of performance or not.
 	/// </summary>
-	static void AddOBB(Macad::Occt::TopoDS_Shape^ theS, Macad::Occt::Bnd_OBB^ theOBB, bool theIsTriangulationUsed, bool theIsOptimal, bool theIsShapeToleranceUsed);
-	/// <summary>
+static void AddOBB(Macad::Occt::TopoDS_Shape^ theS, Macad::Occt::Bnd_OBB^ theOBB, bool theIsTriangulationUsed, bool theIsOptimal, bool theIsShapeToleranceUsed);
+		/// <summary>
 	/// Computes the Oriented Bounding box for the shape <theS>.
 	/// Two independent methods of computation are implemented:
 	/// first method based on set of points (so, it demands the
@@ -162,8 +162,8 @@ public:
 	/// theIsOptimal flag defines whether to look for the more tight
 	/// OBB for the cost of performance or not.
 	/// </summary>
-	static void AddOBB(Macad::Occt::TopoDS_Shape^ theS, Macad::Occt::Bnd_OBB^ theOBB, bool theIsTriangulationUsed, bool theIsOptimal);
-	/// <summary>
+static void AddOBB(Macad::Occt::TopoDS_Shape^ theS, Macad::Occt::Bnd_OBB^ theOBB, bool theIsTriangulationUsed, bool theIsOptimal);
+		/// <summary>
 	/// Computes the Oriented Bounding box for the shape <theS>.
 	/// Two independent methods of computation are implemented:
 	/// first method based on set of points (so, it demands the
@@ -177,8 +177,8 @@ public:
 	/// theIsOptimal flag defines whether to look for the more tight
 	/// OBB for the cost of performance or not.
 	/// </summary>
-	static void AddOBB(Macad::Occt::TopoDS_Shape^ theS, Macad::Occt::Bnd_OBB^ theOBB, bool theIsTriangulationUsed);
-	/// <summary>
+static void AddOBB(Macad::Occt::TopoDS_Shape^ theS, Macad::Occt::Bnd_OBB^ theOBB, bool theIsTriangulationUsed);
+		/// <summary>
 	/// Computes the Oriented Bounding box for the shape <theS>.
 	/// Two independent methods of computation are implemented:
 	/// first method based on set of points (so, it demands the
@@ -192,7 +192,7 @@ public:
 	/// theIsOptimal flag defines whether to look for the more tight
 	/// OBB for the cost of performance or not.
 	/// </summary>
-	static void AddOBB(Macad::Occt::TopoDS_Shape^ theS, Macad::Occt::Bnd_OBB^ theOBB);
+static void AddOBB(Macad::Occt::TopoDS_Shape^ theS, Macad::Occt::Bnd_OBB^ theOBB);
 }; // class BRepBndLib
 
 }; // namespace Occt

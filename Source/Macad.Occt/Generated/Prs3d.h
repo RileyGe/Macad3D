@@ -303,32 +303,32 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Default constructor. Sets meters as default length units
 	/// and radians as default angle units.
 	/// </summary>
-	Prs3d_DimensionUnits();
+Prs3d_DimensionUnits();
 	Prs3d_DimensionUnits(Macad::Occt::Prs3d_DimensionUnits^ theUnits);
-	/// <summary>
+		/// <summary>
 	/// Sets angle units
 	/// </summary>
-	void SetAngleUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
-	/// <summary>
+void SetAngleUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// angle units
 	/// </returns>
-	Macad::Occt::TCollection_AsciiString^ GetAngleUnits();
-	/// <summary>
+Macad::Occt::TCollection_AsciiString^ GetAngleUnits();
+		/// <summary>
 	/// Sets length units
 	/// </summary>
-	void SetLengthUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
-	/// <summary>
+void SetLengthUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// length units
 	/// </returns>
-	Macad::Occt::TCollection_AsciiString^ GetLengthUnits();
+Macad::Occt::TCollection_AsciiString^ GetLengthUnits();
 }; // class Prs3d_DimensionUnits
 
 //---------------------------------------------------------------------
@@ -373,13 +373,7 @@ public:
 public:
 	Prs3d_BasicAspect(Macad::Occt::Prs3d_BasicAspect^ parameter1);
 	Prs3d_BasicAspect();
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class Prs3d_BasicAspect
 
@@ -429,45 +423,39 @@ public:
 	static Macad::Occt::Prs3d_LineAspect^ CreateDowncasted(::Prs3d_LineAspect* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a framework for line aspect defined by
 	/// -   the color aColor
 	/// -   the type of line aType and
 	/// -   the line thickness aWidth.
 	/// Type of line refers to whether the line is solid or dotted, for example.
 	/// </summary>
-	Prs3d_LineAspect(Macad::Occt::Quantity_Color^ theColor, Macad::Occt::Aspect_TypeOfLine theType, double theWidth);
+Prs3d_LineAspect(Macad::Occt::Quantity_Color^ theColor, Macad::Occt::Aspect_TypeOfLine theType, double theWidth);
 	Prs3d_LineAspect(Macad::Occt::Graphic3d_AspectLine3d^ theAspect);
 	Prs3d_LineAspect(Macad::Occt::Prs3d_LineAspect^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the line color defined at the time of construction.
 	/// Default value: Quantity_NOC_YELLOW
 	/// </summary>
-	void SetColor(Macad::Occt::Quantity_Color^ theColor);
-	/// <summary>
+void SetColor(Macad::Occt::Quantity_Color^ theColor);
+		/// <summary>
 	/// Sets the type of line defined at the time of construction.
 	/// This could, for example, be solid, dotted or made up of dashes.
 	/// Default value: Aspect_TOL_SOLID
 	/// </summary>
-	void SetTypeOfLine(Macad::Occt::Aspect_TypeOfLine theType);
-	/// <summary>
+void SetTypeOfLine(Macad::Occt::Aspect_TypeOfLine theType);
+		/// <summary>
 	/// Sets the line width defined at the time of construction.
 	/// Default value: 1.
 	/// </summary>
-	void SetWidth(double theWidth);
-	/// <summary>
+void SetWidth(double theWidth);
+		/// <summary>
 	/// Returns the line aspect. This is defined as the set of
 	/// color, type and thickness attributes.
 	/// </summary>
-	Macad::Occt::Graphic3d_AspectLine3d^ Aspect();
+Macad::Occt::Graphic3d_AspectLine3d^ Aspect();
 	void SetAspect(Macad::Occt::Graphic3d_AspectLine3d^ theAspect);
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class Prs3d_LineAspect
 
@@ -505,49 +493,49 @@ public:
 	static Macad::Occt::Prs3d_TextAspect^ CreateDowncasted(::Prs3d_TextAspect* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an empty framework for defining display attributes of text.
 	/// </summary>
-	Prs3d_TextAspect();
+Prs3d_TextAspect();
 	Prs3d_TextAspect(Macad::Occt::Graphic3d_AspectText3d^ theAspect);
 	Prs3d_TextAspect(Macad::Occt::Prs3d_TextAspect^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the color of the type used in text display.
 	/// </summary>
-	void SetColor(Macad::Occt::Quantity_Color^ theColor);
-	/// <summary>
+void SetColor(Macad::Occt::Quantity_Color^ theColor);
+		/// <summary>
 	/// Sets the font used in text display.
 	/// </summary>
-	void SetFont(System::String^ theFont);
-	/// <summary>
+void SetFont(System::String^ theFont);
+		/// <summary>
 	/// Sets the height of the text.
 	/// </summary>
-	void SetHeight(double theHeight);
-	/// <summary>
+void SetHeight(double theHeight);
+		/// <summary>
 	/// Sets the angle
 	/// </summary>
-	void SetAngle(double theAngle);
-	/// <summary>
+void SetAngle(double theAngle);
+		/// <summary>
 	/// Returns the height of the text box.
 	/// </summary>
-	double Height();
-	/// <summary>
+double Height();
+		/// <summary>
 	/// Returns the angle
 	/// </summary>
-	double Angle();
-	/// <summary>
+double Angle();
+		/// <summary>
 	/// Sets horizontal alignment of text.
 	/// </summary>
-	void SetHorizontalJustification(Macad::Occt::Graphic3d_HorizontalTextAlignment theJustification);
-	/// <summary>
+void SetHorizontalJustification(Macad::Occt::Graphic3d_HorizontalTextAlignment theJustification);
+		/// <summary>
 	/// Sets the vertical alignment of text.
 	/// </summary>
-	void SetVerticalJustification(Macad::Occt::Graphic3d_VerticalTextAlignment theJustification);
-	/// <summary>
+void SetVerticalJustification(Macad::Occt::Graphic3d_VerticalTextAlignment theJustification);
+		/// <summary>
 	/// Sets the orientation of text.
 	/// </summary>
-	void SetOrientation(Macad::Occt::Graphic3d_TextPath theOrientation);
-	/// <summary>
+void SetOrientation(Macad::Occt::Graphic3d_TextPath theOrientation);
+		/// <summary>
 	/// Returns the horizontal alignment of the text.
 	/// The range of values includes:
 	/// -   left
@@ -555,8 +543,8 @@ public:
 	/// -   right, and
 	/// -   normal (justified).
 	/// </summary>
-	Macad::Occt::Graphic3d_HorizontalTextAlignment HorizontalJustification();
-	/// <summary>
+Macad::Occt::Graphic3d_HorizontalTextAlignment HorizontalJustification();
+		/// <summary>
 	/// Returns the vertical alignment of the text.
 	/// The range of values includes:
 	/// -   normal
@@ -566,8 +554,8 @@ public:
 	/// -   base
 	/// -   bottom
 	/// </summary>
-	Macad::Occt::Graphic3d_VerticalTextAlignment VerticalJustification();
-	/// <summary>
+Macad::Occt::Graphic3d_VerticalTextAlignment VerticalJustification();
+		/// <summary>
 	/// Returns the orientation of the text.
 	/// Text can be displayed in the following directions:
 	/// -   up
@@ -575,8 +563,8 @@ public:
 	/// -   left, or
 	/// -   right
 	/// </summary>
-	Macad::Occt::Graphic3d_TextPath Orientation();
-	/// <summary>
+Macad::Occt::Graphic3d_TextPath Orientation();
+		/// <summary>
 	/// Returns the purely textual attributes used in the display of text.
 	/// These include:
 	/// -   color
@@ -584,15 +572,9 @@ public:
 	/// -   height/width ratio, that is, the expansion factor, and
 	/// -   space between characters.
 	/// </summary>
-	Macad::Occt::Graphic3d_AspectText3d^ Aspect();
+Macad::Occt::Graphic3d_AspectText3d^ Aspect();
 	void SetAspect(Macad::Occt::Graphic3d_AspectText3d^ theAspect);
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class Prs3d_TextAspect
 
@@ -634,77 +616,71 @@ public:
 	static Macad::Occt::Prs3d_ShadingAspect^ CreateDowncasted(::Prs3d_ShadingAspect* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an empty framework to display shading.
 	/// </summary>
-	Prs3d_ShadingAspect();
-	/// <summary>
+Prs3d_ShadingAspect();
+		/// <summary>
 	/// Constructor with initialization.
 	/// </summary>
-	Prs3d_ShadingAspect(Macad::Occt::Graphic3d_AspectFillArea3d^ theAspect);
+Prs3d_ShadingAspect(Macad::Occt::Graphic3d_AspectFillArea3d^ theAspect);
 	Prs3d_ShadingAspect(Macad::Occt::Prs3d_ShadingAspect^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Change the polygons interior color and material ambient color.
 	/// </summary>
-	void SetColor(Macad::Occt::Quantity_Color^ aColor, Macad::Occt::Aspect_TypeOfFacingModel aModel);
-	/// <summary>
+void SetColor(Macad::Occt::Quantity_Color^ aColor, Macad::Occt::Aspect_TypeOfFacingModel aModel);
+		/// <summary>
 	/// Change the polygons interior color and material ambient color.
 	/// </summary>
-	void SetColor(Macad::Occt::Quantity_Color^ aColor);
-	/// <summary>
+void SetColor(Macad::Occt::Quantity_Color^ aColor);
+		/// <summary>
 	/// Change the polygons material aspect.
 	/// </summary>
-	void SetMaterial(Macad::Occt::Graphic3d_MaterialAspect^ aMaterial, Macad::Occt::Aspect_TypeOfFacingModel aModel);
-	/// <summary>
+void SetMaterial(Macad::Occt::Graphic3d_MaterialAspect^ aMaterial, Macad::Occt::Aspect_TypeOfFacingModel aModel);
+		/// <summary>
 	/// Change the polygons material aspect.
 	/// </summary>
-	void SetMaterial(Macad::Occt::Graphic3d_MaterialAspect^ aMaterial);
-	/// <summary>
+void SetMaterial(Macad::Occt::Graphic3d_MaterialAspect^ aMaterial);
+		/// <summary>
 	/// Change the polygons transparency value.
 	/// Warning : aValue must be in the range 0,1. 0 is the default (NO transparent)
 	/// </summary>
-	void SetTransparency(double aValue, Macad::Occt::Aspect_TypeOfFacingModel aModel);
-	/// <summary>
+void SetTransparency(double aValue, Macad::Occt::Aspect_TypeOfFacingModel aModel);
+		/// <summary>
 	/// Change the polygons transparency value.
 	/// Warning : aValue must be in the range 0,1. 0 is the default (NO transparent)
 	/// </summary>
-	void SetTransparency(double aValue);
-	/// <summary>
+void SetTransparency(double aValue);
+		/// <summary>
 	/// Returns the polygons color.
 	/// </summary>
-	Macad::Occt::Quantity_Color^ Color(Macad::Occt::Aspect_TypeOfFacingModel aModel);
-	/// <summary>
+Macad::Occt::Quantity_Color^ Color(Macad::Occt::Aspect_TypeOfFacingModel aModel);
+		/// <summary>
 	/// Returns the polygons color.
 	/// </summary>
-	Macad::Occt::Quantity_Color^ Color();
-	/// <summary>
+Macad::Occt::Quantity_Color^ Color();
+		/// <summary>
 	/// Returns the polygons material aspect.
 	/// </summary>
-	Macad::Occt::Graphic3d_MaterialAspect^ Material(Macad::Occt::Aspect_TypeOfFacingModel aModel);
-	/// <summary>
+Macad::Occt::Graphic3d_MaterialAspect^ Material(Macad::Occt::Aspect_TypeOfFacingModel aModel);
+		/// <summary>
 	/// Returns the polygons material aspect.
 	/// </summary>
-	Macad::Occt::Graphic3d_MaterialAspect^ Material();
-	/// <summary>
+Macad::Occt::Graphic3d_MaterialAspect^ Material();
+		/// <summary>
 	/// Returns the polygons transparency value.
 	/// </summary>
-	double Transparency(Macad::Occt::Aspect_TypeOfFacingModel aModel);
-	/// <summary>
+double Transparency(Macad::Occt::Aspect_TypeOfFacingModel aModel);
+		/// <summary>
 	/// Returns the polygons transparency value.
 	/// </summary>
-	double Transparency();
-	/// <summary>
+double Transparency();
+		/// <summary>
 	/// Returns the polygons aspect properties.
 	/// </summary>
-	Macad::Occt::Graphic3d_AspectFillArea3d^ Aspect();
+Macad::Occt::Graphic3d_AspectFillArea3d^ Aspect();
 	void SetAspect(Macad::Occt::Graphic3d_AspectFillArea3d^ theAspect);
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class Prs3d_ShadingAspect
 
@@ -745,44 +721,38 @@ public:
 
 public:
 	Prs3d_PointAspect(Macad::Occt::Aspect_TypeOfMarker theType, Macad::Occt::Quantity_Color^ theColor, double theScale);
-	/// <summary>
+		/// <summary>
 	/// Defines the user defined marker point.
 	/// </summary>
-	Prs3d_PointAspect(Macad::Occt::Quantity_Color^ theColor, int theWidth, int theHeight, Macad::Occt::TColStd_HArray1OfByte^ theTexture);
+Prs3d_PointAspect(Macad::Occt::Quantity_Color^ theColor, int theWidth, int theHeight, Macad::Occt::TColStd_HArray1OfByte^ theTexture);
 	Prs3d_PointAspect(Macad::Occt::Graphic3d_AspectMarker3d^ theAspect);
 	Prs3d_PointAspect(Macad::Occt::Prs3d_PointAspect^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// defines the color to be used when drawing a point.
 	/// Default value: Quantity_NOC_YELLOW
 	/// </summary>
-	void SetColor(Macad::Occt::Quantity_Color^ theColor);
-	/// <summary>
+void SetColor(Macad::Occt::Quantity_Color^ theColor);
+		/// <summary>
 	/// defines the type of representation to be used when drawing a point.
 	/// Default value: Aspect_TOM_PLUS
 	/// </summary>
-	void SetTypeOfMarker(Macad::Occt::Aspect_TypeOfMarker theType);
-	/// <summary>
+void SetTypeOfMarker(Macad::Occt::Aspect_TypeOfMarker theType);
+		/// <summary>
 	/// defines the size of the marker used when drawing a point.
 	/// Default value: 1.
 	/// </summary>
-	void SetScale(double theScale);
+void SetScale(double theScale);
 	Macad::Occt::Graphic3d_AspectMarker3d^ Aspect();
 	void SetAspect(Macad::Occt::Graphic3d_AspectMarker3d^ theAspect);
-	/// <summary>
+		/// <summary>
 	/// Returns marker's texture size.
 	/// </summary>
-	void GetTextureSize(int% theWidth, int% theHeight);
-	/// <summary>
+void GetTextureSize(int% theWidth, int% theHeight);
+		/// <summary>
 	/// Returns marker's texture.
 	/// </summary>
-	Macad::Occt::Graphic3d_MarkerImage^ GetTexture();
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
+Macad::Occt::Graphic3d_MarkerImage^ GetTexture();
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class Prs3d_PointAspect
 
@@ -820,96 +790,90 @@ public:
 	static Macad::Occt::Prs3d_PlaneAspect^ CreateDowncasted(::Prs3d_PlaneAspect* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an empty framework for the display of planes.
 	/// </summary>
-	Prs3d_PlaneAspect();
+Prs3d_PlaneAspect();
 	Prs3d_PlaneAspect(Macad::Occt::Prs3d_PlaneAspect^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the attributes of displayed edges involved in the presentation of planes.
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ EdgesAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ EdgesAspect();
+		/// <summary>
 	/// Returns the attributes of displayed isoparameters involved in the presentation of planes.
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ IsoAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ IsoAspect();
+		/// <summary>
 	/// Returns the settings for displaying an arrow.
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ ArrowAspect();
+Macad::Occt::Prs3d_LineAspect^ ArrowAspect();
 	void SetArrowsLength(double theLength);
-	/// <summary>
+		/// <summary>
 	/// Returns the length of the arrow shaft used in the display of arrows.
 	/// </summary>
-	double ArrowsLength();
-	/// <summary>
+double ArrowsLength();
+		/// <summary>
 	/// Sets the angle of the arrowhead used in the display of planes.
 	/// </summary>
-	void SetArrowsSize(double theSize);
-	/// <summary>
+void SetArrowsSize(double theSize);
+		/// <summary>
 	/// Returns the size of arrows used in the display of planes.
 	/// </summary>
-	double ArrowsSize();
-	/// <summary>
+double ArrowsSize();
+		/// <summary>
 	/// Sets the angle of the arrowhead used in the display
 	/// of arrows involved in the presentation of planes.
 	/// </summary>
-	void SetArrowsAngle(double theAngle);
-	/// <summary>
+void SetArrowsAngle(double theAngle);
+		/// <summary>
 	/// Returns the angle of the arrowhead used in the
 	/// display of arrows involved in the presentation of planes.
 	/// </summary>
-	double ArrowsAngle();
-	/// <summary>
+double ArrowsAngle();
+		/// <summary>
 	/// Sets the display attributes defined in DisplayCenterArrow to active.
 	/// </summary>
-	void SetDisplayCenterArrow(bool theToDraw);
-	/// <summary>
+void SetDisplayCenterArrow(bool theToDraw);
+		/// <summary>
 	/// Returns true if the display of center arrows is allowed.
 	/// </summary>
-	bool DisplayCenterArrow();
-	/// <summary>
+bool DisplayCenterArrow();
+		/// <summary>
 	/// Sets the display attributes defined in DisplayEdgesArrows to active.
 	/// </summary>
-	void SetDisplayEdgesArrows(bool theToDraw);
-	/// <summary>
+void SetDisplayEdgesArrows(bool theToDraw);
+		/// <summary>
 	/// Returns true if the display of edge arrows is allowed.
 	/// </summary>
-	bool DisplayEdgesArrows();
+bool DisplayEdgesArrows();
 	void SetDisplayEdges(bool theToDraw);
 	bool DisplayEdges();
-	/// <summary>
+		/// <summary>
 	/// Sets the display attributes defined in DisplayIso to active.
 	/// </summary>
-	void SetDisplayIso(bool theToDraw);
-	/// <summary>
+void SetDisplayIso(bool theToDraw);
+		/// <summary>
 	/// Returns true if the display of isoparameters is allowed.
 	/// </summary>
-	bool DisplayIso();
+bool DisplayIso();
 	void SetPlaneLength(double theLX, double theLY);
-	/// <summary>
+		/// <summary>
 	/// Returns the length of the x axis used in the display of planes.
 	/// </summary>
-	double PlaneXLength();
-	/// <summary>
+double PlaneXLength();
+		/// <summary>
 	/// Returns the length of the y axis used in the display of planes.
 	/// </summary>
-	double PlaneYLength();
-	/// <summary>
+double PlaneYLength();
+		/// <summary>
 	/// Sets the distance L between isoparameters used in the display of planes.
 	/// </summary>
-	void SetIsoDistance(double theL);
-	/// <summary>
+void SetIsoDistance(double theL);
+		/// <summary>
 	/// Returns the distance between isoparameters used in the display of planes.
 	/// </summary>
-	double IsoDistance();
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
+double IsoDistance();
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class Prs3d_PlaneAspect
 
@@ -947,55 +911,49 @@ public:
 	static Macad::Occt::Prs3d_ArrowAspect^ CreateDowncasted(::Prs3d_ArrowAspect* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an empty framework for displaying arrows
 	/// in representations of lengths. The lengths displayed
 	/// are either on their own or in chamfers, fillets,
 	/// diameters and radii.
 	/// </summary>
-	Prs3d_ArrowAspect();
-	/// <summary>
+Prs3d_ArrowAspect();
+		/// <summary>
 	/// Constructs a framework to display an arrow with a
 	/// shaft of the length aLength and having a head with
 	/// sides at the angle anAngle from each other.
 	/// </summary>
-	Prs3d_ArrowAspect(double anAngle, double aLength);
+Prs3d_ArrowAspect(double anAngle, double aLength);
 	Prs3d_ArrowAspect(Macad::Occt::Graphic3d_AspectLine3d^ theAspect);
 	Prs3d_ArrowAspect(Macad::Occt::Prs3d_ArrowAspect^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// defines the angle of the arrows.
 	/// </summary>
-	void SetAngle(double anAngle);
-	/// <summary>
+void SetAngle(double anAngle);
+		/// <summary>
 	/// returns the current value of the angle used when drawing an arrow.
 	/// </summary>
-	double Angle();
-	/// <summary>
+double Angle();
+		/// <summary>
 	/// Defines the length of the arrows.
 	/// </summary>
-	void SetLength(double theLength);
-	/// <summary>
+void SetLength(double theLength);
+		/// <summary>
 	/// Returns the current value of the length used when drawing an arrow.
 	/// </summary>
-	double Length();
-	/// <summary>
+double Length();
+		/// <summary>
 	/// Turns usage of arrow zoomable on/off
 	/// </summary>
-	void SetZoomable(bool theIsZoomable);
-	/// <summary>
+void SetZoomable(bool theIsZoomable);
+		/// <summary>
 	/// Returns TRUE when the Arrow Zoomable is on; TRUE by default.
 	/// </summary>
-	bool IsZoomable();
+bool IsZoomable();
 	void SetColor(Macad::Occt::Quantity_Color^ theColor);
 	Macad::Occt::Graphic3d_AspectLine3d^ Aspect();
 	void SetAspect(Macad::Occt::Graphic3d_AspectLine3d^ theAspect);
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class Prs3d_ArrowAspect
 
@@ -1033,112 +991,106 @@ public:
 	static Macad::Occt::Prs3d_DatumAspect^ CreateDowncasted(::Prs3d_DatumAspect* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// An empty constructor.
 	/// </summary>
-	Prs3d_DatumAspect();
+Prs3d_DatumAspect();
 	Prs3d_DatumAspect(Macad::Occt::Prs3d_DatumAspect^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns line aspect for specified part.
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ LineAspect(Macad::Occt::Prs3d_DatumParts thePart);
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ LineAspect(Macad::Occt::Prs3d_DatumParts thePart);
+		/// <summary>
 	/// Returns shading aspect for specified part.
 	/// </summary>
-	Macad::Occt::Prs3d_ShadingAspect^ ShadingAspect(Macad::Occt::Prs3d_DatumParts thePart);
-	/// <summary>
+Macad::Occt::Prs3d_ShadingAspect^ ShadingAspect(Macad::Occt::Prs3d_DatumParts thePart);
+		/// <summary>
 	/// Returns the text attributes for rendering label of specified part (Prs3d_DatumParts_XAxis/Prs3d_DatumParts_YAxis/Prs3d_DatumParts_ZAxis).
 	/// </summary>
-	Macad::Occt::Prs3d_TextAspect^ TextAspect(Macad::Occt::Prs3d_DatumParts thePart);
-	/// <summary>
+Macad::Occt::Prs3d_TextAspect^ TextAspect(Macad::Occt::Prs3d_DatumParts thePart);
+		/// <summary>
 	/// Sets text attributes for rendering labels.
 	/// </summary>
-	void SetTextAspect(Macad::Occt::Prs3d_TextAspect^ theTextAspect);
-	/// <summary>
+void SetTextAspect(Macad::Occt::Prs3d_TextAspect^ theTextAspect);
+		/// <summary>
 	/// Returns the point aspect of origin wireframe presentation
 	/// </summary>
-	Macad::Occt::Prs3d_PointAspect^ PointAspect();
-	/// <summary>
+Macad::Occt::Prs3d_PointAspect^ PointAspect();
+		/// <summary>
 	/// Returns the point aspect of origin wireframe presentation
 	/// </summary>
-	void SetPointAspect(Macad::Occt::Prs3d_PointAspect^ theAspect);
-	/// <summary>
+void SetPointAspect(Macad::Occt::Prs3d_PointAspect^ theAspect);
+		/// <summary>
 	/// Returns the arrow aspect of presentation.
 	/// </summary>
-	Macad::Occt::Prs3d_ArrowAspect^ ArrowAspect();
-	/// <summary>
+Macad::Occt::Prs3d_ArrowAspect^ ArrowAspect();
+		/// <summary>
 	/// Sets the arrow aspect of presentation
 	/// </summary>
-	void SetArrowAspect(Macad::Occt::Prs3d_ArrowAspect^ theAspect);
-	/// <summary>
+void SetArrowAspect(Macad::Occt::Prs3d_ArrowAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the given part is used in axes of aspect
 	/// </summary>
-	bool DrawDatumPart(Macad::Occt::Prs3d_DatumParts thePart);
-	/// <summary>
+bool DrawDatumPart(Macad::Occt::Prs3d_DatumParts thePart);
+		/// <summary>
 	/// Sets the axes used in the datum aspect
 	/// </summary>
-	void SetDrawDatumAxes(Macad::Occt::Prs3d_DatumAxes theType);
-	/// <summary>
+void SetDrawDatumAxes(Macad::Occt::Prs3d_DatumAxes theType);
+		/// <summary>
 	/// Returns axes used in the datum aspect
 	/// </summary>
-	Macad::Occt::Prs3d_DatumAxes DatumAxes();
-	/// <summary>
+Macad::Occt::Prs3d_DatumAxes DatumAxes();
+		/// <summary>
 	/// Returns the attribute of the datum type
 	/// </summary>
-	double Attribute(Macad::Occt::Prs3d_DatumAttribute theType);
-	/// <summary>
+double Attribute(Macad::Occt::Prs3d_DatumAttribute theType);
+		/// <summary>
 	/// Sets the attribute of the datum type
 	/// </summary>
-	void SetAttribute(Macad::Occt::Prs3d_DatumAttribute theType, double theValue);
-	/// <summary>
+void SetAttribute(Macad::Occt::Prs3d_DatumAttribute theType, double theValue);
+		/// <summary>
 	/// Returns the length of the displayed first axis.
 	/// </summary>
-	double AxisLength(Macad::Occt::Prs3d_DatumParts thePart);
-	/// <summary>
+double AxisLength(Macad::Occt::Prs3d_DatumParts thePart);
+		/// <summary>
 	/// Sets the lengths of the three axes.
 	/// </summary>
-	void SetAxisLength(double theL1, double theL2, double theL3);
-	/// <summary>
+void SetAxisLength(double theL1, double theL2, double theL3);
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// true if axes labels are drawn; TRUE by default.
 	/// </returns>
-	bool ToDrawLabels();
-	/// <summary>
+bool ToDrawLabels();
+		/// <summary>
 	/// Sets option to draw or not to draw text labels for axes
 	/// </summary>
-	void SetDrawLabels(bool theToDraw);
+void SetDrawLabels(bool theToDraw);
 	void SetToDrawLabels(bool theToDraw);
-	/// <summary>
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// true if axes arrows are drawn; TRUE by default.
 	/// </returns>
-	bool ToDrawArrows();
-	/// <summary>
+bool ToDrawArrows();
+		/// <summary>
 	/// Sets option to draw or not arrows for axes
 	/// </summary>
-	void SetDrawArrows(bool theToDraw);
-	/// <summary>
+void SetDrawArrows(bool theToDraw);
+		/// <summary>
 	/// Performs deep copy of attributes from another aspect instance.
 	/// </summary>
-	void CopyAspectsFrom(Macad::Occt::Prs3d_DatumAspect^ theOther);
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
+void CopyAspectsFrom(Macad::Occt::Prs3d_DatumAspect^ theOther);
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
+		/// <summary>
 	/// Returns type of arrow for a type of axis
 	/// </summary>
-	static Macad::Occt::Prs3d_DatumParts ArrowPartForAxis(Macad::Occt::Prs3d_DatumParts thePart);
-	/// <summary>
+static Macad::Occt::Prs3d_DatumParts ArrowPartForAxis(Macad::Occt::Prs3d_DatumParts thePart);
+		/// <summary>
 	/// Returns the text attributes for rendering labels.
 	/// </summary>
-	Macad::Occt::Prs3d_TextAspect^ TextAspect();
+Macad::Occt::Prs3d_TextAspect^ TextAspect();
 }; // class Prs3d_DatumAspect
 
 //---------------------------------------------------------------------
@@ -1175,128 +1127,122 @@ public:
 	static Macad::Occt::Prs3d_DimensionAspect^ CreateDowncasted(::Prs3d_DimensionAspect* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an empty framework to define the display of dimensions.
 	/// </summary>
-	Prs3d_DimensionAspect();
+Prs3d_DimensionAspect();
 	Prs3d_DimensionAspect(Macad::Occt::Prs3d_DimensionAspect^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the settings for the display of lines used in presentation of dimensions.
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ LineAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ LineAspect();
+		/// <summary>
 	/// Sets the display attributes of lines used in presentation of dimensions.
 	/// </summary>
-	void SetLineAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
-	/// <summary>
+void SetLineAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
+		/// <summary>
 	/// Returns the settings for the display of text used in presentation of dimensions.
 	/// </summary>
-	Macad::Occt::Prs3d_TextAspect^ TextAspect();
-	/// <summary>
+Macad::Occt::Prs3d_TextAspect^ TextAspect();
+		/// <summary>
 	/// Sets the display attributes of text used in presentation of dimensions.
 	/// </summary>
-	void SetTextAspect(Macad::Occt::Prs3d_TextAspect^ theAspect);
-	/// <summary>
+void SetTextAspect(Macad::Occt::Prs3d_TextAspect^ theAspect);
+		/// <summary>
 	/// Check if text for dimension label is 3d.
 	/// </summary>
-	bool IsText3d();
-	/// <summary>
+bool IsText3d();
+		/// <summary>
 	/// Sets type of text.
 	/// </summary>
-	void MakeText3d(bool isText3d);
-	/// <summary>
+void MakeText3d(bool isText3d);
+		/// <summary>
 	/// Check if 3d text for dimension label is shaded.
 	/// </summary>
-	bool IsTextShaded();
-	/// <summary>
+bool IsTextShaded();
+		/// <summary>
 	/// Turns on/off text shading for 3d text.
 	/// </summary>
-	void MakeTextShaded(bool theIsTextShaded);
-	/// <summary>
+void MakeTextShaded(bool theIsTextShaded);
+		/// <summary>
 	/// Gets type of arrows.
 	/// </summary>
-	bool IsArrows3d();
-	/// <summary>
+bool IsArrows3d();
+		/// <summary>
 	/// Sets type of arrows.
 	/// </summary>
-	void MakeArrows3d(bool theIsArrows3d);
-	/// <summary>
+void MakeArrows3d(bool theIsArrows3d);
+		/// <summary>
 	/// Shows if Units are to be displayed along with dimension value.
 	/// </summary>
-	bool IsUnitsDisplayed();
-	/// <summary>
+bool IsUnitsDisplayed();
+		/// <summary>
 	/// Specifies whether the units string should be displayed
 	/// along with value label or not.
 	/// </summary>
-	void MakeUnitsDisplayed(bool theIsDisplayed);
-	/// <summary>
+void MakeUnitsDisplayed(bool theIsDisplayed);
+		/// <summary>
 	/// Sets orientation of arrows (external or internal).
 	/// By default orientation is chosen automatically according to situation and text label size.
 	/// </summary>
-	void SetArrowOrientation(Macad::Occt::Prs3d_DimensionArrowOrientation theArrowOrient);
-	/// <summary>
+void SetArrowOrientation(Macad::Occt::Prs3d_DimensionArrowOrientation theArrowOrient);
+		/// <summary>
 	/// Gets orientation of arrows (external or internal).
 	/// </summary>
-	Macad::Occt::Prs3d_DimensionArrowOrientation ArrowOrientation();
-	/// <summary>
+Macad::Occt::Prs3d_DimensionArrowOrientation ArrowOrientation();
+		/// <summary>
 	/// Sets vertical text alignment for text label.
 	/// </summary>
-	void SetTextVerticalPosition(Macad::Occt::Prs3d_DimensionTextVerticalPosition thePosition);
-	/// <summary>
+void SetTextVerticalPosition(Macad::Occt::Prs3d_DimensionTextVerticalPosition thePosition);
+		/// <summary>
 	/// Gets vertical text alignment for text label.
 	/// </summary>
-	Macad::Occt::Prs3d_DimensionTextVerticalPosition TextVerticalPosition();
-	/// <summary>
+Macad::Occt::Prs3d_DimensionTextVerticalPosition TextVerticalPosition();
+		/// <summary>
 	/// Sets horizontal text alignment for text label.
 	/// </summary>
-	void SetTextHorizontalPosition(Macad::Occt::Prs3d_DimensionTextHorizontalPosition thePosition);
-	/// <summary>
+void SetTextHorizontalPosition(Macad::Occt::Prs3d_DimensionTextHorizontalPosition thePosition);
+		/// <summary>
 	/// Gets horizontal text alignment for text label.
 	/// </summary>
-	Macad::Occt::Prs3d_DimensionTextHorizontalPosition TextHorizontalPosition();
-	/// <summary>
+Macad::Occt::Prs3d_DimensionTextHorizontalPosition TextHorizontalPosition();
+		/// <summary>
 	/// Returns the settings for displaying arrows.
 	/// </summary>
-	Macad::Occt::Prs3d_ArrowAspect^ ArrowAspect();
-	/// <summary>
+Macad::Occt::Prs3d_ArrowAspect^ ArrowAspect();
+		/// <summary>
 	/// Sets the display attributes of arrows used in presentation of dimensions.
 	/// </summary>
-	void SetArrowAspect(Macad::Occt::Prs3d_ArrowAspect^ theAspect);
-	/// <summary>
+void SetArrowAspect(Macad::Occt::Prs3d_ArrowAspect^ theAspect);
+		/// <summary>
 	/// Sets the same color for all parts of dimension: lines, arrows and text.
 	/// </summary>
-	void SetCommonColor(Macad::Occt::Quantity_Color^ theColor);
-	/// <summary>
+void SetCommonColor(Macad::Occt::Quantity_Color^ theColor);
+		/// <summary>
 	/// Sets extension size.
 	/// </summary>
-	void SetExtensionSize(double theSize);
-	/// <summary>
+void SetExtensionSize(double theSize);
+		/// <summary>
 	/// Returns extension size.
 	/// </summary>
-	double ExtensionSize();
-	/// <summary>
+double ExtensionSize();
+		/// <summary>
 	/// Set size for arrow tail (extension without text).
 	/// </summary>
-	void SetArrowTailSize(double theSize);
-	/// <summary>
+void SetArrowTailSize(double theSize);
+		/// <summary>
 	/// Returns arrow tail size.
 	/// </summary>
-	double ArrowTailSize();
-	/// <summary>
+double ArrowTailSize();
+		/// <summary>
 	/// Sets "sprintf"-syntax format for formatting dimension value labels.
 	/// </summary>
-	void SetValueStringFormat(Macad::Occt::TCollection_AsciiString^ theFormat);
-	/// <summary>
+void SetValueStringFormat(Macad::Occt::TCollection_AsciiString^ theFormat);
+		/// <summary>
 	/// Returns format.
 	/// </summary>
-	Macad::Occt::TCollection_AsciiString^ ValueStringFormat();
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
+Macad::Occt::TCollection_AsciiString^ ValueStringFormat();
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class Prs3d_DimensionAspect
 
@@ -1341,135 +1287,135 @@ public:
 	static Macad::Occt::Prs3d_Drawer^ CreateDowncasted(::Prs3d_Drawer* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Default constructor.
 	/// </summary>
-	Prs3d_Drawer();
+Prs3d_Drawer();
 	Prs3d_Drawer(Macad::Occt::Prs3d_Drawer^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the type of chordal deflection.
 	/// This indicates whether the deflection value is absolute or relative to the size of the object.
 	/// </summary>
-	void SetTypeOfDeflection(Macad::Occt::Aspect_TypeOfDeflection theTypeOfDeflection);
-	/// <summary>
+void SetTypeOfDeflection(Macad::Occt::Aspect_TypeOfDeflection theTypeOfDeflection);
+		/// <summary>
 	/// Returns the type of chordal deflection.
 	/// This indicates whether the deflection value is absolute or relative to the size of the object.
 	/// </summary>
-	Macad::Occt::Aspect_TypeOfDeflection TypeOfDeflection();
-	/// <summary>
+Macad::Occt::Aspect_TypeOfDeflection TypeOfDeflection();
+		/// <summary>
 	/// Returns true if the drawer has a type of deflection setting active.
 	/// </summary>
-	bool HasOwnTypeOfDeflection();
-	/// <summary>
+bool HasOwnTypeOfDeflection();
+		/// <summary>
 	/// Resets HasOwnTypeOfDeflection() flag, e.g. undoes SetTypeOfDeflection().
 	/// </summary>
-	void UnsetOwnTypeOfDeflection();
-	/// <summary>
+void UnsetOwnTypeOfDeflection();
+		/// <summary>
 	/// Defines the maximal chordial deviation when drawing any curve.
 	/// Even if the type of deviation is set to TOD_Relative, this value is used by:
 	/// Prs3d_DeflectionCurve
 	/// Prs3d_WFDeflectionSurface
 	/// Prs3d_WFDeflectionRestrictedFace
 	/// </summary>
-	void SetMaximalChordialDeviation(double theChordialDeviation);
-	/// <summary>
+void SetMaximalChordialDeviation(double theChordialDeviation);
+		/// <summary>
 	/// Returns the maximal chordal deviation. The default value is 0.1.
 	/// Drawings of curves or patches are made with respect to an absolute maximal chordal deviation.
 	/// </summary>
-	double MaximalChordialDeviation();
-	/// <summary>
+double MaximalChordialDeviation();
+		/// <summary>
 	/// Returns true if the drawer has a maximal chordial deviation setting active.
 	/// </summary>
-	bool HasOwnMaximalChordialDeviation();
-	/// <summary>
+bool HasOwnMaximalChordialDeviation();
+		/// <summary>
 	/// Resets HasOwnMaximalChordialDeviation() flag, e.g. undoes SetMaximalChordialDeviation().
 	/// </summary>
-	void UnsetOwnMaximalChordialDeviation();
-	/// <summary>
+void UnsetOwnMaximalChordialDeviation();
+		/// <summary>
 	/// Sets the type of HLR algorithm used by drawer's interactive objects
 	/// </summary>
-	void SetTypeOfHLR(Macad::Occt::Prs3d_TypeOfHLR theTypeOfHLR);
-	/// <summary>
+void SetTypeOfHLR(Macad::Occt::Prs3d_TypeOfHLR theTypeOfHLR);
+		/// <summary>
 	/// Returns the type of HLR algorithm currently in use.
 	/// </summary>
-	Macad::Occt::Prs3d_TypeOfHLR TypeOfHLR();
-	/// <summary>
+Macad::Occt::Prs3d_TypeOfHLR TypeOfHLR();
+		/// <summary>
 	/// Returns true if the type of HLR is not equal to Prs3d_TOH_NotSet.
 	/// </summary>
-	bool HasOwnTypeOfHLR();
-	/// <summary>
+bool HasOwnTypeOfHLR();
+		/// <summary>
 	/// Defines the maximum value allowed for the first and last
 	/// parameters of an infinite curve.
 	/// </summary>
-	void SetMaximalParameterValue(double theValue);
-	/// <summary>
+void SetMaximalParameterValue(double theValue);
+		/// <summary>
 	/// Sets the maximum value allowed for the first and last
 	/// parameters of an infinite curve. By default, this value is 500000.
 	/// </summary>
-	double MaximalParameterValue();
-	/// <summary>
+double MaximalParameterValue();
+		/// <summary>
 	/// Returns true if the drawer has a maximum value allowed for the first and last
 	/// parameters of an infinite curve setting active.
 	/// </summary>
-	bool HasOwnMaximalParameterValue();
-	/// <summary>
+bool HasOwnMaximalParameterValue();
+		/// <summary>
 	/// Resets HasOwnMaximalParameterValue() flag, e.g. undoes SetMaximalParameterValue().
 	/// </summary>
-	void UnsetOwnMaximalParameterValue();
-	/// <summary>
+void UnsetOwnMaximalParameterValue();
+		/// <summary>
 	/// Sets IsoOnPlane on or off by setting the parameter theIsEnabled to true or false.
 	/// </summary>
-	void SetIsoOnPlane(bool theIsEnabled);
-	/// <summary>
+void SetIsoOnPlane(bool theIsEnabled);
+		/// <summary>
 	/// Returns True if the drawing of isos on planes is enabled.
 	/// </summary>
-	bool IsoOnPlane();
-	/// <summary>
+bool IsoOnPlane();
+		/// <summary>
 	/// Returns true if the drawer has IsoOnPlane setting active.
 	/// </summary>
-	bool HasOwnIsoOnPlane();
-	/// <summary>
+bool HasOwnIsoOnPlane();
+		/// <summary>
 	/// Resets HasOwnIsoOnPlane() flag, e.g. undoes SetIsoOnPlane().
 	/// </summary>
-	void UnsetOwnIsoOnPlane();
-	/// <summary>
+void UnsetOwnIsoOnPlane();
+		/// <summary>
 	/// Returns True if the drawing of isos on triangulation is enabled.
 	/// </summary>
-	bool IsoOnTriangulation();
-	/// <summary>
+bool IsoOnTriangulation();
+		/// <summary>
 	/// Returns true if the drawer has IsoOnTriangulation setting active.
 	/// </summary>
-	bool HasOwnIsoOnTriangulation();
-	/// <summary>
+bool HasOwnIsoOnTriangulation();
+		/// <summary>
 	/// Resets HasOwnIsoOnTriangulation() flag, e.g. undoes SetIsoOnTriangulation().
 	/// </summary>
-	void UnsetOwnIsoOnTriangulation();
-	/// <summary>
+void UnsetOwnIsoOnTriangulation();
+		/// <summary>
 	/// Enables or disables isolines on triangulation by setting the parameter theIsEnabled to true or false.
 	/// </summary>
-	void SetIsoOnTriangulation(bool theToEnable);
-	/// <summary>
+void SetIsoOnTriangulation(bool theToEnable);
+		/// <summary>
 	/// Sets the discretisation parameter theValue.
 	/// </summary>
-	void SetDiscretisation(int theValue);
-	/// <summary>
+void SetDiscretisation(int theValue);
+		/// <summary>
 	/// Returns the discretisation setting.
 	/// </summary>
-	int Discretisation();
-	/// <summary>
+int Discretisation();
+		/// <summary>
 	/// Returns true if the drawer has discretisation setting active.
 	/// </summary>
-	bool HasOwnDiscretisation();
-	/// <summary>
+bool HasOwnDiscretisation();
+		/// <summary>
 	/// Resets HasOwnDiscretisation() flag, e.g. undoes SetDiscretisation().
 	/// </summary>
-	void UnsetOwnDiscretisation();
-	/// <summary>
+void UnsetOwnDiscretisation();
+		/// <summary>
 	/// Sets the deviation coefficient theCoefficient.
 	/// Also sets the hasOwnDeviationCoefficient flag to Standard_True and myPreviousDeviationCoefficient
 	/// </summary>
-	void SetDeviationCoefficient(double theCoefficient);
-	/// <summary>
+void SetDeviationCoefficient(double theCoefficient);
+		/// <summary>
 	/// Returns the deviation coefficient.
 	/// Drawings of curves or patches are made with respect
 	/// to a maximal chordal deviation. A Deviation coefficient
@@ -1487,71 +1433,71 @@ public:
 	/// for a relative deviation. This deviation will be:
 	/// SizeOfObject * DeviationCoefficient.
 	/// </summary>
-	double DeviationCoefficient();
-	/// <summary>
+double DeviationCoefficient();
+		/// <summary>
 	/// Resets HasOwnDeviationCoefficient() flag, e.g. undoes previous SetDeviationCoefficient().
 	/// </summary>
-	void SetDeviationCoefficient();
-	/// <summary>
+void SetDeviationCoefficient();
+		/// <summary>
 	/// Returns true if there is a local setting for deviation
 	/// coefficient in this framework for a specific interactive object.
 	/// </summary>
-	bool HasOwnDeviationCoefficient();
-	/// <summary>
+bool HasOwnDeviationCoefficient();
+		/// <summary>
 	/// Saves the previous value used for the chordal
 	/// deviation coefficient.
 	/// </summary>
-	double PreviousDeviationCoefficient();
-	/// <summary>
+double PreviousDeviationCoefficient();
+		/// <summary>
 	/// Updates the previous value used for the chordal deviation coefficient to the current state.
 	/// </summary>
-	void UpdatePreviousDeviationCoefficient();
-	/// <summary>
+void UpdatePreviousDeviationCoefficient();
+		/// <summary>
 	/// Sets the deviation angle theAngle.
 	/// Also sets the hasOwnDeviationAngle flag to Standard_True, and myPreviousDeviationAngle.
 	/// </summary>
-	void SetDeviationAngle(double theAngle);
-	/// <summary>
+void SetDeviationAngle(double theAngle);
+		/// <summary>
 	/// Returns the value for deviation angle in radians, 20 * M_PI / 180 by default.
 	/// </summary>
-	double DeviationAngle();
-	/// <summary>
+double DeviationAngle();
+		/// <summary>
 	/// Resets HasOwnDeviationAngle() flag, e.g. undoes previous SetDeviationAngle().
 	/// </summary>
-	void SetDeviationAngle();
-	/// <summary>
+void SetDeviationAngle();
+		/// <summary>
 	/// Returns true if there is a local setting for deviation
 	/// angle in this framework for a specific interactive object.
 	/// </summary>
-	bool HasOwnDeviationAngle();
-	/// <summary>
+bool HasOwnDeviationAngle();
+		/// <summary>
 	/// Returns the previous deviation angle
 	/// </summary>
-	double PreviousDeviationAngle();
-	/// <summary>
+double PreviousDeviationAngle();
+		/// <summary>
 	/// Updates the previous deviation angle to the current value
 	/// </summary>
-	void UpdatePreviousDeviationAngle();
-	/// <summary>
+void UpdatePreviousDeviationAngle();
+		/// <summary>
 	/// Sets IsAutoTriangulated on or off by setting the parameter theIsEnabled to true or false.
 	/// If this flag is True automatic re-triangulation with deflection-check logic will be applied.
 	/// Else this feature will be disable and triangulation is expected to be computed by application itself
 	/// and no shading presentation at all if unavailable.
 	/// </summary>
-	void SetAutoTriangulation(bool theIsEnabled);
-	/// <summary>
+void SetAutoTriangulation(bool theIsEnabled);
+		/// <summary>
 	/// Returns True if automatic triangulation is enabled.
 	/// </summary>
-	bool IsAutoTriangulation();
-	/// <summary>
+bool IsAutoTriangulation();
+		/// <summary>
 	/// Returns true if the drawer has IsoOnPlane setting active.
 	/// </summary>
-	bool HasOwnIsAutoTriangulation();
-	/// <summary>
+bool HasOwnIsAutoTriangulation();
+		/// <summary>
 	/// Resets HasOwnIsAutoTriangulation() flag, e.g. undoes SetAutoTriangulation().
 	/// </summary>
-	void UnsetOwnIsAutoTriangulation();
-	/// <summary>
+void UnsetOwnIsAutoTriangulation();
+		/// <summary>
 	/// Defines the attributes which are used when drawing an
 	/// U isoparametric curve of a face. Defines the number
 	/// of U isoparametric curves to be drawn for a single face.
@@ -1566,14 +1512,14 @@ public:
 	/// Prs3d_WFDeflectionSurface
 	/// Prs3d_WFDeflectionRestrictedFace
 	/// </summary>
-	Macad::Occt::Prs3d_IsoAspect^ UIsoAspect();
+Macad::Occt::Prs3d_IsoAspect^ UIsoAspect();
 	void SetUIsoAspect(Macad::Occt::Prs3d_IsoAspect^ theAspect);
-	/// <summary>
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// UIso aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnUIsoAspect();
-	/// <summary>
+bool HasOwnUIsoAspect();
+		/// <summary>
 	/// Defines the attributes which are used when drawing an
 	/// V isoparametric curve of a face. Defines the number
 	/// of V isoparametric curves to be drawn for a single face.
@@ -1588,17 +1534,17 @@ public:
 	/// Prs3d_WFDeflectionSurface
 	/// Prs3d_WFDeflectionRestrictedFace
 	/// </summary>
-	Macad::Occt::Prs3d_IsoAspect^ VIsoAspect();
-	/// <summary>
+Macad::Occt::Prs3d_IsoAspect^ VIsoAspect();
+		/// <summary>
 	/// Sets the appearance of V isoparameters - theAspect.
 	/// </summary>
-	void SetVIsoAspect(Macad::Occt::Prs3d_IsoAspect^ theAspect);
-	/// <summary>
+void SetVIsoAspect(Macad::Occt::Prs3d_IsoAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// VIso aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnVIsoAspect();
-	/// <summary>
+bool HasOwnVIsoAspect();
+		/// <summary>
 	/// Returns wire aspect settings.
 	/// The LineAspect for the free boundaries can be edited.
 	/// The default values are:
@@ -1607,61 +1553,61 @@ public:
 	/// Width: 1.0
 	/// These attributes are used by the algorithm Prs3d_WFShape.
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ WireAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ WireAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for display of wires.
 	/// </summary>
-	void SetWireAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
-	/// <summary>
+void SetWireAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// wire aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnWireAspect();
-	/// <summary>
+bool HasOwnWireAspect();
+		/// <summary>
 	/// Sets WireDraw on or off by setting the parameter theIsEnabled to true or false.
 	/// </summary>
-	void SetWireDraw(bool theIsEnabled);
-	/// <summary>
+void SetWireDraw(bool theIsEnabled);
+		/// <summary>
 	/// Returns True if the drawing of the wire is enabled.
 	/// </summary>
-	bool WireDraw();
-	/// <summary>
+bool WireDraw();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// "draw wires" flag that overrides the one in the link.
 	/// </summary>
-	bool HasOwnWireDraw();
-	/// <summary>
+bool HasOwnWireDraw();
+		/// <summary>
 	/// Resets HasOwnWireDraw() flag, e.g. undoes SetWireDraw().
 	/// </summary>
-	void UnsetOwnWireDraw();
-	/// <summary>
+void UnsetOwnWireDraw();
+		/// <summary>
 	/// Returns the point aspect setting. The default values are
 	/// Color: Quantity_NOC_YELLOW
 	/// Type of marker: Aspect_TOM_PLUS
 	/// Scale: 1.0
 	/// These attributes are used by the algorithms Prs3d_Point.
 	/// </summary>
-	Macad::Occt::Prs3d_PointAspect^ PointAspect();
-	/// <summary>
+Macad::Occt::Prs3d_PointAspect^ PointAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for display attributes of points
 	/// </summary>
-	void SetPointAspect(Macad::Occt::Prs3d_PointAspect^ theAspect);
-	/// <summary>
+void SetPointAspect(Macad::Occt::Prs3d_PointAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// point aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnPointAspect();
-	/// <summary>
+bool HasOwnPointAspect();
+		/// <summary>
 	/// Sets own point aspect.
 	/// Returns FALSE if the drawer already has its own attribute for point aspect.
 	/// </summary>
-	bool SetupOwnPointAspect(Macad::Occt::Prs3d_Drawer^ theDefaults);
-	/// <summary>
+bool SetupOwnPointAspect(Macad::Occt::Prs3d_Drawer^ theDefaults);
+		/// <summary>
 	/// Sets own point aspect.
 	/// Returns FALSE if the drawer already has its own attribute for point aspect.
 	/// </summary>
-	bool SetupOwnPointAspect();
-	/// <summary>
+bool SetupOwnPointAspect();
+		/// <summary>
 	/// Returns settings for line aspects.
 	/// These settings can be edited. The default values are:
 	/// Color: Quantity_NOC_YELLOW
@@ -1672,52 +1618,52 @@ public:
 	/// Prs3d_Line
 	/// Prs3d_HLRShape
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ LineAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ LineAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for display attributes of lines.
 	/// </summary>
-	void SetLineAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
-	/// <summary>
+void SetLineAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// line aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnLineAspect();
-	/// <summary>
+bool HasOwnLineAspect();
+		/// <summary>
 	/// Sets own line aspects.
 	/// Returns FALSE if own line aspect are already set.
 	/// </summary>
-	bool SetOwnLineAspects(Macad::Occt::Prs3d_Drawer^ theDefaults);
-	/// <summary>
+bool SetOwnLineAspects(Macad::Occt::Prs3d_Drawer^ theDefaults);
+		/// <summary>
 	/// Sets own line aspects.
 	/// Returns FALSE if own line aspect are already set.
 	/// </summary>
-	bool SetOwnLineAspects();
-	/// <summary>
+bool SetOwnLineAspects();
+		/// <summary>
 	/// Sets own line aspects for datums.
 	/// Returns FALSE if own line for datums are already set.
 	/// </summary>
-	bool SetOwnDatumAspects(Macad::Occt::Prs3d_Drawer^ theDefaults);
-	/// <summary>
+bool SetOwnDatumAspects(Macad::Occt::Prs3d_Drawer^ theDefaults);
+		/// <summary>
 	/// Sets own line aspects for datums.
 	/// Returns FALSE if own line for datums are already set.
 	/// </summary>
-	bool SetOwnDatumAspects();
-	/// <summary>
+bool SetOwnDatumAspects();
+		/// <summary>
 	/// Returns settings for text aspect.
 	/// These settings can be edited. The default value is:
 	/// - Color: Quantity_NOC_YELLOW
 	/// </summary>
-	Macad::Occt::Prs3d_TextAspect^ TextAspect();
-	/// <summary>
+Macad::Occt::Prs3d_TextAspect^ TextAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for display attributes of text.
 	/// </summary>
-	void SetTextAspect(Macad::Occt::Prs3d_TextAspect^ theAspect);
-	/// <summary>
+void SetTextAspect(Macad::Occt::Prs3d_TextAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// text aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnTextAspect();
-	/// <summary>
+bool HasOwnTextAspect();
+		/// <summary>
 	/// Returns settings for shading aspects.
 	/// These settings can be edited. The default values are:
 	/// -   Color: Quantity_NOC_YELLOW
@@ -1728,145 +1674,145 @@ public:
 	/// Reflection of light in each projector perspective is then calculated for each of the
 	/// resultant triangular planes.
 	/// </summary>
-	Macad::Occt::Prs3d_ShadingAspect^ ShadingAspect();
-	/// <summary>
+Macad::Occt::Prs3d_ShadingAspect^ ShadingAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for display attributes of shading.
 	/// </summary>
-	void SetShadingAspect(Macad::Occt::Prs3d_ShadingAspect^ theAspect);
-	/// <summary>
+void SetShadingAspect(Macad::Occt::Prs3d_ShadingAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// shading aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnShadingAspect();
-	/// <summary>
+bool HasOwnShadingAspect();
+		/// <summary>
 	/// Sets own shading aspect.
 	/// Returns FALSE if the drawer already has its own attribute for shading aspect.
 	/// </summary>
-	bool SetupOwnShadingAspect(Macad::Occt::Prs3d_Drawer^ theDefaults);
-	/// <summary>
+bool SetupOwnShadingAspect(Macad::Occt::Prs3d_Drawer^ theDefaults);
+		/// <summary>
 	/// Sets own shading aspect.
 	/// Returns FALSE if the drawer already has its own attribute for shading aspect.
 	/// </summary>
-	bool SetupOwnShadingAspect();
-	/// <summary>
+bool SetupOwnShadingAspect();
+		/// <summary>
 	/// Returns settings for seen line aspects.
 	/// These settings can be edited. The default values are:
 	/// Color: Quantity_NOC_YELLOW
 	/// Type of line: Aspect_TOL_SOLID
 	/// Width: 1.0
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ SeenLineAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ SeenLineAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for the display of seen lines in hidden line removal mode.
 	/// </summary>
-	void SetSeenLineAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
-	/// <summary>
+void SetSeenLineAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// seen line aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnSeenLineAspect();
-	/// <summary>
+bool HasOwnSeenLineAspect();
+		/// <summary>
 	/// Returns settings for the appearance of planes.
 	/// </summary>
-	Macad::Occt::Prs3d_PlaneAspect^ PlaneAspect();
-	/// <summary>
+Macad::Occt::Prs3d_PlaneAspect^ PlaneAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for the display of planes.
 	/// </summary>
-	void SetPlaneAspect(Macad::Occt::Prs3d_PlaneAspect^ theAspect);
-	/// <summary>
+void SetPlaneAspect(Macad::Occt::Prs3d_PlaneAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// plane aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnPlaneAspect();
-	/// <summary>
+bool HasOwnPlaneAspect();
+		/// <summary>
 	/// Returns the attributes for display of arrows.
 	/// </summary>
-	Macad::Occt::Prs3d_ArrowAspect^ ArrowAspect();
-	/// <summary>
+Macad::Occt::Prs3d_ArrowAspect^ ArrowAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for display attributes of arrows.
 	/// </summary>
-	void SetArrowAspect(Macad::Occt::Prs3d_ArrowAspect^ theAspect);
-	/// <summary>
+void SetArrowAspect(Macad::Occt::Prs3d_ArrowAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// arrow aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnArrowAspect();
-	/// <summary>
+bool HasOwnArrowAspect();
+		/// <summary>
 	/// Enables the drawing of an arrow at the end of each line.
 	/// By default the arrows are not drawn.
 	/// </summary>
-	void SetLineArrowDraw(bool theIsEnabled);
-	/// <summary>
+void SetLineArrowDraw(bool theIsEnabled);
+		/// <summary>
 	/// Returns True if drawing an arrow at the end of each edge is enabled
 	/// and False otherwise (the default).
 	/// </summary>
-	bool LineArrowDraw();
-	/// <summary>
+bool LineArrowDraw();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// "draw arrow" flag that overrides the one in the link.
 	/// </summary>
-	bool HasOwnLineArrowDraw();
-	/// <summary>
+bool HasOwnLineArrowDraw();
+		/// <summary>
 	/// Reset HasOwnLineArrowDraw() flag, e.g. undoes SetLineArrowDraw().
 	/// </summary>
-	void UnsetOwnLineArrowDraw();
-	/// <summary>
+void UnsetOwnLineArrowDraw();
+		/// <summary>
 	/// Returns settings for hidden line aspects.
 	/// These settings can be edited. The default values are:
 	/// Color: Quantity_NOC_YELLOW
 	/// Type of line: Aspect_TOL_DASH
 	/// Width: 1.0
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ HiddenLineAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ HiddenLineAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for the display of hidden lines in hidden line removal mode.
 	/// </summary>
-	void SetHiddenLineAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
-	/// <summary>
+void SetHiddenLineAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// hidden lines aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnHiddenLineAspect();
-	/// <summary>
+bool HasOwnHiddenLineAspect();
+		/// <summary>
 	/// Returns Standard_True if the hidden lines are to be drawn.
 	/// By default the hidden lines are not drawn.
 	/// </summary>
-	bool DrawHiddenLine();
-	/// <summary>
+bool DrawHiddenLine();
+		/// <summary>
 	/// Enables the DrawHiddenLine function.
 	/// </summary>
-	void EnableDrawHiddenLine();
-	/// <summary>
+void EnableDrawHiddenLine();
+		/// <summary>
 	/// Disables the DrawHiddenLine function.
 	/// </summary>
-	void DisableDrawHiddenLine();
-	/// <summary>
+void DisableDrawHiddenLine();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// "draw hidden lines" flag that overrides the one in the link.
 	/// </summary>
-	bool HasOwnDrawHiddenLine();
-	/// <summary>
+bool HasOwnDrawHiddenLine();
+		/// <summary>
 	/// Resets HasOwnDrawHiddenLine() flag, e.g. unsets EnableDrawHiddenLine()/DisableDrawHiddenLine().
 	/// </summary>
-	void UnsetOwnDrawHiddenLine();
-	/// <summary>
+void UnsetOwnDrawHiddenLine();
+		/// <summary>
 	/// Returns settings for the appearance of vectors.
 	/// These settings can be edited. The default values are:
 	/// Color: Quantity_NOC_SKYBLUE
 	/// Type of line: Aspect_TOL_SOLID
 	/// Width: 1.0
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ VectorAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ VectorAspect();
+		/// <summary>
 	/// Sets the modality theAspect for the display of vectors.
 	/// </summary>
-	void SetVectorAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
-	/// <summary>
+void SetVectorAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// vector aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnVectorAspect();
-	/// <summary>
+bool HasOwnVectorAspect();
+		/// <summary>
 	/// Sets the mode of visualization of vertices of a TopoDS_Shape instance.
 	/// By default, only stand-alone vertices (not belonging topologically to an edge) are drawn,
 	/// that corresponds to Prs3d_VDM_Standalone mode.
@@ -1874,35 +1820,35 @@ public:
 	/// To inherit this parameter from the global drawer instance ("the link") when it is present,
 	/// Prs3d_VDM_Inherited value should be used.
 	/// </summary>
-	void SetVertexDrawMode(Macad::Occt::Prs3d_VertexDrawMode theMode);
-	/// <summary>
+void SetVertexDrawMode(Macad::Occt::Prs3d_VertexDrawMode theMode);
+		/// <summary>
 	/// Returns the current mode of visualization of vertices of a TopoDS_Shape instance.
 	/// </summary>
-	Macad::Occt::Prs3d_VertexDrawMode VertexDrawMode();
-	/// <summary>
+Macad::Occt::Prs3d_VertexDrawMode VertexDrawMode();
+		/// <summary>
 	/// Returns true if the vertex draw mode is not equal to <b>Prs3d_VDM_Inherited</b>.
 	/// This means that individual vertex draw mode value (i.e. not inherited from the global
 	/// drawer) is used for a specific interactive object.
 	/// </summary>
-	bool HasOwnVertexDrawMode();
-	/// <summary>
+bool HasOwnVertexDrawMode();
+		/// <summary>
 	/// Returns settings for the appearance of datums.
 	/// These settings can be edited. The default values for the three axes are:
 	/// Color: Quantity_NOC_PEACHPUFF
 	/// Type of line: Aspect_TOL_SOLID
 	/// Width: 1.0
 	/// </summary>
-	Macad::Occt::Prs3d_DatumAspect^ DatumAspect();
-	/// <summary>
+Macad::Occt::Prs3d_DatumAspect^ DatumAspect();
+		/// <summary>
 	/// Sets the modality theAspect for the display of datums.
 	/// </summary>
-	void SetDatumAspect(Macad::Occt::Prs3d_DatumAspect^ theAspect);
-	/// <summary>
+void SetDatumAspect(Macad::Occt::Prs3d_DatumAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// datum aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnDatumAspect();
-	/// <summary>
+bool HasOwnDatumAspect();
+		/// <summary>
 	/// The LineAspect for the wire can be edited.
 	/// The default values are:
 	/// Color: Quantity_NOC_ORANGE
@@ -1910,23 +1856,23 @@ public:
 	/// Width: 1.0
 	/// These attributes are used by the algorithm Prs3d_WFShape.
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ SectionAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ SectionAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for display attributes of sections.
 	/// </summary>
-	void SetSectionAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
-	/// <summary>
+void SetSectionAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// section aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnSectionAspect();
-	/// <summary>
+bool HasOwnSectionAspect();
+		/// <summary>
 	/// Sets the parameter theAspect for the display of free boundaries.
 	/// The method sets aspect owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// </summary>
-	void SetFreeBoundaryAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
-	/// <summary>
+void SetFreeBoundaryAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
+		/// <summary>
 	/// Returns the values for presentation of free boundaries,
 	/// in other words, boundaries which are not shared.
 	/// The LineAspect for the  free boundaries can be edited.
@@ -1936,41 +1882,41 @@ public:
 	/// Width: 1.0
 	/// These attributes are used by the algorithm Prs3d_WFShape
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ FreeBoundaryAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ FreeBoundaryAspect();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// free boundaries aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnFreeBoundaryAspect();
-	/// <summary>
+bool HasOwnFreeBoundaryAspect();
+		/// <summary>
 	/// Enables or disables drawing of free boundaries for shading presentations.
 	/// The method sets drawing flag owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// theIsEnabled is a boolean flag indicating whether the free boundaries should be
 	/// drawn or not.
 	/// </summary>
-	void SetFreeBoundaryDraw(bool theIsEnabled);
-	/// <summary>
+void SetFreeBoundaryDraw(bool theIsEnabled);
+		/// <summary>
 	/// Returns True if the drawing of the free boundaries is enabled
 	/// True is the default setting.
 	/// </summary>
-	bool FreeBoundaryDraw();
-	/// <summary>
+bool FreeBoundaryDraw();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// "draw free boundaries" flag that overrides the one in the link.
 	/// </summary>
-	bool HasOwnFreeBoundaryDraw();
-	/// <summary>
+bool HasOwnFreeBoundaryDraw();
+		/// <summary>
 	/// Resets HasOwnFreeBoundaryDraw() flag, e.g. undoes SetFreeBoundaryDraw().
 	/// </summary>
-	void UnsetOwnFreeBoundaryDraw();
-	/// <summary>
+void UnsetOwnFreeBoundaryDraw();
+		/// <summary>
 	/// Sets the parameter theAspect for the display of shared boundaries.
 	/// The method sets aspect owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// </summary>
-	void SetUnFreeBoundaryAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
-	/// <summary>
+void SetUnFreeBoundaryAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
+		/// <summary>
 	/// Returns settings for shared boundary line aspects.
 	/// The LineAspect for the unfree boundaries can be edited.
 	/// The default values are:
@@ -1979,262 +1925,224 @@ public:
 	/// Width: 1.
 	/// These attributes are used by the algorithm Prs3d_WFShape
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ UnFreeBoundaryAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ UnFreeBoundaryAspect();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// unfree boundaries aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnUnFreeBoundaryAspect();
-	/// <summary>
+bool HasOwnUnFreeBoundaryAspect();
+		/// <summary>
 	/// Enables or disables drawing of shared boundaries for shading presentations.
 	/// The method sets drawing flag owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// theIsEnabled is a boolean flag indicating whether the shared boundaries should be drawn or not.
 	/// </summary>
-	void SetUnFreeBoundaryDraw(bool theIsEnabled);
-	/// <summary>
+void SetUnFreeBoundaryDraw(bool theIsEnabled);
+		/// <summary>
 	/// Returns True if the drawing of the shared boundaries is enabled.
 	/// True is the default setting.
 	/// </summary>
-	bool UnFreeBoundaryDraw();
-	/// <summary>
+bool UnFreeBoundaryDraw();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// "draw shared boundaries" flag that overrides the one in the link.
 	/// </summary>
-	bool HasOwnUnFreeBoundaryDraw();
-	/// <summary>
+bool HasOwnUnFreeBoundaryDraw();
+		/// <summary>
 	/// Resets HasOwnUnFreeBoundaryDraw() flag, e.g. undoes SetUnFreeBoundaryDraw().
 	/// </summary>
-	void UnsetOwnUnFreeBoundaryDraw();
-	/// <summary>
+void UnsetOwnUnFreeBoundaryDraw();
+		/// <summary>
 	/// Sets line aspect for face boundaries.
 	/// The method sets line aspect owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// theAspect is the line aspect that determines the look of the face boundaries.
 	/// </summary>
-	void SetFaceBoundaryAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
-	/// <summary>
+void SetFaceBoundaryAspect(Macad::Occt::Prs3d_LineAspect^ theAspect);
+		/// <summary>
 	/// Returns line aspect of face boundaries.
 	/// </summary>
-	Macad::Occt::Prs3d_LineAspect^ FaceBoundaryAspect();
-	/// <summary>
+Macad::Occt::Prs3d_LineAspect^ FaceBoundaryAspect();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// face boundaries aspect that overrides the one in the link.
 	/// </summary>
-	bool HasOwnFaceBoundaryAspect();
-	/// <summary>
+bool HasOwnFaceBoundaryAspect();
+		/// <summary>
 	/// Sets own face boundary aspect.
 	/// Returns FALSE if the drawer already has its own attribute for face boundary aspect.
 	/// </summary>
-	bool SetupOwnFaceBoundaryAspect(Macad::Occt::Prs3d_Drawer^ theDefaults);
-	/// <summary>
+bool SetupOwnFaceBoundaryAspect(Macad::Occt::Prs3d_Drawer^ theDefaults);
+		/// <summary>
 	/// Sets own face boundary aspect.
 	/// Returns FALSE if the drawer already has its own attribute for face boundary aspect.
 	/// </summary>
-	bool SetupOwnFaceBoundaryAspect();
-	/// <summary>
+bool SetupOwnFaceBoundaryAspect();
+		/// <summary>
 	/// Enables or disables face boundary drawing for shading presentations.
 	/// The method sets drawing flag owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// theIsEnabled is a boolean flag indicating whether the face boundaries should be drawn or not.
 	/// </summary>
-	void SetFaceBoundaryDraw(bool theIsEnabled);
-	/// <summary>
+void SetFaceBoundaryDraw(bool theIsEnabled);
+		/// <summary>
 	/// Checks whether the face boundary drawing is enabled or not.
 	/// </summary>
-	bool FaceBoundaryDraw();
-	/// <summary>
+bool FaceBoundaryDraw();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// "draw face boundaries" flag that overrides the one in the link.
 	/// </summary>
-	bool HasOwnFaceBoundaryDraw();
-	/// <summary>
+bool HasOwnFaceBoundaryDraw();
+		/// <summary>
 	/// Resets HasOwnFaceBoundaryDraw() flag, e.g. undoes SetFaceBoundaryDraw().
 	/// </summary>
-	void UnsetOwnFaceBoundaryDraw();
-	/// <summary>
+void UnsetOwnFaceBoundaryDraw();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for face boundaries upper edge continuity class that overrides the one in the link.
 	/// </summary>
-	bool HasOwnFaceBoundaryUpperContinuity();
-	/// <summary>
+bool HasOwnFaceBoundaryUpperContinuity();
+		/// <summary>
 	/// Get the most edge continuity class; GeomAbs_CN by default (all edges).
 	/// </summary>
-	Macad::Occt::GeomAbs_Shape FaceBoundaryUpperContinuity();
-	/// <summary>
+Macad::Occt::GeomAbs_Shape FaceBoundaryUpperContinuity();
+		/// <summary>
 	/// Set the most edge continuity class for face boundaries.
 	/// </summary>
-	void SetFaceBoundaryUpperContinuity(Macad::Occt::GeomAbs_Shape theMostAllowedEdgeClass);
-	/// <summary>
+void SetFaceBoundaryUpperContinuity(Macad::Occt::GeomAbs_Shape theMostAllowedEdgeClass);
+		/// <summary>
 	/// Unset the most edge continuity class for face boundaries.
 	/// </summary>
-	void UnsetFaceBoundaryUpperContinuity();
-	/// <summary>
+void UnsetFaceBoundaryUpperContinuity();
+		/// <summary>
 	/// Returns settings for the appearance of dimensions.
 	/// </summary>
-	Macad::Occt::Prs3d_DimensionAspect^ DimensionAspect();
-	/// <summary>
+Macad::Occt::Prs3d_DimensionAspect^ DimensionAspect();
+		/// <summary>
 	/// Sets the settings for the appearance of dimensions.
 	/// The method sets aspect owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// </summary>
-	void SetDimensionAspect(Macad::Occt::Prs3d_DimensionAspect^ theAspect);
-	/// <summary>
+void SetDimensionAspect(Macad::Occt::Prs3d_DimensionAspect^ theAspect);
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// the appearance of dimensions that overrides the one in the link.
 	/// </summary>
-	bool HasOwnDimensionAspect();
-	/// <summary>
+bool HasOwnDimensionAspect();
+		/// <summary>
 	/// Sets dimension length model units for computing of dimension presentation.
 	/// The method sets value owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// </summary>
-	void SetDimLengthModelUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
-	/// <summary>
+void SetDimLengthModelUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
+		/// <summary>
 	/// Sets dimension angle model units for computing of dimension presentation.
 	/// The method sets value owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// </summary>
-	void SetDimAngleModelUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
-	/// <summary>
+void SetDimAngleModelUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
+		/// <summary>
 	/// Returns length model units for the dimension presentation.
 	/// </summary>
-	Macad::Occt::TCollection_AsciiString^ DimLengthModelUnits();
-	/// <summary>
+Macad::Occt::TCollection_AsciiString^ DimLengthModelUnits();
+		/// <summary>
 	/// Returns angle model units for the dimension presentation.
 	/// </summary>
-	Macad::Occt::TCollection_AsciiString^ DimAngleModelUnits();
-	/// <summary>
+Macad::Occt::TCollection_AsciiString^ DimAngleModelUnits();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// dimension length model units that overrides the one in the link.
 	/// </summary>
-	bool HasOwnDimLengthModelUnits();
-	/// <summary>
+bool HasOwnDimLengthModelUnits();
+		/// <summary>
 	/// Resets HasOwnDimLengthModelUnits() flag, e.g. undoes SetDimLengthModelUnits().
 	/// </summary>
-	void UnsetOwnDimLengthModelUnits();
-	/// <summary>
+void UnsetOwnDimLengthModelUnits();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// dimension angle model units that overrides the one in the link.
 	/// </summary>
-	bool HasOwnDimAngleModelUnits();
-	/// <summary>
+bool HasOwnDimAngleModelUnits();
+		/// <summary>
 	/// Resets HasOwnDimAngleModelUnits() flag, e.g. undoes SetDimAngleModelUnits().
 	/// </summary>
-	void UnsetOwnDimAngleModelUnits();
-	/// <summary>
+void UnsetOwnDimAngleModelUnits();
+		/// <summary>
 	/// Sets length units in which value for dimension presentation is displayed.
 	/// The method sets value owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// </summary>
-	void SetDimLengthDisplayUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
-	/// <summary>
+void SetDimLengthDisplayUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
+		/// <summary>
 	/// Sets angle units in which value for dimension presentation is displayed.
 	/// The method sets value owned by the drawer that will be used during
 	/// visualization instead of the one set in link.
 	/// </summary>
-	void SetDimAngleDisplayUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
-	/// <summary>
+void SetDimAngleDisplayUnits(Macad::Occt::TCollection_AsciiString^ theUnits);
+		/// <summary>
 	/// Returns length units in which dimension presentation is displayed.
 	/// </summary>
-	Macad::Occt::TCollection_AsciiString^ DimLengthDisplayUnits();
-	/// <summary>
+Macad::Occt::TCollection_AsciiString^ DimLengthDisplayUnits();
+		/// <summary>
 	/// Returns angle units in which dimension presentation is displayed.
 	/// </summary>
-	Macad::Occt::TCollection_AsciiString^ DimAngleDisplayUnits();
-	/// <summary>
+Macad::Occt::TCollection_AsciiString^ DimAngleDisplayUnits();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// length units in which dimension presentation is displayed
 	/// that overrides the one in the link.
 	/// </summary>
-	bool HasOwnDimLengthDisplayUnits();
-	/// <summary>
+bool HasOwnDimLengthDisplayUnits();
+		/// <summary>
 	/// Resets HasOwnDimLengthModelUnits() flag, e.g. undoes SetDimLengthDisplayUnits().
 	/// </summary>
-	void UnsetOwnDimLengthDisplayUnits();
-	/// <summary>
+void UnsetOwnDimLengthDisplayUnits();
+		/// <summary>
 	/// Returns true if the drawer has its own attribute for
 	/// angle units in which dimension presentation is displayed
 	/// that overrides the one in the link.
 	/// </summary>
-	bool HasOwnDimAngleDisplayUnits();
-	/// <summary>
+bool HasOwnDimAngleDisplayUnits();
+		/// <summary>
 	/// Resets HasOwnDimAngleDisplayUnits() flag, e.g. undoes SetDimLengthDisplayUnits().
 	/// </summary>
-	void UnsetOwnDimAngleDisplayUnits();
-	/// <summary>
+void UnsetOwnDimAngleDisplayUnits();
+		/// <summary>
 	/// Returns the drawer to which the current object references.
 	/// </summary>
-	Macad::Occt::Prs3d_Drawer^ Link();
-	/// <summary>
+Macad::Occt::Prs3d_Drawer^ Link();
+		/// <summary>
 	/// Returns true if the current object has a link on the other drawer.
 	/// </summary>
-	bool HasLink();
-	/// <summary>
+bool HasLink();
+		/// <summary>
 	/// Sets theDrawer as a link to which the current object references.
 	/// </summary>
-	void Link(Macad::Occt::Prs3d_Drawer^ theDrawer);
-	/// <summary>
+void Link(Macad::Occt::Prs3d_Drawer^ theDrawer);
+		/// <summary>
 	/// Sets theDrawer as a link to which the current object references.
 	/// </summary>
-	void SetLink(Macad::Occt::Prs3d_Drawer^ theDrawer);
-	/// <summary>
+void SetLink(Macad::Occt::Prs3d_Drawer^ theDrawer);
+		/// <summary>
 	/// Removes local attributes.
 	/// </summary>
-	void ClearLocalAttributes();
-	/// <summary>
-	/// Assign shader program for specified type of primitives.
-	/// </summary>
-	/// <param name="theProgram">
-	/// new program to set (might be NULL)
-	/// </param>
-	/// <param name="theAspect">
-	///  the type of primitives
-	/// </param>
-	/// <param name="theToOverrideDefaults">
-	/// if true then non-overridden attributes using defaults will be allocated and copied from the Link;
-	/// otherwise, only already customized attributes will be changed
-	/// </param>
-	/// <returns>
-	/// TRUE if presentation should be recomputed after creating aspects not previously customized (if theToOverrideDefaults is also TRUE)
-	/// </returns>
+void ClearLocalAttributes();
 	/* Method skipped due to unknown mapping: bool SetShaderProgram(Graphic3d_ShaderProgram theProgram, Graphic3d_GroupAspect theAspect, bool theToOverrideDefaults, ) */
-	/// <summary>
-	/// Assign shader program for specified type of primitives.
-	/// </summary>
-	/// <param name="theProgram">
-	/// new program to set (might be NULL)
-	/// </param>
-	/// <param name="theAspect">
-	///  the type of primitives
-	/// </param>
-	/// <param name="theToOverrideDefaults">
-	/// if true then non-overridden attributes using defaults will be allocated and copied from the Link;
-	/// otherwise, only already customized attributes will be changed
-	/// </param>
-	/// <returns>
-	/// TRUE if presentation should be recomputed after creating aspects not previously customized (if theToOverrideDefaults is also TRUE)
-	/// </returns>
 	/* Method skipped due to unknown mapping: bool SetShaderProgram(Graphic3d_ShaderProgram theProgram, Graphic3d_GroupAspect theAspect, bool theToOverrideDefaults, ) */
-	/// <summary>
+		/// <summary>
 	/// Sets Shading Model type for the shading aspect.
 	/// </summary>
-	bool SetShadingModel(Macad::Occt::Graphic3d_TypeOfShadingModel theModel, bool theToOverrideDefaults);
-	/// <summary>
+bool SetShadingModel(Macad::Occt::Graphic3d_TypeOfShadingModel theModel, bool theToOverrideDefaults);
+		/// <summary>
 	/// Sets Shading Model type for the shading aspect.
 	/// </summary>
-	bool SetShadingModel(Macad::Occt::Graphic3d_TypeOfShadingModel theModel);
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
+bool SetShadingModel(Macad::Occt::Graphic3d_TypeOfShadingModel theModel);
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
+		/// <summary>
 	/// </summary>
 	/// @name deprecated methods
-	void SetHLRAngle(double theAngle);
+void SetHLRAngle(double theAngle);
 	double HLRAngle();
 	void SetHLRAngle();
 	bool HasOwnHLRDeviationAngle();
@@ -2287,28 +2195,13 @@ public:
 public:
 	Prs3d();
 	Prs3d(Macad::Occt::Prs3d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// draws an arrow at a given location, with respect
 	/// to a given direction.
 	/// </summary>
-	static bool MatchSegment(double X, double Y, double Z, double aDistance, Macad::Occt::Pnt p1, Macad::Occt::Pnt p2, double% dist);
-	/// <summary>
-	/// Computes the absolute deflection value based on relative deflection Prs3d_Drawer::DeviationCoefficient().
-	/// </summary>
-	/// <param name="theBndMin">
-	/// [in] bounding box min corner
-	/// </param>
-	/// <param name="theBndMax">
-	/// [in] bounding box max corner
-	/// </param>
-	/// <param name="theDeviationCoefficient">
-	/// [in] relative deflection coefficient from Prs3d_Drawer::DeviationCoefficient()
-	/// </param>
-	/// <returns>
-	/// absolute deflection coefficient based on bounding box dimensions
-	/// </returns>
+static bool MatchSegment(double X, double Y, double Z, double aDistance, Macad::Occt::Pnt p1, Macad::Occt::Pnt p2, double% dist);
 	/* Method skipped due to unknown mapping: Standard_Real GetDeflection(Graphic3d_Vec3d theBndMin, Graphic3d_Vec3d theBndMax, Standard_Real theDeviationCoefficient, ) */
-	/// <summary>
+		/// <summary>
 	/// Computes the absolute deflection value based on relative deflection Prs3d_Drawer::DeviationCoefficient().
 	/// </summary>
 	/// <param name="theBndBox">
@@ -2323,8 +2216,8 @@ public:
 	/// <returns>
 	/// absolute deflection coefficient based on bounding box dimensions or theMaximalChordialDeviation if bounding box is Void or Infinite
 	/// </returns>
-	static double GetDeflection(Macad::Occt::Bnd_Box^ theBndBox, double theDeviationCoefficient, double theMaximalChordialDeviation);
-	/// <summary>
+static double GetDeflection(Macad::Occt::Bnd_Box^ theBndBox, double theDeviationCoefficient, double theMaximalChordialDeviation);
+		/// <summary>
 	/// Assembles array of primitives for sequence of polylines.
 	/// </summary>
 	/// <param name="thePoints">
@@ -2333,23 +2226,11 @@ public:
 	/// <returns>
 	/// array of primitives
 	/// </returns>
-	static Macad::Occt::Graphic3d_ArrayOfPrimitives^ PrimitivesFromPolylines(Macad::Occt::Prs3d_NListOfSequenceOfPnt^ thePoints);
-	/// <summary>
+static Macad::Occt::Graphic3d_ArrayOfPrimitives^ PrimitivesFromPolylines(Macad::Occt::Prs3d_NListOfSequenceOfPnt^ thePoints);
+		/// <summary>
 	/// Add primitives into new group in presentation and clear the list of polylines.
 	/// </summary>
-	static void AddPrimitivesGroup(Macad::Occt::Graphic3d_Structure^ thePrs, Macad::Occt::Prs3d_LineAspect^ theAspect, Macad::Occt::Prs3d_NListOfSequenceOfPnt^ thePolylines);
-	/// <summary>
-	/// Add triangulation free edges into sequence of line segments.
-	/// </summary>
-	/// <param name="theSegments">
-	/// [out] sequence of line segments to fill
-	/// </param>
-	/// <param name="thePolyTri">
-	///   [in] triangulation to process
-	/// </param>
-	/// <param name="theLocation">
-	///  [in] transformation to apply
-	/// </param>
+static void AddPrimitivesGroup(Macad::Occt::Graphic3d_Structure^ thePrs, Macad::Occt::Prs3d_LineAspect^ theAspect, Macad::Occt::Prs3d_NListOfSequenceOfPnt^ thePolylines);
 	/* Method skipped due to unknown mapping: void AddFreeEdges(TColgp_SequenceOfPnt theSegments, Poly_Triangulation thePolyTri, gp_Trsf theLocation, ) */
 }; // class Prs3d
 
@@ -2387,7 +2268,7 @@ public:
 public:
 	Prs3d_Arrow();
 	Prs3d_Arrow(Macad::Occt::Prs3d_Arrow^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Defines the representation of the arrow as shaded triangulation.
 	/// </summary>
 	/// <param name="theAxis">
@@ -2408,8 +2289,8 @@ public:
 	/// <param name="theNbFacettes">
 	/// tessellation quality for each part
 	/// </param>
-	static Macad::Occt::Graphic3d_ArrayOfTriangles^ DrawShaded(Macad::Occt::Ax1 theAxis, double theTubeRadius, double theAxisLength, double theConeRadius, double theConeLength, int theNbFacettes);
-	/// <summary>
+static Macad::Occt::Graphic3d_ArrayOfTriangles^ DrawShaded(Macad::Occt::Ax1 theAxis, double theTubeRadius, double theAxisLength, double theConeRadius, double theConeLength, int theNbFacettes);
+		/// <summary>
 	/// Defines the representation of the arrow as a container of segments.
 	/// </summary>
 	/// <param name="theLocation">
@@ -2427,8 +2308,8 @@ public:
 	/// <param name="theNbSegments">
 	/// count of points on polyline where location is connected
 	/// </param>
-	static Macad::Occt::Graphic3d_ArrayOfSegments^ DrawSegments(Macad::Occt::Pnt theLocation, Macad::Occt::Dir theDir, double theAngle, double theLength, int theNbSegments);
-	/// <summary>
+static Macad::Occt::Graphic3d_ArrayOfSegments^ DrawSegments(Macad::Occt::Pnt theLocation, Macad::Occt::Dir theDir, double theAngle, double theLength, int theNbSegments);
+		/// <summary>
 	/// Defines the representation of the arrow.
 	/// Note that this method does NOT assign any presentation aspects to the primitives group!
 	/// </summary>
@@ -2447,7 +2328,7 @@ public:
 	/// <param name="theLength">
 	///    length of the arrow (from the tip)
 	/// </param>
-	static void Draw(Macad::Occt::Graphic3d_Group^ theGroup, Macad::Occt::Pnt theLocation, Macad::Occt::Dir theDirection, double theAngle, double theLength);
+static void Draw(Macad::Occt::Graphic3d_Group^ theGroup, Macad::Occt::Pnt theLocation, Macad::Occt::Dir theDirection, double theAngle, double theLength);
 }; // class Prs3d_Arrow
 
 //---------------------------------------------------------------------
@@ -2486,7 +2367,7 @@ public:
 	static Macad::Occt::Prs3d_IsoAspect^ CreateDowncasted(::Prs3d_IsoAspect* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a framework to define display attributes of isoparameters.
 	/// These include:
 	/// -   the color attribute aColor
@@ -2494,18 +2375,18 @@ public:
 	/// -   the width value aWidth
 	/// -   aNumber, the number of isoparameters to be   displayed.
 	/// </summary>
-	Prs3d_IsoAspect(Macad::Occt::Quantity_Color^ theColor, Macad::Occt::Aspect_TypeOfLine theType, double theWidth, int theNumber);
+Prs3d_IsoAspect(Macad::Occt::Quantity_Color^ theColor, Macad::Occt::Aspect_TypeOfLine theType, double theWidth, int theNumber);
 	Prs3d_IsoAspect(Macad::Occt::Prs3d_IsoAspect^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// defines the number of U or V isoparametric curves
 	/// to be drawn for a single face.
 	/// Default value: 10
 	/// </summary>
-	void SetNumber(int theNumber);
-	/// <summary>
+void SetNumber(int theNumber);
+		/// <summary>
 	/// returns the number of U or V isoparametric curves drawn for a single face.
 	/// </summary>
-	int Number();
+int Number();
 }; // class Prs3d_IsoAspect
 
 //---------------------------------------------------------------------
@@ -2585,7 +2466,7 @@ public:
 public:
 	Prs3d_BndBox();
 	Prs3d_BndBox(Macad::Occt::Prs3d_BndBox^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Computes presentation of a bounding box.
 	/// </summary>
 	/// <param name="thePresentation">
@@ -2597,8 +2478,8 @@ public:
 	/// <param name="theDrawer">
 	/// [in] the drawer.
 	/// </param>
-	static void Add(Macad::Occt::Graphic3d_Structure^ thePresentation, Macad::Occt::Bnd_Box^ theBndBox, Macad::Occt::Prs3d_Drawer^ theDrawer);
-	/// <summary>
+static void Add(Macad::Occt::Graphic3d_Structure^ thePresentation, Macad::Occt::Bnd_Box^ theBndBox, Macad::Occt::Prs3d_Drawer^ theDrawer);
+		/// <summary>
 	/// Computes presentation of a bounding box.
 	/// </summary>
 	/// <param name="thePresentation">
@@ -2610,33 +2491,22 @@ public:
 	/// <param name="theDrawer">
 	/// [in] the drawer.
 	/// </param>
-	static void Add(Macad::Occt::Graphic3d_Structure^ thePresentation, Macad::Occt::Bnd_OBB^ theBndBox, Macad::Occt::Prs3d_Drawer^ theDrawer);
-	/// <summary>
+static void Add(Macad::Occt::Graphic3d_Structure^ thePresentation, Macad::Occt::Bnd_OBB^ theBndBox, Macad::Occt::Prs3d_Drawer^ theDrawer);
+		/// <summary>
 	/// Create primitive array with line segments for displaying a box.
 	/// </summary>
 	/// <param name="theBox">
 	/// [in] the box to add
 	/// </param>
-	static Macad::Occt::Graphic3d_ArrayOfSegments^ FillSegments(Macad::Occt::Bnd_OBB^ theBox);
-	/// <summary>
+static Macad::Occt::Graphic3d_ArrayOfSegments^ FillSegments(Macad::Occt::Bnd_OBB^ theBox);
+		/// <summary>
 	/// Create primitive array with line segments for displaying a box.
 	/// </summary>
 	/// <param name="theBox">
 	/// [in] the box to add
 	/// </param>
-	static Macad::Occt::Graphic3d_ArrayOfSegments^ FillSegments(Macad::Occt::Bnd_Box^ theBox);
-	/// <summary>
-	/// Create primitive array with line segments for displaying a box.
-	/// </summary>
-	/// <param name="theSegments">
-	/// [in] [out] primitive array to be filled;
-	/// should be at least 8 nodes and 24 edges in size
-	/// </param>
-	/// <param name="theBox">
-	/// [in] the box to add
-	/// </param>
-	static void FillSegments(Macad::Occt::Graphic3d_ArrayOfSegments^ theSegments, Macad::Occt::Bnd_OBB^ theBox);
-	/// <summary>
+static Macad::Occt::Graphic3d_ArrayOfSegments^ FillSegments(Macad::Occt::Bnd_Box^ theBox);
+		/// <summary>
 	/// Create primitive array with line segments for displaying a box.
 	/// </summary>
 	/// <param name="theSegments">
@@ -2646,8 +2516,8 @@ public:
 	/// <param name="theBox">
 	/// [in] the box to add
 	/// </param>
-	static void FillSegments(Macad::Occt::Graphic3d_ArrayOfSegments^ theSegments, Macad::Occt::Bnd_Box^ theBox);
-	/// <summary>
+static void FillSegments(Macad::Occt::Graphic3d_ArrayOfSegments^ theSegments, Macad::Occt::Bnd_OBB^ theBox);
+		/// <summary>
 	/// Create primitive array with line segments for displaying a box.
 	/// </summary>
 	/// <param name="theSegments">
@@ -2657,7 +2527,18 @@ public:
 	/// <param name="theBox">
 	/// [in] the box to add
 	/// </param>
-	static void fillSegments(Macad::Occt::Graphic3d_ArrayOfSegments^ theSegments, Macad::Occt::Pnt theBox);
+static void FillSegments(Macad::Occt::Graphic3d_ArrayOfSegments^ theSegments, Macad::Occt::Bnd_Box^ theBox);
+		/// <summary>
+	/// Create primitive array with line segments for displaying a box.
+	/// </summary>
+	/// <param name="theSegments">
+	/// [in] [out] primitive array to be filled;
+	/// should be at least 8 nodes and 24 edges in size
+	/// </param>
+	/// <param name="theBox">
+	/// [in] the box to add
+	/// </param>
+static void fillSegments(Macad::Occt::Graphic3d_ArrayOfSegments^ theSegments, Macad::Occt::Pnt theBox);
 }; // class Prs3d_BndBox
 
 //---------------------------------------------------------------------
@@ -2737,30 +2618,24 @@ public:
 	static Macad::Occt::Prs3d_PresentationShadow^ CreateDowncasted(::Prs3d_PresentationShadow* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a shadow of existing presentation object.
 	/// </summary>
-	Prs3d_PresentationShadow(Macad::Occt::Graphic3d_StructureManager^ theViewer, Macad::Occt::Graphic3d_Structure^ thePrs);
+Prs3d_PresentationShadow(Macad::Occt::Graphic3d_StructureManager^ theViewer, Macad::Occt::Graphic3d_Structure^ thePrs);
 	Prs3d_PresentationShadow(Macad::Occt::Prs3d_PresentationShadow^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the id of the parent presentation
 	/// </summary>
-	int ParentId();
-	/// <summary>
+int ParentId();
+		/// <summary>
 	/// Returns view affinity of the parent presentation
 	/// </summary>
-	Macad::Occt::Graphic3d_ViewAffinity^ ParentAffinity();
-	/// <summary>
+Macad::Occt::Graphic3d_ViewAffinity^ ParentAffinity();
+		/// <summary>
 	/// Do nothing - axis-aligned bounding box should be initialized from parent structure.
 	/// </summary>
-	void CalculateBoundBox();
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
+void CalculateBoundBox();
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class Prs3d_PresentationShadow
 
@@ -2798,7 +2673,7 @@ public:
 public:
 	Prs3d_Text();
 	Prs3d_Text(Macad::Occt::Prs3d_Text^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Defines the display of the text.
 	/// </summary>
 	/// <param name="theGroup">
@@ -2816,8 +2691,8 @@ public:
 	/// <returns>
 	/// text to draw
 	/// </returns>
-	static Macad::Occt::Graphic3d_Text^ Draw(Macad::Occt::Graphic3d_Group^ theGroup, Macad::Occt::Prs3d_TextAspect^ theAspect, Macad::Occt::TCollection_ExtendedString^ theText, Macad::Occt::Pnt theAttachmentPoint);
-	/// <summary>
+static Macad::Occt::Graphic3d_Text^ Draw(Macad::Occt::Graphic3d_Group^ theGroup, Macad::Occt::Prs3d_TextAspect^ theAspect, Macad::Occt::TCollection_ExtendedString^ theText, Macad::Occt::Pnt theAttachmentPoint);
+		/// <summary>
 	/// Draws the text label.
 	/// </summary>
 	/// <param name="theGroup">
@@ -2835,8 +2710,8 @@ public:
 	/// <returns>
 	/// text to draw
 	/// </returns>
-	static Macad::Occt::Graphic3d_Text^ Draw(Macad::Occt::Graphic3d_Group^ theGroup, Macad::Occt::Prs3d_TextAspect^ theAspect, Macad::Occt::TCollection_ExtendedString^ theText, Macad::Occt::Ax2 theOrientation, bool theHasOwnAnchor);
-	/// <summary>
+static Macad::Occt::Graphic3d_Text^ Draw(Macad::Occt::Graphic3d_Group^ theGroup, Macad::Occt::Prs3d_TextAspect^ theAspect, Macad::Occt::TCollection_ExtendedString^ theText, Macad::Occt::Ax2 theOrientation, bool theHasOwnAnchor);
+		/// <summary>
 	/// Draws the text label.
 	/// </summary>
 	/// <param name="theGroup">
@@ -2854,7 +2729,7 @@ public:
 	/// <returns>
 	/// text to draw
 	/// </returns>
-	static Macad::Occt::Graphic3d_Text^ Draw(Macad::Occt::Graphic3d_Group^ theGroup, Macad::Occt::Prs3d_TextAspect^ theAspect, Macad::Occt::TCollection_ExtendedString^ theText, Macad::Occt::Ax2 theOrientation);
+static Macad::Occt::Graphic3d_Text^ Draw(Macad::Occt::Graphic3d_Group^ theGroup, Macad::Occt::Prs3d_TextAspect^ theAspect, Macad::Occt::TCollection_ExtendedString^ theText, Macad::Occt::Ax2 theOrientation);
 }; // class Prs3d_Text
 
 //---------------------------------------------------------------------
@@ -2896,19 +2771,19 @@ public:
 public:
 	Prs3d_ToolQuadric();
 	Prs3d_ToolQuadric(Macad::Occt::Prs3d_ToolQuadric^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Return number of triangles for presentation with the given params.
 	/// </summary>
-	static int TrianglesNb(int theSlicesNb, int theStacksNb);
-	/// <summary>
+static int TrianglesNb(int theSlicesNb, int theStacksNb);
+		/// <summary>
 	/// Return number of vertices for presentation with the given params.
 	/// </summary>
-	static int VerticesNb(int theSlicesNb, int theStacksNb, bool theIsIndexed);
-	/// <summary>
+static int VerticesNb(int theSlicesNb, int theStacksNb, bool theIsIndexed);
+		/// <summary>
 	/// Return number of vertices for presentation with the given params.
 	/// </summary>
-	static int VerticesNb(int theSlicesNb, int theStacksNb);
-	/// <summary>
+static int VerticesNb(int theSlicesNb, int theStacksNb);
+		/// <summary>
 	/// Generate primitives for 3D quadric surface presentation.
 	/// </summary>
 	/// <param name="theTrsf">
@@ -2917,18 +2792,9 @@ public:
 	/// <returns>
 	/// generated triangulation
 	/// </returns>
-	Macad::Occt::Graphic3d_ArrayOfTriangles^ CreateTriangulation(Macad::Occt::Trsf theTrsf);
-	/// <summary>
-	/// Generate primitives for 3D quadric surface presentation.
-	/// </summary>
-	/// <param name="theTrsf">
-	/// [in] optional transformation to apply
-	/// </param>
-	/// <returns>
-	/// generated triangulation
-	/// </returns>
+Macad::Occt::Graphic3d_ArrayOfTriangles^ CreateTriangulation(Macad::Occt::Trsf theTrsf);
 	/* Method skipped due to unknown mapping: Poly_Triangulation CreatePolyTriangulation(gp_Trsf theTrsf, ) */
-	/// <summary>
+		/// <summary>
 	/// Generate primitives for 3D quadric surface and fill the given array.
 	/// </summary>
 	/// <param name="theArray">
@@ -2940,31 +2806,19 @@ public:
 	/// <param name="theTrsf">
 	/// [in] optional transformation to apply
 	/// </param>
-	void FillArray(Macad::Occt::Graphic3d_ArrayOfTriangles^ theArray, Macad::Occt::Trsf theTrsf);
-	/// <summary>
+void FillArray(Macad::Occt::Graphic3d_ArrayOfTriangles^ theArray, Macad::Occt::Trsf theTrsf);
+		/// <summary>
 	/// Return number of triangles in generated presentation.
 	/// </summary>
-	int TrianglesNb();
-	/// <summary>
+int TrianglesNb();
+		/// <summary>
 	/// Return number of vertices in generated presentation.
 	/// </summary>
-	int VerticesNb(bool theIsIndexed);
-	/// <summary>
+int VerticesNb(bool theIsIndexed);
+		/// <summary>
 	/// Return number of vertices in generated presentation.
 	/// </summary>
-	int VerticesNb();
-	/// <summary>
-	/// Generate primitives for 3D quadric surface presentation.
-	/// </summary>
-	/// <param name="theArray">
-	/// [out] generated array of triangles
-	/// </param>
-	/// <param name="theTriangulation">
-	/// [out] generated triangulation
-	/// </param>
-	/// <param name="theTrsf">
-	/// [in] optional transformation to apply
-	/// </param>
+int VerticesNb();
 	/* Method skipped due to unknown mapping: void FillArray(Graphic3d_ArrayOfTriangles theArray, Poly_Triangulation theTriangulation, gp_Trsf theTrsf, ) */
 }; // class Prs3d_ToolQuadric
 
@@ -3000,7 +2854,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initializes the algorithm creating a cylinder.
 	/// </summary>
 	/// <param name="theBottomRad">
@@ -3018,9 +2872,9 @@ public:
 	/// <param name="theNbStacks">
 	///  [in] number of stacks within V parameter
 	/// </param>
-	Prs3d_ToolCylinder(double theBottomRad, double theTopRad, double theHeight, int theNbSlices, int theNbStacks);
+Prs3d_ToolCylinder(double theBottomRad, double theTopRad, double theHeight, int theNbSlices, int theNbStacks);
 	Prs3d_ToolCylinder(Macad::Occt::Prs3d_ToolCylinder^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Generate primitives for 3D quadric surface and return a filled array.
 	/// </summary>
 	/// <param name="theBottomRad">
@@ -3044,7 +2898,7 @@ public:
 	/// <returns>
 	/// generated triangulation
 	/// </returns>
-	static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theBottomRad, double theTopRad, double theHeight, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
+static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theBottomRad, double theTopRad, double theHeight, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
 }; // class Prs3d_ToolCylinder
 
 //---------------------------------------------------------------------
@@ -3079,7 +2933,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initializes the algorithm creating a disk.
 	/// </summary>
 	/// <param name="theInnerRadius">
@@ -3094,9 +2948,9 @@ public:
 	/// <param name="theNbStacks">
 	///    [in] number of stacks within V parameter
 	/// </param>
-	Prs3d_ToolDisk(double theInnerRadius, double theOuterRadius, int theNbSlices, int theNbStacks);
+Prs3d_ToolDisk(double theInnerRadius, double theOuterRadius, int theNbSlices, int theNbStacks);
 	Prs3d_ToolDisk(Macad::Occt::Prs3d_ToolDisk^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Generate primitives for 3D quadric surface.
 	/// </summary>
 	/// <param name="theInnerRadius">
@@ -3117,8 +2971,8 @@ public:
 	/// <returns>
 	/// generated triangulation
 	/// </returns>
-	static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theInnerRadius, double theOuterRadius, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
-	/// <summary>
+static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theInnerRadius, double theOuterRadius, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
+		/// <summary>
 	/// Set angle range in radians [0, 2*PI] by default.
 	/// </summary>
 	/// <param name="theStartAngle">
@@ -3127,7 +2981,7 @@ public:
 	/// <param name="theEndAngle">
 	///   [in] End   angle in counter clockwise order
 	/// </param>
-	void SetAngleRange(double theStartAngle, double theEndAngle);
+void SetAngleRange(double theStartAngle, double theEndAngle);
 }; // class Prs3d_ToolDisk
 
 //---------------------------------------------------------------------
@@ -3162,7 +3016,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initializes the algorithm creating a sector (quadrant).
 	/// </summary>
 	/// <param name="theRadius">
@@ -3174,9 +3028,9 @@ public:
 	/// <param name="theNbStacks">
 	/// [in] number of stacks within V parameter
 	/// </param>
-	Prs3d_ToolSector(double theRadius, int theNbSlices, int theNbStacks);
+Prs3d_ToolSector(double theRadius, int theNbSlices, int theNbStacks);
 	Prs3d_ToolSector(Macad::Occt::Prs3d_ToolSector^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Generate primitives for 3D quadric surface.
 	/// </summary>
 	/// <param name="theRadius">
@@ -3194,7 +3048,7 @@ public:
 	/// <returns>
 	/// generated triangulation
 	/// </returns>
-	static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theRadius, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
+static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theRadius, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
 }; // class Prs3d_ToolSector
 
 //---------------------------------------------------------------------
@@ -3229,7 +3083,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initializes the algorithm creating a sphere.
 	/// </summary>
 	/// <param name="theRadius">
@@ -3241,9 +3095,9 @@ public:
 	/// <param name="theNbStacks">
 	/// [in] number of stacks within V parameter
 	/// </param>
-	Prs3d_ToolSphere(double theRadius, int theNbSlices, int theNbStacks);
+Prs3d_ToolSphere(double theRadius, int theNbSlices, int theNbStacks);
 	Prs3d_ToolSphere(Macad::Occt::Prs3d_ToolSphere^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Generate primitives for 3D quadric surface.
 	/// </summary>
 	/// <param name="theRadius">
@@ -3261,7 +3115,7 @@ public:
 	/// <returns>
 	/// generated triangulation
 	/// </returns>
-	static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theRadius, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
+static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theRadius, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
 }; // class Prs3d_ToolSphere
 
 //---------------------------------------------------------------------
@@ -3296,7 +3150,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initializes the algorithm creating a complete torus.
 	/// </summary>
 	/// <param name="theMajorRad">
@@ -3311,8 +3165,8 @@ public:
 	/// <param name="theNbStacks">
 	/// [in] number of stacks within V parameter
 	/// </param>
-	Prs3d_ToolTorus(double theMajorRad, double theMinorRad, int theNbSlices, int theNbStacks);
-	/// <summary>
+Prs3d_ToolTorus(double theMajorRad, double theMinorRad, int theNbSlices, int theNbStacks);
+		/// <summary>
 	/// Initializes the algorithm creating a torus pipe segment.
 	/// </summary>
 	/// <param name="theMajorRad">
@@ -3330,8 +3184,8 @@ public:
 	/// <param name="theNbStacks">
 	/// [in] number of stacks within V parameter
 	/// </param>
-	Prs3d_ToolTorus(double theMajorRad, double theMinorRad, double theAngle, int theNbSlices, int theNbStacks);
-	/// <summary>
+Prs3d_ToolTorus(double theMajorRad, double theMinorRad, double theAngle, int theNbSlices, int theNbStacks);
+		/// <summary>
 	/// Initializes the algorithm creating a torus ring segment.
 	/// </summary>
 	/// <param name="theMajorRad">
@@ -3352,8 +3206,8 @@ public:
 	/// <param name="theNbStacks">
 	/// [in] number of stacks within V parameter
 	/// </param>
-	Prs3d_ToolTorus(double theMajorRad, double theMinorRad, double theAngle1, double theAngle2, int theNbSlices, int theNbStacks);
-	/// <summary>
+Prs3d_ToolTorus(double theMajorRad, double theMinorRad, double theAngle1, double theAngle2, int theNbSlices, int theNbStacks);
+		/// <summary>
 	/// Initializes the algorithm creating a torus ring segment.
 	/// </summary>
 	/// <param name="theMajorRad">
@@ -3377,9 +3231,9 @@ public:
 	/// <param name="theNbStacks">
 	/// [in] number of stacks within V parameter
 	/// </param>
-	Prs3d_ToolTorus(double theMajorRad, double theMinorRad, double theAngle1, double theAngle2, double theAngle, int theNbSlices, int theNbStacks);
+Prs3d_ToolTorus(double theMajorRad, double theMinorRad, double theAngle1, double theAngle2, double theAngle, int theNbSlices, int theNbStacks);
 	Prs3d_ToolTorus(Macad::Occt::Prs3d_ToolTorus^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Generate primitives for 3D quadric surface (complete torus).
 	/// </summary>
 	/// <param name="theMajorRad">
@@ -3400,8 +3254,8 @@ public:
 	/// <returns>
 	/// generated triangulation
 	/// </returns>
-	static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theMajorRad, double theMinorRad, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
-	/// <summary>
+static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theMajorRad, double theMinorRad, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
+		/// <summary>
 	/// Generate primitives for 3D quadric surface (torus segment).
 	/// </summary>
 	/// <param name="theMajorRad">
@@ -3425,8 +3279,8 @@ public:
 	/// <returns>
 	/// generated triangulation
 	/// </returns>
-	static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theMajorRad, double theMinorRad, double theAngle, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
-	/// <summary>
+static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theMajorRad, double theMinorRad, double theAngle, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
+		/// <summary>
 	/// Generate primitives for 3D quadric surface (torus ring segment).
 	/// </summary>
 	/// <param name="theMajorRad">
@@ -3453,8 +3307,8 @@ public:
 	/// <returns>
 	/// generated triangulation
 	/// </returns>
-	static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theMajorRad, double theMinorRad, double theAngle1, double theAngle2, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
-	/// <summary>
+static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theMajorRad, double theMinorRad, double theAngle1, double theAngle2, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
+		/// <summary>
 	/// Generate primitives for 3D quadric surface (segment of the torus ring segment).
 	/// </summary>
 	/// <param name="theMajorRad">
@@ -3484,7 +3338,7 @@ public:
 	/// <returns>
 	/// generated triangulation
 	/// </returns>
-	static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theMajorRad, double theMinorRad, double theAngle1, double theAngle2, double theAngle, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
+static Macad::Occt::Graphic3d_ArrayOfTriangles^ Create(double theMajorRad, double theMinorRad, double theAngle1, double theAngle2, double theAngle, int theNbSlices, int theNbStacks, Macad::Occt::Trsf theTrsf);
 }; // class Prs3d_ToolTorus
 
 }; // namespace Occt

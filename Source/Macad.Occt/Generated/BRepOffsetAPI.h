@@ -194,31 +194,31 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an empty algorithm to perform
 	/// taper-adding transformations on faces of a shape.
 	/// Use the Init function to define the shape to be tapered.
 	/// </summary>
-	BRepOffsetAPI_DraftAngle();
-	/// <summary>
+BRepOffsetAPI_DraftAngle();
+		/// <summary>
 	/// Initializes an algorithm to perform taper-adding
 	/// transformations on faces of the shape S.
 	/// S will be referred to as the initial shape of the algorithm.
 	/// </summary>
-	BRepOffsetAPI_DraftAngle(Macad::Occt::TopoDS_Shape^ S);
+BRepOffsetAPI_DraftAngle(Macad::Occt::TopoDS_Shape^ S);
 	BRepOffsetAPI_DraftAngle(Macad::Occt::BRepOffsetAPI_DraftAngle^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Cancels the results of all taper-adding transformations
 	/// performed by this algorithm on the initial shape. These
 	/// results will have been defined by successive calls to the function Add.
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Initializes, or reinitializes this taper-adding algorithm with the shape S.
 	/// S will be referred to as the initial shape of this algorithm.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Adds the face F, the direction
 	/// Direction, the angle Angle, the plane NeutralPlane, and the flag
 	/// Flag to the framework created at construction time, and with this
@@ -252,8 +252,8 @@ public:
 	/// to cancel the results of the unsuccessful taper-adding
 	/// transformation and to retrieve the previous shape.
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Face^ F, Macad::Occt::Dir Direction, double Angle, Macad::Occt::Pln NeutralPlane, bool Flag);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Face^ F, Macad::Occt::Dir Direction, double Angle, Macad::Occt::Pln NeutralPlane, bool Flag);
+		/// <summary>
 	/// Adds the face F, the direction
 	/// Direction, the angle Angle, the plane NeutralPlane, and the flag
 	/// Flag to the framework created at construction time, and with this
@@ -287,8 +287,8 @@ public:
 	/// to cancel the results of the unsuccessful taper-adding
 	/// transformation and to retrieve the previous shape.
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Face^ F, Macad::Occt::Dir Direction, double Angle, Macad::Occt::Pln NeutralPlane);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Face^ F, Macad::Occt::Dir Direction, double Angle, Macad::Occt::Pln NeutralPlane);
+		/// <summary>
 	/// Returns true if the previous taper-adding
 	/// transformation performed by this algorithm in the last
 	/// call to Add, was successful.
@@ -303,8 +303,8 @@ public:
 	/// been defined, i.e. if this algorithm has not been
 	/// initialized with the non-empty constructor or the .Init function.
 	/// </summary>
-	bool AddDone();
-	/// <summary>
+bool AddDone();
+		/// <summary>
 	/// Cancels the taper-adding transformation previously
 	/// performed by this algorithm on the face F and the
 	/// series of tangential faces which contain F, and retrieves
@@ -319,8 +319,8 @@ public:
 	/// - Standard_NoSuchObject if F has not been added
 	/// or has already been removed.
 	/// </summary>
-	void Remove(Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+void Remove(Macad::Occt::TopoDS_Face^ F);
+		/// <summary>
 	/// Returns the shape on which an error occurred after an
 	/// unsuccessful call to Add or when IsDone returns false.
 	/// Exceptions
@@ -328,45 +328,38 @@ public:
 	/// defined, i.e. if this algorithm has not been initialized with
 	/// the non-empty constructor or the Init function.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ ProblematicShape();
-	/// <summary>
-	/// Returns an error  status when an error has occurred
-	/// (Face,   Edge    or Vertex  recomputation problem).
-	/// Otherwise returns Draft_NoError. The method may be
-	/// called if AddDone  returns Standard_False, or when
-	/// IsDone returns Standard_False.
-	/// </summary>
+Macad::Occt::TopoDS_Shape^ ProblematicShape();
 	/* Method skipped due to unknown mapping: Draft_ErrorStatus Status() */
-	/// <summary>
+		/// <summary>
 	/// Returns all  the  faces   which  have been   added
 	/// together with the face <F>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ ConnectedFaces(Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ ConnectedFaces(Macad::Occt::TopoDS_Face^ F);
+		/// <summary>
 	/// Returns all the faces  on which a modification has
 	/// been given.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ ModifiedFaces();
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ ModifiedFaces();
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build();
+void Build();
 	void CorrectWires();
-	/// <summary>
+		/// <summary>
 	/// Returns the  list   of shapes generated   from the
 	/// shape <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns the list  of shapes modified from the shape
 	/// <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns the modified shape corresponding to <S>.
 	/// S can correspond to the entire initial shape or to its subshape.
 	/// Raises exceptions
@@ -374,7 +367,7 @@ public:
 	/// a subshape of the initial shape to which the
 	/// transformation has been applied.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ ModifiedShape(Macad::Occt::TopoDS_Shape^ S);
+Macad::Occt::TopoDS_Shape^ ModifiedShape(Macad::Occt::TopoDS_Shape^ S);
 }; // class BRepOffsetAPI_DraftAngle
 
 //---------------------------------------------------------------------
@@ -420,7 +413,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initializes an algorithm for identifying contiguous edges
 	/// on shapes with tolerance as the tolerance of contiguity
 	/// (defaulted to 1.0e-6). This tolerance value is used to
@@ -430,8 +423,8 @@ public:
 	/// serve in subsequent software releases for performing an
 	/// analysis of degenerated shapes.
 	/// </summary>
-	BRepOffsetAPI_FindContigousEdges(double tolerance, bool option);
-	/// <summary>
+BRepOffsetAPI_FindContigousEdges(double tolerance, bool option);
+		/// <summary>
 	/// Initializes an algorithm for identifying contiguous edges
 	/// on shapes with tolerance as the tolerance of contiguity
 	/// (defaulted to 1.0e-6). This tolerance value is used to
@@ -441,9 +434,9 @@ public:
 	/// serve in subsequent software releases for performing an
 	/// analysis of degenerated shapes.
 	/// </summary>
-	BRepOffsetAPI_FindContigousEdges(double tolerance);
+BRepOffsetAPI_FindContigousEdges(double tolerance);
 	BRepOffsetAPI_FindContigousEdges(Macad::Occt::BRepOffsetAPI_FindContigousEdges^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes this algorithm for identifying contiguous edges
 	/// on shapes using the tolerance of contiguity tolerance.
 	/// This tolerance value is used to determine whether two
@@ -451,16 +444,16 @@ public:
 	/// Use the function Add to define the shapes to be checked.
 	/// Sets <option> to false.
 	/// </summary>
-	void Init(double tolerance, bool option);
-	/// <summary>
+void Init(double tolerance, bool option);
+		/// <summary>
 	/// Adds the shape shape to the list of shapes to be
 	/// checked by this algorithm.
 	/// Once all the shapes to be checked have been added,
 	/// use the function Perform to find the contiguous edges
 	/// and the function ContigousEdge to return these edges.
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Finds coincident parts of edges of two or more shapes
 	/// added to this algorithm and breaks down these edges
 	/// into contiguous and non-contiguous sections on copies
@@ -474,17 +467,17 @@ public:
 	/// checked have been added. It is not possible to add
 	/// further shapes subsequently and then to repeat the call to Perform.
 	/// </summary>
-	void Perform();
-	/// <summary>
+void Perform();
+		/// <summary>
 	/// Gives the number of edges (free edges + contiguous edges + multiple edge)
 	/// </summary>
-	int NbEdges();
-	/// <summary>
+int NbEdges();
+		/// <summary>
 	/// Returns the number of contiguous edges found by the
 	/// function Perform on the shapes added to this algorithm.
 	/// </summary>
-	int NbContigousEdges();
-	/// <summary>
+int NbContigousEdges();
+		/// <summary>
 	/// Returns the contiguous edge of index index found by
 	/// the function Perform on the shapes added to this algorithm.
 	/// Exceptions
@@ -493,8 +486,8 @@ public:
 	/// - index is greater than the number of contiguous
 	/// edges found by the function Perform on the shapes added to this algorithm.
 	/// </summary>
-	Macad::Occt::TopoDS_Edge^ ContigousEdge(int index);
-	/// <summary>
+Macad::Occt::TopoDS_Edge^ ContigousEdge(int index);
+		/// <summary>
 	/// Returns a list of edges coincident with the contiguous
 	/// edge of index index found by the function Perform.
 	/// There are as many edges in the list as there are faces
@@ -505,8 +498,8 @@ public:
 	/// - index is greater than the number of contiguous edges
 	/// found by the function Perform on the shapes added to this algorithm.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ ContigousEdgeCouple(int index);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ ContigousEdgeCouple(int index);
+		/// <summary>
 	/// Returns the edge on the initial shape, of which the
 	/// modified copy contains the edge section.
 	/// section is coincident with a contiguous edge found by
@@ -520,20 +513,20 @@ public:
 	/// with a contiguous edge. Use the function
 	/// ContigousEdgeCouple to obtain a valid section.
 	/// </summary>
-	Macad::Occt::TopoDS_Edge^ SectionToBoundary(Macad::Occt::TopoDS_Edge^ section);
-	/// <summary>
+Macad::Occt::TopoDS_Edge^ SectionToBoundary(Macad::Occt::TopoDS_Edge^ section);
+		/// <summary>
 	/// Gives the number of degenerated shapes
 	/// </summary>
-	int NbDegeneratedShapes();
-	/// <summary>
+int NbDegeneratedShapes();
+		/// <summary>
 	/// Gives a degenerated shape
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ DegeneratedShape(int index);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ DegeneratedShape(int index);
+		/// <summary>
 	/// Indicates if a input shape is degenerated
 	/// </summary>
-	bool IsDegenerated(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+bool IsDegenerated(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Returns true if the copy of the initial shape shape was
 	/// modified by the function Perform (i.e. if one or more of
 	/// its edges was broken down into contiguous and non-contiguous sections).
@@ -541,16 +534,16 @@ public:
 	/// Returns false if shape is not one of the initial shapes
 	/// added to this algorithm.
 	/// </summary>
-	bool IsModified(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+bool IsModified(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Gives a modifieded shape
 	/// Raises   NoSuchObject if shape has not been modified
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Modified(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Modified(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Dump properties of resulting shape.
 	/// </summary>
-	void Dump();
+void Dump();
 }; // class BRepOffsetAPI_FindContigousEdges
 
 //---------------------------------------------------------------------
@@ -585,7 +578,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs the draft surface object defined by the shape
 	/// Shape, the direction Dir, and the angle Angle.
 	/// Shape must be a TopoDS_Wire, Topo_DS_Face or
@@ -594,9 +587,9 @@ public:
 	/// Standard_NotDone if Shape is not a TopoDS_Wire,
 	/// Topo_DS_Face or TopoDS_Shell with free boundaries.
 	/// </summary>
-	BRepOffsetAPI_MakeDraft(Macad::Occt::TopoDS_Shape^ Shape, Macad::Occt::Dir Dir, double Angle);
+BRepOffsetAPI_MakeDraft(Macad::Occt::TopoDS_Shape^ Shape, Macad::Occt::Dir Dir, double Angle);
 	BRepOffsetAPI_MakeDraft(Macad::Occt::BRepOffsetAPI_MakeDraft^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the options of this draft tool.
 	/// If a transition has to be performed, it can be defined by
 	/// the mode Style as RightCorner or RoundCorner,
@@ -608,8 +601,8 @@ public:
 	/// RightCorner transition can be performed.
 	/// AngleMin and AngleMax are expressed in radians.
 	/// </summary>
-	void SetOptions(Macad::Occt::BRepBuilderAPI_TransitionMode Style, double AngleMin, double AngleMax);
-	/// <summary>
+void SetOptions(Macad::Occt::BRepBuilderAPI_TransitionMode Style, double AngleMin, double AngleMax);
+		/// <summary>
 	/// Sets the options of this draft tool.
 	/// If a transition has to be performed, it can be defined by
 	/// the mode Style as RightCorner or RoundCorner,
@@ -621,8 +614,8 @@ public:
 	/// RightCorner transition can be performed.
 	/// AngleMin and AngleMax are expressed in radians.
 	/// </summary>
-	void SetOptions(Macad::Occt::BRepBuilderAPI_TransitionMode Style, double AngleMin);
-	/// <summary>
+void SetOptions(Macad::Occt::BRepBuilderAPI_TransitionMode Style, double AngleMin);
+		/// <summary>
 	/// Sets the options of this draft tool.
 	/// If a transition has to be performed, it can be defined by
 	/// the mode Style as RightCorner or RoundCorner,
@@ -634,8 +627,8 @@ public:
 	/// RightCorner transition can be performed.
 	/// AngleMin and AngleMax are expressed in radians.
 	/// </summary>
-	void SetOptions(Macad::Occt::BRepBuilderAPI_TransitionMode Style);
-	/// <summary>
+void SetOptions(Macad::Occt::BRepBuilderAPI_TransitionMode Style);
+		/// <summary>
 	/// Sets the options of this draft tool.
 	/// If a transition has to be performed, it can be defined by
 	/// the mode Style as RightCorner or RoundCorner,
@@ -647,58 +640,58 @@ public:
 	/// RightCorner transition can be performed.
 	/// AngleMin and AngleMax are expressed in radians.
 	/// </summary>
-	void SetOptions();
-	/// <summary>
+void SetOptions();
+		/// <summary>
 	/// Sets the direction of the draft for this object.
 	/// If IsInternal is true, the draft is internal to the argument
 	/// Shape used in the constructor.
 	/// </summary>
-	void SetDraft(bool IsInternal);
-	/// <summary>
+void SetDraft(bool IsInternal);
+		/// <summary>
 	/// Sets the direction of the draft for this object.
 	/// If IsInternal is true, the draft is internal to the argument
 	/// Shape used in the constructor.
 	/// </summary>
-	void SetDraft();
-	/// <summary>
+void SetDraft();
+		/// <summary>
 	/// Performs the draft using the length LengthMax as the
 	/// maximum length for the corner edge between two draft faces.
 	/// </summary>
-	void Perform(double LengthMax);
-	/// <summary>
+void Perform(double LengthMax);
+		/// <summary>
 	/// Performs the draft up to the surface Surface.
 	/// If KeepInsideSurface is true, the part of Surface inside
 	/// the draft is kept in the result.
 	/// </summary>
-	void Perform(Macad::Occt::Geom_Surface^ Surface, bool KeepInsideSurface);
-	/// <summary>
+void Perform(Macad::Occt::Geom_Surface^ Surface, bool KeepInsideSurface);
+		/// <summary>
 	/// Performs the draft up to the surface Surface.
 	/// If KeepInsideSurface is true, the part of Surface inside
 	/// the draft is kept in the result.
 	/// </summary>
-	void Perform(Macad::Occt::Geom_Surface^ Surface);
-	/// <summary>
+void Perform(Macad::Occt::Geom_Surface^ Surface);
+		/// <summary>
 	/// Performs the draft up to the shape StopShape.
 	/// If KeepOutSide is true, the part of StopShape which is
 	/// outside the Draft is kept in the result.
 	/// </summary>
-	void Perform(Macad::Occt::TopoDS_Shape^ StopShape, bool KeepOutSide);
-	/// <summary>
+void Perform(Macad::Occt::TopoDS_Shape^ StopShape, bool KeepOutSide);
+		/// <summary>
 	/// Performs the draft up to the shape StopShape.
 	/// If KeepOutSide is true, the part of StopShape which is
 	/// outside the Draft is kept in the result.
 	/// </summary>
-	void Perform(Macad::Occt::TopoDS_Shape^ StopShape);
-	/// <summary>
+void Perform(Macad::Occt::TopoDS_Shape^ StopShape);
+		/// <summary>
 	/// Returns the shell resulting from performance of the
 	/// draft along the wire.
 	/// </summary>
-	Macad::Occt::TopoDS_Shell^ Shell();
-	/// <summary>
+Macad::Occt::TopoDS_Shell^ Shell();
+		/// <summary>
 	/// Returns the  list   of shapes generated   from the
 	/// shape <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
 }; // class BRepOffsetAPI_MakeDraft
 
 //---------------------------------------------------------------------
@@ -778,86 +771,86 @@ public:
 
 public:
 	BRepOffsetAPI_MakeEvolved();
-	/// <summary>
+		/// <summary>
 	/// Constructs an evolved shape by sweeping the profile
 	/// (theProfile) along the spine (theSpine).
 	/// theSpine can be shape only of type wire or face.
 	/// See description to this class for detailed information.
 	/// </summary>
-	BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf, bool theIsSolid, bool theIsProfOnSpine, double theTol, bool theIsVolume, bool theRunInParallel);
-	/// <summary>
+BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf, bool theIsSolid, bool theIsProfOnSpine, double theTol, bool theIsVolume, bool theRunInParallel);
+		/// <summary>
 	/// Constructs an evolved shape by sweeping the profile
 	/// (theProfile) along the spine (theSpine).
 	/// theSpine can be shape only of type wire or face.
 	/// See description to this class for detailed information.
 	/// </summary>
-	BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf, bool theIsSolid, bool theIsProfOnSpine, double theTol, bool theIsVolume);
-	/// <summary>
+BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf, bool theIsSolid, bool theIsProfOnSpine, double theTol, bool theIsVolume);
+		/// <summary>
 	/// Constructs an evolved shape by sweeping the profile
 	/// (theProfile) along the spine (theSpine).
 	/// theSpine can be shape only of type wire or face.
 	/// See description to this class for detailed information.
 	/// </summary>
-	BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf, bool theIsSolid, bool theIsProfOnSpine, double theTol);
-	/// <summary>
+BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf, bool theIsSolid, bool theIsProfOnSpine, double theTol);
+		/// <summary>
 	/// Constructs an evolved shape by sweeping the profile
 	/// (theProfile) along the spine (theSpine).
 	/// theSpine can be shape only of type wire or face.
 	/// See description to this class for detailed information.
 	/// </summary>
-	BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf, bool theIsSolid, bool theIsProfOnSpine);
-	/// <summary>
+BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf, bool theIsSolid, bool theIsProfOnSpine);
+		/// <summary>
 	/// Constructs an evolved shape by sweeping the profile
 	/// (theProfile) along the spine (theSpine).
 	/// theSpine can be shape only of type wire or face.
 	/// See description to this class for detailed information.
 	/// </summary>
-	BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf, bool theIsSolid);
-	/// <summary>
+BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf, bool theIsSolid);
+		/// <summary>
 	/// Constructs an evolved shape by sweeping the profile
 	/// (theProfile) along the spine (theSpine).
 	/// theSpine can be shape only of type wire or face.
 	/// See description to this class for detailed information.
 	/// </summary>
-	BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf);
-	/// <summary>
+BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType, bool theIsAxeProf);
+		/// <summary>
 	/// Constructs an evolved shape by sweeping the profile
 	/// (theProfile) along the spine (theSpine).
 	/// theSpine can be shape only of type wire or face.
 	/// See description to this class for detailed information.
 	/// </summary>
-	BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType);
-	/// <summary>
+BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile, Macad::Occt::GeomAbs_JoinType theJoinType);
+		/// <summary>
 	/// Constructs an evolved shape by sweeping the profile
 	/// (theProfile) along the spine (theSpine).
 	/// theSpine can be shape only of type wire or face.
 	/// See description to this class for detailed information.
 	/// </summary>
-	BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile);
+BRepOffsetAPI_MakeEvolved(Macad::Occt::TopoDS_Shape^ theSpine, Macad::Occt::TopoDS_Wire^ theProfile);
 	BRepOffsetAPI_MakeEvolved(Macad::Occt::BRepOffsetAPI_MakeEvolved^ parameter1);
 	/* Method skipped due to unknown mapping: BRepFill_Evolved Evolved() */
-	/// <summary>
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Returns   the  shapes  created  from   a  subshape
 	/// <SpineShape>  of     the  spine   and   a subshape
 	/// <ProfShape> on the profile.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ GeneratedShapes(Macad::Occt::TopoDS_Shape^ SpineShape, Macad::Occt::TopoDS_Shape^ ProfShape);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ GeneratedShapes(Macad::Occt::TopoDS_Shape^ SpineShape, Macad::Occt::TopoDS_Shape^ ProfShape);
+		/// <summary>
 	/// Return the face Top if <Solid> is True in the constructor.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Top();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Top();
+		/// <summary>
 	/// Return the face Bottom  if <Solid> is True in the constructor.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Bottom();
+Macad::Occt::TopoDS_Shape^ Bottom();
 }; // class BRepOffsetAPI_MakeEvolved
 
 //---------------------------------------------------------------------
@@ -921,7 +914,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a wire filling object defined by
 	/// - the energy minimizing criterion Degree
 	/// - the number of points on the curve NbPntsOnCur
@@ -939,8 +932,8 @@ public:
 	/// between the two. In other words, when the surface is, for
 	/// example, extremely long.
 	/// </summary>
-	BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d, double Tol3d, double TolAng, double TolCurv, int MaxDeg, int MaxSegments);
-	/// <summary>
+BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d, double Tol3d, double TolAng, double TolCurv, int MaxDeg, int MaxSegments);
+		/// <summary>
 	/// Constructs a wire filling object defined by
 	/// - the energy minimizing criterion Degree
 	/// - the number of points on the curve NbPntsOnCur
@@ -958,8 +951,8 @@ public:
 	/// between the two. In other words, when the surface is, for
 	/// example, extremely long.
 	/// </summary>
-	BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d, double Tol3d, double TolAng, double TolCurv, int MaxDeg);
-	/// <summary>
+BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d, double Tol3d, double TolAng, double TolCurv, int MaxDeg);
+		/// <summary>
 	/// Constructs a wire filling object defined by
 	/// - the energy minimizing criterion Degree
 	/// - the number of points on the curve NbPntsOnCur
@@ -977,8 +970,8 @@ public:
 	/// between the two. In other words, when the surface is, for
 	/// example, extremely long.
 	/// </summary>
-	BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d, double Tol3d, double TolAng, double TolCurv);
-	/// <summary>
+BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d, double Tol3d, double TolAng, double TolCurv);
+		/// <summary>
 	/// Constructs a wire filling object defined by
 	/// - the energy minimizing criterion Degree
 	/// - the number of points on the curve NbPntsOnCur
@@ -996,8 +989,8 @@ public:
 	/// between the two. In other words, when the surface is, for
 	/// example, extremely long.
 	/// </summary>
-	BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d, double Tol3d, double TolAng);
-	/// <summary>
+BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d, double Tol3d, double TolAng);
+		/// <summary>
 	/// Constructs a wire filling object defined by
 	/// - the energy minimizing criterion Degree
 	/// - the number of points on the curve NbPntsOnCur
@@ -1015,8 +1008,8 @@ public:
 	/// between the two. In other words, when the surface is, for
 	/// example, extremely long.
 	/// </summary>
-	BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d, double Tol3d);
-	/// <summary>
+BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d, double Tol3d);
+		/// <summary>
 	/// Constructs a wire filling object defined by
 	/// - the energy minimizing criterion Degree
 	/// - the number of points on the curve NbPntsOnCur
@@ -1034,8 +1027,8 @@ public:
 	/// between the two. In other words, when the surface is, for
 	/// example, extremely long.
 	/// </summary>
-	BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d);
-	/// <summary>
+BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie, double Tol2d);
+		/// <summary>
 	/// Constructs a wire filling object defined by
 	/// - the energy minimizing criterion Degree
 	/// - the number of points on the curve NbPntsOnCur
@@ -1053,8 +1046,8 @@ public:
 	/// between the two. In other words, when the surface is, for
 	/// example, extremely long.
 	/// </summary>
-	BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie);
-	/// <summary>
+BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie);
+		/// <summary>
 	/// Constructs a wire filling object defined by
 	/// - the energy minimizing criterion Degree
 	/// - the number of points on the curve NbPntsOnCur
@@ -1072,8 +1065,8 @@ public:
 	/// between the two. In other words, when the surface is, for
 	/// example, extremely long.
 	/// </summary>
-	BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter);
-	/// <summary>
+BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur, int NbIter);
+		/// <summary>
 	/// Constructs a wire filling object defined by
 	/// - the energy minimizing criterion Degree
 	/// - the number of points on the curve NbPntsOnCur
@@ -1091,8 +1084,8 @@ public:
 	/// between the two. In other words, when the surface is, for
 	/// example, extremely long.
 	/// </summary>
-	BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur);
-	/// <summary>
+BRepOffsetAPI_MakeFilling(int Degree, int NbPtsOnCur);
+		/// <summary>
 	/// Constructs a wire filling object defined by
 	/// - the energy minimizing criterion Degree
 	/// - the number of points on the curve NbPntsOnCur
@@ -1110,9 +1103,9 @@ public:
 	/// between the two. In other words, when the surface is, for
 	/// example, extremely long.
 	/// </summary>
-	BRepOffsetAPI_MakeFilling(int Degree);
+BRepOffsetAPI_MakeFilling(int Degree);
 	BRepOffsetAPI_MakeFilling(Macad::Occt::BRepOffsetAPI_MakeFilling^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the values of Tolerances used to control the constraint.
 	/// Tol2d:
 	/// Tol3d:   it is the maximum distance allowed between the support surface
@@ -1122,8 +1115,8 @@ public:
 	/// TolCurv: it is the maximum difference of curvature allowed between
 	/// the surface and the constraint
 	/// </summary>
-	void SetConstrParam(double Tol2d, double Tol3d, double TolAng, double TolCurv);
-	/// <summary>
+void SetConstrParam(double Tol2d, double Tol3d, double TolAng, double TolCurv);
+		/// <summary>
 	/// Sets the values of Tolerances used to control the constraint.
 	/// Tol2d:
 	/// Tol3d:   it is the maximum distance allowed between the support surface
@@ -1133,8 +1126,8 @@ public:
 	/// TolCurv: it is the maximum difference of curvature allowed between
 	/// the surface and the constraint
 	/// </summary>
-	void SetConstrParam(double Tol2d, double Tol3d, double TolAng);
-	/// <summary>
+void SetConstrParam(double Tol2d, double Tol3d, double TolAng);
+		/// <summary>
 	/// Sets the values of Tolerances used to control the constraint.
 	/// Tol2d:
 	/// Tol3d:   it is the maximum distance allowed between the support surface
@@ -1144,8 +1137,8 @@ public:
 	/// TolCurv: it is the maximum difference of curvature allowed between
 	/// the surface and the constraint
 	/// </summary>
-	void SetConstrParam(double Tol2d, double Tol3d);
-	/// <summary>
+void SetConstrParam(double Tol2d, double Tol3d);
+		/// <summary>
 	/// Sets the values of Tolerances used to control the constraint.
 	/// Tol2d:
 	/// Tol3d:   it is the maximum distance allowed between the support surface
@@ -1155,8 +1148,8 @@ public:
 	/// TolCurv: it is the maximum difference of curvature allowed between
 	/// the surface and the constraint
 	/// </summary>
-	void SetConstrParam(double Tol2d);
-	/// <summary>
+void SetConstrParam(double Tol2d);
+		/// <summary>
 	/// Sets the values of Tolerances used to control the constraint.
 	/// Tol2d:
 	/// Tol3d:   it is the maximum distance allowed between the support surface
@@ -1166,8 +1159,8 @@ public:
 	/// TolCurv: it is the maximum difference of curvature allowed between
 	/// the surface and the constraint
 	/// </summary>
-	void SetConstrParam();
-	/// <summary>
+void SetConstrParam();
+		/// <summary>
 	/// Sets the parameters used for resolution.
 	/// The default values of these parameters have been chosen for a good
 	/// ratio quality/performance.
@@ -1183,8 +1176,8 @@ public:
 	/// increased.
 	/// Anisotropie:
 	/// </summary>
-	void SetResolParam(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie);
-	/// <summary>
+void SetResolParam(int Degree, int NbPtsOnCur, int NbIter, bool Anisotropie);
+		/// <summary>
 	/// Sets the parameters used for resolution.
 	/// The default values of these parameters have been chosen for a good
 	/// ratio quality/performance.
@@ -1200,8 +1193,8 @@ public:
 	/// increased.
 	/// Anisotropie:
 	/// </summary>
-	void SetResolParam(int Degree, int NbPtsOnCur, int NbIter);
-	/// <summary>
+void SetResolParam(int Degree, int NbPtsOnCur, int NbIter);
+		/// <summary>
 	/// Sets the parameters used for resolution.
 	/// The default values of these parameters have been chosen for a good
 	/// ratio quality/performance.
@@ -1217,8 +1210,8 @@ public:
 	/// increased.
 	/// Anisotropie:
 	/// </summary>
-	void SetResolParam(int Degree, int NbPtsOnCur);
-	/// <summary>
+void SetResolParam(int Degree, int NbPtsOnCur);
+		/// <summary>
 	/// Sets the parameters used for resolution.
 	/// The default values of these parameters have been chosen for a good
 	/// ratio quality/performance.
@@ -1234,8 +1227,8 @@ public:
 	/// increased.
 	/// Anisotropie:
 	/// </summary>
-	void SetResolParam(int Degree);
-	/// <summary>
+void SetResolParam(int Degree);
+		/// <summary>
 	/// Sets the parameters used for resolution.
 	/// The default values of these parameters have been chosen for a good
 	/// ratio quality/performance.
@@ -1251,8 +1244,8 @@ public:
 	/// increased.
 	/// Anisotropie:
 	/// </summary>
-	void SetResolParam();
-	/// <summary>
+void SetResolParam();
+		/// <summary>
 	/// Sets the parameters used to approximate the filling
 	/// surface. These include:
 	/// - MaxDeg - the highest degree which the polynomial
@@ -1260,8 +1253,8 @@ public:
 	/// - MaxSegments - the greatest number of segments
 	/// which the filling surface can have.
 	/// </summary>
-	void SetApproxParam(int MaxDeg, int MaxSegments);
-	/// <summary>
+void SetApproxParam(int MaxDeg, int MaxSegments);
+		/// <summary>
 	/// Sets the parameters used to approximate the filling
 	/// surface. These include:
 	/// - MaxDeg - the highest degree which the polynomial
@@ -1269,8 +1262,8 @@ public:
 	/// - MaxSegments - the greatest number of segments
 	/// which the filling surface can have.
 	/// </summary>
-	void SetApproxParam(int MaxDeg);
-	/// <summary>
+void SetApproxParam(int MaxDeg);
+		/// <summary>
 	/// Sets the parameters used to approximate the filling
 	/// surface. These include:
 	/// - MaxDeg - the highest degree which the polynomial
@@ -1278,8 +1271,8 @@ public:
 	/// - MaxSegments - the greatest number of segments
 	/// which the filling surface can have.
 	/// </summary>
-	void SetApproxParam();
-	/// <summary>
+void SetApproxParam();
+		/// <summary>
 	/// Loads the initial surface Surf to
 	/// begin the construction of the surface.
 	/// This optional function is useful if the surface resulting from
@@ -1296,8 +1289,8 @@ public:
 	/// If this condition breaks, distortions of resulting surface
 	/// are possible.
 	/// </summary>
-	void LoadInitSurface(Macad::Occt::TopoDS_Face^ Surf);
-	/// <summary>
+void LoadInitSurface(Macad::Occt::TopoDS_Face^ Surf);
+		/// <summary>
 	/// Adds a new constraint which also defines an edge of the wire
 	/// of the face
 	/// Order: Order of the constraint:
@@ -1312,8 +1305,8 @@ public:
 	/// Raises ConstructionError if the edge has no representation on a face and Order is
 	/// GeomAbs_G1 or GeomAbs_G2.
 	/// </summary>
-	int Add(Macad::Occt::TopoDS_Edge^ Constr, Macad::Occt::GeomAbs_Shape Order, bool IsBound);
-	/// <summary>
+int Add(Macad::Occt::TopoDS_Edge^ Constr, Macad::Occt::GeomAbs_Shape Order, bool IsBound);
+		/// <summary>
 	/// Adds a new constraint which also defines an edge of the wire
 	/// of the face
 	/// Order: Order of the constraint:
@@ -1328,8 +1321,8 @@ public:
 	/// Raises ConstructionError if the edge has no representation on a face and Order is
 	/// GeomAbs_G1 or GeomAbs_G2.
 	/// </summary>
-	int Add(Macad::Occt::TopoDS_Edge^ Constr, Macad::Occt::GeomAbs_Shape Order);
-	/// <summary>
+int Add(Macad::Occt::TopoDS_Edge^ Constr, Macad::Occt::GeomAbs_Shape Order);
+		/// <summary>
 	/// Adds a new constraint which also defines an edge of the wire
 	/// of the face
 	/// Order: Order of the constraint:
@@ -1343,8 +1336,8 @@ public:
 	/// with the given face.
 	/// Raises ConstructionError if the edge has no 2d representation on the given face
 	/// </summary>
-	int Add(Macad::Occt::TopoDS_Edge^ Constr, Macad::Occt::TopoDS_Face^ Support, Macad::Occt::GeomAbs_Shape Order, bool IsBound);
-	/// <summary>
+int Add(Macad::Occt::TopoDS_Edge^ Constr, Macad::Occt::TopoDS_Face^ Support, Macad::Occt::GeomAbs_Shape Order, bool IsBound);
+		/// <summary>
 	/// Adds a new constraint which also defines an edge of the wire
 	/// of the face
 	/// Order: Order of the constraint:
@@ -1358,67 +1351,67 @@ public:
 	/// with the given face.
 	/// Raises ConstructionError if the edge has no 2d representation on the given face
 	/// </summary>
-	int Add(Macad::Occt::TopoDS_Edge^ Constr, Macad::Occt::TopoDS_Face^ Support, Macad::Occt::GeomAbs_Shape Order);
-	/// <summary>
+int Add(Macad::Occt::TopoDS_Edge^ Constr, Macad::Occt::TopoDS_Face^ Support, Macad::Occt::GeomAbs_Shape Order);
+		/// <summary>
 	/// Adds a free constraint on a face. The corresponding edge has to
 	/// be automatically recomputed. It is always a bound.
 	/// </summary>
-	int Add(Macad::Occt::TopoDS_Face^ Support, Macad::Occt::GeomAbs_Shape Order);
-	/// <summary>
+int Add(Macad::Occt::TopoDS_Face^ Support, Macad::Occt::GeomAbs_Shape Order);
+		/// <summary>
 	/// Adds a punctual constraint.
 	/// </summary>
-	int Add(Macad::Occt::Pnt Point);
-	/// <summary>
+int Add(Macad::Occt::Pnt Point);
+		/// <summary>
 	/// Adds a punctual constraint.
 	/// </summary>
-	int Add(double U, double V, Macad::Occt::TopoDS_Face^ Support, Macad::Occt::GeomAbs_Shape Order);
-	/// <summary>
+int Add(double U, double V, Macad::Occt::TopoDS_Face^ Support, Macad::Occt::GeomAbs_Shape Order);
+		/// <summary>
 	/// Builds the resulting faces
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Builds the resulting faces
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Tests whether computation of the filling plate has been completed.
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// Returns the list of shapes generated from the
 	/// shape <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns the maximum distance between the result and
 	/// the constraints. This is set at construction time.
 	/// </summary>
-	double G0Error();
-	/// <summary>
+double G0Error();
+		/// <summary>
 	/// Returns the maximum angle between the result and the
 	/// constraints. This is set at construction time.
 	/// </summary>
-	double G1Error();
-	/// <summary>
+double G1Error();
+		/// <summary>
 	/// Returns the maximum angle between the result and the
 	/// constraints. This is set at construction time.
 	/// </summary>
-	double G2Error();
-	/// <summary>
+double G2Error();
+		/// <summary>
 	/// Returns the maximum distance attained between the
 	/// result and the constraint Index. This is set at construction time.
 	/// </summary>
-	double G0Error(int Index);
-	/// <summary>
+double G0Error(int Index);
+		/// <summary>
 	/// Returns the maximum angle between the result and the
 	/// constraints. This is set at construction time.
 	/// </summary>
-	double G1Error(int Index);
-	/// <summary>
+double G1Error(int Index);
+		/// <summary>
 	/// Returns the greatest difference in curvature found
 	/// between the result and the constraint Index.
 	/// </summary>
-	double G2Error(int Index);
+double G2Error(int Index);
 }; // class BRepOffsetAPI_MakeFilling
 
 //---------------------------------------------------------------------
@@ -1458,30 +1451,30 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an algorithm for creating an empty offset
 	/// </summary>
-	BRepOffsetAPI_MakeOffset();
-	/// <summary>
+BRepOffsetAPI_MakeOffset();
+		/// <summary>
 	/// Constructs an algorithm for creating an algorithm
 	/// to build parallels to the spine Spine
 	/// </summary>
-	BRepOffsetAPI_MakeOffset(Macad::Occt::TopoDS_Face^ Spine, Macad::Occt::GeomAbs_JoinType Join, bool IsOpenResult);
-	/// <summary>
+BRepOffsetAPI_MakeOffset(Macad::Occt::TopoDS_Face^ Spine, Macad::Occt::GeomAbs_JoinType Join, bool IsOpenResult);
+		/// <summary>
 	/// Constructs an algorithm for creating an algorithm
 	/// to build parallels to the spine Spine
 	/// </summary>
-	BRepOffsetAPI_MakeOffset(Macad::Occt::TopoDS_Face^ Spine, Macad::Occt::GeomAbs_JoinType Join);
-	/// <summary>
+BRepOffsetAPI_MakeOffset(Macad::Occt::TopoDS_Face^ Spine, Macad::Occt::GeomAbs_JoinType Join);
+		/// <summary>
 	/// Constructs an algorithm for creating an algorithm
 	/// to build parallels to the spine Spine
 	/// </summary>
-	BRepOffsetAPI_MakeOffset(Macad::Occt::TopoDS_Face^ Spine);
+BRepOffsetAPI_MakeOffset(Macad::Occt::TopoDS_Face^ Spine);
 	BRepOffsetAPI_MakeOffset(Macad::Occt::TopoDS_Wire^ Spine, Macad::Occt::GeomAbs_JoinType Join, bool IsOpenResult);
 	BRepOffsetAPI_MakeOffset(Macad::Occt::TopoDS_Wire^ Spine, Macad::Occt::GeomAbs_JoinType Join);
 	BRepOffsetAPI_MakeOffset(Macad::Occt::TopoDS_Wire^ Spine);
 	BRepOffsetAPI_MakeOffset(Macad::Occt::BRepOffsetAPI_MakeOffset^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes the algorithm to construct parallels to the spine Spine.
 	/// Join defines the type of parallel generated by the
 	/// salient vertices of the spine.
@@ -1491,8 +1484,8 @@ public:
 	/// intersect in a salient vertex generate the edges
 	/// prolonged until intersection.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Face^ Spine, Macad::Occt::GeomAbs_JoinType Join, bool IsOpenResult);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Face^ Spine, Macad::Occt::GeomAbs_JoinType Join, bool IsOpenResult);
+		/// <summary>
 	/// Initializes the algorithm to construct parallels to the spine Spine.
 	/// Join defines the type of parallel generated by the
 	/// salient vertices of the spine.
@@ -1502,8 +1495,8 @@ public:
 	/// intersect in a salient vertex generate the edges
 	/// prolonged until intersection.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Face^ Spine, Macad::Occt::GeomAbs_JoinType Join);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Face^ Spine, Macad::Occt::GeomAbs_JoinType Join);
+		/// <summary>
 	/// Initializes the algorithm to construct parallels to the spine Spine.
 	/// Join defines the type of parallel generated by the
 	/// salient vertices of the spine.
@@ -1513,50 +1506,50 @@ public:
 	/// intersect in a salient vertex generate the edges
 	/// prolonged until intersection.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Face^ Spine);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Face^ Spine);
+		/// <summary>
 	/// Initialize the evaluation of Offsetting.
 	/// </summary>
-	void Init(Macad::Occt::GeomAbs_JoinType Join, bool IsOpenResult);
-	/// <summary>
+void Init(Macad::Occt::GeomAbs_JoinType Join, bool IsOpenResult);
+		/// <summary>
 	/// Initialize the evaluation of Offsetting.
 	/// </summary>
-	void Init(Macad::Occt::GeomAbs_JoinType Join);
-	/// <summary>
+void Init(Macad::Occt::GeomAbs_JoinType Join);
+		/// <summary>
 	/// Initialize the evaluation of Offsetting.
 	/// </summary>
-	void Init();
-	/// <summary>
+void Init();
+		/// <summary>
 	/// Initializes the algorithm to construct parallels to the wire Spine.
 	/// </summary>
-	void AddWire(Macad::Occt::TopoDS_Wire^ Spine);
-	/// <summary>
+void AddWire(Macad::Occt::TopoDS_Wire^ Spine);
+		/// <summary>
 	/// Computes a parallel to the spine at distance Offset and
 	/// at an altitude Alt from the plane of the spine in relation
 	/// to the normal to the spine.
 	/// Exceptions: StdFail_NotDone if the offset is not built.
 	/// </summary>
-	void Perform(double Offset, double Alt);
-	/// <summary>
+void Perform(double Offset, double Alt);
+		/// <summary>
 	/// Computes a parallel to the spine at distance Offset and
 	/// at an altitude Alt from the plane of the spine in relation
 	/// to the normal to the spine.
 	/// Exceptions: StdFail_NotDone if the offset is not built.
 	/// </summary>
-	void Perform(double Offset);
-	/// <summary>
+void Perform(double Offset);
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// returns a list of the created shapes
 	/// from the shape <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
 }; // class BRepOffsetAPI_MakeOffset
 
 //---------------------------------------------------------------------
@@ -1611,16 +1604,16 @@ public:
 		OffsetAlgo_SIMPLE = 2
 	}; // enum  class OffsetAlgo_Type
 
-	/// <summary>
+		/// <summary>
 	/// Constructor does nothing.
 	/// </summary>
-	BRepOffsetAPI_MakeOffsetShape();
+BRepOffsetAPI_MakeOffsetShape();
 	BRepOffsetAPI_MakeOffsetShape(Macad::Occt::BRepOffsetAPI_MakeOffsetShape^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Constructs offset shape for the given one using simple algorithm without intersections computation.
 	/// </summary>
-	void PerformBySimple(Macad::Occt::TopoDS_Shape^ theS, double theOffsetValue);
-	/// <summary>
+void PerformBySimple(Macad::Occt::TopoDS_Shape^ theS, double theOffsetValue);
+		/// <summary>
 	/// Constructs a shape parallel to the shape S, where
 	/// - S may be a face, a shell, a solid or a compound of these shape kinds;
 	/// - Offset is the offset value. The offset shape is constructed:
@@ -1677,8 +1670,8 @@ public:
 	/// Geom_UndefinedDerivative if the underlying
 	/// geometry of S is BSpline with continuity C0.
 	/// </summary>
-	void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join, bool RemoveIntEdges, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join, bool RemoveIntEdges, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Constructs a shape parallel to the shape S, where
 	/// - S may be a face, a shell, a solid or a compound of these shape kinds;
 	/// - Offset is the offset value. The offset shape is constructed:
@@ -1735,8 +1728,8 @@ public:
 	/// Geom_UndefinedDerivative if the underlying
 	/// geometry of S is BSpline with continuity C0.
 	/// </summary>
-	void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join, bool RemoveIntEdges);
-	/// <summary>
+void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join, bool RemoveIntEdges);
+		/// <summary>
 	/// Constructs a shape parallel to the shape S, where
 	/// - S may be a face, a shell, a solid or a compound of these shape kinds;
 	/// - Offset is the offset value. The offset shape is constructed:
@@ -1793,8 +1786,8 @@ public:
 	/// Geom_UndefinedDerivative if the underlying
 	/// geometry of S is BSpline with continuity C0.
 	/// </summary>
-	void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join);
-	/// <summary>
+void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join);
+		/// <summary>
 	/// Constructs a shape parallel to the shape S, where
 	/// - S may be a face, a shell, a solid or a compound of these shape kinds;
 	/// - Offset is the offset value. The offset shape is constructed:
@@ -1851,8 +1844,8 @@ public:
 	/// Geom_UndefinedDerivative if the underlying
 	/// geometry of S is BSpline with continuity C0.
 	/// </summary>
-	void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter);
-	/// <summary>
+void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter);
+		/// <summary>
 	/// Constructs a shape parallel to the shape S, where
 	/// - S may be a face, a shell, a solid or a compound of these shape kinds;
 	/// - Offset is the offset value. The offset shape is constructed:
@@ -1909,8 +1902,8 @@ public:
 	/// Geom_UndefinedDerivative if the underlying
 	/// geometry of S is BSpline with continuity C0.
 	/// </summary>
-	void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection);
-	/// <summary>
+void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection);
+		/// <summary>
 	/// Constructs a shape parallel to the shape S, where
 	/// - S may be a face, a shell, a solid or a compound of these shape kinds;
 	/// - Offset is the offset value. The offset shape is constructed:
@@ -1967,8 +1960,8 @@ public:
 	/// Geom_UndefinedDerivative if the underlying
 	/// geometry of S is BSpline with continuity C0.
 	/// </summary>
-	void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode);
-	/// <summary>
+void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode);
+		/// <summary>
 	/// Constructs a shape parallel to the shape S, where
 	/// - S may be a face, a shell, a solid or a compound of these shape kinds;
 	/// - Offset is the offset value. The offset shape is constructed:
@@ -2025,35 +2018,35 @@ public:
 	/// Geom_UndefinedDerivative if the underlying
 	/// geometry of S is BSpline with continuity C0.
 	/// </summary>
-	void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol);
-	/// <summary>
+void PerformByJoin(Macad::Occt::TopoDS_Shape^ S, double Offset, double Tol);
+		/// <summary>
 	/// Returns instance of the unrelying intersection / arc algorithm.
 	/// </summary>
-	Macad::Occt::BRepOffset_MakeOffset^ MakeOffset();
-	/// <summary>
+Macad::Occt::BRepOffset_MakeOffset^ MakeOffset();
+		/// <summary>
 	/// Does nothing.
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Does nothing.
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Returns the list of shapes generated from the shape <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns the list of shapes Modified from the shape <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns true if the shape has been removed from the result.
 	/// </summary>
-	bool IsDeleted(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+bool IsDeleted(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns offset join type.
 	/// </summary>
-	Macad::Occt::GeomAbs_JoinType GetJoinType();
+Macad::Occt::GeomAbs_JoinType GetJoinType();
 }; // class BRepOffsetAPI_MakeOffsetShape
 
 //---------------------------------------------------------------------
@@ -2098,7 +2091,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a pipe by sweeping the shape Profile along
 	/// the wire Spine.The angle made by the spine with the profile is
 	/// maintained along the length of the pipe.
@@ -2111,39 +2104,27 @@ public:
 	/// Standard_DomainError if the profile is a solid or a
 	/// composite solid.
 	/// </summary>
-	BRepOffsetAPI_MakePipe(Macad::Occt::TopoDS_Wire^ Spine, Macad::Occt::TopoDS_Shape^ Profile);
-	/// <summary>
-	/// the same as previous but with setting of
-	/// mode of sweep and the flag that indicates attempt
-	/// to approximate a C1-continuous surface if a swept
-	/// surface proved to be C0.
-	/// </summary>
+BRepOffsetAPI_MakePipe(Macad::Occt::TopoDS_Wire^ Spine, Macad::Occt::TopoDS_Shape^ Profile);
 	/* Method skipped due to unknown mapping: void BRepOffsetAPI_MakePipe(TopoDS_Wire Spine, TopoDS_Shape Profile, GeomFill_Trihedron aMode, Standard_Boolean ForceApproxC1, ) */
-	/// <summary>
-	/// the same as previous but with setting of
-	/// mode of sweep and the flag that indicates attempt
-	/// to approximate a C1-continuous surface if a swept
-	/// surface proved to be C0.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void BRepOffsetAPI_MakePipe(TopoDS_Wire Spine, TopoDS_Shape Profile, GeomFill_Trihedron aMode, Standard_Boolean ForceApproxC1, ) */
 	BRepOffsetAPI_MakePipe(Macad::Occt::BRepOffsetAPI_MakePipe^ parameter1);
 	/* Method skipped due to unknown mapping: BRepFill_Pipe Pipe() */
-	/// <summary>
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Returns the  TopoDS  Shape of the bottom of the prism.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ FirstShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ FirstShape();
+		/// <summary>
 	/// Returns the TopoDS Shape of the top of the prism.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ LastShape();
+Macad::Occt::TopoDS_Shape^ LastShape();
 	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
 	Macad::Occt::TopoDS_Shape^ Generated(Macad::Occt::TopoDS_Shape^ SSpine, Macad::Occt::TopoDS_Shape^ SProfile);
 	double ErrorOnSurface();
@@ -2198,80 +2179,50 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs the shell-generating framework defined by the wire Spine.
 	/// Sets an sweep's mode
 	/// If no mode are set, the mode use in MakePipe is used
 	/// </summary>
-	BRepOffsetAPI_MakePipeShell(Macad::Occt::TopoDS_Wire^ Spine);
+BRepOffsetAPI_MakePipeShell(Macad::Occt::TopoDS_Wire^ Spine);
 	BRepOffsetAPI_MakePipeShell(Macad::Occt::BRepOffsetAPI_MakePipeShell^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets a Frenet or a CorrectedFrenet trihedron
 	/// to  perform  the  sweeping
 	/// If IsFrenet is false, a corrected Frenet trihedron is used.
 	/// </summary>
-	void SetMode(bool IsFrenet);
-	/// <summary>
+void SetMode(bool IsFrenet);
+		/// <summary>
 	/// Sets a Frenet or a CorrectedFrenet trihedron
 	/// to  perform  the  sweeping
 	/// If IsFrenet is false, a corrected Frenet trihedron is used.
 	/// </summary>
-	void SetMode();
-	/// <summary>
+void SetMode();
+		/// <summary>
 	/// Sets a Discrete trihedron
 	/// to  perform  the  sweeping
 	/// </summary>
-	void SetDiscreteMode();
-	/// <summary>
+void SetDiscreteMode();
+		/// <summary>
 	/// Sets  a  fixed  trihedron  to  perform  the  sweeping
 	/// all sections will be parallel.
 	/// </summary>
-	void SetMode(Macad::Occt::Ax2 Axe);
-	/// <summary>
+void SetMode(Macad::Occt::Ax2 Axe);
+		/// <summary>
 	/// Sets a fixed BiNormal  direction to perform the --
 	/// sweeping.   Angular   relations   between  the
 	/// section(s) and <BiNormal> will be constant
 	/// </summary>
-	void SetMode(Macad::Occt::Dir BiNormal);
-	/// <summary>
+void SetMode(Macad::Occt::Dir BiNormal);
+		/// <summary>
 	/// Sets support to the spine to define the BiNormal of
 	/// the trihedron, like the normal  to the surfaces.
 	/// Warning:  To be effective, Each  edge of the <spine> must
 	/// have a representation on one face of<SpineSupport>
 	/// </summary>
-	bool SetMode(Macad::Occt::TopoDS_Shape^ SpineSupport);
-	/// <summary>
-	/// Sets  an  auxiliary  spine  to  define  the Normal
-	/// For  each  Point  of  the  Spine  P,  an  Point  Q  is  evalued
-	/// on  <AuxiliarySpine>
-	/// If <CurvilinearEquivalence>
-	/// Q split <AuxiliarySpine> with  the  same  length ratio
-	/// than P split  <Spline>.
-	/// Else  the  plan  define  by  P  and  the  tangent  to  the  <Spine>
-	/// intersect <AuxiliarySpine> in Q.
-	/// If <KeepContact> equals BRepFill_NoContact: The Normal is defined
-	/// by the vector PQ.
-	/// If <KeepContact> equals BRepFill_Contact: The Normal is defined to
-	/// achieve that the sweeped section is in contact to the
-	/// auxiliarySpine. The width of section is constant all along the path.
-	/// In other words, the auxiliary spine lies on the swept surface,
-	/// but not necessarily is a boundary of this surface. However,
-	/// the auxiliary spine has to be close enough to the main spine
-	/// to provide intersection with any section all along the path.
-	/// If <KeepContact> equals BRepFill_ContactOnBorder: The auxiliary spine
-	/// becomes a boundary of the swept surface and the width of section varies
-	/// along the path.
-	/// Give section to sweep.
-	/// Possibilities are :
-	/// - Give one or sevral section
-	/// - Give one profile and an homotetic law.
-	/// - Automatic compute of correspondence between spine, and section
-	/// on the sweeped shape
-	/// - correspondence between spine, and section on the sweeped shape
-	/// defined by a vertex of the spine
-	/// </summary>
+bool SetMode(Macad::Occt::TopoDS_Shape^ SpineSupport);
 	/* Method skipped due to unknown mapping: void SetMode(TopoDS_Wire AuxiliarySpine, Standard_Boolean CurvilinearEquivalence, BRepFill_TypeOfContact KeepContact, ) */
-	/// <summary>
+		/// <summary>
 	/// Sets  an  auxiliary  spine  to  define  the Normal
 	/// For  each  Point  of  the  Spine  P,  an  Point  Q  is  evalued
 	/// on  <AuxiliarySpine>
@@ -2301,8 +2252,8 @@ public:
 	/// - correspondence between spine, and section on the sweeped shape
 	/// defined by a vertex of the spine
 	/// </summary>
-	void SetMode(Macad::Occt::TopoDS_Wire^ AuxiliarySpine, bool CurvilinearEquivalence);
-	/// <summary>
+void SetMode(Macad::Occt::TopoDS_Wire^ AuxiliarySpine, bool CurvilinearEquivalence);
+		/// <summary>
 	/// Adds the section Profile to this framework. First and last
 	/// sections may be punctual, so the shape Profile may be
 	/// both wire and vertex. Correspondent point on spine is
@@ -2314,8 +2265,8 @@ public:
 	/// point. This option has no sense if the section is punctual
 	/// (Profile is of type TopoDS_Vertex).
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Shape^ Profile, bool WithContact, bool WithCorrection);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Shape^ Profile, bool WithContact, bool WithCorrection);
+		/// <summary>
 	/// Adds the section Profile to this framework. First and last
 	/// sections may be punctual, so the shape Profile may be
 	/// both wire and vertex. Correspondent point on spine is
@@ -2327,8 +2278,8 @@ public:
 	/// point. This option has no sense if the section is punctual
 	/// (Profile is of type TopoDS_Vertex).
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Shape^ Profile, bool WithContact);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Shape^ Profile, bool WithContact);
+		/// <summary>
 	/// Adds the section Profile to this framework. First and last
 	/// sections may be punctual, so the shape Profile may be
 	/// both wire and vertex. Correspondent point on spine is
@@ -2340,143 +2291,95 @@ public:
 	/// point. This option has no sense if the section is punctual
 	/// (Profile is of type TopoDS_Vertex).
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Shape^ Profile);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Shape^ Profile);
+		/// <summary>
 	/// Adds the section Profile to this framework.
 	/// Correspondent point on the spine is given by Location.
 	/// Warning:
 	/// To be effective, it is not recommended to combine methods Add and SetLaw.
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Shape^ Profile, Macad::Occt::TopoDS_Vertex^ Location, bool WithContact, bool WithCorrection);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Shape^ Profile, Macad::Occt::TopoDS_Vertex^ Location, bool WithContact, bool WithCorrection);
+		/// <summary>
 	/// Adds the section Profile to this framework.
 	/// Correspondent point on the spine is given by Location.
 	/// Warning:
 	/// To be effective, it is not recommended to combine methods Add and SetLaw.
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Shape^ Profile, Macad::Occt::TopoDS_Vertex^ Location, bool WithContact);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Shape^ Profile, Macad::Occt::TopoDS_Vertex^ Location, bool WithContact);
+		/// <summary>
 	/// Adds the section Profile to this framework.
 	/// Correspondent point on the spine is given by Location.
 	/// Warning:
 	/// To be effective, it is not recommended to combine methods Add and SetLaw.
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Shape^ Profile, Macad::Occt::TopoDS_Vertex^ Location);
-	/// <summary>
-	/// Sets the evolution law defined by the wire Profile with
-	/// its position (Location, WithContact, WithCorrection
-	/// are the same options as in methods Add) and a
-	/// homotetic law defined by the function L.
-	/// Warning:
-	/// To be effective, it is not recommended to combine methods Add and SetLaw.
-	/// </summary>
+void Add(Macad::Occt::TopoDS_Shape^ Profile, Macad::Occt::TopoDS_Vertex^ Location);
 	/* Method skipped due to unknown mapping: void SetLaw(TopoDS_Shape Profile, Law_Function L, Standard_Boolean WithContact, Standard_Boolean WithCorrection, ) */
-	/// <summary>
-	/// Sets the evolution law defined by the wire Profile with
-	/// its position (Location, WithContact, WithCorrection
-	/// are the same options as in methods Add) and a
-	/// homotetic law defined by the function L.
-	/// Warning:
-	/// To be effective, it is not recommended to combine methods Add and SetLaw.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void SetLaw(TopoDS_Shape Profile, Law_Function L, Standard_Boolean WithContact, Standard_Boolean WithCorrection, ) */
-	/// <summary>
-	/// Sets the evolution law defined by the wire Profile with
-	/// its position (Location, WithContact, WithCorrection
-	/// are the same options as in methods Add) and a
-	/// homotetic law defined by the function L.
-	/// Warning:
-	/// To be effective, it is not recommended to combine methods Add and SetLaw.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void SetLaw(TopoDS_Shape Profile, Law_Function L, Standard_Boolean WithContact, Standard_Boolean WithCorrection, ) */
-	/// <summary>
-	/// Sets the evolution law defined by the wire Profile with
-	/// its position (Location, WithContact, WithCorrection
-	/// are the same options as in methods Add) and a
-	/// homotetic law defined by the function L.
-	/// Warning:
-	/// To be effective, it is not recommended to combine methods Add and SetLaw.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void SetLaw(TopoDS_Shape Profile, Law_Function L, TopoDS_Vertex Location, Standard_Boolean WithContact, Standard_Boolean WithCorrection, ) */
-	/// <summary>
-	/// Sets the evolution law defined by the wire Profile with
-	/// its position (Location, WithContact, WithCorrection
-	/// are the same options as in methods Add) and a
-	/// homotetic law defined by the function L.
-	/// Warning:
-	/// To be effective, it is not recommended to combine methods Add and SetLaw.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void SetLaw(TopoDS_Shape Profile, Law_Function L, TopoDS_Vertex Location, Standard_Boolean WithContact, Standard_Boolean WithCorrection, ) */
-	/// <summary>
-	/// Sets the evolution law defined by the wire Profile with
-	/// its position (Location, WithContact, WithCorrection
-	/// are the same options as in methods Add) and a
-	/// homotetic law defined by the function L.
-	/// Warning:
-	/// To be effective, it is not recommended to combine methods Add and SetLaw.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void SetLaw(TopoDS_Shape Profile, Law_Function L, TopoDS_Vertex Location, Standard_Boolean WithContact, Standard_Boolean WithCorrection, ) */
-	/// <summary>
+		/// <summary>
 	/// Removes the section Profile from this framework.
 	/// </summary>
-	void Delete(Macad::Occt::TopoDS_Shape^ Profile);
-	/// <summary>
+void Delete(Macad::Occt::TopoDS_Shape^ Profile);
+		/// <summary>
 	/// Returns true if this tool object is ready to build the
 	/// shape, i.e. has a definition for the wire section Profile.
 	/// </summary>
-	bool IsReady();
-	/// <summary>
+bool IsReady();
+		/// <summary>
 	/// Get a status, when Simulate or Build failed.       It can be
 	/// BRepBuilderAPI_PipeDone,
 	/// BRepBuilderAPI_PipeNotDone,
 	/// BRepBuilderAPI_PlaneNotIntersectGuide,
 	/// BRepBuilderAPI_ImpossibleContact.
 	/// </summary>
-	Macad::Occt::BRepBuilderAPI_PipeError GetStatus();
-	/// <summary>
+Macad::Occt::BRepBuilderAPI_PipeError GetStatus();
+		/// <summary>
 	/// Sets the following tolerance values
 	/// - 3D tolerance Tol3d
 	/// - boundary tolerance BoundTol
 	/// - angular tolerance TolAngular.
 	/// </summary>
-	void SetTolerance(double Tol3d, double BoundTol, double TolAngular);
-	/// <summary>
+void SetTolerance(double Tol3d, double BoundTol, double TolAngular);
+		/// <summary>
 	/// Sets the following tolerance values
 	/// - 3D tolerance Tol3d
 	/// - boundary tolerance BoundTol
 	/// - angular tolerance TolAngular.
 	/// </summary>
-	void SetTolerance(double Tol3d, double BoundTol);
-	/// <summary>
+void SetTolerance(double Tol3d, double BoundTol);
+		/// <summary>
 	/// Sets the following tolerance values
 	/// - 3D tolerance Tol3d
 	/// - boundary tolerance BoundTol
 	/// - angular tolerance TolAngular.
 	/// </summary>
-	void SetTolerance(double Tol3d);
-	/// <summary>
+void SetTolerance(double Tol3d);
+		/// <summary>
 	/// Sets the following tolerance values
 	/// - 3D tolerance Tol3d
 	/// - boundary tolerance BoundTol
 	/// - angular tolerance TolAngular.
 	/// </summary>
-	void SetTolerance();
-	/// <summary>
+void SetTolerance();
+		/// <summary>
 	/// Define the maximum V degree of resulting surface
 	/// </summary>
-	void SetMaxDegree(int NewMaxDegree);
-	/// <summary>
+void SetMaxDegree(int NewMaxDegree);
+		/// <summary>
 	/// Define the maximum number of spans in V-direction
 	/// on resulting surface
 	/// </summary>
-	void SetMaxSegments(int NewMaxSegments);
-	/// <summary>
+void SetMaxSegments(int NewMaxSegments);
+		/// <summary>
 	/// Set the flag that indicates attempt to approximate
 	/// a C1-continuous surface if a swept surface proved
 	/// to be C0.
 	/// </summary>
-	void SetForceApproxC1(bool ForceApproxC1);
-	/// <summary>
+void SetForceApproxC1(bool ForceApproxC1);
+		/// <summary>
 	/// Sets the transition mode to manage discontinuities on
 	/// the swept shape caused by fractures on the spine. The
 	/// transition mode can be BRepBuilderAPI_Transformed
@@ -2515,8 +2418,8 @@ public:
 	/// with option WithCorrection = True, i.e. it is strictly
 	/// orthogonal to the spine.
 	/// </summary>
-	void SetTransitionMode(Macad::Occt::BRepBuilderAPI_TransitionMode Mode);
-	/// <summary>
+void SetTransitionMode(Macad::Occt::BRepBuilderAPI_TransitionMode Mode);
+		/// <summary>
 	/// Sets the transition mode to manage discontinuities on
 	/// the swept shape caused by fractures on the spine. The
 	/// transition mode can be BRepBuilderAPI_Transformed
@@ -2555,8 +2458,8 @@ public:
 	/// with option WithCorrection = True, i.e. it is strictly
 	/// orthogonal to the spine.
 	/// </summary>
-	void SetTransitionMode();
-	/// <summary>
+void SetTransitionMode();
+		/// <summary>
 	/// Simulates the resulting shape by calculating its
 	/// cross-sections. The spine is divided by this
 	/// cross-sections into (NumberOfSection - 1) equal
@@ -2567,44 +2470,44 @@ public:
 	/// which will be obtained using the settings you have provided.
 	/// Raises  NotDone if  <me> it is not Ready
 	/// </summary>
-	void Simulate(int NumberOfSection, Macad::Occt::TopTools_ListOfShape^ Result);
-	/// <summary>
+void Simulate(int NumberOfSection, Macad::Occt::TopTools_ListOfShape^ Result);
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Transforms the sweeping Shell in Solid.
 	/// If a propfile is not closed returns False
 	/// </summary>
-	bool MakeSolid();
-	/// <summary>
+bool MakeSolid();
+		/// <summary>
 	/// Returns the  TopoDS  Shape of the bottom of the sweep.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ FirstShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ FirstShape();
+		/// <summary>
 	/// Returns the TopoDS Shape of the top of the sweep.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ LastShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ LastShape();
+		/// <summary>
 	/// Returns a list of new shapes generated from the shape
 	/// S by the shell-generating algorithm.
 	/// This function is redefined from BRepOffsetAPI_MakeShape::Generated.
 	/// S can be an edge or a vertex of a given Profile (see methods Add).
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
 	double ErrorOnSurface();
-	/// <summary>
+		/// <summary>
 	/// Returns the list of original profiles
 	/// </summary>
-	void Profiles(Macad::Occt::TopTools_ListOfShape^ theProfiles);
-	/// <summary>
+void Profiles(Macad::Occt::TopTools_ListOfShape^ theProfiles);
+		/// <summary>
 	/// Returns the spine
 	/// </summary>
-	Macad::Occt::TopoDS_Wire^ Spine();
+Macad::Occt::TopoDS_Wire^ Spine();
 }; // class BRepOffsetAPI_MakePipeShell
 
 //---------------------------------------------------------------------
@@ -2653,20 +2556,20 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor does nothing.
 	/// </summary>
-	BRepOffsetAPI_MakeThickSolid();
+BRepOffsetAPI_MakeThickSolid();
 	BRepOffsetAPI_MakeThickSolid(Macad::Occt::BRepOffsetAPI_MakeThickSolid^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Constructs solid using simple algorithm.
 	/// According to its nature it is not possible to set list of the closing faces.
 	/// This algorithm does not support faces removing. It is caused by fact that
 	/// intersections are not computed during offset creation.
 	/// Non-closed shell or face is expected as input.
 	/// </summary>
-	void MakeThickSolidBySimple(Macad::Occt::TopoDS_Shape^ theS, double theOffsetValue);
-	/// <summary>
+void MakeThickSolidBySimple(Macad::Occt::TopoDS_Shape^ theS, double theOffsetValue);
+		/// <summary>
 	/// Constructs a hollowed solid from
 	/// the solid S by removing the set of faces ClosingFaces from S, where:
 	/// Offset defines the thickness of the walls. Its sign indicates
@@ -2708,8 +2611,8 @@ public:
 	/// MakeOffsetShape algorithm, the warnings are the same as for
 	/// MakeOffsetShape.
 	/// </summary>
-	void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join, bool RemoveIntEdges, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join, bool RemoveIntEdges, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Constructs a hollowed solid from
 	/// the solid S by removing the set of faces ClosingFaces from S, where:
 	/// Offset defines the thickness of the walls. Its sign indicates
@@ -2751,8 +2654,8 @@ public:
 	/// MakeOffsetShape algorithm, the warnings are the same as for
 	/// MakeOffsetShape.
 	/// </summary>
-	void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join, bool RemoveIntEdges);
-	/// <summary>
+void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join, bool RemoveIntEdges);
+		/// <summary>
 	/// Constructs a hollowed solid from
 	/// the solid S by removing the set of faces ClosingFaces from S, where:
 	/// Offset defines the thickness of the walls. Its sign indicates
@@ -2794,8 +2697,8 @@ public:
 	/// MakeOffsetShape algorithm, the warnings are the same as for
 	/// MakeOffsetShape.
 	/// </summary>
-	void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join);
-	/// <summary>
+void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter, Macad::Occt::GeomAbs_JoinType Join);
+		/// <summary>
 	/// Constructs a hollowed solid from
 	/// the solid S by removing the set of faces ClosingFaces from S, where:
 	/// Offset defines the thickness of the walls. Its sign indicates
@@ -2837,8 +2740,8 @@ public:
 	/// MakeOffsetShape algorithm, the warnings are the same as for
 	/// MakeOffsetShape.
 	/// </summary>
-	void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter);
-	/// <summary>
+void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection, bool SelfInter);
+		/// <summary>
 	/// Constructs a hollowed solid from
 	/// the solid S by removing the set of faces ClosingFaces from S, where:
 	/// Offset defines the thickness of the walls. Its sign indicates
@@ -2880,8 +2783,8 @@ public:
 	/// MakeOffsetShape algorithm, the warnings are the same as for
 	/// MakeOffsetShape.
 	/// </summary>
-	void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection);
-	/// <summary>
+void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode, bool Intersection);
+		/// <summary>
 	/// Constructs a hollowed solid from
 	/// the solid S by removing the set of faces ClosingFaces from S, where:
 	/// Offset defines the thickness of the walls. Its sign indicates
@@ -2923,8 +2826,8 @@ public:
 	/// MakeOffsetShape algorithm, the warnings are the same as for
 	/// MakeOffsetShape.
 	/// </summary>
-	void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode);
-	/// <summary>
+void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol, Macad::Occt::BRepOffset_Mode Mode);
+		/// <summary>
 	/// Constructs a hollowed solid from
 	/// the solid S by removing the set of faces ClosingFaces from S, where:
 	/// Offset defines the thickness of the walls. Its sign indicates
@@ -2966,14 +2869,14 @@ public:
 	/// MakeOffsetShape algorithm, the warnings are the same as for
 	/// MakeOffsetShape.
 	/// </summary>
-	void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol);
+void MakeThickSolidByJoin(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::TopTools_ListOfShape^ ClosingFaces, double Offset, double Tol);
 	void Build(Macad::Occt::Message_ProgressRange^ theRange);
 	void Build();
-	/// <summary>
+		/// <summary>
 	/// Returns the list  of shapes modified from the shape
 	/// <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ S);
+Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ S);
 }; // class BRepOffsetAPI_MakeThickSolid
 
 //---------------------------------------------------------------------
@@ -3009,12 +2912,12 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// General constructor.
 	/// StartShape and EndShape may be
 	/// a wire or a face
 	/// </summary>
-	BRepOffsetAPI_MiddlePath(Macad::Occt::TopoDS_Shape^ aShape, Macad::Occt::TopoDS_Shape^ StartShape, Macad::Occt::TopoDS_Shape^ EndShape);
+BRepOffsetAPI_MiddlePath(Macad::Occt::TopoDS_Shape^ aShape, Macad::Occt::TopoDS_Shape^ StartShape, Macad::Occt::TopoDS_Shape^ EndShape);
 	BRepOffsetAPI_MiddlePath(Macad::Occt::BRepOffsetAPI_MiddlePath^ parameter1);
 	void Build(Macad::Occt::Message_ProgressRange^ theRange);
 	void Build();
@@ -3054,34 +2957,34 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs an empty framework to define projection on
 	/// a shape according to the normal from each point to be
 	/// projected to the shape.
 	/// </summary>
-	BRepOffsetAPI_NormalProjection();
-	/// <summary>
+BRepOffsetAPI_NormalProjection();
+		/// <summary>
 	/// Constructs a framework to define projection onto the
 	/// basis shape S according to the normal from each point
 	/// to be projected from the shape added to this framework by Add.
 	/// Default parameters of the algorithm: Tol3D = 1.e-04, Tol2D =sqr(tol3d)
 	/// , InternalContinuity = GeomAbs_C2, MaxDegree = 14, MaxSeg = 16.
 	/// </summary>
-	BRepOffsetAPI_NormalProjection(Macad::Occt::TopoDS_Shape^ S);
+BRepOffsetAPI_NormalProjection(Macad::Occt::TopoDS_Shape^ S);
 	BRepOffsetAPI_NormalProjection(Macad::Occt::BRepOffsetAPI_NormalProjection^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes the empty constructor framework with the shape S.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Adds the shape ToProj to the framework for calculation
 	/// of the projection by Compute3d.
 	/// ToProj is an edge or a wire and will be projected onto the basis shape.
 	/// Exceptions
 	/// Standard_ConstructionError if ToProj is not added.
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Shape^ ToProj);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Shape^ ToProj);
+		/// <summary>
 	/// Sets the parameters  used  for computation
 	/// Tol3 is the required  tolerance between the  3d projected
 	/// curve  and     its    2d    representation
@@ -3090,43 +2993,43 @@ public:
 	/// MaxDeg and MaxSeg are the maximum degree and the maximum
 	/// number of segment for BSpline resulting of an approximation.
 	/// </summary>
-	void SetParams(double Tol3D, double Tol2D, Macad::Occt::GeomAbs_Shape InternalContinuity, int MaxDegree, int MaxSeg);
-	/// <summary>
+void SetParams(double Tol3D, double Tol2D, Macad::Occt::GeomAbs_Shape InternalContinuity, int MaxDegree, int MaxSeg);
+		/// <summary>
 	/// Sets the maximum distance between target shape and
 	/// shape to project. If this condition is not satisfied then corresponding
 	/// part of solution is discarded.
 	/// if MaxDist < 0 then this method does not affect the algorithm
 	/// </summary>
-	void SetMaxDistance(double MaxDist);
-	/// <summary>
+void SetMaxDistance(double MaxDist);
+		/// <summary>
 	/// Manage  limitation  of  projected  edges.
 	/// </summary>
-	void SetLimit(bool FaceBoundaries);
-	/// <summary>
+void SetLimit(bool FaceBoundaries);
+		/// <summary>
 	/// Manage  limitation  of  projected  edges.
 	/// </summary>
-	void SetLimit();
-	/// <summary>
+void SetLimit();
+		/// <summary>
 	/// Returns true if a 3D curve is computed. If not, false is
 	/// returned and an initial 3D curve is kept to build the resulting edges.
 	/// </summary>
-	void Compute3d(bool With3d);
-	/// <summary>
+void Compute3d(bool With3d);
+		/// <summary>
 	/// Returns true if a 3D curve is computed. If not, false is
 	/// returned and an initial 3D curve is kept to build the resulting edges.
 	/// </summary>
-	void Compute3d();
-	/// <summary>
+void Compute3d();
+		/// <summary>
 	/// Builds the result of the projection as a compound of
 	/// wires. Tries to build oriented wires.
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Builds the result of the projection as a compound of
 	/// wires. Tries to build oriented wires.
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Returns true if the object was correctly built by the shape
 	/// construction algorithm.
 	/// If at the construction time of the shape, the algorithm
@@ -3135,28 +3038,28 @@ public:
 	/// functions to access the result of the construction
 	/// (typically the Shape function).
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// Performs the projection.
 	/// The construction of the result is performed by Build.
 	/// Exceptions
 	/// StdFail_NotDone if the projection was not performed.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Projection();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Projection();
+		/// <summary>
 	/// Returns the initial face corresponding to the projected edge E.
 	/// Exceptions
 	/// StdFail_NotDone if no face was found.
 	/// Standard_NoSuchObject if a face corresponding to
 	/// E has already been found.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Couple(Macad::Occt::TopoDS_Edge^ E);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Couple(Macad::Occt::TopoDS_Edge^ E);
+		/// <summary>
 	/// Returns the  list   of shapes generated   from the
 	/// shape <S>.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns the initial edge corresponding to the edge E
 	/// resulting from the computation of the projection.
 	/// Exceptions
@@ -3164,12 +3067,12 @@ public:
 	/// Standard_NoSuchObject if an edge corresponding to
 	/// E has already been found.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Ancestor(Macad::Occt::TopoDS_Edge^ E);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Ancestor(Macad::Occt::TopoDS_Edge^ E);
+		/// <summary>
 	/// build the result as a list of wire if possible in --
 	/// a first returns a wire only if there is only a wire.
 	/// </summary>
-	bool BuildWire(Macad::Occt::TopTools_ListOfShape^ Liste);
+bool BuildWire(Macad::Occt::TopTools_ListOfShape^ Liste);
 }; // class BRepOffsetAPI_NormalProjection
 
 //---------------------------------------------------------------------
@@ -3207,7 +3110,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initializes an algorithm for building a shell or a solid
 	/// passing through a set of sections, where:
 	/// -          isSolid is set to true if the construction algorithm is
@@ -3221,8 +3124,8 @@ public:
 	/// Use AddWire and AddVertex to define the
 	/// successive sections of the shell or solid to be built.
 	/// </summary>
-	BRepOffsetAPI_ThruSections(bool isSolid, bool ruled, double pres3d);
-	/// <summary>
+BRepOffsetAPI_ThruSections(bool isSolid, bool ruled, double pres3d);
+		/// <summary>
 	/// Initializes an algorithm for building a shell or a solid
 	/// passing through a set of sections, where:
 	/// -          isSolid is set to true if the construction algorithm is
@@ -3236,8 +3139,8 @@ public:
 	/// Use AddWire and AddVertex to define the
 	/// successive sections of the shell or solid to be built.
 	/// </summary>
-	BRepOffsetAPI_ThruSections(bool isSolid, bool ruled);
-	/// <summary>
+BRepOffsetAPI_ThruSections(bool isSolid, bool ruled);
+		/// <summary>
 	/// Initializes an algorithm for building a shell or a solid
 	/// passing through a set of sections, where:
 	/// -          isSolid is set to true if the construction algorithm is
@@ -3251,9 +3154,9 @@ public:
 	/// Use AddWire and AddVertex to define the
 	/// successive sections of the shell or solid to be built.
 	/// </summary>
-	BRepOffsetAPI_ThruSections(bool isSolid);
+BRepOffsetAPI_ThruSections(bool isSolid);
 	BRepOffsetAPI_ThruSections(Macad::Occt::BRepOffsetAPI_ThruSections^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes this algorithm for building a shell or a solid
 	/// passing through a set of sections, where:
 	/// - isSolid is set to true if this construction algorithm is
@@ -3267,8 +3170,8 @@ public:
 	/// Use AddWire and AddVertex to define the successive
 	/// sections of the shell or solid to be built.
 	/// </summary>
-	void Init(bool isSolid, bool ruled, double pres3d);
-	/// <summary>
+void Init(bool isSolid, bool ruled, double pres3d);
+		/// <summary>
 	/// Initializes this algorithm for building a shell or a solid
 	/// passing through a set of sections, where:
 	/// - isSolid is set to true if this construction algorithm is
@@ -3282,8 +3185,8 @@ public:
 	/// Use AddWire and AddVertex to define the successive
 	/// sections of the shell or solid to be built.
 	/// </summary>
-	void Init(bool isSolid, bool ruled);
-	/// <summary>
+void Init(bool isSolid, bool ruled);
+		/// <summary>
 	/// Initializes this algorithm for building a shell or a solid
 	/// passing through a set of sections, where:
 	/// - isSolid is set to true if this construction algorithm is
@@ -3297,8 +3200,8 @@ public:
 	/// Use AddWire and AddVertex to define the successive
 	/// sections of the shell or solid to be built.
 	/// </summary>
-	void Init(bool isSolid);
-	/// <summary>
+void Init(bool isSolid);
+		/// <summary>
 	/// Initializes this algorithm for building a shell or a solid
 	/// passing through a set of sections, where:
 	/// - isSolid is set to true if this construction algorithm is
@@ -3312,106 +3215,100 @@ public:
 	/// Use AddWire and AddVertex to define the successive
 	/// sections of the shell or solid to be built.
 	/// </summary>
-	void Init();
-	/// <summary>
+void Init();
+		/// <summary>
 	/// Adds the wire wire to the set of
 	/// sections through which the shell or solid is built.
 	/// Use the Build function to construct the shape.
 	/// </summary>
-	void AddWire(Macad::Occt::TopoDS_Wire^ wire);
-	/// <summary>
+void AddWire(Macad::Occt::TopoDS_Wire^ wire);
+		/// <summary>
 	/// Adds the vertex Vertex (punctual section) to the set of sections
 	/// through which the shell or solid is built. A vertex may be added to the
 	/// set of sections only as first or last section. At least one wire
 	/// must be added to the set of sections by the method AddWire.
 	/// Use the Build function to construct the shape.
 	/// </summary>
-	void AddVertex(Macad::Occt::TopoDS_Vertex^ aVertex);
-	/// <summary>
+void AddVertex(Macad::Occt::TopoDS_Vertex^ aVertex);
+		/// <summary>
 	/// Sets/unsets the option to
 	/// compute origin and orientation on wires to avoid twisted results
 	/// and update wires to have same number of edges.
 	/// </summary>
-	void CheckCompatibility(bool check);
-	/// <summary>
+void CheckCompatibility(bool check);
+		/// <summary>
 	/// Sets/unsets the option to
 	/// compute origin and orientation on wires to avoid twisted results
 	/// and update wires to have same number of edges.
 	/// </summary>
-	void CheckCompatibility();
-	/// <summary>
+void CheckCompatibility();
+		/// <summary>
 	/// Define the approximation algorithm
 	/// </summary>
-	void SetSmoothing(bool UseSmoothing);
-	/// <summary>
-	/// Define the type of parametrization   used in the approximation
-	/// </summary>
+void SetSmoothing(bool UseSmoothing);
 	/* Method skipped due to unknown mapping: void SetParType(Approx_ParametrizationType ParType, ) */
-	/// <summary>
+		/// <summary>
 	/// Define the Continuity used in the approximation
 	/// </summary>
-	void SetContinuity(Macad::Occt::GeomAbs_Shape C);
-	/// <summary>
+void SetContinuity(Macad::Occt::GeomAbs_Shape C);
+		/// <summary>
 	/// define the Weights  associed to the criterium used in
 	/// the  optimization.
 	/// 
 	/// if Wi <= 0
 	/// </summary>
-	void SetCriteriumWeight(double W1, double W2, double W3);
-	/// <summary>
+void SetCriteriumWeight(double W1, double W2, double W3);
+		/// <summary>
 	/// Define the maximal U degree of result surface
 	/// </summary>
-	void SetMaxDegree(int MaxDeg);
-	/// <summary>
-	/// returns the type of parametrization used in the approximation
-	/// </summary>
+void SetMaxDegree(int MaxDeg);
 	/* Method skipped due to unknown mapping: Approx_ParametrizationType ParType() */
-	/// <summary>
+		/// <summary>
 	/// returns the Continuity used in the approximation
 	/// </summary>
-	Macad::Occt::GeomAbs_Shape Continuity();
-	/// <summary>
+Macad::Occt::GeomAbs_Shape Continuity();
+		/// <summary>
 	/// returns the maximal U degree of result surface
 	/// </summary>
-	int MaxDegree();
-	/// <summary>
+int MaxDegree();
+		/// <summary>
 	/// Define the approximation algorithm
 	/// </summary>
-	bool UseSmoothing();
-	/// <summary>
+bool UseSmoothing();
+		/// <summary>
 	/// returns the Weights associed  to the criterium used in
 	/// the  optimization.
 	/// </summary>
-	void CriteriumWeight(double% W1, double% W2, double% W3);
+void CriteriumWeight(double% W1, double% W2, double% W3);
 	void Build(Macad::Occt::Message_ProgressRange^ theRange);
 	void Build();
-	/// <summary>
+		/// <summary>
 	/// Returns the TopoDS Shape of the bottom of the loft if solid
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ FirstShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ FirstShape();
+		/// <summary>
 	/// Returns the TopoDS Shape of the top of the loft if solid
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ LastShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ LastShape();
+		/// <summary>
 	/// if Ruled
 	/// Returns the Face generated by each edge
 	/// except the last wire
 	/// if smoothed
 	/// Returns the Face generated by each edge of the first wire
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ GeneratedFace(Macad::Occt::TopoDS_Shape^ Edge);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ GeneratedFace(Macad::Occt::TopoDS_Shape^ Edge);
+		/// <summary>
 	/// Returns a list of new shapes generated from the shape
 	/// S by the shell-generating algorithm.
 	/// This function is redefined from BRepBuilderAPI_MakeShape::Generated.
 	/// S can be an edge or a vertex of a given Profile (see methods AddWire and AddVertex).
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns the list of original wires
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Wires();
+Macad::Occt::TopTools_ListOfShape^ Wires();
 }; // class BRepOffsetAPI_ThruSections
 
 }; // namespace Occt

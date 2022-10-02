@@ -156,18 +156,18 @@ public:
 public:
 	ShapeAnalysis_Geom();
 	ShapeAnalysis_Geom(Macad::Occt::ShapeAnalysis_Geom^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Builds a plane out of a set of points in array
 	/// Returns in <dmax> the maximal distance between the produced
 	/// plane and given points
 	/// </summary>
-	static bool NearestPlane(Macad::Occt::TColgp_Array1OfPnt^ Pnts, Macad::Occt::Pln% aPln, double% Dmax);
-	/// <summary>
+static bool NearestPlane(Macad::Occt::TColgp_Array1OfPnt^ Pnts, Macad::Occt::Pln% aPln, double% Dmax);
+		/// <summary>
 	/// Builds transformation object out of matrix.
 	/// Matrix must be 3 x 4.
 	/// Unit is used as multiplier.
 	/// </summary>
-	static bool PositionTrsf(Macad::Occt::TColStd_HArray2OfReal^ coefs, Macad::Occt::Trsf% trsf, double unit, double prec);
+static bool PositionTrsf(Macad::Occt::TColStd_HArray2OfReal^ coefs, Macad::Occt::Trsf% trsf, double unit, double prec);
 }; // class ShapeAnalysis_Geom
 
 //---------------------------------------------------------------------
@@ -205,7 +205,7 @@ public:
 public:
 	ShapeAnalysis_Curve();
 	ShapeAnalysis_Curve(Macad::Occt::ShapeAnalysis_Curve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Projects a Point on a Curve.
 	/// Computes the projected point and its parameter on the curve.
 	/// <preci> is used as 3d precision (hence, 0 will produce
@@ -217,8 +217,8 @@ public:
 	/// Returned value is the distance between the given point and
 	/// computed one.
 	/// </summary>
-	double Project(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, bool AdjustToEnds);
-	/// <summary>
+double Project(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, bool AdjustToEnds);
+		/// <summary>
 	/// Projects a Point on a Curve.
 	/// Computes the projected point and its parameter on the curve.
 	/// <preci> is used as 3d precision (hence, 0 will produce
@@ -230,8 +230,8 @@ public:
 	/// Returned value is the distance between the given point and
 	/// computed one.
 	/// </summary>
-	double Project(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param);
-	/// <summary>
+double Project(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param);
+		/// <summary>
 	/// Projects a Point on a Curve.
 	/// Computes the projected point and its parameter on the curve.
 	/// <preci> is used as 3d precision (hence, 0 will produce
@@ -241,8 +241,8 @@ public:
 	/// Returned value is the distance between the given point and
 	/// computed one.
 	/// </summary>
-	double Project(Macad::Occt::Adaptor3d_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, bool AdjustToEnds);
-	/// <summary>
+double Project(Macad::Occt::Adaptor3d_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, bool AdjustToEnds);
+		/// <summary>
 	/// Projects a Point on a Curve.
 	/// Computes the projected point and its parameter on the curve.
 	/// <preci> is used as 3d precision (hence, 0 will produce
@@ -252,8 +252,8 @@ public:
 	/// Returned value is the distance between the given point and
 	/// computed one.
 	/// </summary>
-	double Project(Macad::Occt::Adaptor3d_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param);
-	/// <summary>
+double Project(Macad::Occt::Adaptor3d_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param);
+		/// <summary>
 	/// Projects a Point on a Curve, but parameters are limited
 	/// between <cf> and <cl>.
 	/// The range [cf, cl] is extended with help of Adaptor3d on the
@@ -261,8 +261,8 @@ public:
 	/// If AdjustToEnds is True, point will be adjusted to the end
 	/// of the curve if distance is less than <preci>
 	/// </summary>
-	double Project(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, double cf, double cl, bool AdjustToEnds);
-	/// <summary>
+double Project(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, double cf, double cl, bool AdjustToEnds);
+		/// <summary>
 	/// Projects a Point on a Curve, but parameters are limited
 	/// between <cf> and <cl>.
 	/// The range [cf, cl] is extended with help of Adaptor3d on the
@@ -270,31 +270,31 @@ public:
 	/// If AdjustToEnds is True, point will be adjusted to the end
 	/// of the curve if distance is less than <preci>
 	/// </summary>
-	double Project(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, double cf, double cl);
+double Project(Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, double cf, double cl);
 	double ProjectAct(Macad::Occt::Adaptor3d_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param);
-	/// <summary>
+		/// <summary>
 	/// Projects a Point on a Curve using Newton method.
 	/// <paramPrev> is taken as the first approximation of solution.
 	/// If Newton algorithm fails the method Project() is used.
 	/// If AdjustToEnds is True, point will be adjusted to the end
 	/// of the curve if distance is less than <preci>
 	/// </summary>
-	double NextProject(double paramPrev, Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, double cf, double cl, bool AdjustToEnds);
-	/// <summary>
+double NextProject(double paramPrev, Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, double cf, double cl, bool AdjustToEnds);
+		/// <summary>
 	/// Projects a Point on a Curve using Newton method.
 	/// <paramPrev> is taken as the first approximation of solution.
 	/// If Newton algorithm fails the method Project() is used.
 	/// If AdjustToEnds is True, point will be adjusted to the end
 	/// of the curve if distance is less than <preci>
 	/// </summary>
-	double NextProject(double paramPrev, Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, double cf, double cl);
-	/// <summary>
+double NextProject(double paramPrev, Macad::Occt::Geom_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param, double cf, double cl);
+		/// <summary>
 	/// Projects a Point on a Curve using Newton method.
 	/// <paramPrev> is taken as the first approximation of solution.
 	/// If Newton algorithm fails the method Project() is used.
 	/// </summary>
-	double NextProject(double paramPrev, Macad::Occt::Adaptor3d_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param);
-	/// <summary>
+double NextProject(double paramPrev, Macad::Occt::Adaptor3d_Curve^ C3D, Macad::Occt::Pnt P3D, double preci, Macad::Occt::Pnt% proj, double% param);
+		/// <summary>
 	/// Validate parameters First and Last for the given curve
 	/// in order to make them valid for creation of edge.
 	/// This includes:
@@ -305,72 +305,72 @@ public:
 	/// corrected, or False if parameters cannot be corrected.
 	/// In the latter case, parameters are reset to range of curve.
 	/// </summary>
-	bool ValidateRange(Macad::Occt::Geom_Curve^ Crv, double% First, double% Last, double prec);
-	/// <summary>
+bool ValidateRange(Macad::Occt::Geom_Curve^ Crv, double% First, double% Last, double prec);
+		/// <summary>
 	/// Computes a boundary box on segment of curve C2d from First
 	/// to Last. This is done by taking NPoints points from the
 	/// curve and, if Exact is True, by searching for exact
 	/// extrema. All these points are added to Box.
 	/// </summary>
-	void FillBndBox(Macad::Occt::Geom2d_Curve^ C2d, double First, double Last, int NPoints, bool Exact, Macad::Occt::Bnd_Box2d^ Box);
-	/// <summary>
+void FillBndBox(Macad::Occt::Geom2d_Curve^ C2d, double First, double Last, int NPoints, bool Exact, Macad::Occt::Bnd_Box2d^ Box);
+		/// <summary>
 	/// Defines which pcurve (C1 or C2) should be chosen for FORWARD
 	/// seam edge.
 	/// </summary>
-	int SelectForwardSeam(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2);
-	/// <summary>
+int SelectForwardSeam(Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2);
+		/// <summary>
 	/// Checks if points are planar with given preci. If Normal has not zero
 	/// modulus, checks with given normal
 	/// </summary>
-	static bool IsPlanar(Macad::Occt::TColgp_Array1OfPnt^ pnts, Macad::Occt::XYZ% Normal, double preci);
-	/// <summary>
+static bool IsPlanar(Macad::Occt::TColgp_Array1OfPnt^ pnts, Macad::Occt::XYZ% Normal, double preci);
+		/// <summary>
 	/// Checks if points are planar with given preci. If Normal has not zero
 	/// modulus, checks with given normal
 	/// </summary>
-	static bool IsPlanar(Macad::Occt::TColgp_Array1OfPnt^ pnts, Macad::Occt::XYZ% Normal);
-	/// <summary>
+static bool IsPlanar(Macad::Occt::TColgp_Array1OfPnt^ pnts, Macad::Occt::XYZ% Normal);
+		/// <summary>
 	/// Checks if curve is planar with given preci. If Normal has not zero
 	/// modulus, checks with given normal
 	/// </summary>
-	static bool IsPlanar(Macad::Occt::Geom_Curve^ curve, Macad::Occt::XYZ% Normal, double preci);
-	/// <summary>
+static bool IsPlanar(Macad::Occt::Geom_Curve^ curve, Macad::Occt::XYZ% Normal, double preci);
+		/// <summary>
 	/// Checks if curve is planar with given preci. If Normal has not zero
 	/// modulus, checks with given normal
 	/// </summary>
-	static bool IsPlanar(Macad::Occt::Geom_Curve^ curve, Macad::Occt::XYZ% Normal);
-	/// <summary>
+static bool IsPlanar(Macad::Occt::Geom_Curve^ curve, Macad::Occt::XYZ% Normal);
+		/// <summary>
 	/// Returns sample points which will serve as linearisation
 	/// of the2d curve in range (first, last)
 	/// The distribution of sample points is consystent with
 	/// what is used by BRepTopAdaptor_FClass2d
 	/// </summary>
-	static bool GetSamplePoints(Macad::Occt::Geom2d_Curve^ curve, double first, double last, Macad::Occt::TColgp_SequenceOfPnt2d^ seq);
-	/// <summary>
+static bool GetSamplePoints(Macad::Occt::Geom2d_Curve^ curve, double first, double last, Macad::Occt::TColgp_SequenceOfPnt2d^ seq);
+		/// <summary>
 	/// Returns sample points which will serve as linearisation
 	/// of the curve in range (first, last)
 	/// </summary>
-	static bool GetSamplePoints(Macad::Occt::Geom_Curve^ curve, double first, double last, Macad::Occt::TColgp_SequenceOfPnt^ seq);
-	/// <summary>
+static bool GetSamplePoints(Macad::Occt::Geom_Curve^ curve, double first, double last, Macad::Occt::TColgp_SequenceOfPnt^ seq);
+		/// <summary>
 	/// Tells if the Curve is closed with given precision.
 	/// If <preci> < 0 then Precision::Confusion is used.
 	/// </summary>
-	static bool IsClosed(Macad::Occt::Geom_Curve^ curve, double preci);
-	/// <summary>
+static bool IsClosed(Macad::Occt::Geom_Curve^ curve, double preci);
+		/// <summary>
 	/// Tells if the Curve is closed with given precision.
 	/// If <preci> < 0 then Precision::Confusion is used.
 	/// </summary>
-	static bool IsClosed(Macad::Occt::Geom_Curve^ curve);
-	/// <summary>
+static bool IsClosed(Macad::Occt::Geom_Curve^ curve);
+		/// <summary>
 	/// This method was implemented as fix for changes in trimmed curve
 	/// behaviour. For the moment trimmed curve returns false anyway.
 	/// So it is necessary to adapt all Data exchange tools for this behaviour.
 	/// Current implementation takes into account that curve may be offset.
 	/// </summary>
-	static bool IsPeriodic(Macad::Occt::Geom_Curve^ curve);
-	/// <summary>
+static bool IsPeriodic(Macad::Occt::Geom_Curve^ curve);
+		/// <summary>
 	/// The same as for Curve3d.
 	/// </summary>
-	static bool IsPeriodic(Macad::Occt::Geom2d_Curve^ curve);
+static bool IsPeriodic(Macad::Occt::Geom2d_Curve^ curve);
 }; // class ShapeAnalysis_Curve
 
 //---------------------------------------------------------------------
@@ -431,33 +431,33 @@ public:
 	static Macad::Occt::ShapeAnalysis_Surface^ CreateDowncasted(::ShapeAnalysis_Surface* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates an analyzer object on the basis of existing surface
 	/// </summary>
-	ShapeAnalysis_Surface(Macad::Occt::Geom_Surface^ S);
-	/// <summary>
+ShapeAnalysis_Surface(Macad::Occt::Geom_Surface^ S);
+		/// <summary>
 	/// Loads existing surface
 	/// </summary>
-	void Init(Macad::Occt::Geom_Surface^ S);
-	/// <summary>
+void Init(Macad::Occt::Geom_Surface^ S);
+		/// <summary>
 	/// Reads all the data from another Surface, without recomputing
 	/// </summary>
-	void Init(Macad::Occt::ShapeAnalysis_Surface^ other);
+void Init(Macad::Occt::ShapeAnalysis_Surface^ other);
 	void SetDomain(double U1, double U2, double V1, double V2);
-	/// <summary>
+		/// <summary>
 	/// Returns a surface being analyzed
 	/// </summary>
-	Macad::Occt::Geom_Surface^ Surface();
-	/// <summary>
+Macad::Occt::Geom_Surface^ Surface();
+		/// <summary>
 	/// Returns the Adaptor.
 	/// Creates it if not yet done.
 	/// </summary>
-	Macad::Occt::GeomAdaptor_Surface^ Adaptor3d();
-	/// <summary>
+Macad::Occt::GeomAdaptor_Surface^ Adaptor3d();
+		/// <summary>
 	/// Returns the Adaptor (may be Null if method Adaptor() was not called)
 	/// </summary>
-	Macad::Occt::GeomAdaptor_Surface^ TrueAdaptor3d();
-	/// <summary>
+Macad::Occt::GeomAdaptor_Surface^ TrueAdaptor3d();
+		/// <summary>
 	/// Returns 3D distance found by one of the following methods.
 	/// IsDegenerated, DegeneratedValues, ProjectDegenerated
 	/// (distance between 3D point and found or last (if not found)
@@ -466,30 +466,30 @@ public:
 	/// the surface to be closed),
 	/// ValueOfUV (distance between 3D point and found solution).
 	/// </summary>
-	double Gap();
-	/// <summary>
+double Gap();
+		/// <summary>
 	/// Returns a 3D point specified by parameters in surface
 	/// parametrical space
 	/// </summary>
-	Macad::Occt::Pnt Value(double u, double v);
-	/// <summary>
+Macad::Occt::Pnt Value(double u, double v);
+		/// <summary>
 	/// Returns a 3d point specified by a point in surface
 	/// parametrical space
 	/// </summary>
-	Macad::Occt::Pnt Value(Macad::Occt::Pnt2d p2d);
-	/// <summary>
+Macad::Occt::Pnt Value(Macad::Occt::Pnt2d p2d);
+		/// <summary>
 	/// Returns True if the surface has singularities for the given
 	/// precision (i.e. if there are surface singularities with sizes
 	/// not greater than precision).
 	/// </summary>
-	bool HasSingularities(double preci);
-	/// <summary>
+bool HasSingularities(double preci);
+		/// <summary>
 	/// Returns the number of singularities for the given precision
 	/// (i.e. number of surface singularities with sizes not greater
 	/// than precision).
 	/// </summary>
-	int NbSingularities(double preci);
-	/// <summary>
+int NbSingularities(double preci);
+		/// <summary>
 	/// Returns the characteristics of the singularity specified by
 	/// its rank number <num>.
 	/// That means, that it is not necessary for <num> to be in the
@@ -508,15 +508,15 @@ public:
 	/// V-iso (False).
 	/// Returns False if <num> is out of range, else returns True.
 	/// </summary>
-	bool Singularity(int num, double% preci, Macad::Occt::Pnt% P3d, Macad::Occt::Pnt2d% firstP2d, Macad::Occt::Pnt2d% lastP2d, double% firstpar, double% lastpar, bool% uisodeg);
-	/// <summary>
+bool Singularity(int num, double% preci, Macad::Occt::Pnt% P3d, Macad::Occt::Pnt2d% firstP2d, Macad::Occt::Pnt2d% lastP2d, double% firstpar, double% lastpar, bool% uisodeg);
+		/// <summary>
 	/// Returns True if there is at least one surface boundary which
 	/// is considered as degenerated with <preci> and distance
 	/// between P3d and corresponding singular point is less than
 	/// <preci>
 	/// </summary>
-	bool IsDegenerated(Macad::Occt::Pnt P3d, double preci);
-	/// <summary>
+bool IsDegenerated(Macad::Occt::Pnt P3d, double preci);
+		/// <summary>
 	/// Returns True if there is at least one surface iso-line which
 	/// is considered as degenerated with <preci> and distance
 	/// between P3d and corresponding singular point is less than
@@ -524,8 +524,8 @@ public:
 	/// Returns characteristics of the first found boundary matching
 	/// those criteria.
 	/// </summary>
-	bool DegeneratedValues(Macad::Occt::Pnt P3d, double preci, Macad::Occt::Pnt2d% firstP2d, Macad::Occt::Pnt2d% lastP2d, double% firstpar, double% lastpar, bool forward);
-	/// <summary>
+bool DegeneratedValues(Macad::Occt::Pnt P3d, double preci, Macad::Occt::Pnt2d% firstP2d, Macad::Occt::Pnt2d% lastP2d, double% firstpar, double% lastpar, bool forward);
+		/// <summary>
 	/// Returns True if there is at least one surface iso-line which
 	/// is considered as degenerated with <preci> and distance
 	/// between P3d and corresponding singular point is less than
@@ -533,8 +533,8 @@ public:
 	/// Returns characteristics of the first found boundary matching
 	/// those criteria.
 	/// </summary>
-	bool DegeneratedValues(Macad::Occt::Pnt P3d, double preci, Macad::Occt::Pnt2d% firstP2d, Macad::Occt::Pnt2d% lastP2d, double% firstpar, double% lastpar);
-	/// <summary>
+bool DegeneratedValues(Macad::Occt::Pnt P3d, double preci, Macad::Occt::Pnt2d% firstP2d, Macad::Occt::Pnt2d% lastP2d, double% firstpar, double% lastpar);
+		/// <summary>
 	/// Projects a point <P3d> on a singularity by computing
 	/// one of the coordinates of preliminary computed <result>.
 	/// 
@@ -548,16 +548,16 @@ public:
 	/// Then sets not yet computed <result>'s coordinate taking it
 	/// from <neighbour> and returns True.
 	/// </summary>
-	bool ProjectDegenerated(Macad::Occt::Pnt P3d, double preci, Macad::Occt::Pnt2d neighbour, Macad::Occt::Pnt2d% result);
-	/// <summary>
+bool ProjectDegenerated(Macad::Occt::Pnt P3d, double preci, Macad::Occt::Pnt2d neighbour, Macad::Occt::Pnt2d% result);
+		/// <summary>
 	/// Checks points at the beginning (direct is True) or end
 	/// (direct is False) of array <points> to lie in singularity of
 	/// surface, and if yes, adjusts the indeterminate 2d coordinate
 	/// of these points by nearest point which is not in singularity.
 	/// Returns True if some points were adjusted.
 	/// </summary>
-	bool ProjectDegenerated(int nbrPnt, Macad::Occt::TColgp_SequenceOfPnt^ points, Macad::Occt::TColgp_SequenceOfPnt2d^ pnt2d, double preci, bool direct);
-	/// <summary>
+bool ProjectDegenerated(int nbrPnt, Macad::Occt::TColgp_SequenceOfPnt^ points, Macad::Occt::TColgp_SequenceOfPnt2d^ pnt2d, double preci, bool direct);
+		/// <summary>
 	/// Returns True if straight pcurve going from point p2d1 to p2d2
 	/// is degenerate, i.e. lies in the singularity of the surface.
 	/// NOTE: it uses another method of detecting singularity than
@@ -572,27 +572,27 @@ public:
 	/// (max3d < tol && max2d > ratio * Resolution(max3d))
 	/// NOTE: <ratio> should be >1 (e.g. 10)
 	/// </summary>
-	bool IsDegenerated(Macad::Occt::Pnt2d p2d1, Macad::Occt::Pnt2d p2d2, double tol, double ratio);
-	/// <summary>
+bool IsDegenerated(Macad::Occt::Pnt2d p2d1, Macad::Occt::Pnt2d p2d2, double tol, double ratio);
+		/// <summary>
 	/// Returns the bounds of the surface
 	/// (from Bounds from Surface, but buffered)
 	/// </summary>
-	void Bounds(double% ufirst, double% ulast, double% vfirst, double% vlast);
-	/// <summary>
+void Bounds(double% ufirst, double% ulast, double% vfirst, double% vlast);
+		/// <summary>
 	/// Computes bound isos (protected against exceptions)
 	/// </summary>
-	void ComputeBoundIsos();
-	/// <summary>
+void ComputeBoundIsos();
+		/// <summary>
 	/// Returns a U-Iso. Null if not possible or failed
 	/// Remark : bound isos are buffered
 	/// </summary>
-	Macad::Occt::Geom_Curve^ UIso(double U);
-	/// <summary>
+Macad::Occt::Geom_Curve^ UIso(double U);
+		/// <summary>
 	/// Returns a V-Iso. Null if not possible or failed
 	/// Remark : bound isos are buffered
 	/// </summary>
-	Macad::Occt::Geom_Curve^ VIso(double V);
-	/// <summary>
+Macad::Occt::Geom_Curve^ VIso(double V);
+		/// <summary>
 	/// Tells if the Surface is spatially closed in U with given
 	/// precision. If <preci> < 0 then Precision::Confusion is used.
 	/// If Geom_Surface says that the surface is U-closed, this method
@@ -609,8 +609,8 @@ public:
 	/// - other (RectangularTrimmed and Offset) - maximum distance
 	/// computed at 100 equi-distanted points.
 	/// </summary>
-	bool IsUClosed(double preci);
-	/// <summary>
+bool IsUClosed(double preci);
+		/// <summary>
 	/// Tells if the Surface is spatially closed in U with given
 	/// precision. If <preci> < 0 then Precision::Confusion is used.
 	/// If Geom_Surface says that the surface is U-closed, this method
@@ -627,8 +627,8 @@ public:
 	/// - other (RectangularTrimmed and Offset) - maximum distance
 	/// computed at 100 equi-distanted points.
 	/// </summary>
-	bool IsUClosed();
-	/// <summary>
+bool IsUClosed();
+		/// <summary>
 	/// Tells if the Surface is spatially closed in V with given
 	/// precision. If <preci> < 0 then Precision::Confusion is used.
 	/// If Geom_Surface says that the surface is V-closed, this method
@@ -645,8 +645,8 @@ public:
 	/// - other (RectangularTrimmed and Offset) - maximum distance
 	/// computed at 100 equi-distanted points.
 	/// </summary>
-	bool IsVClosed(double preci);
-	/// <summary>
+bool IsVClosed(double preci);
+		/// <summary>
 	/// Tells if the Surface is spatially closed in V with given
 	/// precision. If <preci> < 0 then Precision::Confusion is used.
 	/// If Geom_Surface says that the surface is V-closed, this method
@@ -663,8 +663,8 @@ public:
 	/// - other (RectangularTrimmed and Offset) - maximum distance
 	/// computed at 100 equi-distanted points.
 	/// </summary>
-	bool IsVClosed();
-	/// <summary>
+bool IsVClosed();
+		/// <summary>
 	/// Computes the parameters in the surface parametrical space of
 	/// 3D point.
 	/// The result is parameters of the point projected onto the
@@ -674,8 +674,8 @@ public:
 	/// the projected point is near to the surface boundaries and
 	/// when this standard tool fails.
 	/// </summary>
-	Macad::Occt::Pnt2d ValueOfUV(Macad::Occt::Pnt P3D, double preci);
-	/// <summary>
+Macad::Occt::Pnt2d ValueOfUV(Macad::Occt::Pnt P3D, double preci);
+		/// <summary>
 	/// Projects a point P3D on the surface.
 	/// Does the same thing as ValueOfUV but tries to optimize
 	/// computations by taking into account previous point <p2dPrev>:
@@ -685,8 +685,8 @@ public:
 	/// as bad, and ValueOfUV() is used.
 	/// If not succeeded, calls ValueOfUV()
 	/// </summary>
-	Macad::Occt::Pnt2d NextValueOfUV(Macad::Occt::Pnt2d p2dPrev, Macad::Occt::Pnt P3D, double preci, double maxpreci);
-	/// <summary>
+Macad::Occt::Pnt2d NextValueOfUV(Macad::Occt::Pnt2d p2dPrev, Macad::Occt::Pnt P3D, double preci, double maxpreci);
+		/// <summary>
 	/// Projects a point P3D on the surface.
 	/// Does the same thing as ValueOfUV but tries to optimize
 	/// computations by taking into account previous point <p2dPrev>:
@@ -696,8 +696,8 @@ public:
 	/// as bad, and ValueOfUV() is used.
 	/// If not succeeded, calls ValueOfUV()
 	/// </summary>
-	Macad::Occt::Pnt2d NextValueOfUV(Macad::Occt::Pnt2d p2dPrev, Macad::Occt::Pnt P3D, double preci);
-	/// <summary>
+Macad::Occt::Pnt2d NextValueOfUV(Macad::Occt::Pnt2d p2dPrev, Macad::Occt::Pnt P3D, double preci);
+		/// <summary>
 	/// Tries a refinement of an already computed couple (U,V) by
 	/// using projecting 3D point on iso-lines:
 	/// 1. boundaries of the surface,
@@ -708,15 +708,15 @@ public:
 	/// Returns the best resulting distance between P3D and Value(U,V)
 	/// in the case of success. Else, returns a very great value
 	/// </summary>
-	double UVFromIso(Macad::Occt::Pnt P3D, double preci, double% U, double% V);
-	/// <summary>
+double UVFromIso(Macad::Occt::Pnt P3D, double preci, double% U, double% V);
+		/// <summary>
 	/// Returns minimum value to consider the surface as U-closed
 	/// </summary>
-	double UCloseVal();
-	/// <summary>
+double UCloseVal();
+		/// <summary>
 	/// Returns minimum value to consider the surface as V-closed
 	/// </summary>
-	double VCloseVal();
+double VCloseVal();
 	Macad::Occt::Bnd_Box^ GetBoxUF();
 	Macad::Occt::Bnd_Box^ GetBoxUL();
 	Macad::Occt::Bnd_Box^ GetBoxVF();
@@ -760,100 +760,100 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor; initialises Status to OK
 	/// </summary>
-	ShapeAnalysis_Edge();
+ShapeAnalysis_Edge();
 	ShapeAnalysis_Edge(Macad::Occt::ShapeAnalysis_Edge^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Tells if the edge has a 3d curve
 	/// </summary>
-	bool HasCurve3d(Macad::Occt::TopoDS_Edge^ edge);
-	/// <summary>
+bool HasCurve3d(Macad::Occt::TopoDS_Edge^ edge);
+		/// <summary>
 	/// Returns the 3d curve and bounding parameteres for the edge
 	/// Returns False if no 3d curve.
 	/// If <orient> is True (default), takes orientation into account:
 	/// if the edge is reversed, cf and cl are toggled
 	/// </summary>
-	bool Curve3d(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Curve^ C3d, double% cf, double% cl, bool orient);
-	/// <summary>
+bool Curve3d(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Curve^ C3d, double% cf, double% cl, bool orient);
+		/// <summary>
 	/// Returns the 3d curve and bounding parameteres for the edge
 	/// Returns False if no 3d curve.
 	/// If <orient> is True (default), takes orientation into account:
 	/// if the edge is reversed, cf and cl are toggled
 	/// </summary>
-	bool Curve3d(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Curve^ C3d, double% cf, double% cl);
-	/// <summary>
+bool Curve3d(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Curve^ C3d, double% cf, double% cl);
+		/// <summary>
 	/// Gives True if the edge has a 3d curve, this curve is closed,
 	/// and the edge has the same vertex at start and end
 	/// </summary>
-	bool IsClosed3d(Macad::Occt::TopoDS_Edge^ edge);
-	/// <summary>
+bool IsClosed3d(Macad::Occt::TopoDS_Edge^ edge);
+		/// <summary>
 	/// Tells if the Edge has a pcurve on the face.
 	/// </summary>
-	bool HasPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face);
-	/// <summary>
+bool HasPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face);
+		/// <summary>
 	/// Tells if the edge has a pcurve on the surface (with location).
 	/// </summary>
-	bool HasPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location);
+bool HasPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location);
 	bool PCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face, Macad::Occt::Geom2d_Curve^ C2d, double% cf, double% cl, bool orient);
 	bool PCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face, Macad::Occt::Geom2d_Curve^ C2d, double% cf, double% cl);
-	/// <summary>
+		/// <summary>
 	/// Returns the pcurve and bounding parameteres for the edge
 	/// lying on the surface.
 	/// Returns False if the edge has no pcurve on this surface.
 	/// If <orient> is True (default), takes orientation into account:
 	/// if the edge is reversed, cf and cl are toggled
 	/// </summary>
-	bool PCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, Macad::Occt::Geom2d_Curve^ C2d, double% cf, double% cl, bool orient);
-	/// <summary>
+bool PCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, Macad::Occt::Geom2d_Curve^ C2d, double% cf, double% cl, bool orient);
+		/// <summary>
 	/// Returns the pcurve and bounding parameteres for the edge
 	/// lying on the surface.
 	/// Returns False if the edge has no pcurve on this surface.
 	/// If <orient> is True (default), takes orientation into account:
 	/// if the edge is reversed, cf and cl are toggled
 	/// </summary>
-	bool PCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, Macad::Occt::Geom2d_Curve^ C2d, double% cf, double% cl);
+bool PCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, Macad::Occt::Geom2d_Curve^ C2d, double% cf, double% cl);
 	bool BoundUV(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face, Macad::Occt::Pnt2d% first, Macad::Occt::Pnt2d% last);
-	/// <summary>
+		/// <summary>
 	/// Returns the ends of pcurve
 	/// Calls method PCurve with <orient> equal to True
 	/// </summary>
-	bool BoundUV(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, Macad::Occt::Pnt2d% first, Macad::Occt::Pnt2d% last);
+bool BoundUV(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, Macad::Occt::Pnt2d% first, Macad::Occt::Pnt2d% last);
 	bool IsSeam(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face);
-	/// <summary>
+		/// <summary>
 	/// Returns True if the edge has two pcurves on one surface
 	/// </summary>
-	bool IsSeam(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location);
-	/// <summary>
+bool IsSeam(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location);
+		/// <summary>
 	/// Returns start vertex of the edge (taking edge orientation
 	/// into account).
 	/// </summary>
-	Macad::Occt::TopoDS_Vertex^ FirstVertex(Macad::Occt::TopoDS_Edge^ edge);
-	/// <summary>
+Macad::Occt::TopoDS_Vertex^ FirstVertex(Macad::Occt::TopoDS_Edge^ edge);
+		/// <summary>
 	/// Returns end vertex of the edge (taking edge orientation
 	/// into account).
 	/// </summary>
-	Macad::Occt::TopoDS_Vertex^ LastVertex(Macad::Occt::TopoDS_Edge^ edge);
+Macad::Occt::TopoDS_Vertex^ LastVertex(Macad::Occt::TopoDS_Edge^ edge);
 	bool GetEndTangent2d(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face, bool atEnd, Macad::Occt::Pnt2d% pos, Macad::Occt::Vec2d% tang, double dparam);
 	bool GetEndTangent2d(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face, bool atEnd, Macad::Occt::Pnt2d% pos, Macad::Occt::Vec2d% tang);
-	/// <summary>
+		/// <summary>
 	/// Returns tangent of the edge pcurve at its start (if atEnd is
 	/// False) or end (if True), regarding the orientation of edge.
 	/// If edge is REVERSED, tangent is reversed before return.
 	/// Returns True if pcurve is available and tangent is computed
 	/// and is not null, else False.
 	/// </summary>
-	bool GetEndTangent2d(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, bool atEnd, Macad::Occt::Pnt2d% pos, Macad::Occt::Vec2d% tang, double dparam);
-	/// <summary>
+bool GetEndTangent2d(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, bool atEnd, Macad::Occt::Pnt2d% pos, Macad::Occt::Vec2d% tang, double dparam);
+		/// <summary>
 	/// Returns tangent of the edge pcurve at its start (if atEnd is
 	/// False) or end (if True), regarding the orientation of edge.
 	/// If edge is REVERSED, tangent is reversed before return.
 	/// Returns True if pcurve is available and tangent is computed
 	/// and is not null, else False.
 	/// </summary>
-	bool GetEndTangent2d(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, bool atEnd, Macad::Occt::Pnt2d% pos, Macad::Occt::Vec2d% tang);
-	/// <summary>
+bool GetEndTangent2d(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, bool atEnd, Macad::Occt::Pnt2d% pos, Macad::Occt::Vec2d% tang);
+		/// <summary>
 	/// Checks the start and/or end vertex of the edge for matching
 	/// with 3d curve with the given precision.
 	/// <vtx> = 1 : start vertex only
@@ -862,8 +862,8 @@ public:
 	/// If preci < 0 the vertices are considered with their own
 	/// tolerances, else with the given <preci>.
 	/// </summary>
-	bool CheckVerticesWithCurve3d(Macad::Occt::TopoDS_Edge^ edge, double preci, int vtx);
-	/// <summary>
+bool CheckVerticesWithCurve3d(Macad::Occt::TopoDS_Edge^ edge, double preci, int vtx);
+		/// <summary>
 	/// Checks the start and/or end vertex of the edge for matching
 	/// with 3d curve with the given precision.
 	/// <vtx> = 1 : start vertex only
@@ -872,8 +872,8 @@ public:
 	/// If preci < 0 the vertices are considered with their own
 	/// tolerances, else with the given <preci>.
 	/// </summary>
-	bool CheckVerticesWithCurve3d(Macad::Occt::TopoDS_Edge^ edge, double preci);
-	/// <summary>
+bool CheckVerticesWithCurve3d(Macad::Occt::TopoDS_Edge^ edge, double preci);
+		/// <summary>
 	/// Checks the start and/or end vertex of the edge for matching
 	/// with 3d curve with the given precision.
 	/// <vtx> = 1 : start vertex only
@@ -882,11 +882,11 @@ public:
 	/// If preci < 0 the vertices are considered with their own
 	/// tolerances, else with the given <preci>.
 	/// </summary>
-	bool CheckVerticesWithCurve3d(Macad::Occt::TopoDS_Edge^ edge);
+bool CheckVerticesWithCurve3d(Macad::Occt::TopoDS_Edge^ edge);
 	bool CheckVerticesWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face, double preci, int vtx);
 	bool CheckVerticesWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face, double preci);
 	bool CheckVerticesWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face);
-	/// <summary>
+		/// <summary>
 	/// Checks the start and/or end vertex of the edge for matching
 	/// with pcurve with the given precision.
 	/// <vtx> = 1 : start vertex
@@ -895,8 +895,8 @@ public:
 	/// If preci < 0 the vertices are considered with their own
 	/// tolerances, else with the given <preci>.
 	/// </summary>
-	bool CheckVerticesWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, double preci, int vtx);
-	/// <summary>
+bool CheckVerticesWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, double preci, int vtx);
+		/// <summary>
 	/// Checks the start and/or end vertex of the edge for matching
 	/// with pcurve with the given precision.
 	/// <vtx> = 1 : start vertex
@@ -905,8 +905,8 @@ public:
 	/// If preci < 0 the vertices are considered with their own
 	/// tolerances, else with the given <preci>.
 	/// </summary>
-	bool CheckVerticesWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, double preci);
-	/// <summary>
+bool CheckVerticesWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location, double preci);
+		/// <summary>
 	/// Checks the start and/or end vertex of the edge for matching
 	/// with pcurve with the given precision.
 	/// <vtx> = 1 : start vertex
@@ -915,9 +915,9 @@ public:
 	/// If preci < 0 the vertices are considered with their own
 	/// tolerances, else with the given <preci>.
 	/// </summary>
-	bool CheckVerticesWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location);
+bool CheckVerticesWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location);
 	bool CheckVertexTolerance(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face, double% toler1, double% toler2);
-	/// <summary>
+		/// <summary>
 	/// Checks if it is necessary to increase tolerances of the edge
 	/// vertices to comprise the ends of 3d curve and pcurve on
 	/// the given face (first method) or all pcurves stored in an edge
@@ -925,18 +925,18 @@ public:
 	/// toler1 returns necessary tolerance for first vertex,
 	/// toler2 returns necessary tolerance for last vertex.
 	/// </summary>
-	bool CheckVertexTolerance(Macad::Occt::TopoDS_Edge^ edge, double% toler1, double% toler2);
+bool CheckVertexTolerance(Macad::Occt::TopoDS_Edge^ edge, double% toler1, double% toler2);
 	bool CheckCurve3dWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::TopoDS_Face^ face);
-	/// <summary>
+		/// <summary>
 	/// Checks mutual orientation of 3d curve and pcurve on the
 	/// analysis of curves bounding points
 	/// </summary>
-	bool CheckCurve3dWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location);
-	/// <summary>
+bool CheckCurve3dWithPCurve(Macad::Occt::TopoDS_Edge^ edge, Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location);
+		/// <summary>
 	/// Returns the status (in the form of True/False) of last Check
 	/// </summary>
-	bool Status(Macad::Occt::ShapeExtend_Status status);
-	/// <summary>
+bool Status(Macad::Occt::ShapeExtend_Status status);
+		/// <summary>
 	/// Checks the edge to be SameParameter.
 	/// Calculates the maximal deviation between 3d curve and each
 	/// pcurve of the edge on <NbControl> equidistant points (the same
@@ -945,8 +945,8 @@ public:
 	/// If deviation is greater than tolerance of the edge (i.e.
 	/// incorrect flag) returns False, else returns True.
 	/// </summary>
-	bool CheckSameParameter(Macad::Occt::TopoDS_Edge^ edge, double% maxdev, int NbControl);
-	/// <summary>
+bool CheckSameParameter(Macad::Occt::TopoDS_Edge^ edge, double% maxdev, int NbControl);
+		/// <summary>
 	/// Checks the edge to be SameParameter.
 	/// Calculates the maximal deviation between 3d curve and each
 	/// pcurve of the edge on <NbControl> equidistant points (the same
@@ -955,8 +955,8 @@ public:
 	/// If deviation is greater than tolerance of the edge (i.e.
 	/// incorrect flag) returns False, else returns True.
 	/// </summary>
-	bool CheckSameParameter(Macad::Occt::TopoDS_Edge^ edge, double% maxdev);
-	/// <summary>
+bool CheckSameParameter(Macad::Occt::TopoDS_Edge^ edge, double% maxdev);
+		/// <summary>
 	/// Checks the edge to be SameParameter.
 	/// Calculates the maximal deviation between 3d curve and each
 	/// pcurve of the edge on <NbControl> equidistant points (the same
@@ -965,8 +965,8 @@ public:
 	/// If deviation is greater than tolerance of the edge (i.e.
 	/// incorrect flag) returns False, else returns True.
 	/// </summary>
-	bool CheckSameParameter(Macad::Occt::TopoDS_Edge^ theEdge, Macad::Occt::TopoDS_Face^ theFace, double% theMaxdev, int theNbControl);
-	/// <summary>
+bool CheckSameParameter(Macad::Occt::TopoDS_Edge^ theEdge, Macad::Occt::TopoDS_Face^ theFace, double% theMaxdev, int theNbControl);
+		/// <summary>
 	/// Checks the edge to be SameParameter.
 	/// Calculates the maximal deviation between 3d curve and each
 	/// pcurve of the edge on <NbControl> equidistant points (the same
@@ -975,26 +975,26 @@ public:
 	/// If deviation is greater than tolerance of the edge (i.e.
 	/// incorrect flag) returns False, else returns True.
 	/// </summary>
-	bool CheckSameParameter(Macad::Occt::TopoDS_Edge^ theEdge, Macad::Occt::TopoDS_Face^ theFace, double% theMaxdev);
-	/// <summary>
+bool CheckSameParameter(Macad::Occt::TopoDS_Edge^ theEdge, Macad::Occt::TopoDS_Face^ theFace, double% theMaxdev);
+		/// <summary>
 	/// Checks possibility for pcurve thePC to have range [theFirst, theLast] (edge range)
 	/// having respect to real first, last parameters of thePC
 	/// </summary>
-	bool CheckPCurveRange(double theFirst, double theLast, Macad::Occt::Geom2d_Curve^ thePC);
-	/// <summary>
+bool CheckPCurveRange(double theFirst, double theLast, Macad::Occt::Geom2d_Curve^ thePC);
+		/// <summary>
 	/// Checks the first edge is overlapped with second edge.
 	/// If distance between two edges is less then theTolOverlap
 	/// edges are overlapped.
 	/// theDomainDis - length of part of edges on which edges are overlapped.
 	/// </summary>
-	bool CheckOverlapping(Macad::Occt::TopoDS_Edge^ theEdge1, Macad::Occt::TopoDS_Edge^ theEdge2, double% theTolOverlap, double theDomainDist);
-	/// <summary>
+bool CheckOverlapping(Macad::Occt::TopoDS_Edge^ theEdge1, Macad::Occt::TopoDS_Edge^ theEdge2, double% theTolOverlap, double theDomainDist);
+		/// <summary>
 	/// Checks the first edge is overlapped with second edge.
 	/// If distance between two edges is less then theTolOverlap
 	/// edges are overlapped.
 	/// theDomainDis - length of part of edges on which edges are overlapped.
 	/// </summary>
-	bool CheckOverlapping(Macad::Occt::TopoDS_Edge^ theEdge1, Macad::Occt::TopoDS_Edge^ theEdge2, double% theTolOverlap);
+bool CheckOverlapping(Macad::Occt::TopoDS_Edge^ theEdge1, Macad::Occt::TopoDS_Edge^ theEdge2, double% theTolOverlap);
 }; // class ShapeAnalysis_Edge
 
 //---------------------------------------------------------------------
@@ -1067,86 +1067,86 @@ public:
 	static Macad::Occt::ShapeAnalysis_Wire^ CreateDowncasted(::ShapeAnalysis_Wire* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeAnalysis_Wire();
-	/// <summary>
+ShapeAnalysis_Wire();
+		/// <summary>
 	/// Creates object with standard TopoDS_Wire, face
 	/// and precision
 	/// </summary>
-	ShapeAnalysis_Wire(Macad::Occt::TopoDS_Wire^ wire, Macad::Occt::TopoDS_Face^ face, double precision);
-	/// <summary>
+ShapeAnalysis_Wire(Macad::Occt::TopoDS_Wire^ wire, Macad::Occt::TopoDS_Face^ face, double precision);
+		/// <summary>
 	/// Creates the object with WireData object, face
 	/// and precision
 	/// </summary>
-	ShapeAnalysis_Wire(Macad::Occt::ShapeExtend_WireData^ sbwd, Macad::Occt::TopoDS_Face^ face, double precision);
+ShapeAnalysis_Wire(Macad::Occt::ShapeExtend_WireData^ sbwd, Macad::Occt::TopoDS_Face^ face, double precision);
 	ShapeAnalysis_Wire(Macad::Occt::ShapeAnalysis_Wire^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes the object with standard TopoDS_Wire, face
 	/// and precision
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Wire^ wire, Macad::Occt::TopoDS_Face^ face, double precision);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Wire^ wire, Macad::Occt::TopoDS_Face^ face, double precision);
+		/// <summary>
 	/// Initializes the object with WireData object, face
 	/// and precision
 	/// </summary>
-	void Init(Macad::Occt::ShapeExtend_WireData^ sbwd, Macad::Occt::TopoDS_Face^ face, double precision);
-	/// <summary>
+void Init(Macad::Occt::ShapeExtend_WireData^ sbwd, Macad::Occt::TopoDS_Face^ face, double precision);
+		/// <summary>
 	/// Loads the object with standard TopoDS_Wire
 	/// </summary>
-	void Load(Macad::Occt::TopoDS_Wire^ wire);
-	/// <summary>
+void Load(Macad::Occt::TopoDS_Wire^ wire);
+		/// <summary>
 	/// Loads the object with WireData object
 	/// </summary>
-	void Load(Macad::Occt::ShapeExtend_WireData^ sbwd);
-	/// <summary>
+void Load(Macad::Occt::ShapeExtend_WireData^ sbwd);
+		/// <summary>
 	/// Loads the face the wire lies on
 	/// </summary>
-	void SetFace(Macad::Occt::TopoDS_Face^ face);
-	/// <summary>
+void SetFace(Macad::Occt::TopoDS_Face^ face);
+		/// <summary>
 	/// Loads the surface the wire lies on
 	/// </summary>
-	void SetSurface(Macad::Occt::Geom_Surface^ surface);
-	/// <summary>
+void SetSurface(Macad::Occt::Geom_Surface^ surface);
+		/// <summary>
 	/// Loads the surface the wire lies on
 	/// </summary>
-	void SetSurface(Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location);
+void SetSurface(Macad::Occt::Geom_Surface^ surface, Macad::Occt::TopLoc_Location^ location);
 	void SetPrecision(double precision);
-	/// <summary>
+		/// <summary>
 	/// Unsets all the status and distance fields
 	/// wire, face and precision are not cleared
 	/// </summary>
-	void ClearStatuses();
-	/// <summary>
+void ClearStatuses();
+		/// <summary>
 	/// Returns True if wire is loaded and has number of edges >0
 	/// </summary>
-	bool IsLoaded();
-	/// <summary>
+bool IsLoaded();
+		/// <summary>
 	/// Returns True if IsLoaded and underlying face is not null
 	/// </summary>
-	bool IsReady();
-	/// <summary>
+bool IsReady();
+		/// <summary>
 	/// Returns the value of precision
 	/// </summary>
-	double Precision();
-	/// <summary>
+double Precision();
+		/// <summary>
 	/// Returns wire object being analyzed
 	/// </summary>
-	Macad::Occt::ShapeExtend_WireData^ WireData();
-	/// <summary>
+Macad::Occt::ShapeExtend_WireData^ WireData();
+		/// <summary>
 	/// Returns the number of edges in the wire, or 0 if it is not loaded
 	/// </summary>
-	int NbEdges();
-	/// <summary>
+int NbEdges();
+		/// <summary>
 	/// Returns the working face
 	/// </summary>
-	Macad::Occt::TopoDS_Face^ Face();
-	/// <summary>
+Macad::Occt::TopoDS_Face^ Face();
+		/// <summary>
 	/// Returns the working surface
 	/// </summary>
-	Macad::Occt::ShapeAnalysis_Surface^ Surface();
-	/// <summary>
+Macad::Occt::ShapeAnalysis_Surface^ Surface();
+		/// <summary>
 	/// Performs all the checks in the following order :
 	/// CheckOrder, CheckSmall, CheckConnected, CheckEdgeCurves,
 	/// CheckDegenerated, CheckSelfIntersection, CheckLacking,
@@ -1154,51 +1154,51 @@ public:
 	/// Returns: True if at least one method returned True;
 	/// For deeper analysis use Status...(status) methods
 	/// </summary>
-	bool Perform();
-	/// <summary>
+bool Perform();
+		/// <summary>
 	/// Calls CheckOrder and returns False if wire is already
 	/// ordered (tail-to-head), True otherwise
 	/// Flag <isClosed> defines if the wire is closed or not
 	/// Flag <mode3d> defines which mode is used (3d or 2d)
 	/// </summary>
-	bool CheckOrder(bool isClosed, bool mode3d);
-	/// <summary>
+bool CheckOrder(bool isClosed, bool mode3d);
+		/// <summary>
 	/// Calls CheckOrder and returns False if wire is already
 	/// ordered (tail-to-head), True otherwise
 	/// Flag <isClosed> defines if the wire is closed or not
 	/// Flag <mode3d> defines which mode is used (3d or 2d)
 	/// </summary>
-	bool CheckOrder(bool isClosed);
-	/// <summary>
+bool CheckOrder(bool isClosed);
+		/// <summary>
 	/// Calls CheckOrder and returns False if wire is already
 	/// ordered (tail-to-head), True otherwise
 	/// Flag <isClosed> defines if the wire is closed or not
 	/// Flag <mode3d> defines which mode is used (3d or 2d)
 	/// </summary>
-	bool CheckOrder();
-	/// <summary>
+bool CheckOrder();
+		/// <summary>
 	/// Calls to CheckConnected for each edge
 	/// Returns: True if at least one pair of disconnected edges (not sharing the
 	/// same vertex) was detected
 	/// </summary>
-	bool CheckConnected(double prec);
-	/// <summary>
+bool CheckConnected(double prec);
+		/// <summary>
 	/// Calls to CheckConnected for each edge
 	/// Returns: True if at least one pair of disconnected edges (not sharing the
 	/// same vertex) was detected
 	/// </summary>
-	bool CheckConnected();
-	/// <summary>
+bool CheckConnected();
+		/// <summary>
 	/// Calls to CheckSmall for each edge
 	/// Returns: True if at least one small edge was detected
 	/// </summary>
-	bool CheckSmall(double precsmall);
-	/// <summary>
+bool CheckSmall(double precsmall);
+		/// <summary>
 	/// Calls to CheckSmall for each edge
 	/// Returns: True if at least one small edge was detected
 	/// </summary>
-	bool CheckSmall();
-	/// <summary>
+bool CheckSmall();
+		/// <summary>
 	/// Checks edges geometry (consistency of 2d and 3d senses, adjasment
 	/// of curves to the vertices, etc.).
 	/// The order of the checks :
@@ -1215,13 +1215,13 @@ public:
 	/// Remark:  The numbers in brackets show with what DONEi or FAILi
 	/// the status can be queried
 	/// </summary>
-	bool CheckEdgeCurves();
-	/// <summary>
+bool CheckEdgeCurves();
+		/// <summary>
 	/// Calls to CheckDegenerated for each edge
 	/// Returns: True if at least one incorrect degenerated edge was detected
 	/// </summary>
-	bool CheckDegenerated();
-	/// <summary>
+bool CheckDegenerated();
+		/// <summary>
 	/// Checks if wire is closed, performs CheckConnected,
 	/// CheckDegenerated and CheckLacking for the first and the last edges
 	/// Returns: True if at least one check returned True
@@ -1229,8 +1229,8 @@ public:
 	/// FAIL1 or DONE1: see CheckConnected
 	/// FAIL2 or DONE2: see CheckDegenerated
 	/// </summary>
-	bool CheckClosed(double prec);
-	/// <summary>
+bool CheckClosed(double prec);
+		/// <summary>
 	/// Checks if wire is closed, performs CheckConnected,
 	/// CheckDegenerated and CheckLacking for the first and the last edges
 	/// Returns: True if at least one check returned True
@@ -1238,8 +1238,8 @@ public:
 	/// FAIL1 or DONE1: see CheckConnected
 	/// FAIL2 or DONE2: see CheckDegenerated
 	/// </summary>
-	bool CheckClosed();
-	/// <summary>
+bool CheckClosed();
+		/// <summary>
 	/// Checks self-intersection of the wire (considering pcurves)
 	/// Looks for self-intersecting edges and each pair of intersecting
 	/// edges.
@@ -1251,16 +1251,16 @@ public:
 	/// Status:  FAIL1 or DONE1 - see CheckSelfIntersectingEdge
 	/// FAIL2 or DONE2 - see CheckIntersectingEdges
 	/// </summary>
-	bool CheckSelfIntersection();
-	/// <summary>
+bool CheckSelfIntersection();
+		/// <summary>
 	/// Calls to CheckLacking for each edge
 	/// Returns: True if at least one lacking edge was detected
 	/// </summary>
-	bool CheckLacking();
+bool CheckLacking();
 	bool CheckGaps3d();
 	bool CheckGaps2d();
 	bool CheckCurveGaps();
-	/// <summary>
+		/// <summary>
 	/// Analyzes the order of the edges in the wire,
 	/// uses class WireOrder for that purpose.
 	/// Flag <isClosed> defines if the wire is closed or not
@@ -1276,8 +1276,8 @@ public:
 	/// DONE4: as DONE3 and gaps more than myPrecision
 	/// FAIL : algorithm failed (could not detect order)
 	/// </summary>
-	bool CheckOrder(Macad::Occt::ShapeAnalysis_WireOrder^ sawo, bool isClosed, bool mode3d);
-	/// <summary>
+bool CheckOrder(Macad::Occt::ShapeAnalysis_WireOrder^ sawo, bool isClosed, bool mode3d);
+		/// <summary>
 	/// Analyzes the order of the edges in the wire,
 	/// uses class WireOrder for that purpose.
 	/// Flag <isClosed> defines if the wire is closed or not
@@ -1293,8 +1293,8 @@ public:
 	/// DONE4: as DONE3 and gaps more than myPrecision
 	/// FAIL : algorithm failed (could not detect order)
 	/// </summary>
-	bool CheckOrder(Macad::Occt::ShapeAnalysis_WireOrder^ sawo, bool isClosed);
-	/// <summary>
+bool CheckOrder(Macad::Occt::ShapeAnalysis_WireOrder^ sawo, bool isClosed);
+		/// <summary>
 	/// Analyzes the order of the edges in the wire,
 	/// uses class WireOrder for that purpose.
 	/// Flag <isClosed> defines if the wire is closed or not
@@ -1310,8 +1310,8 @@ public:
 	/// DONE4: as DONE3 and gaps more than myPrecision
 	/// FAIL : algorithm failed (could not detect order)
 	/// </summary>
-	bool CheckOrder(Macad::Occt::ShapeAnalysis_WireOrder^ sawo);
-	/// <summary>
+bool CheckOrder(Macad::Occt::ShapeAnalysis_WireOrder^ sawo);
+		/// <summary>
 	/// Checks connected edges (num-th and preceding).
 	/// Tests with starting preci from <SBWD> or  with <prec> if
 	/// it is greater.
@@ -1326,8 +1326,8 @@ public:
 	/// FAIL1 : Not confused
 	/// FAIL2 : Not confused but confused with <preci> if reverse num-th edge
 	/// </summary>
-	bool CheckConnected(int num, double prec);
-	/// <summary>
+bool CheckConnected(int num, double prec);
+		/// <summary>
 	/// Checks connected edges (num-th and preceding).
 	/// Tests with starting preci from <SBWD> or  with <prec> if
 	/// it is greater.
@@ -1342,8 +1342,8 @@ public:
 	/// FAIL1 : Not confused
 	/// FAIL2 : Not confused but confused with <preci> if reverse num-th edge
 	/// </summary>
-	bool CheckConnected(int num);
-	/// <summary>
+bool CheckConnected(int num);
+		/// <summary>
 	/// Checks if an edge has a length not greater than myPreci or
 	/// precsmall (if it is smaller)
 	/// Returns: False if its length is greater than precision
@@ -1353,8 +1353,8 @@ public:
 	/// DONE2: edge is small, vertices are not the same
 	/// FAIL : no 3d curve and pcurve
 	/// </summary>
-	bool CheckSmall(int num, double precsmall);
-	/// <summary>
+bool CheckSmall(int num, double precsmall);
+		/// <summary>
 	/// Checks if an edge has a length not greater than myPreci or
 	/// precsmall (if it is smaller)
 	/// Returns: False if its length is greater than precision
@@ -1364,8 +1364,8 @@ public:
 	/// DONE2: edge is small, vertices are not the same
 	/// FAIL : no 3d curve and pcurve
 	/// </summary>
-	bool CheckSmall(int num);
-	/// <summary>
+bool CheckSmall(int num);
+		/// <summary>
 	/// Checks if a seam pcurves are correct oriented
 	/// Returns: False (status OK) if given edge is not a seam or if it is OK
 	/// C1 - current pcurve for FORWARD edge,
@@ -1376,13 +1376,13 @@ public:
 	/// OK   : Pcurves are correct or edge is not seam
 	/// DONE : Seam pcurves should be swapped
 	/// </summary>
-	bool CheckSeam(int num, Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2, double% cf, double% cl);
-	/// <summary>
+bool CheckSeam(int num, Macad::Occt::Geom2d_Curve^ C1, Macad::Occt::Geom2d_Curve^ C2, double% cf, double% cl);
+		/// <summary>
 	/// Checks if a seam pcurves are correct oriented
 	/// See previous functions for details
 	/// </summary>
-	bool CheckSeam(int num);
-	/// <summary>
+bool CheckSeam(int num);
+		/// <summary>
 	/// Checks for degenerated edge between two adjacent ones.
 	/// Fills parameters dgnr1 and dgnr2 with points in parametric
 	/// space that correspond to the singularity (either gap that
@@ -1399,14 +1399,14 @@ public:
 	/// FAIL2: Edge marked as degenerated and has no pcurve
 	/// but singularity is not detected
 	/// </summary>
-	bool CheckDegenerated(int num, Macad::Occt::Pnt2d% dgnr1, Macad::Occt::Pnt2d% dgnr2);
-	/// <summary>
+bool CheckDegenerated(int num, Macad::Occt::Pnt2d% dgnr1, Macad::Occt::Pnt2d% dgnr2);
+		/// <summary>
 	/// Checks for degenerated edge between two adjacent ones.
 	/// Remark : Calls previous function
 	/// Status : See the function above for details
 	/// </summary>
-	bool CheckDegenerated(int num);
-	/// <summary>
+bool CheckDegenerated(int num);
+		/// <summary>
 	/// Checks gap between edges in 3D (3d curves).
 	/// Checks the distance between ends of 3d curves of the num-th
 	/// and preceding edge.
@@ -1418,8 +1418,8 @@ public:
 	/// DONE : Gap is greater than myPrecision
 	/// FAIL : No 3d curve(s) on the edge(s)
 	/// </summary>
-	bool CheckGap3d(int num);
-	/// <summary>
+bool CheckGap3d(int num);
+		/// <summary>
 	/// Checks gap between edges in 3D (3d curves).
 	/// Checks the distance between ends of 3d curves of the num-th
 	/// and preceding edge.
@@ -1431,8 +1431,8 @@ public:
 	/// DONE : Gap is greater than myPrecision
 	/// FAIL : No 3d curve(s) on the edge(s)
 	/// </summary>
-	bool CheckGap3d();
-	/// <summary>
+bool CheckGap3d();
+		/// <summary>
 	/// Checks gap between edges in 2D (pcurves).
 	/// Checks the distance between ends of pcurves of the num-th
 	/// and preceding edge.
@@ -1444,8 +1444,8 @@ public:
 	/// DONE : Gap is greater than parametric precision out of myPrecision
 	/// FAIL : No pcurve(s) on the edge(s)
 	/// </summary>
-	bool CheckGap2d(int num);
-	/// <summary>
+bool CheckGap2d(int num);
+		/// <summary>
 	/// Checks gap between edges in 2D (pcurves).
 	/// Checks the distance between ends of pcurves of the num-th
 	/// and preceding edge.
@@ -1457,8 +1457,8 @@ public:
 	/// DONE : Gap is greater than parametric precision out of myPrecision
 	/// FAIL : No pcurve(s) on the edge(s)
 	/// </summary>
-	bool CheckGap2d();
-	/// <summary>
+bool CheckGap2d();
+		/// <summary>
 	/// Checks gap between points on 3D curve and points on surface
 	/// generated by pcurve of the num-th edge.
 	/// The distance can be queried by MinDistance3d.
@@ -1469,8 +1469,8 @@ public:
 	/// DONE : Gap is greater than myPrecision
 	/// FAIL : No 3d curve(s) on the edge(s)
 	/// </summary>
-	bool CheckCurveGap(int num);
-	/// <summary>
+bool CheckCurveGap(int num);
+		/// <summary>
 	/// Checks gap between points on 3D curve and points on surface
 	/// generated by pcurve of the num-th edge.
 	/// The distance can be queried by MinDistance3d.
@@ -1481,53 +1481,24 @@ public:
 	/// DONE : Gap is greater than myPrecision
 	/// FAIL : No 3d curve(s) on the edge(s)
 	/// </summary>
-	bool CheckCurveGap();
-	/// <summary>
-	/// Checks if num-th edge is self-intersecting.
-	/// Self-intersection is reported only if intersection point lies outside
-	/// of both end vertices of the edge.
-	/// Returns: True if edge is self-intersecting.
-	/// If returns True it also fills the sequences of intersection points
-	/// and corresponding 3d points (only that are not enclosed by a vertices)
-	/// Status:
-	/// FAIL1 : No pcurve
-	/// FAIL2 : No vertices
-	/// DONE1 : Self-intersection found
-	/// </summary>
+bool CheckCurveGap();
 	/* Method skipped due to unknown mapping: Standard_Boolean CheckSelfIntersectingEdge(Standard_Integer num, IntRes2d_SequenceOfIntersectionPoint points2d, TColgp_SequenceOfPnt points3d, ) */
 	bool CheckSelfIntersectingEdge(int num);
-	/// <summary>
-	/// Checks two adjacent edges for intersecting.
-	/// Intersection is reported only if intersection point is not enclosed
-	/// by the common end vertex of the edges.
-	/// Returns: True if intersection is found.
-	/// If returns True it also fills the sequences of intersection points,
-	/// corresponding 3d points, and errors for them (half-distances between
-	/// intersection points in 3d calculated from one and from another edge)
-	/// Status:
-	/// FAIL1 : No pcurve
-	/// FAIL2 : No vertices
-	/// DONE1 : Self-intersection found
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Boolean CheckIntersectingEdges(Standard_Integer num, IntRes2d_SequenceOfIntersectionPoint points2d, TColgp_SequenceOfPnt points3d, TColStd_SequenceOfReal errors, ) */
-	/// <summary>
+		/// <summary>
 	/// Checks two adjacent edges for intersecting.
 	/// Remark : Calls the previous method
 	/// Status : See the function above for details
 	/// </summary>
-	bool CheckIntersectingEdges(int num);
-	/// <summary>
-	/// Checks i-th and j-th edges for intersecting.
-	/// Remark : See the previous method for details
-	/// </summary>
+bool CheckIntersectingEdges(int num);
 	/* Method skipped due to unknown mapping: Standard_Boolean CheckIntersectingEdges(Standard_Integer num1, Standard_Integer num2, IntRes2d_SequenceOfIntersectionPoint points2d, TColgp_SequenceOfPnt points3d, TColStd_SequenceOfReal errors, ) */
-	/// <summary>
+		/// <summary>
 	/// Checks i-th and j-th edges for intersecting.
 	/// Remark : Calls  previous method.
 	/// Status : See the function above for details
 	/// </summary>
-	bool CheckIntersectingEdges(int num1, int num2);
-	/// <summary>
+bool CheckIntersectingEdges(int num1, int num2);
+		/// <summary>
 	/// Checks if there is a gap in 2d between edges, not comprised by
 	/// the tolerance of their common vertex.
 	/// If <Tolerance> is greater than 0. and less than tolerance of
@@ -1547,8 +1518,8 @@ public:
 	/// vector (p2d2 - p2d1) goes in direction opposite to the pcurves
 	/// of the edges (if angle is more than 0.9*PI).
 	/// </summary>
-	bool CheckLacking(int num, double Tolerance, Macad::Occt::Pnt2d% p2d1, Macad::Occt::Pnt2d% p2d2);
-	/// <summary>
+bool CheckLacking(int num, double Tolerance, Macad::Occt::Pnt2d% p2d1, Macad::Occt::Pnt2d% p2d2);
+		/// <summary>
 	/// Checks if there is a gap in 2D between edges and not comprised by vertex tolerance
 	/// The value of SBWD.thepreci is used.
 	/// Returns: False if no edge should be inserted
@@ -1558,8 +1529,8 @@ public:
 	/// small)
 	/// DONE2 : Edge can be inserted (3d and 2d gaps are large enough)
 	/// </summary>
-	bool CheckLacking(int num, double Tolerance);
-	/// <summary>
+bool CheckLacking(int num, double Tolerance);
+		/// <summary>
 	/// Checks if there is a gap in 2D between edges and not comprised by vertex tolerance
 	/// The value of SBWD.thepreci is used.
 	/// Returns: False if no edge should be inserted
@@ -1569,36 +1540,36 @@ public:
 	/// small)
 	/// DONE2 : Edge can be inserted (3d and 2d gaps are large enough)
 	/// </summary>
-	bool CheckLacking(int num);
-	/// <summary>
+bool CheckLacking(int num);
+		/// <summary>
 	/// Checks if wire defines an outer bound on the face
 	/// Uses ShapeAnalysis::IsOuterBound for analysis
 	/// If <APIMake> is True uses BRepAPI_MakeWire to build the
 	/// wire, if False (to be used only when edges share common
 	/// vertices) uses BRep_Builder to build the wire
 	/// </summary>
-	bool CheckOuterBound(bool APIMake);
-	/// <summary>
+bool CheckOuterBound(bool APIMake);
+		/// <summary>
 	/// Checks if wire defines an outer bound on the face
 	/// Uses ShapeAnalysis::IsOuterBound for analysis
 	/// If <APIMake> is True uses BRepAPI_MakeWire to build the
 	/// wire, if False (to be used only when edges share common
 	/// vertices) uses BRep_Builder to build the wire
 	/// </summary>
-	bool CheckOuterBound();
-	/// <summary>
+bool CheckOuterBound();
+		/// <summary>
 	/// Detects a notch
 	/// </summary>
-	bool CheckNotchedEdges(int num, int% shortNum, double% param, double Tolerance);
-	/// <summary>
+bool CheckNotchedEdges(int num, int% shortNum, double% param, double Tolerance);
+		/// <summary>
 	/// Detects a notch
 	/// </summary>
-	bool CheckNotchedEdges(int num, int% shortNum, double% param);
-	/// <summary>
+bool CheckNotchedEdges(int num, int% shortNum, double% param);
+		/// <summary>
 	/// Checks if wire has parametric area less than precision.
 	/// </summary>
-	bool CheckSmallArea(Macad::Occt::TopoDS_Wire^ theWire);
-	/// <summary>
+bool CheckSmallArea(Macad::Occt::TopoDS_Wire^ theWire);
+		/// <summary>
 	/// Checks with what orientation <shape> (wire or edge) can be
 	/// connected to the wire.
 	/// Tests distances with starting <preci> from <SBWD> (close confusion),
@@ -1629,8 +1600,8 @@ public:
 	/// For head of <SBWD> if DONE5 is True <shape> should be direct,
 	/// otherwise reversed.
 	/// </summary>
-	bool CheckShapeConnect(Macad::Occt::TopoDS_Shape^ shape, double prec);
-	/// <summary>
+bool CheckShapeConnect(Macad::Occt::TopoDS_Shape^ shape, double prec);
+		/// <summary>
 	/// Checks with what orientation <shape> (wire or edge) can be
 	/// connected to the wire.
 	/// Tests distances with starting <preci> from <SBWD> (close confusion),
@@ -1661,28 +1632,28 @@ public:
 	/// For head of <SBWD> if DONE5 is True <shape> should be direct,
 	/// otherwise reversed.
 	/// </summary>
-	bool CheckShapeConnect(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+bool CheckShapeConnect(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// The same as previous CheckShapeConnect but is more advanced.
 	/// It returns the distances between each end of <sbwd> and each
 	/// end of <shape>. For example, <tailhead> stores distance
 	/// between tail of <sbwd> and head of <shape>
 	/// Remark:  First method CheckShapeConnect calls this one
 	/// </summary>
-	bool CheckShapeConnect(double% tailhead, double% tailtail, double% headtail, double% headhead, Macad::Occt::TopoDS_Shape^ shape, double prec);
-	/// <summary>
+bool CheckShapeConnect(double% tailhead, double% tailtail, double% headtail, double% headhead, Macad::Occt::TopoDS_Shape^ shape, double prec);
+		/// <summary>
 	/// The same as previous CheckShapeConnect but is more advanced.
 	/// It returns the distances between each end of <sbwd> and each
 	/// end of <shape>. For example, <tailhead> stores distance
 	/// between tail of <sbwd> and head of <shape>
 	/// Remark:  First method CheckShapeConnect calls this one
 	/// </summary>
-	bool CheckShapeConnect(double% tailhead, double% tailtail, double% headtail, double% headhead, Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+bool CheckShapeConnect(double% tailhead, double% tailtail, double% headtail, double% headhead, Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Checks existence of loop on wire and return vertices which are loop vertices
 	/// (vertices belonging to a few pairs of edges)
 	/// </summary>
-	bool CheckLoop(Macad::Occt::TopTools_IndexedMapOfShape^ aMapLoopVertices, Macad::Occt::TopTools_DataMapOfShapeListOfShape^ aMapVertexEdges, Macad::Occt::TopTools_MapOfShape^ aMapSmallEdges, Macad::Occt::TopTools_MapOfShape^ aMapSeemEdges);
+bool CheckLoop(Macad::Occt::TopTools_IndexedMapOfShape^ aMapLoopVertices, Macad::Occt::TopTools_DataMapOfShapeListOfShape^ aMapVertexEdges, Macad::Occt::TopTools_MapOfShape^ aMapSmallEdges, Macad::Occt::TopTools_MapOfShape^ aMapSeemEdges);
 	bool CheckTail(Macad::Occt::TopoDS_Edge^ theEdge1, Macad::Occt::TopoDS_Edge^ theEdge2, double theMaxSine, double theMaxWidth, double theMaxTolerance, Macad::Occt::TopoDS_Edge^ theEdge11, Macad::Occt::TopoDS_Edge^ theEdge12, Macad::Occt::TopoDS_Edge^ theEdge21, Macad::Occt::TopoDS_Edge^ theEdge22);
 	bool StatusOrder(Macad::Occt::ShapeExtend_Status Status);
 	bool StatusConnected(Macad::Occt::ShapeExtend_Status Status);
@@ -1696,32 +1667,32 @@ public:
 	bool StatusGaps2d(Macad::Occt::ShapeExtend_Status Status);
 	bool StatusCurveGaps(Macad::Occt::ShapeExtend_Status Status);
 	bool StatusLoop(Macad::Occt::ShapeExtend_Status Status);
-	/// <summary>
+		/// <summary>
 	/// Querying the status of the LAST performed 'Advanced' checking procedure
 	/// </summary>
-	bool LastCheckStatus(Macad::Occt::ShapeExtend_Status Status);
-	/// <summary>
+bool LastCheckStatus(Macad::Occt::ShapeExtend_Status Status);
+		/// <summary>
 	/// Returns the last lowest distance in 3D computed by
 	/// CheckOrientation, CheckConnected, CheckContinuity3d,
 	/// CheckVertex, CheckNewVertex
 	/// </summary>
-	double MinDistance3d();
-	/// <summary>
+double MinDistance3d();
+		/// <summary>
 	/// Returns the last lowest distance in 2D-UV computed by
 	/// CheckContinuity2d
 	/// </summary>
-	double MinDistance2d();
-	/// <summary>
+double MinDistance2d();
+		/// <summary>
 	/// Returns the last maximal distance in 3D computed by
 	/// CheckOrientation, CheckConnected, CheckContinuity3d,
 	/// CheckVertex, CheckNewVertex, CheckSameParameter
 	/// </summary>
-	double MaxDistance3d();
-	/// <summary>
+double MaxDistance3d();
+		/// <summary>
 	/// Returns the last maximal distance in 2D-UV computed by
 	/// CheckContinuity2d
 	/// </summary>
-	double MaxDistance2d();
+double MaxDistance2d();
 }; // class ShapeAnalysis_Wire
 
 //---------------------------------------------------------------------
@@ -1769,48 +1740,48 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeAnalysis_WireOrder();
-	/// <summary>
+ShapeAnalysis_WireOrder();
+		/// <summary>
 	/// Creates a WireOrder in 3D (if mode3d is True) or 2D (if False)
 	/// with a tolerance
 	/// </summary>
-	ShapeAnalysis_WireOrder(bool mode3d, double tol);
+ShapeAnalysis_WireOrder(bool mode3d, double tol);
 	ShapeAnalysis_WireOrder(Macad::Occt::ShapeAnalysis_WireOrder^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets new values. Clears the connexion list
 	/// If <mode3d> changes, also clears the edge list (else, doesn't)
 	/// </summary>
-	void SetMode(bool mode3d, double tol);
-	/// <summary>
+void SetMode(bool mode3d, double tol);
+		/// <summary>
 	/// Returns the working tolerance
 	/// </summary>
-	double Tolerance();
-	/// <summary>
+double Tolerance();
+		/// <summary>
 	/// Clears the list of edges, but not mode and tol
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Adds a couple of points 3D (start,end)
 	/// </summary>
-	void Add(Macad::Occt::XYZ start3d, Macad::Occt::XYZ end3d);
-	/// <summary>
+void Add(Macad::Occt::XYZ start3d, Macad::Occt::XYZ end3d);
+		/// <summary>
 	/// Adds a couple of points 2D (start,end)
 	/// </summary>
-	void Add(Macad::Occt::XY start2d, Macad::Occt::XY end2d);
-	/// <summary>
+void Add(Macad::Occt::XY start2d, Macad::Occt::XY end2d);
+		/// <summary>
 	/// Returns the count of added couples of points (one per edges)
 	/// </summary>
-	int NbEdges();
-	/// <summary>
+int NbEdges();
+		/// <summary>
 	/// If this mode is True method perform does not sort edges of
 	/// different loops. The resulting order is first loop, second
 	/// one etc...
 	/// </summary>
-	bool KeepLoopsMode();
-	/// <summary>
+bool KeepLoopsMode();
+		/// <summary>
 	/// Computes the better order
 	/// If <closed> is True (D) considers also closure
 	/// Optimised if the couples were already in order
@@ -1819,8 +1790,8 @@ public:
 	/// Else, the smallest distance is reached
 	/// Gap corresponds to a smallest distance greater than <tol>
 	/// </summary>
-	void Perform(bool closed);
-	/// <summary>
+void Perform(bool closed);
+		/// <summary>
 	/// Computes the better order
 	/// If <closed> is True (D) considers also closure
 	/// Optimised if the couples were already in order
@@ -1829,13 +1800,13 @@ public:
 	/// Else, the smallest distance is reached
 	/// Gap corresponds to a smallest distance greater than <tol>
 	/// </summary>
-	void Perform();
-	/// <summary>
+void Perform();
+		/// <summary>
 	/// Tells if Perform has been done
 	/// Else, the following methods returns original values
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// Returns the status of the order (0 if not done) :
 	/// 0 : all edges are direct and in sequence
 	/// 1 : all edges are direct but some are not in sequence
@@ -1845,61 +1816,61 @@ public:
 	/// -10 : COULD NOT BE RESOLVED, Failure on Reorder
 	/// gap : regarding starting <tol>
 	/// </summary>
-	int Status();
-	/// <summary>
+int Status();
+		/// <summary>
 	/// Returns the number of original edge which correspond to the
 	/// newly ordered number <n>
 	/// Warning : the returned value is NEGATIVE if edge should be reversed
 	/// </summary>
-	int Ordered(int n);
-	/// <summary>
+int Ordered(int n);
+		/// <summary>
 	/// Returns the values of the couple <num>, as 3D values
 	/// </summary>
-	void XYZ(int num, Macad::Occt::XYZ% start3d, Macad::Occt::XYZ% end3d);
-	/// <summary>
+void XYZ(int num, Macad::Occt::XYZ% start3d, Macad::Occt::XYZ% end3d);
+		/// <summary>
 	/// Returns the values of the couple <num>, as 2D values
 	/// </summary>
-	void XY(int num, Macad::Occt::XY% start2d, Macad::Occt::XY% end2d);
-	/// <summary>
+void XY(int num, Macad::Occt::XY% start2d, Macad::Occt::XY% end2d);
+		/// <summary>
 	/// Returns the gap between a couple and its preceding
 	/// <num> is considered ordered
 	/// If <num> = 0 (D), returns the greatest gap found
 	/// </summary>
-	double Gap(int num);
-	/// <summary>
+double Gap(int num);
+		/// <summary>
 	/// Returns the gap between a couple and its preceding
 	/// <num> is considered ordered
 	/// If <num> = 0 (D), returns the greatest gap found
 	/// </summary>
-	double Gap();
-	/// <summary>
+double Gap();
+		/// <summary>
 	/// Determines the chains inside which successive edges have a gap
 	/// less than a given value. Queried by NbChains and Chain
 	/// </summary>
-	void SetChains(double gap);
-	/// <summary>
+void SetChains(double gap);
+		/// <summary>
 	/// Returns the count of computed chains
 	/// </summary>
-	int NbChains();
-	/// <summary>
+int NbChains();
+		/// <summary>
 	/// Returns, for the chain n0 num, starting and ending numbers of
 	/// edges. In the list of ordered edges (see Ordered for originals)
 	/// </summary>
-	void Chain(int num, int% n1, int% n2);
-	/// <summary>
+void Chain(int num, int% n1, int% n2);
+		/// <summary>
 	/// Determines the couples of edges for which end and start fit
 	/// inside a given gap. Queried by NbCouples and Couple
 	/// </summary>
-	void SetCouples(double gap);
-	/// <summary>
+void SetCouples(double gap);
+		/// <summary>
 	/// Returns the count of computed couples
 	/// </summary>
-	int NbCouples();
-	/// <summary>
+int NbCouples();
+		/// <summary>
 	/// Returns, for the couple n0 num, the two implied edges
 	/// In the list of ordered edges
 	/// </summary>
-	void Couple(int num, int% n1, int% n2);
+void Couple(int num, int% n1, int% n2);
 }; // class ShapeAnalysis_WireOrder
 
 //---------------------------------------------------------------------
@@ -1939,16 +1910,16 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeAnalysis_WireVertex();
+ShapeAnalysis_WireVertex();
 	ShapeAnalysis_WireVertex(Macad::Occt::ShapeAnalysis_WireVertex^ parameter1);
 	void Init(Macad::Occt::TopoDS_Wire^ wire, double preci);
 	void Init(Macad::Occt::ShapeExtend_WireData^ swbd, double preci);
 	void Load(Macad::Occt::TopoDS_Wire^ wire);
 	void Load(Macad::Occt::ShapeExtend_WireData^ sbwd);
-	/// <summary>
+		/// <summary>
 	/// Sets the precision for work
 	/// Analysing: for each Vertex, comparison between the end of the
 	/// preceding edge and the start of the following edge
@@ -1956,68 +1927,68 @@ public:
 	/// same rank, in the ShapeExtend_WireData. I.E. for Vertex <num>,
 	/// Edge <num> is the preceding one, <num+1> is the following one
 	/// </summary>
-	void SetPrecision(double preci);
+void SetPrecision(double preci);
 	void Analyze();
-	/// <summary>
+		/// <summary>
 	/// Records status "Same Vertex" (logically) on Vertex <num>
 	/// </summary>
-	void SetSameVertex(int num);
-	/// <summary>
+void SetSameVertex(int num);
+		/// <summary>
 	/// Records status "Same Coords" (at the Vertices Tolerances)
 	/// </summary>
-	void SetSameCoords(int num);
-	/// <summary>
+void SetSameCoords(int num);
+		/// <summary>
 	/// Records status "Close Coords" (at the Precision of <me>)
 	/// </summary>
-	void SetClose(int num);
-	/// <summary>
+void SetClose(int num);
+		/// <summary>
 	/// <num> is the End of preceding Edge, and its projection on the
 	/// following one lies on it at the Precision of <me>
 	/// <ufol> gives the parameter on the following edge
 	/// </summary>
-	void SetEnd(int num, Macad::Occt::XYZ pos, double ufol);
-	/// <summary>
+void SetEnd(int num, Macad::Occt::XYZ pos, double ufol);
+		/// <summary>
 	/// <num> is the Start of following Edge, its projection on the
 	/// preceding one lies on it at the Precision of <me>
 	/// <upre> gives the parameter on the preceding edge
 	/// </summary>
-	void SetStart(int num, Macad::Occt::XYZ pos, double upre);
-	/// <summary>
+void SetStart(int num, Macad::Occt::XYZ pos, double upre);
+		/// <summary>
 	/// <num> is the Intersection of both Edges
 	/// <upre> is the parameter on preceding edge, <ufol> on
 	/// following edge
 	/// </summary>
-	void SetInters(int num, Macad::Occt::XYZ pos, double upre, double ufol);
-	/// <summary>
+void SetInters(int num, Macad::Occt::XYZ pos, double upre, double ufol);
+		/// <summary>
 	/// <num> cannot be said as same vertex
 	/// </summary>
-	void SetDisjoined(int num);
-	/// <summary>
+void SetDisjoined(int num);
+		/// <summary>
 	/// Returns True if analysis was performed, else returns False
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// Returns precision value used in analysis
 	/// </summary>
-	double Precision();
-	/// <summary>
+double Precision();
+		/// <summary>
 	/// Returns the number of edges in analyzed wire (i.e. the
 	/// length of all arrays)
 	/// </summary>
-	int NbEdges();
-	/// <summary>
+int NbEdges();
+		/// <summary>
 	/// Returns analyzed wire
 	/// </summary>
-	Macad::Occt::ShapeExtend_WireData^ WireData();
-	/// <summary>
+Macad::Occt::ShapeExtend_WireData^ WireData();
+		/// <summary>
 	/// Returns the recorded status for a vertex
 	/// More detail by method Data
 	/// </summary>
-	int Status(int num);
+int Status(int num);
 	Macad::Occt::XYZ Position(int num);
 	double UPrevious(int num);
 	double UFollowing(int num);
-	/// <summary>
+		/// <summary>
 	/// Returns the recorded status for a vertex
 	/// With its recorded position and parameters on both edges
 	/// These values are relevant regarding the status:
@@ -2030,20 +2001,20 @@ public:
 	/// 5       Inters     yes       yes         yes
 	/// -1      Disjoined  no        no          no
 	/// </summary>
-	int Data(int num, Macad::Occt::XYZ% pos, double% upre, double% ufol);
-	/// <summary>
+int Data(int num, Macad::Occt::XYZ% pos, double% upre, double% ufol);
+		/// <summary>
 	/// For a given status, returns the rank of the vertex which
 	/// follows <num> and has the same status. 0 if no more
 	/// Acts as an iterator, starts on the first one
 	/// </summary>
-	int NextStatus(int stat, int num);
-	/// <summary>
+int NextStatus(int stat, int num);
+		/// <summary>
 	/// For a given status, returns the rank of the vertex which
 	/// follows <num> and has the same status. 0 if no more
 	/// Acts as an iterator, starts on the first one
 	/// </summary>
-	int NextStatus(int stat);
-	/// <summary>
+int NextStatus(int stat);
+		/// <summary>
 	/// For a given criter, returns the rank of the vertex which
 	/// follows <num> and has the same status. 0 if no more
 	/// Acts as an iterator, starts on the first one
@@ -2055,8 +2026,8 @@ public:
 	/// 4: redefined coords (status 3 4 5)
 	/// -1: no solution (status -1)
 	/// </summary>
-	int NextCriter(int crit, int num);
-	/// <summary>
+int NextCriter(int crit, int num);
+		/// <summary>
 	/// For a given criter, returns the rank of the vertex which
 	/// follows <num> and has the same status. 0 if no more
 	/// Acts as an iterator, starts on the first one
@@ -2068,7 +2039,7 @@ public:
 	/// 4: redefined coords (status 3 4 5)
 	/// -1: no solution (status -1)
 	/// </summary>
-	int NextCriter(int crit);
+int NextCriter(int crit);
 }; // class ShapeAnalysis_WireVertex
 
 //---------------------------------------------------------------------
@@ -2103,7 +2074,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates an empty tool
 	/// Checks a Shape i.e. each of its faces, records checks as
 	/// diagnostics in the <infos>
@@ -2116,9 +2087,9 @@ public:
 	/// Enchains various checks on a face
 	/// inshell : to compute more information, relevant to topology
 	/// </summary>
-	ShapeAnalysis_CheckSmallFace();
+ShapeAnalysis_CheckSmallFace();
 	ShapeAnalysis_CheckSmallFace(Macad::Occt::ShapeAnalysis_CheckSmallFace^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Checks if a Face is as a Spot
 	/// Returns 0 if not, 1 if yes, 2 if yes and all vertices are the
 	/// same
@@ -2128,8 +2099,8 @@ public:
 	/// <spotol> returns an equivalent tolerance, which is computed as
 	/// half of max dimension of min-max box of the face
 	/// </summary>
-	int IsSpotFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::Pnt% spot, double% spotol, double tol);
-	/// <summary>
+int IsSpotFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::Pnt% spot, double% spotol, double tol);
+		/// <summary>
 	/// Checks if a Face is as a Spot
 	/// Returns 0 if not, 1 if yes, 2 if yes and all vertices are the
 	/// same
@@ -2139,18 +2110,18 @@ public:
 	/// <spotol> returns an equivalent tolerance, which is computed as
 	/// half of max dimension of min-max box of the face
 	/// </summary>
-	int IsSpotFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::Pnt% spot, double% spotol);
-	/// <summary>
+int IsSpotFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::Pnt% spot, double% spotol);
+		/// <summary>
 	/// Acts as IsSpotFace, but records in <infos> a diagnostic
 	/// "SpotFace" with the Pnt as value (data "Location")
 	/// </summary>
-	bool CheckSpotFace(Macad::Occt::TopoDS_Face^ F, double tol);
-	/// <summary>
+bool CheckSpotFace(Macad::Occt::TopoDS_Face^ F, double tol);
+		/// <summary>
 	/// Acts as IsSpotFace, but records in <infos> a diagnostic
 	/// "SpotFace" with the Pnt as value (data "Location")
 	/// </summary>
-	bool CheckSpotFace(Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+bool CheckSpotFace(Macad::Occt::TopoDS_Face^ F);
+		/// <summary>
 	/// Checks if a Face lies on a Surface which is a strip
 	/// So the Face is a strip. But a Face may be a strip elsewhere ..
 	/// 
@@ -2158,8 +2129,8 @@ public:
 	/// By default, considers the tolerance zone of its edges
 	/// Returns 0 if not a strip support, 1 strip in U, 2 strip in V
 	/// </summary>
-	bool IsStripSupport(Macad::Occt::TopoDS_Face^ F, double tol);
-	/// <summary>
+bool IsStripSupport(Macad::Occt::TopoDS_Face^ F, double tol);
+		/// <summary>
 	/// Checks if a Face lies on a Surface which is a strip
 	/// So the Face is a strip. But a Face may be a strip elsewhere ..
 	/// 
@@ -2167,19 +2138,19 @@ public:
 	/// By default, considers the tolerance zone of its edges
 	/// Returns 0 if not a strip support, 1 strip in U, 2 strip in V
 	/// </summary>
-	bool IsStripSupport(Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+bool IsStripSupport(Macad::Occt::TopoDS_Face^ F);
+		/// <summary>
 	/// Checks if two edges define a strip, i.e. distance maxi below
 	/// tolerance, given or some of those of E1 and E2
 	/// </summary>
-	bool CheckStripEdges(Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2, double tol, double% dmax);
-	/// <summary>
+bool CheckStripEdges(Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2, double tol, double% dmax);
+		/// <summary>
 	/// Searches for two and only two edges up tolerance
 	/// Returns True if OK, false if not 2 edges
 	/// If True, returns the two edges and their maximum distance
 	/// </summary>
-	bool FindStripEdges(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2, double tol, double% dmax);
-	/// <summary>
+bool FindStripEdges(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2, double tol, double% dmax);
+		/// <summary>
 	/// Checks if a Face is a single strip, i.e. brings two great
 	/// edges which are confused on their whole length, possible other
 	/// edges are small or null length
@@ -2187,8 +2158,8 @@ public:
 	/// Returns 0 if not a strip support, 1 strip in U, 2 strip in V
 	/// Records diagnostic in info if it is a single strip
 	/// </summary>
-	bool CheckSingleStrip(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2, double tol);
-	/// <summary>
+bool CheckSingleStrip(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2, double tol);
+		/// <summary>
 	/// Checks if a Face is a single strip, i.e. brings two great
 	/// edges which are confused on their whole length, possible other
 	/// edges are small or null length
@@ -2196,8 +2167,8 @@ public:
 	/// Returns 0 if not a strip support, 1 strip in U, 2 strip in V
 	/// Records diagnostic in info if it is a single strip
 	/// </summary>
-	bool CheckSingleStrip(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2);
-	/// <summary>
+bool CheckSingleStrip(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2);
+		/// <summary>
 	/// Checks if a Face is as a Strip
 	/// Returns 0 if not or non determined, 1 if in U, 2 if in V
 	/// By default, considers the tolerance zone of its edges
@@ -2208,8 +2179,8 @@ public:
 	/// Diagnostic "StripFace" brings data "Direction" (U or V),
 	/// "List1" , "List2" (if they could be computed)
 	/// </summary>
-	bool CheckStripFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2, double tol);
-	/// <summary>
+bool CheckStripFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2, double tol);
+		/// <summary>
 	/// Checks if a Face is as a Strip
 	/// Returns 0 if not or non determined, 1 if in U, 2 if in V
 	/// By default, considers the tolerance zone of its edges
@@ -2220,8 +2191,8 @@ public:
 	/// Diagnostic "StripFace" brings data "Direction" (U or V),
 	/// "List1" , "List2" (if they could be computed)
 	/// </summary>
-	bool CheckStripFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2);
-	/// <summary>
+bool CheckStripFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopoDS_Edge^ E1, Macad::Occt::TopoDS_Edge^ E2);
+		/// <summary>
 	/// Checks if a Face brings vertices which split it, either
 	/// confused with non adjacent vertices, or confused with their
 	/// projection on non adjacent edges
@@ -2229,8 +2200,8 @@ public:
 	/// Each vertex then brings a diagnostic "SplittingVertex",
 	/// with data : "Face" for the face, "Edge" for the split edge
 	/// </summary>
-	int CheckSplittingVertices(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopTools_DataMapOfShapeListOfShape^ MapEdges, Macad::Occt::ShapeAnalysis_DataMapOfShapeListOfReal^ MapParam, Macad::Occt::TopoDS_Compound^ theAllVert);
-	/// <summary>
+int CheckSplittingVertices(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopTools_DataMapOfShapeListOfShape^ MapEdges, Macad::Occt::ShapeAnalysis_DataMapOfShapeListOfReal^ MapParam, Macad::Occt::TopoDS_Compound^ theAllVert);
+		/// <summary>
 	/// Checks if a Face has a pin, which can be edited
 	/// No singularity : no pin, returns 0
 	/// If there is a pin, checked topics, with returned value :
@@ -2241,16 +2212,16 @@ public:
 	/// another vertex, so that this vertex still gives a pin
 	/// -> diagnostic "StretchedPin" with location of vertex (Pnt)
 	/// </summary>
-	bool CheckPin(Macad::Occt::TopoDS_Face^ F, int% whatrow, int% sence);
-	/// <summary>
+bool CheckPin(Macad::Occt::TopoDS_Face^ F, int% whatrow, int% sence);
+		/// <summary>
 	/// Checks if a Face is twisted (apart from checking Pin, i.e. it
 	/// does not give information on pin, only "it is twisted")
 	/// </summary>
-	bool CheckTwisted(Macad::Occt::TopoDS_Face^ F, double% paramu, double% paramv);
+bool CheckTwisted(Macad::Occt::TopoDS_Face^ F, double% paramu, double% paramv);
 	bool CheckPinFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopTools_DataMapOfShapeShape^ mapEdges, double toler);
 	bool CheckPinFace(Macad::Occt::TopoDS_Face^ F, Macad::Occt::TopTools_DataMapOfShapeShape^ mapEdges);
 	bool CheckPinEdges(Macad::Occt::TopoDS_Edge^ theFirstEdge, Macad::Occt::TopoDS_Edge^ theSecondEdge, double coef1, double coef2, double toler);
-	/// <summary>
+		/// <summary>
 	/// Returns the status of last call to Perform()
 	/// ShapeExtend_OK   : face was OK, nothing done
 	/// ShapeExtend_DONE1: some wires are fixed
@@ -2263,8 +2234,8 @@ public:
 	/// ShapeExtend_FAIL3: cannot add missing seam
 	/// ShapeExtend_FAIL4: cannot remove small area wire
 	/// </summary>
-	bool Status(Macad::Occt::ShapeExtend_Status status);
-	/// <summary>
+bool Status(Macad::Occt::ShapeExtend_Status status);
+		/// <summary>
 	/// Sets a fixed Tolerance to check small face
 	/// By default, local tolerance zone is considered
 	/// Sets a fixed MaxTolerance to check small face
@@ -2273,12 +2244,12 @@ public:
 	/// Unset fixed tolerance, comes back to local tolerance zones
 	/// Unset fixed tolerance, comes back to local tolerance zones
 	/// </summary>
-	void SetTolerance(double tol);
-	/// <summary>
+void SetTolerance(double tol);
+		/// <summary>
 	/// Returns the tolerance to check small faces, negative value if
 	/// local tolerances zones are to be considered
 	/// </summary>
-	double Tolerance();
+double Tolerance();
 	bool StatusSpot(Macad::Occt::ShapeExtend_Status status);
 	bool StatusStrip(Macad::Occt::ShapeExtend_Status status);
 	bool StatusPin(Macad::Occt::ShapeExtend_Status status);
@@ -2321,20 +2292,20 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeAnalysis_Shell();
+ShapeAnalysis_Shell();
 	ShapeAnalysis_Shell(Macad::Occt::ShapeAnalysis_Shell^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Clears data about loaded shells and performed checks
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Adds shells contained in the <shape> to the list of loaded shells
 	/// </summary>
-	void LoadShells(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+void LoadShells(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Checks if shells fulfill orientation condition, i.e. if each
 	/// edge is, either present once (free edge) or twice (connected
 	/// edge) but with different orientations (FORWARD/REVERSED)
@@ -2343,8 +2314,8 @@ public:
 	/// If <alsofree> is True free edges are considered.
 	/// Free edges can be queried but are not bad
 	/// </summary>
-	bool CheckOrientedShells(Macad::Occt::TopoDS_Shape^ shape, bool alsofree, bool checkinternaledges);
-	/// <summary>
+bool CheckOrientedShells(Macad::Occt::TopoDS_Shape^ shape, bool alsofree, bool checkinternaledges);
+		/// <summary>
 	/// Checks if shells fulfill orientation condition, i.e. if each
 	/// edge is, either present once (free edge) or twice (connected
 	/// edge) but with different orientations (FORWARD/REVERSED)
@@ -2353,8 +2324,8 @@ public:
 	/// If <alsofree> is True free edges are considered.
 	/// Free edges can be queried but are not bad
 	/// </summary>
-	bool CheckOrientedShells(Macad::Occt::TopoDS_Shape^ shape, bool alsofree);
-	/// <summary>
+bool CheckOrientedShells(Macad::Occt::TopoDS_Shape^ shape, bool alsofree);
+		/// <summary>
 	/// Checks if shells fulfill orientation condition, i.e. if each
 	/// edge is, either present once (free edge) or twice (connected
 	/// edge) but with different orientations (FORWARD/REVERSED)
@@ -2363,42 +2334,42 @@ public:
 	/// If <alsofree> is True free edges are considered.
 	/// Free edges can be queried but are not bad
 	/// </summary>
-	bool CheckOrientedShells(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+bool CheckOrientedShells(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Tells if a shape is loaded (only shells are checked)
 	/// </summary>
-	bool IsLoaded(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+bool IsLoaded(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Returns the actual number of loaded shapes (i.e. shells)
 	/// </summary>
-	int NbLoaded();
-	/// <summary>
+int NbLoaded();
+		/// <summary>
 	/// Returns a loaded shape specified by its rank number.
 	/// Returns null shape if <num> is out of range
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Loaded(int num);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Loaded(int num);
+		/// <summary>
 	/// Tells if at least one edge is recorded as bad
 	/// </summary>
-	bool HasBadEdges();
-	/// <summary>
+bool HasBadEdges();
+		/// <summary>
 	/// Returns the list of bad edges as a Compound
 	/// It is empty (not null) if no edge are recorded as bad
 	/// </summary>
-	Macad::Occt::TopoDS_Compound^ BadEdges();
-	/// <summary>
+Macad::Occt::TopoDS_Compound^ BadEdges();
+		/// <summary>
 	/// Tells if at least one edge is recorded as free (not connected)
 	/// </summary>
-	bool HasFreeEdges();
-	/// <summary>
+bool HasFreeEdges();
+		/// <summary>
 	/// Returns the list of free (not connected) edges as a Compound
 	/// It is empty (not null) if no edge are recorded as free
 	/// </summary>
-	Macad::Occt::TopoDS_Compound^ FreeEdges();
-	/// <summary>
+Macad::Occt::TopoDS_Compound^ FreeEdges();
+		/// <summary>
 	/// Tells if at least one edge is connected (shared twice or more)
 	/// </summary>
-	bool HasConnectedEdges();
+bool HasConnectedEdges();
 }; // class ShapeAnalysis_Shell
 
 //---------------------------------------------------------------------
@@ -2435,12 +2406,12 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeAnalysis_ShapeTolerance();
+ShapeAnalysis_ShapeTolerance();
 	ShapeAnalysis_ShapeTolerance(Macad::Occt::ShapeAnalysis_ShapeTolerance^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Determines a tolerance from the ones stored in a shape
 	/// Remark : calls InitTolerance and AddTolerance,
 	/// hence, can be used to start a series for cumulating tolerance
@@ -2455,8 +2426,8 @@ public:
 	/// SHELL  : combined SHELL + FACE, for each face (and containing
 	/// shell), also checks EDGE and VERTEX
 	/// </summary>
-	double Tolerance(Macad::Occt::TopoDS_Shape^ shape, int mode, Macad::Occt::TopAbs_ShapeEnum type);
-	/// <summary>
+double Tolerance(Macad::Occt::TopoDS_Shape^ shape, int mode, Macad::Occt::TopAbs_ShapeEnum type);
+		/// <summary>
 	/// Determines a tolerance from the ones stored in a shape
 	/// Remark : calls InitTolerance and AddTolerance,
 	/// hence, can be used to start a series for cumulating tolerance
@@ -2471,48 +2442,48 @@ public:
 	/// SHELL  : combined SHELL + FACE, for each face (and containing
 	/// shell), also checks EDGE and VERTEX
 	/// </summary>
-	double Tolerance(Macad::Occt::TopoDS_Shape^ shape, int mode);
-	/// <summary>
+double Tolerance(Macad::Occt::TopoDS_Shape^ shape, int mode);
+		/// <summary>
 	/// Determines which shapes have a tolerance over the given value
 	/// <type> is interpreted as in the method Tolerance
 	/// </summary>
-	Macad::Occt::TopTools_HSequenceOfShape^ OverTolerance(Macad::Occt::TopoDS_Shape^ shape, double value, Macad::Occt::TopAbs_ShapeEnum type);
-	/// <summary>
+Macad::Occt::TopTools_HSequenceOfShape^ OverTolerance(Macad::Occt::TopoDS_Shape^ shape, double value, Macad::Occt::TopAbs_ShapeEnum type);
+		/// <summary>
 	/// Determines which shapes have a tolerance over the given value
 	/// <type> is interpreted as in the method Tolerance
 	/// </summary>
-	Macad::Occt::TopTools_HSequenceOfShape^ OverTolerance(Macad::Occt::TopoDS_Shape^ shape, double value);
-	/// <summary>
+Macad::Occt::TopTools_HSequenceOfShape^ OverTolerance(Macad::Occt::TopoDS_Shape^ shape, double value);
+		/// <summary>
 	/// Determines which shapes have a tolerance within a given interval
 	/// <type> is interpreted as in the method Tolerance
 	/// </summary>
-	Macad::Occt::TopTools_HSequenceOfShape^ InTolerance(Macad::Occt::TopoDS_Shape^ shape, double valmin, double valmax, Macad::Occt::TopAbs_ShapeEnum type);
-	/// <summary>
+Macad::Occt::TopTools_HSequenceOfShape^ InTolerance(Macad::Occt::TopoDS_Shape^ shape, double valmin, double valmax, Macad::Occt::TopAbs_ShapeEnum type);
+		/// <summary>
 	/// Determines which shapes have a tolerance within a given interval
 	/// <type> is interpreted as in the method Tolerance
 	/// </summary>
-	Macad::Occt::TopTools_HSequenceOfShape^ InTolerance(Macad::Occt::TopoDS_Shape^ shape, double valmin, double valmax);
-	/// <summary>
+Macad::Occt::TopTools_HSequenceOfShape^ InTolerance(Macad::Occt::TopoDS_Shape^ shape, double valmin, double valmax);
+		/// <summary>
 	/// Initializes computation of cumulated tolerance
 	/// </summary>
-	void InitTolerance();
-	/// <summary>
+void InitTolerance();
+		/// <summary>
 	/// Adds data on new Shape to compute Cumulated Tolerance
 	/// (prepares three computations : maximal, average, minimal)
 	/// </summary>
-	void AddTolerance(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::TopAbs_ShapeEnum type);
-	/// <summary>
+void AddTolerance(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::TopAbs_ShapeEnum type);
+		/// <summary>
 	/// Adds data on new Shape to compute Cumulated Tolerance
 	/// (prepares three computations : maximal, average, minimal)
 	/// </summary>
-	void AddTolerance(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+void AddTolerance(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Returns the computed tolerance according to the <mode>
 	/// <mode> = 0 : average
 	/// <mode> > 0 : maximal
 	/// <mode> < 0 : minimal
 	/// </summary>
-	double GlobalTolerance(int mode);
+double GlobalTolerance(int mode);
 }; // class ShapeAnalysis_ShapeTolerance
 
 //---------------------------------------------------------------------
@@ -2547,52 +2518,52 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initialize fields and call ClearFlags()
 	/// </summary>
-	ShapeAnalysis_ShapeContents();
+ShapeAnalysis_ShapeContents();
 	ShapeAnalysis_ShapeContents(Macad::Occt::ShapeAnalysis_ShapeContents^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Clears all accumulated statistics
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Clears all flags
 	/// </summary>
-	void ClearFlags();
-	/// <summary>
+void ClearFlags();
+		/// <summary>
 	/// Counts quantities of sun-shapes in shape and
 	/// stores sub-shapes according to flags
 	/// </summary>
-	void Perform(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+void Perform(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Returns (modifiable) the flag which defines whether to store faces
 	/// with edges if its 3D curves has more than 8192 poles.
 	/// </summary>
-	bool ModifyBigSplineMode();
-	/// <summary>
+bool ModifyBigSplineMode();
+		/// <summary>
 	/// Returns (modifiable) the flag which defines whether to store faces on indirect surfaces.
 	/// </summary>
-	bool ModifyIndirectMode();
-	/// <summary>
+bool ModifyIndirectMode();
+		/// <summary>
 	/// Returns (modifiable) the flag which defines whether to store faces on offset surfaces.
 	/// </summary>
-	bool ModifyOffsetSurfaceMode();
-	/// <summary>
+bool ModifyOffsetSurfaceMode();
+		/// <summary>
 	/// Returns (modifiable) the flag which defines whether to store faces
 	/// with edges if its 3D curves are trimmed curves
 	/// </summary>
-	bool ModifyTrimmed3dMode();
-	/// <summary>
+bool ModifyTrimmed3dMode();
+		/// <summary>
 	/// Returns (modifiable) the flag which defines whether to store faces
 	/// with edges if its 3D curves and pcurves are offset curves
 	/// </summary>
-	bool ModifyOffsetCurveMode();
-	/// <summary>
+bool ModifyOffsetCurveMode();
+		/// <summary>
 	/// Returns (modifiable) the flag which defines whether to store faces
 	/// with edges if its  pcurves are trimmed curves
 	/// </summary>
-	bool ModifyTrimmed2dMode();
+bool ModifyTrimmed2dMode();
 	int NbSolids();
 	int NbShells();
 	int NbFaces();
@@ -2694,11 +2665,11 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeAnalysis_FreeBounds();
-	/// <summary>
+ShapeAnalysis_FreeBounds();
+		/// <summary>
 	/// Builds forecasting free bounds of the <shape>.
 	/// <shape> should be a compound of faces.
 	/// This constructor is to be used for forecasting free edges
@@ -2711,8 +2682,8 @@ public:
 	/// If <splitopen> is True extracts closed sub-wires out of
 	/// built open wires.
 	/// </summary>
-	ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, double toler, bool splitclosed, bool splitopen);
-	/// <summary>
+ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, double toler, bool splitclosed, bool splitopen);
+		/// <summary>
 	/// Builds forecasting free bounds of the <shape>.
 	/// <shape> should be a compound of faces.
 	/// This constructor is to be used for forecasting free edges
@@ -2725,8 +2696,8 @@ public:
 	/// If <splitopen> is True extracts closed sub-wires out of
 	/// built open wires.
 	/// </summary>
-	ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, double toler, bool splitclosed);
-	/// <summary>
+ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, double toler, bool splitclosed);
+		/// <summary>
 	/// Builds forecasting free bounds of the <shape>.
 	/// <shape> should be a compound of faces.
 	/// This constructor is to be used for forecasting free edges
@@ -2739,8 +2710,8 @@ public:
 	/// If <splitopen> is True extracts closed sub-wires out of
 	/// built open wires.
 	/// </summary>
-	ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, double toler);
-	/// <summary>
+ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, double toler);
+		/// <summary>
 	/// Builds actual free bounds of the <shape>.
 	/// <shape> should be a compound of shells.
 	/// This constructor is to be used for getting free edges (ones
@@ -2753,8 +2724,8 @@ public:
 	/// If <splitopen> is True extracts closed sub-wires out of
 	/// built open wires.
 	/// </summary>
-	ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed, bool splitopen, bool checkinternaledges);
-	/// <summary>
+ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed, bool splitopen, bool checkinternaledges);
+		/// <summary>
 	/// Builds actual free bounds of the <shape>.
 	/// <shape> should be a compound of shells.
 	/// This constructor is to be used for getting free edges (ones
@@ -2767,8 +2738,8 @@ public:
 	/// If <splitopen> is True extracts closed sub-wires out of
 	/// built open wires.
 	/// </summary>
-	ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed, bool splitopen);
-	/// <summary>
+ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed, bool splitopen);
+		/// <summary>
 	/// Builds actual free bounds of the <shape>.
 	/// <shape> should be a compound of shells.
 	/// This constructor is to be used for getting free edges (ones
@@ -2781,8 +2752,8 @@ public:
 	/// If <splitopen> is True extracts closed sub-wires out of
 	/// built open wires.
 	/// </summary>
-	ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed);
-	/// <summary>
+ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed);
+		/// <summary>
 	/// Builds actual free bounds of the <shape>.
 	/// <shape> should be a compound of shells.
 	/// This constructor is to be used for getting free edges (ones
@@ -2795,17 +2766,17 @@ public:
 	/// If <splitopen> is True extracts closed sub-wires out of
 	/// built open wires.
 	/// </summary>
-	ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape);
+ShapeAnalysis_FreeBounds(Macad::Occt::TopoDS_Shape^ shape);
 	ShapeAnalysis_FreeBounds(Macad::Occt::ShapeAnalysis_FreeBounds^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns compound of closed wires out of free edges.
 	/// </summary>
-	Macad::Occt::TopoDS_Compound^ GetClosedWires();
-	/// <summary>
+Macad::Occt::TopoDS_Compound^ GetClosedWires();
+		/// <summary>
 	/// Returns compound of open wires out of free edges.
 	/// </summary>
-	Macad::Occt::TopoDS_Compound^ GetOpenWires();
-	/// <summary>
+Macad::Occt::TopoDS_Compound^ GetOpenWires();
+		/// <summary>
 	/// Builds sequnce of <wires> out of sequence of not sorted
 	/// <edges>.
 	/// Tries to build wires of maximum length. Building a wire is
@@ -2818,9 +2789,9 @@ public:
 	/// If <shared> is False connection is performed only when
 	/// ends of adjacent edges are at distance less than <toler>.
 	/// </summary>
-	static void ConnectEdgesToWires(Macad::Occt::TopTools_HSequenceOfShape^ edges, double toler, bool shared, Macad::Occt::TopTools_HSequenceOfShape^ wires);
+static void ConnectEdgesToWires(Macad::Occt::TopTools_HSequenceOfShape^ edges, double toler, bool shared, Macad::Occt::TopTools_HSequenceOfShape^ wires);
 	static void ConnectWiresToWires(Macad::Occt::TopTools_HSequenceOfShape^ iwires, double toler, bool shared, Macad::Occt::TopTools_HSequenceOfShape^ owires);
-	/// <summary>
+		/// <summary>
 	/// Builds sequnce of <owires> out of sequence of not sorted
 	/// <iwires>.
 	/// Tries to build wires of maximum length. Building a wire is
@@ -2835,8 +2806,8 @@ public:
 	/// Map <vertices> stores the correspondence between original
 	/// end vertices of the wires and new connecting vertices.
 	/// </summary>
-	static void ConnectWiresToWires(Macad::Occt::TopTools_HSequenceOfShape^ iwires, double toler, bool shared, Macad::Occt::TopTools_HSequenceOfShape^ owires, Macad::Occt::TopTools_DataMapOfShapeShape^ vertices);
-	/// <summary>
+static void ConnectWiresToWires(Macad::Occt::TopTools_HSequenceOfShape^ iwires, double toler, bool shared, Macad::Occt::TopTools_HSequenceOfShape^ owires, Macad::Occt::TopTools_DataMapOfShapeShape^ vertices);
+		/// <summary>
 	/// Extracts closed sub-wires out of <wires> and adds them
 	/// to <closed>, open wires remained after extraction are put
 	/// into <open>.
@@ -2845,13 +2816,13 @@ public:
 	/// If <shared> is False connection is performed only when
 	/// ends of the edges are at distance less than <toler>.
 	/// </summary>
-	static void SplitWires(Macad::Occt::TopTools_HSequenceOfShape^ wires, double toler, bool shared, Macad::Occt::TopTools_HSequenceOfShape^ closed, Macad::Occt::TopTools_HSequenceOfShape^ open);
-	/// <summary>
+static void SplitWires(Macad::Occt::TopTools_HSequenceOfShape^ wires, double toler, bool shared, Macad::Occt::TopTools_HSequenceOfShape^ closed, Macad::Occt::TopTools_HSequenceOfShape^ open);
+		/// <summary>
 	/// Dispatches sequence of <wires> into two compounds
 	/// <closed> for closed wires and <open> for open wires.
 	/// If a compound is not empty wires are added into it.
 	/// </summary>
-	static void DispatchWires(Macad::Occt::TopTools_HSequenceOfShape^ wires, Macad::Occt::TopoDS_Compound^ closed, Macad::Occt::TopoDS_Compound^ open);
+static void DispatchWires(Macad::Occt::TopTools_HSequenceOfShape^ wires, Macad::Occt::TopoDS_Compound^ closed, Macad::Occt::TopoDS_Compound^ open);
 }; // class ShapeAnalysis_FreeBounds
 
 //---------------------------------------------------------------------
@@ -2903,86 +2874,86 @@ public:
 	static Macad::Occt::ShapeAnalysis_FreeBoundData^ CreateDowncasted(::ShapeAnalysis_FreeBoundData* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeAnalysis_FreeBoundData();
-	/// <summary>
+ShapeAnalysis_FreeBoundData();
+		/// <summary>
 	/// Creates object with contour given in the form of TopoDS_Wire
 	/// </summary>
-	ShapeAnalysis_FreeBoundData(Macad::Occt::TopoDS_Wire^ freebound);
+ShapeAnalysis_FreeBoundData(Macad::Occt::TopoDS_Wire^ freebound);
 	ShapeAnalysis_FreeBoundData(Macad::Occt::ShapeAnalysis_FreeBoundData^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Clears all properties of the contour.
 	/// Contour bound itself is not cleared.
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Sets contour
 	/// </summary>
-	void SetFreeBound(Macad::Occt::TopoDS_Wire^ freebound);
-	/// <summary>
+void SetFreeBound(Macad::Occt::TopoDS_Wire^ freebound);
+		/// <summary>
 	/// Sets area of the contour
 	/// </summary>
-	void SetArea(double area);
-	/// <summary>
+void SetArea(double area);
+		/// <summary>
 	/// Sets perimeter of the contour
 	/// </summary>
-	void SetPerimeter(double perimeter);
-	/// <summary>
+void SetPerimeter(double perimeter);
+		/// <summary>
 	/// Sets ratio of average length to average width of the contour
 	/// </summary>
-	void SetRatio(double ratio);
-	/// <summary>
+void SetRatio(double ratio);
+		/// <summary>
 	/// Sets average width of the contour
 	/// </summary>
-	void SetWidth(double width);
-	/// <summary>
+void SetWidth(double width);
+		/// <summary>
 	/// Adds notch on the contour with its maximum width
 	/// </summary>
-	void AddNotch(Macad::Occt::TopoDS_Wire^ notch, double width);
-	/// <summary>
+void AddNotch(Macad::Occt::TopoDS_Wire^ notch, double width);
+		/// <summary>
 	/// Returns contour
 	/// </summary>
-	Macad::Occt::TopoDS_Wire^ FreeBound();
-	/// <summary>
+Macad::Occt::TopoDS_Wire^ FreeBound();
+		/// <summary>
 	/// Returns area of the contour
 	/// </summary>
-	double Area();
-	/// <summary>
+double Area();
+		/// <summary>
 	/// Returns perimeter of the contour
 	/// </summary>
-	double Perimeter();
-	/// <summary>
+double Perimeter();
+		/// <summary>
 	/// Returns ratio of average length to average width of the contour
 	/// </summary>
-	double Ratio();
-	/// <summary>
+double Ratio();
+		/// <summary>
 	/// Returns average width of the contour
 	/// </summary>
-	double Width();
-	/// <summary>
+double Width();
+		/// <summary>
 	/// Returns number of notches on the contour
 	/// </summary>
-	int NbNotches();
-	/// <summary>
+int NbNotches();
+		/// <summary>
 	/// Returns sequence of notches on the contour
 	/// </summary>
-	Macad::Occt::TopTools_HSequenceOfShape^ Notches();
-	/// <summary>
+Macad::Occt::TopTools_HSequenceOfShape^ Notches();
+		/// <summary>
 	/// Returns notch on the contour
 	/// </summary>
-	Macad::Occt::TopoDS_Wire^ Notch(int index);
-	/// <summary>
+Macad::Occt::TopoDS_Wire^ Notch(int index);
+		/// <summary>
 	/// Returns maximum width of notch specified by its rank number
 	/// on the contour
 	/// </summary>
-	double NotchWidth(int index);
-	/// <summary>
+double NotchWidth(int index);
+		/// <summary>
 	/// Returns maximum width of notch specified as TopoDS_Wire
 	/// on the contour
 	/// </summary>
-	double NotchWidth(Macad::Occt::TopoDS_Wire^ notch);
+double NotchWidth(Macad::Occt::TopoDS_Wire^ notch);
 }; // class ShapeAnalysis_FreeBoundData
 
 //---------------------------------------------------------------------
@@ -3035,72 +3006,72 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeAnalysis_FreeBoundsProperties();
-	/// <summary>
+ShapeAnalysis_FreeBoundsProperties();
+		/// <summary>
 	/// Creates the object and calls corresponding Init.
 	/// <shape> should be a compound of faces.
 	/// </summary>
-	ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape, double tolerance, bool splitclosed, bool splitopen);
-	/// <summary>
+ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape, double tolerance, bool splitclosed, bool splitopen);
+		/// <summary>
 	/// Creates the object and calls corresponding Init.
 	/// <shape> should be a compound of faces.
 	/// </summary>
-	ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape, double tolerance, bool splitclosed);
-	/// <summary>
+ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape, double tolerance, bool splitclosed);
+		/// <summary>
 	/// Creates the object and calls corresponding Init.
 	/// <shape> should be a compound of faces.
 	/// </summary>
-	ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape, double tolerance);
-	/// <summary>
+ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape, double tolerance);
+		/// <summary>
 	/// Creates the object and calls corresponding Init.
 	/// <shape> should be a compound of shells.
 	/// </summary>
-	ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed, bool splitopen);
-	/// <summary>
+ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed, bool splitopen);
+		/// <summary>
 	/// Creates the object and calls corresponding Init.
 	/// <shape> should be a compound of shells.
 	/// </summary>
-	ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed);
-	/// <summary>
+ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed);
+		/// <summary>
 	/// Creates the object and calls corresponding Init.
 	/// <shape> should be a compound of shells.
 	/// </summary>
-	ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape);
+ShapeAnalysis_FreeBoundsProperties(Macad::Occt::TopoDS_Shape^ shape);
 	ShapeAnalysis_FreeBoundsProperties(Macad::Occt::ShapeAnalysis_FreeBoundsProperties^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes the object with given parameters.
 	/// <shape> should be a compound of faces.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Shape^ shape, double tolerance, bool splitclosed, bool splitopen);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Shape^ shape, double tolerance, bool splitclosed, bool splitopen);
+		/// <summary>
 	/// Initializes the object with given parameters.
 	/// <shape> should be a compound of faces.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Shape^ shape, double tolerance, bool splitclosed);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Shape^ shape, double tolerance, bool splitclosed);
+		/// <summary>
 	/// Initializes the object with given parameters.
 	/// <shape> should be a compound of faces.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Shape^ shape, double tolerance);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Shape^ shape, double tolerance);
+		/// <summary>
 	/// Initializes the object with given parameters.
 	/// <shape> should be a compound of shells.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed, bool splitopen);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed, bool splitopen);
+		/// <summary>
 	/// Initializes the object with given parameters.
 	/// <shape> should be a compound of shells.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Shape^ shape, bool splitclosed);
+		/// <summary>
 	/// Initializes the object with given parameters.
 	/// <shape> should be a compound of shells.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Builds and analyzes free bounds of the shape.
 	/// First calls ShapeAnalysis_FreeBounds for building free
 	/// bounds.
@@ -3112,49 +3083,49 @@ public:
 	/// - notches on the contour and for each notch
 	/// - maximum width of the notch.
 	/// </summary>
-	bool Perform();
-	/// <summary>
+bool Perform();
+		/// <summary>
 	/// Returns True if shape is loaded
 	/// </summary>
-	bool IsLoaded();
-	/// <summary>
+bool IsLoaded();
+		/// <summary>
 	/// Returns shape
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Shape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Shape();
+		/// <summary>
 	/// Returns tolerance
 	/// </summary>
-	double Tolerance();
-	/// <summary>
+double Tolerance();
+		/// <summary>
 	/// Returns number of free bounds
 	/// </summary>
-	int NbFreeBounds();
-	/// <summary>
+int NbFreeBounds();
+		/// <summary>
 	/// Returns number of closed free bounds
 	/// </summary>
-	int NbClosedFreeBounds();
-	/// <summary>
+int NbClosedFreeBounds();
+		/// <summary>
 	/// Returns number of open free bounds
 	/// </summary>
-	int NbOpenFreeBounds();
-	/// <summary>
+int NbOpenFreeBounds();
+		/// <summary>
 	/// Returns all closed free bounds
 	/// </summary>
-	Macad::Occt::ShapeAnalysis_HSequenceOfFreeBounds^ ClosedFreeBounds();
-	/// <summary>
+Macad::Occt::ShapeAnalysis_HSequenceOfFreeBounds^ ClosedFreeBounds();
+		/// <summary>
 	/// Returns all open free bounds
 	/// </summary>
-	Macad::Occt::ShapeAnalysis_HSequenceOfFreeBounds^ OpenFreeBounds();
-	/// <summary>
+Macad::Occt::ShapeAnalysis_HSequenceOfFreeBounds^ OpenFreeBounds();
+		/// <summary>
 	/// Returns properties of closed free bound specified by its rank
 	/// number
 	/// </summary>
-	Macad::Occt::ShapeAnalysis_FreeBoundData^ ClosedFreeBound(int index);
-	/// <summary>
+Macad::Occt::ShapeAnalysis_FreeBoundData^ ClosedFreeBound(int index);
+		/// <summary>
 	/// Returns properties of open free bound specified by its rank
 	/// number
 	/// </summary>
-	Macad::Occt::ShapeAnalysis_FreeBoundData^ OpenFreeBound(int index);
+Macad::Occt::ShapeAnalysis_FreeBoundData^ OpenFreeBound(int index);
 	bool DispatchBounds();
 	bool CheckContours(double prec);
 	bool CheckContours();
@@ -3221,44 +3192,44 @@ public:
 	static Macad::Occt::ShapeAnalysis_TransferParameters^ CreateDowncasted(::ShapeAnalysis_TransferParameters* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates empty tool with myShift = 0 and myScale = 1
 	/// </summary>
-	ShapeAnalysis_TransferParameters();
-	/// <summary>
+ShapeAnalysis_TransferParameters();
+		/// <summary>
 	/// Creates a tool and initializes it with edge and face
 	/// </summary>
-	ShapeAnalysis_TransferParameters(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F);
+ShapeAnalysis_TransferParameters(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F);
 	ShapeAnalysis_TransferParameters(Macad::Occt::ShapeAnalysis_TransferParameters^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initialize a tool with edge and face
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F);
+		/// <summary>
 	/// Sets maximal tolerance to use linear recomputation of
 	/// parameters.
 	/// </summary>
-	void SetMaxTolerance(double maxtol);
-	/// <summary>
+void SetMaxTolerance(double maxtol);
+		/// <summary>
 	/// Transfers parameters given by sequence Params from 3d curve
 	/// to pcurve (if To2d is True) or back (if To2d is False)
 	/// </summary>
-	Macad::Occt::TColStd_HSequenceOfReal^ Perform(Macad::Occt::TColStd_HSequenceOfReal^ Params, bool To2d);
-	/// <summary>
+Macad::Occt::TColStd_HSequenceOfReal^ Perform(Macad::Occt::TColStd_HSequenceOfReal^ Params, bool To2d);
+		/// <summary>
 	/// Transfers parameter given by sequence Params from 3d curve
 	/// to pcurve (if To2d is True) or back (if To2d is False)
 	/// </summary>
-	double Perform(double Param, bool To2d);
-	/// <summary>
+double Perform(double Param, bool To2d);
+		/// <summary>
 	/// Recomputes range of curves from NewEdge.
 	/// If Is2d equals True parameters are recomputed by curve2d else by curve3d.
 	/// </summary>
-	void TransferRange(Macad::Occt::TopoDS_Edge^ newEdge, double prevPar, double currPar, bool To2d);
-	/// <summary>
+void TransferRange(Macad::Occt::TopoDS_Edge^ newEdge, double prevPar, double currPar, bool To2d);
+		/// <summary>
 	/// Returns True if 3d curve of edge and pcurve are SameRange
 	/// (in default implementation, if myScale == 1 and myShift == 0)
 	/// </summary>
-	bool IsSameRange();
+bool IsSameRange();
 }; // class ShapeAnalysis_TransferParameters
 
 //---------------------------------------------------------------------
@@ -3299,51 +3270,51 @@ public:
 	static Macad::Occt::ShapeAnalysis_TransferParametersProj^ CreateDowncasted(::ShapeAnalysis_TransferParametersProj* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates empty constructor.
 	/// </summary>
-	ShapeAnalysis_TransferParametersProj();
+ShapeAnalysis_TransferParametersProj();
 	ShapeAnalysis_TransferParametersProj(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F);
 	ShapeAnalysis_TransferParametersProj(Macad::Occt::ShapeAnalysis_TransferParametersProj^ parameter1);
 	void Init(Macad::Occt::TopoDS_Edge^ E, Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+		/// <summary>
 	/// Transfers parameters given by sequence Params from 3d curve
 	/// to pcurve (if To2d is True) or back (if To2d is False)
 	/// </summary>
-	Macad::Occt::TColStd_HSequenceOfReal^ Perform(Macad::Occt::TColStd_HSequenceOfReal^ Papams, bool To2d);
-	/// <summary>
+Macad::Occt::TColStd_HSequenceOfReal^ Perform(Macad::Occt::TColStd_HSequenceOfReal^ Papams, bool To2d);
+		/// <summary>
 	/// Transfers parameter given by  Param from 3d curve
 	/// to pcurve (if To2d is True) or back (if To2d is False)
 	/// </summary>
-	double Perform(double Param, bool To2d);
-	/// <summary>
+double Perform(double Param, bool To2d);
+		/// <summary>
 	/// Returns modifiable flag forcing projection
 	/// If it is False (default), projection is done only
 	/// if edge is not SameParameter or if tolerance of edge
 	/// is greater than MaxTolerance()
 	/// </summary>
-	bool ForceProjection();
-	/// <summary>
+bool ForceProjection();
+		/// <summary>
 	/// Recomputes range of curves from NewEdge.
 	/// If Is2d equals True parameters are recomputed by curve2d else by curve3d.
 	/// </summary>
-	void TransferRange(Macad::Occt::TopoDS_Edge^ newEdge, double prevPar, double currPar, bool Is2d);
-	/// <summary>
+void TransferRange(Macad::Occt::TopoDS_Edge^ newEdge, double prevPar, double currPar, bool Is2d);
+		/// <summary>
 	/// Returns False;
 	/// </summary>
-	bool IsSameRange();
-	/// <summary>
+bool IsSameRange();
+		/// <summary>
 	/// Make a copy of non-manifold vertex theVert
 	/// (i.e. create new  TVertex and replace PointRepresentations for this vertex
 	/// from fromedge to toedge. Other representations were copied)
 	/// </summary>
-	static Macad::Occt::TopoDS_Vertex^ CopyNMVertex(Macad::Occt::TopoDS_Vertex^ theVert, Macad::Occt::TopoDS_Edge^ toedge, Macad::Occt::TopoDS_Edge^ fromedge);
-	/// <summary>
+static Macad::Occt::TopoDS_Vertex^ CopyNMVertex(Macad::Occt::TopoDS_Vertex^ theVert, Macad::Occt::TopoDS_Edge^ toedge, Macad::Occt::TopoDS_Edge^ fromedge);
+		/// <summary>
 	/// Make a copy of non-manifold vertex theVert
 	/// (i.e. create new  TVertex and replace PointRepresentations for this vertex
 	/// from fromFace to toFace. Other representations were copied)
 	/// </summary>
-	static Macad::Occt::TopoDS_Vertex^ CopyNMVertex(Macad::Occt::TopoDS_Vertex^ theVert, Macad::Occt::TopoDS_Face^ toFace, Macad::Occt::TopoDS_Face^ fromFace);
+static Macad::Occt::TopoDS_Vertex^ CopyNMVertex(Macad::Occt::TopoDS_Vertex^ theVert, Macad::Occt::TopoDS_Face^ toFace, Macad::Occt::TopoDS_Face^ fromFace);
 }; // class ShapeAnalysis_TransferParametersProj
 
 //---------------------------------------------------------------------
@@ -3393,42 +3364,42 @@ public:
 public:
 	ShapeAnalysis();
 	ShapeAnalysis(Macad::Occt::ShapeAnalysis^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the outer wire on the face <Face>.
 	/// This is replacement of the method BRepTools::OuterWire
 	/// until it works badly.
 	/// Returns the first wire oriented as outer according to
 	/// FClass2d_Classifier. If none, last wire is returned.
 	/// </summary>
-	static Macad::Occt::TopoDS_Wire^ OuterWire(Macad::Occt::TopoDS_Face^ face);
-	/// <summary>
+static Macad::Occt::TopoDS_Wire^ OuterWire(Macad::Occt::TopoDS_Face^ face);
+		/// <summary>
 	/// Returns a total area of 2d wire
 	/// </summary>
-	static double TotCross2D(Macad::Occt::ShapeExtend_WireData^ sewd, Macad::Occt::TopoDS_Face^ aFace);
-	/// <summary>
+static double TotCross2D(Macad::Occt::ShapeExtend_WireData^ sewd, Macad::Occt::TopoDS_Face^ aFace);
+		/// <summary>
 	/// Returns a total area of 3d wire
 	/// </summary>
-	static double ContourArea(Macad::Occt::TopoDS_Wire^ theWire);
-	/// <summary>
+static double ContourArea(Macad::Occt::TopoDS_Wire^ theWire);
+		/// <summary>
 	/// Returns True if <F> has outer bound.
 	/// </summary>
-	static bool IsOuterBound(Macad::Occt::TopoDS_Face^ face);
-	/// <summary>
+static bool IsOuterBound(Macad::Occt::TopoDS_Face^ face);
+		/// <summary>
 	/// Returns a shift required to move point
 	/// <Val> to the range [ToVal-Period/2,ToVal+Period/2].
 	/// This shift will be the divisible by Period.
 	/// Intended for adjusting parameters on periodic surfaces.
 	/// </summary>
-	static double AdjustByPeriod(double Val, double ToVal, double Period);
-	/// <summary>
+static double AdjustByPeriod(double Val, double ToVal, double Period);
+		/// <summary>
 	/// Returns a shift required to move point
 	/// <Val> to the range [ValMin,ValMax].
 	/// This shift will be the divisible by Period
 	/// with Period = ValMax - ValMin.
 	/// Intended for adjusting parameters on periodic surfaces.
 	/// </summary>
-	static double AdjustToPeriod(double Val, double ValMin, double ValMax);
-	/// <summary>
+static double AdjustToPeriod(double Val, double ValMin, double ValMax);
+		/// <summary>
 	/// Finds the start and end vertices of the shape
 	/// Shape can be of the following type:
 	/// vertex: V1 and V2 are the same and equal to <shape>,
@@ -3439,11 +3410,11 @@ public:
 	/// If wire contains no edges V1 and V2 are nullified
 	/// If none of the above V1 and V2 are nullified
 	/// </summary>
-	static void FindBounds(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::TopoDS_Vertex^ V1, Macad::Occt::TopoDS_Vertex^ V2);
-	/// <summary>
+static void FindBounds(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::TopoDS_Vertex^ V1, Macad::Occt::TopoDS_Vertex^ V2);
+		/// <summary>
 	/// Computes exact UV bounds of all wires on the face
 	/// </summary>
-	static void GetFaceUVBounds(Macad::Occt::TopoDS_Face^ F, double% Umin, double% Umax, double% Vmin, double% Vmax);
+static void GetFaceUVBounds(Macad::Occt::TopoDS_Face^ F, double% Umin, double% Umax, double% Vmin, double% Vmax);
 }; // class ShapeAnalysis
 
 //---------------------------------------------------------------------

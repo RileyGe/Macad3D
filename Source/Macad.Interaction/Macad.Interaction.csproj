@@ -6,6 +6,10 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Platforms>x64</Platforms>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Editors\Auxiliary\TextLabelEditor.cs" />
+    <Compile Remove="Editors\Shapes\Primitives\CreateTextTool.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="Macad.Interaction.csproj.DotSettings" />

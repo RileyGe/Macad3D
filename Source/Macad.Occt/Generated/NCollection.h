@@ -51,15 +51,15 @@ public:
 public:
 	NCollection_CellFilter_InspectorXYZ();
 	NCollection_CellFilter_InspectorXYZ(Macad::Occt::NCollection_CellFilter_InspectorXYZ^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Access to coordinate
 	/// </summary>
-	static double Coord(int i, Macad::Occt::XYZ thePnt);
-	/// <summary>
+static double Coord(int i, Macad::Occt::XYZ thePnt);
+		/// <summary>
 	/// Auxiliary method to shift point by each coordinate on given value;
 	/// useful for preparing a points range for Inspect with tolerance
 	/// </summary>
-	Macad::Occt::XYZ Shift(Macad::Occt::XYZ thePnt, double theTol);
+Macad::Occt::XYZ Shift(Macad::Occt::XYZ thePnt, double theTol);
 }; // class NCollection_CellFilter_InspectorXYZ
 
 //---------------------------------------------------------------------
@@ -93,15 +93,15 @@ public:
 public:
 	NCollection_CellFilter_InspectorXY();
 	NCollection_CellFilter_InspectorXY(Macad::Occt::NCollection_CellFilter_InspectorXY^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Access to coordinate
 	/// </summary>
-	static double Coord(int i, Macad::Occt::XY thePnt);
-	/// <summary>
+static double Coord(int i, Macad::Occt::XY thePnt);
+		/// <summary>
 	/// Auxiliary method to shift point by each coordinate on given value;
 	/// useful for preparing a points range for Inspect with tolerance
 	/// </summary>
-	Macad::Occt::XY Shift(Macad::Occt::XY thePnt, double theTol);
+Macad::Occt::XY Shift(Macad::Occt::XY thePnt, double theTol);
 }; // class NCollection_CellFilter_InspectorXY
 
 //---------------------------------------------------------------------
@@ -156,21 +156,21 @@ public:
 public:
 	System::IntPtr Allocate(unsigned __int64 size);
 	void Free(System::IntPtr anAddress);
-	/// <summary>
+		/// <summary>
 	/// CommonBaseAllocator
 	/// This method is designed to have the only one BaseAllocator (to avoid
 	/// useless copying of collections). However one can use operator new to
 	/// create more BaseAllocators, but it is injurious.
 	/// </summary>
-	static Macad::Occt::NCollection_BaseAllocator^ CommonBaseAllocator();
-	/// <summary>
+static Macad::Occt::NCollection_BaseAllocator^ CommonBaseAllocator();
+		/// <summary>
 	/// Callback function to register alloc/free calls
 	/// </summary>
-	static void StandardCallBack(bool theIsAlloc, System::IntPtr theStorage, size_t theRoundSize, size_t theSize);
-	/// <summary>
+static void StandardCallBack(bool theIsAlloc, System::IntPtr theStorage, size_t theRoundSize, size_t theSize);
+		/// <summary>
 	/// Prints memory usage statistics cumulated by StandardCallBack
 	/// </summary>
-	static void PrintMemUsageStatistics();
+static void PrintMemUsageStatistics();
 }; // class NCollection_BaseAllocator
 
 //---------------------------------------------------------------------
@@ -205,10 +205,10 @@ public:
 	NCollection_BaseList(Macad::Occt::NCollection_BaseList^ parameter1);
 	int Extent();
 	bool IsEmpty();
-	/// <summary>
+		/// <summary>
 	/// Returns attached allocator
 	/// </summary>
-	Macad::Occt::NCollection_BaseAllocator^ Allocator();
+Macad::Occt::NCollection_BaseAllocator^ Allocator();
 }; // class NCollection_BaseList
 
 //---------------------------------------------------------------------
@@ -262,19 +262,19 @@ public:
 	static Macad::Occt::NCollection_AccAllocator^ CreateDowncasted(::NCollection_AccAllocator* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor
 	/// </summary>
-	NCollection_AccAllocator(unsigned __int64 theBlockSize);
-	/// <summary>
+NCollection_AccAllocator(unsigned __int64 theBlockSize);
+		/// <summary>
 	/// Allocate memory with given size
 	/// </summary>
-	System::IntPtr Allocate(unsigned __int64 theSize);
-	/// <summary>
+System::IntPtr Allocate(unsigned __int64 theSize);
+		/// <summary>
 	/// Free a previously allocated memory;
 	/// memory is returned to the OS when all allocations in some block are freed
 	/// </summary>
-	void Free(System::IntPtr theAddress);
+void Free(System::IntPtr theAddress);
 }; // class NCollection_AccAllocator
 
 //---------------------------------------------------------------------
@@ -311,20 +311,20 @@ public:
 	static Macad::Occt::NCollection_AlignedAllocator^ CreateDowncasted(::NCollection_AlignedAllocator* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor. The alignment should be specified explicitly:
 	/// 16 bytes for SSE instructions
 	/// 32 bytes for AVX instructions
 	/// </summary>
-	NCollection_AlignedAllocator(unsigned __int64 theAlignment);
-	/// <summary>
+NCollection_AlignedAllocator(unsigned __int64 theAlignment);
+		/// <summary>
 	/// Allocate memory with given size. Returns NULL on failure.
 	/// </summary>
-	System::IntPtr Allocate(unsigned __int64 theSize);
-	/// <summary>
+System::IntPtr Allocate(unsigned __int64 theSize);
+		/// <summary>
 	/// Free a previously allocated memory.
 	/// </summary>
-	void Free(System::IntPtr thePtr);
+void Free(System::IntPtr thePtr);
 }; // class NCollection_AlignedAllocator
 
 //---------------------------------------------------------------------
@@ -361,7 +361,7 @@ public:
 	static Macad::Occt::NCollection_Buffer^ CreateDowncasted(::NCollection_Buffer* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Default constructor.
 	/// When theData is NULL but theSize is not 0 than buffer of specified size will be allocated.
 	/// </summary>
@@ -374,8 +374,8 @@ public:
 	/// <param name="theData">
 	///  buffer data allocated by theAlloc
 	/// </param>
-	NCollection_Buffer(Macad::Occt::NCollection_BaseAllocator^ theAlloc, size_t theSize, unsigned char% theData);
-	/// <summary>
+NCollection_Buffer(Macad::Occt::NCollection_BaseAllocator^ theAlloc, size_t theSize, unsigned char% theData);
+		/// <summary>
 	/// Default constructor.
 	/// When theData is NULL but theSize is not 0 than buffer of specified size will be allocated.
 	/// </summary>
@@ -388,8 +388,8 @@ public:
 	/// <param name="theData">
 	///  buffer data allocated by theAlloc
 	/// </param>
-	NCollection_Buffer(Macad::Occt::NCollection_BaseAllocator^ theAlloc, size_t theSize);
-	/// <summary>
+NCollection_Buffer(Macad::Occt::NCollection_BaseAllocator^ theAlloc, size_t theSize);
+		/// <summary>
 	/// Default constructor.
 	/// When theData is NULL but theSize is not 0 than buffer of specified size will be allocated.
 	/// </summary>
@@ -402,46 +402,40 @@ public:
 	/// <param name="theData">
 	///  buffer data allocated by theAlloc
 	/// </param>
-	NCollection_Buffer(Macad::Occt::NCollection_BaseAllocator^ theAlloc);
+NCollection_Buffer(Macad::Occt::NCollection_BaseAllocator^ theAlloc);
 	NCollection_Buffer(Macad::Occt::NCollection_Buffer^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// true if buffer is not allocated
 	/// </returns>
-	bool IsEmpty();
-	/// <summary>
+bool IsEmpty();
+		/// <summary>
 	/// Return buffer length in bytes.
 	/// </summary>
-	size_t Size();
-	/// <summary>
+size_t Size();
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// buffer allocator
 	/// </returns>
-	Macad::Occt::NCollection_BaseAllocator^ Allocator();
-	/// <summary>
+Macad::Occt::NCollection_BaseAllocator^ Allocator();
+		/// <summary>
 	/// Assign new buffer allocator with de-allocation of buffer.
 	/// </summary>
-	void SetAllocator(Macad::Occt::NCollection_BaseAllocator^ theAlloc);
-	/// <summary>
+void SetAllocator(Macad::Occt::NCollection_BaseAllocator^ theAlloc);
+		/// <summary>
 	/// Allocate the buffer.
 	/// </summary>
 	/// <param name="theSize">
 	/// buffer length in bytes
 	/// </param>
-	bool Allocate(size_t theSize);
-	/// <summary>
+bool Allocate(size_t theSize);
+		/// <summary>
 	/// De-allocate buffer.
 	/// </summary>
-	void Free();
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
+void Free();
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class NCollection_Buffer
 
@@ -497,38 +491,38 @@ public:
 	static Macad::Occt::NCollection_IncAllocator^ CreateDowncasted(::NCollection_IncAllocator* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor.
 	/// Note that this constructor does NOT setup mutex for using allocator concurrently from different threads,
 	/// see SetThreadSafe() method.
 	/// </summary>
-	NCollection_IncAllocator(unsigned __int64 theBlockSize);
-	/// <summary>
+NCollection_IncAllocator(unsigned __int64 theBlockSize);
+		/// <summary>
 	/// Setup mutex for thread-safe allocations.
 	/// </summary>
-	void SetThreadSafe(bool theIsThreadSafe);
-	/// <summary>
+void SetThreadSafe(bool theIsThreadSafe);
+		/// <summary>
 	/// Setup mutex for thread-safe allocations.
 	/// </summary>
-	void SetThreadSafe();
-	/// <summary>
+void SetThreadSafe();
+		/// <summary>
 	/// Allocate memory with given size. Returns NULL on failure
 	/// </summary>
-	System::IntPtr Allocate(unsigned __int64 size);
-	/// <summary>
+System::IntPtr Allocate(unsigned __int64 size);
+		/// <summary>
 	/// Free a previously allocated memory. Does nothing
 	/// </summary>
-	void Free(System::IntPtr anAddress);
-	/// <summary>
+void Free(System::IntPtr anAddress);
+		/// <summary>
 	/// Diagnostic method, returns the total allocated size
 	/// </summary>
-	unsigned __int64 GetMemSize();
-	/// <summary>
+unsigned __int64 GetMemSize();
+		/// <summary>
 	/// Reallocation: it is always allowed but is only efficient with the
 	/// last allocated item
 	/// </summary>
-	System::IntPtr Reallocate(System::IntPtr anAddress, unsigned __int64 oldSize, unsigned __int64 newSize);
-	/// <summary>
+System::IntPtr Reallocate(System::IntPtr anAddress, unsigned __int64 oldSize, unsigned __int64 newSize);
+		/// <summary>
 	/// Re-initialize the allocator so that the next Allocate call should
 	/// start allocating in the very beginning as though the allocator is just
 	/// constructed. Warning: make sure that all previously allocated data are
@@ -536,8 +530,8 @@ public:
 	/// </summary>
 	/// True - release all previously allocated memory, False - preserve it
 	/// for future allocations.
-	void Reset(bool doReleaseMem);
-	/// <summary>
+void Reset(bool doReleaseMem);
+		/// <summary>
 	/// Re-initialize the allocator so that the next Allocate call should
 	/// start allocating in the very beginning as though the allocator is just
 	/// constructed. Warning: make sure that all previously allocated data are
@@ -545,7 +539,7 @@ public:
 	/// </summary>
 	/// True - release all previously allocated memory, False - preserve it
 	/// for future allocations.
-	void Reset();
+void Reset();
 }; // class NCollection_IncAllocator
 
 //---------------------------------------------------------------------
@@ -635,18 +629,18 @@ public:
 	static Macad::Occt::NCollection_WinHeapAllocator^ CreateDowncasted(::NCollection_WinHeapAllocator* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Main constructor
 	/// </summary>
-	NCollection_WinHeapAllocator(unsigned __int64 theInitSizeBytes);
-	/// <summary>
+NCollection_WinHeapAllocator(unsigned __int64 theInitSizeBytes);
+		/// <summary>
 	/// Allocate memory
 	/// </summary>
-	System::IntPtr Allocate(size_t theSize);
-	/// <summary>
+System::IntPtr Allocate(size_t theSize);
+		/// <summary>
 	/// Release memory
 	/// </summary>
-	void Free(System::IntPtr theAddress);
+void Free(System::IntPtr theAddress);
 }; // class NCollection_WinHeapAllocator
 
 }; // namespace Occt

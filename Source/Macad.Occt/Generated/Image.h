@@ -86,22 +86,22 @@ public:
 public:
 	Image_ColorRGB();
 	Image_ColorRGB(Macad::Occt::Image_ColorRGB^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 1st component (red intensity).
 	/// </summary>
-	unsigned char r();
-	/// <summary>
+unsigned char r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	unsigned char g();
-	/// <summary>
+unsigned char g();
+		/// <summary>
 	/// Alias to 3rd component (blue intensity).
 	/// </summary>
-	unsigned char b();
+unsigned char b();
 }; // class Image_ColorRGB
 
 //---------------------------------------------------------------------
@@ -138,26 +138,26 @@ public:
 public:
 	Image_ColorRGB32();
 	Image_ColorRGB32(Macad::Occt::Image_ColorRGB32^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 1st component (red intensity).
 	/// </summary>
-	unsigned char r();
-	/// <summary>
+unsigned char r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	unsigned char g();
-	/// <summary>
+unsigned char g();
+		/// <summary>
 	/// Alias to 3rd component (blue intensity).
 	/// </summary>
-	unsigned char b();
-	/// <summary>
+unsigned char b();
+		/// <summary>
 	/// Alias to 4th component (dummy).
 	/// </summary>
-	unsigned char a_();
+unsigned char a_();
 }; // class Image_ColorRGB32
 
 //---------------------------------------------------------------------
@@ -194,26 +194,26 @@ public:
 public:
 	Image_ColorRGBA();
 	Image_ColorRGBA(Macad::Occt::Image_ColorRGBA^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 1st component (red intensity).
 	/// </summary>
-	unsigned char r();
-	/// <summary>
+unsigned char r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	unsigned char g();
-	/// <summary>
+unsigned char g();
+		/// <summary>
 	/// Alias to 3rd component (blue intensity).
 	/// </summary>
-	unsigned char b();
-	/// <summary>
+unsigned char b();
+		/// <summary>
 	/// Alias to 4th component (alpha value).
 	/// </summary>
-	unsigned char a();
+unsigned char a();
 }; // class Image_ColorRGBA
 
 //---------------------------------------------------------------------
@@ -250,22 +250,22 @@ public:
 public:
 	Image_ColorBGR();
 	Image_ColorBGR(Macad::Occt::Image_ColorBGR^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 3rd component (red intensity).
 	/// </summary>
-	unsigned char r();
-	/// <summary>
+unsigned char r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	unsigned char g();
-	/// <summary>
+unsigned char g();
+		/// <summary>
 	/// Alias to 1st component (blue intensity).
 	/// </summary>
-	unsigned char b();
+unsigned char b();
 }; // class Image_ColorBGR
 
 //---------------------------------------------------------------------
@@ -302,26 +302,26 @@ public:
 public:
 	Image_ColorBGR32();
 	Image_ColorBGR32(Macad::Occt::Image_ColorBGR32^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 3rd component (red intensity).
 	/// </summary>
-	unsigned char r();
-	/// <summary>
+unsigned char r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	unsigned char g();
-	/// <summary>
+unsigned char g();
+		/// <summary>
 	/// Alias to 1st component (blue intensity).
 	/// </summary>
-	unsigned char b();
-	/// <summary>
+unsigned char b();
+		/// <summary>
 	/// Alias to 4th component (dummy).
 	/// </summary>
-	unsigned char a_();
+unsigned char a_();
 }; // class Image_ColorBGR32
 
 //---------------------------------------------------------------------
@@ -358,26 +358,26 @@ public:
 public:
 	Image_ColorBGRA();
 	Image_ColorBGRA(Macad::Occt::Image_ColorBGRA^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 3rd component (red intensity).
 	/// </summary>
-	unsigned char r();
-	/// <summary>
+unsigned char r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	unsigned char g();
-	/// <summary>
+unsigned char g();
+		/// <summary>
 	/// Alias to 1st component (blue intensity).
 	/// </summary>
-	unsigned char b();
-	/// <summary>
+unsigned char b();
+		/// <summary>
 	/// Alias to 4th component (alpha value).
 	/// </summary>
-	unsigned char a();
+unsigned char a();
 }; // class Image_ColorBGRA
 
 //---------------------------------------------------------------------
@@ -414,18 +414,18 @@ public:
 public:
 	Image_ColorRGF();
 	Image_ColorRGF(Macad::Occt::Image_ColorRGF^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 1st component (red intensity).
 	/// </summary>
-	float r();
-	/// <summary>
+float r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	float g();
+float g();
 }; // class Image_ColorRGF
 
 //---------------------------------------------------------------------
@@ -462,22 +462,22 @@ public:
 public:
 	Image_ColorRGBF();
 	Image_ColorRGBF(Macad::Occt::Image_ColorRGBF^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 1st component (red intensity).
 	/// </summary>
-	float r();
-	/// <summary>
+float r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	float g();
-	/// <summary>
+float g();
+		/// <summary>
 	/// Alias to 3rd component (blue intensity).
 	/// </summary>
-	float b();
+float b();
 }; // class Image_ColorRGBF
 
 //---------------------------------------------------------------------
@@ -514,22 +514,22 @@ public:
 public:
 	Image_ColorBGRF();
 	Image_ColorBGRF(Macad::Occt::Image_ColorBGRF^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 3rd component (red intensity).
 	/// </summary>
-	float r();
-	/// <summary>
+float r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	float g();
-	/// <summary>
+float g();
+		/// <summary>
 	/// Alias to 1st component (blue intensity).
 	/// </summary>
-	float b();
+float b();
 }; // class Image_ColorBGRF
 
 //---------------------------------------------------------------------
@@ -566,26 +566,26 @@ public:
 public:
 	Image_ColorRGBAF();
 	Image_ColorRGBAF(Macad::Occt::Image_ColorRGBAF^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 1st component (red intensity).
 	/// </summary>
-	float r();
-	/// <summary>
+float r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	float g();
-	/// <summary>
+float g();
+		/// <summary>
 	/// Alias to 3rd component (blue intensity).
 	/// </summary>
-	float b();
-	/// <summary>
+float b();
+		/// <summary>
 	/// Alias to 4th component (alpha value).
 	/// </summary>
-	float a();
+float a();
 }; // class Image_ColorRGBAF
 
 //---------------------------------------------------------------------
@@ -622,26 +622,26 @@ public:
 public:
 	Image_ColorBGRAF();
 	Image_ColorBGRAF(Macad::Occt::Image_ColorBGRAF^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of components.
 	/// </summary>
-	static int Length();
-	/// <summary>
+static int Length();
+		/// <summary>
 	/// Alias to 3rd component (red intensity).
 	/// </summary>
-	float r();
-	/// <summary>
+float r();
+		/// <summary>
 	/// Alias to 2nd component (green intensity).
 	/// </summary>
-	float g();
-	/// <summary>
+float g();
+		/// <summary>
 	/// Alias to 1st component (blue intensity).
 	/// </summary>
-	float b();
-	/// <summary>
+float b();
+		/// <summary>
 	/// Alias to 4th component (alpha value).
 	/// </summary>
-	float a();
+float a();
 }; // class Image_ColorBGRAF
 
 //---------------------------------------------------------------------
@@ -677,20 +677,20 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	Image_VideoParams();
+Image_VideoParams();
 	Image_VideoParams(Macad::Occt::Image_VideoParams^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Setup playback FPS.
 	/// </summary>
-	void SetFramerate(int theNumerator, int theDenominator);
-	/// <summary>
+void SetFramerate(int theNumerator, int theDenominator);
+		/// <summary>
 	/// Setup playback FPS.
 	/// For fixed-fps content, timebase should be 1/framerate and timestamp increments should be identical to 1.
 	/// </summary>
-	void SetFramerate(int theValue);
+void SetFramerate(int theValue);
 }; // class Image_VideoParams
 
 //---------------------------------------------------------------------
@@ -732,15 +732,15 @@ public:
 	static Macad::Occt::Image_PixMap^ CreateDowncasted(::Image_PixMap* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor. Initialize the NULL image plane.
 	/// </summary>
-	Image_PixMap();
-	/// <summary>
+Image_PixMap();
+		/// <summary>
 	/// Determine Big-Endian at runtime
 	/// </summary>
-	static bool IsBigEndianHost();
-	/// <summary>
+static bool IsBigEndianHost();
+		/// <summary>
 	/// Auxiliary method for swapping bytes between RGB and BGR formats.
 	/// This method modifies the image data but does not change pixel format!
 	/// Method will fail if pixel format is not one of the following:
@@ -750,72 +750,72 @@ public:
 	/// - Image_Format_RGBF  / Image_Format_BGRF
 	/// - Image_Format_RGBAF / Image_Format_BGRAF
 	/// </summary>
-	static bool SwapRgbaBgra(Macad::Occt::Image_PixMap^ theImage);
-	/// <summary>
+static bool SwapRgbaBgra(Macad::Occt::Image_PixMap^ theImage);
+		/// <summary>
 	/// Convert image to Black/White.
 	/// </summary>
-	static void ToBlackWhite(Macad::Occt::Image_PixMap^ theImage);
-	/// <summary>
+static void ToBlackWhite(Macad::Occt::Image_PixMap^ theImage);
+		/// <summary>
 	/// Reverse line order as it draws it from bottom to top.
 	/// </summary>
-	static bool FlipY(Macad::Occt::Image_PixMap^ theImage);
-	/// <summary>
+static bool FlipY(Macad::Occt::Image_PixMap^ theImage);
+		/// <summary>
 	/// Return default image data allocator.
 	/// </summary>
-	static Macad::Occt::NCollection_BaseAllocator^ DefaultAllocator();
-	/// <summary>
+static Macad::Occt::NCollection_BaseAllocator^ DefaultAllocator();
+		/// <summary>
 	/// Return string representation of pixel format.
 	/// </summary>
-	static System::String^ ImageFormatToString(Macad::Occt::Image_Format theFormat);
-	/// <summary>
+static System::String^ ImageFormatToString(Macad::Occt::Image_Format theFormat);
+		/// <summary>
 	/// Return string representation of compressed pixel format.
 	/// </summary>
-	static System::String^ ImageFormatToString(Macad::Occt::Image_CompressedFormat theFormat);
+static System::String^ ImageFormatToString(Macad::Occt::Image_CompressedFormat theFormat);
 	Macad::Occt::Image_Format Format();
-	/// <summary>
+		/// <summary>
 	/// Override pixel format specified by InitXXX() methods.
 	/// Will throw exception if pixel size of new format is not equal to currently initialized format.
 	/// Intended to switch formats indicating different interpretation of the same data
 	/// (e.g. ImgGray and ImgAlpha).
 	/// </summary>
-	void SetFormat(Macad::Occt::Image_Format thePixelFormat);
-	/// <summary>
+void SetFormat(Macad::Occt::Image_Format thePixelFormat);
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// image width in pixels
 	/// </returns>
-	size_t Width();
-	/// <summary>
+size_t Width();
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// image height in pixels
 	/// </returns>
-	size_t Height();
-	/// <summary>
+size_t Height();
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// image width in pixels
 	/// </returns>
-	size_t SizeX();
-	/// <summary>
+size_t SizeX();
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// image height in pixels
 	/// </returns>
-	size_t SizeY();
-	/// <summary>
+size_t SizeY();
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// width / height.
 	/// </returns>
-	double Ratio();
-	/// <summary>
+double Ratio();
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// true if data is NULL.
 	/// </returns>
-	bool IsEmpty();
-	/// <summary>
+bool IsEmpty();
+		/// <summary>
 	/// Returns the pixel color. This function is relatively slow.
 	/// Beware that this method takes coordinates in opposite order in contrast to ::Value() and ::ChangeValue().
 	/// </summary>
@@ -831,8 +831,8 @@ public:
 	/// <returns>
 	/// the pixel color
 	/// </returns>
-	Macad::Occt::Quantity_ColorRGBA^ PixelColor(int theX, int theY, bool theToLinearize);
-	/// <summary>
+Macad::Occt::Quantity_ColorRGBA^ PixelColor(int theX, int theY, bool theToLinearize);
+		/// <summary>
 	/// Returns the pixel color. This function is relatively slow.
 	/// Beware that this method takes coordinates in opposite order in contrast to ::Value() and ::ChangeValue().
 	/// </summary>
@@ -848,8 +848,8 @@ public:
 	/// <returns>
 	/// the pixel color
 	/// </returns>
-	Macad::Occt::Quantity_ColorRGBA^ PixelColor(int theX, int theY);
-	/// <summary>
+Macad::Occt::Quantity_ColorRGBA^ PixelColor(int theX, int theY);
+		/// <summary>
 	/// Sets the pixel color. This function is relatively slow.
 	/// Beware that this method takes coordinates in opposite order in contrast to ::Value() and ::ChangeValue().
 	/// </summary>
@@ -865,8 +865,8 @@ public:
 	/// <param name="theToDeLinearize">
 	/// [in] when TRUE, the gamma correction will be applied for storing in non-linear color space (e.g. Image_Format_RGB)
 	/// </param>
-	void SetPixelColor(int theX, int theY, Macad::Occt::Quantity_Color^ theColor, bool theToDeLinearize);
-	/// <summary>
+void SetPixelColor(int theX, int theY, Macad::Occt::Quantity_Color^ theColor, bool theToDeLinearize);
+		/// <summary>
 	/// Sets the pixel color. This function is relatively slow.
 	/// Beware that this method takes coordinates in opposite order in contrast to ::Value() and ::ChangeValue().
 	/// </summary>
@@ -882,8 +882,8 @@ public:
 	/// <param name="theToDeLinearize">
 	/// [in] when TRUE, the gamma correction will be applied for storing in non-linear color space (e.g. Image_Format_RGB)
 	/// </param>
-	void SetPixelColor(int theX, int theY, Macad::Occt::Quantity_Color^ theColor);
-	/// <summary>
+void SetPixelColor(int theX, int theY, Macad::Occt::Quantity_Color^ theColor);
+		/// <summary>
 	/// Sets the pixel color. This function is relatively slow.
 	/// Beware that this method takes coordinates in opposite order in contrast to ::Value() and ::ChangeValue().
 	/// </summary>
@@ -899,8 +899,8 @@ public:
 	/// <param name="theToDeLinearize">
 	/// [in] when TRUE, the gamma correction will be applied for storing in non-linear color space (e.g. Image_Format_RGB)
 	/// </param>
-	void SetPixelColor(int theX, int theY, Macad::Occt::Quantity_ColorRGBA^ theColor, bool theToDeLinearize);
-	/// <summary>
+void SetPixelColor(int theX, int theY, Macad::Occt::Quantity_ColorRGBA^ theColor, bool theToDeLinearize);
+		/// <summary>
 	/// Sets the pixel color. This function is relatively slow.
 	/// Beware that this method takes coordinates in opposite order in contrast to ::Value() and ::ChangeValue().
 	/// </summary>
@@ -916,56 +916,56 @@ public:
 	/// <param name="theToDeLinearize">
 	/// [in] when TRUE, the gamma correction will be applied for storing in non-linear color space (e.g. Image_Format_RGB)
 	/// </param>
-	void SetPixelColor(int theX, int theY, Macad::Occt::Quantity_ColorRGBA^ theColor);
-	/// <summary>
+void SetPixelColor(int theX, int theY, Macad::Occt::Quantity_ColorRGBA^ theColor);
+		/// <summary>
 	/// Initialize image plane as wrapper over alien data.
 	/// Data will not be copied! Notice that caller should ensure
 	/// that data pointer will not be released during this wrapper lifetime.
 	/// You may call InitCopy() to perform data copying.
 	/// </summary>
-	bool InitWrapper(Macad::Occt::Image_Format thePixelFormat, unsigned char% theDataPtr, size_t theSizeX, size_t theSizeY, size_t theSizeRowBytes);
-	/// <summary>
+bool InitWrapper(Macad::Occt::Image_Format thePixelFormat, unsigned char% theDataPtr, size_t theSizeX, size_t theSizeY, size_t theSizeRowBytes);
+		/// <summary>
 	/// Initialize image plane as wrapper over alien data.
 	/// Data will not be copied! Notice that caller should ensure
 	/// that data pointer will not be released during this wrapper lifetime.
 	/// You may call InitCopy() to perform data copying.
 	/// </summary>
-	bool InitWrapper(Macad::Occt::Image_Format thePixelFormat, unsigned char% theDataPtr, size_t theSizeX, size_t theSizeY);
-	/// <summary>
+bool InitWrapper(Macad::Occt::Image_Format thePixelFormat, unsigned char% theDataPtr, size_t theSizeX, size_t theSizeY);
+		/// <summary>
 	/// Initialize image plane with required dimensions.
 	/// Memory will be left uninitialized (performance trick).
 	/// </summary>
-	bool InitTrash(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY, size_t theSizeRowBytes);
-	/// <summary>
+bool InitTrash(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY, size_t theSizeRowBytes);
+		/// <summary>
 	/// Initialize image plane with required dimensions.
 	/// Memory will be left uninitialized (performance trick).
 	/// </summary>
-	bool InitTrash(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY);
-	/// <summary>
+bool InitTrash(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY);
+		/// <summary>
 	/// Initialize by copying data.
 	/// If you want to copy alien data you should create wrapper using InitWrapper() before.
 	/// </summary>
-	bool InitCopy(Macad::Occt::Image_PixMap^ theCopy);
-	/// <summary>
+bool InitCopy(Macad::Occt::Image_PixMap^ theCopy);
+		/// <summary>
 	/// Initialize image plane with required dimensions.
 	/// Buffer will be zeroed (black color for most formats).
 	/// </summary>
-	bool InitZero(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY, size_t theSizeRowBytes, unsigned char theValue);
-	/// <summary>
+bool InitZero(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY, size_t theSizeRowBytes, unsigned char theValue);
+		/// <summary>
 	/// Initialize image plane with required dimensions.
 	/// Buffer will be zeroed (black color for most formats).
 	/// </summary>
-	bool InitZero(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY, size_t theSizeRowBytes);
-	/// <summary>
+bool InitZero(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY, size_t theSizeRowBytes);
+		/// <summary>
 	/// Initialize image plane with required dimensions.
 	/// Buffer will be zeroed (black color for most formats).
 	/// </summary>
-	bool InitZero(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY);
-	/// <summary>
+bool InitZero(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY);
+		/// <summary>
 	/// Method correctly deallocate internal buffer.
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Returns TRUE if image data is stored from Top to the Down.
 	/// By default Bottom Up order is used instead
 	/// (topmost scanlines starts from the bottom in memory).
@@ -978,79 +978,79 @@ public:
 	/// <returns>
 	/// true if image data is top-down
 	/// </returns>
-	bool IsTopDown();
-	/// <summary>
+bool IsTopDown();
+		/// <summary>
 	/// Setup scanlines order in memory - top-down or bottom-up.
 	/// Drawers should explicitly specify this value if current state IsTopDown() was ignored!
 	/// </summary>
 	/// <param name="theIsTopDown">
 	/// top-down flag
 	/// </param>
-	void SetTopDown(bool theIsTopDown);
-	/// <summary>
+void SetTopDown(bool theIsTopDown);
+		/// <summary>
 	/// Returns +1 if scanlines ordered in Top->Down order in memory and -1 otherwise.
 	/// </summary>
 	/// <returns>
 	/// scanline increment for Top->Down iteration
 	/// </returns>
-	size_t TopDownInc();
-	/// <summary>
+size_t TopDownInc();
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// bytes reserved for one pixel (may include extra bytes for alignment).
 	/// </returns>
-	size_t SizePixelBytes();
-	/// <summary>
+size_t SizePixelBytes();
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// bytes reserved for one pixel (may include extra bytes for alignment).
 	/// </returns>
-	static size_t SizePixelBytes(Macad::Occt::Image_Format thePixelFormat);
-	/// <summary>
+static size_t SizePixelBytes(Macad::Occt::Image_Format thePixelFormat);
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// bytes reserved per row.
 	/// Could be larger than needed to store packed row (extra bytes for alignment etc.).
 	/// </returns>
-	size_t SizeRowBytes();
-	/// <summary>
+size_t SizeRowBytes();
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// the extra bytes in the row.
 	/// </returns>
-	size_t RowExtraBytes();
-	/// <summary>
+size_t RowExtraBytes();
+		/// <summary>
 	/// Compute the maximal row alignment for current row size.
 	/// </summary>
 	/// <returns>
 	/// maximal row alignment in bytes (up to 16 bytes).
 	/// </returns>
-	size_t MaxRowAligmentBytes();
-	/// <summary>
+size_t MaxRowAligmentBytes();
+		/// <summary>
 	/// </summary>
 	/// <returns>
 	/// buffer size
 	/// </returns>
-	size_t SizeBytes();
-	/// <summary>
+size_t SizeBytes();
+		/// <summary>
 	/// Access image pixel as raw data pointer.
 	/// This method does not perform any type checks - use on own risk (check Format() before)!
 	/// </summary>
-	unsigned char RawValue(size_t theRow, size_t theCol);
-	/// <summary>
+unsigned char RawValue(size_t theRow, size_t theCol);
+		/// <summary>
 	/// Access image pixel as raw data pointer.
 	/// This method does not perform any type checks - use on own risk (check Format() before)!
 	/// </summary>
-	unsigned char ChangeRawValue(size_t theRow, size_t theCol);
-	/// <summary>
+unsigned char ChangeRawValue(size_t theRow, size_t theCol);
+		/// <summary>
 	/// Convert 16-bit half-float value into 32-bit float (simple conversion).
 	/// </summary>
-	static float ConvertFromHalfFloat(unsigned short theHalf);
-	/// <summary>
+static float ConvertFromHalfFloat(unsigned short theHalf);
+		/// <summary>
 	/// Convert 32-bit float value into IEEE-754 16-bit floating-point format without infinity:
 	/// 1-5-10, exp-15, +-131008.0, +-6.1035156E-5, +-5.9604645E-8, 3.311 digits.
 	/// </summary>
-	static unsigned short ConvertToHalfFloat(float theFloat);
+static unsigned short ConvertToHalfFloat(float theFloat);
 }; // class Image_PixMap
 
 //---------------------------------------------------------------------
@@ -1096,23 +1096,20 @@ public:
 	static Macad::Occt::Image_AlienPixMap^ CreateDowncasted(::Image_AlienPixMap* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	Image_AlienPixMap();
-	/// <summary>
+Image_AlienPixMap();
+		/// <summary>
 	/// Return default rows order used by underlying image library.
 	/// </summary>
-	static bool IsTopDownDefault();
-	/// <summary>
+static bool IsTopDownDefault();
+		/// <summary>
 	/// Read image data from file.
 	/// </summary>
-	bool Load(Macad::Occt::TCollection_AsciiString^ theFileName);
-	/// <summary>
-	/// Read image data from stream.
-	/// </summary>
+bool Load(Macad::Occt::TCollection_AsciiString^ theFileName);
 	/* Method skipped due to unknown mapping: bool Load(istream theStream, TCollection_AsciiString theFileName, ) */
-	/// <summary>
+		/// <summary>
 	/// Read image data from memory buffer.
 	/// </summary>
 	/// <param name="theData">
@@ -1125,38 +1122,38 @@ public:
 	/// <param name="theFileName">
 	/// optional file name
 	/// </param>
-	bool Load(unsigned char theData, size_t theLength, Macad::Occt::TCollection_AsciiString^ theFileName);
-	/// <summary>
+bool Load(unsigned char theData, size_t theLength, Macad::Occt::TCollection_AsciiString^ theFileName);
+		/// <summary>
 	/// Write image data to file using file extension to determine compression format.
 	/// </summary>
-	bool Save(Macad::Occt::TCollection_AsciiString^ theFileName);
-	/// <summary>
+bool Save(Macad::Occt::TCollection_AsciiString^ theFileName);
+		/// <summary>
 	/// Initialize image plane with required dimensions.
 	/// thePixelFormat - if specified pixel format doesn't supported by image library
 	/// than nearest supported will be used instead!
 	/// theSizeRowBytes - may be ignored by this class and required alignment will be used instead!
 	/// </summary>
-	bool InitTrash(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY, size_t theSizeRowBytes);
-	/// <summary>
+bool InitTrash(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY, size_t theSizeRowBytes);
+		/// <summary>
 	/// Initialize image plane with required dimensions.
 	/// thePixelFormat - if specified pixel format doesn't supported by image library
 	/// than nearest supported will be used instead!
 	/// theSizeRowBytes - may be ignored by this class and required alignment will be used instead!
 	/// </summary>
-	bool InitTrash(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY);
-	/// <summary>
+bool InitTrash(Macad::Occt::Image_Format thePixelFormat, size_t theSizeX, size_t theSizeY);
+		/// <summary>
 	/// Initialize by copying data.
 	/// </summary>
-	bool InitCopy(Macad::Occt::Image_PixMap^ theCopy);
-	/// <summary>
+bool InitCopy(Macad::Occt::Image_PixMap^ theCopy);
+		/// <summary>
 	/// Method correctly deallocate internal buffer.
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Performs gamma correction on image.
 	/// theGamma - gamma value to use; a value of 1.0 leaves the image alone
 	/// </summary>
-	bool AdjustGamma(double theGammaCorr);
+bool AdjustGamma(double theGammaCorr);
 }; // class Image_AlienPixMap
 
 //---------------------------------------------------------------------
@@ -1194,83 +1191,77 @@ public:
 	static Macad::Occt::Image_CompressedPixMap^ CreateDowncasted(::Image_CompressedPixMap* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	Image_CompressedPixMap();
+Image_CompressedPixMap();
 	Image_CompressedPixMap(Macad::Occt::Image_CompressedPixMap^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Return base (uncompressed) pixel format.
 	/// </summary>
-	Macad::Occt::Image_Format BaseFormat();
-	/// <summary>
+Macad::Occt::Image_Format BaseFormat();
+		/// <summary>
 	/// Set base (uncompressed) pixel format.
 	/// </summary>
-	void SetBaseFormat(Macad::Occt::Image_Format theFormat);
-	/// <summary>
+void SetBaseFormat(Macad::Occt::Image_Format theFormat);
+		/// <summary>
 	/// Return compressed format.
 	/// </summary>
-	Macad::Occt::Image_CompressedFormat CompressedFormat();
-	/// <summary>
+Macad::Occt::Image_CompressedFormat CompressedFormat();
+		/// <summary>
 	/// Set compressed format.
 	/// </summary>
-	void SetCompressedFormat(Macad::Occt::Image_CompressedFormat theFormat);
-	/// <summary>
+void SetCompressedFormat(Macad::Occt::Image_CompressedFormat theFormat);
+		/// <summary>
 	/// Return raw (compressed) data.
 	/// </summary>
-	Macad::Occt::NCollection_Buffer^ FaceData();
-	/// <summary>
+Macad::Occt::NCollection_Buffer^ FaceData();
+		/// <summary>
 	/// Set raw (compressed) data.
 	/// </summary>
-	void SetFaceData(Macad::Occt::NCollection_Buffer^ theBuffer);
-	/// <summary>
-	/// Return Array of mipmap sizes, including base level.
-	/// </summary>
+void SetFaceData(Macad::Occt::NCollection_Buffer^ theBuffer);
 	/* Method skipped due to unknown mapping: NCollection_Array1<int> MipMaps() */
-	/// <summary>
-	/// Return Array of mipmap sizes, including base level.
-	/// </summary>
 	/* Method skipped due to unknown mapping: NCollection_Array1<int> ChangeMipMaps() */
-	/// <summary>
+		/// <summary>
 	/// Return TRUE if complete mip map level set (up to 1x1 resolution).
 	/// </summary>
-	bool IsCompleteMipMapSet();
-	/// <summary>
+bool IsCompleteMipMapSet();
+		/// <summary>
 	/// Set if complete mip map level set (up to 1x1 resolution).
 	/// </summary>
-	void SetCompleteMipMapSet(bool theIsComplete);
-	/// <summary>
+void SetCompleteMipMapSet(bool theIsComplete);
+		/// <summary>
 	/// Return surface length in bytes.
 	/// </summary>
-	size_t FaceBytes();
-	/// <summary>
+size_t FaceBytes();
+		/// <summary>
 	/// Set surface length in bytes.
 	/// </summary>
-	void SetFaceBytes(size_t theSize);
-	/// <summary>
+void SetFaceBytes(size_t theSize);
+		/// <summary>
 	/// Return surface width.
 	/// </summary>
-	int SizeX();
-	/// <summary>
+int SizeX();
+		/// <summary>
 	/// Return surface height.
 	/// </summary>
-	int SizeY();
-	/// <summary>
+int SizeY();
+		/// <summary>
 	/// Set surface width x height.
 	/// </summary>
-	void SetSize(int theSizeX, int theSizeY);
-	/// <summary>
+void SetSize(int theSizeX, int theSizeY);
+		/// <summary>
 	/// Return TRUE if image layout is top-down (always true).
 	/// </summary>
-	bool IsTopDown();
-	/// <summary>
+bool IsTopDown();
+		/// <summary>
 	/// Return number of faces in the file; should be 6 for cubemap.
 	/// </summary>
-	int NbFaces();
-	/// <summary>
+int NbFaces();
+		/// <summary>
 	/// Set number of faces in the file.
 	/// </summary>
-	void SetNbFaces(int theSize);
+void SetNbFaces(int theSize);
 }; // class Image_CompressedPixMap
 
 //---------------------------------------------------------------------
@@ -1307,35 +1298,35 @@ public:
 	static Macad::Occt::Image_SupportedFormats^ CreateDowncasted(::Image_SupportedFormats* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	Image_SupportedFormats();
+Image_SupportedFormats();
 	Image_SupportedFormats(Macad::Occt::Image_SupportedFormats^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Return TRUE if image format is supported.
 	/// </summary>
-	bool IsSupported(Macad::Occt::Image_Format theFormat);
-	/// <summary>
+bool IsSupported(Macad::Occt::Image_Format theFormat);
+		/// <summary>
 	/// Set if image format is supported or not.
 	/// </summary>
-	void Add(Macad::Occt::Image_Format theFormat);
-	/// <summary>
+void Add(Macad::Occt::Image_Format theFormat);
+		/// <summary>
 	/// Return TRUE if there are compressed image formats supported.
 	/// </summary>
-	bool HasCompressed();
-	/// <summary>
+bool HasCompressed();
+		/// <summary>
 	/// Return TRUE if compressed image format is supported.
 	/// </summary>
-	bool IsSupported(Macad::Occt::Image_CompressedFormat theFormat);
-	/// <summary>
+bool IsSupported(Macad::Occt::Image_CompressedFormat theFormat);
+		/// <summary>
 	/// Set if compressed image format is supported or not.
 	/// </summary>
-	void Add(Macad::Occt::Image_CompressedFormat theFormat);
-	/// <summary>
+void Add(Macad::Occt::Image_CompressedFormat theFormat);
+		/// <summary>
 	/// Reset flags.
 	/// </summary>
-	void Clear();
+void Clear();
 }; // class Image_SupportedFormats
 
 //---------------------------------------------------------------------
@@ -1372,27 +1363,8 @@ public:
 public:
 	Image_DDSParser();
 	Image_DDSParser(Macad::Occt::Image_DDSParser^ parameter1);
-	/// <summary>
-	/// Load the face from DDS file.
-	/// </summary>
-	/// <param name="theSupported">
-	/// [in] list of supported image formats
-	/// </param>
-	/// <param name="theFile">
-	///      [in] file path
-	/// </param>
-	/// <param name="theFaceIndex">
-	/// [in] face index, within [0, Image_CompressedPixMap::NbFaces()) range;
-	/// use -1 to skip reading the face data
-	/// </param>
-	/// <param name="theFileOffset">
-	/// [in] offset to the DDS data
-	/// </param>
-	/// <returns>
-	/// loaded face or NULL if file cannot be read or not valid DDS file
-	/// </returns>
 	/* Method skipped due to unknown mapping: Image_CompressedPixMap Load(Image_SupportedFormats theSupported, TCollection_AsciiString theFile, Standard_Integer theFaceIndex, long long int theFileOffset, ) */
-	/// <summary>
+		/// <summary>
 	/// Load the face from DDS file.
 	/// </summary>
 	/// <param name="theSupported">
@@ -1411,8 +1383,8 @@ public:
 	/// <returns>
 	/// loaded face or NULL if file cannot be read or not valid DDS file
 	/// </returns>
-	static Macad::Occt::Image_CompressedPixMap^ Load(Macad::Occt::Image_SupportedFormats^ theSupported, Macad::Occt::TCollection_AsciiString^ theFile, int theFaceIndex);
-	/// <summary>
+static Macad::Occt::Image_CompressedPixMap^ Load(Macad::Occt::Image_SupportedFormats^ theSupported, Macad::Occt::TCollection_AsciiString^ theFile, int theFaceIndex);
+		/// <summary>
 	/// Load the face from DDS file.
 	/// </summary>
 	/// <param name="theSupported">
@@ -1428,7 +1400,7 @@ public:
 	/// <returns>
 	/// loaded face or NULL if file cannot be read or not valid DDS file
 	/// </returns>
-	static Macad::Occt::Image_CompressedPixMap^ Load(Macad::Occt::Image_SupportedFormats^ theSupported, Macad::Occt::NCollection_Buffer^ theBuffer, int theFaceIndex);
+static Macad::Occt::Image_CompressedPixMap^ Load(Macad::Occt::Image_SupportedFormats^ theSupported, Macad::Occt::NCollection_Buffer^ theBuffer, int theFaceIndex);
 }; // class Image_DDSParser
 
 //---------------------------------------------------------------------
@@ -1496,50 +1468,50 @@ public:
 	static Macad::Occt::Image_Diff^ CreateDowncasted(::Image_Diff* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// An empty constructor. Init() should be called for initialization.
 	/// </summary>
-	Image_Diff();
+Image_Diff();
 	Image_Diff(Macad::Occt::Image_Diff^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initialize algorithm by two images.
 	/// </summary>
 	/// <returns>
 	/// false if images has different or unsupported pixel format.
 	/// </returns>
-	bool Init(Macad::Occt::Image_PixMap^ theImageRef, Macad::Occt::Image_PixMap^ theImageNew, bool theToBlackWhite);
-	/// <summary>
+bool Init(Macad::Occt::Image_PixMap^ theImageRef, Macad::Occt::Image_PixMap^ theImageNew, bool theToBlackWhite);
+		/// <summary>
 	/// Initialize algorithm by two images.
 	/// </summary>
 	/// <returns>
 	/// false if images has different or unsupported pixel format.
 	/// </returns>
-	bool Init(Macad::Occt::Image_PixMap^ theImageRef, Macad::Occt::Image_PixMap^ theImageNew);
-	/// <summary>
+bool Init(Macad::Occt::Image_PixMap^ theImageRef, Macad::Occt::Image_PixMap^ theImageNew);
+		/// <summary>
 	/// Initialize algorithm by two images (will be loaded from files).
 	/// </summary>
 	/// <returns>
 	/// false if images couldn't be opened or their format is unsupported.
 	/// </returns>
-	bool Init(Macad::Occt::TCollection_AsciiString^ theImgPathRef, Macad::Occt::TCollection_AsciiString^ theImgPathNew, bool theToBlackWhite);
-	/// <summary>
+bool Init(Macad::Occt::TCollection_AsciiString^ theImgPathRef, Macad::Occt::TCollection_AsciiString^ theImgPathNew, bool theToBlackWhite);
+		/// <summary>
 	/// Initialize algorithm by two images (will be loaded from files).
 	/// </summary>
 	/// <returns>
 	/// false if images couldn't be opened or their format is unsupported.
 	/// </returns>
-	bool Init(Macad::Occt::TCollection_AsciiString^ theImgPathRef, Macad::Occt::TCollection_AsciiString^ theImgPathNew);
-	/// <summary>
+bool Init(Macad::Occt::TCollection_AsciiString^ theImgPathRef, Macad::Occt::TCollection_AsciiString^ theImgPathNew);
+		/// <summary>
 	/// Color tolerance for equality check. Should be within range 0..1:
 	/// Corresponds to a difference between white and black colors (maximum difference).
 	/// By default, the tolerance is equal to 0 thus equality check will return false for any different colors.
 	/// </summary>
-	void SetColorTolerance(double theTolerance);
-	/// <summary>
+void SetColorTolerance(double theTolerance);
+		/// <summary>
 	/// Color tolerance for equality check.
 	/// </summary>
-	double ColorTolerance();
-	/// <summary>
+double ColorTolerance();
+		/// <summary>
 	/// Sets taking into account (ignoring) a "border effect" on comparison of images.
 	/// The border effect is caused by a border of shaded shapes in the viewer 3d.
 	/// Triangles of this area are located at about 0 or 90 degrees to the user.
@@ -1547,24 +1519,24 @@ public:
 	/// This flag allows to detect such a "border" area and skip it from comparison of images.
 	/// Filter turned OFF by default.
 	/// </summary>
-	void SetBorderFilterOn(bool theToIgnore);
-	/// <summary>
+void SetBorderFilterOn(bool theToIgnore);
+		/// <summary>
 	/// Returns a flag of taking into account (ignoring) a border effect in comparison of images.
 	/// </summary>
-	bool IsBorderFilterOn();
-	/// <summary>
+bool IsBorderFilterOn();
+		/// <summary>
 	/// Compares two images. It returns a number of different pixels (or groups of pixels).
 	/// It returns -1 if algorithm not initialized before.
 	/// </summary>
-	int Compare();
-	/// <summary>
+int Compare();
+		/// <summary>
 	/// Saves a difference between two images as white pixels on black background.
 	/// </summary>
-	bool SaveDiffImage(Macad::Occt::Image_PixMap^ theDiffImage);
-	/// <summary>
+bool SaveDiffImage(Macad::Occt::Image_PixMap^ theDiffImage);
+		/// <summary>
 	/// Saves a difference between two images as white pixels on black background.
 	/// </summary>
-	bool SaveDiffImage(Macad::Occt::TCollection_AsciiString^ theDiffPath);
+bool SaveDiffImage(Macad::Occt::TCollection_AsciiString^ theDiffPath);
 }; // class Image_Diff
 
 //---------------------------------------------------------------------
@@ -1602,78 +1574,60 @@ public:
 	static Macad::Occt::Image_Texture^ CreateDowncasted(::Image_Texture* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor pointing to file location.
 	/// </summary>
-	Image_Texture(Macad::Occt::TCollection_AsciiString^ theFileName);
-	/// <summary>
-	/// Constructor pointing to file part.
-	/// </summary>
+Image_Texture(Macad::Occt::TCollection_AsciiString^ theFileName);
 	/* Method skipped due to unknown mapping: void Image_Texture(TCollection_AsciiString theFileName, long long int theOffset, long long int theLength, ) */
-	/// <summary>
+		/// <summary>
 	/// Constructor pointing to buffer.
 	/// </summary>
-	Image_Texture(Macad::Occt::NCollection_Buffer^ theBuffer, Macad::Occt::TCollection_AsciiString^ theId);
+Image_Texture(Macad::Occt::NCollection_Buffer^ theBuffer, Macad::Occt::TCollection_AsciiString^ theId);
 	Image_Texture(Macad::Occt::Image_Texture^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Return generated texture id.
 	/// </summary>
-	Macad::Occt::TCollection_AsciiString^ TextureId();
-	/// <summary>
+Macad::Occt::TCollection_AsciiString^ TextureId();
+		/// <summary>
 	/// Return image file path.
 	/// </summary>
-	Macad::Occt::TCollection_AsciiString^ FilePath();
-	/// <summary>
-	/// Return offset within file.
-	/// </summary>
+Macad::Occt::TCollection_AsciiString^ FilePath();
 	/* Method skipped due to unknown mapping: long long int FileOffset() */
-	/// <summary>
-	/// Return length of image data within the file after offset.
-	/// </summary>
 	/* Method skipped due to unknown mapping: long long int FileLength() */
-	/// <summary>
+		/// <summary>
 	/// Return buffer holding encoded image content.
 	/// </summary>
-	Macad::Occt::NCollection_Buffer^ DataBuffer();
-	/// <summary>
+Macad::Occt::NCollection_Buffer^ DataBuffer();
+		/// <summary>
 	/// Return mime-type of image file based on ProbeImageFileFormat().
 	/// </summary>
-	Macad::Occt::TCollection_AsciiString^ MimeType();
-	/// <summary>
+Macad::Occt::TCollection_AsciiString^ MimeType();
+		/// <summary>
 	/// Return image file format.
 	/// </summary>
-	Macad::Occt::TCollection_AsciiString^ ProbeImageFileFormat();
-	/// <summary>
+Macad::Occt::TCollection_AsciiString^ ProbeImageFileFormat();
+		/// <summary>
 	/// Image reader without decoding data for formats supported natively by GPUs.
 	/// </summary>
-	Macad::Occt::Image_CompressedPixMap^ ReadCompressedImage(Macad::Occt::Image_SupportedFormats^ theSupported);
-	/// <summary>
+Macad::Occt::Image_CompressedPixMap^ ReadCompressedImage(Macad::Occt::Image_SupportedFormats^ theSupported);
+		/// <summary>
 	/// Image reader.
 	/// </summary>
-	Macad::Occt::Image_PixMap^ ReadImage(Macad::Occt::Image_SupportedFormats^ theSupported);
-	/// <summary>
+Macad::Occt::Image_PixMap^ ReadImage(Macad::Occt::Image_SupportedFormats^ theSupported);
+		/// <summary>
 	/// Write image to specified file without decoding data.
 	/// </summary>
-	bool WriteImage(Macad::Occt::TCollection_AsciiString^ theFile);
-	/// <summary>
-	/// Write image to specified stream without decoding data.
-	/// </summary>
+bool WriteImage(Macad::Occt::TCollection_AsciiString^ theFile);
 	/* Method skipped due to unknown mapping: Standard_Boolean WriteImage(ostream theStream, TCollection_AsciiString theFile, ) */
-	/// <summary>
+		/// <summary>
 	/// Hash value, for Map interface.
 	/// </summary>
-	static int HashCode(Macad::Occt::Image_Texture^ theTexture, int theUpper);
-	/// <summary>
+static int HashCode(Macad::Occt::Image_Texture^ theTexture, int theUpper);
+		/// <summary>
 	/// Matching two instances, for Map interface.
 	/// </summary>
-	static bool IsEqual(Macad::Occt::Image_Texture^ theTex1, Macad::Occt::Image_Texture^ theTex2);
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
+static bool IsEqual(Macad::Occt::Image_Texture^ theTex1, Macad::Occt::Image_Texture^ theTex2);
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
-	/// <summary>
-	/// Dumps the content of me into the stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpJson(ostream theOStream, Standard_Integer theDepth, ) */
 }; // class Image_Texture
 

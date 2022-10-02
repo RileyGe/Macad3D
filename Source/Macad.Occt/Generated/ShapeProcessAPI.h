@@ -39,64 +39,64 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates an object and loads resource file and sequence of
 	/// operators given by their names.
 	/// </summary>
-	ShapeProcessAPI_ApplySequence(System::String^ rscName, System::String^ seqName);
-	/// <summary>
+ShapeProcessAPI_ApplySequence(System::String^ rscName, System::String^ seqName);
+		/// <summary>
 	/// Creates an object and loads resource file and sequence of
 	/// operators given by their names.
 	/// </summary>
-	ShapeProcessAPI_ApplySequence(System::String^ rscName);
+ShapeProcessAPI_ApplySequence(System::String^ rscName);
 	ShapeProcessAPI_ApplySequence(Macad::Occt::ShapeProcessAPI_ApplySequence^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns object for managing resource file and sequence of
 	/// operators.
 	/// </summary>
-	Macad::Occt::ShapeProcess_ShapeContext^ Context();
-	/// <summary>
+Macad::Occt::ShapeProcess_ShapeContext^ Context();
+		/// <summary>
 	/// Performs sequence of operators stored in myRsc.
 	/// If <fillmap> is True adds history "shape-shape" into myMap
 	/// for shape and its subshapes until level <until> (included).
 	/// If <until> is TopAbs_SHAPE,  all the subshapes are considered.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ PrepareShape(Macad::Occt::TopoDS_Shape^ shape, bool fillmap, Macad::Occt::TopAbs_ShapeEnum until, Macad::Occt::Message_ProgressRange^ theProgress);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ PrepareShape(Macad::Occt::TopoDS_Shape^ shape, bool fillmap, Macad::Occt::TopAbs_ShapeEnum until, Macad::Occt::Message_ProgressRange^ theProgress);
+		/// <summary>
 	/// Performs sequence of operators stored in myRsc.
 	/// If <fillmap> is True adds history "shape-shape" into myMap
 	/// for shape and its subshapes until level <until> (included).
 	/// If <until> is TopAbs_SHAPE,  all the subshapes are considered.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ PrepareShape(Macad::Occt::TopoDS_Shape^ shape, bool fillmap, Macad::Occt::TopAbs_ShapeEnum until);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ PrepareShape(Macad::Occt::TopoDS_Shape^ shape, bool fillmap, Macad::Occt::TopAbs_ShapeEnum until);
+		/// <summary>
 	/// Performs sequence of operators stored in myRsc.
 	/// If <fillmap> is True adds history "shape-shape" into myMap
 	/// for shape and its subshapes until level <until> (included).
 	/// If <until> is TopAbs_SHAPE,  all the subshapes are considered.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ PrepareShape(Macad::Occt::TopoDS_Shape^ shape, bool fillmap);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ PrepareShape(Macad::Occt::TopoDS_Shape^ shape, bool fillmap);
+		/// <summary>
 	/// Performs sequence of operators stored in myRsc.
 	/// If <fillmap> is True adds history "shape-shape" into myMap
 	/// for shape and its subshapes until level <until> (included).
 	/// If <until> is TopAbs_SHAPE,  all the subshapes are considered.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ PrepareShape(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ PrepareShape(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Clears myMap with accumulated history.
 	/// </summary>
-	void ClearMap();
-	/// <summary>
+void ClearMap();
+		/// <summary>
 	/// Returns myMap with accumulated history.
 	/// </summary>
-	Macad::Occt::TopTools_DataMapOfShapeShape^ Map();
-	/// <summary>
+Macad::Occt::TopTools_DataMapOfShapeShape^ Map();
+		/// <summary>
 	/// Prints result of preparation onto the messenger of the context.
 	/// Note that results can be accumulated from previous preparations
 	/// it method ClearMap was not called before PrepareShape.
 	/// </summary>
-	void PrintPreparationResult();
+void PrintPreparationResult();
 }; // class ShapeProcessAPI_ApplySequence
 
 }; // namespace Occt

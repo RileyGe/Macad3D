@@ -118,98 +118,86 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BOPAlgo_Options();
-	/// <summary>
+BOPAlgo_Options();
+		/// <summary>
 	/// Constructor with allocator
 	/// </summary>
-	BOPAlgo_Options(Macad::Occt::NCollection_BaseAllocator^ theAllocator);
+BOPAlgo_Options(Macad::Occt::NCollection_BaseAllocator^ theAllocator);
 	BOPAlgo_Options(Macad::Occt::BOPAlgo_Options^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns allocator
 	/// </summary>
-	Macad::Occt::NCollection_BaseAllocator^ Allocator();
-	/// <summary>
+Macad::Occt::NCollection_BaseAllocator^ Allocator();
+		/// <summary>
 	/// Clears all warnings and errors, and any data cached by the algorithm.
 	/// User defined options are not cleared.
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Adds the alert as error (fail)
 	/// </summary>
-	void AddError(Macad::Occt::Message_Alert^ theAlert);
-	/// <summary>
+void AddError(Macad::Occt::Message_Alert^ theAlert);
+		/// <summary>
 	/// Adds the alert as warning
 	/// </summary>
-	void AddWarning(Macad::Occt::Message_Alert^ theAlert);
-	/// <summary>
+void AddWarning(Macad::Occt::Message_Alert^ theAlert);
+		/// <summary>
 	/// Returns true if algorithm has failed
 	/// </summary>
-	bool HasErrors();
-	/// <summary>
-	/// Returns true if algorithm has generated error of specified type
-	/// </summary>
+bool HasErrors();
 	/* Method skipped due to unknown mapping: Standard_Boolean HasError(Standard_Type theType, ) */
-	/// <summary>
+		/// <summary>
 	/// Returns true if algorithm has generated some warning alerts
 	/// </summary>
-	bool HasWarnings();
-	/// <summary>
-	/// Returns true if algorithm has generated warning of specified type
-	/// </summary>
+bool HasWarnings();
 	/* Method skipped due to unknown mapping: Standard_Boolean HasWarning(Standard_Type theType, ) */
-	/// <summary>
+		/// <summary>
 	/// Returns report collecting all errors and warnings
 	/// </summary>
-	Macad::Occt::Message_Report^ GetReport();
-	/// <summary>
-	/// Dumps the error status into the given stream
-	/// </summary>
+Macad::Occt::Message_Report^ GetReport();
 	/* Method skipped due to unknown mapping: void DumpErrors(ostream theOS, ) */
-	/// <summary>
-	/// Dumps the warning statuses into the given stream
-	/// </summary>
 	/* Method skipped due to unknown mapping: void DumpWarnings(ostream theOS, ) */
-	/// <summary>
+		/// <summary>
 	/// Clears the warnings of the algorithm
 	/// </summary>
-	void ClearWarnings();
-	/// <summary>
+void ClearWarnings();
+		/// <summary>
 	/// Gets the global parallel mode
 	/// </summary>
-	static bool GetParallelMode();
-	/// <summary>
+static bool GetParallelMode();
+		/// <summary>
 	/// Sets the global parallel mode
 	/// </summary>
-	static void SetParallelMode(bool theNewMode);
-	/// <summary>
+static void SetParallelMode(bool theNewMode);
+		/// <summary>
 	/// Set the flag of parallel processing
 	/// if <theFlag> is true  the parallel processing is switched on
 	/// if <theFlag> is false the parallel processing is switched off
 	/// </summary>
-	void SetRunParallel(bool theFlag);
-	/// <summary>
+void SetRunParallel(bool theFlag);
+		/// <summary>
 	/// Returns the flag of parallel processing
 	/// </summary>
-	bool RunParallel();
-	/// <summary>
+bool RunParallel();
+		/// <summary>
 	/// Sets the additional tolerance
 	/// </summary>
-	void SetFuzzyValue(double theFuzz);
-	/// <summary>
+void SetFuzzyValue(double theFuzz);
+		/// <summary>
 	/// Returns the additional tolerance
 	/// </summary>
-	double FuzzyValue();
-	/// <summary>
+double FuzzyValue();
+		/// <summary>
 	/// Enables/Disables the usage of OBB
 	/// </summary>
-	void SetUseOBB(bool theUseOBB);
-	/// <summary>
+void SetUseOBB(bool theUseOBB);
+		/// <summary>
 	/// Returns the flag defining usage of OBB
 	/// </summary>
-	bool UseOBB();
+bool UseOBB();
 }; // class BOPAlgo_Options
 
 //---------------------------------------------------------------------
@@ -250,16 +238,16 @@ public:
 
 public:
 	BOPAlgo_Algo(Macad::Occt::BOPAlgo_Algo^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// The main method to implement the operation
 	/// Providing the range allows to enable Progress indicator User break functionalities.
 	/// </summary>
-	void Perform(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Perform(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// The main method to implement the operation
 	/// Providing the range allows to enable Progress indicator User break functionalities.
 	/// </summary>
-	void Perform();
+void Perform();
 }; // class BOPAlgo_Algo
 
 //---------------------------------------------------------------------
@@ -305,48 +293,48 @@ public:
 
 public:
 	BOPAlgo_BuilderShape(Macad::Occt::BOPAlgo_BuilderShape^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the result of algorithm
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Shape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Shape();
+		/// <summary>
 	/// Returns the list of shapes Modified from the shape theS.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Modified(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns the list of shapes Generated from the shape theS.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns true if the shape theS has been deleted.
 	/// In this case the shape will have no Modified elements,
 	/// but can have Generated elements.
 	/// </summary>
-	bool IsDeleted(Macad::Occt::TopoDS_Shape^ theS);
-	/// <summary>
+bool IsDeleted(Macad::Occt::TopoDS_Shape^ theS);
+		/// <summary>
 	/// Returns true if any of the input shapes has been modified during operation.
 	/// </summary>
-	bool HasModified();
-	/// <summary>
+bool HasModified();
+		/// <summary>
 	/// Returns true if any of the input shapes has generated shapes during operation.
 	/// </summary>
-	bool HasGenerated();
-	/// <summary>
+bool HasGenerated();
+		/// <summary>
 	/// Returns true if any of the input shapes has been deleted during operation.
 	/// </summary>
-	bool HasDeleted();
-	/// <summary>
+bool HasDeleted();
+		/// <summary>
 	/// History Tool
 	/// </summary>
-	Macad::Occt::BRepTools_History^ History();
-	/// <summary>
+Macad::Occt::BRepTools_History^ History();
+		/// <summary>
 	/// Allows disabling the history collection
 	/// </summary>
-	void SetToFillHistory(bool theHistFlag);
-	/// <summary>
+void SetToFillHistory(bool theHistFlag);
+		/// <summary>
 	/// Returns flag of history availability
 	/// </summary>
-	bool HasHistory();
+bool HasHistory();
 }; // class BOPAlgo_BuilderShape
 
 //---------------------------------------------------------------------
@@ -414,41 +402,32 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	BOPAlgo_Builder();
+BOPAlgo_Builder();
 	BOPAlgo_Builder(Macad::Occt::NCollection_BaseAllocator^ theAllocator);
 	BOPAlgo_Builder(Macad::Occt::BOPAlgo_Builder^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Clears the content of the algorithm.
 	/// </summary>
-	void Clear();
-	/// <summary>
-	/// Returns the PaveFiller, algorithm for sub-shapes intersection.
-	/// </summary>
+void Clear();
 	/* Method skipped due to unknown mapping: BOPAlgo_PaveFiller PPaveFiller() */
-	/// <summary>
-	/// Returns the Data Structure, holder of intersection information.
-	/// </summary>
 	/* Method skipped due to unknown mapping: BOPDS_DS PDS() */
-	/// <summary>
-	/// Returns the Context, tool for cashing heavy algorithms.
-	/// </summary>
 	/* Method skipped due to unknown mapping: IntTools_Context Context() */
-	/// <summary>
+		/// <summary>
 	/// Adds the argument to the operation.
 	/// </summary>
-	void AddArgument(Macad::Occt::TopoDS_Shape^ theShape);
-	/// <summary>
+void AddArgument(Macad::Occt::TopoDS_Shape^ theShape);
+		/// <summary>
 	/// Sets the list of arguments for the operation.
 	/// </summary>
-	void SetArguments(Macad::Occt::TopTools_ListOfShape^ theLS);
-	/// <summary>
+void SetArguments(Macad::Occt::TopTools_ListOfShape^ theLS);
+		/// <summary>
 	/// Returns the list of arguments.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Arguments();
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Arguments();
+		/// <summary>
 	/// Sets the flag that defines the mode of treatment.
 	/// In non-destructive mode the argument shapes are not modified. Instead
 	/// a copy of a sub-shape is created in the result if it is needed to be updated.
@@ -456,51 +435,43 @@ public:
 	/// In the case of calling PerformWithFiller the corresponding flag of that PaveFiller
 	/// is in force.
 	/// </summary>
-	void SetNonDestructive(bool theFlag);
-	/// <summary>
+void SetNonDestructive(bool theFlag);
+		/// <summary>
 	/// Returns the flag that defines the mode of treatment.
 	/// In non-destructive mode the argument shapes are not modified. Instead
 	/// a copy of a sub-shape is created in the result if it is needed to be updated.
 	/// </summary>
-	bool NonDestructive();
-	/// <summary>
+bool NonDestructive();
+		/// <summary>
 	/// Sets the glue option for the algorithm
 	/// </summary>
-	void SetGlue(Macad::Occt::BOPAlgo_GlueEnum theGlue);
-	/// <summary>
+void SetGlue(Macad::Occt::BOPAlgo_GlueEnum theGlue);
+		/// <summary>
 	/// Returns the glue option of the algorithm
 	/// </summary>
-	Macad::Occt::BOPAlgo_GlueEnum Glue();
-	/// <summary>
+Macad::Occt::BOPAlgo_GlueEnum Glue();
+		/// <summary>
 	/// Enables/Disables the check of the input solids for inverted status
 	/// </summary>
-	void SetCheckInverted(bool theCheck);
-	/// <summary>
+void SetCheckInverted(bool theCheck);
+		/// <summary>
 	/// Returns the flag defining whether the check for input solids on inverted status
 	/// should be performed or not.
 	/// </summary>
-	bool CheckInverted();
-	/// <summary>
+bool CheckInverted();
+		/// <summary>
 	/// Performs the operation.
 	/// The intersection will be performed also.
 	/// </summary>
-	void Perform(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Perform(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Performs the operation.
 	/// The intersection will be performed also.
 	/// </summary>
-	void Perform();
-	/// <summary>
-	/// Performs the operation with the prepared filler.
-	/// The intersection will not be performed in this case.
-	/// </summary>
+void Perform();
 	/* Method skipped due to unknown mapping: void PerformWithFiller(BOPAlgo_PaveFiller theFiller, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Performs the operation with the prepared filler.
-	/// The intersection will not be performed in this case.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void PerformWithFiller(BOPAlgo_PaveFiller theFiller, Message_ProgressRange theRange, ) */
-	/// <summary>
+		/// <summary>
 	/// Builds the result shape according to the given states for the objects
 	/// and tools. These states can be unambiguously converted into the Boolean operation type.
 	/// Thus, it performs the Boolean operation on the given groups of shapes.
@@ -551,8 +522,8 @@ public:
 	/// <param name="theReport">
 	///      - The alternative report to avoid pollution of the main one.
 	/// </param>
-	void BuildBOP(Macad::Occt::TopTools_ListOfShape^ theObjects, Macad::Occt::TopAbs_State theObjState, Macad::Occt::TopTools_ListOfShape^ theTools, Macad::Occt::TopAbs_State theToolsState, Macad::Occt::Message_ProgressRange^ theRange, Macad::Occt::Message_Report^ theReport);
-	/// <summary>
+void BuildBOP(Macad::Occt::TopTools_ListOfShape^ theObjects, Macad::Occt::TopAbs_State theObjState, Macad::Occt::TopTools_ListOfShape^ theTools, Macad::Occt::TopAbs_State theToolsState, Macad::Occt::Message_ProgressRange^ theRange, Macad::Occt::Message_Report^ theReport);
+		/// <summary>
 	/// Builds the result shape according to the given states for the objects
 	/// and tools. These states can be unambiguously converted into the Boolean operation type.
 	/// Thus, it performs the Boolean operation on the given groups of shapes.
@@ -603,8 +574,8 @@ public:
 	/// <param name="theReport">
 	///      - The alternative report to avoid pollution of the main one.
 	/// </param>
-	void BuildBOP(Macad::Occt::TopTools_ListOfShape^ theObjects, Macad::Occt::TopAbs_State theObjState, Macad::Occt::TopTools_ListOfShape^ theTools, Macad::Occt::TopAbs_State theToolsState, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void BuildBOP(Macad::Occt::TopTools_ListOfShape^ theObjects, Macad::Occt::TopAbs_State theObjState, Macad::Occt::TopTools_ListOfShape^ theTools, Macad::Occt::TopAbs_State theToolsState, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Builds the result of Boolean operation of given type
 	/// basing on the result of Builder operation (GF or any other).
 	/// 
@@ -636,8 +607,8 @@ public:
 	/// <param name="theReport">
 	///    - The alternative report to avoid pollution of the global one.
 	/// </param>
-	void BuildBOP(Macad::Occt::TopTools_ListOfShape^ theObjects, Macad::Occt::TopTools_ListOfShape^ theTools, Macad::Occt::BOPAlgo_Operation theOperation, Macad::Occt::Message_ProgressRange^ theRange, Macad::Occt::Message_Report^ theReport);
-	/// <summary>
+void BuildBOP(Macad::Occt::TopTools_ListOfShape^ theObjects, Macad::Occt::TopTools_ListOfShape^ theTools, Macad::Occt::BOPAlgo_Operation theOperation, Macad::Occt::Message_ProgressRange^ theRange, Macad::Occt::Message_Report^ theReport);
+		/// <summary>
 	/// Builds the result of Boolean operation of given type
 	/// basing on the result of Builder operation (GF or any other).
 	/// 
@@ -669,20 +640,20 @@ public:
 	/// <param name="theReport">
 	///    - The alternative report to avoid pollution of the global one.
 	/// </param>
-	void BuildBOP(Macad::Occt::TopTools_ListOfShape^ theObjects, Macad::Occt::TopTools_ListOfShape^ theTools, Macad::Occt::BOPAlgo_Operation theOperation, Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void BuildBOP(Macad::Occt::TopTools_ListOfShape^ theObjects, Macad::Occt::TopTools_ListOfShape^ theTools, Macad::Occt::BOPAlgo_Operation theOperation, Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Returns the map of images.
 	/// </summary>
-	Macad::Occt::TopTools_DataMapOfShapeListOfShape^ Images();
-	/// <summary>
+Macad::Occt::TopTools_DataMapOfShapeListOfShape^ Images();
+		/// <summary>
 	/// Returns the map of origins.
 	/// </summary>
-	Macad::Occt::TopTools_DataMapOfShapeListOfShape^ Origins();
-	/// <summary>
+Macad::Occt::TopTools_DataMapOfShapeListOfShape^ Origins();
+		/// <summary>
 	/// Returns the map of Same Domain (SD) shapes - coinciding shapes
 	/// from different arguments.
 	/// </summary>
-	Macad::Occt::TopTools_DataMapOfShapeShape^ ShapesSD();
+Macad::Occt::TopTools_DataMapOfShapeShape^ ShapesSD();
 }; // class BOPAlgo_Builder
 
 //---------------------------------------------------------------------
@@ -722,28 +693,28 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BOPAlgo_ToolsProvider();
+BOPAlgo_ToolsProvider();
 	BOPAlgo_ToolsProvider(Macad::Occt::NCollection_BaseAllocator^ theAllocator);
 	BOPAlgo_ToolsProvider(Macad::Occt::BOPAlgo_ToolsProvider^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Clears internal fields and arguments
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Adds Tool argument of the operation
 	/// </summary>
-	void AddTool(Macad::Occt::TopoDS_Shape^ theShape);
-	/// <summary>
+void AddTool(Macad::Occt::TopoDS_Shape^ theShape);
+		/// <summary>
 	/// Adds the Tool arguments of the operation
 	/// </summary>
-	void SetTools(Macad::Occt::TopTools_ListOfShape^ theShapes);
-	/// <summary>
+void SetTools(Macad::Occt::TopTools_ListOfShape^ theShapes);
+		/// <summary>
 	/// Returns the Tool arguments of the operation
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Tools();
+Macad::Occt::TopTools_ListOfShape^ Tools();
 }; // class BOPAlgo_ToolsProvider
 
 //---------------------------------------------------------------------
@@ -816,16 +787,16 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	BOPAlgo_BOP();
+BOPAlgo_BOP();
 	BOPAlgo_BOP(Macad::Occt::NCollection_BaseAllocator^ theAllocator);
 	BOPAlgo_BOP(Macad::Occt::BOPAlgo_BOP^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Clears internal fields and arguments
 	/// </summary>
-	void Clear();
+void Clear();
 	void SetOperation(Macad::Occt::BOPAlgo_Operation theOperation);
 	Macad::Occt::BOPAlgo_Operation Operation();
 	void Perform(Macad::Occt::Message_ProgressRange^ theRange);
@@ -868,7 +839,7 @@ public:
 	BOPAlgo_Tools(Macad::Occt::BOPAlgo_Tools^ parameter1);
 	/* Method skipped due to unknown mapping: void FillMap(BOPDS_PaveBlock thePB1, Standard_Integer theF, BOPDS_IndexedDataMapOfPaveBlockListOfInteger theMILI, NCollection_BaseAllocator theAllocator, ) */
 	/* Method skipped due to unknown mapping: Standard_Real ComputeToleranceOfCB(BOPDS_CommonBlock theCB, BOPDS_DS theDS, IntTools_Context theContext, ) */
-	/// <summary>
+		/// <summary>
 	/// Creates planar wires from the given edges.<br>
 	/// The input edges are expected to be planar. And for the performance
 	/// sake the method does not check if the edges are really planar.<br>
@@ -889,8 +860,8 @@ public:
 	/// 1 - in case there are no edges in the given shape;<br>
 	/// 2 - sharing of the edges has failed.<br>
 	/// </summary>
-	static int EdgesToWires(Macad::Occt::TopoDS_Shape^ theEdges, Macad::Occt::TopoDS_Shape^ theWires, bool theShared, double theAngTol);
-	/// <summary>
+static int EdgesToWires(Macad::Occt::TopoDS_Shape^ theEdges, Macad::Occt::TopoDS_Shape^ theWires, bool theShared, double theAngTol);
+		/// <summary>
 	/// Creates planar wires from the given edges.<br>
 	/// The input edges are expected to be planar. And for the performance
 	/// sake the method does not check if the edges are really planar.<br>
@@ -911,8 +882,8 @@ public:
 	/// 1 - in case there are no edges in the given shape;<br>
 	/// 2 - sharing of the edges has failed.<br>
 	/// </summary>
-	static int EdgesToWires(Macad::Occt::TopoDS_Shape^ theEdges, Macad::Occt::TopoDS_Shape^ theWires, bool theShared);
-	/// <summary>
+static int EdgesToWires(Macad::Occt::TopoDS_Shape^ theEdges, Macad::Occt::TopoDS_Shape^ theWires, bool theShared);
+		/// <summary>
 	/// Creates planar wires from the given edges.<br>
 	/// The input edges are expected to be planar. And for the performance
 	/// sake the method does not check if the edges are really planar.<br>
@@ -933,8 +904,8 @@ public:
 	/// 1 - in case there are no edges in the given shape;<br>
 	/// 2 - sharing of the edges has failed.<br>
 	/// </summary>
-	static int EdgesToWires(Macad::Occt::TopoDS_Shape^ theEdges, Macad::Occt::TopoDS_Shape^ theWires);
-	/// <summary>
+static int EdgesToWires(Macad::Occt::TopoDS_Shape^ theEdges, Macad::Occt::TopoDS_Shape^ theWires);
+		/// <summary>
 	/// Creates planar faces from given planar wires.<br>
 	/// The method does not check if the wires are really planar.<br>
 	/// The input wires may be non-manifold but should be shared.<br>
@@ -950,8 +921,8 @@ public:
 	/// for intersection of planes in IntTools_FaceFace.<br>
 	/// Method returns TRUE in case of success, i.e. at least one face has been built.<br>
 	/// </summary>
-	static bool WiresToFaces(Macad::Occt::TopoDS_Shape^ theWires, Macad::Occt::TopoDS_Shape^ theFaces, double theAngTol);
-	/// <summary>
+static bool WiresToFaces(Macad::Occt::TopoDS_Shape^ theWires, Macad::Occt::TopoDS_Shape^ theFaces, double theAngTol);
+		/// <summary>
 	/// Creates planar faces from given planar wires.<br>
 	/// The method does not check if the wires are really planar.<br>
 	/// The input wires may be non-manifold but should be shared.<br>
@@ -967,94 +938,17 @@ public:
 	/// for intersection of planes in IntTools_FaceFace.<br>
 	/// Method returns TRUE in case of success, i.e. at least one face has been built.<br>
 	/// </summary>
-	static bool WiresToFaces(Macad::Occt::TopoDS_Shape^ theWires, Macad::Occt::TopoDS_Shape^ theFaces);
-	/// <summary>
+static bool WiresToFaces(Macad::Occt::TopoDS_Shape^ theWires, Macad::Occt::TopoDS_Shape^ theFaces);
+		/// <summary>
 	/// Finds chains of intersecting vertices
 	/// </summary>
-	static void IntersectVertices(Macad::Occt::TopTools_IndexedDataMapOfShapeReal^ theVertices, double theFuzzyValue, Macad::Occt::TopTools_ListOfListOfShape^ theChains);
-	/// <summary>
-	/// Classifies the faces <theFaces> relatively solids <theSolids>.
-	/// The IN faces for solids are stored into output data map <theInParts>.
-	/// 
-	/// The map <theSolidsIF> contains INTERNAL faces of the solids, to avoid
-	/// their additional classification.
-	/// 
-	/// Firstly, it checks the intersection of bounding boxes of the shapes.
-	/// If the Box is not stored in the <theShapeBoxMap> map, it builds the box.
-	/// If the bounding boxes of solid and face are interfering the classification is performed.
-	/// 
-	/// It is assumed that all faces and solids are already intersected and
-	/// do not have any geometrically coinciding parts without topological
-	/// sharing of these parts
-	/// </summary>
+static void IntersectVertices(Macad::Occt::TopTools_IndexedDataMapOfShapeReal^ theVertices, double theFuzzyValue, Macad::Occt::TopTools_ListOfListOfShape^ theChains);
 	/* Method skipped due to unknown mapping: void ClassifyFaces(TopTools_ListOfShape theFaces, TopTools_ListOfShape theSolids, Standard_Boolean theRunParallel, IntTools_Context theContext, TopTools_IndexedDataMapOfShapeListOfShape theInParts, TopTools_DataMapOfShapeBox theShapeBoxMap, TopTools_DataMapOfShapeListOfShape theSolidsIF, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Classifies the faces <theFaces> relatively solids <theSolids>.
-	/// The IN faces for solids are stored into output data map <theInParts>.
-	/// 
-	/// The map <theSolidsIF> contains INTERNAL faces of the solids, to avoid
-	/// their additional classification.
-	/// 
-	/// Firstly, it checks the intersection of bounding boxes of the shapes.
-	/// If the Box is not stored in the <theShapeBoxMap> map, it builds the box.
-	/// If the bounding boxes of solid and face are interfering the classification is performed.
-	/// 
-	/// It is assumed that all faces and solids are already intersected and
-	/// do not have any geometrically coinciding parts without topological
-	/// sharing of these parts
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ClassifyFaces(TopTools_ListOfShape theFaces, TopTools_ListOfShape theSolids, Standard_Boolean theRunParallel, IntTools_Context theContext, TopTools_IndexedDataMapOfShapeListOfShape theInParts, TopTools_DataMapOfShapeBox theShapeBoxMap, TopTools_DataMapOfShapeListOfShape theSolidsIF, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Classifies the faces <theFaces> relatively solids <theSolids>.
-	/// The IN faces for solids are stored into output data map <theInParts>.
-	/// 
-	/// The map <theSolidsIF> contains INTERNAL faces of the solids, to avoid
-	/// their additional classification.
-	/// 
-	/// Firstly, it checks the intersection of bounding boxes of the shapes.
-	/// If the Box is not stored in the <theShapeBoxMap> map, it builds the box.
-	/// If the bounding boxes of solid and face are interfering the classification is performed.
-	/// 
-	/// It is assumed that all faces and solids are already intersected and
-	/// do not have any geometrically coinciding parts without topological
-	/// sharing of these parts
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ClassifyFaces(TopTools_ListOfShape theFaces, TopTools_ListOfShape theSolids, Standard_Boolean theRunParallel, IntTools_Context theContext, TopTools_IndexedDataMapOfShapeListOfShape theInParts, TopTools_DataMapOfShapeBox theShapeBoxMap, TopTools_DataMapOfShapeListOfShape theSolidsIF, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Classifies the faces <theFaces> relatively solids <theSolids>.
-	/// The IN faces for solids are stored into output data map <theInParts>.
-	/// 
-	/// The map <theSolidsIF> contains INTERNAL faces of the solids, to avoid
-	/// their additional classification.
-	/// 
-	/// Firstly, it checks the intersection of bounding boxes of the shapes.
-	/// If the Box is not stored in the <theShapeBoxMap> map, it builds the box.
-	/// If the bounding boxes of solid and face are interfering the classification is performed.
-	/// 
-	/// It is assumed that all faces and solids are already intersected and
-	/// do not have any geometrically coinciding parts without topological
-	/// sharing of these parts
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ClassifyFaces(TopTools_ListOfShape theFaces, TopTools_ListOfShape theSolids, Standard_Boolean theRunParallel, IntTools_Context theContext, TopTools_IndexedDataMapOfShapeListOfShape theInParts, TopTools_DataMapOfShapeBox theShapeBoxMap, TopTools_DataMapOfShapeListOfShape theSolidsIF, Message_ProgressRange theRange, ) */
-	/// <summary>
-	/// Classifies the given parts relatively the given solids and
-	/// fills the solids with the parts classified as INTERNAL.
-	/// 
-	/// </summary>
-	/// <param name="theSolids">
-	///  - The solids to put internals to
-	/// </param>
-	/// <param name="theParts">
-	///   - The parts to classify relatively solids
-	/// </param>
-	/// <param name="theImages">
-	///  - Possible images of the parts that has to be classified
-	/// </param>
-	/// <param name="theContext">
-	/// - cached geometrical tools to speed-up classifications
-	/// </param>
 	/* Method skipped due to unknown mapping: void FillInternals(TopTools_ListOfShape theSolids, TopTools_ListOfShape theParts, TopTools_DataMapOfShapeListOfShape theImages, IntTools_Context theContext, ) */
-	/// <summary>
+		/// <summary>
 	/// Computes the transformation needed to move the objects
 	/// to the given point to increase the quality of computations.
 	/// Returns true if the objects are located far from the given point
@@ -1075,8 +969,8 @@ public:
 	/// <param name="theCriteria">
 	/// the Criteria to check whether thranformation is required
 	/// </param>
-	static bool TrsfToPoint(Macad::Occt::Bnd_Box^ theBox1, Macad::Occt::Bnd_Box^ theBox2, Macad::Occt::Trsf% theTrsf, Macad::Occt::Pnt thePoint, double theCriteria);
-	/// <summary>
+static bool TrsfToPoint(Macad::Occt::Bnd_Box^ theBox1, Macad::Occt::Bnd_Box^ theBox2, Macad::Occt::Trsf% theTrsf, Macad::Occt::Pnt thePoint, double theCriteria);
+		/// <summary>
 	/// Computes the transformation needed to move the objects
 	/// to the given point to increase the quality of computations.
 	/// Returns true if the objects are located far from the given point
@@ -1097,8 +991,8 @@ public:
 	/// <param name="theCriteria">
 	/// the Criteria to check whether thranformation is required
 	/// </param>
-	static bool TrsfToPoint(Macad::Occt::Bnd_Box^ theBox1, Macad::Occt::Bnd_Box^ theBox2, Macad::Occt::Trsf% theTrsf, Macad::Occt::Pnt thePoint);
-	/// <summary>
+static bool TrsfToPoint(Macad::Occt::Bnd_Box^ theBox1, Macad::Occt::Bnd_Box^ theBox2, Macad::Occt::Trsf% theTrsf, Macad::Occt::Pnt thePoint);
+		/// <summary>
 	/// Computes the transformation needed to move the objects
 	/// to the given point to increase the quality of computations.
 	/// Returns true if the objects are located far from the given point
@@ -1119,7 +1013,7 @@ public:
 	/// <param name="theCriteria">
 	/// the Criteria to check whether thranformation is required
 	/// </param>
-	static bool TrsfToPoint(Macad::Occt::Bnd_Box^ theBox1, Macad::Occt::Bnd_Box^ theBox2, Macad::Occt::Trsf% theTrsf);
+static bool TrsfToPoint(Macad::Occt::Bnd_Box^ theBox1, Macad::Occt::Bnd_Box^ theBox2, Macad::Occt::Trsf% theTrsf);
 }; // class BOPAlgo_Tools
 
 }; // namespace Occt

@@ -58,7 +58,7 @@ public:
 public:
 	BndLib();
 	BndLib(Macad::Occt::BndLib^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Bounding box for a surface trimmed or not
 	/// Adds the segment of the line L limited by the two
 	/// parameter values P1 and P2, to the bounding box B, and
@@ -69,36 +69,36 @@ public:
 	/// Standard_Failure if P1 and P2 are either two negative
 	/// infinite real numbers, or two positive infinite real numbers.
 	/// </summary>
-	static void Add(Macad::Occt::gp_Lin^ L, double P1, double P2, double Tol, Macad::Occt::Bnd_Box^ B);
+static void Add(Macad::Occt::gp_Lin^ L, double P1, double P2, double Tol, Macad::Occt::Bnd_Box^ B);
 	static void Add(Macad::Occt::gp_Lin2d^ L, double P1, double P2, double Tol, Macad::Occt::Bnd_Box2d^ B);
 	static void Add(Macad::Occt::gp_Circ^ C, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+		/// <summary>
 	/// P2-P1 can be in [0,2*pi]
 	/// </summary>
-	static void Add(Macad::Occt::gp_Circ^ C, double P1, double P2, double Tol, Macad::Occt::Bnd_Box^ B);
+static void Add(Macad::Occt::gp_Circ^ C, double P1, double P2, double Tol, Macad::Occt::Bnd_Box^ B);
 	static void Add(Macad::Occt::gp_Circ2d^ C, double Tol, Macad::Occt::Bnd_Box2d^ B);
-	/// <summary>
+		/// <summary>
 	/// Adds the circle C, or the arc of the circle C
 	/// limited by the two parameter values P1 and P2,
 	/// to the bounding box B, and then enlarges B by the tolerance value Tol.
 	/// P2-P1 can be in [0,2*pi]
 	/// </summary>
-	static void Add(Macad::Occt::gp_Circ2d^ C, double P1, double P2, double Tol, Macad::Occt::Bnd_Box2d^ B);
+static void Add(Macad::Occt::gp_Circ2d^ C, double P1, double P2, double Tol, Macad::Occt::Bnd_Box2d^ B);
 	static void Add(Macad::Occt::gp_Elips^ C, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+		/// <summary>
 	/// P2-P1 can be in [0,2*pi]
 	/// </summary>
-	static void Add(Macad::Occt::gp_Elips^ C, double P1, double P2, double Tol, Macad::Occt::Bnd_Box^ B);
+static void Add(Macad::Occt::gp_Elips^ C, double P1, double P2, double Tol, Macad::Occt::Bnd_Box^ B);
 	static void Add(Macad::Occt::gp_Elips2d^ C, double Tol, Macad::Occt::Bnd_Box2d^ B);
-	/// <summary>
+		/// <summary>
 	/// Adds the ellipse E, or the arc of the ellipse E
 	/// limited by the two parameter values P1 and P2,
 	/// to the bounding box B, and then enlarges B by the tolerance value Tol.
 	/// P2-P1 can be in [0,2*pi]
 	/// </summary>
-	static void Add(Macad::Occt::gp_Elips2d^ C, double P1, double P2, double Tol, Macad::Occt::Bnd_Box2d^ B);
+static void Add(Macad::Occt::gp_Elips2d^ C, double P1, double P2, double Tol, Macad::Occt::Bnd_Box2d^ B);
 	static void Add(Macad::Occt::gp_Parab^ P, double P1, double P2, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+		/// <summary>
 	/// Adds the arc of the parabola P limited by the two
 	/// parameter values P1 and P2, to the bounding box B, and
 	/// then enlarges B by the tolerance value Tol.
@@ -107,9 +107,9 @@ public:
 	/// Standard_Failure if P1 and P2 are either two negative
 	/// infinite real numbers, or two positive infinite real numbers.
 	/// </summary>
-	static void Add(Macad::Occt::gp_Parab2d^ P, double P1, double P2, double Tol, Macad::Occt::Bnd_Box2d^ B);
+static void Add(Macad::Occt::gp_Parab2d^ P, double P1, double P2, double Tol, Macad::Occt::Bnd_Box2d^ B);
 	static void Add(Macad::Occt::gp_Hypr^ H, double P1, double P2, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+		/// <summary>
 	/// Adds the arc of the branch of hyperbola H limited by the
 	/// two parameter values P1 and P2, to the bounding box B,
 	/// and then enlarges B by the tolerance value Tol.
@@ -118,12 +118,12 @@ public:
 	/// Standard_Failure if P1 and P2 are either two negative
 	/// infinite real numbers, or two positive infinite real numbers.
 	/// </summary>
-	static void Add(Macad::Occt::gp_Hypr2d^ H, double P1, double P2, double Tol, Macad::Occt::Bnd_Box2d^ B);
-	/// <summary>
+static void Add(Macad::Occt::gp_Hypr2d^ H, double P1, double P2, double Tol, Macad::Occt::Bnd_Box2d^ B);
+		/// <summary>
 	/// UMax -UMin can be in [0,2*pi]
 	/// </summary>
-	static void Add(Macad::Occt::gp_Cylinder^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+static void Add(Macad::Occt::gp_Cylinder^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
+		/// <summary>
 	/// Adds to the bounding box B, the patch of the cylinder S limited
 	/// -   in the v parametric direction, by the two parameter
 	/// values VMin and VMax
@@ -135,12 +135,12 @@ public:
 	/// Standard_Failure if VMin and VMax are either two
 	/// negative infinite real numbers, or two positive infinite real numbers.
 	/// </summary>
-	static void Add(Macad::Occt::gp_Cylinder^ S, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+static void Add(Macad::Occt::gp_Cylinder^ S, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
+		/// <summary>
 	/// UMax-UMin can be in [0,2*pi]
 	/// </summary>
-	static void Add(Macad::Occt::gp_Cone^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+static void Add(Macad::Occt::gp_Cone^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
+		/// <summary>
 	/// Adds to the bounding box B, the patch of the cone S limited
 	/// -   in the v parametric direction, by the two parameter
 	/// values VMin and VMax
@@ -152,9 +152,9 @@ public:
 	/// Standard_Failure if VMin and VMax are either two
 	/// negative infinite real numbers, or two positive infinite real numbers.
 	/// </summary>
-	static void Add(Macad::Occt::gp_Cone^ S, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
+static void Add(Macad::Occt::gp_Cone^ S, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
 	static void Add(Macad::Occt::gp_Sphere^ S, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+		/// <summary>
 	/// Adds to the bounding box B the sphere S, or
 	/// -   the patch of the sphere S, limited in the u parametric
 	/// direction, by the two parameter values UMin and UMax,
@@ -164,9 +164,9 @@ public:
 	/// UMax-UMin can be in [0,2*pi]
 	/// VMin,VMax can be [-pi/2,pi/2]
 	/// </summary>
-	static void Add(Macad::Occt::gp_Sphere^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
+static void Add(Macad::Occt::gp_Sphere^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
 	static void Add(Macad::Occt::gp_Torus^ P, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+		/// <summary>
 	/// Adds to the bounding box B
 	/// -   the torus S, or
 	/// -   the patch of the torus S, limited in the u parametric
@@ -177,7 +177,7 @@ public:
 	/// UMax-UMin can be in [0,2*pi],
 	/// VMin,VMax can be [-pi/2,pi/2]
 	/// </summary>
-	static void Add(Macad::Occt::gp_Torus^ P, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
+static void Add(Macad::Occt::gp_Torus^ P, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
 }; // class BndLib
 
 //---------------------------------------------------------------------
@@ -216,7 +216,7 @@ public:
 public:
 	BndLib_Add2dCurve();
 	BndLib_Add2dCurve(Macad::Occt::BndLib_Add2dCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Adds to the bounding box B the curve C
 	/// B is then enlarged by the tolerance value Tol.
 	/// Note: depending on the type of curve, one of the following
@@ -245,8 +245,8 @@ public:
 	/// and P1 and P2 are either two negative infinite real
 	/// numbers, or two positive infinite real numbers.
 	/// </summary>
-	static void Add(Macad::Occt::Adaptor2d_Curve2d^ C, double Tol, Macad::Occt::Bnd_Box2d^ B);
-	/// <summary>
+static void Add(Macad::Occt::Adaptor2d_Curve2d^ C, double Tol, Macad::Occt::Bnd_Box2d^ B);
+		/// <summary>
 	/// Adds to the bounding box Bthe arc of the curve C limited by the two parameter
 	/// values P1 and P2.
 	/// B is then enlarged by the tolerance value Tol.
@@ -276,8 +276,8 @@ public:
 	/// and P1 and P2 are either two negative infinite real
 	/// numbers, or two positive infinite real numbers.
 	/// </summary>
-	static void Add(Macad::Occt::Adaptor2d_Curve2d^ C, double U1, double U2, double Tol, Macad::Occt::Bnd_Box2d^ B);
-	/// <summary>
+static void Add(Macad::Occt::Adaptor2d_Curve2d^ C, double U1, double U2, double Tol, Macad::Occt::Bnd_Box2d^ B);
+		/// <summary>
 	/// Adds to the bounding box B the curve C
 	/// B is then enlarged by the tolerance value Tol.
 	/// Note: depending on the type of curve, one of the following
@@ -286,8 +286,8 @@ public:
 	/// -   the poles of the curve if C is built from a Bezier curve or a BSpline curve,
 	/// -   if not, the points of an approximation of the curve C.
 	/// </summary>
-	static void Add(Macad::Occt::Geom2d_Curve^ C, double Tol, Macad::Occt::Bnd_Box2d^ Box);
-	/// <summary>
+static void Add(Macad::Occt::Geom2d_Curve^ C, double Tol, Macad::Occt::Bnd_Box2d^ Box);
+		/// <summary>
 	/// Adds to the bounding box B the part of curve C
 	/// B is then enlarged by the tolerance value Tol.
 	/// U1, U2 - the parametric range to compute the bounding box;
@@ -297,8 +297,8 @@ public:
 	/// -   the poles of the curve if C is built from a Bezier curve or a BSpline curve,
 	/// -   if not, the points of an approximation of the curve C.
 	/// </summary>
-	static void Add(Macad::Occt::Geom2d_Curve^ C, double U1, double U2, double Tol, Macad::Occt::Bnd_Box2d^ B);
-	/// <summary>
+static void Add(Macad::Occt::Geom2d_Curve^ C, double U1, double U2, double Tol, Macad::Occt::Bnd_Box2d^ B);
+		/// <summary>
 	/// Adds to the bounding box B the part of curve C
 	/// B is then enlarged by the tolerance value Tol.
 	/// U1, U2 - the parametric range to compute the bounding box;
@@ -308,7 +308,7 @@ public:
 	/// -   numerical calculation of bounding box sizes, based on minimization algorithm,  for other types of curve
 	/// If Tol = < Precision::PConfusion(), Precision::PConfusion is used as tolerance for calculation
 	/// </summary>
-	static void AddOptimal(Macad::Occt::Geom2d_Curve^ C, double U1, double U2, double Tol, Macad::Occt::Bnd_Box2d^ B);
+static void AddOptimal(Macad::Occt::Geom2d_Curve^ C, double U1, double U2, double Tol, Macad::Occt::Bnd_Box2d^ B);
 }; // class BndLib_Add2dCurve
 
 //---------------------------------------------------------------------
@@ -347,7 +347,7 @@ public:
 public:
 	BndLib_Add3dCurve();
 	BndLib_Add3dCurve(Macad::Occt::BndLib_Add3dCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Adds to the bounding box B the curve C
 	/// B is then enlarged by the tolerance value Tol.
 	/// Note: depending on the type of curve, one of the following
@@ -375,8 +375,8 @@ public:
 	/// and P1 and P2 are either two negative infinite real
 	/// numbers, or two positive infinite real numbers.
 	/// </summary>
-	static void Add(Macad::Occt::Adaptor3d_Curve^ C, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+static void Add(Macad::Occt::Adaptor3d_Curve^ C, double Tol, Macad::Occt::Bnd_Box^ B);
+		/// <summary>
 	/// Adds to the bounding box B the curve C
 	/// the arc of the curve C limited by the two parameter values P1 and P2.
 	/// Note: depending on the type of curve, one of the following
@@ -404,21 +404,21 @@ public:
 	/// and P1 and P2 are either two negative infinite real
 	/// numbers, or two positive infinite real numbers.
 	/// </summary>
-	static void Add(Macad::Occt::Adaptor3d_Curve^ C, double U1, double U2, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+static void Add(Macad::Occt::Adaptor3d_Curve^ C, double U1, double U2, double Tol, Macad::Occt::Bnd_Box^ B);
+		/// <summary>
 	/// Adds to the bounding box B the curve C
 	/// These methods use more precise algorithms for building bnd box
 	/// then methods Add(...)
 	/// </summary>
-	static void AddOptimal(Macad::Occt::Adaptor3d_Curve^ C, double Tol, Macad::Occt::Bnd_Box^ B);
+static void AddOptimal(Macad::Occt::Adaptor3d_Curve^ C, double Tol, Macad::Occt::Bnd_Box^ B);
 	static void AddOptimal(Macad::Occt::Adaptor3d_Curve^ C, double U1, double U2, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+		/// <summary>
 	/// Adds to the bounding box B the curve C
 	/// using numerical minimization algorithms
 	/// This method is used in AddOptimal for not analytical curves.
 	/// if Tol < Precision::Confusion(), Precision:;Confusion is used as computation tolerance
 	/// </summary>
-	static void AddGenCurv(Macad::Occt::Adaptor3d_Curve^ C, double UMin, double UMax, double Tol, Macad::Occt::Bnd_Box^ B);
+static void AddGenCurv(Macad::Occt::Adaptor3d_Curve^ C, double UMin, double UMax, double Tol, Macad::Occt::Bnd_Box^ B);
 }; // class BndLib_Add3dCurve
 
 //---------------------------------------------------------------------
@@ -457,7 +457,7 @@ public:
 public:
 	BndLib_AddSurface();
 	BndLib_AddSurface(Macad::Occt::BndLib_AddSurface^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Adds to the bounding box B the surface S
 	/// B is then enlarged by the tolerance value Tol.
 	/// Note: depending on the type of curve, one of the following
@@ -487,8 +487,8 @@ public:
 	/// Standard_Real Tol = ... ;
 	/// AddSurface::Add ( S, Tol, B );
 	/// </summary>
-	static void Add(Macad::Occt::Adaptor3d_Surface^ S, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+static void Add(Macad::Occt::Adaptor3d_Surface^ S, double Tol, Macad::Occt::Bnd_Box^ B);
+		/// <summary>
 	/// Adds to the bounding box B the surface S
 	/// the patch of the surface S limited in the u parametric
 	/// direction by the two parameter values UMin, UMax, and
@@ -521,20 +521,20 @@ public:
 	/// Standard_Real Tol = ... ;
 	/// AddSurface::Add ( S, Tol, B );
 	/// </summary>
-	static void Add(Macad::Occt::Adaptor3d_Surface^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+static void Add(Macad::Occt::Adaptor3d_Surface^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
+		/// <summary>
 	/// Adds the surface S to the bounding box B.
 	/// This algorithm builds precise bounding box
 	/// </summary>
-	static void AddOptimal(Macad::Occt::Adaptor3d_Surface^ S, double Tol, Macad::Occt::Bnd_Box^ B);
+static void AddOptimal(Macad::Occt::Adaptor3d_Surface^ S, double Tol, Macad::Occt::Bnd_Box^ B);
 	static void AddOptimal(Macad::Occt::Adaptor3d_Surface^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
-	/// <summary>
+		/// <summary>
 	/// Adds to the bounding box B the surface S
 	/// using numerical minimization algorithms
 	/// This method is used in AddOptimal for not analytical surfaces and torus.
 	/// if Tol < Precision::Confusion(), Precision::Confusion is used as computation tolerance
 	/// </summary>
-	static void AddGenSurf(Macad::Occt::Adaptor3d_Surface^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
+static void AddGenSurf(Macad::Occt::Adaptor3d_Surface^ S, double UMin, double UMax, double VMin, double VMax, double Tol, Macad::Occt::Bnd_Box^ B);
 }; // class BndLib_AddSurface
 
 }; // namespace Occt

@@ -53,7 +53,7 @@ public:
 public:
 	BRepGProp();
 	BRepGProp(Macad::Occt::BRepGProp^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Computes the linear global properties of the shape S,
 	/// i.e. the global properties induced by each edge of the
 	/// shape S, and brings them together with the global
@@ -94,8 +94,8 @@ public:
 	/// exact geometry objects (curves) are used, otherwise polygons of
 	/// triangulation are used first.
 	/// </summary>
-	static void LinearProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ LProps, bool SkipShared, bool UseTriangulation);
-	/// <summary>
+static void LinearProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ LProps, bool SkipShared, bool UseTriangulation);
+		/// <summary>
 	/// Computes the linear global properties of the shape S,
 	/// i.e. the global properties induced by each edge of the
 	/// shape S, and brings them together with the global
@@ -136,8 +136,8 @@ public:
 	/// exact geometry objects (curves) are used, otherwise polygons of
 	/// triangulation are used first.
 	/// </summary>
-	static void LinearProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ LProps, bool SkipShared);
-	/// <summary>
+static void LinearProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ LProps, bool SkipShared);
+		/// <summary>
 	/// Computes the linear global properties of the shape S,
 	/// i.e. the global properties induced by each edge of the
 	/// shape S, and brings them together with the global
@@ -178,8 +178,8 @@ public:
 	/// exact geometry objects (curves) are used, otherwise polygons of
 	/// triangulation are used first.
 	/// </summary>
-	static void LinearProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ LProps);
-	/// <summary>
+static void LinearProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ LProps);
+		/// <summary>
 	/// Computes the surface global properties of the
 	/// shape S, i.e. the global properties induced by each
 	/// face of the shape S, and brings them together with
@@ -221,8 +221,8 @@ public:
 	/// exact geometry objects (surfaces) are used,
 	/// otherwise face triangulations are used first.
 	/// </summary>
-	static void SurfaceProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ SProps, bool SkipShared, bool UseTriangulation);
-	/// <summary>
+static void SurfaceProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ SProps, bool SkipShared, bool UseTriangulation);
+		/// <summary>
 	/// Computes the surface global properties of the
 	/// shape S, i.e. the global properties induced by each
 	/// face of the shape S, and brings them together with
@@ -264,8 +264,8 @@ public:
 	/// exact geometry objects (surfaces) are used,
 	/// otherwise face triangulations are used first.
 	/// </summary>
-	static void SurfaceProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ SProps, bool SkipShared);
-	/// <summary>
+static void SurfaceProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ SProps, bool SkipShared);
+		/// <summary>
 	/// Computes the surface global properties of the
 	/// shape S, i.e. the global properties induced by each
 	/// face of the shape S, and brings them together with
@@ -307,8 +307,8 @@ public:
 	/// exact geometry objects (surfaces) are used,
 	/// otherwise face triangulations are used first.
 	/// </summary>
-	static void SurfaceProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ SProps);
-	/// <summary>
+static void SurfaceProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ SProps);
+		/// <summary>
 	/// Updates <SProps> with the shape <S>, that contains its principal properties.
 	/// The surface properties of all the faces in <S> are computed.
 	/// Adaptive 2D Gauss integration is used.
@@ -322,8 +322,8 @@ public:
 	/// For ex., if SkipShared = True, faces, shared by two or more shells,
 	/// are taken into calculation only once.
 	/// </summary>
-	static double SurfaceProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ SProps, double Eps, bool SkipShared);
-	/// <summary>
+static double SurfaceProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ SProps, double Eps, bool SkipShared);
+		/// <summary>
 	/// Updates <SProps> with the shape <S>, that contains its principal properties.
 	/// The surface properties of all the faces in <S> are computed.
 	/// Adaptive 2D Gauss integration is used.
@@ -337,8 +337,8 @@ public:
 	/// For ex., if SkipShared = True, faces, shared by two or more shells,
 	/// are taken into calculation only once.
 	/// </summary>
-	static double SurfaceProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ SProps, double Eps);
-	/// <summary>
+static double SurfaceProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ SProps, double Eps);
+		/// <summary>
 	/// 
 	/// Computes the global volume properties of the solid
 	/// S, and brings them together with the global
@@ -382,8 +382,8 @@ public:
 	/// exact geometry objects (surfaces) are used,
 	/// otherwise face triangulations are used first.
 	/// </summary>
-	static void VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, bool OnlyClosed, bool SkipShared, bool UseTriangulation);
-	/// <summary>
+static void VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, bool OnlyClosed, bool SkipShared, bool UseTriangulation);
+		/// <summary>
 	/// 
 	/// Computes the global volume properties of the solid
 	/// S, and brings them together with the global
@@ -427,8 +427,8 @@ public:
 	/// exact geometry objects (surfaces) are used,
 	/// otherwise face triangulations are used first.
 	/// </summary>
-	static void VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, bool OnlyClosed, bool SkipShared);
-	/// <summary>
+static void VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, bool OnlyClosed, bool SkipShared);
+		/// <summary>
 	/// 
 	/// Computes the global volume properties of the solid
 	/// S, and brings them together with the global
@@ -472,8 +472,8 @@ public:
 	/// exact geometry objects (surfaces) are used,
 	/// otherwise face triangulations are used first.
 	/// </summary>
-	static void VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, bool OnlyClosed);
-	/// <summary>
+static void VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, bool OnlyClosed);
+		/// <summary>
 	/// 
 	/// Computes the global volume properties of the solid
 	/// S, and brings them together with the global
@@ -517,8 +517,8 @@ public:
 	/// exact geometry objects (surfaces) are used,
 	/// otherwise face triangulations are used first.
 	/// </summary>
-	static void VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps);
-	/// <summary>
+static void VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps);
+		/// <summary>
 	/// Updates <VProps> with the shape <S>, that contains its principal properties.
 	/// The volume properties of all the FORWARD and REVERSED faces in <S> are computed.
 	/// If OnlyClosed is True then computed faces must belong to closed Shells.
@@ -534,8 +534,8 @@ public:
 	/// (the same TShape, location and orientation)
 	/// faces are taken into calculation only once.
 	/// </summary>
-	static double VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed, bool SkipShared);
-	/// <summary>
+static double VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed, bool SkipShared);
+		/// <summary>
 	/// Updates <VProps> with the shape <S>, that contains its principal properties.
 	/// The volume properties of all the FORWARD and REVERSED faces in <S> are computed.
 	/// If OnlyClosed is True then computed faces must belong to closed Shells.
@@ -551,8 +551,8 @@ public:
 	/// (the same TShape, location and orientation)
 	/// faces are taken into calculation only once.
 	/// </summary>
-	static double VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed);
-	/// <summary>
+static double VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed);
+		/// <summary>
 	/// Updates <VProps> with the shape <S>, that contains its principal properties.
 	/// The volume properties of all the FORWARD and REVERSED faces in <S> are computed.
 	/// If OnlyClosed is True then computed faces must belong to closed Shells.
@@ -568,8 +568,8 @@ public:
 	/// (the same TShape, location and orientation)
 	/// faces are taken into calculation only once.
 	/// </summary>
-	static double VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps);
-	/// <summary>
+static double VolumeProperties(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps);
+		/// <summary>
 	/// Updates <VProps> with the shape <S>, that contains its principal properties.
 	/// The volume properties of all the FORWARD and REVERSED faces in <S> are computed.
 	/// If OnlyClosed is True then computed faces must belong to closed Shells.
@@ -586,8 +586,8 @@ public:
 	/// For ex., if SkipShared = True, the volumes formed by the equal
 	/// (the same TShape, location and orientation) faces are taken into calculation only once.
 	/// </summary>
-	static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed, bool IsUseSpan, bool CGFlag, bool IFlag, bool SkipShared);
-	/// <summary>
+static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed, bool IsUseSpan, bool CGFlag, bool IFlag, bool SkipShared);
+		/// <summary>
 	/// Updates <VProps> with the shape <S>, that contains its principal properties.
 	/// The volume properties of all the FORWARD and REVERSED faces in <S> are computed.
 	/// If OnlyClosed is True then computed faces must belong to closed Shells.
@@ -604,8 +604,8 @@ public:
 	/// For ex., if SkipShared = True, the volumes formed by the equal
 	/// (the same TShape, location and orientation) faces are taken into calculation only once.
 	/// </summary>
-	static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed, bool IsUseSpan, bool CGFlag, bool IFlag);
-	/// <summary>
+static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed, bool IsUseSpan, bool CGFlag, bool IFlag);
+		/// <summary>
 	/// Updates <VProps> with the shape <S>, that contains its principal properties.
 	/// The volume properties of all the FORWARD and REVERSED faces in <S> are computed.
 	/// If OnlyClosed is True then computed faces must belong to closed Shells.
@@ -622,8 +622,8 @@ public:
 	/// For ex., if SkipShared = True, the volumes formed by the equal
 	/// (the same TShape, location and orientation) faces are taken into calculation only once.
 	/// </summary>
-	static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed, bool IsUseSpan, bool CGFlag);
-	/// <summary>
+static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed, bool IsUseSpan, bool CGFlag);
+		/// <summary>
 	/// Updates <VProps> with the shape <S>, that contains its principal properties.
 	/// The volume properties of all the FORWARD and REVERSED faces in <S> are computed.
 	/// If OnlyClosed is True then computed faces must belong to closed Shells.
@@ -640,8 +640,8 @@ public:
 	/// For ex., if SkipShared = True, the volumes formed by the equal
 	/// (the same TShape, location and orientation) faces are taken into calculation only once.
 	/// </summary>
-	static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed, bool IsUseSpan);
-	/// <summary>
+static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed, bool IsUseSpan);
+		/// <summary>
 	/// Updates <VProps> with the shape <S>, that contains its principal properties.
 	/// The volume properties of all the FORWARD and REVERSED faces in <S> are computed.
 	/// If OnlyClosed is True then computed faces must belong to closed Shells.
@@ -658,8 +658,8 @@ public:
 	/// For ex., if SkipShared = True, the volumes formed by the equal
 	/// (the same TShape, location and orientation) faces are taken into calculation only once.
 	/// </summary>
-	static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed);
-	/// <summary>
+static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps, bool OnlyClosed);
+		/// <summary>
 	/// Updates <VProps> with the shape <S>, that contains its principal properties.
 	/// The volume properties of all the FORWARD and REVERSED faces in <S> are computed.
 	/// If OnlyClosed is True then computed faces must belong to closed Shells.
@@ -676,8 +676,8 @@ public:
 	/// For ex., if SkipShared = True, the volumes formed by the equal
 	/// (the same TShape, location and orientation) faces are taken into calculation only once.
 	/// </summary>
-	static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps);
-	/// <summary>
+static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, double Eps);
+		/// <summary>
 	/// Updates <VProps> with the shape <S>, that contains its principal properties.
 	/// The volume properties of all the FORWARD and REVERSED faces in <S> are computed.
 	/// If OnlyClosed is True then computed faces must belong to closed Shells.
@@ -694,7 +694,7 @@ public:
 	/// For ex., if SkipShared = True, the volumes formed by the equal
 	/// (the same TShape, location and orientation) faces are taken into calculation only once.
 	/// </summary>
-	static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps);
+static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps);
 	static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, Macad::Occt::Pln thePln, double Eps, bool OnlyClosed, bool IsUseSpan, bool CGFlag, bool IFlag, bool SkipShared);
 	static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, Macad::Occt::Pln thePln, double Eps, bool OnlyClosed, bool IsUseSpan, bool CGFlag, bool IFlag);
 	static double VolumePropertiesGK(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::GProp_GProps^ VProps, Macad::Occt::Pln thePln, double Eps, bool OnlyClosed, bool IsUseSpan, bool CGFlag);
@@ -781,36 +781,36 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	BRepGProp_Domain();
-	/// <summary>
+BRepGProp_Domain();
+		/// <summary>
 	/// Constructor. Initializes the domain with the face.
 	/// </summary>
-	BRepGProp_Domain(Macad::Occt::TopoDS_Face^ F);
+BRepGProp_Domain(Macad::Occt::TopoDS_Face^ F);
 	BRepGProp_Domain(Macad::Occt::BRepGProp_Domain^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes the domain with the face.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Face^ F);
+		/// <summary>
 	/// Returns True if there is another arc of curve in the list.
 	/// </summary>
-	bool More();
-	/// <summary>
+bool More();
+		/// <summary>
 	/// Initializes the exploration with the face already set.
 	/// </summary>
-	void Init();
-	/// <summary>
+void Init();
+		/// <summary>
 	/// Returns the current edge.
 	/// </summary>
-	Macad::Occt::TopoDS_Edge^ Value();
-	/// <summary>
+Macad::Occt::TopoDS_Edge^ Value();
+		/// <summary>
 	/// Sets the index of the arc iterator to the next arc of
 	/// curve.
 	/// </summary>
-	void Next();
+void Next();
 }; // class BRepGProp_Domain
 
 //---------------------------------------------------------------------
@@ -848,48 +848,48 @@ public:
 public:
 	BRepGProp_EdgeTool();
 	BRepGProp_EdgeTool(Macad::Occt::BRepGProp_EdgeTool^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the parametric value of the start point of
 	/// the curve.  The curve is oriented from the start point
 	/// to the end point.
 	/// </summary>
-	static double FirstParameter(Macad::Occt::BRepAdaptor_Curve^ C);
-	/// <summary>
+static double FirstParameter(Macad::Occt::BRepAdaptor_Curve^ C);
+		/// <summary>
 	/// Returns the parametric value of the end point of
 	/// the curve.  The curve is oriented from the start point
 	/// to the end point.
 	/// </summary>
-	static double LastParameter(Macad::Occt::BRepAdaptor_Curve^ C);
-	/// <summary>
+static double LastParameter(Macad::Occt::BRepAdaptor_Curve^ C);
+		/// <summary>
 	/// Returns the number of Gauss points required to do
 	/// the integration with a good accuracy using the
 	/// Gauss method.  For a polynomial curve of degree n
 	/// the maxima of accuracy is obtained with an order
 	/// of integration equal to 2*n-1.
 	/// </summary>
-	static int IntegrationOrder(Macad::Occt::BRepAdaptor_Curve^ C);
-	/// <summary>
+static int IntegrationOrder(Macad::Occt::BRepAdaptor_Curve^ C);
+		/// <summary>
 	/// Returns the point of parameter U on the loaded curve.
 	/// </summary>
-	static Macad::Occt::Pnt Value(Macad::Occt::BRepAdaptor_Curve^ C, double U);
-	/// <summary>
+static Macad::Occt::Pnt Value(Macad::Occt::BRepAdaptor_Curve^ C, double U);
+		/// <summary>
 	/// Returns the point of parameter U and the first derivative
 	/// at this point.
 	/// </summary>
-	static void D1(Macad::Occt::BRepAdaptor_Curve^ C, double U, Macad::Occt::Pnt% P, Macad::Occt::Vec% V1);
-	/// <summary>
+static void D1(Macad::Occt::BRepAdaptor_Curve^ C, double U, Macad::Occt::Pnt% P, Macad::Occt::Vec% V1);
+		/// <summary>
 	/// Returns  the number  of  intervals for  continuity
 	/// <S>. May be one if Continuity(me) >= <S>
 	/// </summary>
-	static int NbIntervals(Macad::Occt::BRepAdaptor_Curve^ C, Macad::Occt::GeomAbs_Shape S);
-	/// <summary>
+static int NbIntervals(Macad::Occt::BRepAdaptor_Curve^ C, Macad::Occt::GeomAbs_Shape S);
+		/// <summary>
 	/// Stores in <T> the  parameters bounding the intervals
 	/// of continuity <S>.
 	/// 
 	/// The array must provide  enough room to  accommodate
 	/// for the parameters. i.e. T.Length() > NbIntervals()
 	/// </summary>
-	static void Intervals(Macad::Occt::BRepAdaptor_Curve^ C, Macad::Occt::TColStd_Array1OfReal^ T, Macad::Occt::GeomAbs_Shape S);
+static void Intervals(Macad::Occt::BRepAdaptor_Curve^ C, Macad::Occt::TColStd_Array1OfReal^ T, Macad::Occt::GeomAbs_Shape S);
 }; // class BRepGProp_EdgeTool
 
 //---------------------------------------------------------------------
@@ -921,44 +921,44 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor. Initializes the object with a flag IsUseSpan
 	/// that says if it is necessary to define spans on a face.
 	/// This option has an effect only for BSpline faces. Spans
 	/// are returned by the methods GetUKnots and GetTKnots.
 	/// </summary>
-	BRepGProp_Face(bool IsUseSpan);
-	/// <summary>
+BRepGProp_Face(bool IsUseSpan);
+		/// <summary>
 	/// Constructor. Initializes the object with the face and the
 	/// flag IsUseSpan that says if it is necessary to define
 	/// spans on a face. This option has an effect only for
 	/// BSpline faces. Spans are returned by the methods GetUKnots
 	/// and GetTKnots.
 	/// </summary>
-	BRepGProp_Face(Macad::Occt::TopoDS_Face^ F, bool IsUseSpan);
-	/// <summary>
+BRepGProp_Face(Macad::Occt::TopoDS_Face^ F, bool IsUseSpan);
+		/// <summary>
 	/// Constructor. Initializes the object with the face and the
 	/// flag IsUseSpan that says if it is necessary to define
 	/// spans on a face. This option has an effect only for
 	/// BSpline faces. Spans are returned by the methods GetUKnots
 	/// and GetTKnots.
 	/// </summary>
-	BRepGProp_Face(Macad::Occt::TopoDS_Face^ F);
+BRepGProp_Face(Macad::Occt::TopoDS_Face^ F);
 	BRepGProp_Face(Macad::Occt::BRepGProp_Face^ parameter1);
 	void Load(Macad::Occt::TopoDS_Face^ F);
 	int VIntegrationOrder();
-	/// <summary>
+		/// <summary>
 	/// Returns Standard_True if the face is not trimmed.
 	/// </summary>
-	bool NaturalRestriction();
-	/// <summary>
+bool NaturalRestriction();
+		/// <summary>
 	/// Returns the TopoDS face.
 	/// </summary>
-	Macad::Occt::TopoDS_Face^ GetFace();
-	/// <summary>
+Macad::Occt::TopoDS_Face^ GetFace();
+		/// <summary>
 	/// Returns the value of the boundary curve of the face.
 	/// </summary>
-	Macad::Occt::Pnt2d Value2d(double U);
+Macad::Occt::Pnt2d Value2d(double U);
 	int SIntOrder(double Eps);
 	int SVIntSubs();
 	int SUIntSubs();
@@ -967,47 +967,47 @@ public:
 	int LIntOrder(double Eps);
 	int LIntSubs();
 	void LKnots(Macad::Occt::TColStd_Array1OfReal^ Knots);
-	/// <summary>
+		/// <summary>
 	/// Returns the number of points required to do the
 	/// integration in the U parametric direction with
 	/// a good accuracy.
 	/// </summary>
-	int UIntegrationOrder();
-	/// <summary>
+int UIntegrationOrder();
+		/// <summary>
 	/// Returns the parametric bounds of the Face.
 	/// </summary>
-	void Bounds(double% U1, double% U2, double% V1, double% V2);
-	/// <summary>
+void Bounds(double% U1, double% U2, double% V1, double% V2);
+		/// <summary>
 	/// Computes the point of parameter U, V on the Face <S> and
 	/// the normal to the face at this point.
 	/// </summary>
-	void Normal(double U, double V, Macad::Occt::Pnt% P, Macad::Occt::Vec% VNor);
-	/// <summary>
+void Normal(double U, double V, Macad::Occt::Pnt% P, Macad::Occt::Vec% VNor);
+		/// <summary>
 	/// Loading the boundary arc.
 	/// Returns FALSE if edge has no P-Curve.
 	/// </summary>
-	bool Load(Macad::Occt::TopoDS_Edge^ E);
-	/// <summary>
+bool Load(Macad::Occt::TopoDS_Edge^ E);
+		/// <summary>
 	/// Returns the parametric value of the start point of
 	/// the current arc of curve.
 	/// </summary>
-	double FirstParameter();
-	/// <summary>
+double FirstParameter();
+		/// <summary>
 	/// Returns the parametric value of the end point of
 	/// the current arc of curve.
 	/// </summary>
-	double LastParameter();
-	/// <summary>
+double LastParameter();
+		/// <summary>
 	/// Returns the number of points required to do the
 	/// integration along the parameter of curve.
 	/// </summary>
-	int IntegrationOrder();
-	/// <summary>
+int IntegrationOrder();
+		/// <summary>
 	/// Returns the point of parameter U and the first derivative
 	/// at this point of a boundary curve.
 	/// </summary>
-	void D12d(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V1);
-	/// <summary>
+void D12d(double U, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% V1);
+		/// <summary>
 	/// Loading the boundary arc. This arc is either a top, bottom,
 	/// left or right bound of a UV rectangle in which the
 	/// parameters of surface are defined.
@@ -1018,8 +1018,8 @@ public:
 	/// initialized with either left or right bound. Otherwise -
 	/// with either top or bottom one.
 	/// </summary>
-	void Load(bool IsFirstParam, Macad::Occt::GeomAbs_IsoType theIsoType);
-	/// <summary>
+void Load(bool IsFirstParam, Macad::Occt::GeomAbs_IsoType theIsoType);
+		/// <summary>
 	/// Returns an array of U knots of the face. The first and last
 	/// elements of the array will be theUMin and theUMax. The
 	/// middle elements will be the U Knots of the face greater
@@ -1027,8 +1027,8 @@ public:
 	/// If the face is not a BSpline, the array initialized with
 	/// theUMin and theUMax only.
 	/// </summary>
-	void GetUKnots(double theUMin, double theUMax, Macad::Occt::TColStd_HArray1OfReal^ theUKnots);
-	/// <summary>
+void GetUKnots(double theUMin, double theUMax, Macad::Occt::TColStd_HArray1OfReal^ theUKnots);
+		/// <summary>
 	/// Returns an array of combination of T knots of the arc and
 	/// V knots of the face. The first and last elements of the
 	/// array will be theTMin and theTMax. The middle elements will
@@ -1039,7 +1039,7 @@ public:
 	/// If the face is not a BSpline, the array initialized with
 	/// theTMin and theTMax only.
 	/// </summary>
-	void GetTKnots(double theTMin, double theTMax, Macad::Occt::TColStd_HArray1OfReal^ theTKnots);
+void GetTKnots(double theTMin, double theTMax, Macad::Occt::TColStd_HArray1OfReal^ theTKnots);
 }; // class BRepGProp_Face
 
 //---------------------------------------------------------------------
@@ -1093,10 +1093,10 @@ public:
 		Sinert = 1
 	}; // enum  class BRepGProp_GaussType
 
-	/// <summary>
+		/// <summary>
 	/// Constructor
 	/// </summary>
-	BRepGProp_Gauss(Macad::Occt::BRepGProp_Gauss::BRepGProp_GaussType theType);
+BRepGProp_Gauss(Macad::Occt::BRepGProp_Gauss::BRepGProp_GaussType theType);
 }; // class BRepGProp_Gauss
 
 //---------------------------------------------------------------------
@@ -1140,17 +1140,17 @@ public:
 	BRepGProp_MeshCinert();
 	BRepGProp_MeshCinert(Macad::Occt::BRepGProp_MeshCinert^ parameter1);
 	void SetLocation(Macad::Occt::Pnt CLocation);
-	/// <summary>
+		/// <summary>
 	/// Computes the  global properties of
 	/// of polylines  represented by set of points.
 	/// </summary>
-	void Perform(Macad::Occt::TColgp_Array1OfPnt^ theNodes);
-	/// <summary>
+void Perform(Macad::Occt::TColgp_Array1OfPnt^ theNodes);
+		/// <summary>
 	/// Prepare set of 3d points on base of any available edge polygons:
 	/// 3D polygon, polygon on triangulation, 2d polygon on surface
 	/// If edge has no polygons, array thePolyg is left unchanged
 	/// </summary>
-	static void PreparePolygon(Macad::Occt::TopoDS_Edge^ theE, Macad::Occt::TColgp_HArray1OfPnt^ thePolyg);
+static void PreparePolygon(Macad::Occt::TopoDS_Edge^ theE, Macad::Occt::TColgp_HArray1OfPnt^ thePolyg);
 }; // class BRepGProp_MeshCinert
 
 //---------------------------------------------------------------------
@@ -1201,35 +1201,28 @@ public:
 		Sinert = 1
 	}; // enum  class BRepGProp_MeshObjType
 
-	/// <summary>
+		/// <summary>
 	/// Constructor takes the type of object.
 	/// </summary>
-	BRepGProp_MeshProps(Macad::Occt::BRepGProp_MeshProps::BRepGProp_MeshObjType theType);
+BRepGProp_MeshProps(Macad::Occt::BRepGProp_MeshProps::BRepGProp_MeshObjType theType);
 	BRepGProp_MeshProps(Macad::Occt::BRepGProp_MeshProps^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the point relative which the calculation is to be done
 	/// </summary>
-	void SetLocation(Macad::Occt::Pnt theLocation);
-	/// <summary>
-	/// Computes the global properties of a surface mesh of 3D space.
-	/// Calculation of surface properties is performed by numerical integration
-	/// over triangle surfaces using Gauss cubature formulas.
-	/// Depending on the mesh object type used in constructor this method can
-	/// calculate the surface or volume properties of the mesh.
-	/// </summary>
+void SetLocation(Macad::Occt::Pnt theLocation);
 	/* Method skipped due to unknown mapping: void Perform(Poly_Triangulation theMesh, TopLoc_Location theLoc, TopAbs_Orientation theOri, ) */
 	/* Method skipped due to unknown mapping: void Perform(Poly_Triangulation theMesh, TopAbs_Orientation theOri, ) */
-	/// <summary>
+		/// <summary>
 	/// Computes the global properties of triangle {p1, p2, p3} relatively
 	/// point Apex
 	/// If isVolume = true, volume properties are calculated
 	/// otherwise - surface ones
 	/// </summary>
-	static void CalculateProps(Macad::Occt::Pnt p1, Macad::Occt::Pnt p2, Macad::Occt::Pnt p3, Macad::Occt::Pnt Apex, bool isVolume, double% GProps, int NbGaussPoints, double GaussPnts);
-	/// <summary>
+static void CalculateProps(Macad::Occt::Pnt p1, Macad::Occt::Pnt p2, Macad::Occt::Pnt p3, Macad::Occt::Pnt Apex, bool isVolume, double% GProps, int NbGaussPoints, double GaussPnts);
+		/// <summary>
 	/// Get type of mesh object
 	/// </summary>
-	Macad::Occt::BRepGProp_MeshProps::BRepGProp_MeshObjType GetMeshObjType();
+Macad::Occt::BRepGProp_MeshProps::BRepGProp_MeshObjType GetMeshObjType();
 }; // class BRepGProp_MeshProps
 
 //---------------------------------------------------------------------
@@ -1268,13 +1261,13 @@ public:
 public:
 	BRepGProp_Sinert();
 	BRepGProp_Sinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pnt SLocation);
-	/// <summary>
+		/// <summary>
 	/// Builds a Sinert to evaluate the global properties of
 	/// the face <S>. If isNaturalRestriction is true the domain of S is defined
 	/// with the natural bounds, else it defined with an iterator
 	/// of Edge from TopoDS (see DomainTool from GProp)
 	/// </summary>
-	BRepGProp_Sinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt SLocation);
+BRepGProp_Sinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt SLocation);
 	BRepGProp_Sinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pnt SLocation, double Eps);
 	BRepGProp_Sinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt SLocation, double Eps);
 	BRepGProp_Sinert(Macad::Occt::BRepGProp_Sinert^ parameter1);
@@ -1283,11 +1276,11 @@ public:
 	void Perform(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D);
 	double Perform(Macad::Occt::BRepGProp_Face^ S, double Eps);
 	double Perform(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, double Eps);
-	/// <summary>
+		/// <summary>
 	/// If previously used method contained Eps parameter
 	/// get actual relative error of the computation, else return  1.0.
 	/// </summary>
-	double GetEpsilon();
+double GetEpsilon();
 }; // class BRepGProp_Sinert
 
 //---------------------------------------------------------------------
@@ -1334,7 +1327,7 @@ public:
 
 public:
 	BRepGProp_Vinert();
-	/// <summary>
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface <S> and the point VLocation. S can be closed
 	/// The method is quick and its precision is enough for many cases of analytical
@@ -1343,8 +1336,8 @@ public:
 	/// is used. Numbers of points depend on types of surfaces and  curves.
 	/// Error of the computation is not calculated.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pnt VLocation);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pnt VLocation);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface <S> and the point VLocation. S can be closed
 	/// Adaptive 2D Gauss integration is used.
@@ -1352,8 +1345,8 @@ public:
 	/// Error is calculated as Abs((M(i+1)-M(i))/M(i+1)), M(i+1) and M(i) are values
 	/// for two successive steps of adaptive integration.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pnt VLocation, double Eps);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pnt VLocation, double Eps);
+		/// <summary>
 	/// Computes the global properties of the region of 3D space
 	/// delimited with the surface <S> and the point VLocation.
 	/// The method is quick and its precision is enough for many cases of analytical
@@ -1362,8 +1355,8 @@ public:
 	/// is used. Numbers of points depend on types of surfaces and  curves.
 	/// Error of the computation is not calculated.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pnt O, Macad::Occt::Pnt VLocation);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pnt O, Macad::Occt::Pnt VLocation);
+		/// <summary>
 	/// Computes the global properties of the region of 3D space
 	/// delimited with the surface <S> and the point VLocation.
 	/// Adaptive 2D Gauss integration is used.
@@ -1372,8 +1365,8 @@ public:
 	/// for two successive steps of adaptive integration.
 	/// WARNING: if Eps > 0.001 algorithm performs non-adaptive integration.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pnt O, Macad::Occt::Pnt VLocation, double Eps);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pnt O, Macad::Occt::Pnt VLocation, double Eps);
+		/// <summary>
 	/// Computes the global properties of the region of 3D space
 	/// delimited with the surface <S> and the plane Pln.
 	/// The method is quick and its precision is enough for many cases of analytical
@@ -1382,8 +1375,8 @@ public:
 	/// is used. Numbers of points depend on types of surfaces and  curves.
 	/// Error of the computation is not calculated.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pln Pl, Macad::Occt::Pnt VLocation);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pln Pl, Macad::Occt::Pnt VLocation);
+		/// <summary>
 	/// Computes the global properties of the region of 3D space
 	/// delimited with the surface <S> and the plane Pln.
 	/// Adaptive 2D Gauss integration is used.
@@ -1392,8 +1385,8 @@ public:
 	/// for two successive steps of adaptive integration.
 	/// WARNING: if Eps > 0.001 algorithm performs non-adaptive integration.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pln Pl, Macad::Occt::Pnt VLocation, double Eps);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::Pln Pl, Macad::Occt::Pnt VLocation, double Eps);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface <S> and the point VLocation. S can be closed
 	/// The method is quick and its precision is enough for many cases of analytical
@@ -1402,8 +1395,8 @@ public:
 	/// is used. Numbers of points depend on types of surfaces and  curves.
 	/// Error of the computation is not calculated.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt VLocation);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt VLocation);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface <S> and the point VLocation. S can be closed
 	/// Adaptive 2D Gauss integration is used.
@@ -1411,8 +1404,8 @@ public:
 	/// Error is calculated as Abs((M(i+1)-M(i))/M(i+1)), M(i+1) and M(i) are values
 	/// for two successive steps of adaptive integration.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt VLocation, double Eps);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt VLocation, double Eps);
+		/// <summary>
 	/// Computes the global properties of the region of 3D space
 	/// delimited with the surface <S> and the point VLocation.
 	/// The method is quick and its precision is enough for many cases of analytical
@@ -1421,8 +1414,8 @@ public:
 	/// is used. Numbers of points depend on types of surfaces and  curves.
 	/// Error of the computation is not calculated.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt O, Macad::Occt::Pnt VLocation);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt O, Macad::Occt::Pnt VLocation);
+		/// <summary>
 	/// Computes the global properties of the region of 3D space
 	/// delimited with the surface <S> and the point VLocation.
 	/// Adaptive 2D Gauss integration is used.
@@ -1431,8 +1424,8 @@ public:
 	/// for two successive steps of adaptive integration.
 	/// WARNING: if Eps > 0.001 algorithm performs non-adaptive integration.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt O, Macad::Occt::Pnt VLocation, double Eps);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt O, Macad::Occt::Pnt VLocation, double Eps);
+		/// <summary>
 	/// Computes the global properties of the region of 3D space
 	/// delimited with the surface <S> and the plane Pln.
 	/// The method is quick and its precision is enough for many cases of analytical
@@ -1441,8 +1434,8 @@ public:
 	/// is used. Numbers of points depend on types of surfaces and  curves.
 	/// Error of the computation is not calculated.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pln Pl, Macad::Occt::Pnt VLocation);
-	/// <summary>
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pln Pl, Macad::Occt::Pnt VLocation);
+		/// <summary>
 	/// Computes the global properties of the region of 3D space
 	/// delimited with the surface <S> and the plane Pln.
 	/// Adaptive 2D Gauss integration is used.
@@ -1451,7 +1444,7 @@ public:
 	/// for two successive steps of adaptive integration.
 	/// WARNING: if Eps > 0.001 algorithm performs non-adaptive integration.
 	/// </summary>
-	BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pln Pl, Macad::Occt::Pnt VLocation, double Eps);
+BRepGProp_Vinert(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pln Pl, Macad::Occt::Pnt VLocation, double Eps);
 	BRepGProp_Vinert(Macad::Occt::BRepGProp_Vinert^ parameter1);
 	void SetLocation(Macad::Occt::Pnt VLocation);
 	void Perform(Macad::Occt::BRepGProp_Face^ S);
@@ -1466,11 +1459,11 @@ public:
 	double Perform(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pnt O, double Eps);
 	void Perform(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pln Pl);
 	double Perform(Macad::Occt::BRepGProp_Face^ S, Macad::Occt::BRepGProp_Domain^ D, Macad::Occt::Pln Pl, double Eps);
-	/// <summary>
+		/// <summary>
 	/// If previously used methods containe Eps parameter
 	/// gets actual relative error of the computation, else returns  1.0.
 	/// </summary>
-	double GetEpsilon();
+double GetEpsilon();
 }; // class BRepGProp_Vinert
 
 //---------------------------------------------------------------------
@@ -1529,327 +1522,327 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	BRepGProp_VinertGK();
-	/// <summary>
+BRepGProp_VinertGK();
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the point VLocation.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the point VLocation.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the point VLocation.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt theLocation, double theTolerance);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt theLocation, double theTolerance);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the point VLocation.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt theLocation);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt theLocation);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the point VLocation. The inertia is computed with
 	/// respect to thePoint.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the point VLocation. The inertia is computed with
 	/// respect to thePoint.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the point VLocation. The inertia is computed with
 	/// respect to thePoint.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the point VLocation. The inertia is computed with
 	/// respect to thePoint.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the point VLocation.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the point VLocation.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the point VLocation.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt theLocation, double theTolerance);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt theLocation, double theTolerance);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the point VLocation.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt theLocation);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt theLocation);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the point VLocation. The inertia is computed with
 	/// respect to thePoint.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the point VLocation. The inertia is computed with
 	/// respect to thePoint.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the point VLocation. The inertia is computed with
 	/// respect to thePoint.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation, double theTolerance);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the point VLocation. The inertia is computed with
 	/// respect to thePoint.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, Macad::Occt::Pnt theLocation);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the plane.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the plane.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the plane.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the naturally restricted surface
 	/// and the plane.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the plane.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the plane.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the plane.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance);
-	/// <summary>
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation, double theTolerance);
+		/// <summary>
 	/// Constructor. Computes the global properties of a region of
 	/// 3D space delimited with the surface bounded by the domain
 	/// and the plane.
 	/// </summary>
-	BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation);
+BRepGProp_VinertGK(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, Macad::Occt::Pnt theLocation);
 	BRepGProp_VinertGK(Macad::Occt::BRepGProp_VinertGK^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the vertex that delimit 3D closed region of space.
 	/// </summary>
-	void SetLocation(Macad::Occt::Pnt theLocation);
-	/// <summary>
+void SetLocation(Macad::Occt::Pnt theLocation);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// point VLocation.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// point VLocation.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, double theTolerance, bool theCGFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// point VLocation.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, double theTolerance);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, double theTolerance);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// point VLocation.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// point VLocation. The inertia is computed with respect to
 	/// thePoint.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// point VLocation. The inertia is computed with respect to
 	/// thePoint.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, double theTolerance, bool theCGFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// point VLocation. The inertia is computed with respect to
 	/// thePoint.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, double theTolerance);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint, double theTolerance);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// point VLocation. The inertia is computed with respect to
 	/// thePoint.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pnt thePoint);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// point VLocation.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// point VLocation.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, double theTolerance, bool theCGFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// point VLocation.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, double theTolerance);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, double theTolerance);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// point VLocation.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// point VLocation. The inertia is computed with respect to
 	/// thePoint.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// point VLocation. The inertia is computed with respect to
 	/// thePoint.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, double theTolerance, bool theCGFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// point VLocation. The inertia is computed with respect to
 	/// thePoint.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, double theTolerance);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint, double theTolerance);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// point VLocation. The inertia is computed with respect to
 	/// thePoint.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pnt thePoint);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// plane.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// plane.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, double theTolerance, bool theCGFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// plane.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, double theTolerance);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane, double theTolerance);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the naturally restricted surface and the
 	/// plane.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::Pln thePlane);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// plane.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, double theTolerance, bool theCGFlag, bool theIFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, double theTolerance, bool theCGFlag, bool theIFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// plane.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, double theTolerance, bool theCGFlag);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, double theTolerance, bool theCGFlag);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// plane.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, double theTolerance);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane, double theTolerance);
+		/// <summary>
 	/// Computes the global properties of a region of 3D space
 	/// delimited with the surface bounded by the domain and the
 	/// plane.
 	/// </summary>
-	double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane);
-	/// <summary>
+double Perform(Macad::Occt::BRepGProp_Face^ theSurface, Macad::Occt::BRepGProp_Domain^ theDomain, Macad::Occt::Pln thePlane);
+		/// <summary>
 	/// Returns the relative reached computation error.
 	/// </summary>
-	double GetErrorReached();
-	/// <summary>
+double GetErrorReached();
+		/// <summary>
 	/// Returns the absolut reached computation error.
 	/// </summary>
-	double GetAbsolutError();
+double GetAbsolutError();
 }; // class BRepGProp_VinertGK
 
 }; // namespace Occt

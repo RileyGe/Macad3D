@@ -213,58 +213,58 @@ public:
 
 public:
 	Convert_ConicToBSplineCurve(Macad::Occt::Convert_ConicToBSplineCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the degree of the BSpline curve whose data is
 	/// computed in this framework.
 	/// </summary>
-	int Degree();
-	/// <summary>
+int Degree();
+		/// <summary>
 	/// Returns the number of poles of the BSpline curve whose
 	/// data is computed in this framework.
 	/// </summary>
-	int NbPoles();
-	/// <summary>
+int NbPoles();
+		/// <summary>
 	/// Returns the number of knots of the BSpline curve whose
 	/// data is computed in this framework.
 	/// </summary>
-	int NbKnots();
-	/// <summary>
+int NbKnots();
+		/// <summary>
 	/// Returns true if the BSpline curve whose data is computed in
 	/// this framework is periodic.
 	/// </summary>
-	bool IsPeriodic();
-	/// <summary>
+bool IsPeriodic();
+		/// <summary>
 	/// Returns the pole of index Index to the poles table of the
 	/// BSpline curve whose data is computed in this framework.
 	/// Exceptions
 	/// Standard_OutOfRange if Index is outside the bounds of
 	/// the poles table of the BSpline curve whose data is computed in this framework.
 	/// </summary>
-	Macad::Occt::Pnt2d Pole(int Index);
-	/// <summary>
+Macad::Occt::Pnt2d Pole(int Index);
+		/// <summary>
 	/// Returns the weight of the pole of index Index to the poles
 	/// table of the BSpline curve whose data is computed in this framework.
 	/// Exceptions
 	/// Standard_OutOfRange if Index is outside the bounds of
 	/// the poles table of the BSpline curve whose data is computed in this framework.
 	/// </summary>
-	double Weight(int Index);
-	/// <summary>
+double Weight(int Index);
+		/// <summary>
 	/// Returns the knot of index Index to the knots table of the
 	/// BSpline curve whose data is computed in this framework.
 	/// Exceptions
 	/// Standard_OutOfRange if Index is outside the bounds of
 	/// the knots table of the BSpline curve whose data is computed in this framework.
 	/// </summary>
-	double Knot(int Index);
-	/// <summary>
+double Knot(int Index);
+		/// <summary>
 	/// Returns the multiplicity of the knot of index Index to the
 	/// knots table of the BSpline curve whose data is computed in this framework.
 	/// Exceptions
 	/// Standard_OutOfRange if Index is outside the bounds of
 	/// the knots table of the BSpline curve whose data is computed in this framework.
 	/// </summary>
-	int Multiplicity(int Index);
+int Multiplicity(int Index);
 	void BuildCosAndSin(Macad::Occt::Convert_ParameterisationType Parametrisation, Macad::Occt::TColStd_HArray1OfReal^ CosNumerator, Macad::Occt::TColStd_HArray1OfReal^ SinNumerator, Macad::Occt::TColStd_HArray1OfReal^ Denominator, int% Degree, Macad::Occt::TColStd_HArray1OfReal^ Knots, Macad::Occt::TColStd_HArray1OfInteger^ Mults);
 	void BuildCosAndSin(Macad::Occt::Convert_ParameterisationType Parametrisation, double UFirst, double ULast, Macad::Occt::TColStd_HArray1OfReal^ CosNumerator, Macad::Occt::TColStd_HArray1OfReal^ SinNumerator, Macad::Occt::TColStd_HArray1OfReal^ Denominator, int% Degree, Macad::Occt::TColStd_HArray1OfReal^ Knots, Macad::Occt::TColStd_HArray1OfInteger^ Mults);
 }; // class Convert_ConicToBSplineCurve
@@ -312,17 +312,17 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The equivalent B-spline curve has the same orientation
 	/// as the circle C.
 	/// </summary>
-	Convert_CircleToBSplineCurve(Macad::Occt::gp_Circ2d^ C, Macad::Occt::Convert_ParameterisationType Parameterisation);
-	/// <summary>
+Convert_CircleToBSplineCurve(Macad::Occt::gp_Circ2d^ C, Macad::Occt::Convert_ParameterisationType Parameterisation);
+		/// <summary>
 	/// The equivalent B-spline curve has the same orientation
 	/// as the circle C.
 	/// </summary>
-	Convert_CircleToBSplineCurve(Macad::Occt::gp_Circ2d^ C);
-	/// <summary>
+Convert_CircleToBSplineCurve(Macad::Occt::gp_Circ2d^ C);
+		/// <summary>
 	/// The circle C is limited between the parametric values U1, U2
 	/// in radians. U1 and U2 [0.0, 2*Pi] .
 	/// The equivalent B-spline curve is oriented from U1 to U2 and has
@@ -330,8 +330,8 @@ public:
 	/// 
 	/// Raised if U1 = U2 or U1 = U2 + 2.0 * Pi
 	/// </summary>
-	Convert_CircleToBSplineCurve(Macad::Occt::gp_Circ2d^ C, double U1, double U2, Macad::Occt::Convert_ParameterisationType Parameterisation);
-	/// <summary>
+Convert_CircleToBSplineCurve(Macad::Occt::gp_Circ2d^ C, double U1, double U2, Macad::Occt::Convert_ParameterisationType Parameterisation);
+		/// <summary>
 	/// The circle C is limited between the parametric values U1, U2
 	/// in radians. U1 and U2 [0.0, 2*Pi] .
 	/// The equivalent B-spline curve is oriented from U1 to U2 and has
@@ -339,7 +339,7 @@ public:
 	/// 
 	/// Raised if U1 = U2 or U1 = U2 + 2.0 * Pi
 	/// </summary>
-	Convert_CircleToBSplineCurve(Macad::Occt::gp_Circ2d^ C, double U1, double U2);
+Convert_CircleToBSplineCurve(Macad::Occt::gp_Circ2d^ C, double U1, double U2);
 	Convert_CircleToBSplineCurve(Macad::Occt::Convert_CircleToBSplineCurve^ parameter1);
 }; // class Convert_CircleToBSplineCurve
 
@@ -378,7 +378,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a framework for converting a sequence of
 	/// adjacent non-rational Bezier curves into a BSpline curve.
 	/// Knots will be created on the computed BSpline curve at
@@ -395,9 +395,9 @@ public:
 	/// -   and the available consultation functions to access the
 	/// computed data. This data may be used to construct the BSpline curve.
 	/// </summary>
-	Convert_CompBezierCurves2dToBSplineCurve2d(double AngularTolerance);
+Convert_CompBezierCurves2dToBSplineCurve2d(double AngularTolerance);
 	Convert_CompBezierCurves2dToBSplineCurve2d(Macad::Occt::Convert_CompBezierCurves2dToBSplineCurve2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Adds the Bezier curve defined by the table of poles Poles, to
 	/// the sequence (still contained in this framework) of adjacent
 	/// Bezier curves to be converted into a BSpline curve.
@@ -435,8 +435,8 @@ public:
 	/// not checked either when defining the sequence of Bezier
 	/// curves or at the time of computation.
 	/// </summary>
-	void AddCurve(Macad::Occt::TColgp_Array1OfPnt2d^ Poles);
-	/// <summary>
+void AddCurve(Macad::Occt::TColgp_Array1OfPnt2d^ Poles);
+		/// <summary>
 	/// Computes all the data needed to build a BSpline curve
 	/// equivalent to the sequence of adjacent Bezier curves still
 	/// contained in this framework.
@@ -459,8 +459,8 @@ public:
 	/// above as this condition is not checked, either when
 	/// defining the Bezier curve sequence or at the time of computation.
 	/// </summary>
-	void Perform();
-	/// <summary>
+void Perform();
+		/// <summary>
 	/// Returns the degree of the BSpline curve whose data is
 	/// computed in this framework.
 	/// Warning
@@ -468,8 +468,8 @@ public:
 	/// computation is performed (Perform function), as this
 	/// condition is not checked and an error may therefore occur.
 	/// </summary>
-	int Degree();
-	/// <summary>
+int Degree();
+		/// <summary>
 	/// Returns the number of poles of the BSpline curve whose
 	/// data is computed in this framework.
 	/// Warning
@@ -477,8 +477,8 @@ public:
 	/// computation is performed (Perform function), as this
 	/// condition is not checked and an error may therefore occur.
 	/// </summary>
-	int NbPoles();
-	/// <summary>
+int NbPoles();
+		/// <summary>
 	/// Loads the Poles table with the poles of the BSpline curve
 	/// whose data is computed in this framework.
 	/// Warning
@@ -490,8 +490,8 @@ public:
 	/// Particular care must be taken with respect to the above, as
 	/// these conditions are not checked, and an error may occur.
 	/// </summary>
-	void Poles(Macad::Occt::TColgp_Array1OfPnt2d^ Poles);
-	/// <summary>
+void Poles(Macad::Occt::TColgp_Array1OfPnt2d^ Poles);
+		/// <summary>
 	/// Returns the number of knots of the BSpline curve whose
 	/// data is computed in this framework.
 	/// Warning
@@ -499,8 +499,8 @@ public:
 	/// computation is performed (Perform function), as this
 	/// condition is not checked and an error may therefore occur.
 	/// </summary>
-	int NbKnots();
-	/// <summary>
+int NbKnots();
+		/// <summary>
 	/// Loads the Knots table with the knots
 	/// and the Mults table with the corresponding multiplicities
 	/// of the BSpline curve whose data is computed in this framework.
@@ -513,7 +513,7 @@ public:
 	/// Particular care must be taken with respect to the above as
 	/// these conditions are not checked, and an error may occur.
 	/// </summary>
-	void KnotsAndMults(Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults);
+void KnotsAndMults(Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults);
 }; // class Convert_CompBezierCurves2dToBSplineCurve2d
 
 //---------------------------------------------------------------------
@@ -556,7 +556,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a framework for converting a sequence of
 	/// adjacent non-rational Bezier curves into a BSpline curve.
 	/// Knots will be created on the computed BSpline curve at
@@ -573,9 +573,9 @@ public:
 	/// -   and the available consultation functions to access the
 	/// computed data. This data may be used to construct the BSpline curve.
 	/// </summary>
-	Convert_CompBezierCurvesToBSplineCurve(double AngularTolerance);
+Convert_CompBezierCurvesToBSplineCurve(double AngularTolerance);
 	Convert_CompBezierCurvesToBSplineCurve(Macad::Occt::Convert_CompBezierCurvesToBSplineCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Adds the Bezier curve defined by the table of poles Poles, to
 	/// the sequence (still contained in this framework) of adjacent
 	/// Bezier curves to be converted into a BSpline curve.
@@ -613,8 +613,8 @@ public:
 	/// not checked either when defining the Bezier curve
 	/// sequence or at the time of computation.
 	/// </summary>
-	void AddCurve(Macad::Occt::TColgp_Array1OfPnt^ Poles);
-	/// <summary>
+void AddCurve(Macad::Occt::TColgp_Array1OfPnt^ Poles);
+		/// <summary>
 	/// Computes all the data needed to build a BSpline curve
 	/// equivalent to the adjacent Bezier curve sequence still
 	/// contained in this framework.
@@ -637,8 +637,8 @@ public:
 	/// above as this condition is not checked, either when
 	/// defining the Bezier curve sequence or at the time of computation.
 	/// </summary>
-	void Perform();
-	/// <summary>
+void Perform();
+		/// <summary>
 	/// Returns the degree of the BSpline curve whose data is
 	/// computed in this framework.
 	/// Warning
@@ -646,8 +646,8 @@ public:
 	/// computation is performed (Perform function), as this
 	/// condition is not checked and an error may  therefore occur.
 	/// </summary>
-	int Degree();
-	/// <summary>
+int Degree();
+		/// <summary>
 	/// Returns the number of poles of the BSpline curve whose
 	/// data is computed in this framework.
 	/// Warning
@@ -655,8 +655,8 @@ public:
 	/// computation is performed (Perform function), as this
 	/// condition is not checked and an error may therefore occur.
 	/// </summary>
-	int NbPoles();
-	/// <summary>
+int NbPoles();
+		/// <summary>
 	/// Loads the Poles table with the poles of the BSpline curve
 	/// whose data is computed in this framework.
 	/// Warning
@@ -668,8 +668,8 @@ public:
 	/// Particular care must be taken with respect to the above, as
 	/// these conditions are not checked, and an error may occur.
 	/// </summary>
-	void Poles(Macad::Occt::TColgp_Array1OfPnt^ Poles);
-	/// <summary>
+void Poles(Macad::Occt::TColgp_Array1OfPnt^ Poles);
+		/// <summary>
 	/// Returns the number of knots of the BSpline curve whose
 	/// data is computed in this framework.
 	/// Warning
@@ -677,8 +677,8 @@ public:
 	/// computation is performed (Perform function), as this
 	/// condition is not checked and an error may therefore occur.
 	/// </summary>
-	int NbKnots();
-	/// <summary>
+int NbKnots();
+		/// <summary>
 	/// -   loads the Knots table with the knots,
 	/// -   and loads the Mults table with the corresponding multiplicities
 	/// of the BSpline curve whose data is computed in this framework.
@@ -691,7 +691,7 @@ public:
 	/// Particular care must be taken with respect to the above as
 	/// these conditions are not checked, and an error may occur.
 	/// </summary>
-	void KnotsAndMults(Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults);
+void KnotsAndMults(Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults);
 }; // class Convert_CompBezierCurvesToBSplineCurve
 
 //---------------------------------------------------------------------
@@ -748,7 +748,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Warning!
 	/// Continuity can be at MOST the maximum degree of
 	/// the polynomial functions
@@ -773,40 +773,40 @@ public:
 	/// PolynomialIntervals[1,2] = {{2,5}}
 	/// TrueIntervals[2] = {-1, 1}
 	/// </summary>
-	Convert_CompPolynomialToPoles(int NumCurves, int Continuity, int Dimension, int MaxDegree, Macad::Occt::TColStd_HArray1OfInteger^ NumCoeffPerCurve, Macad::Occt::TColStd_HArray1OfReal^ Coefficients, Macad::Occt::TColStd_HArray2OfReal^ PolynomialIntervals, Macad::Occt::TColStd_HArray1OfReal^ TrueIntervals);
-	/// <summary>
+Convert_CompPolynomialToPoles(int NumCurves, int Continuity, int Dimension, int MaxDegree, Macad::Occt::TColStd_HArray1OfInteger^ NumCoeffPerCurve, Macad::Occt::TColStd_HArray1OfReal^ Coefficients, Macad::Occt::TColStd_HArray2OfReal^ PolynomialIntervals, Macad::Occt::TColStd_HArray1OfReal^ TrueIntervals);
+		/// <summary>
 	/// To Convert sevral span with different order of Continuity.
 	/// Warning: The Length of Continuity have to be NumCurves-1
 	/// </summary>
-	Convert_CompPolynomialToPoles(int NumCurves, int Dimension, int MaxDegree, Macad::Occt::TColStd_Array1OfInteger^ Continuity, Macad::Occt::TColStd_Array1OfInteger^ NumCoeffPerCurve, Macad::Occt::TColStd_Array1OfReal^ Coefficients, Macad::Occt::TColStd_Array2OfReal^ PolynomialIntervals, Macad::Occt::TColStd_Array1OfReal^ TrueIntervals);
-	/// <summary>
+Convert_CompPolynomialToPoles(int NumCurves, int Dimension, int MaxDegree, Macad::Occt::TColStd_Array1OfInteger^ Continuity, Macad::Occt::TColStd_Array1OfInteger^ NumCoeffPerCurve, Macad::Occt::TColStd_Array1OfReal^ Coefficients, Macad::Occt::TColStd_Array2OfReal^ PolynomialIntervals, Macad::Occt::TColStd_Array1OfReal^ TrueIntervals);
+		/// <summary>
 	/// To Convert only one span.
 	/// </summary>
-	Convert_CompPolynomialToPoles(int Dimension, int MaxDegree, int Degree, Macad::Occt::TColStd_Array1OfReal^ Coefficients, Macad::Occt::TColStd_Array1OfReal^ PolynomialIntervals, Macad::Occt::TColStd_Array1OfReal^ TrueIntervals);
+Convert_CompPolynomialToPoles(int Dimension, int MaxDegree, int Degree, Macad::Occt::TColStd_Array1OfReal^ Coefficients, Macad::Occt::TColStd_Array1OfReal^ PolynomialIntervals, Macad::Occt::TColStd_Array1OfReal^ TrueIntervals);
 	Convert_CompPolynomialToPoles(Macad::Occt::Convert_CompPolynomialToPoles^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// number of poles of the n-dimensional BSpline
 	/// </summary>
-	int NbPoles();
-	/// <summary>
+int NbPoles();
+		/// <summary>
 	/// returns the poles of the n-dimensional BSpline
 	/// in the following format :
 	/// [1..NumPoles][1..Dimension]
 	/// </summary>
-	void Poles(Macad::Occt::TColStd_HArray2OfReal^ Poles);
+void Poles(Macad::Occt::TColStd_HArray2OfReal^ Poles);
 	int Degree();
-	/// <summary>
+		/// <summary>
 	/// Degree of the n-dimensional Bspline
 	/// </summary>
-	int NbKnots();
-	/// <summary>
+int NbKnots();
+		/// <summary>
 	/// Knots of the n-dimensional Bspline
 	/// </summary>
-	void Knots(Macad::Occt::TColStd_HArray1OfReal^ K);
-	/// <summary>
+void Knots(Macad::Occt::TColStd_HArray1OfReal^ K);
+		/// <summary>
 	/// Multiplicities of the knots in the BSpline
 	/// </summary>
-	void Multiplicities(Macad::Occt::TColStd_HArray1OfInteger^ M);
+void Multiplicities(Macad::Occt::TColStd_HArray1OfInteger^ M);
 	bool IsDone();
 }; // class Convert_CompPolynomialToPoles
 
@@ -877,30 +877,30 @@ public:
 public:
 	Convert_ElementarySurfaceToBSplineSurface(Macad::Occt::Convert_ElementarySurfaceToBSplineSurface^ parameter1);
 	int UDegree();
-	/// <summary>
+		/// <summary>
 	/// Returns the degree for the u or v parametric direction of
 	/// the BSpline surface whose data is computed in this framework.
 	/// </summary>
-	int VDegree();
+int VDegree();
 	int NbUPoles();
-	/// <summary>
+		/// <summary>
 	/// Returns the number of poles for the u or v parametric
 	/// direction of the BSpline surface whose data is computed in this framework.
 	/// </summary>
-	int NbVPoles();
+int NbVPoles();
 	int NbUKnots();
-	/// <summary>
+		/// <summary>
 	/// Returns the number of knots for the u or v parametric
 	/// direction of the BSpline surface whose data is computed in this framework .
 	/// </summary>
-	int NbVKnots();
+int NbVKnots();
 	bool IsUPeriodic();
-	/// <summary>
+		/// <summary>
 	/// Returns true if the BSpline surface whose data is computed
 	/// in this framework is periodic in the u or v parametric direction.
 	/// </summary>
-	bool IsVPeriodic();
-	/// <summary>
+bool IsVPeriodic();
+		/// <summary>
 	/// Returns the pole of index (UIndex,VIndex) to the poles
 	/// table of the BSpline surface whose data is computed in this framework.
 	/// Exceptions
@@ -911,8 +911,8 @@ public:
 	/// -   VIndex is outside the bounds of the poles table in the v
 	/// parametric direction.
 	/// </summary>
-	Macad::Occt::Pnt Pole(int UIndex, int VIndex);
-	/// <summary>
+Macad::Occt::Pnt Pole(int UIndex, int VIndex);
+		/// <summary>
 	/// Returns the weight of the pole of index (UIndex,VIndex) to
 	/// the poles table of the BSpline surface whose data is computed in this framework.
 	/// Exceptions
@@ -923,27 +923,27 @@ public:
 	/// -   VIndex is outside the bounds of the poles table in the v
 	/// parametric direction.
 	/// </summary>
-	double Weight(int UIndex, int VIndex);
-	/// <summary>
+double Weight(int UIndex, int VIndex);
+		/// <summary>
 	/// Returns the U-knot of range UIndex.
 	/// Raised if UIndex < 1 or UIndex > NbUKnots.
 	/// </summary>
-	double UKnot(int UIndex);
-	/// <summary>
+double UKnot(int UIndex);
+		/// <summary>
 	/// Returns the V-knot of range VIndex.
 	/// Raised if VIndex < 1 or VIndex > NbVKnots.
 	/// </summary>
-	double VKnot(int UIndex);
-	/// <summary>
+double VKnot(int UIndex);
+		/// <summary>
 	/// Returns the multiplicity of the U-knot of range UIndex.
 	/// Raised if UIndex < 1 or UIndex > NbUKnots.
 	/// </summary>
-	int UMultiplicity(int UIndex);
-	/// <summary>
+int UMultiplicity(int UIndex);
+		/// <summary>
 	/// Returns the multiplicity of the V-knot of range VIndex.
 	/// Raised if VIndex < 1 or VIndex > NbVKnots.
 	/// </summary>
-	int VMultiplicity(int VIndex);
+int VMultiplicity(int VIndex);
 }; // class Convert_ElementarySurfaceToBSplineSurface
 
 //---------------------------------------------------------------------
@@ -989,21 +989,21 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The equivalent B-spline surface as the same orientation as the
 	/// Cone in the U and V parametric directions.
 	/// 
 	/// Raised if U1 = U2 or U1 = U2 + 2.0 * Pi
 	/// Raised if V1 = V2.
 	/// </summary>
-	Convert_ConeToBSplineSurface(Macad::Occt::gp_Cone^ C, double U1, double U2, double V1, double V2);
-	/// <summary>
+Convert_ConeToBSplineSurface(Macad::Occt::gp_Cone^ C, double U1, double U2, double V1, double V2);
+		/// <summary>
 	/// The equivalent B-spline surface as the same orientation as the
 	/// Cone in the U and V parametric directions.
 	/// 
 	/// Raised if V1 = V2.
 	/// </summary>
-	Convert_ConeToBSplineSurface(Macad::Occt::gp_Cone^ C, double V1, double V2);
+Convert_ConeToBSplineSurface(Macad::Occt::gp_Cone^ C, double V1, double V2);
 	Convert_ConeToBSplineSurface(Macad::Occt::Convert_ConeToBSplineSurface^ parameter1);
 }; // class Convert_ConeToBSplineSurface
 
@@ -1048,21 +1048,21 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The equivalent B-splineSurface as the same orientation as the
 	/// cylinder in the U and V parametric directions.
 	/// 
 	/// Raised if U1 = U2 or U1 = U2 + 2.0 * Pi
 	/// Raised if V1 = V2.
 	/// </summary>
-	Convert_CylinderToBSplineSurface(Macad::Occt::gp_Cylinder^ Cyl, double U1, double U2, double V1, double V2);
-	/// <summary>
+Convert_CylinderToBSplineSurface(Macad::Occt::gp_Cylinder^ Cyl, double U1, double U2, double V1, double V2);
+		/// <summary>
 	/// The equivalent B-splineSurface as the same orientation as the
 	/// cylinder in the U and V parametric directions.
 	/// 
 	/// Raised if V1 = V2.
 	/// </summary>
-	Convert_CylinderToBSplineSurface(Macad::Occt::gp_Cylinder^ Cyl, double V1, double V2);
+Convert_CylinderToBSplineSurface(Macad::Occt::gp_Cylinder^ Cyl, double V1, double V2);
 	Convert_CylinderToBSplineSurface(Macad::Occt::Convert_CylinderToBSplineSurface^ parameter1);
 }; // class Convert_CylinderToBSplineSurface
 
@@ -1107,32 +1107,32 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The equivalent B-spline curve has the same orientation
 	/// as the ellipse E.
 	/// </summary>
-	Convert_EllipseToBSplineCurve(Macad::Occt::gp_Elips2d^ E, Macad::Occt::Convert_ParameterisationType Parameterisation);
-	/// <summary>
+Convert_EllipseToBSplineCurve(Macad::Occt::gp_Elips2d^ E, Macad::Occt::Convert_ParameterisationType Parameterisation);
+		/// <summary>
 	/// The equivalent B-spline curve has the same orientation
 	/// as the ellipse E.
 	/// </summary>
-	Convert_EllipseToBSplineCurve(Macad::Occt::gp_Elips2d^ E);
-	/// <summary>
+Convert_EllipseToBSplineCurve(Macad::Occt::gp_Elips2d^ E);
+		/// <summary>
 	/// The ellipse E is limited between the parametric values U1, U2.
 	/// The equivalent B-spline curve is oriented from U1 to U2 and has
 	/// the same orientation as E.
 	/// 
 	/// Raised if U1 = U2 or U1 = U2 + 2.0 * Pi
 	/// </summary>
-	Convert_EllipseToBSplineCurve(Macad::Occt::gp_Elips2d^ E, double U1, double U2, Macad::Occt::Convert_ParameterisationType Parameterisation);
-	/// <summary>
+Convert_EllipseToBSplineCurve(Macad::Occt::gp_Elips2d^ E, double U1, double U2, Macad::Occt::Convert_ParameterisationType Parameterisation);
+		/// <summary>
 	/// The ellipse E is limited between the parametric values U1, U2.
 	/// The equivalent B-spline curve is oriented from U1 to U2 and has
 	/// the same orientation as E.
 	/// 
 	/// Raised if U1 = U2 or U1 = U2 + 2.0 * Pi
 	/// </summary>
-	Convert_EllipseToBSplineCurve(Macad::Occt::gp_Elips2d^ E, double U1, double U2);
+Convert_EllipseToBSplineCurve(Macad::Occt::gp_Elips2d^ E, double U1, double U2);
 	Convert_EllipseToBSplineCurve(Macad::Occt::Convert_EllipseToBSplineCurve^ parameter1);
 }; // class Convert_EllipseToBSplineCurve
 
@@ -1171,7 +1171,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// To    only  one   polynomial  Surface.
 	/// The  Length  of  <PolynomialUIntervals> and <PolynomialVIntervals>
 	/// have to be 2.
@@ -1181,8 +1181,8 @@ public:
 	/// The <Coefficients> have to be formatted than an "C array"
 	/// [MaxUDegree+1] [MaxVDegree+1] [3]
 	/// </summary>
-	Convert_GridPolynomialToPoles(int MaxUDegree, int MaxVDegree, Macad::Occt::TColStd_HArray1OfInteger^ NumCoeff, Macad::Occt::TColStd_HArray1OfReal^ Coefficients, Macad::Occt::TColStd_HArray1OfReal^ PolynomialUIntervals, Macad::Occt::TColStd_HArray1OfReal^ PolynomialVIntervals);
-	/// <summary>
+Convert_GridPolynomialToPoles(int MaxUDegree, int MaxVDegree, Macad::Occt::TColStd_HArray1OfInteger^ NumCoeff, Macad::Occt::TColStd_HArray1OfReal^ Coefficients, Macad::Occt::TColStd_HArray1OfReal^ PolynomialUIntervals, Macad::Occt::TColStd_HArray1OfReal^ PolynomialVIntervals);
+		/// <summary>
 	/// To one grid of polynomial Surface.
 	/// Warning!
 	/// Continuity in each parametric direction can be at MOST the
@@ -1198,35 +1198,35 @@ public:
 	/// [1, NbVSurfaces*NbUSurfaces, 1,2] array.
 	/// if <Coefficients> is not a
 	/// </summary>
-	Convert_GridPolynomialToPoles(int NbUSurfaces, int NBVSurfaces, int UContinuity, int VContinuity, int MaxUDegree, int MaxVDegree, Macad::Occt::TColStd_HArray2OfInteger^ NumCoeffPerSurface, Macad::Occt::TColStd_HArray1OfReal^ Coefficients, Macad::Occt::TColStd_HArray1OfReal^ PolynomialUIntervals, Macad::Occt::TColStd_HArray1OfReal^ PolynomialVIntervals, Macad::Occt::TColStd_HArray1OfReal^ TrueUIntervals, Macad::Occt::TColStd_HArray1OfReal^ TrueVIntervals);
+Convert_GridPolynomialToPoles(int NbUSurfaces, int NBVSurfaces, int UContinuity, int VContinuity, int MaxUDegree, int MaxVDegree, Macad::Occt::TColStd_HArray2OfInteger^ NumCoeffPerSurface, Macad::Occt::TColStd_HArray1OfReal^ Coefficients, Macad::Occt::TColStd_HArray1OfReal^ PolynomialUIntervals, Macad::Occt::TColStd_HArray1OfReal^ PolynomialVIntervals, Macad::Occt::TColStd_HArray1OfReal^ TrueUIntervals, Macad::Occt::TColStd_HArray1OfReal^ TrueVIntervals);
 	Convert_GridPolynomialToPoles(Macad::Occt::Convert_GridPolynomialToPoles^ parameter1);
 	void Perform(int UContinuity, int VContinuity, int MaxUDegree, int MaxVDegree, Macad::Occt::TColStd_HArray2OfInteger^ NumCoeffPerSurface, Macad::Occt::TColStd_HArray1OfReal^ Coefficients, Macad::Occt::TColStd_HArray1OfReal^ PolynomialUIntervals, Macad::Occt::TColStd_HArray1OfReal^ PolynomialVIntervals, Macad::Occt::TColStd_HArray1OfReal^ TrueUIntervals, Macad::Occt::TColStd_HArray1OfReal^ TrueVIntervals);
 	int NbUPoles();
 	int NbVPoles();
-	/// <summary>
+		/// <summary>
 	/// returns the poles of the BSpline Surface
 	/// </summary>
-	Macad::Occt::TColgp_HArray2OfPnt^ Poles();
+Macad::Occt::TColgp_HArray2OfPnt^ Poles();
 	int UDegree();
 	int VDegree();
 	int NbUKnots();
 	int NbVKnots();
-	/// <summary>
+		/// <summary>
 	/// Knots in the U direction
 	/// </summary>
-	Macad::Occt::TColStd_HArray1OfReal^ UKnots();
-	/// <summary>
+Macad::Occt::TColStd_HArray1OfReal^ UKnots();
+		/// <summary>
 	/// Knots in the V direction
 	/// </summary>
-	Macad::Occt::TColStd_HArray1OfReal^ VKnots();
-	/// <summary>
+Macad::Occt::TColStd_HArray1OfReal^ VKnots();
+		/// <summary>
 	/// Multiplicities of the knots in the U direction
 	/// </summary>
-	Macad::Occt::TColStd_HArray1OfInteger^ UMultiplicities();
-	/// <summary>
+Macad::Occt::TColStd_HArray1OfInteger^ UMultiplicities();
+		/// <summary>
 	/// Multiplicities of the knots in the V direction
 	/// </summary>
-	Macad::Occt::TColStd_HArray1OfInteger^ VMultiplicities();
+Macad::Occt::TColStd_HArray1OfInteger^ VMultiplicities();
 	bool IsDone();
 }; // class Convert_GridPolynomialToPoles
 
@@ -1271,12 +1271,12 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The hyperbola H is limited between the parametric values U1, U2
 	/// and the equivalent B-spline curve has the same orientation as the
 	/// hyperbola.
 	/// </summary>
-	Convert_HyperbolaToBSplineCurve(Macad::Occt::gp_Hypr2d^ H, double U1, double U2);
+Convert_HyperbolaToBSplineCurve(Macad::Occt::gp_Hypr2d^ H, double U1, double U2);
 	Convert_HyperbolaToBSplineCurve(Macad::Occt::Convert_HyperbolaToBSplineCurve^ parameter1);
 }; // class Convert_HyperbolaToBSplineCurve
 
@@ -1320,12 +1320,12 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The parabola Prb is limited between the parametric values U1, U2
 	/// and the equivalent B-spline curve as the same orientation as the
 	/// parabola Prb.
 	/// </summary>
-	Convert_ParabolaToBSplineCurve(Macad::Occt::gp_Parab2d^ Prb, double U1, double U2);
+Convert_ParabolaToBSplineCurve(Macad::Occt::gp_Parab2d^ Prb, double U1, double U2);
 	Convert_ParabolaToBSplineCurve(Macad::Occt::Convert_ParabolaToBSplineCurve^ parameter1);
 }; // class Convert_ParabolaToBSplineCurve
 
@@ -1371,15 +1371,15 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The equivalent B-spline surface as the same orientation as the
 	/// sphere in the U and V parametric directions.
 	/// 
 	/// Raised if U1 = U2 or U1 = U2 + 2.0 * Pi
 	/// Raised if V1 = V2.
 	/// </summary>
-	Convert_SphereToBSplineSurface(Macad::Occt::gp_Sphere^ Sph, double U1, double U2, double V1, double V2);
-	/// <summary>
+Convert_SphereToBSplineSurface(Macad::Occt::gp_Sphere^ Sph, double U1, double U2, double V1, double V2);
+		/// <summary>
 	/// The equivalent B-spline surface as the same orientation
 	/// as the sphere in the U and V parametric directions.
 	/// 
@@ -1387,8 +1387,8 @@ public:
 	/// Param1 = Param2 + 2.0 * Pi
 	/// Raised if UTrim = False and Param1 = Param2
 	/// </summary>
-	Convert_SphereToBSplineSurface(Macad::Occt::gp_Sphere^ Sph, double Param1, double Param2, bool UTrim);
-	/// <summary>
+Convert_SphereToBSplineSurface(Macad::Occt::gp_Sphere^ Sph, double Param1, double Param2, bool UTrim);
+		/// <summary>
 	/// The equivalent B-spline surface as the same orientation
 	/// as the sphere in the U and V parametric directions.
 	/// 
@@ -1396,12 +1396,12 @@ public:
 	/// Param1 = Param2 + 2.0 * Pi
 	/// Raised if UTrim = False and Param1 = Param2
 	/// </summary>
-	Convert_SphereToBSplineSurface(Macad::Occt::gp_Sphere^ Sph, double Param1, double Param2);
-	/// <summary>
+Convert_SphereToBSplineSurface(Macad::Occt::gp_Sphere^ Sph, double Param1, double Param2);
+		/// <summary>
 	/// The equivalent B-spline surface as the same orientation
 	/// as the sphere in the U and V parametric directions.
 	/// </summary>
-	Convert_SphereToBSplineSurface(Macad::Occt::gp_Sphere^ Sph);
+Convert_SphereToBSplineSurface(Macad::Occt::gp_Sphere^ Sph);
 	Convert_SphereToBSplineSurface(Macad::Occt::Convert_SphereToBSplineSurface^ parameter1);
 }; // class Convert_SphereToBSplineSurface
 
@@ -1447,33 +1447,33 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The equivalent B-spline surface as the same orientation as the
 	/// torus in the U and V parametric directions.
 	/// 
 	/// Raised if U1 = U2 or U1 = U2 + 2.0 * Pi
 	/// Raised if V1 = V2 or V1 = V2 + 2.0 * Pi
 	/// </summary>
-	Convert_TorusToBSplineSurface(Macad::Occt::gp_Torus^ T, double U1, double U2, double V1, double V2);
-	/// <summary>
+Convert_TorusToBSplineSurface(Macad::Occt::gp_Torus^ T, double U1, double U2, double V1, double V2);
+		/// <summary>
 	/// The equivalent B-spline surface as the same orientation as the
 	/// torus in the U and V parametric directions.
 	/// 
 	/// Raised if Param1 = Param2 or Param1 = Param2 + 2.0 * Pi
 	/// </summary>
-	Convert_TorusToBSplineSurface(Macad::Occt::gp_Torus^ T, double Param1, double Param2, bool UTrim);
-	/// <summary>
+Convert_TorusToBSplineSurface(Macad::Occt::gp_Torus^ T, double Param1, double Param2, bool UTrim);
+		/// <summary>
 	/// The equivalent B-spline surface as the same orientation as the
 	/// torus in the U and V parametric directions.
 	/// 
 	/// Raised if Param1 = Param2 or Param1 = Param2 + 2.0 * Pi
 	/// </summary>
-	Convert_TorusToBSplineSurface(Macad::Occt::gp_Torus^ T, double Param1, double Param2);
-	/// <summary>
+Convert_TorusToBSplineSurface(Macad::Occt::gp_Torus^ T, double Param1, double Param2);
+		/// <summary>
 	/// The equivalent B-spline surface as the same orientation as the
 	/// torus in the U and V parametric directions.
 	/// </summary>
-	Convert_TorusToBSplineSurface(Macad::Occt::gp_Torus^ T);
+Convert_TorusToBSplineSurface(Macad::Occt::gp_Torus^ T);
 	Convert_TorusToBSplineSurface(Macad::Occt::Convert_TorusToBSplineSurface^ parameter1);
 }; // class Convert_TorusToBSplineSurface
 

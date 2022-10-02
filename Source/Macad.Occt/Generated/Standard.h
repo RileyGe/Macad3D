@@ -111,37 +111,33 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Create a ErrorHandler (to be used with try{}catch(){}).
 	/// It uses the "setjmp" and "longjmp" routines.
 	/// </summary>
-	Standard_ErrorHandler();
+Standard_ErrorHandler();
 	Standard_ErrorHandler(Macad::Occt::Standard_ErrorHandler^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Unlinks and checks if there is a raised exception.
 	/// </summary>
-	void Destroy();
-	/// <summary>
+void Destroy();
+		/// <summary>
 	/// Removes handler from the handlers list
 	/// </summary>
-	void Unlink();
-	/// <summary>
-	/// Returns "True" if the caught exception has the same type
-	/// or inherits from "aType"
-	/// </summary>
+void Unlink();
 	/* Method skipped due to unknown mapping: Standard_Boolean Catches(Standard_Type aType, ) */
-	/// <summary>
+		/// <summary>
 	/// Returns the current Error.
 	/// </summary>
-	Macad::Occt::Standard_Failure^ Error();
-	/// <summary>
+Macad::Occt::Standard_Failure^ Error();
+		/// <summary>
 	/// Returns the caught exception.
 	/// </summary>
-	static Macad::Occt::Standard_Failure^ LastCaughtError();
-	/// <summary>
+static Macad::Occt::Standard_Failure^ LastCaughtError();
+		/// <summary>
 	/// Test if the code is currently running in a try block
 	/// </summary>
-	static bool IsInTryBlock();
+static bool IsInTryBlock();
 }; // class Standard_ErrorHandler
 
 //---------------------------------------------------------------------
@@ -183,22 +179,22 @@ public:
 	static Macad::Occt::Standard_Failure^ CreateDowncasted(::Standard_Failure* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates a status object of type "Failure".
 	/// </summary>
-	Standard_Failure();
-	/// <summary>
+Standard_Failure();
+		/// <summary>
 	/// Copy constructor
 	/// </summary>
-	Standard_Failure(Macad::Occt::Standard_Failure^ f);
-	/// <summary>
+Standard_Failure(Macad::Occt::Standard_Failure^ f);
+		/// <summary>
 	/// Creates a status object of type "Failure".
 	/// </summary>
 	/// <param name="theDesc">
 	/// [in] exception description
 	/// </param>
-	Standard_Failure(System::String^ theDesc);
-	/// <summary>
+Standard_Failure(System::String^ theDesc);
+		/// <summary>
 	/// Creates a status object of type "Failure" with stack trace.
 	/// </summary>
 	/// <param name="theDesc">
@@ -207,80 +203,67 @@ public:
 	/// <param name="theStackTrace">
 	/// [in] associated stack trace
 	/// </param>
-	Standard_Failure(System::String^ theDesc, System::String^ theStackTrace);
-	/// <summary>
-	/// Prints on the stream @p theStream the exception name followed by the error message.
-	/// 
-	/// Note: there is a short-cut @c operator<< (Standard_OStream&, Handle(Standard_Failure)&)
-	/// </summary>
+Standard_Failure(System::String^ theDesc, System::String^ theStackTrace);
 	/* Method skipped due to unknown mapping: void Print(ostream theStream, ) */
-	/// <summary>
+		/// <summary>
 	/// Returns error message
 	/// </summary>
-	System::String^ GetMessageString();
-	/// <summary>
+System::String^ GetMessageString();
+		/// <summary>
 	/// Sets error message
 	/// </summary>
-	void SetMessageString(System::String^ theMessage);
-	/// <summary>
+void SetMessageString(System::String^ theMessage);
+		/// <summary>
 	/// Returns the stack trace string
 	/// </summary>
-	System::String^ GetStackString();
-	/// <summary>
+System::String^ GetStackString();
+		/// <summary>
 	/// Sets the stack trace string
 	/// </summary>
-	void SetStackString(System::String^ theStack);
+void SetStackString(System::String^ theStack);
 	void Reraise();
 	void Reraise(System::String^ aMessage);
-	/// <summary>
-	/// Reraises a caught exception and changes its error message.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Reraise(stringstream aReason, ) */
-	/// <summary>
+		/// <summary>
 	/// Raises an exception of type "Failure" and associates
 	/// an error message to it. The message can be printed
 	/// in an exception handler.
 	/// </summary>
-	static void Raise(System::String^ aMessage);
-	/// <summary>
+static void Raise(System::String^ aMessage);
+		/// <summary>
 	/// Raises an exception of type "Failure" and associates
 	/// an error message to it. The message can be printed
 	/// in an exception handler.
 	/// </summary>
-	static void Raise();
-	/// <summary>
-	/// Raises an exception of type "Failure" and associates
-	/// an error message to it. The message can be constructed
-	/// at run-time.
-	/// </summary>
+static void Raise();
 	/* Method skipped due to unknown mapping: void Raise(stringstream aReason, ) */
-	/// <summary>
+		/// <summary>
 	/// Used to construct an instance of the exception object as a handle.
 	/// Shall be used to protect against possible construction of exception object in C stack,
 	/// which is dangerous since some of methods require that object was allocated dynamically.
 	/// </summary>
-	static Macad::Occt::Standard_Failure^ NewInstance(System::String^ theMessage);
-	/// <summary>
+static Macad::Occt::Standard_Failure^ NewInstance(System::String^ theMessage);
+		/// <summary>
 	/// Used to construct an instance of the exception object as a handle.
 	/// </summary>
-	static Macad::Occt::Standard_Failure^ NewInstance(System::String^ theMessage, System::String^ theStackTrace);
-	/// <summary>
+static Macad::Occt::Standard_Failure^ NewInstance(System::String^ theMessage, System::String^ theStackTrace);
+		/// <summary>
 	/// Returns the default length of stack trace to be captured by Standard_Failure constructor;
 	/// 0 by default meaning no stack trace.
 	/// </summary>
-	static int DefaultStackTraceLength();
-	/// <summary>
+static int DefaultStackTraceLength();
+		/// <summary>
 	/// Sets default length of stack trace to be captured by Standard_Failure constructor.
 	/// </summary>
-	static void SetDefaultStackTraceLength(int theNbStackTraces);
-	/// <summary>
+static void SetDefaultStackTraceLength(int theNbStackTraces);
+		/// <summary>
 	/// Used to throw CASCADE exception from C signal handler.
 	/// On platforms that do not allow throwing C++ exceptions
 	/// from this handler (e.g. Linux), uses longjump to get to
 	/// the current active signal handler, and only then is
 	/// converted to C++ exception.
 	/// </summary>
-	void Jump();
+void Jump();
 }; // class Standard_Failure
 
 //---------------------------------------------------------------------
@@ -825,95 +808,29 @@ public:
 public:
 	Standard_Dump();
 	Standard_Dump(Macad::Occt::Standard_Dump^ parameter1);
-	/// <summary>
-	/// Converts stream value to string value. The result is original stream value.
-	/// </summary>
-	/// <param name="theStream">
-	/// source value
-	/// </param>
-	/// <returns>
-	/// text presentation
-	/// </returns>
 	/* Method skipped due to unknown mapping: TCollection_AsciiString Text(stringstream theStream, ) */
-	/// <summary>
-	/// Converts stream value to string value. Improves the text presentation with the following cases:
-	/// - for '{' append after '\n' and indent to the next value, increment current indent value
-	/// - for '}' append '\n' and current indent before it, decrement indent value
-	/// - for ',' append after '\n' and indent to the next value. If the current symbol is in massive container [], do nothing
-	/// Covers result with opened and closed brackets on the top level, if it has no symbols there.
-	/// </summary>
-	/// <param name="theStream">
-	/// source value
-	/// </param>
-	/// <param name="theIndent">
-	/// count of ' ' symbols to apply hierarchical indent of the text values
-	/// </param>
-	/// <returns>
-	/// text presentation
-	/// </returns>
 	/* Method skipped due to unknown mapping: TCollection_AsciiString FormatJson(stringstream theStream, Standard_Integer theIndent, ) */
-	/// <summary>
-	/// Converts stream value to string value. Improves the text presentation with the following cases:
-	/// - for '{' append after '\n' and indent to the next value, increment current indent value
-	/// - for '}' append '\n' and current indent before it, decrement indent value
-	/// - for ',' append after '\n' and indent to the next value. If the current symbol is in massive container [], do nothing
-	/// Covers result with opened and closed brackets on the top level, if it has no symbols there.
-	/// </summary>
-	/// <param name="theStream">
-	/// source value
-	/// </param>
-	/// <param name="theIndent">
-	/// count of ' ' symbols to apply hierarchical indent of the text values
-	/// </param>
-	/// <returns>
-	/// text presentation
-	/// </returns>
 	/* Method skipped due to unknown mapping: TCollection_AsciiString FormatJson(stringstream theStream, Standard_Integer theIndent, ) */
-	/// <summary>
-	/// Converts stream into map of values.
-	/// 
-	/// The one level stream example: 'key_1: value_1, key_2: value_2'
-	/// In output: values contain 'key_1: value_1' and 'key_2: value_2'.
-	/// 
-	/// The two level stream example: 'key_1: value_1, key_2: value_2, key_3: {sublevel_key_1: sublevel_value_1}, key_4: value_4'
-	/// In output values contain 'key_1: value_1', 'key_2: value_2', 'key_3: {sublevel_key_1: sublevel_value_1}' and 'key_4: value_4'.
-	/// The sublevel value might be processed later using the same method.
-	/// 
-	/// </summary>
-	/// <param name="theStreamStr">
-	/// stream value
-	/// </param>
-	/// <param name="theKeyToValues">
-	/// [out] container of split values. It contains key to value and position of the value in the stream text
-	/// </param>
 	/* Method skipped due to unknown mapping: Standard_Boolean SplitJson(TCollection_AsciiString theStreamStr, NCollection_IndexedDataMap<TCollection_AsciiString, Standard_DumpValue, NCollection_DefaultHasher<TCollection_AsciiString>> theKeyToValues, ) */
-	/// <summary>
-	/// Returns container of indices in values, that has hierarchical value
-	/// </summary>
 	/* Method skipped due to unknown mapping: NCollection_List<int> HierarchicalValueIndices(NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString, NCollection_DefaultHasher<TCollection_AsciiString>> theValues, ) */
-	/// <summary>
+		/// <summary>
 	/// Returns true if the value has bracket key
 	/// </summary>
-	static bool HasChildKey(Macad::Occt::TCollection_AsciiString^ theSourceValue);
-	/// <summary>
+static bool HasChildKey(Macad::Occt::TCollection_AsciiString^ theSourceValue);
+		/// <summary>
 	/// Returns key value for enum type
 	/// </summary>
-	static System::String^ JsonKeyToString(Macad::Occt::Standard_JsonKey theKey);
-	/// <summary>
+static System::String^ JsonKeyToString(Macad::Occt::Standard_JsonKey theKey);
+		/// <summary>
 	/// Returns length value for enum type
 	/// </summary>
-	static int JsonKeyLength(Macad::Occt::Standard_JsonKey theKey);
-	/// <summary>
-	/// </summary>
-	/// <param name="theOStream">
-	/// source value
-	/// </param>
+static int JsonKeyLength(Macad::Occt::Standard_JsonKey theKey);
 	/* Method skipped due to unknown mapping: void AddValuesSeparator(ostream theOStream, ) */
-	/// <summary>
+		/// <summary>
 	/// Returns default prefix added for each pointer info string if short presentation of pointer used
 	/// </summary>
-	static Macad::Occt::TCollection_AsciiString^ GetPointerPrefix();
-	/// <summary>
+static Macad::Occt::TCollection_AsciiString^ GetPointerPrefix();
+		/// <summary>
 	/// Convert handle pointer to address of the pointer. If the handle is NULL, the result is an empty string.
 	/// </summary>
 	/// <param name="thePointer">
@@ -925,8 +842,8 @@ public:
 	/// <returns>
 	/// the string value
 	/// </returns>
-	static Macad::Occt::TCollection_AsciiString^ GetPointerInfo(Macad::Occt::Standard_Transient^ thePointer, bool isShortInfo);
-	/// <summary>
+static Macad::Occt::TCollection_AsciiString^ GetPointerInfo(Macad::Occt::Standard_Transient^ thePointer, bool isShortInfo);
+		/// <summary>
 	/// Convert handle pointer to address of the pointer. If the handle is NULL, the result is an empty string.
 	/// </summary>
 	/// <param name="thePointer">
@@ -938,8 +855,8 @@ public:
 	/// <returns>
 	/// the string value
 	/// </returns>
-	static Macad::Occt::TCollection_AsciiString^ GetPointerInfo(Macad::Occt::Standard_Transient^ thePointer);
-	/// <summary>
+static Macad::Occt::TCollection_AsciiString^ GetPointerInfo(Macad::Occt::Standard_Transient^ thePointer);
+		/// <summary>
 	/// Convert pointer to address of the pointer. If the handle is NULL, the result is an empty string.
 	/// </summary>
 	/// <param name="thePointer">
@@ -951,8 +868,8 @@ public:
 	/// <returns>
 	/// the string value
 	/// </returns>
-	static Macad::Occt::TCollection_AsciiString^ GetPointerInfo(System::IntPtr thePointer, bool isShortInfo);
-	/// <summary>
+static Macad::Occt::TCollection_AsciiString^ GetPointerInfo(System::IntPtr thePointer, bool isShortInfo);
+		/// <summary>
 	/// Convert pointer to address of the pointer. If the handle is NULL, the result is an empty string.
 	/// </summary>
 	/// <param name="thePointer">
@@ -964,41 +881,11 @@ public:
 	/// <returns>
 	/// the string value
 	/// </returns>
-	static Macad::Occt::TCollection_AsciiString^ GetPointerInfo(System::IntPtr thePointer);
-	/// <summary>
-	/// Append into output value: "Name": { Field }
-	/// </summary>
-	/// <param name="theOStream">
-	/// [out] stream to be fill with values
-	/// </param>
-	/// <param name="theKey">
-	/// a source value
-	/// </param>
-	/// <param name="theField">
-	/// stream value
-	/// </param>
+static Macad::Occt::TCollection_AsciiString^ GetPointerInfo(System::IntPtr thePointer);
 	/* Method skipped due to unknown mapping: void DumpKeyToClass(ostream theOStream, TCollection_AsciiString theKey, TCollection_AsciiString theField, ) */
-	/// <summary>
-	/// Unite values in one value using template: "value_1", "value_2", ..., "value_n"
-	/// </summary>
-	/// <param name="theOStream">
-	/// [out] stream to be fill with values
-	/// </param>
-	/// <param name="theCount">
-	///   [in]  number of values
-	/// </param>
 	/* Method skipped due to unknown mapping: void DumpCharacterValues(ostream theOStream, int theCount, ) */
-	/// <summary>
-	/// Unite values in one value using template: value_1, value_2, ..., value_n
-	/// </summary>
-	/// <param name="theOStream">
-	/// [out] stream to be fill with values
-	/// </param>
-	/// <param name="theCount">
-	///   [in]  number of values
-	/// </param>
 	/* Method skipped due to unknown mapping: void DumpRealValues(ostream theOStream, int theCount, ) */
-	/// <summary>
+		/// <summary>
 	/// Check whether the parameter name is equal to the name in the stream at position
 	/// </summary>
 	/// <param name="theSStream">
@@ -1010,8 +897,8 @@ public:
 	/// <param name="theStreamPos">
 	/// [out] current position in the stream
 	/// </param>
-	static bool ProcessStreamName(Macad::Occt::TCollection_AsciiString^ theStreamStr, Macad::Occt::TCollection_AsciiString^ theName, int% theStreamPos);
-	/// <summary>
+static bool ProcessStreamName(Macad::Occt::TCollection_AsciiString^ theStreamStr, Macad::Occt::TCollection_AsciiString^ theName, int% theStreamPos);
+		/// <summary>
 	/// Check whether the field name is equal to the name in the stream at position
 	/// </summary>
 	/// <param name="theSStream">
@@ -1023,8 +910,8 @@ public:
 	/// <param name="theStreamPos">
 	/// [out] current position in the stream
 	/// </param>
-	static bool ProcessFieldName(Macad::Occt::TCollection_AsciiString^ theStreamStr, Macad::Occt::TCollection_AsciiString^ theName, int% theStreamPos);
-	/// <summary>
+static bool ProcessFieldName(Macad::Occt::TCollection_AsciiString^ theStreamStr, Macad::Occt::TCollection_AsciiString^ theName, int% theStreamPos);
+		/// <summary>
 	/// Unite values in one value using template: value_1, value_2, ..., value_n
 	/// </summary>
 	/// <param name="theSStream">
@@ -1036,8 +923,8 @@ public:
 	/// <param name="theCount">
 	///     [in]  number of values
 	/// </param>
-	static bool InitRealValues(Macad::Occt::TCollection_AsciiString^ theStreamStr, int% theStreamPos, int theCount);
-	/// <summary>
+static bool InitRealValues(Macad::Occt::TCollection_AsciiString^ theStreamStr, int% theStreamPos, int theCount);
+		/// <summary>
 	/// Returns real value
 	/// </summary>
 	/// <param name="theSStream">
@@ -1049,15 +936,15 @@ public:
 	/// <param name="theValue">
 	///     [out] stream value
 	/// </param>
-	static bool InitValue(Macad::Occt::TCollection_AsciiString^ theStreamStr, int% theStreamPos, Macad::Occt::TCollection_AsciiString^ theValue);
-	/// <summary>
+static bool InitValue(Macad::Occt::TCollection_AsciiString^ theStreamStr, int% theStreamPos, Macad::Occt::TCollection_AsciiString^ theValue);
+		/// <summary>
 	/// Convert field name into dump text value, removes "&" and "my" prefixes
 	/// An example, for field myValue, theName is Value, for &myCLass, the name is Class
 	/// </summary>
 	/// <param name="theField">
 	/// a source value
 	/// </param>
-	static Macad::Occt::TCollection_AsciiString^ DumpFieldToName(Macad::Occt::TCollection_AsciiString^ theField);
+static Macad::Occt::TCollection_AsciiString^ DumpFieldToName(Macad::Occt::TCollection_AsciiString^ theField);
 }; // class Standard_Dump
 
 //---------------------------------------------------------------------
@@ -1197,7 +1084,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Main constructor.
 	/// Passed pointer is stored as is (memory is NOT copied nor released with destructor).
 	/// </summary>
@@ -1207,8 +1094,8 @@ public:
 	/// <param name="theSize">
 	///  length of pre-allocated buffer
 	/// </param>
-	Standard_ArrayStreamBuffer(char theBegin, unsigned __int64 theSize);
-	/// <summary>
+Standard_ArrayStreamBuffer(char theBegin, unsigned __int64 theSize);
+		/// <summary>
 	/// (Re)-initialize the stream.
 	/// Passed pointer is stored as is (memory is NOT copied nor released with destructor).
 	/// </summary>
@@ -1218,10 +1105,7 @@ public:
 	/// <param name="theSize">
 	///  length of pre-allocated buffer
 	/// </param>
-	void Init(char theBegin, unsigned __int64 theSize);
-	/// <summary>
-	/// Read a bunch of bytes at once.
-	/// </summary>
+void Init(char theBegin, unsigned __int64 theSize);
 	/* Method skipped due to unknown mapping: long long int xsgetn(char thePtr, long long int theCount, ) */
 	/* Method skipped due to unknown mapping: streampos pubseekoff(long long int _Off, int _Way, int _Mode, ) */
 	/* Method skipped due to unknown mapping: streampos pubseekoff(long long int _Off, int _Way, int _Mode, ) */
@@ -1283,26 +1167,26 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Default constructor.
 	/// </summary>
 	/// <param name="theIsSet">
 	/// Initial flag state
 	/// </param>
-	Standard_Condition(bool theIsSet);
-	/// <summary>
+Standard_Condition(bool theIsSet);
+		/// <summary>
 	/// Set event into signaling state.
 	/// </summary>
-	void Set();
-	/// <summary>
+void Set();
+		/// <summary>
 	/// Reset event (unset signaling state)
 	/// </summary>
-	void Reset();
-	/// <summary>
+void Reset();
+		/// <summary>
 	/// Wait for Event (infinity).
 	/// </summary>
-	void Wait();
-	/// <summary>
+void Wait();
+		/// <summary>
 	/// Wait for signal requested time.
 	/// </summary>
 	/// <param name="theTimeMilliseconds">
@@ -1311,26 +1195,26 @@ public:
 	/// <returns>
 	/// true if get event
 	/// </returns>
-	bool Wait(int theTimeMilliseconds);
-	/// <summary>
+bool Wait(int theTimeMilliseconds);
+		/// <summary>
 	/// Do not wait for signal - just test it state.
 	/// </summary>
 	/// <returns>
 	/// true if get event
 	/// </returns>
-	bool Check();
-	/// <summary>
+bool Check();
+		/// <summary>
 	/// Method perform two steps at-once - reset the event object
 	/// and returns true if it was in signaling state.
 	/// </summary>
 	/// <returns>
 	/// true if event object was in signaling state.
 	/// </returns>
-	bool CheckReset();
-	/// <summary>
+bool CheckReset();
+		/// <summary>
 	/// Access native HANDLE to Event object.
 	/// </summary>
-	System::IntPtr getHandle();
+System::IntPtr getHandle();
 }; // class Standard_Condition
 
 //---------------------------------------------------------------------
@@ -1406,53 +1290,48 @@ public:
 
 public:
 	Standard_GUID();
-	/// <summary>
+		/// <summary>
 	/// build a GUID from an ascii string with the
 	/// following format:
 	/// Length : 36 char
 	/// "00000000-0000-0000-0000-000000000000"
 	/// </summary>
-	Standard_GUID(System::String^ aGuid);
+Standard_GUID(System::String^ aGuid);
 	Standard_GUID(int a32b, char16_t a16b1, char16_t a16b2, char16_t a16b3, unsigned char a8b1, unsigned char a8b2, unsigned char a8b3, unsigned char a8b4, unsigned char a8b5, unsigned char a8b6);
 	/* Method skipped due to unknown mapping: void Standard_GUID(_GUID aGuid, ) */
 	Standard_GUID(Macad::Occt::Standard_GUID^ aGuid);
 	/* Method skipped due to unknown mapping: _GUID ToUUID() */
-	/// <summary>
+		/// <summary>
 	/// translate the GUID into ascii string
 	/// the aStrGuid is allocated by user.
 	/// the guid have the following format:
 	/// 
 	/// "00000000-0000-0000-0000-000000000000"
 	/// </summary>
-	void ToCString(char aStrGuid);
-	/// <summary>
+void ToCString(char aStrGuid);
+		/// <summary>
 	/// translate the GUID into unicode string
 	/// the aStrGuid is allocated by user.
 	/// the guid have the following format:
 	/// 
 	/// "00000000-0000-0000-0000-000000000000"
 	/// </summary>
-	void ToExtString(char16_t aStrGuid);
+void ToExtString(char16_t aStrGuid);
 	bool IsSame(Macad::Occt::Standard_GUID^ uid);
 	bool IsNotSame(Macad::Occt::Standard_GUID^ uid);
 	void Assign(Macad::Occt::Standard_GUID^ uid);
 	/* Method skipped due to unknown mapping: void Assign(_GUID uid, ) */
-	/// <summary>
-	/// Display the GUID with the following format:
-	/// 
-	/// "00000000-0000-0000-0000-000000000000"
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ShallowDump(ostream aStream, ) */
-	/// <summary>
+		/// <summary>
 	/// Check the format of a GUID string.
 	/// It checks the size, the position of the '-' and the correct size of fields.
 	/// </summary>
-	static bool CheckGUIDFormat(System::String^ aGuid);
-	/// <summary>
+static bool CheckGUIDFormat(System::String^ aGuid);
+		/// <summary>
 	/// Hash function for GUID.
 	/// </summary>
-	int Hash(int Upper);
-	/// <summary>
+int Hash(int Upper);
+		/// <summary>
 	/// Computes a hash code for the given GUID of the Standard_Integer type, in the range [1, theUpperBound]
 	/// </summary>
 	/// <param name="theGUID">
@@ -1464,11 +1343,11 @@ public:
 	/// <returns>
 	/// a computed hash code, in the range [1, theUpperBound]
 	/// </returns>
-	static int HashCode(Macad::Occt::Standard_GUID^ theGUID, int theUpperBound);
-	/// <summary>
+static int HashCode(Macad::Occt::Standard_GUID^ theGUID, int theUpperBound);
+		/// <summary>
 	/// Returns True  when the two GUID are the same.
 	/// </summary>
-	static bool IsEqual(Macad::Occt::Standard_GUID^ string1, Macad::Occt::Standard_GUID^ string2);
+static bool IsEqual(Macad::Occt::Standard_GUID^ string1, Macad::Occt::Standard_GUID^ string2);
 }; // class Standard_GUID
 
 //---------------------------------------------------------------------
@@ -1647,23 +1526,23 @@ public:
 public:
 	Standard_MMgrRoot(Macad::Occt::Standard_MMgrRoot^ parameter1);
 	Standard_MMgrRoot();
-	/// <summary>
+		/// <summary>
 	/// Allocate specified number of bytes.
 	/// The actually allocated space should be rounded up to
 	/// double word size (4 bytes), as this is expected by implementation
 	/// of some classes in OCC (e.g. TCollection_AsciiString)
 	/// </summary>
-	System::IntPtr Allocate(size_t theSize);
-	/// <summary>
+System::IntPtr Allocate(size_t theSize);
+		/// <summary>
 	/// Reallocate previously allocated memory to contain at least theSize bytes.
 	/// In case of success, new pointer is returned.
 	/// </summary>
-	System::IntPtr Reallocate(System::IntPtr thePtr, size_t theSize);
-	/// <summary>
+System::IntPtr Reallocate(System::IntPtr thePtr, size_t theSize);
+		/// <summary>
 	/// Frees previously allocated memory at specified address.
 	/// </summary>
-	void Free(System::IntPtr thePtr);
-	/// <summary>
+void Free(System::IntPtr thePtr);
+		/// <summary>
 	/// Purge internally cached unused memory blocks (if any)
 	/// by releasing them to the operating system.
 	/// Must return non-zero if some memory has been actually released,
@@ -1679,8 +1558,8 @@ public:
 	/// 
 	/// Default implementation does nothing and returns 0.
 	/// </summary>
-	int Purge(bool isDestroyed);
-	/// <summary>
+int Purge(bool isDestroyed);
+		/// <summary>
 	/// Purge internally cached unused memory blocks (if any)
 	/// by releasing them to the operating system.
 	/// Must return non-zero if some memory has been actually released,
@@ -1696,7 +1575,7 @@ public:
 	/// 
 	/// Default implementation does nothing and returns 0.
 	/// </summary>
-	int Purge();
+int Purge();
 }; // class Standard_MMgrRoot
 
 //---------------------------------------------------------------------
@@ -1735,25 +1614,25 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor; if aClear is True, the memory will be nullified
 	/// upon allocation.
 	/// </summary>
-	Standard_MMgrRaw(bool aClear);
+Standard_MMgrRaw(bool aClear);
 	Standard_MMgrRaw(Macad::Occt::Standard_MMgrRaw^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Allocate aSize bytes
 	/// </summary>
-	System::IntPtr Allocate(size_t aSize);
-	/// <summary>
+System::IntPtr Allocate(size_t aSize);
+		/// <summary>
 	/// Reallocate aPtr to the size aSize.
 	/// The new pointer is returned.
 	/// </summary>
-	System::IntPtr Reallocate(System::IntPtr thePtr, size_t theSize);
-	/// <summary>
+System::IntPtr Reallocate(System::IntPtr thePtr, size_t theSize);
+		/// <summary>
 	/// Free allocated memory. The pointer is nullified.
 	/// </summary>
-	void Free(System::IntPtr thePtr);
+void Free(System::IntPtr thePtr);
 }; // class Standard_MMgrRaw
 
 //---------------------------------------------------------------------
@@ -1793,25 +1672,25 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor; if aClear is True, the memory will be nullified
 	/// upon allocation.
 	/// </summary>
-	Standard_MMgrTBBalloc(bool aClear);
+Standard_MMgrTBBalloc(bool aClear);
 	Standard_MMgrTBBalloc(Macad::Occt::Standard_MMgrTBBalloc^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Allocate aSize bytes
 	/// </summary>
-	System::IntPtr Allocate(size_t aSize);
-	/// <summary>
+System::IntPtr Allocate(size_t aSize);
+		/// <summary>
 	/// Reallocate aPtr to the size aSize.
 	/// The new pointer is returned.
 	/// </summary>
-	System::IntPtr Reallocate(System::IntPtr thePtr, size_t theSize);
-	/// <summary>
+System::IntPtr Reallocate(System::IntPtr thePtr, size_t theSize);
+		/// <summary>
 	/// Free allocated memory
 	/// </summary>
-	void Free(System::IntPtr thePtr);
+void Free(System::IntPtr thePtr);
 }; // class Standard_MMgrTBBalloc
 
 //---------------------------------------------------------------------
@@ -2061,49 +1940,15 @@ public:
 	}
 
 public:
-	/// <summary>
-	/// Constructor with initialization.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Standard_ReadBuffer(long long int theDataLen, size_t theChunkLen, bool theIsPartialPayload, ) */
-	/// <summary>
-	/// Constructor with initialization.
-	/// </summary>
 	/* Method skipped due to unknown mapping: void Standard_ReadBuffer(long long int theDataLen, size_t theChunkLen, bool theIsPartialPayload, ) */
 	Standard_ReadBuffer(Macad::Occt::Standard_ReadBuffer^ parameter1);
-	/// <summary>
-	/// Initialize the buffer.
-	/// </summary>
-	/// <param name="theDataLen">
-	///  [in] the full length of input data to read from stream.
-	/// </param>
-	/// <param name="theChunkLen">
-	/// [in] the length of single chunk to read
-	/// </param>
-	/// <param name="theIsPartialPayload">
-	/// [in] when FALSE, theDataLen will be automatically aligned to the multiple of theChunkLen;
-	/// when TRUE, last chunk will be read from stream exactly till theDataLen
-	/// allowing portion of chunk to be uninitialized (useful for interleaved data)
-	/// </param>
 	/* Method skipped due to unknown mapping: void Init(long long int theDataLen, size_t theChunkLen, bool theIsPartialPayload, ) */
-	/// <summary>
-	/// Initialize the buffer.
-	/// </summary>
-	/// <param name="theDataLen">
-	///  [in] the full length of input data to read from stream.
-	/// </param>
-	/// <param name="theChunkLen">
-	/// [in] the length of single chunk to read
-	/// </param>
-	/// <param name="theIsPartialPayload">
-	/// [in] when FALSE, theDataLen will be automatically aligned to the multiple of theChunkLen;
-	/// when TRUE, last chunk will be read from stream exactly till theDataLen
-	/// allowing portion of chunk to be uninitialized (useful for interleaved data)
-	/// </param>
 	/* Method skipped due to unknown mapping: void Init(long long int theDataLen, size_t theChunkLen, bool theIsPartialPayload, ) */
-	/// <summary>
+		/// <summary>
 	/// Return TRUE if amount of read bytes is equal to requested length of entire data.
 	/// </summary>
-	bool IsDone();
+bool IsDone();
 }; // class Standard_ReadBuffer
 
 //---------------------------------------------------------------------
@@ -2138,19 +1983,19 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor with initialization.
 	/// </summary>
 	/// <param name="theMaxBufferSizeBytes">
 	/// the length of buffer to read (in bytes)
 	/// </param>
-	Standard_ReadLineBuffer(unsigned __int64 theMaxBufferSizeBytes);
+Standard_ReadLineBuffer(unsigned __int64 theMaxBufferSizeBytes);
 	Standard_ReadLineBuffer(Macad::Occt::Standard_ReadLineBuffer^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Clear buffer and cached values.
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Returns TRUE when the Multiline Mode is on; FALSE by default.
 	/// Multiline modes joins several lines in file having \ at the end of line:
 	/// </summary>
@@ -2159,8 +2004,8 @@ public:
 	/// continues \         // line continuation character without this comment
 	/// and ends.
 	/// @endcode
-	bool IsMultilineMode();
-	/// <summary>
+bool IsMultilineMode();
+		/// <summary>
 	/// Put gap space while merging lines within multiline syntax, so that the following sample:
 	/// </summary>
 	/// @code
@@ -2168,8 +2013,8 @@ public:
 	/// 4/5/6
 	/// @endcode
 	/// Will become "1/2/3 4/5/6" when flag is TRUE, and "1/2/35/5/6" otherwise.
-	bool ToPutGapInMultiline();
-	/// <summary>
+bool ToPutGapInMultiline();
+		/// <summary>
 	/// Sets or unsets the multi-line mode.
 	/// </summary>
 	/// <param name="theMultilineMode">
@@ -2178,8 +2023,8 @@ public:
 	/// <param name="theToPutGap">
 	///      [in] put gap space while connecting lines (no gap otherwise)
 	/// </param>
-	void SetMultilineMode(bool theMultilineMode, bool theToPutGap);
-	/// <summary>
+void SetMultilineMode(bool theMultilineMode, bool theToPutGap);
+		/// <summary>
 	/// Sets or unsets the multi-line mode.
 	/// </summary>
 	/// <param name="theMultilineMode">
@@ -2188,7 +2033,7 @@ public:
 	/// <param name="theToPutGap">
 	///      [in] put gap space while connecting lines (no gap otherwise)
 	/// </param>
-	void SetMultilineMode(bool theMultilineMode);
+void SetMultilineMode(bool theMultilineMode);
 }; // class Standard_ReadLineBuffer
 
 //---------------------------------------------------------------------

@@ -226,74 +226,74 @@ public:
 
 public:
 	ShapeExtend_ComplexCurve(Macad::Occt::ShapeExtend_ComplexCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns number of curves
 	/// </summary>
-	int NbCurves();
-	/// <summary>
+int NbCurves();
+		/// <summary>
 	/// Returns curve given by its index
 	/// </summary>
-	Macad::Occt::Geom_Curve^ Curve(int index);
-	/// <summary>
+Macad::Occt::Geom_Curve^ Curve(int index);
+		/// <summary>
 	/// Returns number of the curve for the given parameter U
 	/// and local paramete r UOut for the found curve
 	/// </summary>
-	int LocateParameter(double U, double% UOut);
-	/// <summary>
+int LocateParameter(double U, double% UOut);
+		/// <summary>
 	/// Returns global parameter for the whole curve according
 	/// to the segment and local parameter on it
 	/// </summary>
-	double LocalToGlobal(int index, double Ulocal);
-	/// <summary>
+double LocalToGlobal(int index, double Ulocal);
+		/// <summary>
 	/// Applies transformation to each curve
 	/// </summary>
-	void Transform(Macad::Occt::Trsf T);
-	/// <summary>
+void Transform(Macad::Occt::Trsf T);
+		/// <summary>
 	/// Returns 1 - U
 	/// </summary>
-	double ReversedParameter(double U);
-	/// <summary>
+double ReversedParameter(double U);
+		/// <summary>
 	/// Returns 0
 	/// </summary>
-	double FirstParameter();
-	/// <summary>
+double FirstParameter();
+		/// <summary>
 	/// Returns 1
 	/// </summary>
-	double LastParameter();
-	/// <summary>
+double LastParameter();
+		/// <summary>
 	/// Returns True if the curve is closed
 	/// </summary>
-	bool IsClosed();
-	/// <summary>
+bool IsClosed();
+		/// <summary>
 	/// Returns False
 	/// </summary>
-	bool IsPeriodic();
-	/// <summary>
+bool IsPeriodic();
+		/// <summary>
 	/// Returns GeomAbs_C0
 	/// </summary>
-	Macad::Occt::GeomAbs_Shape Continuity();
-	/// <summary>
+Macad::Occt::GeomAbs_Shape Continuity();
+		/// <summary>
 	/// Returns False if N > 0
 	/// </summary>
-	bool IsCN(int N);
-	/// <summary>
+bool IsCN(int N);
+		/// <summary>
 	/// Returns point at parameter U.
 	/// Finds appropriate curve and local parameter on it.
 	/// </summary>
-	void D0(double U, Macad::Occt::Pnt% P);
+void D0(double U, Macad::Occt::Pnt% P);
 	void D1(double U, Macad::Occt::Pnt% P, Macad::Occt::Vec% V1);
 	void D2(double U, Macad::Occt::Pnt% P, Macad::Occt::Vec% V1, Macad::Occt::Vec% V2);
 	void D3(double U, Macad::Occt::Pnt% P, Macad::Occt::Vec% V1, Macad::Occt::Vec% V2, Macad::Occt::Vec% V3);
 	Macad::Occt::Vec DN(double U, int N);
-	/// <summary>
+		/// <summary>
 	/// Returns scale factor for recomputing of deviatives.
 	/// </summary>
-	double GetScaleFactor(int ind);
-	/// <summary>
+double GetScaleFactor(int ind);
+		/// <summary>
 	/// Checks geometrical connectivity of the curves, including
 	/// closure (sets fields myClosed)
 	/// </summary>
-	bool CheckConnectivity(double Preci);
+bool CheckConnectivity(double Preci);
 }; // class ShapeExtend_ComplexCurve
 
 //---------------------------------------------------------------------
@@ -360,178 +360,126 @@ public:
 	static Macad::Occt::ShapeExtend_CompositeSurface^ CreateDowncasted(::ShapeExtend_CompositeSurface* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeExtend_CompositeSurface();
-	/// <summary>
-	/// Initializes by a grid of surfaces (calls Init()).
-	/// </summary>
+ShapeExtend_CompositeSurface();
 	/* Method skipped due to unknown mapping: void ShapeExtend_CompositeSurface(TColGeom_HArray2OfSurface GridSurf, ShapeExtend_Parametrisation param, ) */
-	/// <summary>
-	/// Initializes by a grid of surfaces (calls Init()).
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ShapeExtend_CompositeSurface(TColGeom_HArray2OfSurface GridSurf, ShapeExtend_Parametrisation param, ) */
-	/// <summary>
-	/// Initializes by a grid of surfaces (calls Init()).
-	/// </summary>
 	/* Method skipped due to unknown mapping: void ShapeExtend_CompositeSurface(TColGeom_HArray2OfSurface GridSurf, TColStd_Array1OfReal UJoints, TColStd_Array1OfReal VJoints, ) */
 	ShapeExtend_CompositeSurface(Macad::Occt::ShapeExtend_CompositeSurface^ parameter1);
-	/// <summary>
-	/// Initializes by a grid of surfaces.
-	/// All the Surfaces of the grid must have geometrical
-	/// connectivity as stated above.
-	/// If geometrical connectivity is not satisfied, method
-	/// returns False.
-	/// However, class is initialized even in that case.
-	/// 
-	/// Last parameter defines how global parametrisation
-	/// (joint values) will be computed:
-	/// ShapeExtend_Natural: U1 = u11min, Ui+1 = Ui + (ui1max-ui1min), etc.
-	/// ShapeExtend_Uniform: Ui = i-1, Vj = j-1
-	/// ShapeExtend_Unitary: Ui = (i-1)/Nu, Vi = (j-1)/Nv
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Boolean Init(TColGeom_HArray2OfSurface GridSurf, ShapeExtend_Parametrisation param, ) */
-	/// <summary>
-	/// Initializes by a grid of surfaces.
-	/// All the Surfaces of the grid must have geometrical
-	/// connectivity as stated above.
-	/// If geometrical connectivity is not satisfied, method
-	/// returns False.
-	/// However, class is initialized even in that case.
-	/// 
-	/// Last parameter defines how global parametrisation
-	/// (joint values) will be computed:
-	/// ShapeExtend_Natural: U1 = u11min, Ui+1 = Ui + (ui1max-ui1min), etc.
-	/// ShapeExtend_Uniform: Ui = i-1, Vj = j-1
-	/// ShapeExtend_Unitary: Ui = (i-1)/Nu, Vi = (j-1)/Nv
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Boolean Init(TColGeom_HArray2OfSurface GridSurf, ShapeExtend_Parametrisation param, ) */
-	/// <summary>
-	/// Initializes by a grid of surfaces with given global
-	/// parametrisation defined by UJoints and VJoints arrays,
-	/// each having langth equal to number of patches in corresponding
-	/// direction + 1. Global joint values should be sorted in
-	/// increasing order.
-	/// All the Surfaces of the grid must have geometrical
-	/// connectivity as stated above.
-	/// If geometrical connectivity is not satisfied, method
-	/// returns False.
-	/// However, class is initialized even in that case.
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Boolean Init(TColGeom_HArray2OfSurface GridSurf, TColStd_Array1OfReal UJoints, TColStd_Array1OfReal VJoints, ) */
-	/// <summary>
+		/// <summary>
 	/// Returns number of patches in U direction.
 	/// </summary>
-	int NbUPatches();
-	/// <summary>
+int NbUPatches();
+		/// <summary>
 	/// Returns number of patches in V direction.
 	/// </summary>
-	int NbVPatches();
-	/// <summary>
+int NbVPatches();
+		/// <summary>
 	/// Returns one surface patch
 	/// </summary>
-	Macad::Occt::Geom_Surface^ Patch(int i, int j);
-	/// <summary>
-	/// Returns grid of surfaces
-	/// </summary>
+Macad::Occt::Geom_Surface^ Patch(int i, int j);
 	/* Method skipped due to unknown mapping: TColGeom_HArray2OfSurface Patches() */
-	/// <summary>
+		/// <summary>
 	/// Returns the array of U values corresponding to joint
 	/// points between patches as well as to start and end points,
 	/// which define global parametrisation of the surface
 	/// </summary>
-	Macad::Occt::TColStd_HArray1OfReal^ UJointValues();
-	/// <summary>
+Macad::Occt::TColStd_HArray1OfReal^ UJointValues();
+		/// <summary>
 	/// Returns the array of V values corresponding to joint
 	/// points between patches as well as to start and end points,
 	/// which define global parametrisation of the surface
 	/// </summary>
-	Macad::Occt::TColStd_HArray1OfReal^ VJointValues();
-	/// <summary>
+Macad::Occt::TColStd_HArray1OfReal^ VJointValues();
+		/// <summary>
 	/// Returns i-th joint value in U direction
 	/// (1-st is global Umin, (NbUPatches()+1)-th is global Umax
 	/// on the composite surface)
 	/// </summary>
-	double UJointValue(int i);
-	/// <summary>
+double UJointValue(int i);
+		/// <summary>
 	/// Returns j-th joint value in V direction
 	/// (1-st is global Vmin, (NbVPatches()+1)-th is global Vmax
 	/// on the composite surface)
 	/// </summary>
-	double VJointValue(int j);
-	/// <summary>
+double VJointValue(int j);
+		/// <summary>
 	/// Sets the array of U values corresponding to joint
 	/// points, which define global parametrisation of the surface.
 	/// Number of values in array should be equal to NbUPatches()+1.
 	/// All the values should be sorted in increasing order.
 	/// If this is not satisfied, does nothing and returns False.
 	/// </summary>
-	bool SetUJointValues(Macad::Occt::TColStd_Array1OfReal^ UJoints);
-	/// <summary>
+bool SetUJointValues(Macad::Occt::TColStd_Array1OfReal^ UJoints);
+		/// <summary>
 	/// Sets the array of V values corresponding to joint
 	/// points, which define global parametrisation of the surface
 	/// Number of values in array should be equal to NbVPatches()+1.
 	/// All the values should be sorted in increasing order.
 	/// If this is not satisfied, does nothing and returns False.
 	/// </summary>
-	bool SetVJointValues(Macad::Occt::TColStd_Array1OfReal^ VJoints);
-	/// <summary>
+bool SetVJointValues(Macad::Occt::TColStd_Array1OfReal^ VJoints);
+		/// <summary>
 	/// Changes starting value for global U parametrisation (all
 	/// other joint values are shifted accordingly)
 	/// </summary>
-	void SetUFirstValue(double UFirst);
-	/// <summary>
+void SetUFirstValue(double UFirst);
+		/// <summary>
 	/// Changes starting value for global V parametrisation (all
 	/// other joint values are shifted accordingly)
 	/// </summary>
-	void SetVFirstValue(double VFirst);
-	/// <summary>
+void SetVFirstValue(double VFirst);
+		/// <summary>
 	/// Returns number of col that contains given (global) parameter
 	/// </summary>
-	int LocateUParameter(double U);
-	/// <summary>
+int LocateUParameter(double U);
+		/// <summary>
 	/// Returns number of row that contains given (global) parameter
 	/// </summary>
-	int LocateVParameter(double V);
-	/// <summary>
+int LocateVParameter(double V);
+		/// <summary>
 	/// Returns number of row and col of surface that contains
 	/// given point
 	/// </summary>
-	void LocateUVPoint(Macad::Occt::Pnt2d pnt, int% i, int% j);
-	/// <summary>
+void LocateUVPoint(Macad::Occt::Pnt2d pnt, int% i, int% j);
+		/// <summary>
 	/// Returns one surface patch that contains given (global) parameters
 	/// </summary>
-	Macad::Occt::Geom_Surface^ Patch(double U, double V);
-	/// <summary>
+Macad::Occt::Geom_Surface^ Patch(double U, double V);
+		/// <summary>
 	/// Returns one surface patch that contains given point
 	/// </summary>
-	Macad::Occt::Geom_Surface^ Patch(Macad::Occt::Pnt2d pnt);
-	/// <summary>
+Macad::Occt::Geom_Surface^ Patch(Macad::Occt::Pnt2d pnt);
+		/// <summary>
 	/// Converts local parameter u on patch i,j to global parameter U
 	/// </summary>
-	double ULocalToGlobal(int i, int j, double u);
-	/// <summary>
+double ULocalToGlobal(int i, int j, double u);
+		/// <summary>
 	/// Converts local parameter v on patch i,j to global parameter V
 	/// </summary>
-	double VLocalToGlobal(int i, int j, double v);
-	/// <summary>
+double VLocalToGlobal(int i, int j, double v);
+		/// <summary>
 	/// Converts local parameters uv on patch i,j to global parameters UV
 	/// </summary>
-	Macad::Occt::Pnt2d LocalToGlobal(int i, int j, Macad::Occt::Pnt2d uv);
-	/// <summary>
+Macad::Occt::Pnt2d LocalToGlobal(int i, int j, Macad::Occt::Pnt2d uv);
+		/// <summary>
 	/// Converts global parameter U to local parameter u on patch i,j
 	/// </summary>
-	double UGlobalToLocal(int i, int j, double U);
-	/// <summary>
+double UGlobalToLocal(int i, int j, double U);
+		/// <summary>
 	/// Converts global parameter V to local parameter v on patch i,j
 	/// </summary>
-	double VGlobalToLocal(int i, int j, double V);
-	/// <summary>
+double VGlobalToLocal(int i, int j, double V);
+		/// <summary>
 	/// Converts global parameters UV to local parameters uv on patch i,j
 	/// </summary>
-	Macad::Occt::Pnt2d GlobalToLocal(int i, int j, Macad::Occt::Pnt2d UV);
-	/// <summary>
+Macad::Occt::Pnt2d GlobalToLocal(int i, int j, Macad::Occt::Pnt2d UV);
+		/// <summary>
 	/// Computes transformation operator and uFactor descrinbing affine
 	/// transformation required to convert global parameters on composite
 	/// surface to local parameters on patch (i,j):
@@ -539,114 +487,114 @@ public:
 	/// NOTE: Thus Trsf contains shift and scale by V, scale by U is stored in uFact.
 	/// Returns True if transformation is not an identity
 	/// </summary>
-	bool GlobalToLocalTransformation(int i, int j, double% uFact, Macad::Occt::Trsf2d% Trsf);
-	/// <summary>
+bool GlobalToLocalTransformation(int i, int j, double% uFact, Macad::Occt::Trsf2d% Trsf);
+		/// <summary>
 	/// Applies transformation to all the patches
 	/// </summary>
-	void Transform(Macad::Occt::Trsf T);
-	/// <summary>
+void Transform(Macad::Occt::Trsf T);
+		/// <summary>
 	/// Returns a copy of the surface
 	/// </summary>
-	Macad::Occt::Geom_Geometry^ Copy();
-	/// <summary>
+Macad::Occt::Geom_Geometry^ Copy();
+		/// <summary>
 	/// NOT IMPLEMENTED (does nothing)
 	/// </summary>
-	void UReverse();
-	/// <summary>
+void UReverse();
+		/// <summary>
 	/// Returns U
 	/// </summary>
-	double UReversedParameter(double U);
-	/// <summary>
+double UReversedParameter(double U);
+		/// <summary>
 	/// NOT IMPLEMENTED (does nothing)
 	/// </summary>
-	void VReverse();
-	/// <summary>
+void VReverse();
+		/// <summary>
 	/// Returns V
 	/// </summary>
-	double VReversedParameter(double V);
-	/// <summary>
+double VReversedParameter(double V);
+		/// <summary>
 	/// Returns the parametric bounds of grid
 	/// </summary>
-	void Bounds(double% U1, double% U2, double% V1, double% V2);
-	/// <summary>
+void Bounds(double% U1, double% U2, double% V1, double% V2);
+		/// <summary>
 	/// Returns True if grid is closed in U direction
 	/// (i.e. connected with Precision::Confusion)
 	/// </summary>
-	bool IsUClosed();
-	/// <summary>
+bool IsUClosed();
+		/// <summary>
 	/// Returns True if grid is closed in V direction
 	/// (i.e. connected with Precision::Confusion)
 	/// </summary>
-	bool IsVClosed();
-	/// <summary>
+bool IsVClosed();
+		/// <summary>
 	/// Returns False
 	/// </summary>
-	bool IsUPeriodic();
-	/// <summary>
+bool IsUPeriodic();
+		/// <summary>
 	/// Returns False
 	/// </summary>
-	bool IsVPeriodic();
-	/// <summary>
+bool IsVPeriodic();
+		/// <summary>
 	/// NOT IMPLEMENTED (returns Null curve)
 	/// </summary>
-	Macad::Occt::Geom_Curve^ UIso(double U);
-	/// <summary>
+Macad::Occt::Geom_Curve^ UIso(double U);
+		/// <summary>
 	/// NOT IMPLEMENTED (returns Null curve)
 	/// </summary>
-	Macad::Occt::Geom_Curve^ VIso(double V);
-	/// <summary>
+Macad::Occt::Geom_Curve^ VIso(double V);
+		/// <summary>
 	/// returns C0
 	/// </summary>
-	Macad::Occt::GeomAbs_Shape Continuity();
-	/// <summary>
+Macad::Occt::GeomAbs_Shape Continuity();
+		/// <summary>
 	/// returns True if N <=0
 	/// </summary>
-	bool IsCNu(int N);
-	/// <summary>
+bool IsCNu(int N);
+		/// <summary>
 	/// returns True if N <=0
 	/// </summary>
-	bool IsCNv(int N);
-	/// <summary>
+bool IsCNv(int N);
+		/// <summary>
 	/// Computes the point of parameter U,V on the grid.
 	/// </summary>
-	void D0(double U, double V, Macad::Occt::Pnt% P);
-	/// <summary>
+void D0(double U, double V, Macad::Occt::Pnt% P);
+		/// <summary>
 	/// Computes the point P and the first derivatives in the
 	/// directions U and V at this point.
 	/// </summary>
-	void D1(double U, double V, Macad::Occt::Pnt% P, Macad::Occt::Vec% D1U, Macad::Occt::Vec% D1V);
-	/// <summary>
+void D1(double U, double V, Macad::Occt::Pnt% P, Macad::Occt::Vec% D1U, Macad::Occt::Vec% D1V);
+		/// <summary>
 	/// Computes the point P, the first and the second derivatives in
 	/// the directions U and V at this point.
 	/// </summary>
-	void D2(double U, double V, Macad::Occt::Pnt% P, Macad::Occt::Vec% D1U, Macad::Occt::Vec% D1V, Macad::Occt::Vec% D2U, Macad::Occt::Vec% D2V, Macad::Occt::Vec% D2UV);
-	/// <summary>
+void D2(double U, double V, Macad::Occt::Pnt% P, Macad::Occt::Vec% D1U, Macad::Occt::Vec% D1V, Macad::Occt::Vec% D2U, Macad::Occt::Vec% D2V, Macad::Occt::Vec% D2UV);
+		/// <summary>
 	/// Computes the point P, the first,the second and the third
 	/// derivatives in the directions U and V at this point.
 	/// </summary>
-	void D3(double U, double V, Macad::Occt::Pnt% P, Macad::Occt::Vec% D1U, Macad::Occt::Vec% D1V, Macad::Occt::Vec% D2U, Macad::Occt::Vec% D2V, Macad::Occt::Vec% D2UV, Macad::Occt::Vec% D3U, Macad::Occt::Vec% D3V, Macad::Occt::Vec% D3UUV, Macad::Occt::Vec% D3UVV);
-	/// <summary>
+void D3(double U, double V, Macad::Occt::Pnt% P, Macad::Occt::Vec% D1U, Macad::Occt::Vec% D1V, Macad::Occt::Vec% D2U, Macad::Occt::Vec% D2V, Macad::Occt::Vec% D2UV, Macad::Occt::Vec% D3U, Macad::Occt::Vec% D3V, Macad::Occt::Vec% D3UUV, Macad::Occt::Vec% D3UVV);
+		/// <summary>
 	/// Computes the derivative of order Nu in the direction U and Nv
 	/// in the direction V at the point P(U, V).
 	/// </summary>
-	Macad::Occt::Vec DN(double U, double V, int Nu, int Nv);
-	/// <summary>
+Macad::Occt::Vec DN(double U, double V, int Nu, int Nv);
+		/// <summary>
 	/// Computes the point of parameter pnt on the grid.
 	/// </summary>
-	Macad::Occt::Pnt Value(Macad::Occt::Pnt2d pnt);
-	/// <summary>
+Macad::Occt::Pnt Value(Macad::Occt::Pnt2d pnt);
+		/// <summary>
 	/// Computes Joint values according to parameter
 	/// </summary>
-	void ComputeJointValues(Macad::Occt::ShapeExtend_Parametrisation param);
-	/// <summary>
+void ComputeJointValues(Macad::Occt::ShapeExtend_Parametrisation param);
+		/// <summary>
 	/// Computes Joint values according to parameter
 	/// </summary>
-	void ComputeJointValues();
-	/// <summary>
+void ComputeJointValues();
+		/// <summary>
 	/// Checks geometrical connectivity of the patches, including
 	/// closedness (sets fields muUClosed and myVClosed)
 	/// </summary>
-	bool CheckConnectivity(double prec);
+bool CheckConnectivity(double prec);
 }; // class ShapeExtend_CompositeSurface
 
 //---------------------------------------------------------------------
@@ -706,28 +654,28 @@ public:
 	static Macad::Occt::ShapeExtend_WireData^ CreateDowncasted(::ShapeExtend_WireData* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor, creates empty wire with no edges
 	/// </summary>
-	ShapeExtend_WireData();
-	/// <summary>
+ShapeExtend_WireData();
+		/// <summary>
 	/// Constructor initializing the data from TopoDS_Wire. Calls Init(wire,chained).
 	/// </summary>
-	ShapeExtend_WireData(Macad::Occt::TopoDS_Wire^ wire, bool chained, bool theManifoldMode);
-	/// <summary>
+ShapeExtend_WireData(Macad::Occt::TopoDS_Wire^ wire, bool chained, bool theManifoldMode);
+		/// <summary>
 	/// Constructor initializing the data from TopoDS_Wire. Calls Init(wire,chained).
 	/// </summary>
-	ShapeExtend_WireData(Macad::Occt::TopoDS_Wire^ wire, bool chained);
-	/// <summary>
+ShapeExtend_WireData(Macad::Occt::TopoDS_Wire^ wire, bool chained);
+		/// <summary>
 	/// Constructor initializing the data from TopoDS_Wire. Calls Init(wire,chained).
 	/// </summary>
-	ShapeExtend_WireData(Macad::Occt::TopoDS_Wire^ wire);
+ShapeExtend_WireData(Macad::Occt::TopoDS_Wire^ wire);
 	ShapeExtend_WireData(Macad::Occt::ShapeExtend_WireData^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Copies data from another WireData
 	/// </summary>
-	void Init(Macad::Occt::ShapeExtend_WireData^ other);
-	/// <summary>
+void Init(Macad::Occt::ShapeExtend_WireData^ other);
+		/// <summary>
 	/// Loads an already existing wire
 	/// If <chained> is True (default), edges are added in the
 	/// sequence as they are explored by TopoDS_Iterator
@@ -739,8 +687,8 @@ public:
 	/// BRepTools_WireExplorer for disconnected wires and wires
 	/// with seam edges).
 	/// </summary>
-	bool Init(Macad::Occt::TopoDS_Wire^ wire, bool chained, bool theManifoldMode);
-	/// <summary>
+bool Init(Macad::Occt::TopoDS_Wire^ wire, bool chained, bool theManifoldMode);
+		/// <summary>
 	/// Loads an already existing wire
 	/// If <chained> is True (default), edges are added in the
 	/// sequence as they are explored by TopoDS_Iterator
@@ -752,8 +700,8 @@ public:
 	/// BRepTools_WireExplorer for disconnected wires and wires
 	/// with seam edges).
 	/// </summary>
-	bool Init(Macad::Occt::TopoDS_Wire^ wire, bool chained);
-	/// <summary>
+bool Init(Macad::Occt::TopoDS_Wire^ wire, bool chained);
+		/// <summary>
 	/// Loads an already existing wire
 	/// If <chained> is True (default), edges are added in the
 	/// sequence as they are explored by TopoDS_Iterator
@@ -765,12 +713,12 @@ public:
 	/// BRepTools_WireExplorer for disconnected wires and wires
 	/// with seam edges).
 	/// </summary>
-	bool Init(Macad::Occt::TopoDS_Wire^ wire);
-	/// <summary>
+bool Init(Macad::Occt::TopoDS_Wire^ wire);
+		/// <summary>
 	/// Clears data about Wire.
 	/// </summary>
-	void Clear();
-	/// <summary>
+void Clear();
+		/// <summary>
 	/// Computes the list of seam edges
 	/// By default (direct call), computing is enforced
 	/// For indirect call (from IsSeam) it is redone only if not yet
@@ -780,8 +728,8 @@ public:
 	/// Each sense has its own PCurve, the one for FORWARD
 	/// must be set in first
 	/// </summary>
-	void ComputeSeams(bool enforce);
-	/// <summary>
+void ComputeSeams(bool enforce);
+		/// <summary>
 	/// Computes the list of seam edges
 	/// By default (direct call), computing is enforced
 	/// For indirect call (from IsSeam) it is redone only if not yet
@@ -791,12 +739,12 @@ public:
 	/// Each sense has its own PCurve, the one for FORWARD
 	/// must be set in first
 	/// </summary>
-	void ComputeSeams();
-	/// <summary>
+void ComputeSeams();
+		/// <summary>
 	/// Does a circular permutation in order to set <num>th edge last
 	/// </summary>
-	void SetLast(int num);
-	/// <summary>
+void SetLast(int num);
+		/// <summary>
 	/// When the wire contains at least one degenerated edge, sets it
 	/// as last one
 	/// Note   : It is useful to process pcurves, for instance, while the pcurve
@@ -804,8 +752,8 @@ public:
 	/// it is computed after the other edges have been computed and
 	/// chained.
 	/// </summary>
-	void SetDegeneratedLast();
-	/// <summary>
+void SetDegeneratedLast();
+		/// <summary>
 	/// Adds an edge to a wire, being defined (not yet ended)
 	/// This is the plain, basic, function to add an edge
 	/// <num> = 0 (D): Appends at end
@@ -813,8 +761,8 @@ public:
 	/// else, Insert before <num>
 	/// Remark : Null Edge is simply ignored
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Edge^ edge, int atnum);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Edge^ edge, int atnum);
+		/// <summary>
 	/// Adds an edge to a wire, being defined (not yet ended)
 	/// This is the plain, basic, function to add an edge
 	/// <num> = 0 (D): Appends at end
@@ -822,36 +770,36 @@ public:
 	/// else, Insert before <num>
 	/// Remark : Null Edge is simply ignored
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Edge^ edge);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Edge^ edge);
+		/// <summary>
 	/// Adds an entire wire, considered as a list of edges
 	/// Remark : The wire is assumed to be ordered (TopoDS_Iterator
 	/// is used)
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Wire^ wire, int atnum);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Wire^ wire, int atnum);
+		/// <summary>
 	/// Adds an entire wire, considered as a list of edges
 	/// Remark : The wire is assumed to be ordered (TopoDS_Iterator
 	/// is used)
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Wire^ wire);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Wire^ wire);
+		/// <summary>
 	/// Adds a wire in the form of WireData
 	/// </summary>
-	void Add(Macad::Occt::ShapeExtend_WireData^ wire, int atnum);
-	/// <summary>
+void Add(Macad::Occt::ShapeExtend_WireData^ wire, int atnum);
+		/// <summary>
 	/// Adds a wire in the form of WireData
 	/// </summary>
-	void Add(Macad::Occt::ShapeExtend_WireData^ wire);
-	/// <summary>
+void Add(Macad::Occt::ShapeExtend_WireData^ wire);
+		/// <summary>
 	/// Adds an edge or a wire invoking corresponding method Add
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Shape^ shape, int atnum);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Shape^ shape, int atnum);
+		/// <summary>
 	/// Adds an edge or a wire invoking corresponding method Add
 	/// </summary>
-	void Add(Macad::Occt::TopoDS_Shape^ shape);
-	/// <summary>
+void Add(Macad::Occt::TopoDS_Shape^ shape);
+		/// <summary>
 	/// Adds an edge to start or end of <me>, according to <mode>
 	/// 0: at end, as direct
 	/// 1: at end, as reversed
@@ -859,8 +807,8 @@ public:
 	/// 3: at start, as reversed
 	/// < 0: no adding
 	/// </summary>
-	void AddOriented(Macad::Occt::TopoDS_Edge^ edge, int mode);
-	/// <summary>
+void AddOriented(Macad::Occt::TopoDS_Edge^ edge, int mode);
+		/// <summary>
 	/// Adds a wire to start or end of <me>, according to <mode>
 	/// 0: at end, as direct
 	/// 1: at end, as reversed
@@ -868,87 +816,87 @@ public:
 	/// 3: at start, as reversed
 	/// < 0: no adding
 	/// </summary>
-	void AddOriented(Macad::Occt::TopoDS_Wire^ wire, int mode);
-	/// <summary>
+void AddOriented(Macad::Occt::TopoDS_Wire^ wire, int mode);
+		/// <summary>
 	/// Adds an edge or a wire invoking corresponding method
 	/// AddOriented
 	/// </summary>
-	void AddOriented(Macad::Occt::TopoDS_Shape^ shape, int mode);
-	/// <summary>
+void AddOriented(Macad::Occt::TopoDS_Shape^ shape, int mode);
+		/// <summary>
 	/// Removes an Edge, given its rank. By default removes the last edge.
 	/// </summary>
-	void Remove(int num);
-	/// <summary>
+void Remove(int num);
+		/// <summary>
 	/// Removes an Edge, given its rank. By default removes the last edge.
 	/// </summary>
-	void Remove();
-	/// <summary>
+void Remove();
+		/// <summary>
 	/// Replaces an edge at the given
 	/// rank number <num> with new one. Default is last edge (<num> = 0).
 	/// </summary>
-	void Set(Macad::Occt::TopoDS_Edge^ edge, int num);
-	/// <summary>
+void Set(Macad::Occt::TopoDS_Edge^ edge, int num);
+		/// <summary>
 	/// Replaces an edge at the given
 	/// rank number <num> with new one. Default is last edge (<num> = 0).
 	/// </summary>
-	void Set(Macad::Occt::TopoDS_Edge^ edge);
-	/// <summary>
+void Set(Macad::Occt::TopoDS_Edge^ edge);
+		/// <summary>
 	/// Reverses the sense of the list and the orientation of each Edge
 	/// This method should be called when either wire has no seam edges
 	/// or face is not available
 	/// </summary>
-	void Reverse();
-	/// <summary>
+void Reverse();
+		/// <summary>
 	/// Reverses the sense of the list and the orientation of each Edge
 	/// The face is necessary for swapping pcurves for seam edges
 	/// (first pcurve corresponds to orientation FORWARD, and second to
 	/// REVERSED; when edge is reversed, pcurves must be swapped)
 	/// If face is NULL, no swapping is performed
 	/// </summary>
-	void Reverse(Macad::Occt::TopoDS_Face^ face);
-	/// <summary>
+void Reverse(Macad::Occt::TopoDS_Face^ face);
+		/// <summary>
 	/// Returns the count of currently recorded edges
 	/// </summary>
-	int NbEdges();
-	/// <summary>
+int NbEdges();
+		/// <summary>
 	/// Returns the count of currently recorded non-manifold edges
 	/// </summary>
-	int NbNonManifoldEdges();
-	/// <summary>
+int NbNonManifoldEdges();
+		/// <summary>
 	/// Returns <num>th nonmanifold Edge
 	/// </summary>
-	Macad::Occt::TopoDS_Edge^ NonmanifoldEdge(int num);
-	/// <summary>
+Macad::Occt::TopoDS_Edge^ NonmanifoldEdge(int num);
+		/// <summary>
 	/// Returns sequence of non-manifold edges
 	/// This sequence can be not empty if wire data set in manifold mode but
 	/// initial wire has INTERNAL orientation or contains INTERNAL edges
 	/// </summary>
-	Macad::Occt::TopTools_HSequenceOfShape^ NonmanifoldEdges();
-	/// <summary>
+Macad::Occt::TopTools_HSequenceOfShape^ NonmanifoldEdges();
+		/// <summary>
 	/// Returns mode defining manifold wire data or not.
 	/// If manifold that nonmanifold edges will not be not
 	/// consider during operations(previous behaviour)
 	/// and they will be added only in result wire
 	/// else non-manifold edges will consider during operations
 	/// </summary>
-	bool ManifoldMode();
-	/// <summary>
+bool ManifoldMode();
+		/// <summary>
 	/// Returns <num>th Edge
 	/// </summary>
-	Macad::Occt::TopoDS_Edge^ Edge(int num);
-	/// <summary>
+Macad::Occt::TopoDS_Edge^ Edge(int num);
+		/// <summary>
 	/// Returns the index of the edge
 	/// If the edge is a seam the orientation is also checked
 	/// Returns 0 if the edge is not found in the list
 	/// </summary>
-	int Index(Macad::Occt::TopoDS_Edge^ edge);
-	/// <summary>
+int Index(Macad::Occt::TopoDS_Edge^ edge);
+		/// <summary>
 	/// Tells if an Edge is seam (see ComputeSeams)
 	/// An edge is considered as seam if it presents twice in
 	/// the edge list, once as FORWARD and once as REVERSED.
 	/// </summary>
-	bool IsSeam(int num);
-	/// <summary>
+bool IsSeam(int num);
+		/// <summary>
 	/// Makes TopoDS_Wire using
 	/// BRep_Builder (just creates the TopoDS_Wire object and adds
 	/// all edges into it). This method should be called when
@@ -957,15 +905,15 @@ public:
 	/// vertices. In case if adjacent edges do not share the same
 	/// vertices the resulting TopoDS_Wire will be invalid.
 	/// </summary>
-	Macad::Occt::TopoDS_Wire^ Wire();
-	/// <summary>
+Macad::Occt::TopoDS_Wire^ Wire();
+		/// <summary>
 	/// Makes TopoDS_Wire using
 	/// BRepAPI_MakeWire. Class BRepAPI_MakeWire merges
 	/// geometrically coincided vertices and can disturb
 	/// correct order of edges in the wire. If this class fails,
 	/// null shape is returned.
 	/// </summary>
-	Macad::Occt::TopoDS_Wire^ WireAPIMake();
+Macad::Occt::TopoDS_Wire^ WireAPIMake();
 }; // class ShapeExtend_WireData
 
 //---------------------------------------------------------------------
@@ -1015,24 +963,24 @@ public:
 	static Macad::Occt::ShapeExtend_BasicMsgRegistrator^ CreateDowncasted(::ShapeExtend_BasicMsgRegistrator* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeExtend_BasicMsgRegistrator();
+ShapeExtend_BasicMsgRegistrator();
 	ShapeExtend_BasicMsgRegistrator(Macad::Occt::ShapeExtend_BasicMsgRegistrator^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sends a message to be attached to the object.
 	/// Object can be of any type interpreted by redefined MsgRegistrator.
 	/// </summary>
-	void Send(Macad::Occt::Standard_Transient^ object, Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
-	/// <summary>
+void Send(Macad::Occt::Standard_Transient^ object, Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
+		/// <summary>
 	/// Sends a message to be attached to the shape.
 	/// </summary>
-	void Send(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
-	/// <summary>
+void Send(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
+		/// <summary>
 	/// Calls Send method with Null Transient.
 	/// </summary>
-	void Send(Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
+void Send(Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
 }; // class ShapeExtend_BasicMsgRegistrator
 
 //---------------------------------------------------------------------
@@ -1076,31 +1024,31 @@ public:
 	static Macad::Occt::ShapeExtend_MsgRegistrator^ CreateDowncasted(::ShapeExtend_MsgRegistrator* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates an object.
 	/// </summary>
-	ShapeExtend_MsgRegistrator();
+ShapeExtend_MsgRegistrator();
 	ShapeExtend_MsgRegistrator(Macad::Occt::ShapeExtend_MsgRegistrator^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sends a message to be attached to the object.
 	/// If the object is in the map then the message is added to the
 	/// list, otherwise the object is firstly added to the map.
 	/// </summary>
-	void Send(Macad::Occt::Standard_Transient^ object, Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
-	/// <summary>
+void Send(Macad::Occt::Standard_Transient^ object, Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
+		/// <summary>
 	/// Sends a message to be attached to the shape.
 	/// If the shape is in the map then the message is added to the
 	/// list, otherwise the shape is firstly added to the map.
 	/// </summary>
-	void Send(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
-	/// <summary>
+void Send(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
+		/// <summary>
 	/// Returns a Map of objects and message list
 	/// </summary>
-	Macad::Occt::ShapeExtend_DataMapOfTransientListOfMsg^ MapTransient();
-	/// <summary>
+Macad::Occt::ShapeExtend_DataMapOfTransientListOfMsg^ MapTransient();
+		/// <summary>
 	/// Returns a Map of shapes and message list
 	/// </summary>
-	Macad::Occt::ShapeExtend_DataMapOfShapeListOfMsg^ MapShape();
+Macad::Occt::ShapeExtend_DataMapOfShapeListOfMsg^ MapShape();
 }; // class ShapeExtend_MsgRegistrator
 
 //---------------------------------------------------------------------
@@ -1140,16 +1088,16 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates an object Explorer
 	/// </summary>
-	ShapeExtend_Explorer();
+ShapeExtend_Explorer();
 	ShapeExtend_Explorer(Macad::Occt::ShapeExtend_Explorer^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Converts a sequence of Shapes to a Compound
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ CompoundFromSeq(Macad::Occt::TopTools_HSequenceOfShape^ seqval);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ CompoundFromSeq(Macad::Occt::TopTools_HSequenceOfShape^ seqval);
+		/// <summary>
 	/// Converts a Compound to a list of Shapes
 	/// if <comp> is not a compound, the list contains only <comp>
 	/// if <comp> is Null, the list is empty
@@ -1157,32 +1105,32 @@ public:
 	/// then if <expcomp> is True, if a sub-shape is a Compound, it
 	/// is not put to the list but its sub-shapes are (recursive)
 	/// </summary>
-	Macad::Occt::TopTools_HSequenceOfShape^ SeqFromCompound(Macad::Occt::TopoDS_Shape^ comp, bool expcomp);
-	/// <summary>
+Macad::Occt::TopTools_HSequenceOfShape^ SeqFromCompound(Macad::Occt::TopoDS_Shape^ comp, bool expcomp);
+		/// <summary>
 	/// Converts a Sequence of Shapes to a List of Shapes
 	/// <clear> if True (D), commands the list to start from scratch
 	/// else, the list is cumulated
 	/// </summary>
-	void ListFromSeq(Macad::Occt::TopTools_HSequenceOfShape^ seqval, Macad::Occt::TopTools_ListOfShape^ lisval, bool clear);
-	/// <summary>
+void ListFromSeq(Macad::Occt::TopTools_HSequenceOfShape^ seqval, Macad::Occt::TopTools_ListOfShape^ lisval, bool clear);
+		/// <summary>
 	/// Converts a Sequence of Shapes to a List of Shapes
 	/// <clear> if True (D), commands the list to start from scratch
 	/// else, the list is cumulated
 	/// </summary>
-	void ListFromSeq(Macad::Occt::TopTools_HSequenceOfShape^ seqval, Macad::Occt::TopTools_ListOfShape^ lisval);
-	/// <summary>
+void ListFromSeq(Macad::Occt::TopTools_HSequenceOfShape^ seqval, Macad::Occt::TopTools_ListOfShape^ lisval);
+		/// <summary>
 	/// Converts a List of Shapes to a Sequence of Shapes
 	/// </summary>
-	Macad::Occt::TopTools_HSequenceOfShape^ SeqFromList(Macad::Occt::TopTools_ListOfShape^ lisval);
-	/// <summary>
+Macad::Occt::TopTools_HSequenceOfShape^ SeqFromList(Macad::Occt::TopTools_ListOfShape^ lisval);
+		/// <summary>
 	/// Returns the type of a Shape: true type if <compound> is False
 	/// If <compound> is True and <shape> is a Compound, iterates on
 	/// its items. If all are of the same type, returns this type.
 	/// Else, returns COMPOUND. If it is empty, returns SHAPE
 	/// For a Null Shape, returns SHAPE
 	/// </summary>
-	Macad::Occt::TopAbs_ShapeEnum ShapeType(Macad::Occt::TopoDS_Shape^ shape, bool compound);
-	/// <summary>
+Macad::Occt::TopAbs_ShapeEnum ShapeType(Macad::Occt::TopoDS_Shape^ shape, bool compound);
+		/// <summary>
 	/// Builds a COMPOUND from the given shape.
 	/// It explores the shape level by level, according to the
 	/// <explore> argument. If <explore> is False, only COMPOUND
@@ -1195,14 +1143,14 @@ public:
 	/// correspond to starting COMPOUND,SOLID or SHELL containers, or
 	/// items directly contained in a Compound
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ SortedCompound(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::TopAbs_ShapeEnum type, bool explore, bool compound);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ SortedCompound(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::TopAbs_ShapeEnum type, bool explore, bool compound);
+		/// <summary>
 	/// Dispatches starting list of shapes according to their type,
 	/// to the appropriate resulting lists
 	/// For each of these lists, if it is null, it is firstly created
 	/// else, new items are appended to the already existing ones
 	/// </summary>
-	void DispatchList(Macad::Occt::TopTools_HSequenceOfShape^ list, Macad::Occt::TopTools_HSequenceOfShape^ vertices, Macad::Occt::TopTools_HSequenceOfShape^ edges, Macad::Occt::TopTools_HSequenceOfShape^ wires, Macad::Occt::TopTools_HSequenceOfShape^ faces, Macad::Occt::TopTools_HSequenceOfShape^ shells, Macad::Occt::TopTools_HSequenceOfShape^ solids, Macad::Occt::TopTools_HSequenceOfShape^ compsols, Macad::Occt::TopTools_HSequenceOfShape^ compounds);
+void DispatchList(Macad::Occt::TopTools_HSequenceOfShape^ list, Macad::Occt::TopTools_HSequenceOfShape^ vertices, Macad::Occt::TopTools_HSequenceOfShape^ edges, Macad::Occt::TopTools_HSequenceOfShape^ wires, Macad::Occt::TopTools_HSequenceOfShape^ faces, Macad::Occt::TopTools_HSequenceOfShape^ shells, Macad::Occt::TopTools_HSequenceOfShape^ solids, Macad::Occt::TopTools_HSequenceOfShape^ compsols, Macad::Occt::TopTools_HSequenceOfShape^ compounds);
 }; // class ShapeExtend_Explorer
 
 //---------------------------------------------------------------------
@@ -1253,19 +1201,19 @@ public:
 public:
 	ShapeExtend();
 	ShapeExtend(Macad::Occt::ShapeExtend^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Inits using of ShapeExtend.
 	/// Currently, loads messages output by ShapeHealing algorithms.
 	/// </summary>
-	static void Init();
-	/// <summary>
+static void Init();
+		/// <summary>
 	/// Encodes status (enumeration) to a bit flag
 	/// </summary>
-	static int EncodeStatus(Macad::Occt::ShapeExtend_Status status);
-	/// <summary>
+static int EncodeStatus(Macad::Occt::ShapeExtend_Status status);
+		/// <summary>
 	/// Tells if a bit flag contains bit corresponding to enumerated status
 	/// </summary>
-	static bool DecodeStatus(int flag, Macad::Occt::ShapeExtend_Status status);
+static bool DecodeStatus(int flag, Macad::Occt::ShapeExtend_Status status);
 }; // class ShapeExtend
 
 }; // namespace Occt

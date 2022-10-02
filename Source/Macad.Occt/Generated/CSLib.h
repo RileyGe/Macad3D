@@ -115,7 +115,7 @@ public:
 public:
 	CSLib();
 	CSLib(Macad::Occt::CSLib^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// The following functions computes the normal to a surface
 	/// inherits FunctionWithDerivative from math
 	/// 
@@ -128,8 +128,8 @@ public:
 	/// The normal is computed if theStatus == Done else the theStatus gives the
 	/// reason why the computation has failed.
 	/// </summary>
-	static void Normal(Macad::Occt::Vec D1U, Macad::Occt::Vec D1V, double SinTol, Macad::Occt::CSLib_DerivativeStatus% theStatus, Macad::Occt::Dir% Normal);
-	/// <summary>
+static void Normal(Macad::Occt::Vec D1U, Macad::Occt::Vec D1V, double SinTol, Macad::Occt::CSLib_DerivativeStatus% theStatus, Macad::Occt::Dir% Normal);
+		/// <summary>
 	/// If there is a singularity on the surface  the previous method
 	/// cannot compute the local normal.
 	/// This method computes an approached normal direction of a surface.
@@ -158,36 +158,36 @@ public:
 	/// . if DNu Is not Null and DNv Is not Null Done = False, there are
 	/// an infinity of normals at the considered point on the surface.
 	/// </summary>
-	static void Normal(Macad::Occt::Vec D1U, Macad::Occt::Vec D1V, Macad::Occt::Vec D2U, Macad::Occt::Vec D2V, Macad::Occt::Vec D2UV, double SinTol, bool% Done, Macad::Occt::CSLib_NormalStatus% theStatus, Macad::Occt::Dir% Normal);
-	/// <summary>
+static void Normal(Macad::Occt::Vec D1U, Macad::Occt::Vec D1V, Macad::Occt::Vec D2U, Macad::Occt::Vec D2V, Macad::Occt::Vec D2UV, double SinTol, bool% Done, Macad::Occt::CSLib_NormalStatus% theStatus, Macad::Occt::Dir% Normal);
+		/// <summary>
 	/// Computes the normal direction of a surface as the cross product
 	/// between D1U and D1V.
 	/// </summary>
-	static void Normal(Macad::Occt::Vec D1U, Macad::Occt::Vec D1V, double MagTol, Macad::Occt::CSLib_NormalStatus% theStatus, Macad::Occt::Dir% Normal);
-	/// <summary>
+static void Normal(Macad::Occt::Vec D1U, Macad::Occt::Vec D1V, double MagTol, Macad::Occt::CSLib_NormalStatus% theStatus, Macad::Occt::Dir% Normal);
+		/// <summary>
 	/// find the first  order k0  of deriviative of NUV
 	/// where: foreach order < k0  all the derivatives of NUV  are
 	/// null all the derivatives of NUV corresponding to the order
 	/// k0 are collinear and have the same sens.
 	/// In this case, normal at U,V is unique.
 	/// </summary>
-	static void Normal(int MaxOrder, Macad::Occt::TColgp_Array2OfVec^ DerNUV, double MagTol, double U, double V, double Umin, double Umax, double Vmin, double Vmax, Macad::Occt::CSLib_NormalStatus% theStatus, Macad::Occt::Dir% Normal, int% OrderU, int% OrderV);
-	/// <summary>
+static void Normal(int MaxOrder, Macad::Occt::TColgp_Array2OfVec^ DerNUV, double MagTol, double U, double V, double Umin, double Umax, double Vmin, double Vmax, Macad::Occt::CSLib_NormalStatus% theStatus, Macad::Occt::Dir% Normal, int% OrderU, int% OrderV);
+		/// <summary>
 	/// -- Computes the derivative  of order Nu in the --
 	/// direction U and Nv in the direction V of the not --
 	/// normalized  normal vector at  the point  P(U,V) The
 	/// array DerSurf contain the derivative (i,j) of the surface
 	/// for i=0,Nu+1 ; j=0,Nv+1
 	/// </summary>
-	static Macad::Occt::Vec DNNUV(int Nu, int Nv, Macad::Occt::TColgp_Array2OfVec^ DerSurf);
-	/// <summary>
+static Macad::Occt::Vec DNNUV(int Nu, int Nv, Macad::Occt::TColgp_Array2OfVec^ DerSurf);
+		/// <summary>
 	/// Computes the derivatives of order Nu in the direction Nu
 	/// and Nv in the direction Nv of the not normalized vector
 	/// N(u,v) = dS1/du * dS2/dv (cases where we use an osculating surface)
 	/// DerSurf1 are the derivatives of S1
 	/// </summary>
-	static Macad::Occt::Vec DNNUV(int Nu, int Nv, Macad::Occt::TColgp_Array2OfVec^ DerSurf1, Macad::Occt::TColgp_Array2OfVec^ DerSurf2);
-	/// <summary>
+static Macad::Occt::Vec DNNUV(int Nu, int Nv, Macad::Occt::TColgp_Array2OfVec^ DerSurf1, Macad::Occt::TColgp_Array2OfVec^ DerSurf2);
+		/// <summary>
 	/// -- Computes the derivative  of order Nu in the --
 	/// direction   U and  Nv in the  direction  V  of the
 	/// normalized normal vector  at the point P(U,V) array
@@ -197,8 +197,8 @@ public:
 	/// be used to compute the normalized normal vector.
 	/// In the regular cases , Iduref=Idvref=0.
 	/// </summary>
-	static Macad::Occt::Vec DNNormal(int Nu, int Nv, Macad::Occt::TColgp_Array2OfVec^ DerNUV, int Iduref, int Idvref);
-	/// <summary>
+static Macad::Occt::Vec DNNormal(int Nu, int Nv, Macad::Occt::TColgp_Array2OfVec^ DerNUV, int Iduref, int Idvref);
+		/// <summary>
 	/// -- Computes the derivative  of order Nu in the --
 	/// direction   U and  Nv in the  direction  V  of the
 	/// normalized normal vector  at the point P(U,V) array
@@ -208,8 +208,8 @@ public:
 	/// be used to compute the normalized normal vector.
 	/// In the regular cases , Iduref=Idvref=0.
 	/// </summary>
-	static Macad::Occt::Vec DNNormal(int Nu, int Nv, Macad::Occt::TColgp_Array2OfVec^ DerNUV, int Iduref);
-	/// <summary>
+static Macad::Occt::Vec DNNormal(int Nu, int Nv, Macad::Occt::TColgp_Array2OfVec^ DerNUV, int Iduref);
+		/// <summary>
 	/// -- Computes the derivative  of order Nu in the --
 	/// direction   U and  Nv in the  direction  V  of the
 	/// normalized normal vector  at the point P(U,V) array
@@ -219,7 +219,7 @@ public:
 	/// be used to compute the normalized normal vector.
 	/// In the regular cases , Iduref=Idvref=0.
 	/// </summary>
-	static Macad::Occt::Vec DNNormal(int Nu, int Nv, Macad::Occt::TColgp_Array2OfVec^ DerNUV);
+static Macad::Occt::Vec DNNormal(int Nu, int Nv, Macad::Occt::TColgp_Array2OfVec^ DerNUV);
 }; // class CSLib
 
 //---------------------------------------------------------------------
@@ -255,7 +255,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs the 2D-polygon.
 	/// thePnts2d is the set of the vertices (closed polygon
 	/// will always be created inside of this constructor;
@@ -265,8 +265,8 @@ public:
 	/// theUmin, theVmin, theUmax, theVmax are
 	/// UV-bounds of the polygon.
 	/// </summary>
-	CSLib_Class2d(Macad::Occt::TColgp_Array1OfPnt2d^ thePnts2d, double theTolU, double theTolV, double theUMin, double theVMin, double theUMax, double theVMax);
-	/// <summary>
+CSLib_Class2d(Macad::Occt::TColgp_Array1OfPnt2d^ thePnts2d, double theTolU, double theTolV, double theUMin, double theVMin, double theUMax, double theVMax);
+		/// <summary>
 	/// Constructs the 2D-polygon.
 	/// thePnts2d is the set of the vertices (closed polygon
 	/// will always be created inside of this constructor;
@@ -276,7 +276,7 @@ public:
 	/// theUmin, theVmin, theUmax, theVmax are
 	/// UV-bounds of the polygon.
 	/// </summary>
-	CSLib_Class2d(Macad::Occt::TColgp_SequenceOfPnt2d^ thePnts2d, double theTolU, double theTolV, double theUMin, double theVMin, double theUMax, double theVMax);
+CSLib_Class2d(Macad::Occt::TColgp_SequenceOfPnt2d^ thePnts2d, double theTolU, double theTolV, double theUMin, double theVMin, double theUMax, double theVMax);
 	CSLib_Class2d(Macad::Occt::CSLib_Class2d^ parameter1);
 	int SiDans(Macad::Occt::Pnt2d P);
 	int SiDans_OnMode(Macad::Occt::Pnt2d P, double Tol);

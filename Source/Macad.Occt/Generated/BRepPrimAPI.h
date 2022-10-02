@@ -58,87 +58,84 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Default constructor
 	/// </summary>
-	BRepPrimAPI_MakeBox();
-	/// <summary>
+BRepPrimAPI_MakeBox();
+		/// <summary>
 	/// Make a box with a corner at 0,0,0 and the other dx,dy,dz
 	/// </summary>
-	BRepPrimAPI_MakeBox(double dx, double dy, double dz);
-	/// <summary>
+BRepPrimAPI_MakeBox(double dx, double dy, double dz);
+		/// <summary>
 	/// Make a box with a corner at P and size dx, dy, dz.
 	/// </summary>
-	BRepPrimAPI_MakeBox(Macad::Occt::Pnt P, double dx, double dy, double dz);
-	/// <summary>
+BRepPrimAPI_MakeBox(Macad::Occt::Pnt P, double dx, double dy, double dz);
+		/// <summary>
 	/// Make a box with corners P1,P2.
 	/// </summary>
-	BRepPrimAPI_MakeBox(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
-	/// <summary>
+BRepPrimAPI_MakeBox(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
+		/// <summary>
 	/// Make a box with Ax2 (the left corner and the axis) and size dx, dy, dz.
 	/// </summary>
-	BRepPrimAPI_MakeBox(Macad::Occt::Ax2 Axes, double dx, double dy, double dz);
+BRepPrimAPI_MakeBox(Macad::Occt::Ax2 Axes, double dx, double dy, double dz);
 	BRepPrimAPI_MakeBox(Macad::Occt::BRepPrimAPI_MakeBox^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Init a box with a corner at 0,0,0 and the other theDX, theDY, theDZ
 	/// </summary>
-	void Init(double theDX, double theDY, double theDZ);
-	/// <summary>
+void Init(double theDX, double theDY, double theDZ);
+		/// <summary>
 	/// Init a box with a corner at thePnt and size theDX, theDY, theDZ.
 	/// </summary>
-	void Init(Macad::Occt::Pnt thePnt, double theDX, double theDY, double theDZ);
-	/// <summary>
+void Init(Macad::Occt::Pnt thePnt, double theDX, double theDY, double theDZ);
+		/// <summary>
 	/// Init a box with corners thePnt1, thePnt2.
 	/// </summary>
-	void Init(Macad::Occt::Pnt thePnt1, Macad::Occt::Pnt thePnt2);
-	/// <summary>
+void Init(Macad::Occt::Pnt thePnt1, Macad::Occt::Pnt thePnt2);
+		/// <summary>
 	/// Init a box with Ax2 (the left corner and the theAxes) and size theDX, theDY, theDZ.
 	/// </summary>
-	void Init(Macad::Occt::Ax2 theAxes, double theDX, double theDY, double theDZ);
-	/// <summary>
-	/// Returns the internal algorithm.
-	/// </summary>
+void Init(Macad::Occt::Ax2 theAxes, double theDX, double theDY, double theDZ);
 	/* Method skipped due to unknown mapping: BRepPrim_Wedge Wedge() */
-	/// <summary>
+		/// <summary>
 	/// Stores the solid in myShape.
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Stores the solid in myShape.
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Returns the constructed box as a shell.
 	/// </summary>
-	Macad::Occt::TopoDS_Shell^ Shell();
-	/// <summary>
+Macad::Occt::TopoDS_Shell^ Shell();
+		/// <summary>
 	/// Returns the constructed box as a solid.
 	/// </summary>
-	Macad::Occt::TopoDS_Solid^ Solid();
-	/// <summary>
+Macad::Occt::TopoDS_Solid^ Solid();
+		/// <summary>
 	/// Returns ZMin face
 	/// </summary>
-	Macad::Occt::TopoDS_Face^ BottomFace();
-	/// <summary>
+Macad::Occt::TopoDS_Face^ BottomFace();
+		/// <summary>
 	/// Returns XMin face
 	/// </summary>
-	Macad::Occt::TopoDS_Face^ BackFace();
-	/// <summary>
+Macad::Occt::TopoDS_Face^ BackFace();
+		/// <summary>
 	/// Returns XMax face
 	/// </summary>
-	Macad::Occt::TopoDS_Face^ FrontFace();
-	/// <summary>
+Macad::Occt::TopoDS_Face^ FrontFace();
+		/// <summary>
 	/// Returns YMin face
 	/// </summary>
-	Macad::Occt::TopoDS_Face^ LeftFace();
-	/// <summary>
+Macad::Occt::TopoDS_Face^ LeftFace();
+		/// <summary>
 	/// Returns YMax face
 	/// </summary>
-	Macad::Occt::TopoDS_Face^ RightFace();
-	/// <summary>
+Macad::Occt::TopoDS_Face^ RightFace();
+		/// <summary>
 	/// Returns ZMax face
 	/// </summary>
-	Macad::Occt::TopoDS_Face^ TopFace();
+Macad::Occt::TopoDS_Face^ TopFace();
 }; // class BRepPrimAPI_MakeBox
 
 //---------------------------------------------------------------------
@@ -181,31 +178,31 @@ public:
 public:
 	BRepPrimAPI_MakeOneAxis();
 	BRepPrimAPI_MakeOneAxis(Macad::Occt::BRepPrimAPI_MakeOneAxis^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// The inherited commands should provide the algorithm.
 	/// Returned as a pointer.
 	/// </summary>
-	System::IntPtr OneAxis();
-	/// <summary>
+System::IntPtr OneAxis();
+		/// <summary>
 	/// Stores the solid in myShape.
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Stores the solid in myShape.
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Returns the lateral face of the rotational primitive.
 	/// </summary>
-	Macad::Occt::TopoDS_Face^ Face();
-	/// <summary>
+Macad::Occt::TopoDS_Face^ Face();
+		/// <summary>
 	/// Returns the constructed rotational primitive as a shell.
 	/// </summary>
-	Macad::Occt::TopoDS_Shell^ Shell();
-	/// <summary>
+Macad::Occt::TopoDS_Shell^ Shell();
+		/// <summary>
 	/// Returns the constructed rotational primitive as a solid.
 	/// </summary>
-	Macad::Occt::TopoDS_Solid^ Solid();
+Macad::Occt::TopoDS_Solid^ Solid();
 }; // class BRepPrimAPI_MakeOneAxis
 
 //---------------------------------------------------------------------
@@ -244,7 +241,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Make a cone.
 	/// </summary>
 	/// <param name="R1">
@@ -256,8 +253,8 @@ public:
 	/// <param name="H">
 	///  [in] cone height
 	/// </param>
-	BRepPrimAPI_MakeCone(double R1, double R2, double H);
-	/// <summary>
+BRepPrimAPI_MakeCone(double R1, double R2, double H);
+		/// <summary>
 	/// Make a cone.
 	/// </summary>
 	/// <param name="R1">
@@ -272,8 +269,8 @@ public:
 	/// <param name="angle">
 	/// [in] angle to create a part cone
 	/// </param>
-	BRepPrimAPI_MakeCone(double R1, double R2, double H, double angle);
-	/// <summary>
+BRepPrimAPI_MakeCone(double R1, double R2, double H, double angle);
+		/// <summary>
 	/// Make a cone.
 	/// </summary>
 	/// <param name="axes">
@@ -288,8 +285,8 @@ public:
 	/// <param name="H">
 	///    [in] cone height
 	/// </param>
-	BRepPrimAPI_MakeCone(Macad::Occt::Ax2 Axes, double R1, double R2, double H);
-	/// <summary>
+BRepPrimAPI_MakeCone(Macad::Occt::Ax2 Axes, double R1, double R2, double H);
+		/// <summary>
 	/// Make a cone of height H radius R1 in the plane z =
 	/// 0, R2 in the plane Z = H. R1 and R2 may be null.
 	/// Take a section of <angle>
@@ -322,15 +319,12 @@ public:
 	/// R1, R2 and H, is less than Precision::Confusion()/H, or greater than
 	/// (Pi/2)-Precision::Confusion()/H.f
 	/// </summary>
-	BRepPrimAPI_MakeCone(Macad::Occt::Ax2 Axes, double R1, double R2, double H, double angle);
+BRepPrimAPI_MakeCone(Macad::Occt::Ax2 Axes, double R1, double R2, double H, double angle);
 	BRepPrimAPI_MakeCone(Macad::Occt::BRepPrimAPI_MakeCone^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the algorithm.
 	/// </summary>
-	System::IntPtr OneAxis();
-	/// <summary>
-	/// Returns the algorithm.
-	/// </summary>
+System::IntPtr OneAxis();
 	/* Method skipped due to unknown mapping: BRepPrim_Cone Cone() */
 }; // class BRepPrimAPI_MakeCone
 
@@ -370,7 +364,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Make a cylinder.
 	/// </summary>
 	/// <param name="R">
@@ -379,8 +373,8 @@ public:
 	/// <param name="H">
 	/// [in] cylinder height
 	/// </param>
-	BRepPrimAPI_MakeCylinder(double R, double H);
-	/// <summary>
+BRepPrimAPI_MakeCylinder(double R, double H);
+		/// <summary>
 	/// Make a cylinder (part cylinder).
 	/// </summary>
 	/// <param name="R">
@@ -392,8 +386,8 @@ public:
 	/// <param name="Angle">
 	/// [in] defines the missing portion of the cylinder
 	/// </param>
-	BRepPrimAPI_MakeCylinder(double R, double H, double Angle);
-	/// <summary>
+BRepPrimAPI_MakeCylinder(double R, double H, double Angle);
+		/// <summary>
 	/// Make a cylinder of radius R and length H.
 	/// </summary>
 	/// <param name="Axes">
@@ -405,8 +399,8 @@ public:
 	/// <param name="H">
 	///    [in] cylinder height
 	/// </param>
-	BRepPrimAPI_MakeCylinder(Macad::Occt::Ax2 Axes, double R, double H);
-	/// <summary>
+BRepPrimAPI_MakeCylinder(Macad::Occt::Ax2 Axes, double R, double H);
+		/// <summary>
 	/// Make a cylinder   of  radius R  and  length H with
 	/// angle  H.
 	/// Constructs
@@ -434,15 +428,12 @@ public:
 	/// -   R is less than or equal to Precision::Confusion(), or
 	/// -   H is less than or equal to Precision::Confusion().
 	/// </summary>
-	BRepPrimAPI_MakeCylinder(Macad::Occt::Ax2 Axes, double R, double H, double Angle);
+BRepPrimAPI_MakeCylinder(Macad::Occt::Ax2 Axes, double R, double H, double Angle);
 	BRepPrimAPI_MakeCylinder(Macad::Occt::BRepPrimAPI_MakeCylinder^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the algorithm.
 	/// </summary>
-	System::IntPtr OneAxis();
-	/// <summary>
-	/// Returns the algorithm.
-	/// </summary>
+System::IntPtr OneAxis();
 	/* Method skipped due to unknown mapping: BRepPrim_Cylinder Cylinder() */
 }; // class BRepPrimAPI_MakeCylinder
 
@@ -487,19 +478,19 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Make a HalfSpace defined with a Face and a Point.
 	/// </summary>
-	BRepPrimAPI_MakeHalfSpace(Macad::Occt::TopoDS_Face^ Face, Macad::Occt::Pnt RefPnt);
-	/// <summary>
+BRepPrimAPI_MakeHalfSpace(Macad::Occt::TopoDS_Face^ Face, Macad::Occt::Pnt RefPnt);
+		/// <summary>
 	/// Make a HalfSpace defined with a Shell and a Point.
 	/// </summary>
-	BRepPrimAPI_MakeHalfSpace(Macad::Occt::TopoDS_Shell^ Shell, Macad::Occt::Pnt RefPnt);
+BRepPrimAPI_MakeHalfSpace(Macad::Occt::TopoDS_Shell^ Shell, Macad::Occt::Pnt RefPnt);
 	BRepPrimAPI_MakeHalfSpace(Macad::Occt::BRepPrimAPI_MakeHalfSpace^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed half-space as a solid.
 	/// </summary>
-	Macad::Occt::TopoDS_Solid^ Solid();
+Macad::Occt::TopoDS_Solid^ Solid();
 }; // class BRepPrimAPI_MakeHalfSpace
 
 //---------------------------------------------------------------------
@@ -556,14 +547,14 @@ public:
 public:
 	BRepPrimAPI_MakeSweep(Macad::Occt::BRepPrimAPI_MakeSweep^ parameter1);
 	BRepPrimAPI_MakeSweep();
-	/// <summary>
+		/// <summary>
 	/// Returns the  TopoDS  Shape of the bottom of the sweep.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ FirstShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ FirstShape();
+		/// <summary>
 	/// Returns the TopoDS Shape of the top of the sweep.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ LastShape();
+Macad::Occt::TopoDS_Shape^ LastShape();
 }; // class BRepPrimAPI_MakeSweep
 
 //---------------------------------------------------------------------
@@ -614,25 +605,25 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Builds the prism of base S and vector V. If C is true,
 	/// S is copied. If Canonize is true then generated surfaces
 	/// are attempted to be canonized in simple types
 	/// </summary>
-	BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Vec V, bool Copy, bool Canonize);
-	/// <summary>
+BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Vec V, bool Copy, bool Canonize);
+		/// <summary>
 	/// Builds the prism of base S and vector V. If C is true,
 	/// S is copied. If Canonize is true then generated surfaces
 	/// are attempted to be canonized in simple types
 	/// </summary>
-	BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Vec V, bool Copy);
-	/// <summary>
+BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Vec V, bool Copy);
+		/// <summary>
 	/// Builds the prism of base S and vector V. If C is true,
 	/// S is copied. If Canonize is true then generated surfaces
 	/// are attempted to be canonized in simple types
 	/// </summary>
-	BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Vec V);
-	/// <summary>
+BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Vec V);
+		/// <summary>
 	/// Builds a semi-infinite or an infinite prism of base S.
 	/// If Inf is true the prism  is infinite, if Inf is false
 	/// the prism is semi-infinite (in the direction D).  If C
@@ -640,8 +631,8 @@ public:
 	/// If Canonize is true then generated surfaces
 	/// are attempted to be canonized in simple types
 	/// </summary>
-	BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Dir D, bool Inf, bool Copy, bool Canonize);
-	/// <summary>
+BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Dir D, bool Inf, bool Copy, bool Canonize);
+		/// <summary>
 	/// Builds a semi-infinite or an infinite prism of base S.
 	/// If Inf is true the prism  is infinite, if Inf is false
 	/// the prism is semi-infinite (in the direction D).  If C
@@ -649,8 +640,8 @@ public:
 	/// If Canonize is true then generated surfaces
 	/// are attempted to be canonized in simple types
 	/// </summary>
-	BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Dir D, bool Inf, bool Copy);
-	/// <summary>
+BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Dir D, bool Inf, bool Copy);
+		/// <summary>
 	/// Builds a semi-infinite or an infinite prism of base S.
 	/// If Inf is true the prism  is infinite, if Inf is false
 	/// the prism is semi-infinite (in the direction D).  If C
@@ -658,8 +649,8 @@ public:
 	/// If Canonize is true then generated surfaces
 	/// are attempted to be canonized in simple types
 	/// </summary>
-	BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Dir D, bool Inf);
-	/// <summary>
+BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Dir D, bool Inf);
+		/// <summary>
 	/// Builds a semi-infinite or an infinite prism of base S.
 	/// If Inf is true the prism  is infinite, if Inf is false
 	/// the prism is semi-infinite (in the direction D).  If C
@@ -667,25 +658,22 @@ public:
 	/// If Canonize is true then generated surfaces
 	/// are attempted to be canonized in simple types
 	/// </summary>
-	BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Dir D);
+BRepPrimAPI_MakePrism(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Dir D);
 	BRepPrimAPI_MakePrism(Macad::Occt::BRepPrimAPI_MakePrism^ parameter1);
-	/// <summary>
-	/// Returns the internal sweeping algorithm.
-	/// </summary>
 	/* Method skipped due to unknown mapping: BRepSweep_Prism Prism() */
-	/// <summary>
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Returns the  TopoDS  Shape of the bottom of the prism.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ FirstShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ FirstShape();
+		/// <summary>
 	/// Returns the TopoDS Shape of the top of the prism.
 	/// In the case of a finite prism, FirstShape returns the
 	/// basis of the prism, in other words, S if Copy is false;
@@ -693,25 +681,25 @@ public:
 	/// LastShape returns the copy of S translated by V at the
 	/// time of construction.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ LastShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ LastShape();
+		/// <summary>
 	/// Returns ListOfShape from TopTools.
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns true if the shape S has been deleted.
 	/// </summary>
-	bool IsDeleted(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+bool IsDeleted(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns the TopoDS Shape of the bottom  of the  prism.
 	/// generated  with  theShape (subShape of the  generating shape).
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ FirstShape(Macad::Occt::TopoDS_Shape^ theShape);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ FirstShape(Macad::Occt::TopoDS_Shape^ theShape);
+		/// <summary>
 	/// Returns the  TopoDS  Shape of the top  of  the  prism.
 	/// generated  with  theShape (subShape of the  generating shape).
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ LastShape(Macad::Occt::TopoDS_Shape^ theShape);
+Macad::Occt::TopoDS_Shape^ LastShape(Macad::Occt::TopoDS_Shape^ theShape);
 }; // class BRepPrimAPI_MakePrism
 
 //---------------------------------------------------------------------
@@ -776,76 +764,73 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Builds the Revol of base S, axis  A and angle  D. If C
 	/// is true, S is copied.
 	/// </summary>
-	BRepPrimAPI_MakeRevol(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Ax1 A, double D, bool Copy);
-	/// <summary>
+BRepPrimAPI_MakeRevol(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Ax1 A, double D, bool Copy);
+		/// <summary>
 	/// Builds the Revol of base S, axis  A and angle  D. If C
 	/// is true, S is copied.
 	/// </summary>
-	BRepPrimAPI_MakeRevol(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Ax1 A, double D);
-	/// <summary>
+BRepPrimAPI_MakeRevol(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Ax1 A, double D);
+		/// <summary>
 	/// Builds the Revol of base S, axis  A and angle 2*Pi. If
 	/// C is true, S is copied.
 	/// </summary>
-	BRepPrimAPI_MakeRevol(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Ax1 A, bool Copy);
-	/// <summary>
+BRepPrimAPI_MakeRevol(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Ax1 A, bool Copy);
+		/// <summary>
 	/// Builds the Revol of base S, axis  A and angle 2*Pi. If
 	/// C is true, S is copied.
 	/// </summary>
-	BRepPrimAPI_MakeRevol(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Ax1 A);
+BRepPrimAPI_MakeRevol(Macad::Occt::TopoDS_Shape^ S, Macad::Occt::Ax1 A);
 	BRepPrimAPI_MakeRevol(Macad::Occt::BRepPrimAPI_MakeRevol^ parameter1);
-	/// <summary>
-	/// Returns the internal sweeping algorithm.
-	/// </summary>
 	/* Method skipped due to unknown mapping: BRepSweep_Revol Revol() */
-	/// <summary>
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Builds the resulting shape (redefined from MakeShape).
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Returns the first shape of the revol  (coinciding with
 	/// the generating shape).
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ FirstShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ FirstShape();
+		/// <summary>
 	/// Returns the TopoDS Shape of the end of the revol.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ LastShape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ LastShape();
+		/// <summary>
 	/// Returns list of shape generated from shape S
 	/// Warning: shape S must be shape of type VERTEX, EDGE, FACE, SOLID.
 	/// For shapes of other types method always returns empty list
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+Macad::Occt::TopTools_ListOfShape^ Generated(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns true if the shape S has been deleted.
 	/// </summary>
-	bool IsDeleted(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+bool IsDeleted(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Returns the TopoDS Shape of the beginning of the revolution,
 	/// generated with theShape  (subShape of the generating shape).
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ FirstShape(Macad::Occt::TopoDS_Shape^ theShape);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ FirstShape(Macad::Occt::TopoDS_Shape^ theShape);
+		/// <summary>
 	/// Returns the TopoDS Shape of the end of the revolution,
 	/// generated with  theShape (subShape of the  generating shape).
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ LastShape(Macad::Occt::TopoDS_Shape^ theShape);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ LastShape(Macad::Occt::TopoDS_Shape^ theShape);
+		/// <summary>
 	/// Check if there are degenerated edges in the result.
 	/// </summary>
-	bool HasDegenerated();
-	/// <summary>
+bool HasDegenerated();
+		/// <summary>
 	/// Returns the list of degenerated edges
 	/// </summary>
-	Macad::Occt::TopTools_ListOfShape^ Degenerated();
+Macad::Occt::TopTools_ListOfShape^ Degenerated();
 }; // class BRepPrimAPI_MakeRevol
 
 //---------------------------------------------------------------------
@@ -884,35 +869,35 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Make a revolution body by rotating a curve around Z.
 	/// </summary>
-	BRepPrimAPI_MakeRevolution(Macad::Occt::Geom_Curve^ Meridian);
-	/// <summary>
+BRepPrimAPI_MakeRevolution(Macad::Occt::Geom_Curve^ Meridian);
+		/// <summary>
 	/// Make a revolution body by rotating a curve around Z.
 	/// </summary>
-	BRepPrimAPI_MakeRevolution(Macad::Occt::Geom_Curve^ Meridian, double angle);
-	/// <summary>
+BRepPrimAPI_MakeRevolution(Macad::Occt::Geom_Curve^ Meridian, double angle);
+		/// <summary>
 	/// Make a revolution body by rotating a curve around Z.
 	/// </summary>
-	BRepPrimAPI_MakeRevolution(Macad::Occt::Geom_Curve^ Meridian, double VMin, double VMax);
-	/// <summary>
+BRepPrimAPI_MakeRevolution(Macad::Occt::Geom_Curve^ Meridian, double VMin, double VMax);
+		/// <summary>
 	/// Make a revolution body by rotating a curve around Z.
 	/// </summary>
-	BRepPrimAPI_MakeRevolution(Macad::Occt::Geom_Curve^ Meridian, double VMin, double VMax, double angle);
-	/// <summary>
+BRepPrimAPI_MakeRevolution(Macad::Occt::Geom_Curve^ Meridian, double VMin, double VMax, double angle);
+		/// <summary>
 	/// Make a revolution body by rotating a curve around Z.
 	/// </summary>
-	BRepPrimAPI_MakeRevolution(Macad::Occt::Ax2 Axes, Macad::Occt::Geom_Curve^ Meridian);
-	/// <summary>
+BRepPrimAPI_MakeRevolution(Macad::Occt::Ax2 Axes, Macad::Occt::Geom_Curve^ Meridian);
+		/// <summary>
 	/// Make a revolution body by rotating a curve around Z.
 	/// </summary>
-	BRepPrimAPI_MakeRevolution(Macad::Occt::Ax2 Axes, Macad::Occt::Geom_Curve^ Meridian, double angle);
-	/// <summary>
+BRepPrimAPI_MakeRevolution(Macad::Occt::Ax2 Axes, Macad::Occt::Geom_Curve^ Meridian, double angle);
+		/// <summary>
 	/// Make a revolution body by rotating a curve around Z.
 	/// </summary>
-	BRepPrimAPI_MakeRevolution(Macad::Occt::Ax2 Axes, Macad::Occt::Geom_Curve^ Meridian, double VMin, double VMax);
-	/// <summary>
+BRepPrimAPI_MakeRevolution(Macad::Occt::Ax2 Axes, Macad::Occt::Geom_Curve^ Meridian, double VMin, double VMax);
+		/// <summary>
 	/// Make a revolution body by rotating a curve around Z.
 	/// For all algorithms the resulting shape is composed of
 	/// -   a lateral revolved face,
@@ -923,15 +908,12 @@ public:
 	/// -   and in the case of a portion of a revolved shape, two
 	/// planar faces to close the shape (in the planes u = 0 and u = angle).
 	/// </summary>
-	BRepPrimAPI_MakeRevolution(Macad::Occt::Ax2 Axes, Macad::Occt::Geom_Curve^ Meridian, double VMin, double VMax, double angle);
+BRepPrimAPI_MakeRevolution(Macad::Occt::Ax2 Axes, Macad::Occt::Geom_Curve^ Meridian, double VMin, double VMax, double angle);
 	BRepPrimAPI_MakeRevolution(Macad::Occt::BRepPrimAPI_MakeRevolution^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the algorithm.
 	/// </summary>
-	System::IntPtr OneAxis();
-	/// <summary>
-	/// Returns the algorithm.
-	/// </summary>
+System::IntPtr OneAxis();
 	/* Method skipped due to unknown mapping: BRepPrim_Revolution Revolution() */
 }; // class BRepPrimAPI_MakeRevolution
 
@@ -971,14 +953,14 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Make a sphere.
 	/// </summary>
 	/// <param name="R">
 	/// [in] sphere radius
 	/// </param>
-	BRepPrimAPI_MakeSphere(double R);
-	/// <summary>
+BRepPrimAPI_MakeSphere(double R);
+		/// <summary>
 	/// Make a sphere (spherical wedge).
 	/// </summary>
 	/// <param name="R">
@@ -987,8 +969,8 @@ public:
 	/// <param name="angle">
 	/// [in] angle between the radii lying within the bounding semidisks
 	/// </param>
-	BRepPrimAPI_MakeSphere(double R, double angle);
-	/// <summary>
+BRepPrimAPI_MakeSphere(double R, double angle);
+		/// <summary>
 	/// Make a sphere (spherical segment).
 	/// </summary>
 	/// <param name="R">
@@ -1000,8 +982,8 @@ public:
 	/// <param name="angle2">
 	/// [in] second angle defining a spherical segment
 	/// </param>
-	BRepPrimAPI_MakeSphere(double R, double angle1, double angle2);
-	/// <summary>
+BRepPrimAPI_MakeSphere(double R, double angle1, double angle2);
+		/// <summary>
 	/// Make a sphere (spherical segment).
 	/// </summary>
 	/// <param name="R">
@@ -1016,8 +998,8 @@ public:
 	/// <param name="angle3">
 	/// [in] angle between the radii lying within the bounding semidisks
 	/// </param>
-	BRepPrimAPI_MakeSphere(double R, double angle1, double angle2, double angle3);
-	/// <summary>
+BRepPrimAPI_MakeSphere(double R, double angle1, double angle2, double angle3);
+		/// <summary>
 	/// Make a sphere.
 	/// </summary>
 	/// <param name="Center">
@@ -1026,8 +1008,8 @@ public:
 	/// <param name="R">
 	///      [in] sphere radius
 	/// </param>
-	BRepPrimAPI_MakeSphere(Macad::Occt::Pnt Center, double R);
-	/// <summary>
+BRepPrimAPI_MakeSphere(Macad::Occt::Pnt Center, double R);
+		/// <summary>
 	/// Make a sphere (spherical wedge).
 	/// </summary>
 	/// <param name="Center">
@@ -1039,8 +1021,8 @@ public:
 	/// <param name="angle">
 	///  [in] angle between the radii lying within the bounding semidisks
 	/// </param>
-	BRepPrimAPI_MakeSphere(Macad::Occt::Pnt Center, double R, double angle);
-	/// <summary>
+BRepPrimAPI_MakeSphere(Macad::Occt::Pnt Center, double R, double angle);
+		/// <summary>
 	/// Make a sphere (spherical segment).
 	/// </summary>
 	/// <param name="Center">
@@ -1055,8 +1037,8 @@ public:
 	/// <param name="angle2">
 	/// [in] second angle defining a spherical segment
 	/// </param>
-	BRepPrimAPI_MakeSphere(Macad::Occt::Pnt Center, double R, double angle1, double angle2);
-	/// <summary>
+BRepPrimAPI_MakeSphere(Macad::Occt::Pnt Center, double R, double angle1, double angle2);
+		/// <summary>
 	/// Make a sphere (spherical segment).
 	/// </summary>
 	/// <param name="Center">
@@ -1074,8 +1056,8 @@ public:
 	/// <param name="angle3">
 	/// [in] angle between the radii lying within the bounding semidisks
 	/// </param>
-	BRepPrimAPI_MakeSphere(Macad::Occt::Pnt Center, double R, double angle1, double angle2, double angle3);
-	/// <summary>
+BRepPrimAPI_MakeSphere(Macad::Occt::Pnt Center, double R, double angle1, double angle2, double angle3);
+		/// <summary>
 	/// Make a sphere.
 	/// </summary>
 	/// <param name="Axis">
@@ -1084,8 +1066,8 @@ public:
 	/// <param name="R">
 	///    [in] sphere radius
 	/// </param>
-	BRepPrimAPI_MakeSphere(Macad::Occt::Ax2 Axis, double R);
-	/// <summary>
+BRepPrimAPI_MakeSphere(Macad::Occt::Ax2 Axis, double R);
+		/// <summary>
 	/// Make a sphere (spherical wedge).
 	/// </summary>
 	/// <param name="Axis">
@@ -1097,8 +1079,8 @@ public:
 	/// <param name="angle">
 	/// [in] angle between the radii lying within the bounding semidisks
 	/// </param>
-	BRepPrimAPI_MakeSphere(Macad::Occt::Ax2 Axis, double R, double angle);
-	/// <summary>
+BRepPrimAPI_MakeSphere(Macad::Occt::Ax2 Axis, double R, double angle);
+		/// <summary>
 	/// Make a sphere (spherical segment).
 	/// </summary>
 	/// <param name="Axis">
@@ -1113,8 +1095,8 @@ public:
 	/// <param name="angle2">
 	/// [in] second angle defining a spherical segment
 	/// </param>
-	BRepPrimAPI_MakeSphere(Macad::Occt::Ax2 Axis, double R, double angle1, double angle2);
-	/// <summary>
+BRepPrimAPI_MakeSphere(Macad::Occt::Ax2 Axis, double R, double angle1, double angle2);
+		/// <summary>
 	/// Make a sphere of radius R.
 	/// For all algorithms The resulting shape is composed of
 	/// -   a lateral spherical face,
@@ -1126,15 +1108,12 @@ public:
 	/// -   and in case of a portion of sphere, two planar faces
 	/// to shut the shape.(in the planes u = 0 and u = angle).
 	/// </summary>
-	BRepPrimAPI_MakeSphere(Macad::Occt::Ax2 Axis, double R, double angle1, double angle2, double angle3);
+BRepPrimAPI_MakeSphere(Macad::Occt::Ax2 Axis, double R, double angle1, double angle2, double angle3);
 	BRepPrimAPI_MakeSphere(Macad::Occt::BRepPrimAPI_MakeSphere^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the algorithm.
 	/// </summary>
-	System::IntPtr OneAxis();
-	/// <summary>
-	/// Returns the algorithm.
-	/// </summary>
+System::IntPtr OneAxis();
 	/* Method skipped due to unknown mapping: BRepPrim_Sphere Sphere() */
 }; // class BRepPrimAPI_MakeSphere
 
@@ -1174,7 +1153,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Make a torus.
 	/// </summary>
 	/// <param name="R1">
@@ -1183,8 +1162,8 @@ public:
 	/// <param name="R2">
 	/// [in] radius of the pipe
 	/// </param>
-	BRepPrimAPI_MakeTorus(double R1, double R2);
-	/// <summary>
+BRepPrimAPI_MakeTorus(double R1, double R2);
+		/// <summary>
 	/// Make a section of a torus.
 	/// </summary>
 	/// <param name="R1">
@@ -1196,8 +1175,8 @@ public:
 	/// <param name="angle">
 	/// [in] angle to create a torus pipe segment
 	/// </param>
-	BRepPrimAPI_MakeTorus(double R1, double R2, double angle);
-	/// <summary>
+BRepPrimAPI_MakeTorus(double R1, double R2, double angle);
+		/// <summary>
 	/// Make  a torus with angles on the small circle.
 	/// </summary>
 	/// <param name="R1">
@@ -1212,8 +1191,8 @@ public:
 	/// <param name="angle2">
 	/// [in] second angle to create a torus ring segment
 	/// </param>
-	BRepPrimAPI_MakeTorus(double R1, double R2, double angle1, double angle2);
-	/// <summary>
+BRepPrimAPI_MakeTorus(double R1, double R2, double angle1, double angle2);
+		/// <summary>
 	/// Make  a torus with angles on the small circle.
 	/// </summary>
 	/// <param name="R1">
@@ -1231,8 +1210,8 @@ public:
 	/// <param name="angle">
 	///  [in] angle to create a torus pipe segment
 	/// </param>
-	BRepPrimAPI_MakeTorus(double R1, double R2, double angle1, double angle2, double angle);
-	/// <summary>
+BRepPrimAPI_MakeTorus(double R1, double R2, double angle1, double angle2, double angle);
+		/// <summary>
 	/// Make a torus.
 	/// </summary>
 	/// <param name="Axes">
@@ -1244,8 +1223,8 @@ public:
 	/// <param name="R2">
 	///   [in] radius of the pipe
 	/// </param>
-	BRepPrimAPI_MakeTorus(Macad::Occt::Ax2 Axes, double R1, double R2);
-	/// <summary>
+BRepPrimAPI_MakeTorus(Macad::Occt::Ax2 Axes, double R1, double R2);
+		/// <summary>
 	/// Make a section of a torus.
 	/// </summary>
 	/// <param name="Axes">
@@ -1260,8 +1239,8 @@ public:
 	/// <param name="angle">
 	/// [in] angle to create a torus pipe segment
 	/// </param>
-	BRepPrimAPI_MakeTorus(Macad::Occt::Ax2 Axes, double R1, double R2, double angle);
-	/// <summary>
+BRepPrimAPI_MakeTorus(Macad::Occt::Ax2 Axes, double R1, double R2, double angle);
+		/// <summary>
 	/// Make a torus.
 	/// </summary>
 	/// <param name="Axes">
@@ -1279,8 +1258,8 @@ public:
 	/// <param name="angle2">
 	/// [in] second angle to create a torus ring segment
 	/// </param>
-	BRepPrimAPI_MakeTorus(Macad::Occt::Ax2 Axes, double R1, double R2, double angle1, double angle2);
-	/// <summary>
+BRepPrimAPI_MakeTorus(Macad::Occt::Ax2 Axes, double R1, double R2, double angle1, double angle2);
+		/// <summary>
 	/// Make a section of a torus of radii R1 R2.
 	/// For all algorithms The resulting shape is composed of
 	/// -      a lateral toroidal face,
@@ -1302,15 +1281,12 @@ public:
 	/// reference circle. The X axis gives the origin of the v
 	/// parameter. Near 0, as v increases, the Z coordinate decreases.
 	/// </summary>
-	BRepPrimAPI_MakeTorus(Macad::Occt::Ax2 Axes, double R1, double R2, double angle1, double angle2, double angle);
+BRepPrimAPI_MakeTorus(Macad::Occt::Ax2 Axes, double R1, double R2, double angle1, double angle2, double angle);
 	BRepPrimAPI_MakeTorus(Macad::Occt::BRepPrimAPI_MakeTorus^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the algorithm.
 	/// </summary>
-	System::IntPtr OneAxis();
-	/// <summary>
-	/// Returns the algorithm.
-	/// </summary>
+System::IntPtr OneAxis();
 	/* Method skipped due to unknown mapping: BRepPrim_Torus Torus() */
 }; // class BRepPrimAPI_MakeTorus
 
@@ -1350,43 +1326,40 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Make a STEP right angular wedge. (ltx >= 0)
 	/// </summary>
-	BRepPrimAPI_MakeWedge(double dx, double dy, double dz, double ltx);
-	/// <summary>
+BRepPrimAPI_MakeWedge(double dx, double dy, double dz, double ltx);
+		/// <summary>
 	/// Make a STEP right angular wedge. (ltx >= 0)
 	/// </summary>
-	BRepPrimAPI_MakeWedge(Macad::Occt::Ax2 Axes, double dx, double dy, double dz, double ltx);
-	/// <summary>
+BRepPrimAPI_MakeWedge(Macad::Occt::Ax2 Axes, double dx, double dy, double dz, double ltx);
+		/// <summary>
 	/// Make a wedge. The face at dy is xmin,zmin xmax,zmax
 	/// </summary>
-	BRepPrimAPI_MakeWedge(double dx, double dy, double dz, double xmin, double zmin, double xmax, double zmax);
-	/// <summary>
+BRepPrimAPI_MakeWedge(double dx, double dy, double dz, double xmin, double zmin, double xmax, double zmax);
+		/// <summary>
 	/// Make a wedge. The face at dy is xmin,zmin xmax,zmax
 	/// </summary>
-	BRepPrimAPI_MakeWedge(Macad::Occt::Ax2 Axes, double dx, double dy, double dz, double xmin, double zmin, double xmax, double zmax);
+BRepPrimAPI_MakeWedge(Macad::Occt::Ax2 Axes, double dx, double dy, double dz, double xmin, double zmin, double xmax, double zmax);
 	BRepPrimAPI_MakeWedge(Macad::Occt::BRepPrimAPI_MakeWedge^ parameter1);
-	/// <summary>
-	/// Returns the internal algorithm.
-	/// </summary>
 	/* Method skipped due to unknown mapping: BRepPrim_Wedge Wedge() */
-	/// <summary>
+		/// <summary>
 	/// Stores the solid in myShape.
 	/// </summary>
-	void Build(Macad::Occt::Message_ProgressRange^ theRange);
-	/// <summary>
+void Build(Macad::Occt::Message_ProgressRange^ theRange);
+		/// <summary>
 	/// Stores the solid in myShape.
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Returns the constructed box in the form of a shell.
 	/// </summary>
-	Macad::Occt::TopoDS_Shell^ Shell();
-	/// <summary>
+Macad::Occt::TopoDS_Shell^ Shell();
+		/// <summary>
 	/// Returns the constructed box in the form of a solid.
 	/// </summary>
-	Macad::Occt::TopoDS_Solid^ Solid();
+Macad::Occt::TopoDS_Solid^ Solid();
 }; // class BRepPrimAPI_MakeWedge
 
 }; // namespace Occt

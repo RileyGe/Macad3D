@@ -80,29 +80,29 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor, prepares data structures for caching.
 	/// \param theDegree     degree of the B-spline (or Bezier)
 	/// \param thePeriodic   identify whether the B-spline is periodic
 	/// \param theFlatKnots  knots of Bezier / B-spline parameterization
 	/// </summary>
-	BSplCLib_CacheParams(int theDegree, bool thePeriodic, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots);
-	/// <summary>
+BSplCLib_CacheParams(int theDegree, bool thePeriodic, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots);
+		/// <summary>
 	/// Normalizes the parameter for periodic B-splines
 	/// \param theParameter the value to be normalized into the knots array
 	/// </summary>
-	double PeriodicNormalization(double theParameter);
-	/// <summary>
+double PeriodicNormalization(double theParameter);
+		/// <summary>
 	/// Verifies validity of the cache using flat parameter of the point
 	/// \param theParameter parameter of the point placed in the span
 	/// </summary>
-	bool IsCacheValid(double theParameter);
-	/// <summary>
+bool IsCacheValid(double theParameter);
+		/// <summary>
 	/// Computes span for the specified parameter
 	/// \param theParameter parameter of the point placed in the span
 	/// \param theFlatKnots  knots of Bezier / B-spline parameterization
 	/// </summary>
-	void LocateParameter(double% theParameter, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots);
+void LocateParameter(double% theParameter, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots);
 }; // class BSplCLib_CacheParams
 
 //---------------------------------------------------------------------
@@ -134,10 +134,10 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Function evaluation method to be defined by descendant
 	/// </summary>
-	void Evaluate(int theDerivativeRequest, double theStartEnd, double theParameter, double% theResult, int% theErrorCode);
+void Evaluate(int theDerivativeRequest, double theStartEnd, double theParameter, double% theResult, int% theErrorCode);
 }; // class BSplCLib_EvaluatorFunction
 
 //---------------------------------------------------------------------
@@ -248,7 +248,7 @@ public:
 public:
 	BSplCLib();
 	BSplCLib(Macad::Occt::BSplCLib^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// This routine searches the position of the real value theX
 	/// in the monotonically increasing set of real values theArray using bisection algorithm.
 	/// 
@@ -257,24 +257,24 @@ public:
 	/// 
 	/// This routine is used to locate a knot value in a set of knots.
 	/// </summary>
-	static void Hunt(Macad::Occt::TColStd_Array1OfReal^ theArray, double theX, int% theXPos);
-	/// <summary>
+static void Hunt(Macad::Occt::TColStd_Array1OfReal^ theArray, double theX, int% theXPos);
+		/// <summary>
 	/// Computes the index of the knots value which gives
 	/// the start point of the curve.
 	/// </summary>
-	static int FirstUKnotIndex(int Degree, Macad::Occt::TColStd_Array1OfInteger^ Mults);
-	/// <summary>
+static int FirstUKnotIndex(int Degree, Macad::Occt::TColStd_Array1OfInteger^ Mults);
+		/// <summary>
 	/// Computes the index of the knots value which gives
 	/// the end point of the curve.
 	/// </summary>
-	static int LastUKnotIndex(int Degree, Macad::Occt::TColStd_Array1OfInteger^ Mults);
-	/// <summary>
+static int LastUKnotIndex(int Degree, Macad::Occt::TColStd_Array1OfInteger^ Mults);
+		/// <summary>
 	/// Computes the index  of  the  flats knots  sequence
 	/// corresponding  to  <Index> in  the  knots sequence
 	/// which multiplicities are <Mults>.
 	/// </summary>
-	static int FlatIndex(int Degree, int Index, Macad::Occt::TColStd_Array1OfInteger^ Mults, bool Periodic);
-	/// <summary>
+static int FlatIndex(int Degree, int Index, Macad::Occt::TColStd_Array1OfInteger^ Mults, bool Periodic);
+		/// <summary>
 	/// Locates  the parametric value    U  in the knots
 	/// sequence  between  the  knot K1   and the knot  K2.
 	/// The value return in Index verifies.
@@ -291,8 +291,8 @@ public:
 	/// searching  function.
 	/// Warning: Knots have to be "withe repetitions"
 	/// </summary>
-	static void LocateParameter(int Degree, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, double U, bool IsPeriodic, int FromK1, int ToK2, int% KnotIndex, double% NewU);
-	/// <summary>
+static void LocateParameter(int Degree, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, double U, bool IsPeriodic, int FromK1, int ToK2, int% KnotIndex, double% NewU);
+		/// <summary>
 	/// Locates  the parametric value    U  in the knots
 	/// sequence  between  the  knot K1   and the knot  K2.
 	/// The value return in Index verifies.
@@ -309,21 +309,21 @@ public:
 	/// searching  function.
 	/// Warning: Knots have to be "flat"
 	/// </summary>
-	static void LocateParameter(int Degree, Macad::Occt::TColStd_Array1OfReal^ Knots, double U, bool IsPeriodic, int FromK1, int ToK2, int% KnotIndex, double% NewU);
+static void LocateParameter(int Degree, Macad::Occt::TColStd_Array1OfReal^ Knots, double U, bool IsPeriodic, int FromK1, int ToK2, int% KnotIndex, double% NewU);
 	static void LocateParameter(int Degree, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, double U, bool Periodic, int% Index, double% NewU);
-	/// <summary>
+		/// <summary>
 	/// Finds the greatest multiplicity in a set of knots
 	/// between  K1  and K2.   Mults  is  the  multiplicity
 	/// associated with each knot value.
 	/// </summary>
-	static int MaxKnotMult(Macad::Occt::TColStd_Array1OfInteger^ Mults, int K1, int K2);
-	/// <summary>
+static int MaxKnotMult(Macad::Occt::TColStd_Array1OfInteger^ Mults, int K1, int K2);
+		/// <summary>
 	/// Finds the lowest multiplicity in  a  set of knots
 	/// between   K1  and K2.   Mults is  the  multiplicity
 	/// associated with each knot value.
 	/// </summary>
-	static int MinKnotMult(Macad::Occt::TColStd_Array1OfInteger^ Mults, int K1, int K2);
-	/// <summary>
+static int MinKnotMult(Macad::Occt::TColStd_Array1OfInteger^ Mults, int K1, int K2);
+		/// <summary>
 	/// Returns the number of poles of the curve. Returns 0 if
 	/// one of the multiplicities is incorrect.
 	/// 
@@ -335,8 +335,8 @@ public:
 	/// *  The  last periodicity  on  a periodic  curve is not
 	/// equal to the first.
 	/// </summary>
-	static int NbPoles(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfInteger^ Mults);
-	/// <summary>
+static int NbPoles(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfInteger^ Mults);
+		/// <summary>
 	/// Returns the length  of the sequence  of knots with
 	/// repetition.
 	/// 
@@ -349,28 +349,28 @@ public:
 	/// Sum(Mults(i); i = Mults.Lower(); i < Mults.Upper())
 	/// + 2 * Degree
 	/// </summary>
-	static int KnotSequenceLength(Macad::Occt::TColStd_Array1OfInteger^ Mults, int Degree, bool Periodic);
+static int KnotSequenceLength(Macad::Occt::TColStd_Array1OfInteger^ Mults, int Degree, bool Periodic);
 	static void KnotSequence(Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ KnotSeq, bool Periodic);
 	static void KnotSequence(Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ KnotSeq);
-	/// <summary>
+		/// <summary>
 	/// Computes  the  sequence   of knots KnotSeq  with
 	/// repetition  of the  knots  of multiplicity  greater
 	/// than 1.
 	/// 
 	/// Length of KnotSeq must be KnotSequenceLength(Mults,Degree,Periodic)
 	/// </summary>
-	static void KnotSequence(Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ KnotSeq);
-	/// <summary>
+static void KnotSequence(Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ KnotSeq);
+		/// <summary>
 	/// Returns the  length  of the   sequence of  knots  (and
 	/// Mults)  without repetition.
 	/// </summary>
-	static int KnotsLength(Macad::Occt::TColStd_Array1OfReal^ KnotSeq, bool Periodic);
-	/// <summary>
+static int KnotsLength(Macad::Occt::TColStd_Array1OfReal^ KnotSeq, bool Periodic);
+		/// <summary>
 	/// Returns the  length  of the   sequence of  knots  (and
 	/// Mults)  without repetition.
 	/// </summary>
-	static int KnotsLength(Macad::Occt::TColStd_Array1OfReal^ KnotSeq);
-	/// <summary>
+static int KnotsLength(Macad::Occt::TColStd_Array1OfReal^ KnotSeq);
+		/// <summary>
 	/// Computes  the  sequence   of knots Knots  without
 	/// repetition  of the  knots  of multiplicity  greater
 	/// than 1.
@@ -378,8 +378,8 @@ public:
 	/// Length  of <Knots> and  <Mults> must be
 	/// KnotsLength(KnotSequence,Periodic)
 	/// </summary>
-	static void Knots(Macad::Occt::TColStd_Array1OfReal^ KnotSeq, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, bool Periodic);
-	/// <summary>
+static void Knots(Macad::Occt::TColStd_Array1OfReal^ KnotSeq, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, bool Periodic);
+		/// <summary>
 	/// Computes  the  sequence   of knots Knots  without
 	/// repetition  of the  knots  of multiplicity  greater
 	/// than 1.
@@ -387,25 +387,25 @@ public:
 	/// Length  of <Knots> and  <Mults> must be
 	/// KnotsLength(KnotSequence,Periodic)
 	/// </summary>
-	static void Knots(Macad::Occt::TColStd_Array1OfReal^ KnotSeq, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults);
-	/// <summary>
+static void Knots(Macad::Occt::TColStd_Array1OfReal^ KnotSeq, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults);
+		/// <summary>
 	/// Analyses if the  knots distribution is "Uniform"
 	/// or  "NonUniform" between  the  knot  FromK1 and the
 	/// knot ToK2.  There is  no repetition of  knot in the
 	/// knots'sequence <Knots>.
 	/// </summary>
-	static Macad::Occt::BSplCLib_KnotDistribution KnotForm(Macad::Occt::TColStd_Array1OfReal^ Knots, int FromK1, int ToK2);
-	/// <summary>
+static Macad::Occt::BSplCLib_KnotDistribution KnotForm(Macad::Occt::TColStd_Array1OfReal^ Knots, int FromK1, int ToK2);
+		/// <summary>
 	/// Analyses the distribution of multiplicities between
 	/// the knot FromK1 and the Knot ToK2.
 	/// </summary>
-	static Macad::Occt::BSplCLib_MultDistribution MultForm(Macad::Occt::TColStd_Array1OfInteger^ Mults, int FromK1, int ToK2);
-	/// <summary>
+static Macad::Occt::BSplCLib_MultDistribution MultForm(Macad::Occt::TColStd_Array1OfInteger^ Mults, int FromK1, int ToK2);
+		/// <summary>
 	/// Analyzes the array of knots.
 	/// Returns the form and the maximum knot multiplicity.
 	/// </summary>
-	static void KnotAnalysis(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ CKnots, Macad::Occt::TColStd_Array1OfInteger^ CMults, Macad::Occt::GeomAbs_BSplKnotDistribution% KnotForm, int% MaxKnotMult);
-	/// <summary>
+static void KnotAnalysis(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ CKnots, Macad::Occt::TColStd_Array1OfInteger^ CMults, Macad::Occt::GeomAbs_BSplKnotDistribution% KnotForm, int% MaxKnotMult);
+		/// <summary>
 	/// Reparametrizes a B-spline curve to [U1, U2].
 	/// The knot values are recomputed such that Knots (Lower) = U1
 	/// and Knots (Upper) = U2   but the knot form is not modified.
@@ -413,17 +413,17 @@ public:
 	/// In the array Knots the values must be in ascending order.
 	/// U1 must not be equal to U2 to avoid division by zero.
 	/// </summary>
-	static void Reparametrize(double U1, double U2, Macad::Occt::TColStd_Array1OfReal^ Knots);
-	/// <summary>
+static void Reparametrize(double U1, double U2, Macad::Occt::TColStd_Array1OfReal^ Knots);
+		/// <summary>
 	/// Reverses  the  array   knots  to  become  the knots
 	/// sequence of the reversed curve.
 	/// </summary>
-	static void Reverse(Macad::Occt::TColStd_Array1OfReal^ Knots);
-	/// <summary>
+static void Reverse(Macad::Occt::TColStd_Array1OfReal^ Knots);
+		/// <summary>
 	/// Reverses  the  array of multiplicities.
 	/// </summary>
-	static void Reverse(Macad::Occt::TColStd_Array1OfInteger^ Mults);
-	/// <summary>
+static void Reverse(Macad::Occt::TColStd_Array1OfInteger^ Mults);
+		/// <summary>
 	/// Reverses the array of poles. Last is the  index of
 	/// the new first pole. On  a  non periodic curve last
 	/// is Poles.Upper(). On a periodic curve last is
@@ -435,34 +435,34 @@ public:
 	/// (sum of multiplicities(but  for the last) + degree
 	/// - 1)
 	/// </summary>
-	static void Reverse(Macad::Occt::TColgp_Array1OfPnt^ Poles, int Last);
-	/// <summary>
+static void Reverse(Macad::Occt::TColgp_Array1OfPnt^ Poles, int Last);
+		/// <summary>
 	/// Reverses the array of poles.
 	/// </summary>
-	static void Reverse(Macad::Occt::TColgp_Array1OfPnt2d^ Poles, int Last);
-	/// <summary>
+static void Reverse(Macad::Occt::TColgp_Array1OfPnt2d^ Poles, int Last);
+		/// <summary>
 	/// Reverses the array of poles.
 	/// </summary>
-	static void Reverse(Macad::Occt::TColStd_Array1OfReal^ Weights, int Last);
-	/// <summary>
+static void Reverse(Macad::Occt::TColStd_Array1OfReal^ Weights, int Last);
+		/// <summary>
 	/// Returns False if all the weights  of the  array <Weights>
 	/// between   I1 an I2   are  identic.   Epsilon  is used for
 	/// comparing  weights. If Epsilon  is 0. the  Epsilon of the
 	/// first weight is used.
 	/// </summary>
-	static bool IsRational(Macad::Occt::TColStd_Array1OfReal^ Weights, int I1, int I2, double Epsilon);
-	/// <summary>
+static bool IsRational(Macad::Occt::TColStd_Array1OfReal^ Weights, int I1, int I2, double Epsilon);
+		/// <summary>
 	/// Returns False if all the weights  of the  array <Weights>
 	/// between   I1 an I2   are  identic.   Epsilon  is used for
 	/// comparing  weights. If Epsilon  is 0. the  Epsilon of the
 	/// first weight is used.
 	/// </summary>
-	static bool IsRational(Macad::Occt::TColStd_Array1OfReal^ Weights, int I1, int I2);
-	/// <summary>
+static bool IsRational(Macad::Occt::TColStd_Array1OfReal^ Weights, int I1, int I2);
+		/// <summary>
 	/// returns the degree maxima for a BSplineCurve.
 	/// </summary>
-	static int MaxDegree();
-	/// <summary>
+static int MaxDegree();
+		/// <summary>
 	/// Perform the Boor  algorithm  to  evaluate a point at
 	/// parameter <U>, with <Degree> and <Dimension>.
 	/// 
@@ -473,8 +473,8 @@ public:
 	/// Containing  the poles.  At  the end <Poles> contains
 	/// the current point.
 	/// </summary>
-	static void Eval(double U, int Degree, double% Knots, int Dimension, double% Poles);
-	/// <summary>
+static void Eval(double U, int Degree, double% Knots, int Dimension, double% Poles);
+		/// <summary>
 	/// Performs the  Boor Algorithm  at  parameter <U> with
 	/// the given <Degree> and the  array of <Knots> on  the
 	/// poles <Poles> of dimension  <Dimension>.  The schema
@@ -505,8 +505,8 @@ public:
 	/// The results are found in the array poles depending
 	/// on the Depth. (See the method GetPole).
 	/// </summary>
-	static void BoorScheme(double U, int Degree, double% Knots, int Dimension, double% Poles, int Depth, int Length);
-	/// <summary>
+static void BoorScheme(double U, int Degree, double% Knots, int Dimension, double% Poles, int Depth, int Length);
+		/// <summary>
 	/// Compute  the content of  Pole before the BoorScheme.
 	/// This method is used to remove poles.
 	/// 
@@ -519,8 +519,8 @@ public:
 	/// computed, if it  is higher than <Tolerance> False is
 	/// returned.
 	/// </summary>
-	static bool AntiBoorScheme(double U, int Degree, double% Knots, int Dimension, double% Poles, int Depth, int Length, double Tolerance);
-	/// <summary>
+static bool AntiBoorScheme(double U, int Degree, double% Knots, int Dimension, double% Poles, int Depth, int Length, double Tolerance);
+		/// <summary>
 	/// Computes   the   poles of  the    BSpline  giving the
 	/// derivatives of order <Order>.
 	/// 
@@ -532,8 +532,8 @@ public:
 	/// This formula  is repeated  (Degree  is decremented at
 	/// each step).
 	/// </summary>
-	static void Derivative(int Degree, double% Knots, int Dimension, int Length, int Order, double% Poles);
-	/// <summary>
+static void Derivative(int Degree, double% Knots, int Dimension, int Length, int Order, double% Poles);
+		/// <summary>
 	/// Performs the Bohm  Algorithm at  parameter <U>. This
 	/// algorithm computes the value and all the derivatives
 	/// up to order N (N <= Degree).
@@ -544,52 +544,52 @@ public:
 	/// derivatives.  Poles[0] is  the value,  Poles[Degree]
 	/// is the last  derivative.
 	/// </summary>
-	static void Bohm(double U, int Degree, int N, double% Knots, int Dimension, double% Poles);
-	/// <summary>
+static void Bohm(double U, int Degree, int N, double% Knots, int Dimension, double% Poles);
+		/// <summary>
 	/// Used as argument for a non rational curve.
 	/// </summary>
-	static Macad::Occt::TColStd_Array1OfReal^ NoWeights();
-	/// <summary>
+static Macad::Occt::TColStd_Array1OfReal^ NoWeights();
+		/// <summary>
 	/// Used as argument for a flatknots evaluation.
 	/// </summary>
-	static Macad::Occt::TColStd_Array1OfInteger^ NoMults();
-	/// <summary>
+static Macad::Occt::TColStd_Array1OfInteger^ NoMults();
+		/// <summary>
 	/// Stores in LK the useful knots for the BoorSchem
 	/// on the span Knots(Index) - Knots(Index+1)
 	/// </summary>
-	static void BuildKnots(int Degree, int Index, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, double% LK);
-	/// <summary>
+static void BuildKnots(int Degree, int Index, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, double% LK);
+		/// <summary>
 	/// Return the index of the  first Pole to  use on the
 	/// span  Mults(Index)  - Mults(Index+1).  This  index
 	/// must be added to Poles.Lower().
 	/// </summary>
-	static int PoleIndex(int Degree, int Index, bool Periodic, Macad::Occt::TColStd_Array1OfInteger^ Mults);
+static int PoleIndex(int Degree, int Index, bool Periodic, Macad::Occt::TColStd_Array1OfInteger^ Mults);
 	static void BuildEval(int Degree, int Index, Macad::Occt::TColStd_Array1OfReal^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, double% LP);
 	static void BuildEval(int Degree, int Index, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, double% LP);
-	/// <summary>
+		/// <summary>
 	/// Copy in <LP>  the poles and  weights for  the Eval
 	/// scheme. starting from  Poles(Poles.Lower()+Index)
 	/// </summary>
-	static void BuildEval(int Degree, int Index, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, double% LP);
-	/// <summary>
+static void BuildEval(int Degree, int Index, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, double% LP);
+		/// <summary>
 	/// Copy in <LP>  poles for <Dimension>  Boor  scheme.
 	/// Starting  from    <Index>     *  <Dimension>, copy
 	/// <Length+1> poles.
 	/// </summary>
-	static void BuildBoor(int Index, int Length, int Dimension, Macad::Occt::TColStd_Array1OfReal^ Poles, double% LP);
-	/// <summary>
+static void BuildBoor(int Index, int Length, int Dimension, Macad::Occt::TColStd_Array1OfReal^ Poles, double% LP);
+		/// <summary>
 	/// Returns the index in  the Boor result array of the
 	/// poles <Index>. If  the Boor  algorithm was perform
 	/// with <Length> and <Depth>.
 	/// </summary>
-	static int BoorIndex(int Index, int Length, int Depth);
-	/// <summary>
+static int BoorIndex(int Index, int Length, int Depth);
+		/// <summary>
 	/// Copy  the  pole at  position  <Index>  in  the Boor
 	/// scheme of   dimension <Dimension> to  <Position> in
 	/// the array <Pole>. <Position> is updated.
 	/// </summary>
-	static void GetPole(int Index, int Length, int Depth, int Dimension, double% LocPoles, int% Position, Macad::Occt::TColStd_Array1OfReal^ Pole);
-	/// <summary>
+static void GetPole(int Index, int Length, int Depth, int Dimension, double% LocPoles, int% Position, Macad::Occt::TColStd_Array1OfReal^ Pole);
+		/// <summary>
 	/// Returns in <NbPoles, NbKnots> the  new number of poles
 	/// and  knots    if  the  sequence   of  knots <AddKnots,
 	/// AddMults> is inserted in the sequence <Knots, Mults>.
@@ -606,8 +606,8 @@ public:
 	/// The knew knots are knot increasing.
 	/// The new knots are not in the range.
 	/// </summary>
-	static bool PrepareInsertKnots(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, int% NbPoles, int% NbKnots, double Epsilon, bool Add);
-	/// <summary>
+static bool PrepareInsertKnots(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, int% NbPoles, int% NbKnots, double Epsilon, bool Add);
+		/// <summary>
 	/// Returns in <NbPoles, NbKnots> the  new number of poles
 	/// and  knots    if  the  sequence   of  knots <AddKnots,
 	/// AddMults> is inserted in the sequence <Knots, Mults>.
@@ -624,12 +624,12 @@ public:
 	/// The knew knots are knot increasing.
 	/// The new knots are not in the range.
 	/// </summary>
-	static bool PrepareInsertKnots(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, int% NbPoles, int% NbKnots, double Epsilon);
+static bool PrepareInsertKnots(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, int% NbPoles, int% NbKnots, double Epsilon);
 	static void InsertKnots(int Degree, bool Periodic, int Dimension, Macad::Occt::TColStd_Array1OfReal^ Poles, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, Macad::Occt::TColStd_Array1OfReal^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Epsilon, bool Add);
 	static void InsertKnots(int Degree, bool Periodic, int Dimension, Macad::Occt::TColStd_Array1OfReal^ Poles, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, Macad::Occt::TColStd_Array1OfReal^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Epsilon);
 	static void InsertKnots(int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Epsilon, bool Add);
 	static void InsertKnots(int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Epsilon);
-	/// <summary>
+		/// <summary>
 	/// Insert   a  sequence  of  knots <AddKnots> with
 	/// multiplicities   <AddMults>. <AddKnots>   must  be a   non
 	/// decreasing sequence and verifies :
@@ -657,8 +657,8 @@ public:
 	/// multiplicities  will  change it is   safe to  use the same
 	/// arrays as input and output.
 	/// </summary>
-	static void InsertKnots(int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Epsilon, bool Add);
-	/// <summary>
+static void InsertKnots(int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Epsilon, bool Add);
+		/// <summary>
 	/// Insert   a  sequence  of  knots <AddKnots> with
 	/// multiplicities   <AddMults>. <AddKnots>   must  be a   non
 	/// decreasing sequence and verifies :
@@ -686,9 +686,9 @@ public:
 	/// multiplicities  will  change it is   safe to  use the same
 	/// arrays as input and output.
 	/// </summary>
-	static void InsertKnots(int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Epsilon);
+static void InsertKnots(int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ AddKnots, Macad::Occt::TColStd_Array1OfInteger^ AddMults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Epsilon);
 	static void InsertKnot(int UIndex, double U, int UMult, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
-	/// <summary>
+		/// <summary>
 	/// Insert a new knot U of multiplicity UMult in the
 	/// knot sequence.
 	/// 
@@ -699,18 +699,18 @@ public:
 	/// The new control points corresponding to this insertion are
 	/// returned. Knots and Mults are not updated.
 	/// </summary>
-	static void InsertKnot(int UIndex, double U, int UMult, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
+static void InsertKnot(int UIndex, double U, int UMult, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
 	static void RaiseMultiplicity(int KnotIndex, int Mult, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
-	/// <summary>
+		/// <summary>
 	/// Raise the multiplicity of knot to <UMult>.
 	/// 
 	/// The new control points  are  returned. Knots and Mults are
 	/// not updated.
 	/// </summary>
-	static void RaiseMultiplicity(int KnotIndex, int Mult, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
+static void RaiseMultiplicity(int KnotIndex, int Mult, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
 	static bool RemoveKnot(int Index, int Mult, int Degree, bool Periodic, int Dimension, Macad::Occt::TColStd_Array1OfReal^ Poles, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Tolerance);
 	static bool RemoveKnot(int Index, int Mult, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Tolerance);
-	/// <summary>
+		/// <summary>
 	/// Decrement the  multiplicity  of <Knots(Index)>
 	/// to <Mult>. If <Mult>   is  null the   knot  is
 	/// removed.
@@ -730,19 +730,19 @@ public:
 	/// A high tolerance  can be used  to "smooth" the
 	/// curve.
 	/// </summary>
-	static bool RemoveKnot(int Index, int Mult, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Tolerance);
-	/// <summary>
+static bool RemoveKnot(int Index, int Mult, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, double Tolerance);
+		/// <summary>
 	/// Returns the   number   of  knots   of  a  curve   with
 	/// multiplicities <Mults> after elevating the degree from
 	/// <Degree> to <NewDegree>. See the IncreaseDegree method
 	/// for more comments.
 	/// </summary>
-	static int IncreaseDegreeCountKnots(int Degree, int NewDegree, bool Periodic, Macad::Occt::TColStd_Array1OfInteger^ Mults);
+static int IncreaseDegreeCountKnots(int Degree, int NewDegree, bool Periodic, Macad::Occt::TColStd_Array1OfInteger^ Mults);
 	static void IncreaseDegree(int Degree, int NewDegree, bool Periodic, int Dimension, Macad::Occt::TColStd_Array1OfReal^ Poles, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults);
 	static void IncreaseDegree(int Degree, int NewDegree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults);
 	static void IncreaseDegree(int Degree, int NewDegree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults);
 	static void IncreaseDegree(int NewDegree, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
-	/// <summary>
+		/// <summary>
 	/// Increase the degree of a bspline (or bezier) curve
 	/// of dimension theDimension form theDegree to theNewDegree.
 	/// 
@@ -800,23 +800,23 @@ public:
 	/// and last multiplicities equals to Degree+1) the knots are knot changes.
 	/// 
 	/// The method IncreaseDegreeCountKnots can be used to compute the new number of knots.
-	static void IncreaseDegree(int theNewDegree, Macad::Occt::TColgp_Array1OfPnt2d^ thePoles, Macad::Occt::TColStd_Array1OfReal^ theWeights, Macad::Occt::TColgp_Array1OfPnt2d^ theNewPoles, Macad::Occt::TColStd_Array1OfReal^ theNewWeights);
-	/// <summary>
+static void IncreaseDegree(int theNewDegree, Macad::Occt::TColgp_Array1OfPnt2d^ thePoles, Macad::Occt::TColStd_Array1OfReal^ theWeights, Macad::Occt::TColgp_Array1OfPnt2d^ theNewPoles, Macad::Occt::TColStd_Array1OfReal^ theNewWeights);
+		/// <summary>
 	/// Set in <NbKnots> and <NbPolesToAdd> the number of Knots and
 	/// Poles   of  the NotPeriodic  Curve   identical  at the
 	/// periodic     curve with    a  degree    <Degree>  ,  a
 	/// knots-distribution with Multiplicities <Mults>.
 	/// </summary>
-	static void PrepareUnperiodize(int Degree, Macad::Occt::TColStd_Array1OfInteger^ Mults, int% NbKnots, int% NbPoles);
+static void PrepareUnperiodize(int Degree, Macad::Occt::TColStd_Array1OfInteger^ Mults, int% NbKnots, int% NbPoles);
 	static void Unperiodize(int Degree, int Dimension, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfReal^ Poles, Macad::Occt::TColStd_Array1OfInteger^ NewMults, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfReal^ NewPoles);
 	static void Unperiodize(int Degree, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfInteger^ NewMults, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
 	static void Unperiodize(int Degree, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfInteger^ NewMults, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
-	/// <summary>
+		/// <summary>
 	/// Set in <NbKnots> and <NbPoles> the number of Knots and
 	/// Poles of the curve resulting from  the trimming of the
 	/// BSplinecurve defined with <degree>, <knots>, <mults>
 	/// </summary>
-	static void PrepareTrimming(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, double U1, double U2, int% NbKnots, int% NbPoles);
+static void PrepareTrimming(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, double U1, double U2, int% NbKnots, int% NbPoles);
 	static void Trimming(int Degree, bool Periodic, int Dimension, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColStd_Array1OfReal^ Poles, double U1, double U2, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, Macad::Occt::TColStd_Array1OfReal^ NewPoles);
 	static void Trimming(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, double U1, double U2, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
 	static void Trimming(int Degree, bool Periodic, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, double U1, double U2, Macad::Occt::TColStd_Array1OfReal^ NewKnots, Macad::Occt::TColStd_Array1OfInteger^ NewMults, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, Macad::Occt::TColStd_Array1OfReal^ NewWeights);
@@ -844,7 +844,7 @@ public:
 	static void DN(double U, int N, int Index, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::Vec% VN);
 	static void DN(double U, int N, int UIndex, int Degree, bool Periodic, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ Knots, Macad::Occt::TColStd_Array1OfInteger^ Mults, Macad::Occt::Vec2d% V);
 	static void DN(double U, int N, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% P, Macad::Occt::Vec% VN);
-	/// <summary>
+		/// <summary>
 	/// The  above  functions  compute   values and
 	/// derivatives in the following situations :
 	/// 
@@ -863,167 +863,23 @@ public:
 	/// USE  BSplCLib::NoWeights()  as Weights argument for non
 	/// rational curves computations.
 	/// </summary>
-	static void DN(double U, int N, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% VN);
-	/// <summary>
-	/// This  evaluates  the Bspline  Basis  at  a
-	/// given  parameter  Parameter   up   to  the
-	/// requested   DerivativeOrder  and store the
-	/// result  in the  array BsplineBasis  in the
-	/// following   fashion
-	/// BSplineBasis(1,1)   =
-	/// value of first non vanishing
-	/// Bspline function which has Index FirstNonZeroBsplineIndex
-	/// BsplineBasis(1,2)   =
-	/// value of second non vanishing
-	/// Bspline   function which  has   Index
-	/// FirstNonZeroBsplineIndex + 1
-	/// BsplineBasis(1,n)   =
-	/// value of second non vanishing non vanishing
-	/// Bspline   function which  has   Index
-	/// FirstNonZeroBsplineIndex + n (n <= Order)
-	/// BSplineBasis(2,1)   =
-	/// value of derivative of first non vanishing
-	/// Bspline function which has Index FirstNonZeroBsplineIndex
-	/// BSplineBasis(N,1)   =
-	/// value of Nth derivative of first non vanishing
-	/// Bspline function which has Index FirstNonZeroBsplineIndex
-	/// if N <= DerivativeOrder + 1
-	/// </summary>
+static void DN(double U, int N, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% P, Macad::Occt::Vec2d% VN);
 	/* Method skipped due to unknown mapping: Standard_Integer EvalBsplineBasis(Standard_Integer DerivativeOrder, Standard_Integer Order, TColStd_Array1OfReal FlatKnots, Standard_Real Parameter, Standard_Integer FirstNonZeroBsplineIndex, math_Matrix BsplineBasis, Standard_Boolean isPeriodic, ) */
-	/// <summary>
-	/// This  evaluates  the Bspline  Basis  at  a
-	/// given  parameter  Parameter   up   to  the
-	/// requested   DerivativeOrder  and store the
-	/// result  in the  array BsplineBasis  in the
-	/// following   fashion
-	/// BSplineBasis(1,1)   =
-	/// value of first non vanishing
-	/// Bspline function which has Index FirstNonZeroBsplineIndex
-	/// BsplineBasis(1,2)   =
-	/// value of second non vanishing
-	/// Bspline   function which  has   Index
-	/// FirstNonZeroBsplineIndex + 1
-	/// BsplineBasis(1,n)   =
-	/// value of second non vanishing non vanishing
-	/// Bspline   function which  has   Index
-	/// FirstNonZeroBsplineIndex + n (n <= Order)
-	/// BSplineBasis(2,1)   =
-	/// value of derivative of first non vanishing
-	/// Bspline function which has Index FirstNonZeroBsplineIndex
-	/// BSplineBasis(N,1)   =
-	/// value of Nth derivative of first non vanishing
-	/// Bspline function which has Index FirstNonZeroBsplineIndex
-	/// if N <= DerivativeOrder + 1
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Integer EvalBsplineBasis(Standard_Integer DerivativeOrder, Standard_Integer Order, TColStd_Array1OfReal FlatKnots, Standard_Real Parameter, Standard_Integer FirstNonZeroBsplineIndex, math_Matrix BsplineBasis, Standard_Boolean isPeriodic, ) */
-	/// <summary>
-	/// This Builds   a fully  blown   Matrix of
-	/// (ni)
-	/// Bi    (tj)
-	/// 
-	/// with i  and j within 1..Order + NumPoles
-	/// The  integer ni is   the ith slot of the
-	/// array OrderArray, tj is the jth slot of
-	/// the array Parameters
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Integer BuildBSpMatrix(TColStd_Array1OfReal Parameters, TColStd_Array1OfInteger OrderArray, TColStd_Array1OfReal FlatKnots, Standard_Integer Degree, math_Matrix Matrix, Standard_Integer UpperBandWidth, Standard_Integer LowerBandWidth, ) */
-	/// <summary>
-	/// this  factors  the Banded Matrix in
-	/// the LU form with a Banded storage of
-	/// components of the L matrix
-	/// WARNING : do not use if the Matrix is
-	/// totally positive (It is the case for
-	/// Bspline matrices build as above with
-	/// parameters being the Schoenberg points
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Integer FactorBandedMatrix(math_Matrix Matrix, Standard_Integer UpperBandWidth, Standard_Integer LowerBandWidth, Standard_Integer PivotIndexProblem, ) */
-	/// <summary>
-	/// This solves  the system Matrix.X =  B
-	/// with when Matrix is factored in LU form
-	/// The  Array   is    an   seen   as    an
-	/// Array[1..N][1..ArrayDimension] with N =
-	/// the  rank  of the  matrix  Matrix.  The
-	/// result is stored   in Array  when  each
-	/// coordinate is  solved that is  B is the
-	/// array whose values are
-	/// B[i] = Array[i][p] for each p in 1..ArrayDimension
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Integer SolveBandedSystem(math_Matrix Matrix, Standard_Integer UpperBandWidth, Standard_Integer LowerBandWidth, Standard_Integer ArrayDimension, Standard_Real Array, ) */
-	/// <summary>
-	/// This solves  the system Matrix.X =  B
-	/// with when Matrix is factored in LU form
-	/// The  Array   has the length of
-	/// the  rank  of the  matrix  Matrix.  The
-	/// result is stored   in Array  when  each
-	/// coordinate is  solved that is  B is the
-	/// array whose values are
-	/// B[i] = Array[i][p] for each p in 1..ArrayDimension
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Integer SolveBandedSystem(math_Matrix Matrix, Standard_Integer UpperBandWidth, Standard_Integer LowerBandWidth, TColgp_Array1OfPnt2d Array, ) */
-	/// <summary>
-	/// This solves  the system Matrix.X =  B
-	/// with when Matrix is factored in LU form
-	/// The  Array   has the length of
-	/// the  rank  of the  matrix  Matrix.  The
-	/// result is stored   in Array  when  each
-	/// coordinate is  solved that is  B is the
-	/// array whose values are
-	/// B[i] = Array[i][p] for each p in 1..ArrayDimension
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Integer SolveBandedSystem(math_Matrix Matrix, Standard_Integer UpperBandWidth, Standard_Integer LowerBandWidth, TColgp_Array1OfPnt Array, ) */
 	/* Method skipped due to unknown mapping: Standard_Integer SolveBandedSystem(math_Matrix Matrix, Standard_Integer UpperBandWidth, Standard_Integer LowerBandWidth, Standard_Boolean HomogenousFlag, Standard_Integer ArrayDimension, Standard_Real Array, Standard_Real Weights, ) */
-	/// <summary>
-	/// This solves the  system Matrix.X =  B
-	/// with when Matrix is factored in LU form
-	/// The    Array   is    an   seen  as   an
-	/// Array[1..N][1..ArrayDimension] with N =
-	/// the  rank  of  the  matrix Matrix.  The
-	/// result is  stored   in Array when  each
-	/// coordinate is  solved that is B  is the
-	/// array  whose   values     are   B[i]  =
-	/// Array[i][p]       for     each  p    in
-	/// 1..ArrayDimension. If  HomogeneousFlag ==
-	/// 0  the  Poles  are  multiplied by   the
-	/// Weights   upon   Entry   and      once
-	/// interpolation   is    carried  over the
-	/// result of the  poles are divided by the
-	/// result of   the   interpolation of  the
-	/// weights. Otherwise if HomogenousFlag == 1
-	/// the Poles and Weigths are treated homogeneously
-	/// that is that those are interpolated as they
-	/// are and result is returned without division
-	/// by the interpolated weigths.
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Integer SolveBandedSystem(math_Matrix Matrix, Standard_Integer UpperBandWidth, Standard_Integer LowerBandWidth, Standard_Boolean HomogenousFlag, TColgp_Array1OfPnt2d Array, TColStd_Array1OfReal Weights, ) */
-	/// <summary>
-	/// This solves  the system Matrix.X =  B
-	/// with when Matrix is factored in LU form
-	/// The  Array   is    an   seen   as    an
-	/// Array[1..N][1..ArrayDimension] with N =
-	/// the  rank  of the  matrix  Matrix.  The
-	/// result is stored   in Array  when  each
-	/// coordinate is  solved that is  B is the
-	/// array whose values are
-	/// B[i] = Array[i][p] for each p in 1..ArrayDimension
-	/// If  HomogeneousFlag ==
-	/// 0  the  Poles  are  multiplied by   the
-	/// Weights   upon   Entry   and      once
-	/// interpolation   is    carried  over the
-	/// result of the  poles are divided by the
-	/// result of   the   interpolation of  the
-	/// weights. Otherwise if HomogenousFlag == 1
-	/// the Poles and Weigths are treated homogeneously
-	/// that is that those are interpolated as they
-	/// are and result is returned without division
-	/// by the interpolated weigths.
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Integer SolveBandedSystem(math_Matrix Matrix, Standard_Integer UpperBandWidth, Standard_Integer LowerBandWidth, Standard_Boolean HomogeneousFlag, TColgp_Array1OfPnt Array, TColStd_Array1OfReal Weights, ) */
-	/// <summary>
+		/// <summary>
 	/// Merges  two knot vector by   setting the starting and
 	/// ending values to StartValue and EndValue
 	/// </summary>
-	static void MergeBSplineKnots(double Tolerance, double StartValue, double EndValue, int Degree1, Macad::Occt::TColStd_Array1OfReal^ Knots1, Macad::Occt::TColStd_Array1OfInteger^ Mults1, int Degree2, Macad::Occt::TColStd_Array1OfReal^ Knots2, Macad::Occt::TColStd_Array1OfInteger^ Mults2, int% NumPoles, Macad::Occt::TColStd_HArray1OfReal^ NewKnots, Macad::Occt::TColStd_HArray1OfInteger^ NewMults);
-	/// <summary>
+static void MergeBSplineKnots(double Tolerance, double StartValue, double EndValue, int Degree1, Macad::Occt::TColStd_Array1OfReal^ Knots1, Macad::Occt::TColStd_Array1OfInteger^ Mults1, int Degree2, Macad::Occt::TColStd_Array1OfReal^ Knots2, Macad::Occt::TColStd_Array1OfInteger^ Mults2, int% NumPoles, Macad::Occt::TColStd_HArray1OfReal^ NewKnots, Macad::Occt::TColStd_HArray1OfInteger^ NewMults);
+		/// <summary>
 	/// This function will compose  a given Vectorial BSpline F(t)
 	/// defined  by its  BSplineDegree and BSplineFlatKnotsl,
 	/// its Poles  array which are coded as  an array of Real
@@ -1050,8 +906,8 @@ public:
 	/// BSpline : the method used is interpolation at Schoenenberg
 	/// points of F(a(t))
 	/// </summary>
-	static void FunctionReparameterise(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, int PolesDimension, double% Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, double% NewPoles, int% theStatus);
-	/// <summary>
+static void FunctionReparameterise(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, int PolesDimension, double% Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, double% NewPoles, int% theStatus);
+		/// <summary>
 	/// This function will compose  a given Vectorial BSpline F(t)
 	/// defined  by its  BSplineDegree and BSplineFlatKnotsl,
 	/// its Poles  array which are coded as  an array of Real
@@ -1078,8 +934,8 @@ public:
 	/// BSpline : the method used is interpolation at Schoenenberg
 	/// points of F(a(t))
 	/// </summary>
-	static void FunctionReparameterise(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColStd_Array1OfReal^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColStd_Array1OfReal^ NewPoles, int% theStatus);
-	/// <summary>
+static void FunctionReparameterise(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColStd_Array1OfReal^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColStd_Array1OfReal^ NewPoles, int% theStatus);
+		/// <summary>
 	/// this will compose  a given Vectorial BSpline F(t)
 	/// defined  by its  BSplineDegree and BSplineFlatKnotsl,
 	/// its Poles  array which are coded as  an array of Real
@@ -1101,8 +957,8 @@ public:
 	/// BSpline : the method used is interpolation at Schoenenberg
 	/// points of F(a(t))
 	/// </summary>
-	static void FunctionReparameterise(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, int% theStatus);
-	/// <summary>
+static void FunctionReparameterise(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, int% theStatus);
+		/// <summary>
 	/// this will compose  a given Vectorial BSpline F(t)
 	/// defined  by its  BSplineDegree and BSplineFlatKnotsl,
 	/// its Poles  array which are coded as  an array of Real
@@ -1124,8 +980,8 @@ public:
 	/// BSpline : the method used is interpolation at Schoenenberg
 	/// points of F(a(t))
 	/// </summary>
-	static void FunctionReparameterise(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, int% theStatus);
-	/// <summary>
+static void FunctionReparameterise(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, int% theStatus);
+		/// <summary>
 	/// this will  multiply a given Vectorial BSpline F(t)
 	/// defined  by its  BSplineDegree and BSplineFlatKnotsl,
 	/// its Poles  array which are coded as  an array of Real
@@ -1144,8 +1000,8 @@ public:
 	/// BSpline : the method used is interpolation at Schoenenberg
 	/// points of a(t)*F(t)
 	/// </summary>
-	static void FunctionMultiply(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, int PolesDimension, double% Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, double% NewPoles, int% theStatus);
-	/// <summary>
+static void FunctionMultiply(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, int PolesDimension, double% Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, double% NewPoles, int% theStatus);
+		/// <summary>
 	/// this will  multiply a given Vectorial BSpline F(t)
 	/// defined  by its  BSplineDegree and BSplineFlatKnotsl,
 	/// its Poles  array which are coded as  an array of Real
@@ -1164,8 +1020,8 @@ public:
 	/// BSpline : the method used is interpolation at Schoenenberg
 	/// points of a(t)*F(t)
 	/// </summary>
-	static void FunctionMultiply(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColStd_Array1OfReal^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColStd_Array1OfReal^ NewPoles, int% theStatus);
-	/// <summary>
+static void FunctionMultiply(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColStd_Array1OfReal^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColStd_Array1OfReal^ NewPoles, int% theStatus);
+		/// <summary>
 	/// this will  multiply a given Vectorial BSpline F(t)
 	/// defined  by its  BSplineDegree and BSplineFlatKnotsl,
 	/// its Poles  array which are coded as  an array of Real
@@ -1184,8 +1040,8 @@ public:
 	/// BSpline : the method used is interpolation at Schoenenberg
 	/// points of a(t)*F(t)
 	/// </summary>
-	static void FunctionMultiply(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, int% theStatus);
-	/// <summary>
+static void FunctionMultiply(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, int% theStatus);
+		/// <summary>
 	/// this will  multiply a given Vectorial BSpline F(t)
 	/// defined  by its  BSplineDegree and BSplineFlatKnotsl,
 	/// its Poles  array which are coded as  an array of Real
@@ -1204,8 +1060,8 @@ public:
 	/// BSpline : the method used is interpolation at Schoenenberg
 	/// points of a(t)*F(t)
 	/// </summary>
-	static void FunctionMultiply(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, int% theStatus);
-	/// <summary>
+static void FunctionMultiply(Macad::Occt::BSplCLib_EvaluatorFunction^ Function, int BSplineDegree, Macad::Occt::TColStd_Array1OfReal^ BSplineFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int NewDegree, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, int% theStatus);
+		/// <summary>
 	/// Perform the De Boor   algorithm  to  evaluate a point at
 	/// parameter <U>, with <Degree> and <Dimension>.
 	/// 
@@ -1221,8 +1077,8 @@ public:
 	/// = Degre used to  extrapolate after the last knot has
 	/// to be between 1 and  Degree
 	/// </summary>
-	static void Eval(double U, bool PeriodicFlag, int DerivativeRequest, int% ExtrapMode, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int ArrayDimension, double% Poles, double% Result);
-	/// <summary>
+static void Eval(double U, bool PeriodicFlag, int DerivativeRequest, int% ExtrapMode, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int ArrayDimension, double% Poles, double% Result);
+		/// <summary>
 	/// Perform the  De Boor algorithm  to evaluate a point at
 	/// parameter   <U>,  with   <Degree>    and  <Dimension>.
 	/// Evaluates by multiplying the  Poles by the Weights and
@@ -1235,20 +1091,20 @@ public:
 	/// Warning:   <PolesResult> and <WeightsResult>  must be   dimensionned
 	/// properly.
 	/// </summary>
-	static void Eval(double U, bool PeriodicFlag, int DerivativeRequest, int% ExtrapMode, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int ArrayDimension, double% Poles, double% Weights, double% PolesResult, double% WeightsResult);
-	/// <summary>
+static void Eval(double U, bool PeriodicFlag, int DerivativeRequest, int% ExtrapMode, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int ArrayDimension, double% Poles, double% Weights, double% PolesResult, double% WeightsResult);
+		/// <summary>
 	/// Perform the evaluation of the Bspline Basis
 	/// and then multiplies by the weights
 	/// this just evaluates the current point
 	/// </summary>
-	static void Eval(double U, bool PeriodicFlag, bool HomogeneousFlag, int% ExtrapMode, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, double% Weight);
-	/// <summary>
+static void Eval(double U, bool PeriodicFlag, bool HomogeneousFlag, int% ExtrapMode, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, double% Weight);
+		/// <summary>
 	/// Perform the evaluation of the Bspline Basis
 	/// and then multiplies by the weights
 	/// this just evaluates the current point
 	/// </summary>
-	static void Eval(double U, bool PeriodicFlag, bool HomogeneousFlag, int% ExtrapMode, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, double% Weight);
-	/// <summary>
+static void Eval(double U, bool PeriodicFlag, bool HomogeneousFlag, int% ExtrapMode, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, double% Weight);
+		/// <summary>
 	/// Extend a BSpline nD using the tangency map
 	/// <C1Coefficient> is the coefficient of reparametrisation
 	/// <Continuity> must be equal to 1, 2 or 3.
@@ -1257,8 +1113,8 @@ public:
 	/// Warning:   <KnotsResult> and <PolesResult>  must be   dimensionned
 	/// properly.
 	/// </summary>
-	static void TangExtendToConstraint(Macad::Occt::TColStd_Array1OfReal^ FlatKnots, double C1Coefficient, int NumPoles, double% Poles, int Dimension, int Degree, Macad::Occt::TColStd_Array1OfReal^ ConstraintPoint, int Continuity, bool After, int% NbPolesResult, int% NbKnotsRsult, double% KnotsResult, double% PolesResult);
-	/// <summary>
+static void TangExtendToConstraint(Macad::Occt::TColStd_Array1OfReal^ FlatKnots, double C1Coefficient, int NumPoles, double% Poles, int Dimension, int Degree, Macad::Occt::TColStd_Array1OfReal^ ConstraintPoint, int Continuity, bool After, int% NbPolesResult, int% NbKnotsRsult, double% KnotsResult, double% PolesResult);
+		/// <summary>
 	/// Perform the evaluation of the of the cache
 	/// the parameter must be normalized between
 	/// the 0 and 1 for the span.
@@ -1271,8 +1127,8 @@ public:
 	/// the polynomial in the cache to avoid bad conditioning
 	/// effects
 	/// </summary>
-	static void CacheD0(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point);
-	/// <summary>
+static void CacheD0(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point);
+		/// <summary>
 	/// Perform the evaluation of the Bspline Basis
 	/// and then multiplies by the weights
 	/// this just evaluates the current point
@@ -1286,20 +1142,20 @@ public:
 	/// the polynomial in the cache to avoid bad conditioning
 	/// effectsis just evaluates the current point
 	/// </summary>
-	static void CacheD0(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point);
-	/// <summary>
+static void CacheD0(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point);
+		/// <summary>
 	/// Calls CacheD0 for Bezier  Curves Arrays computed with
 	/// the method PolesCoefficients.
 	/// Warning: To be used for Beziercurves ONLY!!!
 	/// </summary>
-	static void CoefsD0(double U, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point);
-	/// <summary>
+static void CoefsD0(double U, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point);
+		/// <summary>
 	/// Calls CacheD0 for Bezier  Curves Arrays computed with
 	/// the method PolesCoefficients.
 	/// Warning: To be used for Beziercurves ONLY!!!
 	/// </summary>
-	static void CoefsD0(double U, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point);
-	/// <summary>
+static void CoefsD0(double U, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point);
+		/// <summary>
 	/// Perform the evaluation of the of the cache
 	/// the parameter must be normalized between
 	/// the 0 and 1 for the span.
@@ -1312,8 +1168,8 @@ public:
 	/// the polynomial in the cache to avoid bad conditioning
 	/// effects
 	/// </summary>
-	static void CacheD1(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec);
-	/// <summary>
+static void CacheD1(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec);
+		/// <summary>
 	/// Perform the evaluation of the Bspline Basis
 	/// and then multiplies by the weights
 	/// this just evaluates the current point
@@ -1327,20 +1183,20 @@ public:
 	/// the polynomial in the cache to avoid bad conditioning
 	/// effectsis just evaluates the current point
 	/// </summary>
-	static void CacheD1(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec);
-	/// <summary>
+static void CacheD1(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec);
+		/// <summary>
 	/// Calls CacheD1 for Bezier  Curves Arrays computed with
 	/// the method PolesCoefficients.
 	/// Warning: To be used for Beziercurves ONLY!!!
 	/// </summary>
-	static void CoefsD1(double U, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec);
-	/// <summary>
+static void CoefsD1(double U, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec);
+		/// <summary>
 	/// Calls CacheD1 for Bezier  Curves Arrays computed with
 	/// the method PolesCoefficients.
 	/// Warning: To be used for Beziercurves ONLY!!!
 	/// </summary>
-	static void CoefsD1(double U, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec);
-	/// <summary>
+static void CoefsD1(double U, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec);
+		/// <summary>
 	/// Perform the evaluation of the of the cache
 	/// the parameter must be normalized between
 	/// the 0 and 1 for the span.
@@ -1353,8 +1209,8 @@ public:
 	/// the polynomial in the cache to avoid bad conditioning
 	/// effects
 	/// </summary>
-	static void CacheD2(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec1, Macad::Occt::Vec% Vec2);
-	/// <summary>
+static void CacheD2(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec1, Macad::Occt::Vec% Vec2);
+		/// <summary>
 	/// Perform the evaluation of the Bspline Basis
 	/// and then multiplies by the weights
 	/// this just evaluates the current point
@@ -1368,20 +1224,20 @@ public:
 	/// the polynomial in the cache to avoid bad conditioning
 	/// effectsis just evaluates the current point
 	/// </summary>
-	static void CacheD2(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec1, Macad::Occt::Vec2d% Vec2);
-	/// <summary>
+static void CacheD2(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec1, Macad::Occt::Vec2d% Vec2);
+		/// <summary>
 	/// Calls CacheD1 for Bezier  Curves Arrays computed with
 	/// the method PolesCoefficients.
 	/// Warning: To be used for Beziercurves ONLY!!!
 	/// </summary>
-	static void CoefsD2(double U, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec1, Macad::Occt::Vec% Vec2);
-	/// <summary>
+static void CoefsD2(double U, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec1, Macad::Occt::Vec% Vec2);
+		/// <summary>
 	/// Calls CacheD1 for Bezier  Curves Arrays computed with
 	/// the method PolesCoefficients.
 	/// Warning: To be used for Beziercurves ONLY!!!
 	/// </summary>
-	static void CoefsD2(double U, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec1, Macad::Occt::Vec2d% Vec2);
-	/// <summary>
+static void CoefsD2(double U, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec1, Macad::Occt::Vec2d% Vec2);
+		/// <summary>
 	/// Perform the evaluation of the of the cache
 	/// the parameter must be normalized between
 	/// the 0 and 1 for the span.
@@ -1394,8 +1250,8 @@ public:
 	/// the polynomial in the cache to avoid bad conditioning
 	/// effects
 	/// </summary>
-	static void CacheD3(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec1, Macad::Occt::Vec% Vec2, Macad::Occt::Vec% Vec3);
-	/// <summary>
+static void CacheD3(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec1, Macad::Occt::Vec% Vec2, Macad::Occt::Vec% Vec3);
+		/// <summary>
 	/// Perform the evaluation of the Bspline Basis
 	/// and then multiplies by the weights
 	/// this just evaluates the current point
@@ -1409,68 +1265,68 @@ public:
 	/// the polynomial in the cache to avoid bad conditioning
 	/// effectsis just evaluates the current point
 	/// </summary>
-	static void CacheD3(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec1, Macad::Occt::Vec2d% Vec2, Macad::Occt::Vec2d% Vec3);
-	/// <summary>
+static void CacheD3(double U, int Degree, double CacheParameter, double SpanLenght, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec1, Macad::Occt::Vec2d% Vec2, Macad::Occt::Vec2d% Vec3);
+		/// <summary>
 	/// Calls CacheD1 for Bezier  Curves Arrays computed with
 	/// the method PolesCoefficients.
 	/// Warning: To be used for Beziercurves ONLY!!!
 	/// </summary>
-	static void CoefsD3(double U, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec1, Macad::Occt::Vec% Vec2, Macad::Occt::Vec% Vec3);
-	/// <summary>
+static void CoefsD3(double U, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt% Point, Macad::Occt::Vec% Vec1, Macad::Occt::Vec% Vec2, Macad::Occt::Vec% Vec3);
+		/// <summary>
 	/// Calls CacheD1 for Bezier  Curves Arrays computed with
 	/// the method PolesCoefficients.
 	/// Warning: To be used for Beziercurves ONLY!!!
 	/// </summary>
-	static void CoefsD3(double U, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec1, Macad::Occt::Vec2d% Vec2, Macad::Occt::Vec2d% Vec3);
-	/// <summary>
+static void CoefsD3(double U, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::Pnt2d% Point, Macad::Occt::Vec2d% Vec1, Macad::Occt::Vec2d% Vec2, Macad::Occt::Vec2d% Vec3);
+		/// <summary>
 	/// Perform the evaluation of the Taylor expansion
 	/// of the Bspline normalized between 0 and 1.
 	/// If rational computes the homogeneous Taylor expension
 	/// for the numerator and stores it in CachePoles
 	/// </summary>
-	static void BuildCache(double U, double InverseOfSpanDomain, bool PeriodicFlag, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColgp_Array1OfPnt^ CachePoles, Macad::Occt::TColStd_Array1OfReal^ CacheWeights);
-	/// <summary>
+static void BuildCache(double U, double InverseOfSpanDomain, bool PeriodicFlag, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColgp_Array1OfPnt^ CachePoles, Macad::Occt::TColStd_Array1OfReal^ CacheWeights);
+		/// <summary>
 	/// Perform the evaluation of the Taylor expansion
 	/// of the Bspline normalized between 0 and 1.
 	/// If rational computes the homogeneous Taylor expension
 	/// for the numerator and stores it in CachePoles
 	/// </summary>
-	static void BuildCache(double U, double InverseOfSpanDomain, bool PeriodicFlag, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColgp_Array1OfPnt2d^ CachePoles, Macad::Occt::TColStd_Array1OfReal^ CacheWeights);
-	/// <summary>
+static void BuildCache(double U, double InverseOfSpanDomain, bool PeriodicFlag, int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColgp_Array1OfPnt2d^ CachePoles, Macad::Occt::TColStd_Array1OfReal^ CacheWeights);
+		/// <summary>
 	/// Perform the evaluation of the Taylor expansion
 	/// of the Bspline normalized between 0 and 1.
 	/// Structure of result optimized for BSplCLib_Cache.
 	/// </summary>
-	static void BuildCache(double theParameter, double theSpanDomain, bool thePeriodicFlag, int theDegree, int theSpanIndex, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ thePoles, Macad::Occt::TColStd_Array1OfReal^ theWeights, Macad::Occt::TColStd_Array2OfReal^ theCacheArray);
-	/// <summary>
+static void BuildCache(double theParameter, double theSpanDomain, bool thePeriodicFlag, int theDegree, int theSpanIndex, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ thePoles, Macad::Occt::TColStd_Array1OfReal^ theWeights, Macad::Occt::TColStd_Array2OfReal^ theCacheArray);
+		/// <summary>
 	/// Perform the evaluation of the Taylor expansion
 	/// of the Bspline normalized between 0 and 1.
 	/// Structure of result optimized for BSplCLib_Cache.
 	/// </summary>
-	static void BuildCache(double theParameter, double theSpanDomain, bool thePeriodicFlag, int theDegree, int theSpanIndex, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ thePoles, Macad::Occt::TColStd_Array1OfReal^ theWeights, Macad::Occt::TColStd_Array2OfReal^ theCacheArray);
+static void BuildCache(double theParameter, double theSpanDomain, bool thePeriodicFlag, int theDegree, int theSpanIndex, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ thePoles, Macad::Occt::TColStd_Array1OfReal^ theWeights, Macad::Occt::TColStd_Array2OfReal^ theCacheArray);
 	static void PolesCoefficients(Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColgp_Array1OfPnt2d^ CachePoles);
 	static void PolesCoefficients(Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColgp_Array1OfPnt2d^ CachePoles, Macad::Occt::TColStd_Array1OfReal^ CacheWeights);
 	static void PolesCoefficients(Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColgp_Array1OfPnt^ CachePoles);
-	/// <summary>
+		/// <summary>
 	/// Encapsulation   of  BuildCache    to   perform   the
 	/// evaluation  of the Taylor expansion for beziercurves
 	/// at parameter 0.
 	/// Warning: To be used for Beziercurves ONLY!!!
 	/// </summary>
-	static void PolesCoefficients(Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColgp_Array1OfPnt^ CachePoles, Macad::Occt::TColStd_Array1OfReal^ CacheWeights);
-	/// <summary>
+static void PolesCoefficients(Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColgp_Array1OfPnt^ CachePoles, Macad::Occt::TColStd_Array1OfReal^ CacheWeights);
+		/// <summary>
 	/// Returns pointer to statically allocated array representing
 	/// flat knots for bezier curve of the specified degree.
 	/// Raises OutOfRange if Degree > MaxDegree()
 	/// </summary>
-	static double FlatBezierKnots(int Degree);
-	/// <summary>
+static double FlatBezierKnots(int Degree);
+		/// <summary>
 	/// builds the Schoenberg points from the flat knot
 	/// used to interpolate a BSpline since the
 	/// BSpline matrix is invertible.
 	/// </summary>
-	static void BuildSchoenbergPoints(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters);
-	/// <summary>
+static void BuildSchoenbergPoints(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters);
+		/// <summary>
 	/// Performs the interpolation of  the data given in
 	/// the Poles  array  according  to the  requests in
 	/// ContactOrderArray    that is      :           if
@@ -1491,8 +1347,8 @@ public:
 	/// problem else it will give the index of the faulty
 	/// pivot
 	/// </summary>
-	static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, Macad::Occt::TColgp_Array1OfPnt^ Poles, int% InversionProblem);
-	/// <summary>
+static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, Macad::Occt::TColgp_Array1OfPnt^ Poles, int% InversionProblem);
+		/// <summary>
 	/// Performs the interpolation of  the data given in
 	/// the Poles  array  according  to the  requests in
 	/// ContactOrderArray    that is      :           if
@@ -1514,8 +1370,8 @@ public:
 	/// problem else it will give the index of the faulty
 	/// pivot
 	/// </summary>
-	static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, int% InversionProblem);
-	/// <summary>
+static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, int% InversionProblem);
+		/// <summary>
 	/// Performs the interpolation of  the data given in
 	/// the Poles  array  according  to the  requests in
 	/// ContactOrderArray    that is      :           if
@@ -1536,8 +1392,8 @@ public:
 	/// problem else it will give the index of the faulty
 	/// pivot
 	/// </summary>
-	static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, int% InversionProblem);
-	/// <summary>
+static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, int% InversionProblem);
+		/// <summary>
 	/// Performs the interpolation of  the data given in
 	/// the Poles  array  according  to the  requests in
 	/// ContactOrderArray    that is      :           if
@@ -1558,8 +1414,8 @@ public:
 	/// ll report 0 if there was no
 	/// problem else it will give the i
 	/// </summary>
-	static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, int% InversionProblem);
-	/// <summary>
+static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, int% InversionProblem);
+		/// <summary>
 	/// Performs the interpolation of  the data given in
 	/// the Poles  array  according  to the  requests in
 	/// ContactOrderArray    that is      :           if
@@ -1583,9 +1439,9 @@ public:
 	/// problem else it will give the index of the faulty
 	/// pivot
 	/// </summary>
-	static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, int ArrayDimension, double% Poles, int% InversionProblem);
+static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, int ArrayDimension, double% Poles, int% InversionProblem);
 	static void Interpolate(int Degree, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColStd_Array1OfReal^ Parameters, Macad::Occt::TColStd_Array1OfInteger^ ContactOrderArray, int ArrayDimension, double% Poles, double% Weights, int% InversionProblem);
-	/// <summary>
+		/// <summary>
 	/// Find the new poles which allows  an old point (with a
 	/// given  u as parameter) to reach a new position
 	/// Index1 and Index2 indicate the range of poles we can move
@@ -1596,8 +1452,8 @@ public:
 	/// if Problem in BSplineBasis calculation, no change for the curve
 	/// and FirstIndex, LastIndex = 0
 	/// </summary>
-	static void MovePoint(double U, Macad::Occt::Vec2d Displ, int Index1, int Index2, int Degree, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int% FirstIndex, int% LastIndex, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles);
-	/// <summary>
+static void MovePoint(double U, Macad::Occt::Vec2d Displ, int Index1, int Index2, int Degree, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int% FirstIndex, int% LastIndex, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles);
+		/// <summary>
 	/// Find the new poles which allows  an old point (with a
 	/// given  u as parameter) to reach a new position
 	/// Index1 and Index2 indicate the range of poles we can move
@@ -1608,8 +1464,8 @@ public:
 	/// if Problem in BSplineBasis calculation, no change for the curve
 	/// and FirstIndex, LastIndex = 0
 	/// </summary>
-	static void MovePoint(double U, Macad::Occt::Vec Displ, int Index1, int Index2, int Degree, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int% FirstIndex, int% LastIndex, Macad::Occt::TColgp_Array1OfPnt^ NewPoles);
-	/// <summary>
+static void MovePoint(double U, Macad::Occt::Vec Displ, int Index1, int Index2, int Degree, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int% FirstIndex, int% LastIndex, Macad::Occt::TColgp_Array1OfPnt^ NewPoles);
+		/// <summary>
 	/// This is the dimension free version of the utility
 	/// U is the parameter  must be within the  first FlatKnots and the
 	/// last FlatKnots  Delta is the amount the  curve has  to be moved
@@ -1636,8 +1492,8 @@ public:
 	/// 4 + 2 = 6 poles so for example to have a C1 cubic you will need
 	/// have at least 2 internal knots.
 	/// </summary>
-	static void MovePointAndTangent(double U, int ArrayDimension, double% Delta, double% DeltaDerivative, double Tolerance, int Degree, int StartingCondition, int EndingCondition, double% Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, double% NewPoles, int% ErrorStatus);
-	/// <summary>
+static void MovePointAndTangent(double U, int ArrayDimension, double% Delta, double% DeltaDerivative, double Tolerance, int Degree, int StartingCondition, int EndingCondition, double% Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, double% NewPoles, int% ErrorStatus);
+		/// <summary>
 	/// This is the dimension free version of the utility
 	/// U is the parameter  must be within the  first FlatKnots and the
 	/// last FlatKnots  Delta is the amount the  curve has  to be moved
@@ -1664,8 +1520,8 @@ public:
 	/// 4 + 2 = 6 poles so for example to have a C1 cubic you will need
 	/// have at least 2 internal knots.
 	/// </summary>
-	static void MovePointAndTangent(double U, Macad::Occt::Vec Delta, Macad::Occt::Vec DeltaDerivative, double Tolerance, int Degree, int StartingCondition, int EndingCondition, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, int% ErrorStatus);
-	/// <summary>
+static void MovePointAndTangent(double U, Macad::Occt::Vec Delta, Macad::Occt::Vec DeltaDerivative, double Tolerance, int Degree, int StartingCondition, int EndingCondition, Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt^ NewPoles, int% ErrorStatus);
+		/// <summary>
 	/// This is the dimension free version of the utility
 	/// U is the parameter  must be within the  first FlatKnots and the
 	/// last FlatKnots  Delta is the amount the  curve has  to be moved
@@ -1692,31 +1548,31 @@ public:
 	/// 4 + 2 = 6 poles so for example to have a C1 cubic you will need
 	/// have at least 2 internal knots.
 	/// </summary>
-	static void MovePointAndTangent(double U, Macad::Occt::Vec2d Delta, Macad::Occt::Vec2d DeltaDerivative, double Tolerance, int Degree, int StartingCondition, int EndingCondition, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, int% ErrorStatus);
-	/// <summary>
+static void MovePointAndTangent(double U, Macad::Occt::Vec2d Delta, Macad::Occt::Vec2d DeltaDerivative, double Tolerance, int Degree, int StartingCondition, int EndingCondition, Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ NewPoles, int% ErrorStatus);
+		/// <summary>
 	/// given a tolerance in 3D space returns a
 	/// tolerance    in U parameter space such that
 	/// all u1 and u0 in the domain of the curve f(u)
 	/// | u1 - u0 | < UTolerance and
 	/// we have |f (u1) - f (u0)| < Tolerance3D
 	/// </summary>
-	static void Resolution(double% PolesArray, int ArrayDimension, int NumPoles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int Degree, double Tolerance3D, double% UTolerance);
-	/// <summary>
+static void Resolution(double% PolesArray, int ArrayDimension, int NumPoles, Macad::Occt::TColStd_Array1OfReal^ Weights, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int Degree, double Tolerance3D, double% UTolerance);
+		/// <summary>
 	/// given a tolerance in 3D space returns a
 	/// tolerance    in U parameter space such that
 	/// all u1 and u0 in the domain of the curve f(u)
 	/// | u1 - u0 | < UTolerance and
 	/// we have |f (u1) - f (u0)| < Tolerance3D
 	/// </summary>
-	static void Resolution(Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, int NumPoles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int Degree, double Tolerance3D, double% UTolerance);
-	/// <summary>
+static void Resolution(Macad::Occt::TColgp_Array1OfPnt^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, int NumPoles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int Degree, double Tolerance3D, double% UTolerance);
+		/// <summary>
 	/// given a tolerance in 3D space returns a
 	/// tolerance    in U parameter space such that
 	/// all u1 and u0 in the domain of the curve f(u)
 	/// | u1 - u0 | < UTolerance and
 	/// we have |f (u1) - f (u0)| < Tolerance3D
 	/// </summary>
-	static void Resolution(Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, int NumPoles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int Degree, double Tolerance3D, double% UTolerance);
+static void Resolution(Macad::Occt::TColgp_Array1OfPnt2d^ Poles, Macad::Occt::TColStd_Array1OfReal^ Weights, int NumPoles, Macad::Occt::TColStd_Array1OfReal^ FlatKnots, int Degree, double Tolerance3D, double% UTolerance);
 }; // class BSplCLib
 
 //---------------------------------------------------------------------
@@ -1756,7 +1612,7 @@ public:
 	static Macad::Occt::BSplCLib_Cache^ CreateDowncasted(::BSplCLib_Cache* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructor, prepares data structures for caching values on a 2d curve.
 	/// \param theDegree     degree of the curve
 	/// \param thePeriodic   identify whether the curve is periodic
@@ -1764,8 +1620,8 @@ public:
 	/// \param thePoles2d    array of poles of 2D curve
 	/// \param theWeights    array of weights of corresponding poles
 	/// </summary>
-	BSplCLib_Cache(int theDegree, bool thePeriodic, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ thePoles2d, Macad::Occt::TColStd_Array1OfReal^ theWeights);
-	/// <summary>
+BSplCLib_Cache(int theDegree, bool thePeriodic, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ thePoles2d, Macad::Occt::TColStd_Array1OfReal^ theWeights);
+		/// <summary>
 	/// Constructor, prepares data structures for caching values on a 2d curve.
 	/// \param theDegree     degree of the curve
 	/// \param thePeriodic   identify whether the curve is periodic
@@ -1773,8 +1629,8 @@ public:
 	/// \param thePoles2d    array of poles of 2D curve
 	/// \param theWeights    array of weights of corresponding poles
 	/// </summary>
-	BSplCLib_Cache(int theDegree, bool thePeriodic, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ thePoles2d);
-	/// <summary>
+BSplCLib_Cache(int theDegree, bool thePeriodic, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ thePoles2d);
+		/// <summary>
 	/// Constructor, prepares data structures for caching values on a 3d curve.
 	/// \param theDegree     degree of the curve
 	/// \param thePeriodic   identify whether the curve is periodic
@@ -1782,8 +1638,8 @@ public:
 	/// \param thePoles      array of poles of 3D curve
 	/// \param theWeights    array of weights of corresponding poles
 	/// </summary>
-	BSplCLib_Cache(int theDegree, bool thePeriodic, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ thePoles, Macad::Occt::TColStd_Array1OfReal^ theWeights);
-	/// <summary>
+BSplCLib_Cache(int theDegree, bool thePeriodic, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ thePoles, Macad::Occt::TColStd_Array1OfReal^ theWeights);
+		/// <summary>
 	/// Constructor, prepares data structures for caching values on a 3d curve.
 	/// \param theDegree     degree of the curve
 	/// \param thePeriodic   identify whether the curve is periodic
@@ -1791,61 +1647,61 @@ public:
 	/// \param thePoles      array of poles of 3D curve
 	/// \param theWeights    array of weights of corresponding poles
 	/// </summary>
-	BSplCLib_Cache(int theDegree, bool thePeriodic, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ thePoles);
-	/// <summary>
+BSplCLib_Cache(int theDegree, bool thePeriodic, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ thePoles);
+		/// <summary>
 	/// Verifies validity of the cache using flat parameter of the point
 	/// \param theParameter parameter of the point placed in the span
 	/// </summary>
-	bool IsCacheValid(double theParameter);
-	/// <summary>
+bool IsCacheValid(double theParameter);
+		/// <summary>
 	/// Recomputes the cache data for 2D curves. Does not verify validity of the cache
 	/// \param theParameter  the value on the knot's axis to identify the span
 	/// \param theFlatKnots  knots of Bezier/B-spline curve (with repetitions)
 	/// \param thePoles2d    array of poles of 2D curve
 	/// \param theWeights    array of weights of corresponding poles
 	/// </summary>
-	void BuildCache(double theParameter, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ thePoles2d, Macad::Occt::TColStd_Array1OfReal^ theWeights);
-	/// <summary>
+void BuildCache(double theParameter, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt2d^ thePoles2d, Macad::Occt::TColStd_Array1OfReal^ theWeights);
+		/// <summary>
 	/// Recomputes the cache data for 3D curves. Does not verify validity of the cache
 	/// \param theParameter  the value on the knot's axis to identify the span
 	/// \param theFlatKnots  knots of Bezier/B-spline curve (with repetitions)
 	/// \param thePoles      array of poles of 3D curve
 	/// \param theWeights    array of weights of corresponding poles
 	/// </summary>
-	void BuildCache(double theParameter, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ thePoles, Macad::Occt::TColStd_Array1OfReal^ theWeights);
-	/// <summary>
+void BuildCache(double theParameter, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ thePoles, Macad::Occt::TColStd_Array1OfReal^ theWeights);
+		/// <summary>
 	/// Recomputes the cache data for 3D curves. Does not verify validity of the cache
 	/// \param theParameter  the value on the knot's axis to identify the span
 	/// \param theFlatKnots  knots of Bezier/B-spline curve (with repetitions)
 	/// \param thePoles      array of poles of 3D curve
 	/// \param theWeights    array of weights of corresponding poles
 	/// </summary>
-	void BuildCache(double theParameter, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ thePoles);
-	/// <summary>
+void BuildCache(double theParameter, Macad::Occt::TColStd_Array1OfReal^ theFlatKnots, Macad::Occt::TColgp_Array1OfPnt^ thePoles);
+		/// <summary>
 	/// Calculates the point on the curve in the specified parameter
 	/// \param[in]  theParameter parameter of calculation of the value
 	/// \param[out] thePoint     the result of calculation (the point on the curve)
 	/// </summary>
-	void D0(double theParameter, Macad::Occt::Pnt2d% thePoint);
+void D0(double theParameter, Macad::Occt::Pnt2d% thePoint);
 	void D0(double theParameter, Macad::Occt::Pnt% thePoint);
-	/// <summary>
+		/// <summary>
 	/// Calculates the point on the curve and its first derivative in the specified parameter
 	/// \param[in]  theParameter parameter of calculation of the value
 	/// \param[out] thePoint     the result of calculation (the point on the curve)
 	/// \param[out] theTangent   tangent vector (first derivatives) for the curve in the calculated point
 	/// </summary>
-	void D1(double theParameter, Macad::Occt::Pnt2d% thePoint, Macad::Occt::Vec2d% theTangent);
+void D1(double theParameter, Macad::Occt::Pnt2d% thePoint, Macad::Occt::Vec2d% theTangent);
 	void D1(double theParameter, Macad::Occt::Pnt% thePoint, Macad::Occt::Vec% theTangent);
-	/// <summary>
+		/// <summary>
 	/// Calculates the point on the curve and two derivatives in the specified parameter
 	/// \param[in]  theParameter parameter of calculation of the value
 	/// \param[out] thePoint     the result of calculation (the point on the curve)
 	/// \param[out] theTangent   tangent vector (1st derivatives) for the curve in the calculated point
 	/// \param[out] theCurvature curvature vector (2nd derivatives) for the curve in the calculated point
 	/// </summary>
-	void D2(double theParameter, Macad::Occt::Pnt2d% thePoint, Macad::Occt::Vec2d% theTangent, Macad::Occt::Vec2d% theCurvature);
+void D2(double theParameter, Macad::Occt::Pnt2d% thePoint, Macad::Occt::Vec2d% theTangent, Macad::Occt::Vec2d% theCurvature);
 	void D2(double theParameter, Macad::Occt::Pnt% thePoint, Macad::Occt::Vec% theTangent, Macad::Occt::Vec% theCurvature);
-	/// <summary>
+		/// <summary>
 	/// Calculates the point on the curve and three derivatives in the specified parameter
 	/// \param[in]  theParameter parameter of calculation of the value
 	/// \param[out] thePoint     the result of calculation (the point on the curve)
@@ -1853,7 +1709,7 @@ public:
 	/// \param[out] theCurvature curvature vector (2nd derivatives) for the curve in the calculated point
 	/// \param[out] theTorsion   second curvature vector (3rd derivatives) for the curve in the calculated point
 	/// </summary>
-	void D3(double theParameter, Macad::Occt::Pnt2d% thePoint, Macad::Occt::Vec2d% theTangent, Macad::Occt::Vec2d% theCurvature, Macad::Occt::Vec2d% theTorsion);
+void D3(double theParameter, Macad::Occt::Pnt2d% thePoint, Macad::Occt::Vec2d% theTangent, Macad::Occt::Vec2d% theCurvature, Macad::Occt::Vec2d% theTorsion);
 	void D3(double theParameter, Macad::Occt::Pnt% thePoint, Macad::Occt::Vec% theTangent, Macad::Occt::Vec% theCurvature, Macad::Occt::Vec% theTorsion);
 }; // class BSplCLib_Cache
 

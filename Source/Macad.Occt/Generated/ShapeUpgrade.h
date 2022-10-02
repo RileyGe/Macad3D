@@ -50,51 +50,51 @@ public:
 	static Macad::Occt::ShapeUpgrade_Tool^ CreateDowncasted(::ShapeUpgrade_Tool* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeUpgrade_Tool();
+ShapeUpgrade_Tool();
 	ShapeUpgrade_Tool(Macad::Occt::ShapeUpgrade_Tool^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Copy all fields from another Root object
 	/// </summary>
-	void Set(Macad::Occt::ShapeUpgrade_Tool^ tool);
-	/// <summary>
+void Set(Macad::Occt::ShapeUpgrade_Tool^ tool);
+		/// <summary>
 	/// Sets context
 	/// </summary>
-	void SetContext(Macad::Occt::ShapeBuild_ReShape^ context);
-	/// <summary>
+void SetContext(Macad::Occt::ShapeBuild_ReShape^ context);
+		/// <summary>
 	/// Returns context
 	/// </summary>
-	Macad::Occt::ShapeBuild_ReShape^ Context();
-	/// <summary>
+Macad::Occt::ShapeBuild_ReShape^ Context();
+		/// <summary>
 	/// Sets basic precision value
 	/// </summary>
-	void SetPrecision(double preci);
-	/// <summary>
+void SetPrecision(double preci);
+		/// <summary>
 	/// Returns basic precision value
 	/// </summary>
-	double Precision();
-	/// <summary>
+double Precision();
+		/// <summary>
 	/// Sets minimal allowed tolerance
 	/// </summary>
-	void SetMinTolerance(double mintol);
-	/// <summary>
+void SetMinTolerance(double mintol);
+		/// <summary>
 	/// Returns minimal allowed tolerance
 	/// </summary>
-	double MinTolerance();
-	/// <summary>
+double MinTolerance();
+		/// <summary>
 	/// Sets maximal allowed tolerance
 	/// </summary>
-	void SetMaxTolerance(double maxtol);
-	/// <summary>
+void SetMaxTolerance(double maxtol);
+		/// <summary>
 	/// Returns maximal allowed tolerance
 	/// </summary>
-	double MaxTolerance();
-	/// <summary>
+double MaxTolerance();
+		/// <summary>
 	/// Returns tolerance limited by [myMinTol,myMaxTol]
 	/// </summary>
-	double LimitTolerance(double toler);
+double LimitTolerance(double toler);
 }; // class ShapeUpgrade_Tool
 
 //---------------------------------------------------------------------
@@ -133,37 +133,37 @@ public:
 	static Macad::Occt::ShapeUpgrade_EdgeDivide^ CreateDowncasted(::ShapeUpgrade_EdgeDivide* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeUpgrade_EdgeDivide();
+ShapeUpgrade_EdgeDivide();
 	ShapeUpgrade_EdgeDivide(Macad::Occt::ShapeUpgrade_EdgeDivide^ parameter1);
 	void Clear();
-	/// <summary>
+		/// <summary>
 	/// Sets supporting surface by face
 	/// </summary>
-	void SetFace(Macad::Occt::TopoDS_Face^ F);
+void SetFace(Macad::Occt::TopoDS_Face^ F);
 	bool Compute(Macad::Occt::TopoDS_Edge^ E);
 	bool HasCurve2d();
 	bool HasCurve3d();
 	Macad::Occt::TColStd_HSequenceOfReal^ Knots2d();
 	Macad::Occt::TColStd_HSequenceOfReal^ Knots3d();
-	/// <summary>
+		/// <summary>
 	/// Sets the tool for splitting pcurves.
 	/// </summary>
-	void SetSplitCurve2dTool(Macad::Occt::ShapeUpgrade_SplitCurve2d^ splitCurve2dTool);
-	/// <summary>
+void SetSplitCurve2dTool(Macad::Occt::ShapeUpgrade_SplitCurve2d^ splitCurve2dTool);
+		/// <summary>
 	/// Sets the tool for splitting 3D curves.
 	/// </summary>
-	void SetSplitCurve3dTool(Macad::Occt::ShapeUpgrade_SplitCurve3d^ splitCurve3dTool);
-	/// <summary>
+void SetSplitCurve3dTool(Macad::Occt::ShapeUpgrade_SplitCurve3d^ splitCurve3dTool);
+		/// <summary>
 	/// Returns the tool for splitting pcurves.
 	/// </summary>
-	Macad::Occt::ShapeUpgrade_SplitCurve2d^ GetSplitCurve2dTool();
-	/// <summary>
+Macad::Occt::ShapeUpgrade_SplitCurve2d^ GetSplitCurve2dTool();
+		/// <summary>
 	/// Returns the tool for splitting 3D curves.
 	/// </summary>
-	Macad::Occt::ShapeUpgrade_SplitCurve3d^ GetSplitCurve3dTool();
+Macad::Occt::ShapeUpgrade_SplitCurve3d^ GetSplitCurve3dTool();
 }; // class ShapeUpgrade_EdgeDivide
 
 //---------------------------------------------------------------------
@@ -197,10 +197,10 @@ public:
 	static Macad::Occt::ShapeUpgrade_ClosedEdgeDivide^ CreateDowncasted(::ShapeUpgrade_ClosedEdgeDivide* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_ClosedEdgeDivide();
+ShapeUpgrade_ClosedEdgeDivide();
 	ShapeUpgrade_ClosedEdgeDivide(Macad::Occt::ShapeUpgrade_ClosedEdgeDivide^ parameter1);
 	bool Compute(Macad::Occt::TopoDS_Edge^ anEdge);
 }; // class ShapeUpgrade_ClosedEdgeDivide
@@ -249,40 +249,40 @@ public:
 	static Macad::Occt::ShapeUpgrade_WireDivide^ CreateDowncasted(::ShapeUpgrade_WireDivide* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeUpgrade_WireDivide();
+ShapeUpgrade_WireDivide();
 	ShapeUpgrade_WireDivide(Macad::Occt::ShapeUpgrade_WireDivide^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes by wire and face
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Wire^ W, Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Wire^ W, Macad::Occt::TopoDS_Face^ F);
+		/// <summary>
 	/// Initializes by wire and surface
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Wire^ W, Macad::Occt::Geom_Surface^ S);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Wire^ W, Macad::Occt::Geom_Surface^ S);
+		/// <summary>
 	/// Loads working wire
 	/// </summary>
-	void Load(Macad::Occt::TopoDS_Wire^ W);
-	/// <summary>
+void Load(Macad::Occt::TopoDS_Wire^ W);
+		/// <summary>
 	/// Creates wire of one edge and calls Load for wire
 	/// </summary>
-	void Load(Macad::Occt::TopoDS_Edge^ E);
-	/// <summary>
+void Load(Macad::Occt::TopoDS_Edge^ E);
+		/// <summary>
 	/// Sets supporting surface by face
 	/// </summary>
-	void SetFace(Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+void SetFace(Macad::Occt::TopoDS_Face^ F);
+		/// <summary>
 	/// Sets supporting surface
 	/// </summary>
-	void SetSurface(Macad::Occt::Geom_Surface^ S);
-	/// <summary>
+void SetSurface(Macad::Occt::Geom_Surface^ S);
+		/// <summary>
 	/// Sets supporting surface with location
 	/// </summary>
-	void SetSurface(Macad::Occt::Geom_Surface^ S, Macad::Occt::TopLoc_Location^ L);
-	/// <summary>
+void SetSurface(Macad::Occt::Geom_Surface^ S, Macad::Occt::TopLoc_Location^ L);
+		/// <summary>
 	/// Computes the resulting wire by splitting all the edges
 	/// according to splitting criteria.
 	/// All the modifications made are recorded in context
@@ -291,59 +291,59 @@ public:
 	/// If no supporting face or surface is defined, only 3d
 	/// splitting criteria are used.
 	/// </summary>
-	void Perform();
-	/// <summary>
+void Perform();
+		/// <summary>
 	/// Gives the resulting Wire (equal to initial one if not done
 	/// or Null if not loaded)
 	/// </summary>
-	Macad::Occt::TopoDS_Wire^ Wire();
-	/// <summary>
+Macad::Occt::TopoDS_Wire^ Wire();
+		/// <summary>
 	/// Queries status of last call to Perform()
 	/// OK - no edges were split, wire left untouched
 	/// DONE1 - some edges were split
 	/// FAIL1 - some edges have no 3d curve (skipped)
 	/// FAIL2 - some edges have no pcurve (skipped)
 	/// </summary>
-	bool Status(Macad::Occt::ShapeExtend_Status status);
-	/// <summary>
+bool Status(Macad::Occt::ShapeExtend_Status status);
+		/// <summary>
 	/// Sets the tool for splitting 3D curves.
 	/// </summary>
-	void SetSplitCurve3dTool(Macad::Occt::ShapeUpgrade_SplitCurve3d^ splitCurve3dTool);
-	/// <summary>
+void SetSplitCurve3dTool(Macad::Occt::ShapeUpgrade_SplitCurve3d^ splitCurve3dTool);
+		/// <summary>
 	/// Sets the tool for splitting pcurves.
 	/// </summary>
-	void SetSplitCurve2dTool(Macad::Occt::ShapeUpgrade_SplitCurve2d^ splitCurve2dTool);
-	/// <summary>
+void SetSplitCurve2dTool(Macad::Occt::ShapeUpgrade_SplitCurve2d^ splitCurve2dTool);
+		/// <summary>
 	/// Sets the tool for Transfer parameters between curves and pcurves.
 	/// </summary>
-	void SetTransferParamTool(Macad::Occt::ShapeAnalysis_TransferParameters^ TransferParam);
-	/// <summary>
+void SetTransferParamTool(Macad::Occt::ShapeAnalysis_TransferParameters^ TransferParam);
+		/// <summary>
 	/// Sets tool for splitting edge
 	/// </summary>
-	void SetEdgeDivideTool(Macad::Occt::ShapeUpgrade_EdgeDivide^ edgeDivideTool);
-	/// <summary>
+void SetEdgeDivideTool(Macad::Occt::ShapeUpgrade_EdgeDivide^ edgeDivideTool);
+		/// <summary>
 	/// returns tool for splitting edges
 	/// </summary>
-	Macad::Occt::ShapeUpgrade_EdgeDivide^ GetEdgeDivideTool();
-	/// <summary>
+Macad::Occt::ShapeUpgrade_EdgeDivide^ GetEdgeDivideTool();
+		/// <summary>
 	/// Returns the tool for Transfer of parameters.
 	/// </summary>
-	Macad::Occt::ShapeAnalysis_TransferParameters^ GetTransferParamTool();
-	/// <summary>
+Macad::Occt::ShapeAnalysis_TransferParameters^ GetTransferParamTool();
+		/// <summary>
 	/// Sets mode for splitting 3d curves from edges.
 	/// 0 - only curve 3d from free edges.
 	/// 1 - only curve 3d from shared edges.
 	/// 2 -  all curve 3d.
 	/// </summary>
-	void SetEdgeMode(int EdgeMode);
-	/// <summary>
+void SetEdgeMode(int EdgeMode);
+		/// <summary>
 	/// Sets tool for fixing small curves with specified min tolerance;
 	/// </summary>
-	void SetFixSmallCurveTool(Macad::Occt::ShapeUpgrade_FixSmallCurves^ FixSmallCurvesTool);
-	/// <summary>
+void SetFixSmallCurveTool(Macad::Occt::ShapeUpgrade_FixSmallCurves^ FixSmallCurvesTool);
+		/// <summary>
 	/// Returns tool for fixing small curves
 	/// </summary>
-	Macad::Occt::ShapeUpgrade_FixSmallCurves^ GetFixSmallCurveTool();
+Macad::Occt::ShapeUpgrade_FixSmallCurves^ GetFixSmallCurveTool();
 }; // class ShapeUpgrade_WireDivide
 
 //---------------------------------------------------------------------
@@ -398,46 +398,46 @@ public:
 	static Macad::Occt::ShapeUpgrade_FaceDivide^ CreateDowncasted(::ShapeUpgrade_FaceDivide* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates empty  constructor.
 	/// </summary>
-	ShapeUpgrade_FaceDivide();
-	/// <summary>
+ShapeUpgrade_FaceDivide();
+		/// <summary>
 	/// Initialize by a Face.
 	/// </summary>
-	ShapeUpgrade_FaceDivide(Macad::Occt::TopoDS_Face^ F);
+ShapeUpgrade_FaceDivide(Macad::Occt::TopoDS_Face^ F);
 	ShapeUpgrade_FaceDivide(Macad::Occt::ShapeUpgrade_FaceDivide^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initialize by a Face.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Face^ F);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Face^ F);
+		/// <summary>
 	/// Purpose sets mode for trimming (segment) surface by
 	/// wire UV bounds.
 	/// </summary>
-	void SetSurfaceSegmentMode(bool Segment);
-	/// <summary>
+void SetSurfaceSegmentMode(bool Segment);
+		/// <summary>
 	/// Performs splitting and computes the resulting shell
 	/// The context is used to keep track of former splittings
 	/// in order to keep sharings. It is updated according to
 	/// modifications made.
 	/// </summary>
-	bool Perform();
-	/// <summary>
+bool Perform();
+		/// <summary>
 	/// Performs splitting of surface and computes the shell
 	/// from source face.
 	/// </summary>
-	bool SplitSurface();
-	/// <summary>
+bool SplitSurface();
+		/// <summary>
 	/// Performs splitting of curves of all the edges in the
 	/// shape and divides these edges.
 	/// </summary>
-	bool SplitCurves();
-	/// <summary>
+bool SplitCurves();
+		/// <summary>
 	/// Gives the resulting Shell, or Face, or Null shape if not done.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Result();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Result();
+		/// <summary>
 	/// Queries the status of last call to Perform
 	/// OK   : no splitting was done (or no call to Perform)
 	/// DONE1: some edges were split
@@ -446,25 +446,25 @@ public:
 	/// FAIL1: some fails encountered during splitting wires
 	/// FAIL2: face cannot be split
 	/// </summary>
-	bool Status(Macad::Occt::ShapeExtend_Status status);
-	/// <summary>
+bool Status(Macad::Occt::ShapeExtend_Status status);
+		/// <summary>
 	/// Sets the tool for splitting surfaces.
 	/// </summary>
-	void SetSplitSurfaceTool(Macad::Occt::ShapeUpgrade_SplitSurface^ splitSurfaceTool);
-	/// <summary>
+void SetSplitSurfaceTool(Macad::Occt::ShapeUpgrade_SplitSurface^ splitSurfaceTool);
+		/// <summary>
 	/// Sets the tool for dividing edges on Face.
 	/// </summary>
-	void SetWireDivideTool(Macad::Occt::ShapeUpgrade_WireDivide^ wireDivideTool);
-	/// <summary>
+void SetWireDivideTool(Macad::Occt::ShapeUpgrade_WireDivide^ wireDivideTool);
+		/// <summary>
 	/// Returns the tool for splitting surfaces.
 	/// This tool must be already initialized.
 	/// </summary>
-	Macad::Occt::ShapeUpgrade_SplitSurface^ GetSplitSurfaceTool();
-	/// <summary>
+Macad::Occt::ShapeUpgrade_SplitSurface^ GetSplitSurfaceTool();
+		/// <summary>
 	/// Returns the tool for dividing edges on Face.
 	/// This tool must be already initialized.
 	/// </summary>
-	Macad::Occt::ShapeUpgrade_WireDivide^ GetWireDivideTool();
+Macad::Occt::ShapeUpgrade_WireDivide^ GetWireDivideTool();
 }; // class ShapeUpgrade_FaceDivide
 
 //---------------------------------------------------------------------
@@ -503,29 +503,29 @@ public:
 	static Macad::Occt::ShapeUpgrade_ClosedFaceDivide^ CreateDowncasted(::ShapeUpgrade_ClosedFaceDivide* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates empty  constructor.
 	/// </summary>
-	ShapeUpgrade_ClosedFaceDivide();
-	/// <summary>
+ShapeUpgrade_ClosedFaceDivide();
+		/// <summary>
 	/// Initialize by a Face.
 	/// </summary>
-	ShapeUpgrade_ClosedFaceDivide(Macad::Occt::TopoDS_Face^ F);
+ShapeUpgrade_ClosedFaceDivide(Macad::Occt::TopoDS_Face^ F);
 	ShapeUpgrade_ClosedFaceDivide(Macad::Occt::ShapeUpgrade_ClosedFaceDivide^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Performs splitting of surface and computes the shell
 	/// from source face.
 	/// </summary>
-	bool SplitSurface();
-	/// <summary>
+bool SplitSurface();
+		/// <summary>
 	/// Sets the number of cutting lines by which closed face will be split.
 	/// The resulting faces will be num+1.
 	/// </summary>
-	void SetNbSplitPoints(int num);
-	/// <summary>
+void SetNbSplitPoints(int num);
+		/// <summary>
 	/// Returns the number of splitting points
 	/// </summary>
-	int GetNbSplitPoints();
+int GetNbSplitPoints();
 }; // class ShapeUpgrade_ClosedFaceDivide
 
 //---------------------------------------------------------------------
@@ -562,21 +562,21 @@ public:
 	static Macad::Occt::ShapeUpgrade_FaceDivideArea^ CreateDowncasted(::ShapeUpgrade_FaceDivideArea* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates empty  constructor.
 	/// </summary>
-	ShapeUpgrade_FaceDivideArea();
+ShapeUpgrade_FaceDivideArea();
 	ShapeUpgrade_FaceDivideArea(Macad::Occt::TopoDS_Face^ F);
 	ShapeUpgrade_FaceDivideArea(Macad::Occt::ShapeUpgrade_FaceDivideArea^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Performs splitting and computes the resulting shell
 	/// The context is used to keep track of former splittings
 	/// </summary>
-	bool Perform();
-	/// <summary>
+bool Perform();
+		/// <summary>
 	/// Set max area allowed for faces
 	/// </summary>
-	double MaxArea();
+double MaxArea();
 }; // class ShapeUpgrade_FaceDivideArea
 
 //---------------------------------------------------------------------
@@ -617,97 +617,97 @@ public:
 
 public:
 	ShapeUpgrade_ShapeDivide();
-	/// <summary>
+		/// <summary>
 	/// Initialize by a Shape.
 	/// </summary>
-	ShapeUpgrade_ShapeDivide(Macad::Occt::TopoDS_Shape^ S);
+ShapeUpgrade_ShapeDivide(Macad::Occt::TopoDS_Shape^ S);
 	ShapeUpgrade_ShapeDivide(Macad::Occt::ShapeUpgrade_ShapeDivide^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initialize by a Shape.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Shape^ S);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Shape^ S);
+		/// <summary>
 	/// Defines the spatial precision used for splitting
 	/// </summary>
-	void SetPrecision(double Prec);
-	/// <summary>
+void SetPrecision(double Prec);
+		/// <summary>
 	/// Sets maximal allowed tolerance
 	/// </summary>
-	void SetMaxTolerance(double maxtol);
-	/// <summary>
+void SetMaxTolerance(double maxtol);
+		/// <summary>
 	/// Sets minimal allowed tolerance
 	/// </summary>
-	void SetMinTolerance(double mintol);
-	/// <summary>
+void SetMinTolerance(double mintol);
+		/// <summary>
 	/// Purpose sets mode for trimming (segment) surface by
 	/// wire UV bounds.
 	/// </summary>
-	void SetSurfaceSegmentMode(bool Segment);
-	/// <summary>
+void SetSurfaceSegmentMode(bool Segment);
+		/// <summary>
 	/// Performs splitting and computes the resulting shape
 	/// If newContext is True (default), the internal context
 	/// will be cleared at start, else previous substitutions
 	/// will be acting.
 	/// </summary>
-	bool Perform(bool newContext);
-	/// <summary>
+bool Perform(bool newContext);
+		/// <summary>
 	/// Performs splitting and computes the resulting shape
 	/// If newContext is True (default), the internal context
 	/// will be cleared at start, else previous substitutions
 	/// will be acting.
 	/// </summary>
-	bool Perform();
-	/// <summary>
+bool Perform();
+		/// <summary>
 	/// Gives the resulting Shape, or Null shape if not done.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Result();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Result();
+		/// <summary>
 	/// Returns context with all the modifications made during
 	/// last call(s) to Perform() recorded
 	/// </summary>
-	Macad::Occt::ShapeBuild_ReShape^ GetContext();
-	/// <summary>
+Macad::Occt::ShapeBuild_ReShape^ GetContext();
+		/// <summary>
 	/// Sets context with recorded modifications to be applied
 	/// during next call(s) to Perform(shape,Standard_False)
 	/// </summary>
-	void SetContext(Macad::Occt::ShapeBuild_ReShape^ context);
-	/// <summary>
+void SetContext(Macad::Occt::ShapeBuild_ReShape^ context);
+		/// <summary>
 	/// Sets message registrator
 	/// </summary>
-	void SetMsgRegistrator(Macad::Occt::ShapeExtend_BasicMsgRegistrator^ msgreg);
-	/// <summary>
+void SetMsgRegistrator(Macad::Occt::ShapeExtend_BasicMsgRegistrator^ msgreg);
+		/// <summary>
 	/// Returns message registrator
 	/// </summary>
-	Macad::Occt::ShapeExtend_BasicMsgRegistrator^ MsgRegistrator();
-	/// <summary>
+Macad::Occt::ShapeExtend_BasicMsgRegistrator^ MsgRegistrator();
+		/// <summary>
 	/// Sends a message to be attached to the shape.
 	/// Calls corresponding message of message registrator.
 	/// </summary>
-	void SendMsg(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
-	/// <summary>
+void SendMsg(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::Message_Msg^ message, Macad::Occt::Message_Gravity gravity);
+		/// <summary>
 	/// Sends a message to be attached to the shape.
 	/// Calls corresponding message of message registrator.
 	/// </summary>
-	void SendMsg(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::Message_Msg^ message);
-	/// <summary>
+void SendMsg(Macad::Occt::TopoDS_Shape^ shape, Macad::Occt::Message_Msg^ message);
+		/// <summary>
 	/// Queries the status of last call to Perform
 	/// OK   : no splitting was done (or no call to Perform)
 	/// DONE1: some edges were split
 	/// DONE2: surface was split
 	/// FAIL1: some errors occurred
 	/// </summary>
-	bool Status(Macad::Occt::ShapeExtend_Status status);
-	/// <summary>
+bool Status(Macad::Occt::ShapeExtend_Status status);
+		/// <summary>
 	/// Sets the tool for splitting faces.
 	/// </summary>
-	void SetSplitFaceTool(Macad::Occt::ShapeUpgrade_FaceDivide^ splitFaceTool);
-	/// <summary>
+void SetSplitFaceTool(Macad::Occt::ShapeUpgrade_FaceDivide^ splitFaceTool);
+		/// <summary>
 	/// Sets mode for splitting 3d curves from edges.
 	/// 0 - only curve 3d from free edges.
 	/// 1 - only curve 3d from shared edges.
 	/// 2 -  all curve 3d.
 	/// </summary>
-	void SetEdgeMode(int aEdgeMode);
+void SetEdgeMode(int aEdgeMode);
 }; // class ShapeUpgrade_ShapeDivide
 
 //---------------------------------------------------------------------
@@ -743,15 +743,15 @@ public:
 
 public:
 	ShapeUpgrade_ShapeDivideArea();
-	/// <summary>
+		/// <summary>
 	/// Initialize by a Shape.
 	/// </summary>
-	ShapeUpgrade_ShapeDivideArea(Macad::Occt::TopoDS_Shape^ S);
+ShapeUpgrade_ShapeDivideArea(Macad::Occt::TopoDS_Shape^ S);
 	ShapeUpgrade_ShapeDivideArea(Macad::Occt::ShapeUpgrade_ShapeDivideArea^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Set max area allowed for faces
 	/// </summary>
-	double MaxArea();
+double MaxArea();
 }; // class ShapeUpgrade_ShapeDivideArea
 
 //---------------------------------------------------------------------
@@ -787,20 +787,20 @@ public:
 
 public:
 	ShapeUpgrade_ShapeDivideContinuity();
-	/// <summary>
+		/// <summary>
 	/// Initialize by a Shape.
 	/// </summary>
-	ShapeUpgrade_ShapeDivideContinuity(Macad::Occt::TopoDS_Shape^ S);
+ShapeUpgrade_ShapeDivideContinuity(Macad::Occt::TopoDS_Shape^ S);
 	ShapeUpgrade_ShapeDivideContinuity(Macad::Occt::ShapeUpgrade_ShapeDivideContinuity^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets tolerance.
 	/// </summary>
-	void SetTolerance(double Tol);
-	/// <summary>
+void SetTolerance(double Tol);
+		/// <summary>
 	/// Sets tolerance.
 	/// </summary>
-	void SetTolerance2d(double Tol);
-	/// <summary>
+void SetTolerance2d(double Tol);
+		/// <summary>
 	/// Defines a criterion of continuity for the boundary (all the
 	/// Wires)
 	/// 
@@ -808,8 +808,8 @@ public:
 	/// default is C1 to respect the Cas.Cade Shape Validity.  G1
 	/// and G2 are not authorized.
 	/// </summary>
-	void SetBoundaryCriterion(Macad::Occt::GeomAbs_Shape Criterion);
-	/// <summary>
+void SetBoundaryCriterion(Macad::Occt::GeomAbs_Shape Criterion);
+		/// <summary>
 	/// Defines a criterion of continuity for the boundary (all the
 	/// Wires)
 	/// 
@@ -817,8 +817,8 @@ public:
 	/// default is C1 to respect the Cas.Cade Shape Validity.  G1
 	/// and G2 are not authorized.
 	/// </summary>
-	void SetBoundaryCriterion();
-	/// <summary>
+void SetBoundaryCriterion();
+		/// <summary>
 	/// Defines a criterion of continuity for the boundary (all the
 	/// pcurves of Wires)
 	/// 
@@ -826,8 +826,8 @@ public:
 	/// default is C1 to respect the Cas.Cade Shape Validity.  G1
 	/// and G2 are not authorized.
 	/// </summary>
-	void SetPCurveCriterion(Macad::Occt::GeomAbs_Shape Criterion);
-	/// <summary>
+void SetPCurveCriterion(Macad::Occt::GeomAbs_Shape Criterion);
+		/// <summary>
 	/// Defines a criterion of continuity for the boundary (all the
 	/// pcurves of Wires)
 	/// 
@@ -835,8 +835,8 @@ public:
 	/// default is C1 to respect the Cas.Cade Shape Validity.  G1
 	/// and G2 are not authorized.
 	/// </summary>
-	void SetPCurveCriterion();
-	/// <summary>
+void SetPCurveCriterion();
+		/// <summary>
 	/// Defines a criterion of continuity for the boundary (all the
 	/// Wires)
 	/// 
@@ -844,8 +844,8 @@ public:
 	/// default is C1 to respect the Cas.Cade Shape Validity.  G1
 	/// and G2 are not authorized.
 	/// </summary>
-	void SetSurfaceCriterion(Macad::Occt::GeomAbs_Shape Criterion);
-	/// <summary>
+void SetSurfaceCriterion(Macad::Occt::GeomAbs_Shape Criterion);
+		/// <summary>
 	/// Defines a criterion of continuity for the boundary (all the
 	/// Wires)
 	/// 
@@ -853,7 +853,7 @@ public:
 	/// default is C1 to respect the Cas.Cade Shape Validity.  G1
 	/// and G2 are not authorized.
 	/// </summary>
-	void SetSurfaceCriterion();
+void SetSurfaceCriterion();
 }; // class ShapeUpgrade_ShapeDivideContinuity
 
 //---------------------------------------------------------------------
@@ -891,27 +891,27 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_ShapeDivideAngle(double MaxAngle);
-	/// <summary>
+ShapeUpgrade_ShapeDivideAngle(double MaxAngle);
+		/// <summary>
 	/// Initialize by a Shape.
 	/// </summary>
-	ShapeUpgrade_ShapeDivideAngle(double MaxAngle, Macad::Occt::TopoDS_Shape^ S);
+ShapeUpgrade_ShapeDivideAngle(double MaxAngle, Macad::Occt::TopoDS_Shape^ S);
 	ShapeUpgrade_ShapeDivideAngle(Macad::Occt::ShapeUpgrade_ShapeDivideAngle^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Resets tool for splitting face with given angle
 	/// </summary>
-	void InitTool(double MaxAngle);
-	/// <summary>
+void InitTool(double MaxAngle);
+		/// <summary>
 	/// Set maximal angle (calls InitTool)
 	/// </summary>
-	void SetMaxAngle(double MaxAngle);
-	/// <summary>
+void SetMaxAngle(double MaxAngle);
+		/// <summary>
 	/// Returns maximal angle
 	/// </summary>
-	double MaxAngle();
+double MaxAngle();
 }; // class ShapeUpgrade_ShapeDivideAngle
 
 //---------------------------------------------------------------------
@@ -950,104 +950,104 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_ShapeConvertToBezier();
-	/// <summary>
+ShapeUpgrade_ShapeConvertToBezier();
+		/// <summary>
 	/// Initialize by a Shape.
 	/// </summary>
-	ShapeUpgrade_ShapeConvertToBezier(Macad::Occt::TopoDS_Shape^ S);
+ShapeUpgrade_ShapeConvertToBezier(Macad::Occt::TopoDS_Shape^ S);
 	ShapeUpgrade_ShapeConvertToBezier(Macad::Occt::ShapeUpgrade_ShapeConvertToBezier^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets mode for conversion 2D curves to bezier.
 	/// </summary>
-	void Set2dConversion(bool mode);
-	/// <summary>
+void Set2dConversion(bool mode);
+		/// <summary>
 	/// Returns the 2D conversion mode.
 	/// </summary>
-	bool Get2dConversion();
-	/// <summary>
+bool Get2dConversion();
+		/// <summary>
 	/// Sets mode for conversion 3d curves to bezier.
 	/// </summary>
-	void Set3dConversion(bool mode);
-	/// <summary>
+void Set3dConversion(bool mode);
+		/// <summary>
 	/// Returns the 3D conversion mode.
 	/// </summary>
-	bool Get3dConversion();
-	/// <summary>
+bool Get3dConversion();
+		/// <summary>
 	/// Sets mode for conversion surfaces curves to
 	/// bezier basis.
 	/// </summary>
-	void SetSurfaceConversion(bool mode);
-	/// <summary>
+void SetSurfaceConversion(bool mode);
+		/// <summary>
 	/// Returns the surface conversion mode.
 	/// </summary>
-	bool GetSurfaceConversion();
-	/// <summary>
+bool GetSurfaceConversion();
+		/// <summary>
 	/// Sets mode for conversion Geom_Line to bezier.
 	/// </summary>
-	void Set3dLineConversion(bool mode);
-	/// <summary>
+void Set3dLineConversion(bool mode);
+		/// <summary>
 	/// Returns the Geom_Line conversion mode.
 	/// </summary>
-	bool Get3dLineConversion();
-	/// <summary>
+bool Get3dLineConversion();
+		/// <summary>
 	/// Sets mode for conversion Geom_Circle to bezier.
 	/// </summary>
-	void Set3dCircleConversion(bool mode);
-	/// <summary>
+void Set3dCircleConversion(bool mode);
+		/// <summary>
 	/// Returns the Geom_Circle conversion mode.
 	/// </summary>
-	bool Get3dCircleConversion();
-	/// <summary>
+bool Get3dCircleConversion();
+		/// <summary>
 	/// Sets mode for conversion Geom_Conic to bezier.
 	/// </summary>
-	void Set3dConicConversion(bool mode);
-	/// <summary>
+void Set3dConicConversion(bool mode);
+		/// <summary>
 	/// Returns the Geom_Conic conversion mode.
 	/// </summary>
-	bool Get3dConicConversion();
-	/// <summary>
+bool Get3dConicConversion();
+		/// <summary>
 	/// Sets mode for conversion Geom_Plane to Bezier
 	/// </summary>
-	void SetPlaneMode(bool mode);
-	/// <summary>
+void SetPlaneMode(bool mode);
+		/// <summary>
 	/// Returns the Geom_Pline conversion mode.
 	/// </summary>
-	bool GetPlaneMode();
-	/// <summary>
+bool GetPlaneMode();
+		/// <summary>
 	/// Sets mode for conversion Geom_SurfaceOfRevolution to Bezier
 	/// </summary>
-	void SetRevolutionMode(bool mode);
-	/// <summary>
+void SetRevolutionMode(bool mode);
+		/// <summary>
 	/// Returns the Geom_SurfaceOfRevolution conversion mode.
 	/// </summary>
-	bool GetRevolutionMode();
-	/// <summary>
+bool GetRevolutionMode();
+		/// <summary>
 	/// Sets mode for conversion Geom_SurfaceOfLinearExtrusion to Bezier
 	/// </summary>
-	void SetExtrusionMode(bool mode);
-	/// <summary>
+void SetExtrusionMode(bool mode);
+		/// <summary>
 	/// Returns the Geom_SurfaceOfLinearExtrusion conversion mode.
 	/// </summary>
-	bool GetExtrusionMode();
-	/// <summary>
+bool GetExtrusionMode();
+		/// <summary>
 	/// Sets mode for conversion Geom_BSplineSurface to Bezier
 	/// </summary>
-	void SetBSplineMode(bool mode);
-	/// <summary>
+void SetBSplineMode(bool mode);
+		/// <summary>
 	/// Returns the Geom_BSplineSurface conversion mode.
 	/// </summary>
-	bool GetBSplineMode();
-	/// <summary>
+bool GetBSplineMode();
+		/// <summary>
 	/// Performs converting and computes the resulting shape
 	/// </summary>
-	bool Perform(bool newContext);
-	/// <summary>
+bool Perform(bool newContext);
+		/// <summary>
 	/// Performs converting and computes the resulting shape
 	/// </summary>
-	bool Perform();
+bool Perform();
 }; // class ShapeUpgrade_ShapeConvertToBezier
 
 //---------------------------------------------------------------------
@@ -1083,16 +1083,16 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initialises tool with shape and default parameter.
 	/// </summary>
-	ShapeUpgrade_ShapeDivideClosed(Macad::Occt::TopoDS_Shape^ S);
+ShapeUpgrade_ShapeDivideClosed(Macad::Occt::TopoDS_Shape^ S);
 	ShapeUpgrade_ShapeDivideClosed(Macad::Occt::ShapeUpgrade_ShapeDivideClosed^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the number of cuts applied to divide closed faces.
 	/// The number of resulting faces will be num+1.
 	/// </summary>
-	void SetNbSplitPoints(int num);
+void SetNbSplitPoints(int num);
 }; // class ShapeUpgrade_ShapeDivideClosed
 
 //---------------------------------------------------------------------
@@ -1124,16 +1124,16 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Initialises tool with shape and default parameter.
 	/// </summary>
-	ShapeUpgrade_ShapeDivideClosedEdges(Macad::Occt::TopoDS_Shape^ S);
+ShapeUpgrade_ShapeDivideClosedEdges(Macad::Occt::TopoDS_Shape^ S);
 	ShapeUpgrade_ShapeDivideClosedEdges(Macad::Occt::ShapeUpgrade_ShapeDivideClosedEdges^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets the number of cuts applied to divide closed edges.
 	/// The number of resulting faces will be num+1.
 	/// </summary>
-	void SetNbSplitPoints(int num);
+void SetNbSplitPoints(int num);
 }; // class ShapeUpgrade_ShapeDivideClosedEdges
 
 //---------------------------------------------------------------------
@@ -1175,54 +1175,54 @@ public:
 	static Macad::Occt::ShapeUpgrade_SplitCurve^ CreateDowncasted(::ShapeUpgrade_SplitCurve* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_SplitCurve();
+ShapeUpgrade_SplitCurve();
 	ShapeUpgrade_SplitCurve(Macad::Occt::ShapeUpgrade_SplitCurve^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes with curve first and last parameters.
 	/// </summary>
-	void Init(double First, double Last);
-	/// <summary>
+void Init(double First, double Last);
+		/// <summary>
 	/// Sets the parameters where splitting has to be done.
 	/// </summary>
-	void SetSplitValues(Macad::Occt::TColStd_HSequenceOfReal^ SplitValues);
-	/// <summary>
+void SetSplitValues(Macad::Occt::TColStd_HSequenceOfReal^ SplitValues);
+		/// <summary>
 	/// If Segment is True, the result is composed with
 	/// segments of the curve bounded by the SplitValues.  If
 	/// Segment is False, the result is composed with trimmed
 	/// Curves all based on the same complete curve.
 	/// </summary>
-	void Build(bool Segment);
-	/// <summary>
+void Build(bool Segment);
+		/// <summary>
 	/// returns all the splitting values including the
 	/// First and Last parameters of the input curve
 	/// Merges input split values and new ones into myGlobalKnots
 	/// </summary>
-	Macad::Occt::TColStd_HSequenceOfReal^ SplitValues();
-	/// <summary>
+Macad::Occt::TColStd_HSequenceOfReal^ SplitValues();
+		/// <summary>
 	/// Calculates points for correction/splitting of the curve
 	/// </summary>
-	void Compute();
-	/// <summary>
+void Compute();
+		/// <summary>
 	/// Performs correction/splitting of the curve.
 	/// First defines splitting values by method Compute(), then calls method Build().
 	/// </summary>
-	void Perform(bool Segment);
-	/// <summary>
+void Perform(bool Segment);
+		/// <summary>
 	/// Performs correction/splitting of the curve.
 	/// First defines splitting values by method Compute(), then calls method Build().
 	/// </summary>
-	void Perform();
-	/// <summary>
+void Perform();
+		/// <summary>
 	/// Returns the status
 	/// OK    - no splitting is needed
 	/// DONE1 - splitting required and gives more than one segment
 	/// DONE2 - splitting is required, but gives only one segment (initial)
 	/// DONE3 - geometric form of the curve or parametrisation is modified
 	/// </summary>
-	bool Status(Macad::Occt::ShapeExtend_Status status);
+bool Status(Macad::Occt::ShapeExtend_Status status);
 }; // class ShapeUpgrade_SplitCurve
 
 //---------------------------------------------------------------------
@@ -1264,26 +1264,26 @@ public:
 	static Macad::Occt::ShapeUpgrade_SplitCurve2d^ CreateDowncasted(::ShapeUpgrade_SplitCurve2d* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_SplitCurve2d();
+ShapeUpgrade_SplitCurve2d();
 	ShapeUpgrade_SplitCurve2d(Macad::Occt::ShapeUpgrade_SplitCurve2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes with pcurve with its first and last parameters.
 	/// </summary>
-	void Init(Macad::Occt::Geom2d_Curve^ C);
-	/// <summary>
+void Init(Macad::Occt::Geom2d_Curve^ C);
+		/// <summary>
 	/// Initializes with pcurve with its parameters.
 	/// </summary>
-	void Init(Macad::Occt::Geom2d_Curve^ C, double First, double Last);
-	/// <summary>
+void Init(Macad::Occt::Geom2d_Curve^ C, double First, double Last);
+		/// <summary>
 	/// If Segment is True, the result is composed with
 	/// segments of the curve bounded by the SplitValues.  If
 	/// Segment is False, the result is composed with trimmed
 	/// Curves all based on the same complete curve.
 	/// </summary>
-	void Build(bool Segment);
+void Build(bool Segment);
 	/* Method skipped due to unknown mapping: TColGeom2d_HArray1OfCurve GetCurves() */
 }; // class ShapeUpgrade_SplitCurve2d
 
@@ -1324,23 +1324,23 @@ public:
 	static Macad::Occt::ShapeUpgrade_SplitCurve2dContinuity^ CreateDowncasted(::ShapeUpgrade_SplitCurve2dContinuity* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_SplitCurve2dContinuity();
+ShapeUpgrade_SplitCurve2dContinuity();
 	ShapeUpgrade_SplitCurve2dContinuity(Macad::Occt::ShapeUpgrade_SplitCurve2dContinuity^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets criterion for splitting.
 	/// </summary>
-	void SetCriterion(Macad::Occt::GeomAbs_Shape Criterion);
-	/// <summary>
+void SetCriterion(Macad::Occt::GeomAbs_Shape Criterion);
+		/// <summary>
 	/// Sets tolerance.
 	/// </summary>
-	void SetTolerance(double Tol);
-	/// <summary>
+void SetTolerance(double Tol);
+		/// <summary>
 	/// Calculates points for correction/splitting of the curve
 	/// </summary>
-	void Compute();
+void Compute();
 }; // class ShapeUpgrade_SplitCurve2dContinuity
 
 //---------------------------------------------------------------------
@@ -1377,25 +1377,25 @@ public:
 	static Macad::Occt::ShapeUpgrade_ConvertCurve2dToBezier^ CreateDowncasted(::ShapeUpgrade_ConvertCurve2dToBezier* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_ConvertCurve2dToBezier();
+ShapeUpgrade_ConvertCurve2dToBezier();
 	ShapeUpgrade_ConvertCurve2dToBezier(Macad::Occt::ShapeUpgrade_ConvertCurve2dToBezier^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Converts curve into a list of beziers, and stores the
 	/// splitting parameters on original curve.
 	/// </summary>
-	void Compute();
-	/// <summary>
+void Compute();
+		/// <summary>
 	/// Splits a list of beziers computed by Compute method according
 	/// the split values and splitting parameters.
 	/// </summary>
-	void Build(bool Segment);
-	/// <summary>
+void Build(bool Segment);
+		/// <summary>
 	/// Returns the list of split parameters in original curve parametrisation.
 	/// </summary>
-	Macad::Occt::TColStd_HSequenceOfReal^ SplitParams();
+Macad::Occt::TColStd_HSequenceOfReal^ SplitParams();
 }; // class ShapeUpgrade_ConvertCurve2dToBezier
 
 //---------------------------------------------------------------------
@@ -1437,26 +1437,26 @@ public:
 	static Macad::Occt::ShapeUpgrade_SplitCurve3d^ CreateDowncasted(::ShapeUpgrade_SplitCurve3d* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_SplitCurve3d();
+ShapeUpgrade_SplitCurve3d();
 	ShapeUpgrade_SplitCurve3d(Macad::Occt::ShapeUpgrade_SplitCurve3d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes with curve with its first and last parameters.
 	/// </summary>
-	void Init(Macad::Occt::Geom_Curve^ C);
-	/// <summary>
+void Init(Macad::Occt::Geom_Curve^ C);
+		/// <summary>
 	/// Initializes with curve with its parameters.
 	/// </summary>
-	void Init(Macad::Occt::Geom_Curve^ C, double First, double Last);
-	/// <summary>
+void Init(Macad::Occt::Geom_Curve^ C, double First, double Last);
+		/// <summary>
 	/// If Segment is True, the result is composed with
 	/// segments of the curve bounded by the SplitValues.  If
 	/// Segment is False, the result is composed with trimmed
 	/// Curves all based on the same complete curve.
 	/// </summary>
-	void Build(bool Segment);
+void Build(bool Segment);
 	/* Method skipped due to unknown mapping: TColGeom_HArray1OfCurve GetCurves() */
 }; // class ShapeUpgrade_SplitCurve3d
 
@@ -1497,23 +1497,23 @@ public:
 	static Macad::Occt::ShapeUpgrade_SplitCurve3dContinuity^ CreateDowncasted(::ShapeUpgrade_SplitCurve3dContinuity* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_SplitCurve3dContinuity();
+ShapeUpgrade_SplitCurve3dContinuity();
 	ShapeUpgrade_SplitCurve3dContinuity(Macad::Occt::ShapeUpgrade_SplitCurve3dContinuity^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets criterion for splitting.
 	/// </summary>
-	void SetCriterion(Macad::Occt::GeomAbs_Shape Criterion);
-	/// <summary>
+void SetCriterion(Macad::Occt::GeomAbs_Shape Criterion);
+		/// <summary>
 	/// Sets tolerance.
 	/// </summary>
-	void SetTolerance(double Tol);
-	/// <summary>
+void SetTolerance(double Tol);
+		/// <summary>
 	/// Calculates points for correction/splitting of the curve
 	/// </summary>
-	void Compute();
+void Compute();
 	Macad::Occt::Geom_Curve^ GetCurve();
 }; // class ShapeUpgrade_SplitCurve3dContinuity
 
@@ -1551,49 +1551,49 @@ public:
 	static Macad::Occt::ShapeUpgrade_ConvertCurve3dToBezier^ CreateDowncasted(::ShapeUpgrade_ConvertCurve3dToBezier* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeUpgrade_ConvertCurve3dToBezier();
+ShapeUpgrade_ConvertCurve3dToBezier();
 	ShapeUpgrade_ConvertCurve3dToBezier(Macad::Occt::ShapeUpgrade_ConvertCurve3dToBezier^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets mode for conversion Geom_Line to bezier.
 	/// </summary>
-	void SetLineMode(bool mode);
-	/// <summary>
+void SetLineMode(bool mode);
+		/// <summary>
 	/// Returns the Geom_Line conversion mode.
 	/// </summary>
-	bool GetLineMode();
-	/// <summary>
+bool GetLineMode();
+		/// <summary>
 	/// Sets mode for conversion Geom_Circle to bezier.
 	/// </summary>
-	void SetCircleMode(bool mode);
-	/// <summary>
+void SetCircleMode(bool mode);
+		/// <summary>
 	/// Returns the Geom_Circle conversion mode.
 	/// </summary>
-	bool GetCircleMode();
-	/// <summary>
+bool GetCircleMode();
+		/// <summary>
 	/// Returns the Geom_Conic conversion mode.
 	/// </summary>
-	void SetConicMode(bool mode);
-	/// <summary>
+void SetConicMode(bool mode);
+		/// <summary>
 	/// Performs converting and computes the resulting shape.
 	/// </summary>
-	bool GetConicMode();
-	/// <summary>
+bool GetConicMode();
+		/// <summary>
 	/// Converts curve into a list of beziers, and stores the
 	/// splitting parameters on original curve.
 	/// </summary>
-	void Compute();
-	/// <summary>
+void Compute();
+		/// <summary>
 	/// Splits a list of beziers computed by Compute method according
 	/// the split values and splitting parameters.
 	/// </summary>
-	void Build(bool Segment);
-	/// <summary>
+void Build(bool Segment);
+		/// <summary>
 	/// Returns the list of split parameters in original curve parametrisation.
 	/// </summary>
-	Macad::Occt::TColStd_HSequenceOfReal^ SplitParams();
+Macad::Occt::TColStd_HSequenceOfReal^ SplitParams();
 }; // class ShapeUpgrade_ConvertCurve3dToBezier
 
 //---------------------------------------------------------------------
@@ -1635,28 +1635,28 @@ public:
 	static Macad::Occt::ShapeUpgrade_SplitSurface^ CreateDowncasted(::ShapeUpgrade_SplitSurface* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_SplitSurface();
+ShapeUpgrade_SplitSurface();
 	ShapeUpgrade_SplitSurface(Macad::Occt::ShapeUpgrade_SplitSurface^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes with single supporting surface.
 	/// </summary>
-	void Init(Macad::Occt::Geom_Surface^ S);
-	/// <summary>
+void Init(Macad::Occt::Geom_Surface^ S);
+		/// <summary>
 	/// Initializes with single supporting surface with bounding parameters.
 	/// </summary>
-	void Init(Macad::Occt::Geom_Surface^ S, double UFirst, double ULast, double VFirst, double VLast);
-	/// <summary>
+void Init(Macad::Occt::Geom_Surface^ S, double UFirst, double ULast, double VFirst, double VLast);
+		/// <summary>
 	/// Sets U parameters where splitting has to be done
 	/// </summary>
-	void SetUSplitValues(Macad::Occt::TColStd_HSequenceOfReal^ UValues);
-	/// <summary>
+void SetUSplitValues(Macad::Occt::TColStd_HSequenceOfReal^ UValues);
+		/// <summary>
 	/// Sets V parameters where splitting has to be done
 	/// </summary>
-	void SetVSplitValues(Macad::Occt::TColStd_HSequenceOfReal^ VValues);
-	/// <summary>
+void SetVSplitValues(Macad::Occt::TColStd_HSequenceOfReal^ VValues);
+		/// <summary>
 	/// Performs splitting of the supporting surface.
 	/// If resulting surface is B-Spline and Segment is True,
 	/// the result is composed with segments of the surface bounded
@@ -1668,47 +1668,47 @@ public:
 	/// Fields myNbResultingRow and myNbResultingCol must be set to
 	/// specify the size of resulting grid of surfaces.
 	/// </summary>
-	void Build(bool Segment);
-	/// <summary>
+void Build(bool Segment);
+		/// <summary>
 	/// Calculates points for correction/splitting of the surface.
 	/// </summary>
-	void Compute(bool Segment);
-	/// <summary>
+void Compute(bool Segment);
+		/// <summary>
 	/// Calculates points for correction/splitting of the surface.
 	/// </summary>
-	void Compute();
-	/// <summary>
+void Compute();
+		/// <summary>
 	/// Performs correction/splitting of the surface.
 	/// First defines splitting values by method Compute(), then calls method Build().
 	/// </summary>
-	void Perform(bool Segment);
-	/// <summary>
+void Perform(bool Segment);
+		/// <summary>
 	/// Performs correction/splitting of the surface.
 	/// First defines splitting values by method Compute(), then calls method Build().
 	/// </summary>
-	void Perform();
-	/// <summary>
+void Perform();
+		/// <summary>
 	/// returns all the U splitting values including the
 	/// First and Last parameters of the input surface
 	/// </summary>
-	Macad::Occt::TColStd_HSequenceOfReal^ USplitValues();
-	/// <summary>
+Macad::Occt::TColStd_HSequenceOfReal^ USplitValues();
+		/// <summary>
 	/// returns all the splitting V values including the
 	/// First and Last parameters of the input surface
 	/// </summary>
-	Macad::Occt::TColStd_HSequenceOfReal^ VSplitValues();
-	/// <summary>
+Macad::Occt::TColStd_HSequenceOfReal^ VSplitValues();
+		/// <summary>
 	/// Returns the status
 	/// OK    - no splitting is needed
 	/// DONE1 - splitting required and gives more than one patch
 	/// DONE2 - splitting is required, but gives only single patch (initial)
 	/// DONE3 - geometric form of the surface or parametrisation is modified
 	/// </summary>
-	bool Status(Macad::Occt::ShapeExtend_Status status);
-	/// <summary>
+bool Status(Macad::Occt::ShapeExtend_Status status);
+		/// <summary>
 	/// Returns obtained surfaces after splitting as CompositeSurface
 	/// </summary>
-	Macad::Occt::ShapeExtend_CompositeSurface^ ResSurfaces();
+Macad::Occt::ShapeExtend_CompositeSurface^ ResSurfaces();
 }; // class ShapeUpgrade_SplitSurface
 
 //---------------------------------------------------------------------
@@ -1749,19 +1749,19 @@ public:
 	static Macad::Occt::ShapeUpgrade_SplitSurfaceContinuity^ CreateDowncasted(::ShapeUpgrade_SplitSurfaceContinuity* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_SplitSurfaceContinuity();
+ShapeUpgrade_SplitSurfaceContinuity();
 	ShapeUpgrade_SplitSurfaceContinuity(Macad::Occt::ShapeUpgrade_SplitSurfaceContinuity^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Sets criterion for splitting.
 	/// </summary>
-	void SetCriterion(Macad::Occt::GeomAbs_Shape Criterion);
-	/// <summary>
+void SetCriterion(Macad::Occt::GeomAbs_Shape Criterion);
+		/// <summary>
 	/// Sets tolerance.
 	/// </summary>
-	void SetTolerance(double Tol);
+void SetTolerance(double Tol);
 	void Compute(bool Segment);
 }; // class ShapeUpgrade_SplitSurfaceContinuity
 
@@ -1801,24 +1801,24 @@ public:
 	static Macad::Occt::ShapeUpgrade_SplitSurfaceAngle^ CreateDowncasted(::ShapeUpgrade_SplitSurfaceAngle* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_SplitSurfaceAngle(double MaxAngle);
+ShapeUpgrade_SplitSurfaceAngle(double MaxAngle);
 	ShapeUpgrade_SplitSurfaceAngle(Macad::Occt::ShapeUpgrade_SplitSurfaceAngle^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Set maximal angle
 	/// </summary>
-	void SetMaxAngle(double MaxAngle);
-	/// <summary>
+void SetMaxAngle(double MaxAngle);
+		/// <summary>
 	/// Returns maximal angle
 	/// </summary>
-	double MaxAngle();
-	/// <summary>
+double MaxAngle();
+		/// <summary>
 	/// Performs splitting of the supporting surface(s).
 	/// First defines splitting values, then calls inherited method.
 	/// </summary>
-	void Compute(bool Segment);
+void Compute(bool Segment);
 }; // class ShapeUpgrade_SplitSurfaceAngle
 
 //---------------------------------------------------------------------
@@ -1859,58 +1859,58 @@ public:
 	static Macad::Occt::ShapeUpgrade_ConvertSurfaceToBezierBasis^ CreateDowncasted(::ShapeUpgrade_ConvertSurfaceToBezierBasis* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_ConvertSurfaceToBezierBasis();
+ShapeUpgrade_ConvertSurfaceToBezierBasis();
 	ShapeUpgrade_ConvertSurfaceToBezierBasis(Macad::Occt::ShapeUpgrade_ConvertSurfaceToBezierBasis^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Splits a list of beziers computed by Compute method according
 	/// the split values and splitting parameters.
 	/// </summary>
-	void Build(bool Segment);
-	/// <summary>
+void Build(bool Segment);
+		/// <summary>
 	/// Converts surface into a grid of bezier based surfaces, and
 	/// stores this grid.
 	/// </summary>
-	void Compute(bool Segment);
-	/// <summary>
+void Compute(bool Segment);
+		/// <summary>
 	/// Returns the grid of bezier based surfaces correspondent to
 	/// original surface.
 	/// </summary>
-	Macad::Occt::ShapeExtend_CompositeSurface^ Segments();
-	/// <summary>
+Macad::Occt::ShapeExtend_CompositeSurface^ Segments();
+		/// <summary>
 	/// Sets mode for conversion Geom_Plane to Bezier
 	/// </summary>
-	void SetPlaneMode(bool mode);
-	/// <summary>
+void SetPlaneMode(bool mode);
+		/// <summary>
 	/// Returns the Geom_Pline conversion mode.
 	/// </summary>
-	bool GetPlaneMode();
-	/// <summary>
+bool GetPlaneMode();
+		/// <summary>
 	/// Sets mode for conversion Geom_SurfaceOfRevolution to Bezier
 	/// </summary>
-	void SetRevolutionMode(bool mode);
-	/// <summary>
+void SetRevolutionMode(bool mode);
+		/// <summary>
 	/// Returns the Geom_SurfaceOfRevolution conversion mode.
 	/// </summary>
-	bool GetRevolutionMode();
-	/// <summary>
+bool GetRevolutionMode();
+		/// <summary>
 	/// Sets mode for conversion Geom_SurfaceOfLinearExtrusion to Bezier
 	/// </summary>
-	void SetExtrusionMode(bool mode);
-	/// <summary>
+void SetExtrusionMode(bool mode);
+		/// <summary>
 	/// Returns the Geom_SurfaceOfLinearExtrusion conversion mode.
 	/// </summary>
-	bool GetExtrusionMode();
-	/// <summary>
+bool GetExtrusionMode();
+		/// <summary>
 	/// Sets mode for conversion Geom_BSplineSurface to Bezier
 	/// </summary>
-	void SetBSplineMode(bool mode);
-	/// <summary>
+void SetBSplineMode(bool mode);
+		/// <summary>
 	/// Returns the Geom_BSplineSurface conversion mode.
 	/// </summary>
-	bool GetBSplineMode();
+bool GetBSplineMode();
 }; // class ShapeUpgrade_ConvertSurfaceToBezierBasis
 
 //---------------------------------------------------------------------
@@ -1948,15 +1948,15 @@ public:
 	static Macad::Occt::ShapeUpgrade_SplitSurfaceArea^ CreateDowncasted(::ShapeUpgrade_SplitSurfaceArea* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor.
 	/// </summary>
-	ShapeUpgrade_SplitSurfaceArea();
+ShapeUpgrade_SplitSurfaceArea();
 	ShapeUpgrade_SplitSurfaceArea(Macad::Occt::ShapeUpgrade_SplitSurfaceArea^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Set number of split for surfaces
 	/// </summary>
-	int NbParts();
+int NbParts();
 	void Compute(bool Segment);
 	void Compute();
 }; // class ShapeUpgrade_SplitSurfaceArea
@@ -1995,12 +1995,12 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates a ShellSewing, empty
 	/// </summary>
-	ShapeUpgrade_ShellSewing();
+ShapeUpgrade_ShellSewing();
 	ShapeUpgrade_ShellSewing(Macad::Occt::ShapeUpgrade_ShellSewing^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Builds a new shape from a former one, by calling Sewing from
 	/// BRepBuilderAPI. Rebuilt solids are oriented to be "not infinite"
 	/// 
@@ -2010,8 +2010,8 @@ public:
 	/// If no shell has been sewed, this method returns the input
 	/// shape
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ ApplySewing(Macad::Occt::TopoDS_Shape^ shape, double tol);
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ ApplySewing(Macad::Occt::TopoDS_Shape^ shape, double tol);
+		/// <summary>
 	/// Builds a new shape from a former one, by calling Sewing from
 	/// BRepBuilderAPI. Rebuilt solids are oriented to be "not infinite"
 	/// 
@@ -2021,7 +2021,7 @@ public:
 	/// If no shell has been sewed, this method returns the input
 	/// shape
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ ApplySewing(Macad::Occt::TopoDS_Shape^ shape);
+Macad::Occt::TopoDS_Shape^ ApplySewing(Macad::Occt::TopoDS_Shape^ shape);
 }; // class ShapeUpgrade_ShellSewing
 
 //---------------------------------------------------------------------
@@ -2064,22 +2064,22 @@ public:
 	ShapeUpgrade_FixSmallCurves(Macad::Occt::ShapeUpgrade_FixSmallCurves^ parameter1);
 	void Init(Macad::Occt::TopoDS_Edge^ theEdge, Macad::Occt::TopoDS_Face^ theFace);
 	bool Approx(Macad::Occt::Geom_Curve^ Curve3d, Macad::Occt::Geom2d_Curve^ Curve2d, Macad::Occt::Geom2d_Curve^ Curve2dR, double% First, double% Last);
-	/// <summary>
+		/// <summary>
 	/// Sets the tool for splitting 3D curves.
 	/// </summary>
-	void SetSplitCurve3dTool(Macad::Occt::ShapeUpgrade_SplitCurve3d^ splitCurve3dTool);
-	/// <summary>
+void SetSplitCurve3dTool(Macad::Occt::ShapeUpgrade_SplitCurve3d^ splitCurve3dTool);
+		/// <summary>
 	/// Sets the tool for splitting pcurves.
 	/// </summary>
-	void SetSplitCurve2dTool(Macad::Occt::ShapeUpgrade_SplitCurve2d^ splitCurve2dTool);
-	/// <summary>
+void SetSplitCurve2dTool(Macad::Occt::ShapeUpgrade_SplitCurve2d^ splitCurve2dTool);
+		/// <summary>
 	/// Queries the status of last call to Perform
 	/// OK   :
 	/// DONE1:
 	/// DONE2:
 	/// FAIL1:
 	/// </summary>
-	bool Status(Macad::Occt::ShapeExtend_Status status);
+bool Status(Macad::Occt::ShapeExtend_Status status);
 }; // class ShapeUpgrade_FixSmallCurves
 
 //---------------------------------------------------------------------
@@ -2152,35 +2152,35 @@ public:
 	static Macad::Occt::ShapeUpgrade_RemoveLocations^ CreateDowncasted(::ShapeUpgrade_RemoveLocations* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeUpgrade_RemoveLocations();
+ShapeUpgrade_RemoveLocations();
 	ShapeUpgrade_RemoveLocations(Macad::Occt::ShapeUpgrade_RemoveLocations^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Removes all location correspodingly to RemoveLevel.
 	/// </summary>
-	bool Remove(Macad::Occt::TopoDS_Shape^ theShape);
-	/// <summary>
+bool Remove(Macad::Occt::TopoDS_Shape^ theShape);
+		/// <summary>
 	/// Returns shape with removed locations.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ GetResult();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ GetResult();
+		/// <summary>
 	/// sets level starting with that location will be removed,
 	/// by default TopAbs_SHAPE. In this case locations will be kept for specified shape
 	/// and if specified shape is TopAbs_COMPOUND for sub-shapes of first level.
 	/// </summary>
-	void SetRemoveLevel(Macad::Occt::TopAbs_ShapeEnum theLevel);
-	/// <summary>
+void SetRemoveLevel(Macad::Occt::TopAbs_ShapeEnum theLevel);
+		/// <summary>
 	/// sets level starting with that location will be removed.Value of level can be set to
 	/// TopAbs_SHAPE,TopAbs_COMPOUND,TopAbs_SOLID,TopAbs_SHELL,TopAbs_FACE.By default TopAbs_SHAPE.
 	/// In this case location will be removed for all shape types for exception of compound.
 	/// </summary>
-	Macad::Occt::TopAbs_ShapeEnum RemoveLevel();
-	/// <summary>
+Macad::Occt::TopAbs_ShapeEnum RemoveLevel();
+		/// <summary>
 	/// Returns modified shape obtained from initial shape.
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ ModifiedShape(Macad::Occt::TopoDS_Shape^ theInitShape);
+Macad::Occt::TopoDS_Shape^ ModifiedShape(Macad::Occt::TopoDS_Shape^ theInitShape);
 }; // class ShapeUpgrade_RemoveLocations
 
 //---------------------------------------------------------------------
@@ -2217,49 +2217,49 @@ public:
 	static Macad::Occt::ShapeUpgrade_RemoveInternalWires^ CreateDowncasted(::ShapeUpgrade_RemoveInternalWires* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates empty  constructor.
 	/// </summary>
-	ShapeUpgrade_RemoveInternalWires();
+ShapeUpgrade_RemoveInternalWires();
 	ShapeUpgrade_RemoveInternalWires(Macad::Occt::TopoDS_Shape^ theShape);
 	ShapeUpgrade_RemoveInternalWires(Macad::Occt::ShapeUpgrade_RemoveInternalWires^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initialize by a Shape.
 	/// </summary>
-	void Init(Macad::Occt::TopoDS_Shape^ theShape);
-	/// <summary>
+void Init(Macad::Occt::TopoDS_Shape^ theShape);
+		/// <summary>
 	/// Removes all internal wires having area less than area specified as minimal allowed area
 	/// </summary>
-	bool Perform();
-	/// <summary>
+bool Perform();
+		/// <summary>
 	/// If specified sequence of shape contains -
 	/// 1.wires then these wires will be removed if they have area less than allowed min area.
 	/// 2.faces than internal wires from these faces will be removed if they have area less than allowed min area.
 	/// </summary>
-	bool Perform(Macad::Occt::TopTools_SequenceOfShape^ theSeqShapes);
-	/// <summary>
+bool Perform(Macad::Occt::TopTools_SequenceOfShape^ theSeqShapes);
+		/// <summary>
 	/// Get result shape
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ GetResult();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ GetResult();
+		/// <summary>
 	/// Set min area allowed for holes( all holes having area less than mi area will be removed)
 	/// </summary>
-	double MinArea();
-	/// <summary>
+double MinArea();
+		/// <summary>
 	/// Set mode which manage removing faces which have outer wires consisting only from edges
 	/// belonginig to removed internal wires.
 	/// By default it is equal to true.
 	/// </summary>
-	bool RemoveFaceMode();
-	/// <summary>
+bool RemoveFaceMode();
+		/// <summary>
 	/// Returns sequence of removed faces.
 	/// </summary>
-	Macad::Occt::TopTools_SequenceOfShape^ RemovedFaces();
-	/// <summary>
+Macad::Occt::TopTools_SequenceOfShape^ RemovedFaces();
+		/// <summary>
 	/// Returns sequence of removed faces.
 	/// </summary>
-	Macad::Occt::TopTools_SequenceOfShape^ RemovedWires();
-	/// <summary>
+Macad::Occt::TopTools_SequenceOfShape^ RemovedWires();
+		/// <summary>
 	/// Queries status of last call to Perform()
 	/// : OK - nothing was done
 	/// :DONE1 - internal wires were removed
@@ -2267,7 +2267,7 @@ public:
 	/// :FAIL1 - initial shape is not specified
 	/// :FAIL2 - specified sub-shape is not belonged to inotial shape.
 	/// </summary>
-	bool Status(Macad::Occt::ShapeExtend_Status theStatus);
+bool Status(Macad::Occt::ShapeExtend_Status theStatus);
 }; // class ShapeUpgrade_RemoveInternalWires
 
 //---------------------------------------------------------------------
@@ -2331,109 +2331,109 @@ public:
 	static Macad::Occt::ShapeUpgrade_UnifySameDomain^ CreateDowncasted(::ShapeUpgrade_UnifySameDomain* instance);
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Empty constructor
 	/// </summary>
-	ShapeUpgrade_UnifySameDomain();
-	/// <summary>
+ShapeUpgrade_UnifySameDomain();
+		/// <summary>
 	/// Constructor defining input shape and necessary flags.
 	/// It does not perform unification.
 	/// </summary>
-	ShapeUpgrade_UnifySameDomain(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges, bool UnifyFaces, bool ConcatBSplines);
-	/// <summary>
+ShapeUpgrade_UnifySameDomain(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges, bool UnifyFaces, bool ConcatBSplines);
+		/// <summary>
 	/// Constructor defining input shape and necessary flags.
 	/// It does not perform unification.
 	/// </summary>
-	ShapeUpgrade_UnifySameDomain(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges, bool UnifyFaces);
-	/// <summary>
+ShapeUpgrade_UnifySameDomain(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges, bool UnifyFaces);
+		/// <summary>
 	/// Constructor defining input shape and necessary flags.
 	/// It does not perform unification.
 	/// </summary>
-	ShapeUpgrade_UnifySameDomain(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges);
-	/// <summary>
+ShapeUpgrade_UnifySameDomain(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges);
+		/// <summary>
 	/// Constructor defining input shape and necessary flags.
 	/// It does not perform unification.
 	/// </summary>
-	ShapeUpgrade_UnifySameDomain(Macad::Occt::TopoDS_Shape^ aShape);
+ShapeUpgrade_UnifySameDomain(Macad::Occt::TopoDS_Shape^ aShape);
 	ShapeUpgrade_UnifySameDomain(Macad::Occt::ShapeUpgrade_UnifySameDomain^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Initializes with a shape and necessary flags.
 	/// It does not perform unification.
 	/// If you intend to nullify the History place holder do it after
 	/// initialization.
 	/// </summary>
-	void Initialize(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges, bool UnifyFaces, bool ConcatBSplines);
-	/// <summary>
+void Initialize(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges, bool UnifyFaces, bool ConcatBSplines);
+		/// <summary>
 	/// Initializes with a shape and necessary flags.
 	/// It does not perform unification.
 	/// If you intend to nullify the History place holder do it after
 	/// initialization.
 	/// </summary>
-	void Initialize(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges, bool UnifyFaces);
-	/// <summary>
+void Initialize(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges, bool UnifyFaces);
+		/// <summary>
 	/// Initializes with a shape and necessary flags.
 	/// It does not perform unification.
 	/// If you intend to nullify the History place holder do it after
 	/// initialization.
 	/// </summary>
-	void Initialize(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges);
-	/// <summary>
+void Initialize(Macad::Occt::TopoDS_Shape^ aShape, bool UnifyEdges);
+		/// <summary>
 	/// Initializes with a shape and necessary flags.
 	/// It does not perform unification.
 	/// If you intend to nullify the History place holder do it after
 	/// initialization.
 	/// </summary>
-	void Initialize(Macad::Occt::TopoDS_Shape^ aShape);
-	/// <summary>
+void Initialize(Macad::Occt::TopoDS_Shape^ aShape);
+		/// <summary>
 	/// Sets the flag defining whether it is allowed to create
 	/// internal edges inside merged faces in the case of non-manifold
 	/// topology. Without this flag merging through multi connected edge
 	/// is forbidden. Default value is false.
 	/// </summary>
-	void AllowInternalEdges(bool theValue);
-	/// <summary>
+void AllowInternalEdges(bool theValue);
+		/// <summary>
 	/// Sets the shape for avoid merging of the faces/edges.
 	/// This shape can be vertex or edge.
 	/// If the shape is a vertex it forbids merging of connected edges.
 	/// If the shape is a edge it forbids merging of connected faces.
 	/// This method can be called several times to keep several shapes.
 	/// </summary>
-	void KeepShape(Macad::Occt::TopoDS_Shape^ theShape);
-	/// <summary>
+void KeepShape(Macad::Occt::TopoDS_Shape^ theShape);
+		/// <summary>
 	/// Sets the map of shapes for avoid merging of the faces/edges.
 	/// It allows passing a ready to use map instead of calling many times
 	/// the method KeepShape.
 	/// </summary>
-	void KeepShapes(Macad::Occt::TopTools_MapOfShape^ theShapes);
-	/// <summary>
+void KeepShapes(Macad::Occt::TopTools_MapOfShape^ theShapes);
+		/// <summary>
 	/// Sets the flag defining the behavior of the algorithm regarding
 	/// modification of input shape.
 	/// If this flag is equal to True then the input (original) shape can't be
 	/// modified during modification process. Default value is true.
 	/// </summary>
-	void SetSafeInputMode(bool theValue);
-	/// <summary>
+void SetSafeInputMode(bool theValue);
+		/// <summary>
 	/// Sets the linear tolerance. It plays the role of chord error when
 	/// taking decision about merging of shapes. Default value is Precision::Confusion().
 	/// </summary>
-	void SetLinearTolerance(double theValue);
-	/// <summary>
+void SetLinearTolerance(double theValue);
+		/// <summary>
 	/// Sets the angular tolerance. If two shapes form a connection angle greater than
 	/// this value they will not be merged. Default value is Precision::Angular().
 	/// </summary>
-	void SetAngularTolerance(double theValue);
-	/// <summary>
+void SetAngularTolerance(double theValue);
+		/// <summary>
 	/// Performs unification and builds the resulting shape.
 	/// </summary>
-	void Build();
-	/// <summary>
+void Build();
+		/// <summary>
 	/// Gives the resulting shape
 	/// </summary>
-	Macad::Occt::TopoDS_Shape^ Shape();
-	/// <summary>
+Macad::Occt::TopoDS_Shape^ Shape();
+		/// <summary>
 	/// Returns the history of the processed shapes.
 	/// </summary>
-	Macad::Occt::BRepTools_History^ History();
+Macad::Occt::BRepTools_History^ History();
 }; // class ShapeUpgrade_UnifySameDomain
 
 //---------------------------------------------------------------------
@@ -2476,18 +2476,7 @@ public:
 public:
 	ShapeUpgrade();
 	ShapeUpgrade(Macad::Occt::ShapeUpgrade^ parameter1);
-	/// <summary>
-	/// Unifies same domain faces and edges of specified shape
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Boolean C0BSplineToSequenceOfC1BSplineCurve(Geom_BSplineCurve BS, TColGeom_HSequenceOfBoundedCurve seqBS, ) */
-	/// <summary>
-	/// Converts C0 B-Spline curve into sequence of C1 B-Spline curves.
-	/// This method splits B-Spline at the knots with multiplicities equal to degree,
-	/// i.e. unlike method GeomConvert::C0BSplineToArrayOfC1BSplineCurve
-	/// this one does not use any tolerance and therefore does not change the geometry of B-Spline.
-	/// Returns True if C0 B-Spline was successfully split,
-	/// else returns False (if BS is C1 B-Spline).
-	/// </summary>
 	/* Method skipped due to unknown mapping: Standard_Boolean C0BSplineToSequenceOfC1BSplineCurve(Geom2d_BSplineCurve BS, TColGeom2d_HSequenceOfBoundedCurve seqBS, ) */
 }; // class ShapeUpgrade
 

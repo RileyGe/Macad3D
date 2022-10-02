@@ -41,7 +41,7 @@ public:
 public:
 	GeomProjLib();
 	GeomProjLib(Macad::Occt::GeomProjLib^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// gives  the 2d-curve   of  a 3d-curve  lying on   a
 	/// surface (  uses GeomProjLib_ProjectedCurve   )
 	/// The 3dCurve is taken between the parametrization
@@ -52,8 +52,8 @@ public:
 	/// WARNING :  if   the projection has  failed,   this
 	/// method returns a null Handle.
 	/// </summary>
-	static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, double First, double Last, Macad::Occt::Geom_Surface^ S, double UFirst, double ULast, double VFirst, double VLast, double% Tolerance);
-	/// <summary>
+static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, double First, double Last, Macad::Occt::Geom_Surface^ S, double UFirst, double ULast, double VFirst, double VLast, double% Tolerance);
+		/// <summary>
 	/// gives  the 2d-curve   of  a 3d-curve  lying on   a
 	/// surface (  uses GeomProjLib_ProjectedCurve   )
 	/// The 3dCurve is taken between the parametrization
@@ -64,8 +64,8 @@ public:
 	/// WARNING :  if   the projection has  failed,   this
 	/// method returns a null Handle.
 	/// </summary>
-	static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, double First, double Last, Macad::Occt::Geom_Surface^ S, double% Tolerance);
-	/// <summary>
+static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, double First, double Last, Macad::Occt::Geom_Surface^ S, double% Tolerance);
+		/// <summary>
 	/// gives  the 2d-curve   of  a 3d-curve  lying on   a
 	/// surface (  uses GeomProjLib_ProjectedCurve   )
 	/// The 3dCurve is taken between the parametrization
@@ -75,8 +75,8 @@ public:
 	/// WARNING :  if   the projection has  failed,   this
 	/// method returns a null Handle.
 	/// </summary>
-	static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, double First, double Last, Macad::Occt::Geom_Surface^ S);
-	/// <summary>
+static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, double First, double Last, Macad::Occt::Geom_Surface^ S);
+		/// <summary>
 	/// gives  the  2d-curve  of  a  3d-curve lying   on a
 	/// surface   ( uses   GeomProjLib_ProjectedCurve ).
 	/// If the projection needs an approximation,
@@ -84,18 +84,8 @@ public:
 	/// WARNING  :  if the   projection has  failed,  this
 	/// method returns a null Handle.
 	/// </summary>
-	static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, Macad::Occt::Geom_Surface^ S);
-	/// <summary>
-	/// gives  the  2d-curve  of  a  3d-curve lying   on a
-	/// surface   ( uses   GeomProjLib_ProjectedCurve ).
-	/// If the projection needs an approximation,
-	/// Precision::PApproximation() is used.
-	/// WARNING  :  if the   projection has  failed,  this
-	/// method returns a null Handle.
-	/// can expand a little the bounds of surface
-	/// </summary>
-	static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, Macad::Occt::Geom_Surface^ S, double UDeb, double UFin, double VDeb, double VFin);
-	/// <summary>
+static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, Macad::Occt::Geom_Surface^ S);
+		/// <summary>
 	/// gives  the  2d-curve  of  a  3d-curve lying   on a
 	/// surface   ( uses   GeomProjLib_ProjectedCurve ).
 	/// If the projection needs an approximation,
@@ -104,15 +94,25 @@ public:
 	/// method returns a null Handle.
 	/// can expand a little the bounds of surface
 	/// </summary>
-	static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, Macad::Occt::Geom_Surface^ S, double UDeb, double UFin, double VDeb, double VFin, double% Tolerance);
-	/// <summary>
+static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, Macad::Occt::Geom_Surface^ S, double UDeb, double UFin, double VDeb, double VFin);
+		/// <summary>
+	/// gives  the  2d-curve  of  a  3d-curve lying   on a
+	/// surface   ( uses   GeomProjLib_ProjectedCurve ).
+	/// If the projection needs an approximation,
+	/// Precision::PApproximation() is used.
+	/// WARNING  :  if the   projection has  failed,  this
+	/// method returns a null Handle.
+	/// can expand a little the bounds of surface
+	/// </summary>
+static Macad::Occt::Geom2d_Curve^ Curve2d(Macad::Occt::Geom_Curve^ C, Macad::Occt::Geom_Surface^ S, double UDeb, double UFin, double VDeb, double VFin, double% Tolerance);
+		/// <summary>
 	/// Constructs   the  3d-curve  from the normal
 	/// projection  of the  Curve <C> on  the surface <S>.
 	/// WARNING : if the  projection has failed, returns  a
 	/// null Handle.
 	/// </summary>
-	static Macad::Occt::Geom_Curve^ Project(Macad::Occt::Geom_Curve^ C, Macad::Occt::Geom_Surface^ S);
-	/// <summary>
+static Macad::Occt::Geom_Curve^ Project(Macad::Occt::Geom_Curve^ C, Macad::Occt::Geom_Surface^ S);
+		/// <summary>
 	/// Constructs  the 3d-curves from the projection
 	/// of the  curve  <Curve> on the  plane <Plane> along
 	/// the direction <Dir>.
@@ -122,7 +122,7 @@ public:
 	/// It means: proj(C(u)) = PC(u) for each u.
 	/// Otherwise, the parametrization may change.
 	/// </summary>
-	static Macad::Occt::Geom_Curve^ ProjectOnPlane(Macad::Occt::Geom_Curve^ Curve, Macad::Occt::Geom_Plane^ Plane, Macad::Occt::Dir Dir, bool KeepParametrization);
+static Macad::Occt::Geom_Curve^ ProjectOnPlane(Macad::Occt::Geom_Curve^ Curve, Macad::Occt::Geom_Plane^ Plane, Macad::Occt::Dir Dir, bool KeepParametrization);
 }; // class GeomProjLib
 
 }; // namespace Occt

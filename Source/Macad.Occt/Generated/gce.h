@@ -89,17 +89,17 @@ public:
 public:
 	gce_Root();
 	gce_Root(Macad::Occt::gce_Root^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns true if the construction is successful.
 	/// </summary>
-	bool IsDone();
-	/// <summary>
+bool IsDone();
+		/// <summary>
 	/// Returns the status of the construction:
 	/// -   gce_Done, if the construction is successful, or
 	/// -   another value of the gce_ErrorType enumeration
 	/// indicating why the construction failed.
 	/// </summary>
-	Macad::Occt::gce_ErrorType Status();
+Macad::Occt::gce_ErrorType Status();
 }; // class gce_Root
 
 //---------------------------------------------------------------------
@@ -149,50 +149,50 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// A2 locates the circle and gives its orientation in 3D space.
 	/// Warnings :
 	/// It is not forbidden to create a circle with Radius = 0.0
 	/// The status is "NegativeRadius" if Radius < 0.0
 	/// </summary>
-	gce_MakeCirc(Macad::Occt::Ax2 A2, double Radius);
-	/// <summary>
+gce_MakeCirc(Macad::Occt::Ax2 A2, double Radius);
+		/// <summary>
 	/// Makes a Circ from gp <TheCirc> coaxial to another
 	/// Circ <Circ> at a distance <Dist>.
 	/// If Dist is greater than zero the result is encloses
 	/// the circle <Circ>, else the result is enclosed by the
 	/// circle <Circ>.
 	/// </summary>
-	gce_MakeCirc(Macad::Occt::gp_Circ^ Circ, double Dist);
-	/// <summary>
+gce_MakeCirc(Macad::Occt::gp_Circ^ Circ, double Dist);
+		/// <summary>
 	/// Makes a Circ from gp <TheCirc> coaxial to another
 	/// Circ <Circ> and passing through a Pnt2d <Point>.
 	/// </summary>
-	gce_MakeCirc(Macad::Occt::gp_Circ^ Circ, Macad::Occt::Pnt Point);
-	/// <summary>
+gce_MakeCirc(Macad::Occt::gp_Circ^ Circ, Macad::Occt::Pnt Point);
+		/// <summary>
 	/// Makes a Circ from gp <TheCirc> passing through 3
 	/// Pnt2d <P1>,<P2>,<P3>.
 	/// </summary>
-	gce_MakeCirc(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, Macad::Occt::Pnt P3);
-	/// <summary>
+gce_MakeCirc(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, Macad::Occt::Pnt P3);
+		/// <summary>
 	/// Makes a Circ from gp <TheCirc> with its center
 	/// <Center> and the normal of its plane <Norm> and
 	/// its radius <Radius>.
 	/// </summary>
-	gce_MakeCirc(Macad::Occt::Pnt Center, Macad::Occt::Dir Norm, double Radius);
-	/// <summary>
+gce_MakeCirc(Macad::Occt::Pnt Center, Macad::Occt::Dir Norm, double Radius);
+		/// <summary>
 	/// Makes a Circ from gp <TheCirc> with its center
 	/// <Center> and the normal of its plane <Plane> and
 	/// its radius <Radius>.
 	/// </summary>
-	gce_MakeCirc(Macad::Occt::Pnt Center, Macad::Occt::Pln Plane, double Radius);
-	/// <summary>
+gce_MakeCirc(Macad::Occt::Pnt Center, Macad::Occt::Pln Plane, double Radius);
+		/// <summary>
 	/// Makes a Circ from gp <TheCirc> with its center
 	/// <Center> and a point <Ptaxis> giving the normal
 	/// of its plane <Plane> and its radius <Radius>.
 	/// </summary>
-	gce_MakeCirc(Macad::Occt::Pnt Center, Macad::Occt::Pnt Ptaxis, double Radius);
-	/// <summary>
+gce_MakeCirc(Macad::Occt::Pnt Center, Macad::Occt::Pnt Ptaxis, double Radius);
+		/// <summary>
 	/// Makes a Circ from gp <TheCirc> with its center
 	/// <Center> and its radius <Radius>.
 	/// Warning
@@ -210,13 +210,13 @@ public:
 	/// P1, P2 and P3 are coincident; or
 	/// -   gce_NullAxis if Center and Ptaxis are coincident.
 	/// </summary>
-	gce_MakeCirc(Macad::Occt::Ax1 Axis, double Radius);
+gce_MakeCirc(Macad::Occt::Ax1 Axis, double Radius);
 	gce_MakeCirc(Macad::Occt::gce_MakeCirc^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed circle.
 	/// Exceptions StdFail_NotDone if no circle is constructed.
 	/// </summary>
-	Macad::Occt::gp_Circ^ Value();
+Macad::Occt::gp_Circ^ Value();
 	Macad::Occt::gp_Circ^ Operator();
 }; // class gce_MakeCirc
 
@@ -263,7 +263,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The location point of XAxis is the center of the circle.
 	/// Warnings :
 	/// It is not forbidden to create a circle with Radius = 0.0
@@ -271,8 +271,8 @@ public:
 	/// is direct and non direct in the other case.
 	/// The status is "NegativeRadius" if Radius < 0.0.
 	/// </summary>
-	gce_MakeCirc2d(Macad::Occt::Ax2d XAxis, double Radius, bool Sense);
-	/// <summary>
+gce_MakeCirc2d(Macad::Occt::Ax2d XAxis, double Radius, bool Sense);
+		/// <summary>
 	/// The location point of XAxis is the center of the circle.
 	/// Warnings :
 	/// It is not forbidden to create a circle with Radius = 0.0
@@ -280,14 +280,14 @@ public:
 	/// is direct and non direct in the other case.
 	/// The status is "NegativeRadius" if Radius < 0.0.
 	/// </summary>
-	gce_MakeCirc2d(Macad::Occt::Ax2d XAxis, double Radius);
-	/// <summary>
+gce_MakeCirc2d(Macad::Occt::Ax2d XAxis, double Radius);
+		/// <summary>
 	/// The location point of Axis is the center of the circle.
 	/// Warnings :
 	/// It is not forbidden to create a circle with Radius = 0.0
 	/// </summary>
-	gce_MakeCirc2d(Macad::Occt::Ax22d Axis, double Radius);
-	/// <summary>
+gce_MakeCirc2d(Macad::Occt::Ax22d Axis, double Radius);
+		/// <summary>
 	/// Makes a Circ2d from gp <TheCirc> concentric with another
 	/// circ2d <Circ> with a distance <Dist>.
 	/// If Dist is greater than zero the result encloses
@@ -296,55 +296,55 @@ public:
 	/// The local coordinate system of the solution is the
 	/// same as Circ.
 	/// </summary>
-	gce_MakeCirc2d(Macad::Occt::gp_Circ2d^ Circ, double Dist);
-	/// <summary>
+gce_MakeCirc2d(Macad::Occt::gp_Circ2d^ Circ, double Dist);
+		/// <summary>
 	/// Makes a Circ2d from gp <TheCirc> concentric with another
 	/// circ2d <Circ> and passing through a Pnt2d <Point>.
 	/// The local coordinate system of the solution is the
 	/// same as Circ.
 	/// </summary>
-	gce_MakeCirc2d(Macad::Occt::gp_Circ2d^ Circ, Macad::Occt::Pnt2d Point);
-	/// <summary>
+gce_MakeCirc2d(Macad::Occt::gp_Circ2d^ Circ, Macad::Occt::Pnt2d Point);
+		/// <summary>
 	/// Makes a Circ2d from gp <TheCirc> passing through 3
 	/// Pnt2d <P1>,<P2>,<P3>.
 	/// The local coordinate system of the solution is given
 	/// by the three points P1, P2, P3.
 	/// </summary>
-	gce_MakeCirc2d(Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2, Macad::Occt::Pnt2d P3);
-	/// <summary>
+gce_MakeCirc2d(Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2, Macad::Occt::Pnt2d P3);
+		/// <summary>
 	/// Makes a Circ2d from gp <TheCirc> with its center
 	/// <Center> and its radius <Radius>.
 	/// If Sense is true the local coordinate system of
 	/// the solution is direct and non direct in the other case.
 	/// </summary>
-	gce_MakeCirc2d(Macad::Occt::Pnt2d Center, double Radius, bool Sense);
-	/// <summary>
+gce_MakeCirc2d(Macad::Occt::Pnt2d Center, double Radius, bool Sense);
+		/// <summary>
 	/// Makes a Circ2d from gp <TheCirc> with its center
 	/// <Center> and its radius <Radius>.
 	/// If Sense is true the local coordinate system of
 	/// the solution is direct and non direct in the other case.
 	/// </summary>
-	gce_MakeCirc2d(Macad::Occt::Pnt2d Center, double Radius);
-	/// <summary>
+gce_MakeCirc2d(Macad::Occt::Pnt2d Center, double Radius);
+		/// <summary>
 	/// Makes a Circ2d from gp <TheCirc> with its center
 	/// <Center> and a point giving the radius.
 	/// If Sense is true the local coordinate system of
 	/// the solution is direct and non direct in the other case.
 	/// </summary>
-	gce_MakeCirc2d(Macad::Occt::Pnt2d Center, Macad::Occt::Pnt2d Point, bool Sense);
-	/// <summary>
+gce_MakeCirc2d(Macad::Occt::Pnt2d Center, Macad::Occt::Pnt2d Point, bool Sense);
+		/// <summary>
 	/// Makes a Circ2d from gp <TheCirc> with its center
 	/// <Center> and a point giving the radius.
 	/// If Sense is true the local coordinate system of
 	/// the solution is direct and non direct in the other case.
 	/// </summary>
-	gce_MakeCirc2d(Macad::Occt::Pnt2d Center, Macad::Occt::Pnt2d Point);
+gce_MakeCirc2d(Macad::Occt::Pnt2d Center, Macad::Occt::Pnt2d Point);
 	gce_MakeCirc2d(Macad::Occt::gce_MakeCirc2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed circle.
 	/// Exceptions StdFail_NotDone if no circle is constructed.
 	/// </summary>
-	Macad::Occt::gp_Circ2d^ Value();
+Macad::Occt::gp_Circ2d^ Value();
 	Macad::Occt::gp_Circ2d^ Operator();
 }; // class gce_MakeCirc2d
 
@@ -390,7 +390,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates an infinite conical surface. A2 locates the cone
 	/// in the space and defines the reference plane of the surface.
 	/// Ang is the conical surface semi-angle between 0 and PI/2 radians.
@@ -399,19 +399,19 @@ public:
 	/// If Radius is lower than 0.0 the status is "
 	/// If Ang < Resolution from gp  or Ang >= (PI/2) - Resolution.
 	/// </summary>
-	gce_MakeCone(Macad::Occt::Ax2 A2, double Ang, double Radius);
-	/// <summary>
+gce_MakeCone(Macad::Occt::Ax2 A2, double Ang, double Radius);
+		/// <summary>
 	/// Makes a Cone from gp <TheCone> coaxial to another
 	/// Cone <Cone> and passing through a Pnt <Point>.
 	/// </summary>
-	gce_MakeCone(Macad::Occt::gp_Cone^ Cone, Macad::Occt::Pnt Point);
-	/// <summary>
+gce_MakeCone(Macad::Occt::gp_Cone^ Cone, Macad::Occt::Pnt Point);
+		/// <summary>
 	/// Makes a Cone from gp <TheCone> coaxial to another
 	/// Cone <Cone> at the distance <Dist> which can
 	/// be greater or lower than zero.
 	/// </summary>
-	gce_MakeCone(Macad::Occt::gp_Cone^ Cone, double Dist);
-	/// <summary>
+gce_MakeCone(Macad::Occt::gp_Cone^ Cone, double Dist);
+		/// <summary>
 	/// Makes a Cone from gp <TheCone> by four points <P1>,
 	/// <P2>,<P3> and <P4>.
 	/// Its axis is <P1P2> and the radius of its base is
@@ -427,8 +427,8 @@ public:
 	/// <P3P4> is colinear to <P1P2> we have the status
 	/// "NullAngle".
 	/// </summary>
-	gce_MakeCone(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, Macad::Occt::Pnt P3, Macad::Occt::Pnt P4);
-	/// <summary>
+gce_MakeCone(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, Macad::Occt::Pnt P3, Macad::Occt::Pnt P4);
+		/// <summary>
 	/// Makes a Cone by its axis <Axis> and two points.
 	/// The distance between <P1> and the axis is the radius
 	/// of the section passing through <P1>.
@@ -441,8 +441,8 @@ public:
 	/// If <P1> and <P2> are confused we have the status
 	/// "ConfusedPoints"
 	/// </summary>
-	gce_MakeCone(Macad::Occt::Ax1 Axis, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
-	/// <summary>
+gce_MakeCone(Macad::Occt::Ax1 Axis, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
+		/// <summary>
 	/// Makes a Cone by its axis <Axis> and two points.
 	/// The distance between <P1> and the axis is the radius
 	/// of the section passing through <P1>
@@ -455,8 +455,8 @@ public:
 	/// If <P1> and <P2> are confused we have the status
 	/// "ConfusedPoints"
 	/// </summary>
-	gce_MakeCone(Macad::Occt::gp_Lin^ Axis, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
-	/// <summary>
+gce_MakeCone(Macad::Occt::gp_Lin^ Axis, Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
+		/// <summary>
 	/// Makes a Cone with two points and two radius.
 	/// The axis of the solution is the line passing through
 	/// <P1> and <P2>.
@@ -481,13 +481,13 @@ public:
 	/// -   the vector joining P1 to P2 is perpendicular to Axis, or
 	/// -   P1, P2, P3, and P4 are collinear.
 	/// </summary>
-	gce_MakeCone(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, double R1, double R2);
+gce_MakeCone(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, double R1, double R2);
 	gce_MakeCone(Macad::Occt::gce_MakeCone^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed cone.
 	/// Exceptions StdFail_NotDone if no cone is constructed.
 	/// </summary>
-	Macad::Occt::gp_Cone^ Value();
+Macad::Occt::gp_Cone^ Value();
 	Macad::Occt::gp_Cone^ Operator();
 }; // class gce_MakeCone
 
@@ -531,36 +531,36 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// <A2> is the local cartesian coordinate system of <me>.
 	/// The status is "NegativeRadius" if R < 0.0
 	/// </summary>
-	gce_MakeCylinder(Macad::Occt::Ax2 A2, double Radius);
-	/// <summary>
+gce_MakeCylinder(Macad::Occt::Ax2 A2, double Radius);
+		/// <summary>
 	/// Makes a Cylinder from gp <TheCylinder> coaxial to another
 	/// Cylinder <Cylinder> and passing through a Pnt <Point>.
 	/// </summary>
-	gce_MakeCylinder(Macad::Occt::gp_Cylinder^ Cyl, Macad::Occt::Pnt Point);
-	/// <summary>
+gce_MakeCylinder(Macad::Occt::gp_Cylinder^ Cyl, Macad::Occt::Pnt Point);
+		/// <summary>
 	/// Makes a Cylinder from gp <TheCylinder> coaxial to another
 	/// Cylinder <Cylinder> at the distance <Dist> which can
 	/// be greater or lower than zero.
 	/// The radius of the result is the absolute value of the
 	/// radius of <Cyl> plus <Dist>
 	/// </summary>
-	gce_MakeCylinder(Macad::Occt::gp_Cylinder^ Cyl, double Dist);
-	/// <summary>
+gce_MakeCylinder(Macad::Occt::gp_Cylinder^ Cyl, double Dist);
+		/// <summary>
 	/// Makes a Cylinder from gp <TheCylinder> with 3 points
 	/// <P1>,<P2>,<P3>.
 	/// Its axis is <P1P2> and its radius is the distance
 	/// between <P3> and <P1P2>
 	/// </summary>
-	gce_MakeCylinder(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, Macad::Occt::Pnt P3);
-	/// <summary>
+gce_MakeCylinder(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, Macad::Occt::Pnt P3);
+		/// <summary>
 	/// Makes a Cylinder by its axis <Axis> and radius <Radius>.
 	/// </summary>
-	gce_MakeCylinder(Macad::Occt::Ax1 Axis, double Radius);
-	/// <summary>
+gce_MakeCylinder(Macad::Occt::Ax1 Axis, double Radius);
+		/// <summary>
 	/// Makes a Cylinder by its circular base.
 	/// Warning
 	/// If an error occurs (that is, when IsDone returns
@@ -571,13 +571,13 @@ public:
 	/// which is greater than the radius of Cyl; or
 	/// -   gce_ConfusedPoints if points P1 and P2 are coincident.
 	/// </summary>
-	gce_MakeCylinder(Macad::Occt::gp_Circ^ Circ);
+gce_MakeCylinder(Macad::Occt::gp_Circ^ Circ);
 	gce_MakeCylinder(Macad::Occt::gce_MakeCylinder^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed cylinder.
 	/// Exceptions StdFail_NotDone if no cylinder is constructed.
 	/// </summary>
-	Macad::Occt::gp_Cylinder^ Value();
+Macad::Occt::gp_Cylinder^ Value();
 	Macad::Occt::gp_Cylinder^ Operator();
 }; // class gce_MakeCylinder
 
@@ -619,24 +619,24 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Normalizes the vector V and creates a direction.
 	/// Status is "NullVector" if V.Magnitude() <= Resolution.
 	/// </summary>
-	gce_MakeDir(Macad::Occt::Vec V);
-	/// <summary>
+gce_MakeDir(Macad::Occt::Vec V);
+		/// <summary>
 	/// Creates a direction from a triplet of coordinates.
 	/// Status is "NullVector" if Coord.Modulus() <=
 	/// Resolution from gp.
 	/// </summary>
-	gce_MakeDir(Macad::Occt::XYZ Coord);
-	/// <summary>
+gce_MakeDir(Macad::Occt::XYZ Coord);
+		/// <summary>
 	/// Creates a direction with its 3 cartesian coordinates.
 	/// Status is "NullVector" if Sqrt(Xv*Xv + Yv*Yv + Zv*Zv)
 	/// <= Resolution
 	/// </summary>
-	gce_MakeDir(double Xv, double Yv, double Zv);
-	/// <summary>
+gce_MakeDir(double Xv, double Yv, double Zv);
+		/// <summary>
 	/// Make a Dir from gp <TheDir> passing through 2
 	/// Pnt <P1>,<P2>.
 	/// Status is "ConfusedPoints" if <p1> and <P2> are confused.
@@ -650,13 +650,13 @@ public:
 	/// -   the modulus of Coord,
 	/// -   Sqrt(Xv*Xv + Yv*Yv + Zv*Zv).
 	/// </summary>
-	gce_MakeDir(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
+gce_MakeDir(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
 	gce_MakeDir(Macad::Occt::gce_MakeDir^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed unit vector.
 	/// Exceptions StdFail_NotDone if no unit vector is constructed.
 	/// </summary>
-	Macad::Occt::Dir Value();
+Macad::Occt::Dir Value();
 	Macad::Occt::Dir Operator();
 }; // class gce_MakeDir
 
@@ -697,24 +697,24 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Normalizes the vector V and creates a direction.
 	/// Status is "NullVector" if V.Magnitude() <= Resolution.
 	/// </summary>
-	gce_MakeDir2d(Macad::Occt::Vec2d V);
-	/// <summary>
+gce_MakeDir2d(Macad::Occt::Vec2d V);
+		/// <summary>
 	/// Creates a direction from a triplet of coordinates.
 	/// Status is "NullVector" if Coord.Modulus() <=
 	/// Resolution from gp.
 	/// </summary>
-	gce_MakeDir2d(Macad::Occt::XY Coord);
-	/// <summary>
+gce_MakeDir2d(Macad::Occt::XY Coord);
+		/// <summary>
 	/// Creates a direction with its 3 cartesian coordinates.
 	/// Status is "NullVector" if Sqrt(Xv*Xv + Yv*Yv )
 	/// <= Resolution
 	/// </summary>
-	gce_MakeDir2d(double Xv, double Yv);
-	/// <summary>
+gce_MakeDir2d(double Xv, double Yv);
+		/// <summary>
 	/// Make a Dir2d from gp <TheDir> passing through 2
 	/// Pnt <P1>,<P2>.
 	/// Status is "ConfusedPoints" if <P1> and <P2> are confused.
@@ -728,13 +728,13 @@ public:
 	/// -   the modulus of Coord,
 	/// -   Sqrt(Xv*Xv + Yv*Yv).
 	/// </summary>
-	gce_MakeDir2d(Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2);
+gce_MakeDir2d(Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2);
 	gce_MakeDir2d(Macad::Occt::gce_MakeDir2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed unit vector.
 	/// Exceptions StdFail_NotDone if no unit vector is constructed.
 	/// </summary>
-	Macad::Occt::Dir2d Value();
+Macad::Occt::Dir2d Value();
 	Macad::Occt::Dir2d Operator();
 }; // class gce_MakeDir2d
 
@@ -775,7 +775,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The major radius of the ellipse is on the "XAxis" and the
 	/// minor radius is on the "YAxis" of the ellipse. The "XAxis"
 	/// is defined with the "XDirection" of A2 and the "YAxis" is
@@ -784,8 +784,8 @@ public:
 	/// It is not forbidden to create an ellipse with
 	/// MajorRadius = MinorRadius.
 	/// </summary>
-	gce_MakeElips(Macad::Occt::Ax2 A2, double MajorRadius, double MinorRadius);
-	/// <summary>
+gce_MakeElips(Macad::Occt::Ax2 A2, double MajorRadius, double MinorRadius);
+		/// <summary>
 	/// Make an ellipse with its center and two points.
 	/// Warning
 	/// The MakeElips class does not prevent the
@@ -801,13 +801,13 @@ public:
 	/// is less than the minor radius computed with Center, S1 and S2, or
 	/// -   Center, S1 and S2 are collinear.
 	/// </summary>
-	gce_MakeElips(Macad::Occt::Pnt S1, Macad::Occt::Pnt S2, Macad::Occt::Pnt Center);
+gce_MakeElips(Macad::Occt::Pnt S1, Macad::Occt::Pnt S2, Macad::Occt::Pnt Center);
 	gce_MakeElips(Macad::Occt::gce_MakeElips^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed ellipse.
 	/// Exceptions StdFail_NotDone if no ellipse is constructed.
 	/// </summary>
-	Macad::Occt::gp_Elips^ Value();
+Macad::Occt::gp_Elips^ Value();
 	Macad::Occt::gp_Elips^ Operator();
 }; // class gce_MakeElips
 
@@ -850,7 +850,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates an ellipse with the major axis, the major and the
 	/// minor radius. The location of the MajorAxis is the center
 	/// of the  ellipse.
@@ -859,8 +859,8 @@ public:
 	/// the status is "InvertRadius" if MajorRadius < MinorRadius or
 	/// "NegativeRadius" if MinorRadius < 0.0
 	/// </summary>
-	gce_MakeElips2d(Macad::Occt::Ax2d MajorAxis, double MajorRadius, double MinorRadius, bool Sense);
-	/// <summary>
+gce_MakeElips2d(Macad::Occt::Ax2d MajorAxis, double MajorRadius, double MinorRadius, bool Sense);
+		/// <summary>
 	/// Creates an ellipse with the major axis, the major and the
 	/// minor radius. The location of the MajorAxis is the center
 	/// of the  ellipse.
@@ -869,8 +869,8 @@ public:
 	/// the status is "InvertRadius" if MajorRadius < MinorRadius or
 	/// "NegativeRadius" if MinorRadius < 0.0
 	/// </summary>
-	gce_MakeElips2d(Macad::Occt::Ax2d MajorAxis, double MajorRadius, double MinorRadius);
-	/// <summary>
+gce_MakeElips2d(Macad::Occt::Ax2d MajorAxis, double MajorRadius, double MinorRadius);
+		/// <summary>
 	/// Axis defines the Xaxis and Yaxis of the ellipse which defines
 	/// the origin and the sense of parametrization.
 	/// Creates an ellipse with the AxisPlacement the major and the
@@ -880,8 +880,8 @@ public:
 	/// the status is "InvertRadius" if MajorRadius < MinorRadius or
 	/// "NegativeRadius" if MinorRadius < 0.0
 	/// </summary>
-	gce_MakeElips2d(Macad::Occt::Ax22d A, double MajorRadius, double MinorRadius);
-	/// <summary>
+gce_MakeElips2d(Macad::Occt::Ax22d A, double MajorRadius, double MinorRadius);
+		/// <summary>
 	/// Makes an Elips2d with its center and two points.
 	/// The sense of parametrization is given by S1, S2,
 	/// and Center.
@@ -903,13 +903,13 @@ public:
 	/// Center and S1 is less than the minor radius
 	/// computed with Center, S1 and S2.
 	/// </summary>
-	gce_MakeElips2d(Macad::Occt::Pnt2d S1, Macad::Occt::Pnt2d S2, Macad::Occt::Pnt2d Center);
+gce_MakeElips2d(Macad::Occt::Pnt2d S1, Macad::Occt::Pnt2d S2, Macad::Occt::Pnt2d Center);
 	gce_MakeElips2d(Macad::Occt::gce_MakeElips2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed ellipse.
 	/// Exceptions StdFail_NotDone if no ellipse is constructed.
 	/// </summary>
-	Macad::Occt::gp_Elips2d^ Value();
+Macad::Occt::gp_Elips2d^ Value();
 	Macad::Occt::gp_Elips2d^ Operator();
 }; // class gce_MakeElips2d
 
@@ -981,7 +981,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// A2 is the local coordinate system of the hyperbola.
 	/// In the local coordinates system A2 the equation of the
 	/// hyperbola is :
@@ -993,8 +993,8 @@ public:
 	/// The status is "NegativeRadius" if MajorRadius < 0.0 and
 	/// "InvertRadius" if MinorRadius > MajorRadius.
 	/// </summary>
-	gce_MakeHypr(Macad::Occt::Ax2 A2, double MajorRadius, double MinorRadius);
-	/// <summary>
+gce_MakeHypr(Macad::Occt::Ax2 A2, double MajorRadius, double MinorRadius);
+		/// <summary>
 	/// Constructs a hyperbola
 	/// -   centered on the point Center, where:
 	/// -   the plane of the hyperbola is defined by Center, S1 and S2,
@@ -1011,13 +1011,13 @@ public:
 	/// -   MajorRadius is less than MinorRadius; or
 	/// -   gce_ColinearPoints if S1, S2 and Center are collinear.
 	/// </summary>
-	gce_MakeHypr(Macad::Occt::Pnt S1, Macad::Occt::Pnt S2, Macad::Occt::Pnt Center);
+gce_MakeHypr(Macad::Occt::Pnt S1, Macad::Occt::Pnt S2, Macad::Occt::Pnt Center);
 	gce_MakeHypr(Macad::Occt::gce_MakeHypr^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed hyperbola.
 	/// Exceptions StdFail_NotDone if no hyperbola is constructed.
 	/// </summary>
-	Macad::Occt::gp_Hypr^ Value();
+Macad::Occt::gp_Hypr^ Value();
 	Macad::Occt::gp_Hypr^ Operator();
 }; // class gce_MakeHypr
 
@@ -1084,15 +1084,15 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a hyperbola
 	/// centered on the point Center, where:
 	/// -   the major axis of the hyperbola is defined by Center and point S1,
 	/// -   the major radius is the distance between Center and S1, and
 	/// -   the minor radius is the distance between point S2 and the major axis.
 	/// </summary>
-	gce_MakeHypr2d(Macad::Occt::Pnt2d S1, Macad::Occt::Pnt2d S2, Macad::Occt::Pnt2d Center);
-	/// <summary>
+gce_MakeHypr2d(Macad::Occt::Pnt2d S1, Macad::Occt::Pnt2d S2, Macad::Occt::Pnt2d Center);
+		/// <summary>
 	/// Constructs a hyperbola with major and minor radii MajorRadius and
 	/// MinorRadius, where:
 	/// -   the center of the hyperbola is the origin of the axis MajorAxis, and
@@ -1103,20 +1103,20 @@ public:
 	/// MinorRadius, where its major axis is the "X Axis"
 	/// of A (A is the local coordinate system of the hyperbola).
 	/// </summary>
-	gce_MakeHypr2d(Macad::Occt::Ax2d MajorAxis, double MajorRadius, double MinorRadius, bool Sense);
-	/// <summary>
+gce_MakeHypr2d(Macad::Occt::Ax2d MajorAxis, double MajorRadius, double MinorRadius, bool Sense);
+		/// <summary>
 	/// Creates a Hypr2d centered on the origin of the coordinate system
 	/// A, with major and minor radii MajorRadius and
 	/// MinorRadius, where its major axis is the "X Axis"
 	/// of A (A is the local coordinate system of the hyperbola).
 	/// </summary>
-	gce_MakeHypr2d(Macad::Occt::Ax22d A, double MajorRadius, double MinorRadius);
+gce_MakeHypr2d(Macad::Occt::Ax22d A, double MajorRadius, double MinorRadius);
 	gce_MakeHypr2d(Macad::Occt::gce_MakeHypr2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed hyperbola.
 	/// Exceptions StdFail_NotDone if no hyperbola is constructed.
 	/// </summary>
-	Macad::Occt::gp_Hypr2d^ Value();
+Macad::Occt::gp_Hypr2d^ Value();
 	Macad::Occt::gp_Hypr2d^ Operator();
 }; // class gce_MakeHypr2d
 
@@ -1158,32 +1158,32 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates a line located along the axis A1.
 	/// </summary>
-	gce_MakeLin(Macad::Occt::Ax1 A1);
-	/// <summary>
+gce_MakeLin(Macad::Occt::Ax1 A1);
+		/// <summary>
 	/// <P> is the location point (origin) of the line and
 	/// <V> is the direction of the line.
 	/// </summary>
-	gce_MakeLin(Macad::Occt::Pnt P, Macad::Occt::Dir V);
-	/// <summary>
+gce_MakeLin(Macad::Occt::Pnt P, Macad::Occt::Dir V);
+		/// <summary>
 	/// Make a Lin from gp <TheLin> parallel to another
 	/// Lin <Lin> and passing through a Pnt <Point>.
 	/// </summary>
-	gce_MakeLin(Macad::Occt::gp_Lin^ Lin, Macad::Occt::Pnt Point);
-	/// <summary>
+gce_MakeLin(Macad::Occt::gp_Lin^ Lin, Macad::Occt::Pnt Point);
+		/// <summary>
 	/// Make a Lin from gp <TheLin> passing through 2
 	/// Pnt <P1>,<P2>.
 	/// It returns false if <p1> and <P2> are confused.
 	/// </summary>
-	gce_MakeLin(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
+gce_MakeLin(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
 	gce_MakeLin(Macad::Occt::gce_MakeLin^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed line.
 	/// Exceptions StdFail_NotDone is raised if no line is constructed.
 	/// </summary>
-	Macad::Occt::gp_Lin^ Value();
+Macad::Occt::gp_Lin^ Value();
 	Macad::Occt::gp_Lin^ Operator();
 }; // class gce_MakeLin
 
@@ -1229,34 +1229,34 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates a line located with A.
 	/// </summary>
-	gce_MakeLin2d(Macad::Occt::Ax2d A);
-	/// <summary>
+gce_MakeLin2d(Macad::Occt::Ax2d A);
+		/// <summary>
 	/// <P> is the location point (origin) of the line and
 	/// <V> is the direction of the line.
 	/// </summary>
-	gce_MakeLin2d(Macad::Occt::Pnt2d P, Macad::Occt::Dir2d V);
-	/// <summary>
+gce_MakeLin2d(Macad::Occt::Pnt2d P, Macad::Occt::Dir2d V);
+		/// <summary>
 	/// Creates the line from the equation A*X + B*Y + C = 0.0
 	/// the status is "NullAxis"if Sqrt(A*A + B*B) <= Resolution from gp.
 	/// </summary>
-	gce_MakeLin2d(double A, double B, double C);
-	/// <summary>
+gce_MakeLin2d(double A, double B, double C);
+		/// <summary>
 	/// Make a Lin2d from gp <TheLin> parallel to another
 	/// Lin2d <Lin> at a distance <Dist>.
 	/// If Dist is greater than zero the result is on the
 	/// right of the Line <Lin>, else the result is on the
 	/// left of the Line <Lin>.
 	/// </summary>
-	gce_MakeLin2d(Macad::Occt::gp_Lin2d^ Lin, double Dist);
-	/// <summary>
+gce_MakeLin2d(Macad::Occt::gp_Lin2d^ Lin, double Dist);
+		/// <summary>
 	/// Make a Lin2d from gp <TheLin> parallel to another
 	/// Lin2d <Lin> and passing through a Pnt2d <Point>.
 	/// </summary>
-	gce_MakeLin2d(Macad::Occt::gp_Lin2d^ Lin, Macad::Occt::Pnt2d Point);
-	/// <summary>
+gce_MakeLin2d(Macad::Occt::gp_Lin2d^ Lin, Macad::Occt::Pnt2d Point);
+		/// <summary>
 	/// Make a Lin2d from gp <TheLin> passing through 2
 	/// Pnt2d <P1>,<P2>.
 	/// It returns false if <P1> and <P2> are confused.
@@ -1267,13 +1267,13 @@ public:
 	/// than or equal to gp::Resolution(), or
 	/// -   gce_ConfusedPoints if points P1 and P2 are coincident.
 	/// </summary>
-	gce_MakeLin2d(Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2);
+gce_MakeLin2d(Macad::Occt::Pnt2d P1, Macad::Occt::Pnt2d P2);
 	gce_MakeLin2d(Macad::Occt::gce_MakeLin2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed line.
 	/// Exceptions StdFail_NotDone if no line is constructed.
 	/// </summary>
-	Macad::Occt::gp_Lin2d^ Value();
+Macad::Occt::gp_Lin2d^ Value();
 	Macad::Occt::gp_Lin2d^ Operator();
 }; // class gce_MakeLin2d
 
@@ -1318,24 +1318,24 @@ public:
 	gce_MakeMirror(Macad::Occt::Pnt Point);
 	gce_MakeMirror(Macad::Occt::Ax1 Axis);
 	gce_MakeMirror(Macad::Occt::gp_Lin^ Line);
-	/// <summary>
+		/// <summary>
 	/// Makes a symmetry transformation af axis defined by
 	/// <Point> and <Direc>.
 	/// </summary>
-	gce_MakeMirror(Macad::Occt::Pnt Point, Macad::Occt::Dir Direc);
-	/// <summary>
+gce_MakeMirror(Macad::Occt::Pnt Point, Macad::Occt::Dir Direc);
+		/// <summary>
 	/// Makes a symmetry transformation of plane <Plane>.
 	/// </summary>
-	gce_MakeMirror(Macad::Occt::Pln Plane);
-	/// <summary>
+gce_MakeMirror(Macad::Occt::Pln Plane);
+		/// <summary>
 	/// Makes a symmetry transformation of plane <Plane>.
 	/// </summary>
-	gce_MakeMirror(Macad::Occt::Ax2 Plane);
+gce_MakeMirror(Macad::Occt::Ax2 Plane);
 	gce_MakeMirror(Macad::Occt::gce_MakeMirror^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed transformation.
 	/// </summary>
-	Macad::Occt::Trsf Value();
+Macad::Occt::Trsf Value();
 	Macad::Occt::Trsf Operator();
 }; // class gce_MakeMirror
 
@@ -1379,16 +1379,16 @@ public:
 	gce_MakeMirror2d(Macad::Occt::Pnt2d Point);
 	gce_MakeMirror2d(Macad::Occt::Ax2d Axis);
 	gce_MakeMirror2d(Macad::Occt::gp_Lin2d^ Line);
-	/// <summary>
+		/// <summary>
 	/// Makes a symmetry transformation af axis defined by
 	/// <Point> and <Direc>.
 	/// </summary>
-	gce_MakeMirror2d(Macad::Occt::Pnt2d Point, Macad::Occt::Dir2d Direc);
+gce_MakeMirror2d(Macad::Occt::Pnt2d Point, Macad::Occt::Dir2d Direc);
 	gce_MakeMirror2d(Macad::Occt::gce_MakeMirror2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed transformation.
 	/// </summary>
-	Macad::Occt::Trsf2d Value();
+Macad::Occt::Trsf2d Value();
 	Macad::Occt::Trsf2d Operator();
 }; // class gce_MakeMirror2d
 
@@ -1450,7 +1450,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// --- Purpose ;
 	/// Creates a parabola with its local coordinate system "A2"
 	/// and it's focal length "Focal".
@@ -1460,8 +1460,8 @@ public:
 	/// the parabola
 	/// The status is "NullFocusLength" if Focal < 0.0
 	/// </summary>
-	gce_MakeParab(Macad::Occt::Ax2 A2, double Focal);
-	/// <summary>
+gce_MakeParab(Macad::Occt::Ax2 A2, double Focal);
+		/// <summary>
 	/// D is the directrix of the parabola and F the focus point.
 	/// The symmetry axis (XAxis) of the parabola is normal to the
 	/// directrix and pass through the focus point F, but its
@@ -1471,13 +1471,13 @@ public:
 	/// of the parabola is the cross product between the XAxis and the
 	/// YAxis.
 	/// </summary>
-	gce_MakeParab(Macad::Occt::Ax1 D, Macad::Occt::Pnt F);
+gce_MakeParab(Macad::Occt::Ax1 D, Macad::Occt::Pnt F);
 	gce_MakeParab(Macad::Occt::gce_MakeParab^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed parabola.
 	/// Exceptions StdFail_NotDone if no parabola is constructed.
 	/// </summary>
-	Macad::Occt::gp_Parab^ Value();
+Macad::Occt::gp_Parab^ Value();
 	Macad::Occt::gp_Parab^ Operator();
 }; // class gce_MakeParab
 
@@ -1535,38 +1535,38 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Creates a parabola with its axis of symmetry ("MirrorAxis")
 	/// and its focal length.
 	/// Warnings : It is possible to have Focal = 0.
 	/// The status is "NullFocalLength" Raised if Focal < 0.0
 	/// </summary>
-	gce_MakeParab2d(Macad::Occt::Ax2d MirrorAxis, double Focal, bool Sense);
-	/// <summary>
+gce_MakeParab2d(Macad::Occt::Ax2d MirrorAxis, double Focal, bool Sense);
+		/// <summary>
 	/// Creates a parabola with its axis of symmetry ("MirrorAxis")
 	/// and its focal length.
 	/// Warnings : It is possible to have Focal = 0.
 	/// The status is "NullFocalLength" Raised if Focal < 0.0
 	/// </summary>
-	gce_MakeParab2d(Macad::Occt::Ax2d MirrorAxis, double Focal);
-	/// <summary>
+gce_MakeParab2d(Macad::Occt::Ax2d MirrorAxis, double Focal);
+		/// <summary>
 	/// Creates a parabola with its local coordinate system <A>
 	/// and its focal length.
 	/// Warnings : It is possible to have Focal = 0.
 	/// The status is "NullFocalLength" Raised if Focal < 0.0
 	/// </summary>
-	gce_MakeParab2d(Macad::Occt::Ax22d A, double Focal);
-	/// <summary>
+gce_MakeParab2d(Macad::Occt::Ax22d A, double Focal);
+		/// <summary>
 	/// Creates a parabola with the directrix and the focus point.
 	/// The sense of parametrization is given by Sense.
 	/// </summary>
-	gce_MakeParab2d(Macad::Occt::Ax2d D, Macad::Occt::Pnt2d F, bool Sense);
-	/// <summary>
+gce_MakeParab2d(Macad::Occt::Ax2d D, Macad::Occt::Pnt2d F, bool Sense);
+		/// <summary>
 	/// Creates a parabola with the directrix and the focus point.
 	/// The sense of parametrization is given by Sense.
 	/// </summary>
-	gce_MakeParab2d(Macad::Occt::Ax2d D, Macad::Occt::Pnt2d F);
-	/// <summary>
+gce_MakeParab2d(Macad::Occt::Ax2d D, Macad::Occt::Pnt2d F);
+		/// <summary>
 	/// Make an Parab2d with S1 as the Focal point and Center
 	/// as the apex of the parabola
 	/// Warning
@@ -1577,8 +1577,8 @@ public:
 	/// -   gce_NullFocusLength if Focal is less than 0.0, or
 	/// -   gce_NullAxis if S1 and Center are coincident.
 	/// </summary>
-	gce_MakeParab2d(Macad::Occt::Pnt2d S1, Macad::Occt::Pnt2d Center, bool Sense);
-	/// <summary>
+gce_MakeParab2d(Macad::Occt::Pnt2d S1, Macad::Occt::Pnt2d Center, bool Sense);
+		/// <summary>
 	/// Make an Parab2d with S1 as the Focal point and Center
 	/// as the apex of the parabola
 	/// Warning
@@ -1589,13 +1589,13 @@ public:
 	/// -   gce_NullFocusLength if Focal is less than 0.0, or
 	/// -   gce_NullAxis if S1 and Center are coincident.
 	/// </summary>
-	gce_MakeParab2d(Macad::Occt::Pnt2d S1, Macad::Occt::Pnt2d Center);
+gce_MakeParab2d(Macad::Occt::Pnt2d S1, Macad::Occt::Pnt2d Center);
 	gce_MakeParab2d(Macad::Occt::gce_MakeParab2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed parabola.
 	/// Exceptions StdFail_NotDone if no parabola is constructed.
 	/// </summary>
-	Macad::Occt::gp_Parab2d^ Value();
+Macad::Occt::gp_Parab2d^ Value();
 	Macad::Occt::gp_Parab2d^ Operator();
 }; // class gce_MakeParab2d
 
@@ -1647,7 +1647,7 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// The coordinate system of the plane is defined with the axis
 	/// placement A2.
 	/// The "Direction" of A2 defines the normal to the plane.
@@ -1655,26 +1655,26 @@ public:
 	/// The "XDirection" and "YDirection" of A2 define the "XAxis" and
 	/// the "YAxis" of the plane used to parametrize the plane.
 	/// </summary>
-	gce_MakePln(Macad::Occt::Ax2 A2);
-	/// <summary>
+gce_MakePln(Macad::Occt::Ax2 A2);
+		/// <summary>
 	/// Creates a plane with the  "Location" point <P>
 	/// and the normal direction <V>.
 	/// </summary>
-	gce_MakePln(Macad::Occt::Pnt P, Macad::Occt::Dir V);
-	/// <summary>
+gce_MakePln(Macad::Occt::Pnt P, Macad::Occt::Dir V);
+		/// <summary>
 	/// Creates a plane from its cartesian equation :
 	/// A * X + B * Y + C * Z + D = 0.0
 	/// 
 	/// the status is "BadEquation" if Sqrt (A*A + B*B + C*C) <=
 	/// Resolution from gp.
 	/// </summary>
-	gce_MakePln(double A, double B, double C, double D);
-	/// <summary>
+gce_MakePln(double A, double B, double C, double D);
+		/// <summary>
 	/// Make a Pln from gp <ThePln> parallel to another
 	/// Pln <Pln> and passing through a Pnt <Point>.
 	/// </summary>
-	gce_MakePln(Macad::Occt::Pln Pln, Macad::Occt::Pnt Point);
-	/// <summary>
+gce_MakePln(Macad::Occt::Pln Pln, Macad::Occt::Pnt Point);
+		/// <summary>
 	/// Make a Pln from gp <ThePln> parallel to another
 	/// Pln <Pln> at the distance <Dist> which can be greater
 	/// or less than zero.
@@ -1683,20 +1683,20 @@ public:
 	/// normal to <Pln>.
 	/// Otherwise it is in the opposite direction.
 	/// </summary>
-	gce_MakePln(Macad::Occt::Pln Pln, double Dist);
-	/// <summary>
+gce_MakePln(Macad::Occt::Pln Pln, double Dist);
+		/// <summary>
 	/// Make a Pln from gp <ThePln> passing through 3
 	/// Pnt <P1>,<P2>,<P3>.
 	/// It returns false if <P1> <P2> <P3> are confused.
 	/// </summary>
-	gce_MakePln(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, Macad::Occt::Pnt P3);
-	/// <summary>
+gce_MakePln(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2, Macad::Occt::Pnt P3);
+		/// <summary>
 	/// Make a Pln from gp <ThePln> perpendicular to the line
 	/// passing through <P1>,<P2>.
 	/// The status is "ConfusedPoints" if <P1> <P2> are confused.
 	/// </summary>
-	gce_MakePln(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
-	/// <summary>
+gce_MakePln(Macad::Occt::Pnt P1, Macad::Occt::Pnt P2);
+		/// <summary>
 	/// Make a pln  passing through the location of <Axis>and
 	/// normal to the Direction of <Axis>.
 	/// Warning -  If an error occurs (that is, when IsDone returns
@@ -1706,13 +1706,13 @@ public:
 	/// -   gce_ConfusedPoints if P1 and P2 are coincident, or
 	/// -   gce_ColinearPoints if P1, P2 and P3 are collinear.
 	/// </summary>
-	gce_MakePln(Macad::Occt::Ax1 Axis);
+gce_MakePln(Macad::Occt::Ax1 Axis);
 	gce_MakePln(Macad::Occt::gce_MakePln^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed plane.
 	/// Exceptions StdFail_NotDone if no plane is constructed.
 	/// </summary>
-	Macad::Occt::Pln Value();
+Macad::Occt::Pln Value();
 	Macad::Occt::Pln Operator();
 }; // class gce_MakePln
 
@@ -1753,24 +1753,24 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a rotation through angle Angle about the axis defined by the line Line.
 	/// </summary>
-	gce_MakeRotation(Macad::Occt::gp_Lin^ Line, double Angle);
-	/// <summary>
+gce_MakeRotation(Macad::Occt::gp_Lin^ Line, double Angle);
+		/// <summary>
 	/// Constructs a rotation through angle Angle about the axis defined by the axis Axis.
 	/// </summary>
-	gce_MakeRotation(Macad::Occt::Ax1 Axis, double Angle);
-	/// <summary>
+gce_MakeRotation(Macad::Occt::Ax1 Axis, double Angle);
+		/// <summary>
 	/// Constructs a rotation through angle Angle about the axis defined by:
 	/// the point Point and the unit vector Direc.
 	/// </summary>
-	gce_MakeRotation(Macad::Occt::Pnt Point, Macad::Occt::Dir Direc, double Angle);
+gce_MakeRotation(Macad::Occt::Pnt Point, Macad::Occt::Dir Direc, double Angle);
 	gce_MakeRotation(Macad::Occt::gce_MakeRotation^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed transformation.
 	/// </summary>
-	Macad::Occt::Trsf Value();
+Macad::Occt::Trsf Value();
 	Macad::Occt::Trsf Operator();
 }; // class gce_MakeRotation
 
@@ -1811,15 +1811,15 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a rotation through angle Angle about the center Point.
 	/// </summary>
-	gce_MakeRotation2d(Macad::Occt::Pnt2d Point, double Angle);
+gce_MakeRotation2d(Macad::Occt::Pnt2d Point, double Angle);
 	gce_MakeRotation2d(Macad::Occt::gce_MakeRotation2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed transformation.
 	/// </summary>
-	Macad::Occt::Trsf2d Value();
+Macad::Occt::Trsf2d Value();
 	Macad::Occt::Trsf2d Operator();
 }; // class gce_MakeRotation2d
 
@@ -1860,17 +1860,17 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a scaling transformation with
 	/// -   Point as the center of the transformation, and
 	/// -   Scale as the scale factor.
 	/// </summary>
-	gce_MakeScale(Macad::Occt::Pnt Point, double Scale);
+gce_MakeScale(Macad::Occt::Pnt Point, double Scale);
 	gce_MakeScale(Macad::Occt::gce_MakeScale^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed transformation.
 	/// </summary>
-	Macad::Occt::Trsf Value();
+Macad::Occt::Trsf Value();
 	Macad::Occt::Trsf Operator();
 }; // class gce_MakeScale
 
@@ -1911,17 +1911,17 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a scaling transformation with:
 	/// -   Point as the center of the transformation, and
 	/// -   Scale as the scale factor.
 	/// </summary>
-	gce_MakeScale2d(Macad::Occt::Pnt2d Point, double Scale);
+gce_MakeScale2d(Macad::Occt::Pnt2d Point, double Scale);
 	gce_MakeScale2d(Macad::Occt::gce_MakeScale2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed transformation.
 	/// </summary>
-	Macad::Occt::Trsf2d Value();
+Macad::Occt::Trsf2d Value();
 	Macad::Occt::Trsf2d Operator();
 }; // class gce_MakeScale2d
 
@@ -1962,20 +1962,20 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a translation along the vector " Vect"
 	/// </summary>
-	gce_MakeTranslation(Macad::Occt::Vec Vect);
-	/// <summary>
+gce_MakeTranslation(Macad::Occt::Vec Vect);
+		/// <summary>
 	/// Constructs a translation along the vector
 	/// (Point1,Point2) defined from the point Point1 to the point Point2.
 	/// </summary>
-	gce_MakeTranslation(Macad::Occt::Pnt Point1, Macad::Occt::Pnt Point2);
+gce_MakeTranslation(Macad::Occt::Pnt Point1, Macad::Occt::Pnt Point2);
 	gce_MakeTranslation(Macad::Occt::gce_MakeTranslation^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed transformation.
 	/// </summary>
-	Macad::Occt::Trsf Value();
+Macad::Occt::Trsf Value();
 	Macad::Occt::Trsf Operator();
 }; // class gce_MakeTranslation
 
@@ -2016,20 +2016,20 @@ public:
 	}
 
 public:
-	/// <summary>
+		/// <summary>
 	/// Constructs a translation along the vector Vect.
 	/// </summary>
-	gce_MakeTranslation2d(Macad::Occt::Vec2d Vect);
-	/// <summary>
+gce_MakeTranslation2d(Macad::Occt::Vec2d Vect);
+		/// <summary>
 	/// Constructs a translation along the vector
 	/// (Point1,Point2) defined from the point Point1 to the point Point2.
 	/// </summary>
-	gce_MakeTranslation2d(Macad::Occt::Pnt2d Point1, Macad::Occt::Pnt2d Point2);
+gce_MakeTranslation2d(Macad::Occt::Pnt2d Point1, Macad::Occt::Pnt2d Point2);
 	gce_MakeTranslation2d(Macad::Occt::gce_MakeTranslation2d^ parameter1);
-	/// <summary>
+		/// <summary>
 	/// Returns the constructed transformation.
 	/// </summary>
-	Macad::Occt::Trsf2d Value();
+Macad::Occt::Trsf2d Value();
 	Macad::Occt::Trsf2d Operator();
 }; // class gce_MakeTranslation2d
 
